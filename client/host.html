@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sapere è Potere · Schermo principale</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body class="host">
+    <div id="stage"></div>
+
+    <header id="topbar">
+      <div class="logo">Sapere <span>è</span> Potere</div>
+      <div id="phase-label" class="phase-label"></div>
+      <div class="top-right">
+        <span class="chip">Stanza <b id="code-chip">····</b></span>
+        <span id="timer-text" class="timer-text"></span>
+      </div>
+      <div class="timer-track"><div id="timer-bar"></div></div>
+    </header>
+
+    <main id="panel"></main>
+
+    <div id="splash">
+      <div class="splash-card pop">
+        <div class="splash-logo">Sapere <span>è</span> Potere</div>
+        <p class="muted">Il party quiz dove la conoscenza è un'arma. Da 2 a 6 giocatori, ognuno col proprio smartphone.</p>
+        <button id="splash-btn" class="btn">▶ Apri una nuova stanza</button>
+        <button id="new-room" class="link-btn">oppure crea una stanza nuova</button>
+        <a class="btn secondary" href="./editor.html" target="_blank">✏️ Laboratorio domande</a>
+        <p class="muted small">Consiglio: metti il browser a schermo intero (F11) e alza il volume.</p>
+      </div>
+    </div>
+
+    <script type="module" src="./host/main.ts"></script>
+  </body>
+</html>

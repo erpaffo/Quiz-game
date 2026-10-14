@@ -1,0 +1,457 @@
+{
+ "id": "stime",
+ "name": "Numeri & Stime",
+ "description": "Domande con risposta numerica per «La Stima»: vince chi si avvicina di più.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "geo",
+   "name": "Geografia in numeri",
+   "icon": "🗺️",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "sto",
+   "name": "Date storiche",
+   "icon": "📜",
+   "color": "#b5838d"
+  },
+  {
+   "id": "sci",
+   "name": "Scienza in numeri",
+   "icon": "🧪",
+   "color": "#4361ee"
+  },
+  {
+   "id": "spo",
+   "name": "Sport & spettacolo",
+   "icon": "🏟️",
+   "color": "#f77f00"
+  },
+  {
+   "id": "vita",
+   "name": "Vita quotidiana",
+   "icon": "🏠",
+   "color": "#43aa8b"
+  }
+ ],
+ "questions": [
+  {
+   "id": "stime-n001",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti Stati formano gli Stati Uniti d'America?",
+   "answer": 50,
+   "unit": "Stati"
+  },
+  {
+   "id": "stime-n002",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti Stati membri ha l'ONU?",
+   "answer": 193,
+   "unit": "Stati"
+  },
+  {
+   "id": "stime-n003",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti milioni di abitanti ha la Cina, circa?",
+   "answer": 1410,
+   "unit": "milioni"
+  },
+  {
+   "id": "stime-n004",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti km² misura la superficie dell'Italia, circa?",
+   "answer": 302000,
+   "unit": "km²"
+  },
+  {
+   "id": "stime-n005",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti fusi orari attraversa la Russia?",
+   "answer": 11,
+   "unit": "fusi"
+  },
+  {
+   "id": "stime-n006",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Con quanti Stati confina l'Italia?",
+   "answer": 6,
+   "unit": "Stati"
+  },
+  {
+   "id": "stime-n007",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti km è lunga l'autostrada A1 Milano-Napoli, circa?",
+   "answer": 760,
+   "unit": "km"
+  },
+  {
+   "id": "stime-n008",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti metri è profonda la Fossa delle Marianne, circa?",
+   "answer": 10900,
+   "unit": "m"
+  },
+  {
+   "id": "stime-n009",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti milioni di abitanti ha il comune di Roma, circa?",
+   "answer": 2.75,
+   "unit": "milioni"
+  },
+  {
+   "id": "stime-n010",
+   "categoryId": "geo",
+   "type": "numeric",
+   "text": "Quanti km separano Milano e Roma in auto, circa?",
+   "answer": 570,
+   "unit": "km"
+  },
+  {
+   "id": "stime-n011",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno fu fondata Roma secondo la tradizione?",
+   "answer": 753,
+   "unit": "a.C."
+  },
+  {
+   "id": "stime-n012",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno Gutenberg stampò la sua celebre Bibbia, circa?",
+   "answer": 1455,
+   "unit": ""
+  },
+  {
+   "id": "stime-n013",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno cadde l'Impero romano d'Occidente?",
+   "answer": 476,
+   "unit": "d.C."
+  },
+  {
+   "id": "stime-n014",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno finì la Seconda guerra mondiale?",
+   "answer": 1945,
+   "unit": ""
+  },
+  {
+   "id": "stime-n015",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno Galileo pubblicò il «Dialogo sopra i due massimi sistemi»?",
+   "answer": 1632,
+   "unit": ""
+  },
+  {
+   "id": "stime-n016",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno fu firmato il Trattato di Maastricht?",
+   "answer": 1992,
+   "unit": ""
+  },
+  {
+   "id": "stime-n017",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno l'euro è entrato in circolazione in monete e banconote?",
+   "answer": 2002,
+   "unit": ""
+  },
+  {
+   "id": "stime-n018",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "Per quanti anni ha regnato la regina Elisabetta II?",
+   "answer": 70,
+   "unit": "anni"
+  },
+  {
+   "id": "stime-n019",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno fu ucciso Giulio Cesare?",
+   "answer": 44,
+   "unit": "a.C."
+  },
+  {
+   "id": "stime-n020",
+   "categoryId": "sto",
+   "type": "numeric",
+   "text": "In che anno è stata proclamata la Repubblica Italiana?",
+   "answer": 1946,
+   "unit": ""
+  },
+  {
+   "id": "stime-n021",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quanti km percorre la luce in un secondo, circa?",
+   "answer": 299792,
+   "unit": "km"
+  },
+  {
+   "id": "stime-n022",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quanti elementi conta la tavola periodica?",
+   "answer": 118,
+   "unit": "elementi"
+  },
+  {
+   "id": "stime-n023",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Qual è la temperatura corporea normale di una persona, circa?",
+   "answer": 37,
+   "unit": "°C"
+  },
+  {
+   "id": "stime-n024",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "A quanti gradi Celsius corrisponde lo zero assoluto?",
+   "answer": -273.15,
+   "unit": "°C"
+  },
+  {
+   "id": "stime-n025",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quanti anni luce dista Proxima Centauri dalla Terra?",
+   "answer": 4.24,
+   "unit": "anni luce"
+  },
+  {
+   "id": "stime-n026",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quanti km misura il diametro della Terra, circa?",
+   "answer": 12742,
+   "unit": "km"
+  },
+  {
+   "id": "stime-n027",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quante ossa ci sono in una mano umana?",
+   "answer": 27,
+   "unit": "ossa"
+  },
+  {
+   "id": "stime-n028",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quanti giorni terrestri dura un anno su Marte?",
+   "answer": 687,
+   "unit": "giorni"
+  },
+  {
+   "id": "stime-n029",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "Quanti milioni di km separano la Terra dal Sole, in media?",
+   "answer": 150,
+   "unit": "milioni di km"
+  },
+  {
+   "id": "stime-n030",
+   "categoryId": "sci",
+   "type": "numeric",
+   "text": "A quanti metri sotto il livello del mare si trova la riva del Mar Morto, circa?",
+   "answer": 430,
+   "unit": "m"
+  },
+  {
+   "id": "stime-n031",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quanti metri è lunga una piscina olimpionica?",
+   "answer": 50,
+   "unit": "m"
+  },
+  {
+   "id": "stime-n032",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quanti titoli mondiali costruttori di Formula 1 ha vinto la Ferrari?",
+   "answer": 16,
+   "unit": "titoli"
+  },
+  {
+   "id": "stime-n033",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quanti titoli mondiali ha vinto Valentino Rossi, in tutte le classi?",
+   "answer": 9,
+   "unit": "titoli"
+  },
+  {
+   "id": "stime-n034",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "In che anno è uscito al cinema il primo film di Harry Potter?",
+   "answer": 2001,
+   "unit": ""
+  },
+  {
+   "id": "stime-n035",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "In che anno è uscito il primo cartone animato sonoro di Topolino?",
+   "answer": 1928,
+   "unit": ""
+  },
+  {
+   "id": "stime-n036",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quanti minuti dura un quarto di una partita NBA?",
+   "answer": 12,
+   "unit": "minuti"
+  },
+  {
+   "id": "stime-n037",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quante buche ha un percorso di golf regolamentare?",
+   "answer": 18,
+   "unit": "buche"
+  },
+  {
+   "id": "stime-n038",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quanti metri è lungo un campo da tennis?",
+   "answer": 23.77,
+   "unit": "m"
+  },
+  {
+   "id": "stime-n039",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quanti premi Oscar ha vinto «Il Signore degli Anelli - Il ritorno del re»?",
+   "answer": 11,
+   "unit": "Oscar"
+  },
+  {
+   "id": "stime-n040",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "In che anno si è giocato il primo Mondiale di calcio?",
+   "answer": 1930,
+   "unit": ""
+  },
+  {
+   "id": "stime-n041",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "Quante caselle ci sono sul tabellone del Monopoly?",
+   "answer": 40,
+   "unit": "caselle"
+  },
+  {
+   "id": "stime-n042",
+   "categoryId": "spo",
+   "type": "numeric",
+   "text": "In che anno si sono formati i Beatles con questo nome?",
+   "answer": 1960,
+   "unit": ""
+  },
+  {
+   "id": "stime-n043",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quanti grammi pesa, circa, un uovo di gallina medio?",
+   "answer": 60,
+   "unit": "g"
+  },
+  {
+   "id": "stime-n044",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quanti centimetri è alto un foglio A4?",
+   "answer": 29.7,
+   "unit": "cm"
+  },
+  {
+   "id": "stime-n045",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quanti secondi ci sono in un'ora?",
+   "answer": 3600,
+   "unit": "secondi"
+  },
+  {
+   "id": "stime-n046",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quanti giorni ha un anno bisestile?",
+   "answer": 366,
+   "unit": "giorni"
+  },
+  {
+   "id": "stime-n047",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quante ore di differenza ci sono di solito tra Roma e New York?",
+   "answer": 6,
+   "unit": "ore"
+  },
+  {
+   "id": "stime-n048",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quanti millimetri misura il diametro di una moneta da 2 euro?",
+   "answer": 25.75,
+   "unit": "mm"
+  },
+  {
+   "id": "stime-n049",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quante calorie ha, circa, un cucchiaio (10 g) di olio d'oliva?",
+   "answer": 90,
+   "unit": "kcal"
+  },
+  {
+   "id": "stime-n050",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quante tessere ci sono in un domino classico?",
+   "answer": 28,
+   "unit": "tessere"
+  },
+  {
+   "id": "stime-n051",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quanti pezzi ci sono in tutto sulla scacchiera a inizio partita?",
+   "answer": 32,
+   "unit": "pezzi"
+  },
+  {
+   "id": "stime-n052",
+   "categoryId": "vita",
+   "type": "numeric",
+   "text": "Quante settimane ci sono in un anno, circa?",
+   "answer": 52,
+   "unit": "settimane"
+  }
+ ]
+}

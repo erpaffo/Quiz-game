@@ -1,0 +1,1644 @@
+{
+ "id": "pop",
+ "name": "Pop & Intrattenimento",
+ "description": "Cinema, serie, cartoni, musica, videogiochi e sport: domande da party quiz.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "film",
+   "name": "Cinema",
+   "icon": "🎬",
+   "color": "#e63946"
+  },
+  {
+   "id": "serie",
+   "name": "Serie TV",
+   "icon": "📺",
+   "color": "#6a4c93"
+  },
+  {
+   "id": "cart",
+   "name": "Cartoni & Fumetti",
+   "icon": "🦸",
+   "color": "#ff9f1c"
+  },
+  {
+   "id": "mita",
+   "name": "Musica italiana",
+   "icon": "🎤",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "mint",
+   "name": "Musica internazionale",
+   "icon": "🎧",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "vg",
+   "name": "Videogiochi",
+   "icon": "🎮",
+   "color": "#4361ee"
+  },
+  {
+   "id": "sport",
+   "name": "Sport",
+   "icon": "🏆",
+   "color": "#f77f00"
+  },
+  {
+   "id": "cibo",
+   "name": "Cucina dal mondo",
+   "icon": "🌮",
+   "color": "#43aa8b"
+  }
+ ],
+ "questions": [
+  {
+   "id": "pop-m001",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Chi ha diretto «Titanic» del 1997?",
+   "options": [
+    "James Cameron",
+    "Steven Spielberg",
+    "Ridley Scott",
+    "Peter Jackson"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m002",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Come si chiama il pesce pagliaccio che si perde nel film Pixar?",
+   "options": [
+    "Nemo",
+    "Dory",
+    "Marlin",
+    "Gill"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m003",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "In quale film si dice «Houston, abbiamo un problema»?",
+   "options": [
+    "Apollo 13",
+    "Armageddon",
+    "Interstellar",
+    "Gravity"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m004",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Chi interpreta il capitano Jack Sparrow?",
+   "options": [
+    "Johnny Depp",
+    "Orlando Bloom",
+    "Brad Pitt",
+    "Keanu Reeves"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m005",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Quale film ha vinto l'Oscar come miglior film nel 2020, primo non in lingua inglese?",
+   "options": [
+    "Parasite",
+    "1917",
+    "Joker",
+    "C'era una volta a... Hollywood"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m006",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Come si chiama l'orco verde dei film DreamWorks?",
+   "options": [
+    "Shrek",
+    "Hulk",
+    "Il Grinch",
+    "Fiona"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m007",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "In «Matrix», di che colore è la pillola che sceglie Neo?",
+   "options": [
+    "Rossa",
+    "Blu",
+    "Verde",
+    "Gialla"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m008",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Chi ha diretto «Nuovo Cinema Paradiso»?",
+   "options": [
+    "Giuseppe Tornatore",
+    "Federico Fellini",
+    "Sergio Leone",
+    "Bernardo Bertolucci"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m009",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Chi ha diretto «La dolce vita»?",
+   "options": [
+    "Federico Fellini",
+    "Michelangelo Antonioni",
+    "Luchino Visconti",
+    "Vittorio De Sica"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m010",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Come si chiama il parco dei dinosauri del film di Spielberg del 1993?",
+   "options": [
+    "Jurassic Park",
+    "Dino World",
+    "Raptor Park",
+    "Lost World"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m011",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Quale supereroe è in realtà Peter Parker?",
+   "options": [
+    "Spider-Man",
+    "Batman",
+    "Superman",
+    "Iron Man"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m012",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Chi è il padre di Luke Skywalker?",
+   "options": [
+    "Darth Vader",
+    "Obi-Wan Kenobi",
+    "Yoda",
+    "Han Solo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m013",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "In quale film Disney si canta «Hakuna Matata»?",
+   "options": [
+    "Il re leone",
+    "Aladdin",
+    "Tarzan",
+    "Mulan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m014",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Chi ha interpretato Forrest Gump?",
+   "options": [
+    "Tom Hanks",
+    "Tom Cruise",
+    "Kevin Costner",
+    "Robin Williams"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m015",
+   "categoryId": "film",
+   "type": "multiple",
+   "text": "Quale saga ha per protagonisti gli hobbit Frodo e Sam?",
+   "options": [
+    "Il Signore degli Anelli",
+    "Harry Potter",
+    "Le cronache di Narnia",
+    "Star Wars"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m016",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "In quale serie compaiono Walter White e Jesse Pinkman?",
+   "options": [
+    "Breaking Bad",
+    "The Wire",
+    "Ozark",
+    "Narcos"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m017",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale serie è ambientata nel continente di Westeros?",
+   "options": [
+    "Il Trono di Spade",
+    "The Witcher",
+    "Vikings",
+    "Outlander"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m018",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "In «Friends», come si chiama il bar dove si ritrovano i protagonisti?",
+   "options": [
+    "Central Perk",
+    "Monk's",
+    "MacLaren's",
+    "Luke's"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m019",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale serie spagnola racconta una rapina alla Zecca di Madrid?",
+   "options": [
+    "La casa di carta",
+    "Élite",
+    "Vis a vis",
+    "Narcos"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m020",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Di quale artista sono le maschere dei rapinatori de «La casa di carta»?",
+   "options": [
+    "Salvador Dalí",
+    "Pablo Picasso",
+    "Francisco Goya",
+    "Diego Velázquez"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m021",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale serie sudcoreana del 2021 mette in palio soldi con giochi per bambini mortali?",
+   "options": [
+    "Squid Game",
+    "Kingdom",
+    "Sweet Home",
+    "All of Us Are Dead"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m022",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Qual è il nome del medico protagonista di «Dr. House»?",
+   "options": [
+    "Gregory",
+    "James",
+    "Eric",
+    "Robert"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m023",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "In «Stranger Things», come si chiama la ragazza con poteri telecinetici?",
+   "options": [
+    "Undici",
+    "Max",
+    "Nancy",
+    "Robin"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m024",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale serie italiana racconta la camorra di Scampia?",
+   "options": [
+    "Gomorra",
+    "Suburra",
+    "Romanzo criminale",
+    "Il commissario Montalbano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m025",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Chi ha scritto i romanzi del commissario Montalbano?",
+   "options": [
+    "Andrea Camilleri",
+    "Carlo Lucarelli",
+    "Maurizio de Giovanni",
+    "Gianrico Carofiglio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m026",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "In «The Office» americano, per quale azienda lavorano i protagonisti?",
+   "options": [
+    "Dunder Mifflin",
+    "Sterling Cooper",
+    "Initech",
+    "Wayne Enterprises"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m027",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale serie racconta il regno di Elisabetta II?",
+   "options": [
+    "The Crown",
+    "Downton Abbey",
+    "Victoria",
+    "Bridgerton"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m028",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama il papà dei Simpson?",
+   "options": [
+    "Homer",
+    "Bart",
+    "Ned",
+    "Boe"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m029",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama il cane di Topolino?",
+   "options": [
+    "Pluto",
+    "Pippo",
+    "Rex",
+    "Fido"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m030",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "In quale città vive Paperino?",
+   "options": [
+    "Paperopoli",
+    "Topolinia",
+    "Springfield",
+    "Gotham City"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m031",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama il nemico di Batman che ride sempre?",
+   "options": [
+    "Joker",
+    "Pinguino",
+    "Enigmista",
+    "Bane"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m032",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama lo zio ricchissimo di Paperino?",
+   "options": [
+    "Paperon de' Paperoni",
+    "Archimede Pitagorico",
+    "Gastone",
+    "Ciccio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m033",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Quale eroe del fumetto italiano è un ranger texano?",
+   "options": [
+    "Tex Willer",
+    "Dylan Dog",
+    "Diabolik",
+    "Corto Maltese"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m034",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Chi è «l'Indagatore dell'Incubo»?",
+   "options": [
+    "Dylan Dog",
+    "Martin Mystère",
+    "Nathan Never",
+    "Dampyr"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m035",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Di che colore sono i Puffi?",
+   "options": [
+    "Blu",
+    "Verdi",
+    "Gialli",
+    "Rossi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m036",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama il protagonista di «One Piece» con il corpo di gomma?",
+   "options": [
+    "Rufy",
+    "Naruto",
+    "Goku",
+    "Ichigo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m037",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama il protagonista di «Dragon Ball»?",
+   "options": [
+    "Goku",
+    "Vegeta",
+    "Gohan",
+    "Crilin"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m038",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Chi vive in un ananas in fondo al mare?",
+   "options": [
+    "SpongeBob",
+    "Patrick",
+    "Squiddi",
+    "Plankton"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m039",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Come si chiama il gatto che insegue sempre il topo Jerry?",
+   "options": [
+    "Tom",
+    "Silvestro",
+    "Garfield",
+    "Felix"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m040",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Quale supereroe ha uno scudo con una stella al centro?",
+   "options": [
+    "Capitan America",
+    "Thor",
+    "Hulk",
+    "Daredevil"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m041",
+   "categoryId": "cart",
+   "type": "multiple",
+   "text": "Chi ha creato Topolino?",
+   "options": [
+    "Walt Disney",
+    "Charles Schulz",
+    "Stan Lee",
+    "Hayao Miyazaki"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m042",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi canta «Albachiara»?",
+   "options": [
+    "Vasco Rossi",
+    "Ligabue",
+    "Zucchero",
+    "Eros Ramazzotti"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m043",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha scritto e cantato «La donna cannone»?",
+   "options": [
+    "Francesco De Gregori",
+    "Lucio Dalla",
+    "Fabrizio De André",
+    "Francesco Guccini"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m044",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha scritto e cantato «Caruso»?",
+   "options": [
+    "Lucio Dalla",
+    "Lucio Battisti",
+    "Gino Paoli",
+    "Renato Zero"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m045",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi canta «Certe notti»?",
+   "options": [
+    "Ligabue",
+    "Vasco Rossi",
+    "Pino Daniele",
+    "Jovanotti"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m046",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Quale gruppo ha vinto Sanremo 2021 con «Zitti e buoni»?",
+   "options": [
+    "Måneskin",
+    "Negramaro",
+    "Modà",
+    "Subsonica"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m047",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha portato al successo «Il cielo in una stanza» nel 1960?",
+   "options": [
+    "Mina",
+    "Ornella Vanoni",
+    "Patty Pravo",
+    "Milva"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m048",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha cantato «Azzurro» nel 1968?",
+   "options": [
+    "Adriano Celentano",
+    "Gianni Morandi",
+    "Little Tony",
+    "Bobby Solo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m049",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Quale cantante è soprannominato «il Molleggiato»?",
+   "options": [
+    "Adriano Celentano",
+    "Gianni Morandi",
+    "Vasco Rossi",
+    "Renato Zero"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m050",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha scritto e cantato «La guerra di Piero»?",
+   "options": [
+    "Fabrizio De André",
+    "Francesco Guccini",
+    "Giorgio Gaber",
+    "Luigi Tenco"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m051",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha vinto Sanremo 2023 con «Due vite»?",
+   "options": [
+    "Marco Mengoni",
+    "Mahmood",
+    "Ultimo",
+    "Elodie"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m052",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha vinto Sanremo 2019 con «Soldi»?",
+   "options": [
+    "Mahmood",
+    "Blanco",
+    "Ultimo",
+    "Il Volo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m053",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi ha scritto e cantato «Napule è»?",
+   "options": [
+    "Pino Daniele",
+    "Gigi D'Alessio",
+    "Nino D'Angelo",
+    "Massimo Ranieri"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m054",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi canta «Vita spericolata»?",
+   "options": [
+    "Vasco Rossi",
+    "Ligabue",
+    "Piero Pelù",
+    "Gianna Nannini"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m055",
+   "categoryId": "mita",
+   "type": "multiple",
+   "text": "Chi canta «L'ombelico del mondo»?",
+   "options": [
+    "Jovanotti",
+    "Eros Ramazzotti",
+    "Tiziano Ferro",
+    "Cesare Cremonini"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m056",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Chi canta «Like a Prayer»?",
+   "options": [
+    "Madonna",
+    "Cyndi Lauper",
+    "Whitney Houston",
+    "Kylie Minogue"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m057",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Quale band ha inciso «Bohemian Rhapsody»?",
+   "options": [
+    "Queen",
+    "The Who",
+    "Led Zeppelin",
+    "Deep Purple"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m058",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Chi è il cantante degli U2?",
+   "options": [
+    "Bono",
+    "Sting",
+    "Chris Martin",
+    "Bruce Springsteen"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m059",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Quale cantante è soprannominata «Queen B»?",
+   "options": [
+    "Beyoncé",
+    "Rihanna",
+    "Britney Spears",
+    "Lady Gaga"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m060",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Chi ha pubblicato l'album «Thriller»?",
+   "options": [
+    "Michael Jackson",
+    "Prince",
+    "Stevie Wonder",
+    "Lionel Richie"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m061",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Da quale Paese vengono gli ABBA?",
+   "options": [
+    "Svezia",
+    "Norvegia",
+    "Danimarca",
+    "Finlandia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m062",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Chi canta «Shape of You»?",
+   "options": [
+    "Ed Sheeran",
+    "Justin Bieber",
+    "Shawn Mendes",
+    "Harry Styles"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m063",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Quale band ha pubblicato «The Dark Side of the Moon»?",
+   "options": [
+    "Pink Floyd",
+    "The Beatles",
+    "Genesis",
+    "Yes"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m064",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Chi è il cantante dei Coldplay?",
+   "options": [
+    "Chris Martin",
+    "Thom Yorke",
+    "Brandon Flowers",
+    "Adam Levine"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m065",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Come si chiamava il cantante dei Nirvana?",
+   "options": [
+    "Kurt Cobain",
+    "Eddie Vedder",
+    "Chris Cornell",
+    "Dave Grohl"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m066",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Chi canta «Rolling in the Deep»?",
+   "options": [
+    "Adele",
+    "Amy Winehouse",
+    "Duffy",
+    "Sia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m067",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Quale band ha inciso «Smells Like Teen Spirit»?",
+   "options": [
+    "Nirvana",
+    "Pearl Jam",
+    "Green Day",
+    "Oasis"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m068",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Quale artista ha pubblicato l'album «1989»?",
+   "options": [
+    "Taylor Swift",
+    "Katy Perry",
+    "Ariana Grande",
+    "Selena Gomez"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m069",
+   "categoryId": "mint",
+   "type": "multiple",
+   "text": "Quale band britannica cantava «Wonderwall»?",
+   "options": [
+    "Oasis",
+    "Blur",
+    "Radiohead",
+    "Arctic Monkeys"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m070",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Come si chiama l'idraulico baffuto di Nintendo?",
+   "options": [
+    "Mario",
+    "Luigi",
+    "Wario",
+    "Toad"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m071",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Come si chiama la principessa della saga di «The Legend of Zelda»?",
+   "options": [
+    "Zelda",
+    "Peach",
+    "Daisy",
+    "Samus"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m072",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Qual è il Pokémon giallo mascotte della serie?",
+   "options": [
+    "Pikachu",
+    "Raichu",
+    "Psyduck",
+    "Jigglypuff"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m073",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "In quale gioco si costruisce in un mondo fatto di blocchi?",
+   "options": [
+    "Minecraft",
+    "Fortnite",
+    "Tetris",
+    "Rocket League"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m074",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Come si chiama il porcospino blu di Sega?",
+   "options": [
+    "Sonic",
+    "Tails",
+    "Knuckles",
+    "Shadow"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m075",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "In quale gioco del 1980 si mangiano puntini inseguiti da fantasmi?",
+   "options": [
+    "Pac-Man",
+    "Space Invaders",
+    "Tetris",
+    "Donkey Kong"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m076",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "In quale Paese è nato «Tetris»?",
+   "options": [
+    "Unione Sovietica",
+    "Giappone",
+    "Stati Uniti",
+    "Germania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m077",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Come si chiama la modalità in cui 100 giocatori si sfidano finché ne resta uno?",
+   "options": [
+    "Battle Royale",
+    "Deathmatch",
+    "Capture the Flag",
+    "Tower Defense"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m078",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Come si chiama il fratello di Mario?",
+   "options": [
+    "Luigi",
+    "Wario",
+    "Yoshi",
+    "Toad"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m079",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Quale saga ha per protagonista lo spartano Kratos?",
+   "options": [
+    "God of War",
+    "Devil May Cry",
+    "Dark Souls",
+    "Assassin's Creed"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m080",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Chi è il protagonista italiano di «Assassin's Creed II»?",
+   "options": [
+    "Ezio Auditore",
+    "Altaïr",
+    "Connor",
+    "Edward Kenway"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m081",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Quale azienda produce la console Xbox?",
+   "options": [
+    "Microsoft",
+    "Sony",
+    "Nintendo",
+    "Sega"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m082",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Come si chiama il dinosauro verde amico di Mario?",
+   "options": [
+    "Yoshi",
+    "Bowser",
+    "Rex",
+    "Koopa"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m083",
+   "categoryId": "vg",
+   "type": "multiple",
+   "text": "Quale serie di calcio di EA Sports ha cambiato nome in «EA Sports FC» nel 2023?",
+   "options": [
+    "FIFA",
+    "PES",
+    "Football Manager",
+    "Rocket League"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m084",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanti giocatori per squadra sono in campo nel basket?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "4"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m085",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Chi detiene il record mondiale dei 100 metri piani con 9''58?",
+   "options": [
+    "Usain Bolt",
+    "Carl Lewis",
+    "Tyson Gay",
+    "Marcell Jacobs"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m086",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quale italiano ha vinto l'oro olimpico nei 100 metri a Tokyo 2020?",
+   "options": [
+    "Marcell Jacobs",
+    "Filippo Tortu",
+    "Gianmarco Tamberi",
+    "Pietro Mennea"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m087",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quale squadra di calcio è soprannominata «la Vecchia Signora»?",
+   "options": [
+    "Juventus",
+    "Milan",
+    "Inter",
+    "Torino"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m088",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale sport si assegna il Pallone d'Oro?",
+   "options": [
+    "Calcio",
+    "Basket",
+    "Rugby",
+    "Pallavolo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m089",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quale pilota ha vinto 7 titoli mondiali di Formula 1, come Michael Schumacher?",
+   "options": [
+    "Lewis Hamilton",
+    "Sebastian Vettel",
+    "Ayrton Senna",
+    "Fernando Alonso"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m090",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Dove si sono svolte le Olimpiadi invernali del 2026?",
+   "options": [
+    "Milano-Cortina",
+    "Torino",
+    "Roma",
+    "Napoli"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m091",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quale tennista italiano ha vinto gli Australian Open nel 2024?",
+   "options": [
+    "Jannik Sinner",
+    "Matteo Berrettini",
+    "Lorenzo Musetti",
+    "Fabio Fognini"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m092",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale sport si gioca con 6 giocatori per parte e una rete alta?",
+   "options": [
+    "Pallavolo",
+    "Tennis",
+    "Badminton",
+    "Pallanuoto"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m093",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale sport si chiama «strike» abbattere tutti i birilli al primo tiro?",
+   "options": [
+    "Bowling",
+    "Golf",
+    "Biliardo",
+    "Curling"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m094",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quale nazionale ha vinto più Mondiali di calcio maschili?",
+   "options": [
+    "Brasile",
+    "Germania",
+    "Italia",
+    "Argentina"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m095",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale località si corre il Gran Premio d'Italia di Formula 1?",
+   "options": [
+    "Monza",
+    "Imola",
+    "Mugello",
+    "Misano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m096",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quale atleta italiano ha condiviso l'oro del salto in alto a Tokyo 2020?",
+   "options": [
+    "Gianmarco Tamberi",
+    "Marcell Jacobs",
+    "Massimo Stano",
+    "Filippo Tortu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m097",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Con quale numero ha sempre corso Valentino Rossi?",
+   "options": [
+    "46",
+    "93",
+    "99",
+    "27"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m098",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Da quale Paese viene la paella?",
+   "options": [
+    "Spagna",
+    "Messico",
+    "Portogallo",
+    "Grecia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m099",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quali sono gli ingredienti principali dello tzatziki greco?",
+   "options": [
+    "Yogurt e cetriolo",
+    "Pomodoro e cipolla",
+    "Melanzane e pane",
+    "Ceci e sesamo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m100",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Da quale Paese viene il kimchi?",
+   "options": [
+    "Corea",
+    "Giappone",
+    "Cina",
+    "Vietnam"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m101",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Cosa sono i tacos messicani?",
+   "options": [
+    "Tortillas ripiene",
+    "Polpette di riso",
+    "Spiedini di carne",
+    "Zuppe di fagioli"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m102",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale formaggio a crosta bianca viene dalla Normandia?",
+   "options": [
+    "Camembert",
+    "Roquefort",
+    "Comté",
+    "Emmental"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m103",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Da quale Paese viene la birra Guinness?",
+   "options": [
+    "Irlanda",
+    "Scozia",
+    "Inghilterra",
+    "Belgio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m104",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Il gulasch è un piatto tipico di quale Paese?",
+   "options": [
+    "Ungheria",
+    "Polonia",
+    "Grecia",
+    "Portogallo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m105",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Con quale frutta secca si prepara il marzapane?",
+   "options": [
+    "Mandorle",
+    "Noci",
+    "Nocciole",
+    "Pistacchi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m106",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Da quale Paese viene il pad thai?",
+   "options": [
+    "Thailandia",
+    "Vietnam",
+    "Cina",
+    "India"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m107",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale bevanda alcolica giapponese si ottiene dal riso?",
+   "options": [
+    "Sakè",
+    "Soju",
+    "Tequila",
+    "Ouzo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m108",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Qual è l'ingrediente principale della fonduta tradizionale svizzera?",
+   "options": [
+    "Formaggio",
+    "Cioccolato",
+    "Carne",
+    "Patate"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-m109",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale spezia si ricava dagli stimmi di un fiore di croco?",
+   "options": [
+    "Zafferano",
+    "Curcuma",
+    "Cannella",
+    "Paprika"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "pop-t001",
+   "categoryId": "film",
+   "type": "truefalse",
+   "text": "Il film «Avatar» è stato diretto da James Cameron.",
+   "answer": true
+  },
+  {
+   "id": "pop-t002",
+   "categoryId": "film",
+   "type": "truefalse",
+   "text": "«Il Padrino» è stato diretto da Martin Scorsese.",
+   "answer": false
+  },
+  {
+   "id": "pop-t003",
+   "categoryId": "film",
+   "type": "truefalse",
+   "text": "La saga di «Star Wars» è stata creata da Steven Spielberg.",
+   "answer": false
+  },
+  {
+   "id": "pop-t004",
+   "categoryId": "film",
+   "type": "truefalse",
+   "text": "Nel film «Frozen», Elsa ha il potere di controllare il fuoco.",
+   "answer": false
+  },
+  {
+   "id": "pop-t005",
+   "categoryId": "film",
+   "type": "truefalse",
+   "text": "Harry Potter frequenta la scuola di magia di Hogwarts.",
+   "answer": true
+  },
+  {
+   "id": "pop-t006",
+   "categoryId": "serie",
+   "type": "truefalse",
+   "text": "I Simpson vivono nella città di Springfield.",
+   "answer": true
+  },
+  {
+   "id": "pop-t007",
+   "categoryId": "cart",
+   "type": "truefalse",
+   "text": "Superman viene dal pianeta Krypton.",
+   "answer": true
+  },
+  {
+   "id": "pop-t008",
+   "categoryId": "cart",
+   "type": "truefalse",
+   "text": "Bruce Wayne è l'identità segreta di Superman.",
+   "answer": false
+  },
+  {
+   "id": "pop-t009",
+   "categoryId": "cart",
+   "type": "truefalse",
+   "text": "Shrek è un orco.",
+   "answer": true
+  },
+  {
+   "id": "pop-t010",
+   "categoryId": "mita",
+   "type": "truefalse",
+   "text": "I Måneskin sono un gruppo nato a Roma.",
+   "answer": true
+  },
+  {
+   "id": "pop-t011",
+   "categoryId": "mita",
+   "type": "truefalse",
+   "text": "Il Festival di Sanremo si svolge al Teatro alla Scala.",
+   "answer": false
+  },
+  {
+   "id": "pop-t012",
+   "categoryId": "mint",
+   "type": "truefalse",
+   "text": "Elvis Presley era soprannominato «il Re del Rock and Roll».",
+   "answer": true
+  },
+  {
+   "id": "pop-t013",
+   "categoryId": "vg",
+   "type": "truefalse",
+   "text": "Nel suo primo gioco, Mario faceva il carpentiere.",
+   "answer": true
+  },
+  {
+   "id": "pop-t014",
+   "categoryId": "vg",
+   "type": "truefalse",
+   "text": "Pikachu è un Pokémon di tipo Fuoco.",
+   "answer": false
+  },
+  {
+   "id": "pop-t015",
+   "categoryId": "vg",
+   "type": "truefalse",
+   "text": "Tetris è stato inventato in Giappone.",
+   "answer": false
+  },
+  {
+   "id": "pop-t016",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "Lionel Messi è portoghese.",
+   "answer": false
+  },
+  {
+   "id": "pop-t017",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "Il leader del Giro d'Italia indossa la maglia rosa.",
+   "answer": true
+  },
+  {
+   "id": "pop-t018",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "La pallavolo è stata inventata in Italia.",
+   "answer": false
+  },
+  {
+   "id": "pop-t019",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "Il basket è stato inventato da James Naismith.",
+   "answer": true
+  },
+  {
+   "id": "pop-t020",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "La Ferrari ha sede a Maranello.",
+   "answer": true
+  },
+  {
+   "id": "pop-t021",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "Roma ha ospitato le Olimpiadi estive del 1960.",
+   "answer": true
+  },
+  {
+   "id": "pop-t022",
+   "categoryId": "vg",
+   "type": "truefalse",
+   "text": "Nel Monopoly italiano la casella più cara è «Parco della Vittoria».",
+   "answer": true
+  },
+  {
+   "id": "pop-t023",
+   "categoryId": "cibo",
+   "type": "truefalse",
+   "text": "Il sushi nasce in Cina.",
+   "answer": false
+  },
+  {
+   "id": "pop-t024",
+   "categoryId": "cibo",
+   "type": "truefalse",
+   "text": "Il kebab è un piatto della tradizione giapponese.",
+   "answer": false
+  }
+ ]
+}

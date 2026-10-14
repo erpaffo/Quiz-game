@@ -1,0 +1,6482 @@
+{
+ "id": "bandiere",
+ "name": "Bandiere del mondo",
+ "description": "Le bandiere dei 195 Stati sovrani (193 membri ONU + Vaticano e Palestina). Bandiere: flag-icons, licenza MIT.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "europa",
+   "name": "Bandiere d'Europa",
+   "icon": "🇪🇺",
+   "color": "#4361ee"
+  },
+  {
+   "id": "asia",
+   "name": "Bandiere d'Asia",
+   "icon": "🏯",
+   "color": "#e63946"
+  },
+  {
+   "id": "africa",
+   "name": "Bandiere d'Africa",
+   "icon": "🦁",
+   "color": "#f77f00"
+  },
+  {
+   "id": "nordamerica",
+   "name": "Bandiere Nord e Centro America",
+   "icon": "🗽",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "sudamerica",
+   "name": "Bandiere del Sud America",
+   "icon": "🌎",
+   "color": "#43aa8b"
+  },
+  {
+   "id": "oceania",
+   "name": "Bandiere dell'Oceania",
+   "icon": "🏝️",
+   "color": "#4cc9f0"
+  }
+ ],
+ "questions": [
+  {
+   "id": "f-af",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/af.svg",
+   "options": [
+    "Afghanistan",
+    "Timor Est",
+    "Uzbekistan",
+    "Corea del Nord"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-af",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Afghanistan",
+   "options": [
+    "Afghanistan",
+    "Arabia Saudita",
+    "Israele",
+    "Bahrein"
+   ],
+   "optionImages": [
+    "/flags/af.svg",
+    "/flags/sa.svg",
+    "/flags/il.svg",
+    "/flags/bh.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-al",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/al.svg",
+   "options": [
+    "Albania",
+    "Norvegia",
+    "Regno Unito",
+    "Bosnia ed Erzegovina"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-al",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Albania",
+   "options": [
+    "Albania",
+    "Italia",
+    "Bulgaria",
+    "Islanda"
+   ],
+   "optionImages": [
+    "/flags/al.svg",
+    "/flags/it.svg",
+    "/flags/bg.svg",
+    "/flags/is.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-dz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/dz.svg",
+   "options": [
+    "Algeria",
+    "Gambia",
+    "Ghana",
+    "Sudan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-dz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Algeria",
+   "options": [
+    "Algeria",
+    "Senegal",
+    "Repubblica Centrafricana",
+    "Gibuti"
+   ],
+   "optionImages": [
+    "/flags/dz.svg",
+    "/flags/sn.svg",
+    "/flags/cf.svg",
+    "/flags/dj.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ad",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ad.svg",
+   "options": [
+    "Andorra",
+    "Danimarca",
+    "Slovenia",
+    "Città del Vaticano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ad",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Andorra",
+   "options": [
+    "Andorra",
+    "Repubblica Ceca",
+    "Ucraina",
+    "Montenegro"
+   ],
+   "optionImages": [
+    "/flags/ad.svg",
+    "/flags/cz.svg",
+    "/flags/ua.svg",
+    "/flags/me.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ao",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ao.svg",
+   "options": [
+    "Angola",
+    "Zambia",
+    "Sierra Leone",
+    "Gabon"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ao",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Angola",
+   "options": [
+    "Angola",
+    "Nigeria",
+    "Madagascar",
+    "Sudan"
+   ],
+   "optionImages": [
+    "/flags/ao.svg",
+    "/flags/ng.svg",
+    "/flags/mg.svg",
+    "/flags/sd.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ag",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ag.svg",
+   "options": [
+    "Antigua e Barbuda",
+    "Haiti",
+    "Saint Kitts e Nevis",
+    "Panama"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ag",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Antigua e Barbuda",
+   "options": [
+    "Antigua e Barbuda",
+    "Panama",
+    "Bahamas",
+    "Stati Uniti"
+   ],
+   "optionImages": [
+    "/flags/ag.svg",
+    "/flags/pa.svg",
+    "/flags/bs.svg",
+    "/flags/us.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ar",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ar.svg",
+   "options": [
+    "Argentina",
+    "Brasile",
+    "Venezuela",
+    "Bolivia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ar",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Argentina",
+   "options": [
+    "Argentina",
+    "Guyana",
+    "Uruguay",
+    "Perù"
+   ],
+   "optionImages": [
+    "/flags/ar.svg",
+    "/flags/gy.svg",
+    "/flags/uy.svg",
+    "/flags/pe.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-am",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/am.svg",
+   "options": [
+    "Armenia",
+    "Kuwait",
+    "Bangladesh",
+    "Brunei"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-am",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Armenia",
+   "options": [
+    "Armenia",
+    "Corea del Sud",
+    "Afghanistan",
+    "Malaysia"
+   ],
+   "optionImages": [
+    "/flags/am.svg",
+    "/flags/kr.svg",
+    "/flags/af.svg",
+    "/flags/my.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-au",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/au.svg",
+   "options": [
+    "Australia",
+    "Micronesia",
+    "Papua Nuova Guinea",
+    "Samoa"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-au",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Australia",
+   "options": [
+    "Australia",
+    "Nuova Zelanda",
+    "Isole Marshall",
+    "Micronesia"
+   ],
+   "optionImages": [
+    "/flags/au.svg",
+    "/flags/nz.svg",
+    "/flags/mh.svg",
+    "/flags/fm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-at",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/at.svg",
+   "options": [
+    "Austria",
+    "Lettonia",
+    "Estonia",
+    "Liechtenstein"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-at",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Austria",
+   "options": [
+    "Austria",
+    "Russia",
+    "Norvegia",
+    "Svizzera"
+   ],
+   "optionImages": [
+    "/flags/at.svg",
+    "/flags/ru.svg",
+    "/flags/no.svg",
+    "/flags/ch.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-az",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/az.svg",
+   "options": [
+    "Azerbaigian",
+    "Iran",
+    "Bahrein",
+    "Afghanistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-az",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Azerbaigian",
+   "options": [
+    "Azerbaigian",
+    "Libano",
+    "Laos",
+    "Bhutan"
+   ],
+   "optionImages": [
+    "/flags/az.svg",
+    "/flags/lb.svg",
+    "/flags/la.svg",
+    "/flags/bt.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bs",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bs.svg",
+   "options": [
+    "Bahamas",
+    "Honduras",
+    "Belize",
+    "Barbados"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bs",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bahamas",
+   "options": [
+    "Bahamas",
+    "Barbados",
+    "Antigua e Barbuda",
+    "Honduras"
+   ],
+   "optionImages": [
+    "/flags/bs.svg",
+    "/flags/bb.svg",
+    "/flags/ag.svg",
+    "/flags/hn.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bh",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bh.svg",
+   "options": [
+    "Bahrein",
+    "Vietnam",
+    "Indonesia",
+    "Iraq"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bh",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bahrein",
+   "options": [
+    "Bahrein",
+    "Palestina",
+    "Vietnam",
+    "Qatar"
+   ],
+   "optionImages": [
+    "/flags/bh.svg",
+    "/flags/ps.svg",
+    "/flags/vn.svg",
+    "/flags/qa.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bd",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bd.svg",
+   "options": [
+    "Bangladesh",
+    "Kuwait",
+    "Libano",
+    "Mongolia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bd",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bangladesh",
+   "options": [
+    "Bangladesh",
+    "Brunei",
+    "Palestina",
+    "Turchia"
+   ],
+   "optionImages": [
+    "/flags/bd.svg",
+    "/flags/bn.svg",
+    "/flags/ps.svg",
+    "/flags/tr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bb",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bb.svg",
+   "options": [
+    "Barbados",
+    "Honduras",
+    "Saint Kitts e Nevis",
+    "Panama"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bb",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Barbados",
+   "options": [
+    "Barbados",
+    "Giamaica",
+    "Dominica",
+    "Haiti"
+   ],
+   "optionImages": [
+    "/flags/bb.svg",
+    "/flags/jm.svg",
+    "/flags/dm.svg",
+    "/flags/ht.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-by",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/by.svg",
+   "options": [
+    "Bielorussia",
+    "Spagna",
+    "Slovenia",
+    "Danimarca"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-by",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bielorussia",
+   "options": [
+    "Bielorussia",
+    "Malta",
+    "Ucraina",
+    "Svezia"
+   ],
+   "optionImages": [
+    "/flags/by.svg",
+    "/flags/mt.svg",
+    "/flags/ua.svg",
+    "/flags/se.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-be",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/be.svg",
+   "options": [
+    "Belgio",
+    "Serbia",
+    "Bosnia ed Erzegovina",
+    "Lituania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-be",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Belgio",
+   "options": [
+    "Belgio",
+    "Portogallo",
+    "Svizzera",
+    "Andorra"
+   ],
+   "optionImages": [
+    "/flags/be.svg",
+    "/flags/pt.svg",
+    "/flags/ch.svg",
+    "/flags/ad.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bz",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bz.svg",
+   "options": [
+    "Belize",
+    "Stati Uniti",
+    "Barbados",
+    "Bahamas"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bz",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Belize",
+   "options": [
+    "Belize",
+    "Giamaica",
+    "Honduras",
+    "Saint Lucia"
+   ],
+   "optionImages": [
+    "/flags/bz.svg",
+    "/flags/jm.svg",
+    "/flags/hn.svg",
+    "/flags/lc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bj",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bj.svg",
+   "options": [
+    "Benin",
+    "Guinea Equatoriale",
+    "Algeria",
+    "Gibuti"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bj",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Benin",
+   "options": [
+    "Benin",
+    "Guinea-Bissau",
+    "São Tomé e Príncipe",
+    "Nigeria"
+   ],
+   "optionImages": [
+    "/flags/bj.svg",
+    "/flags/gw.svg",
+    "/flags/st.svg",
+    "/flags/ng.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bt",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bt.svg",
+   "options": [
+    "Bhutan",
+    "Emirati Arabi Uniti",
+    "Oman",
+    "Uzbekistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bt",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bhutan",
+   "options": [
+    "Bhutan",
+    "Myanmar",
+    "Mongolia",
+    "Iraq"
+   ],
+   "optionImages": [
+    "/flags/bt.svg",
+    "/flags/mm.svg",
+    "/flags/mn.svg",
+    "/flags/iq.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bo",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bo.svg",
+   "options": [
+    "Bolivia",
+    "Perù",
+    "Venezuela",
+    "Colombia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bo",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bolivia",
+   "options": [
+    "Bolivia",
+    "Colombia",
+    "Guyana",
+    "Cile"
+   ],
+   "optionImages": [
+    "/flags/bo.svg",
+    "/flags/co.svg",
+    "/flags/gy.svg",
+    "/flags/cl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ba",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ba.svg",
+   "options": [
+    "Bosnia ed Erzegovina",
+    "Lituania",
+    "Svizzera",
+    "Serbia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ba",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bosnia ed Erzegovina",
+   "options": [
+    "Bosnia ed Erzegovina",
+    "Macedonia del Nord",
+    "Croazia",
+    "Repubblica Ceca"
+   ],
+   "optionImages": [
+    "/flags/ba.svg",
+    "/flags/mk.svg",
+    "/flags/hr.svg",
+    "/flags/cz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bw.svg",
+   "options": [
+    "Botswana",
+    "Zimbabwe",
+    "Ciad",
+    "Guinea Equatoriale"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Botswana",
+   "options": [
+    "Botswana",
+    "Mauritius",
+    "Egitto",
+    "Sierra Leone"
+   ],
+   "optionImages": [
+    "/flags/bw.svg",
+    "/flags/mu.svg",
+    "/flags/eg.svg",
+    "/flags/sl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-br",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/br.svg",
+   "options": [
+    "Brasile",
+    "Paraguay",
+    "Perù",
+    "Colombia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-br",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Brasile",
+   "options": [
+    "Brasile",
+    "Ecuador",
+    "Suriname",
+    "Argentina"
+   ],
+   "optionImages": [
+    "/flags/br.svg",
+    "/flags/ec.svg",
+    "/flags/sr.svg",
+    "/flags/ar.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bn.svg",
+   "options": [
+    "Brunei",
+    "India",
+    "Palestina",
+    "Thailandia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Brunei",
+   "options": [
+    "Brunei",
+    "Timor Est",
+    "Nepal",
+    "Qatar"
+   ],
+   "optionImages": [
+    "/flags/bn.svg",
+    "/flags/tl.svg",
+    "/flags/np.svg",
+    "/flags/qa.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bg",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bg.svg",
+   "options": [
+    "Bulgaria",
+    "Austria",
+    "Norvegia",
+    "Danimarca"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bg",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Bulgaria",
+   "options": [
+    "Bulgaria",
+    "Grecia",
+    "Cipro",
+    "Macedonia del Nord"
+   ],
+   "optionImages": [
+    "/flags/bg.svg",
+    "/flags/gr.svg",
+    "/flags/cy.svg",
+    "/flags/mk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bf",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bf.svg",
+   "options": [
+    "Burkina Faso",
+    "Kenya",
+    "Namibia",
+    "Gibuti"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bf",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Burkina Faso",
+   "options": [
+    "Burkina Faso",
+    "Etiopia",
+    "Lesotho",
+    "Tanzania"
+   ],
+   "optionImages": [
+    "/flags/bf.svg",
+    "/flags/et.svg",
+    "/flags/ls.svg",
+    "/flags/tz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-bi",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/bi.svg",
+   "options": [
+    "Burundi",
+    "Tunisia",
+    "Namibia",
+    "Sud Sudan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-bi",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Burundi",
+   "options": [
+    "Burundi",
+    "Namibia",
+    "Zimbabwe",
+    "Sudafrica"
+   ],
+   "optionImages": [
+    "/flags/bi.svg",
+    "/flags/na.svg",
+    "/flags/zw.svg",
+    "/flags/za.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cv",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cv.svg",
+   "options": [
+    "Capo Verde",
+    "Guinea-Bissau",
+    "Sudafrica",
+    "Sud Sudan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cv",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Capo Verde",
+   "options": [
+    "Capo Verde",
+    "Libia",
+    "Camerun",
+    "Liberia"
+   ],
+   "optionImages": [
+    "/flags/cv.svg",
+    "/flags/ly.svg",
+    "/flags/cm.svg",
+    "/flags/lr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kh",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kh.svg",
+   "options": [
+    "Cambogia",
+    "Tagikistan",
+    "Emirati Arabi Uniti",
+    "Corea del Nord"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kh",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Cambogia",
+   "options": [
+    "Cambogia",
+    "Iran",
+    "Palestina",
+    "Yemen"
+   ],
+   "optionImages": [
+    "/flags/kh.svg",
+    "/flags/ir.svg",
+    "/flags/ps.svg",
+    "/flags/ye.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cm",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cm.svg",
+   "options": [
+    "Camerun",
+    "Repubblica Centrafricana",
+    "Gibuti",
+    "Mauritania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cm",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Camerun",
+   "options": [
+    "Camerun",
+    "Mauritius",
+    "Niger",
+    "Namibia"
+   ],
+   "optionImages": [
+    "/flags/cm.svg",
+    "/flags/mu.svg",
+    "/flags/ne.svg",
+    "/flags/na.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ca",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ca.svg",
+   "options": [
+    "Canada",
+    "Antigua e Barbuda",
+    "Haiti",
+    "Honduras"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ca",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Canada",
+   "options": [
+    "Canada",
+    "Belize",
+    "Guatemala",
+    "Giamaica"
+   ],
+   "optionImages": [
+    "/flags/ca.svg",
+    "/flags/bz.svg",
+    "/flags/gt.svg",
+    "/flags/jm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cf",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cf.svg",
+   "options": [
+    "Repubblica Centrafricana",
+    "Malawi",
+    "São Tomé e Príncipe",
+    "Mozambico"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cf",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Repubblica Centrafricana",
+   "options": [
+    "Repubblica Centrafricana",
+    "Togo",
+    "Madagascar",
+    "Mozambico"
+   ],
+   "optionImages": [
+    "/flags/cf.svg",
+    "/flags/tg.svg",
+    "/flags/mg.svg",
+    "/flags/mz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-td",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/td.svg",
+   "options": [
+    "Ciad",
+    "Gibuti",
+    "Mali",
+    "Malawi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-td",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Ciad",
+   "options": [
+    "Ciad",
+    "Zambia",
+    "Sud Sudan",
+    "Nigeria"
+   ],
+   "optionImages": [
+    "/flags/td.svg",
+    "/flags/zm.svg",
+    "/flags/ss.svg",
+    "/flags/ng.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cl",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cl.svg",
+   "options": [
+    "Cile",
+    "Perù",
+    "Trinidad e Tobago",
+    "Ecuador"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cl",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Cile",
+   "options": [
+    "Cile",
+    "Trinidad e Tobago",
+    "Uruguay",
+    "Brasile"
+   ],
+   "optionImages": [
+    "/flags/cl.svg",
+    "/flags/tt.svg",
+    "/flags/uy.svg",
+    "/flags/br.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cn.svg",
+   "options": [
+    "Cina",
+    "Myanmar",
+    "Sri Lanka",
+    "Palestina"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Cina",
+   "options": [
+    "Cina",
+    "Sri Lanka",
+    "India",
+    "Malaysia"
+   ],
+   "optionImages": [
+    "/flags/cn.svg",
+    "/flags/lk.svg",
+    "/flags/in.svg",
+    "/flags/my.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-co",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/co.svg",
+   "options": [
+    "Colombia",
+    "Guyana",
+    "Ecuador",
+    "Argentina"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-co",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Colombia",
+   "options": [
+    "Colombia",
+    "Ecuador",
+    "Bolivia",
+    "Brasile"
+   ],
+   "optionImages": [
+    "/flags/co.svg",
+    "/flags/ec.svg",
+    "/flags/bo.svg",
+    "/flags/br.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-km",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/km.svg",
+   "options": [
+    "Comore",
+    "Libia",
+    "Repubblica Democratica del Congo",
+    "Egitto"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-km",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Comore",
+   "options": [
+    "Comore",
+    "Sudan",
+    "Zimbabwe",
+    "Guinea"
+   ],
+   "optionImages": [
+    "/flags/km.svg",
+    "/flags/sd.svg",
+    "/flags/zw.svg",
+    "/flags/gn.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cg.svg",
+   "options": [
+    "Repubblica del Congo",
+    "Angola",
+    "Mozambico",
+    "Comore"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Repubblica del Congo",
+   "options": [
+    "Repubblica del Congo",
+    "Togo",
+    "Repubblica Centrafricana",
+    "Mauritius"
+   ],
+   "optionImages": [
+    "/flags/cg.svg",
+    "/flags/tg.svg",
+    "/flags/cf.svg",
+    "/flags/mu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cd",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cd.svg",
+   "options": [
+    "Repubblica Democratica del Congo",
+    "Sierra Leone",
+    "Costa d'Avorio",
+    "Somalia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cd",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Repubblica Democratica del Congo",
+   "options": [
+    "Repubblica Democratica del Congo",
+    "Nigeria",
+    "Lesotho",
+    "Mali"
+   ],
+   "optionImages": [
+    "/flags/cd.svg",
+    "/flags/ng.svg",
+    "/flags/ls.svg",
+    "/flags/ml.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cr",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cr.svg",
+   "options": [
+    "Costa Rica",
+    "Saint Lucia",
+    "Stati Uniti",
+    "Guatemala"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cr",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Costa Rica",
+   "options": [
+    "Costa Rica",
+    "Guatemala",
+    "Honduras",
+    "El Salvador"
+   ],
+   "optionImages": [
+    "/flags/cr.svg",
+    "/flags/gt.svg",
+    "/flags/hn.svg",
+    "/flags/sv.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ci",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ci.svg",
+   "options": [
+    "Costa d'Avorio",
+    "Angola",
+    "Sud Sudan",
+    "Somalia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ci",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Costa d'Avorio",
+   "options": [
+    "Costa d'Avorio",
+    "Mauritania",
+    "Guinea-Bissau",
+    "Repubblica del Congo"
+   ],
+   "optionImages": [
+    "/flags/ci.svg",
+    "/flags/mr.svg",
+    "/flags/gw.svg",
+    "/flags/cg.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-hr",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/hr.svg",
+   "options": [
+    "Croazia",
+    "Italia",
+    "Serbia",
+    "Monaco"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-hr",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Croazia",
+   "options": [
+    "Croazia",
+    "Regno Unito",
+    "Ucraina",
+    "Andorra"
+   ],
+   "optionImages": [
+    "/flags/hr.svg",
+    "/flags/gb.svg",
+    "/flags/ua.svg",
+    "/flags/ad.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cu",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cu.svg",
+   "options": [
+    "Cuba",
+    "Haiti",
+    "Saint Kitts e Nevis",
+    "Dominica"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cu",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Cuba",
+   "options": [
+    "Cuba",
+    "Honduras",
+    "Saint Kitts e Nevis",
+    "Belize"
+   ],
+   "optionImages": [
+    "/flags/cu.svg",
+    "/flags/hn.svg",
+    "/flags/kn.svg",
+    "/flags/bz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cy",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cy.svg",
+   "options": [
+    "Cipro",
+    "Italia",
+    "San Marino",
+    "Russia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cy",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Cipro",
+   "options": [
+    "Cipro",
+    "Macedonia del Nord",
+    "Monaco",
+    "Moldavia"
+   ],
+   "optionImages": [
+    "/flags/cy.svg",
+    "/flags/mk.svg",
+    "/flags/mc.svg",
+    "/flags/md.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-cz",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/cz.svg",
+   "options": [
+    "Repubblica Ceca",
+    "Regno Unito",
+    "Belgio",
+    "Albania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-cz",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Repubblica Ceca",
+   "options": [
+    "Repubblica Ceca",
+    "Irlanda",
+    "Regno Unito",
+    "Albania"
+   ],
+   "optionImages": [
+    "/flags/cz.svg",
+    "/flags/ie.svg",
+    "/flags/gb.svg",
+    "/flags/al.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-dk",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/dk.svg",
+   "options": [
+    "Danimarca",
+    "Lettonia",
+    "Germania",
+    "Liechtenstein"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-dk",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Danimarca",
+   "options": [
+    "Danimarca",
+    "Islanda",
+    "Norvegia",
+    "Paesi Bassi"
+   ],
+   "optionImages": [
+    "/flags/dk.svg",
+    "/flags/is.svg",
+    "/flags/no.svg",
+    "/flags/nl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-dj",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/dj.svg",
+   "options": [
+    "Gibuti",
+    "Seychelles",
+    "Algeria",
+    "Kenya"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-dj",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Gibuti",
+   "options": [
+    "Gibuti",
+    "Repubblica Centrafricana",
+    "Repubblica del Congo",
+    "Malawi"
+   ],
+   "optionImages": [
+    "/flags/dj.svg",
+    "/flags/cf.svg",
+    "/flags/cg.svg",
+    "/flags/mw.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-dm",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/dm.svg",
+   "options": [
+    "Dominica",
+    "Grenada",
+    "Saint Lucia",
+    "El Salvador"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-dm",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Dominica",
+   "options": [
+    "Dominica",
+    "Messico",
+    "Belize",
+    "Cuba"
+   ],
+   "optionImages": [
+    "/flags/dm.svg",
+    "/flags/mx.svg",
+    "/flags/bz.svg",
+    "/flags/cu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-do",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/do.svg",
+   "options": [
+    "Repubblica Dominicana",
+    "Belize",
+    "Saint Lucia",
+    "Guatemala"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-do",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Repubblica Dominicana",
+   "options": [
+    "Repubblica Dominicana",
+    "Nicaragua",
+    "Giamaica",
+    "Canada"
+   ],
+   "optionImages": [
+    "/flags/do.svg",
+    "/flags/ni.svg",
+    "/flags/jm.svg",
+    "/flags/ca.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ec",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ec.svg",
+   "options": [
+    "Ecuador",
+    "Paraguay",
+    "Venezuela",
+    "Perù"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ec",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Ecuador",
+   "options": [
+    "Ecuador",
+    "Paraguay",
+    "Trinidad e Tobago",
+    "Venezuela"
+   ],
+   "optionImages": [
+    "/flags/ec.svg",
+    "/flags/py.svg",
+    "/flags/tt.svg",
+    "/flags/ve.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-eg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/eg.svg",
+   "options": [
+    "Egitto",
+    "Lesotho",
+    "Guinea",
+    "Sierra Leone"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-eg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Egitto",
+   "options": [
+    "Egitto",
+    "Senegal",
+    "Tunisia",
+    "Namibia"
+   ],
+   "optionImages": [
+    "/flags/eg.svg",
+    "/flags/sn.svg",
+    "/flags/tn.svg",
+    "/flags/na.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sv",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sv.svg",
+   "options": [
+    "El Salvador",
+    "Costa Rica",
+    "Saint Lucia",
+    "Repubblica Dominicana"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sv",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: El Salvador",
+   "options": [
+    "El Salvador",
+    "Canada",
+    "Panama",
+    "Honduras"
+   ],
+   "optionImages": [
+    "/flags/sv.svg",
+    "/flags/ca.svg",
+    "/flags/pa.svg",
+    "/flags/hn.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gq",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gq.svg",
+   "options": [
+    "Guinea Equatoriale",
+    "Libia",
+    "Ruanda",
+    "Nigeria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gq",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Guinea Equatoriale",
+   "options": [
+    "Guinea Equatoriale",
+    "Liberia",
+    "Madagascar",
+    "Ciad"
+   ],
+   "optionImages": [
+    "/flags/gq.svg",
+    "/flags/lr.svg",
+    "/flags/mg.svg",
+    "/flags/td.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-er",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/er.svg",
+   "options": [
+    "Eritrea",
+    "Zimbabwe",
+    "Sudafrica",
+    "Mozambico"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-er",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Eritrea",
+   "options": [
+    "Eritrea",
+    "Zimbabwe",
+    "Tanzania",
+    "Gibuti"
+   ],
+   "optionImages": [
+    "/flags/er.svg",
+    "/flags/zw.svg",
+    "/flags/tz.svg",
+    "/flags/dj.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ee",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ee.svg",
+   "options": [
+    "Estonia",
+    "Repubblica Ceca",
+    "Ucraina",
+    "Spagna"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ee",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Estonia",
+   "options": [
+    "Estonia",
+    "Cipro",
+    "Ucraina",
+    "Russia"
+   ],
+   "optionImages": [
+    "/flags/ee.svg",
+    "/flags/cy.svg",
+    "/flags/ua.svg",
+    "/flags/ru.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sz.svg",
+   "options": [
+    "Eswatini",
+    "Ruanda",
+    "Namibia",
+    "Angola"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Eswatini",
+   "options": [
+    "Eswatini",
+    "Comore",
+    "Benin",
+    "Senegal"
+   ],
+   "optionImages": [
+    "/flags/sz.svg",
+    "/flags/km.svg",
+    "/flags/bj.svg",
+    "/flags/sn.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-et",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/et.svg",
+   "options": [
+    "Etiopia",
+    "Libia",
+    "Capo Verde",
+    "Camerun"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-et",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Etiopia",
+   "options": [
+    "Etiopia",
+    "Egitto",
+    "Liberia",
+    "Repubblica Democratica del Congo"
+   ],
+   "optionImages": [
+    "/flags/et.svg",
+    "/flags/eg.svg",
+    "/flags/lr.svg",
+    "/flags/cd.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-fj",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/fj.svg",
+   "options": [
+    "Figi",
+    "Nuova Zelanda",
+    "Kiribati",
+    "Tonga"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-fj",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Figi",
+   "options": [
+    "Figi",
+    "Tonga",
+    "Australia",
+    "Micronesia"
+   ],
+   "optionImages": [
+    "/flags/fj.svg",
+    "/flags/to.svg",
+    "/flags/au.svg",
+    "/flags/fm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-fi",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/fi.svg",
+   "options": [
+    "Finlandia",
+    "Albania",
+    "Cipro",
+    "Città del Vaticano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-fi",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Finlandia",
+   "options": [
+    "Finlandia",
+    "Croazia",
+    "Andorra",
+    "Cipro"
+   ],
+   "optionImages": [
+    "/flags/fi.svg",
+    "/flags/hr.svg",
+    "/flags/ad.svg",
+    "/flags/cy.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-fr",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/fr.svg",
+   "options": [
+    "Francia",
+    "Ungheria",
+    "Russia",
+    "Liechtenstein"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-fr",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Francia",
+   "options": [
+    "Francia",
+    "Belgio",
+    "Repubblica Ceca",
+    "Macedonia del Nord"
+   ],
+   "optionImages": [
+    "/flags/fr.svg",
+    "/flags/be.svg",
+    "/flags/cz.svg",
+    "/flags/mk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ga",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ga.svg",
+   "options": [
+    "Gabon",
+    "Zimbabwe",
+    "Costa d'Avorio",
+    "Ghana"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ga",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Gabon",
+   "options": [
+    "Gabon",
+    "Mozambico",
+    "Malawi",
+    "Marocco"
+   ],
+   "optionImages": [
+    "/flags/ga.svg",
+    "/flags/mz.svg",
+    "/flags/mw.svg",
+    "/flags/ma.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gm",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gm.svg",
+   "options": [
+    "Gambia",
+    "Lesotho",
+    "Burkina Faso",
+    "Nigeria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gm",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Gambia",
+   "options": [
+    "Gambia",
+    "Angola",
+    "Tanzania",
+    "Seychelles"
+   ],
+   "optionImages": [
+    "/flags/gm.svg",
+    "/flags/ao.svg",
+    "/flags/tz.svg",
+    "/flags/sc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ge",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ge.svg",
+   "options": [
+    "Georgia",
+    "Brunei",
+    "Corea del Nord",
+    "Kazakistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ge",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Georgia",
+   "options": [
+    "Georgia",
+    "Malaysia",
+    "Kirghizistan",
+    "Bahrein"
+   ],
+   "optionImages": [
+    "/flags/ge.svg",
+    "/flags/my.svg",
+    "/flags/kg.svg",
+    "/flags/bh.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-de",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/de.svg",
+   "options": [
+    "Germania",
+    "Irlanda",
+    "Italia",
+    "Norvegia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-de",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Germania",
+   "options": [
+    "Germania",
+    "Monaco",
+    "Albania",
+    "Islanda"
+   ],
+   "optionImages": [
+    "/flags/de.svg",
+    "/flags/mc.svg",
+    "/flags/al.svg",
+    "/flags/is.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gh",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gh.svg",
+   "options": [
+    "Ghana",
+    "Seychelles",
+    "Burundi",
+    "Eswatini"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gh",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Ghana",
+   "options": [
+    "Ghana",
+    "Mauritania",
+    "Sudan",
+    "Angola"
+   ],
+   "optionImages": [
+    "/flags/gh.svg",
+    "/flags/mr.svg",
+    "/flags/sd.svg",
+    "/flags/ao.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gr",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gr.svg",
+   "options": [
+    "Grecia",
+    "Danimarca",
+    "Bielorussia",
+    "Spagna"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gr",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Grecia",
+   "options": [
+    "Grecia",
+    "Estonia",
+    "Serbia",
+    "Germania"
+   ],
+   "optionImages": [
+    "/flags/gr.svg",
+    "/flags/ee.svg",
+    "/flags/rs.svg",
+    "/flags/de.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gd",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gd.svg",
+   "options": [
+    "Grenada",
+    "Honduras",
+    "El Salvador",
+    "Saint Lucia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gd",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Grenada",
+   "options": [
+    "Grenada",
+    "Barbados",
+    "Giamaica",
+    "Stati Uniti"
+   ],
+   "optionImages": [
+    "/flags/gd.svg",
+    "/flags/bb.svg",
+    "/flags/jm.svg",
+    "/flags/us.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gt",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gt.svg",
+   "options": [
+    "Guatemala",
+    "Canada",
+    "Messico",
+    "Haiti"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gt",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Guatemala",
+   "options": [
+    "Guatemala",
+    "Saint Kitts e Nevis",
+    "Messico",
+    "Repubblica Dominicana"
+   ],
+   "optionImages": [
+    "/flags/gt.svg",
+    "/flags/kn.svg",
+    "/flags/mx.svg",
+    "/flags/do.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gn",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gn.svg",
+   "options": [
+    "Guinea",
+    "Mauritania",
+    "Gambia",
+    "Benin"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gn",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Guinea",
+   "options": [
+    "Guinea",
+    "Tunisia",
+    "Togo",
+    "Ruanda"
+   ],
+   "optionImages": [
+    "/flags/gn.svg",
+    "/flags/tn.svg",
+    "/flags/tg.svg",
+    "/flags/rw.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gw.svg",
+   "options": [
+    "Guinea-Bissau",
+    "Tunisia",
+    "Angola",
+    "Algeria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Guinea-Bissau",
+   "options": [
+    "Guinea-Bissau",
+    "Zimbabwe",
+    "Ruanda",
+    "Eswatini"
+   ],
+   "optionImages": [
+    "/flags/gw.svg",
+    "/flags/zw.svg",
+    "/flags/rw.svg",
+    "/flags/sz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gy",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gy.svg",
+   "options": [
+    "Guyana",
+    "Ecuador",
+    "Suriname",
+    "Uruguay"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gy",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Guyana",
+   "options": [
+    "Guyana",
+    "Paraguay",
+    "Trinidad e Tobago",
+    "Argentina"
+   ],
+   "optionImages": [
+    "/flags/gy.svg",
+    "/flags/py.svg",
+    "/flags/tt.svg",
+    "/flags/ar.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ht",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ht.svg",
+   "options": [
+    "Haiti",
+    "Messico",
+    "Guatemala",
+    "Nicaragua"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ht",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Haiti",
+   "options": [
+    "Haiti",
+    "Barbados",
+    "Guatemala",
+    "Messico"
+   ],
+   "optionImages": [
+    "/flags/ht.svg",
+    "/flags/bb.svg",
+    "/flags/gt.svg",
+    "/flags/mx.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-hn",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/hn.svg",
+   "options": [
+    "Honduras",
+    "Barbados",
+    "Repubblica Dominicana",
+    "Dominica"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-hn",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Honduras",
+   "options": [
+    "Honduras",
+    "Canada",
+    "Cuba",
+    "Giamaica"
+   ],
+   "optionImages": [
+    "/flags/hn.svg",
+    "/flags/ca.svg",
+    "/flags/cu.svg",
+    "/flags/jm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-hu",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/hu.svg",
+   "options": [
+    "Ungheria",
+    "Paesi Bassi",
+    "Malta",
+    "Montenegro"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-hu",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Ungheria",
+   "options": [
+    "Ungheria",
+    "Andorra",
+    "Estonia",
+    "Bosnia ed Erzegovina"
+   ],
+   "optionImages": [
+    "/flags/hu.svg",
+    "/flags/ad.svg",
+    "/flags/ee.svg",
+    "/flags/ba.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-is",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/is.svg",
+   "options": [
+    "Islanda",
+    "Spagna",
+    "Albania",
+    "Repubblica Ceca"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-is",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Islanda",
+   "options": [
+    "Islanda",
+    "Germania",
+    "Moldavia",
+    "Spagna"
+   ],
+   "optionImages": [
+    "/flags/is.svg",
+    "/flags/de.svg",
+    "/flags/md.svg",
+    "/flags/es.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-in",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/in.svg",
+   "options": [
+    "India",
+    "Uzbekistan",
+    "Yemen",
+    "Israele"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-in",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: India",
+   "options": [
+    "India",
+    "Thailandia",
+    "Singapore",
+    "Bangladesh"
+   ],
+   "optionImages": [
+    "/flags/in.svg",
+    "/flags/th.svg",
+    "/flags/sg.svg",
+    "/flags/bd.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-id",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/id.svg",
+   "options": [
+    "Indonesia",
+    "Corea del Sud",
+    "Armenia",
+    "Yemen"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-id",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Indonesia",
+   "options": [
+    "Indonesia",
+    "Corea del Nord",
+    "Kirghizistan",
+    "Azerbaigian"
+   ],
+   "optionImages": [
+    "/flags/id.svg",
+    "/flags/kp.svg",
+    "/flags/kg.svg",
+    "/flags/az.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ir",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ir.svg",
+   "options": [
+    "Iran",
+    "Azerbaigian",
+    "Armenia",
+    "Uzbekistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ir",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Iran",
+   "options": [
+    "Iran",
+    "Turkmenistan",
+    "Pakistan",
+    "Qatar"
+   ],
+   "optionImages": [
+    "/flags/ir.svg",
+    "/flags/tm.svg",
+    "/flags/pk.svg",
+    "/flags/qa.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-iq",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/iq.svg",
+   "options": [
+    "Iraq",
+    "Israele",
+    "Myanmar",
+    "Vietnam"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-iq",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Iraq",
+   "options": [
+    "Iraq",
+    "Uzbekistan",
+    "Bahrein",
+    "Corea del Sud"
+   ],
+   "optionImages": [
+    "/flags/iq.svg",
+    "/flags/uz.svg",
+    "/flags/bh.svg",
+    "/flags/kr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ie",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ie.svg",
+   "options": [
+    "Irlanda",
+    "Italia",
+    "Liechtenstein",
+    "Danimarca"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ie",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Irlanda",
+   "options": [
+    "Irlanda",
+    "Germania",
+    "Serbia",
+    "Monaco"
+   ],
+   "optionImages": [
+    "/flags/ie.svg",
+    "/flags/de.svg",
+    "/flags/rs.svg",
+    "/flags/mc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-il",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/il.svg",
+   "options": [
+    "Israele",
+    "Pakistan",
+    "Cambogia",
+    "Thailandia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-il",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Israele",
+   "options": [
+    "Israele",
+    "Libano",
+    "Iraq",
+    "Afghanistan"
+   ],
+   "optionImages": [
+    "/flags/il.svg",
+    "/flags/lb.svg",
+    "/flags/iq.svg",
+    "/flags/af.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-it",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/it.svg",
+   "options": [
+    "Italia",
+    "Islanda",
+    "Montenegro",
+    "Irlanda"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-it",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Italia",
+   "options": [
+    "Italia",
+    "Montenegro",
+    "Ungheria",
+    "Paesi Bassi"
+   ],
+   "optionImages": [
+    "/flags/it.svg",
+    "/flags/me.svg",
+    "/flags/hu.svg",
+    "/flags/nl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-jm",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/jm.svg",
+   "options": [
+    "Giamaica",
+    "Canada",
+    "Saint Lucia",
+    "Nicaragua"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-jm",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Giamaica",
+   "options": [
+    "Giamaica",
+    "Stati Uniti",
+    "Saint Kitts e Nevis",
+    "Barbados"
+   ],
+   "optionImages": [
+    "/flags/jm.svg",
+    "/flags/us.svg",
+    "/flags/kn.svg",
+    "/flags/bb.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-jp",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/jp.svg",
+   "options": [
+    "Giappone",
+    "Turkmenistan",
+    "Kazakistan",
+    "Iraq"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-jp",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Giappone",
+   "options": [
+    "Giappone",
+    "Kuwait",
+    "Palestina",
+    "Bhutan"
+   ],
+   "optionImages": [
+    "/flags/jp.svg",
+    "/flags/kw.svg",
+    "/flags/ps.svg",
+    "/flags/bt.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-jo",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/jo.svg",
+   "options": [
+    "Giordania",
+    "Pakistan",
+    "Malaysia",
+    "Bangladesh"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-jo",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Giordania",
+   "options": [
+    "Giordania",
+    "Bhutan",
+    "Pakistan",
+    "Yemen"
+   ],
+   "optionImages": [
+    "/flags/jo.svg",
+    "/flags/bt.svg",
+    "/flags/pk.svg",
+    "/flags/ye.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kz",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kz.svg",
+   "options": [
+    "Kazakistan",
+    "Turchia",
+    "Cambogia",
+    "Singapore"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kz",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Kazakistan",
+   "options": [
+    "Kazakistan",
+    "Palestina",
+    "India",
+    "Azerbaigian"
+   ],
+   "optionImages": [
+    "/flags/kz.svg",
+    "/flags/ps.svg",
+    "/flags/in.svg",
+    "/flags/az.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ke",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ke.svg",
+   "options": [
+    "Kenya",
+    "Seychelles",
+    "Burundi",
+    "Nigeria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ke",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Kenya",
+   "options": [
+    "Kenya",
+    "Guinea Equatoriale",
+    "Sierra Leone",
+    "Burundi"
+   ],
+   "optionImages": [
+    "/flags/ke.svg",
+    "/flags/gq.svg",
+    "/flags/sl.svg",
+    "/flags/bi.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ki",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ki.svg",
+   "options": [
+    "Kiribati",
+    "Figi",
+    "Isole Marshall",
+    "Isole Salomone"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ki",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Kiribati",
+   "options": [
+    "Kiribati",
+    "Tuvalu",
+    "Micronesia",
+    "Tonga"
+   ],
+   "optionImages": [
+    "/flags/ki.svg",
+    "/flags/tv.svg",
+    "/flags/fm.svg",
+    "/flags/to.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kp",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kp.svg",
+   "options": [
+    "Corea del Nord",
+    "Myanmar",
+    "Tagikistan",
+    "Pakistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kp",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Corea del Nord",
+   "options": [
+    "Corea del Nord",
+    "Giappone",
+    "Georgia",
+    "Iran"
+   ],
+   "optionImages": [
+    "/flags/kp.svg",
+    "/flags/jp.svg",
+    "/flags/ge.svg",
+    "/flags/ir.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kr",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kr.svg",
+   "options": [
+    "Corea del Sud",
+    "Giordania",
+    "Armenia",
+    "Israele"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kr",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Corea del Sud",
+   "options": [
+    "Corea del Sud",
+    "Cina",
+    "Malaysia",
+    "Corea del Nord"
+   ],
+   "optionImages": [
+    "/flags/kr.svg",
+    "/flags/cn.svg",
+    "/flags/my.svg",
+    "/flags/kp.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kw",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kw.svg",
+   "options": [
+    "Kuwait",
+    "Tagikistan",
+    "Thailandia",
+    "Kazakistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kw",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Kuwait",
+   "options": [
+    "Kuwait",
+    "Turchia",
+    "Corea del Sud",
+    "Iraq"
+   ],
+   "optionImages": [
+    "/flags/kw.svg",
+    "/flags/tr.svg",
+    "/flags/kr.svg",
+    "/flags/iq.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kg",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kg.svg",
+   "options": [
+    "Kirghizistan",
+    "India",
+    "Kazakistan",
+    "Singapore"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kg",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Kirghizistan",
+   "options": [
+    "Kirghizistan",
+    "Cambogia",
+    "Malaysia",
+    "Georgia"
+   ],
+   "optionImages": [
+    "/flags/kg.svg",
+    "/flags/kh.svg",
+    "/flags/my.svg",
+    "/flags/ge.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-la",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/la.svg",
+   "options": [
+    "Laos",
+    "Emirati Arabi Uniti",
+    "Turchia",
+    "Uzbekistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-la",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Laos",
+   "options": [
+    "Laos",
+    "Vietnam",
+    "Filippine",
+    "India"
+   ],
+   "optionImages": [
+    "/flags/la.svg",
+    "/flags/vn.svg",
+    "/flags/ph.svg",
+    "/flags/in.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lv",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lv.svg",
+   "options": [
+    "Lettonia",
+    "Russia",
+    "Lituania",
+    "Francia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lv",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Lettonia",
+   "options": [
+    "Lettonia",
+    "Albania",
+    "Moldavia",
+    "Bosnia ed Erzegovina"
+   ],
+   "optionImages": [
+    "/flags/lv.svg",
+    "/flags/al.svg",
+    "/flags/md.svg",
+    "/flags/ba.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lb",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lb.svg",
+   "options": [
+    "Libano",
+    "Bahrein",
+    "Iran",
+    "Armenia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lb",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Libano",
+   "options": [
+    "Libano",
+    "Yemen",
+    "Palestina",
+    "Oman"
+   ],
+   "optionImages": [
+    "/flags/lb.svg",
+    "/flags/ye.svg",
+    "/flags/ps.svg",
+    "/flags/om.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ls",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ls.svg",
+   "options": [
+    "Lesotho",
+    "Namibia",
+    "Mauritania",
+    "Kenya"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ls",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Lesotho",
+   "options": [
+    "Lesotho",
+    "Ruanda",
+    "Gabon",
+    "Libia"
+   ],
+   "optionImages": [
+    "/flags/ls.svg",
+    "/flags/rw.svg",
+    "/flags/ga.svg",
+    "/flags/ly.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lr",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lr.svg",
+   "options": [
+    "Liberia",
+    "Togo",
+    "São Tomé e Príncipe",
+    "Botswana"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lr",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Liberia",
+   "options": [
+    "Liberia",
+    "Mauritius",
+    "Guinea-Bissau",
+    "Namibia"
+   ],
+   "optionImages": [
+    "/flags/lr.svg",
+    "/flags/mu.svg",
+    "/flags/gw.svg",
+    "/flags/na.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ly",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ly.svg",
+   "options": [
+    "Libia",
+    "Repubblica Democratica del Congo",
+    "Repubblica del Congo",
+    "Ghana"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ly",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Libia",
+   "options": [
+    "Libia",
+    "Nigeria",
+    "Etiopia",
+    "Comore"
+   ],
+   "optionImages": [
+    "/flags/ly.svg",
+    "/flags/ng.svg",
+    "/flags/et.svg",
+    "/flags/km.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-li",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/li.svg",
+   "options": [
+    "Liechtenstein",
+    "Svizzera",
+    "Lettonia",
+    "Irlanda"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-li",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Liechtenstein",
+   "options": [
+    "Liechtenstein",
+    "Portogallo",
+    "Regno Unito",
+    "Monaco"
+   ],
+   "optionImages": [
+    "/flags/li.svg",
+    "/flags/pt.svg",
+    "/flags/gb.svg",
+    "/flags/mc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lt",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lt.svg",
+   "options": [
+    "Lituania",
+    "Grecia",
+    "Bielorussia",
+    "Montenegro"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lt",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Lituania",
+   "options": [
+    "Lituania",
+    "Slovacchia",
+    "Spagna",
+    "Andorra"
+   ],
+   "optionImages": [
+    "/flags/lt.svg",
+    "/flags/sk.svg",
+    "/flags/es.svg",
+    "/flags/ad.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lu",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lu.svg",
+   "options": [
+    "Lussemburgo",
+    "Città del Vaticano",
+    "Bielorussia",
+    "Paesi Bassi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lu",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Lussemburgo",
+   "options": [
+    "Lussemburgo",
+    "Svizzera",
+    "Ungheria",
+    "Croazia"
+   ],
+   "optionImages": [
+    "/flags/lu.svg",
+    "/flags/ch.svg",
+    "/flags/hu.svg",
+    "/flags/hr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mg.svg",
+   "options": [
+    "Madagascar",
+    "Benin",
+    "Namibia",
+    "Angola"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Madagascar",
+   "options": [
+    "Madagascar",
+    "Sudan",
+    "Egitto",
+    "Uganda"
+   ],
+   "optionImages": [
+    "/flags/mg.svg",
+    "/flags/sd.svg",
+    "/flags/eg.svg",
+    "/flags/ug.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mw.svg",
+   "options": [
+    "Malawi",
+    "Somalia",
+    "Comore",
+    "Mali"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Malawi",
+   "options": [
+    "Malawi",
+    "Mauritania",
+    "Repubblica Democratica del Congo",
+    "Benin"
+   ],
+   "optionImages": [
+    "/flags/mw.svg",
+    "/flags/mr.svg",
+    "/flags/cd.svg",
+    "/flags/bj.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-my",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/my.svg",
+   "options": [
+    "Malaysia",
+    "Azerbaigian",
+    "Afghanistan",
+    "Cambogia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-my",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Malaysia",
+   "options": [
+    "Malaysia",
+    "Myanmar",
+    "Vietnam",
+    "Maldive"
+   ],
+   "optionImages": [
+    "/flags/my.svg",
+    "/flags/mm.svg",
+    "/flags/vn.svg",
+    "/flags/mv.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mv",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mv.svg",
+   "options": [
+    "Maldive",
+    "Yemen",
+    "Timor Est",
+    "Indonesia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mv",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Maldive",
+   "options": [
+    "Maldive",
+    "Kazakistan",
+    "Cina",
+    "Pakistan"
+   ],
+   "optionImages": [
+    "/flags/mv.svg",
+    "/flags/kz.svg",
+    "/flags/cn.svg",
+    "/flags/pk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ml",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ml.svg",
+   "options": [
+    "Mali",
+    "Burkina Faso",
+    "Niger",
+    "Repubblica del Congo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ml",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Mali",
+   "options": [
+    "Mali",
+    "Repubblica Centrafricana",
+    "Togo",
+    "Tunisia"
+   ],
+   "optionImages": [
+    "/flags/ml.svg",
+    "/flags/cf.svg",
+    "/flags/tg.svg",
+    "/flags/tn.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mt",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mt.svg",
+   "options": [
+    "Malta",
+    "Ungheria",
+    "Grecia",
+    "Belgio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mt",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Malta",
+   "options": [
+    "Malta",
+    "Portogallo",
+    "Lussemburgo",
+    "Liechtenstein"
+   ],
+   "optionImages": [
+    "/flags/mt.svg",
+    "/flags/pt.svg",
+    "/flags/lu.svg",
+    "/flags/li.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mh",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mh.svg",
+   "options": [
+    "Isole Marshall",
+    "Figi",
+    "Tonga",
+    "Tuvalu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mh",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Isole Marshall",
+   "options": [
+    "Isole Marshall",
+    "Nauru",
+    "Isole Salomone",
+    "Nuova Zelanda"
+   ],
+   "optionImages": [
+    "/flags/mh.svg",
+    "/flags/nr.svg",
+    "/flags/sb.svg",
+    "/flags/nz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mr",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mr.svg",
+   "options": [
+    "Mauritania",
+    "Uganda",
+    "Camerun",
+    "Lesotho"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mr",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Mauritania",
+   "options": [
+    "Mauritania",
+    "Mozambico",
+    "Malawi",
+    "Lesotho"
+   ],
+   "optionImages": [
+    "/flags/mr.svg",
+    "/flags/mz.svg",
+    "/flags/mw.svg",
+    "/flags/ls.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mu",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mu.svg",
+   "options": [
+    "Mauritius",
+    "Costa d'Avorio",
+    "Comore",
+    "São Tomé e Príncipe"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mu",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Mauritius",
+   "options": [
+    "Mauritius",
+    "Lesotho",
+    "Sierra Leone",
+    "Ruanda"
+   ],
+   "optionImages": [
+    "/flags/mu.svg",
+    "/flags/ls.svg",
+    "/flags/sl.svg",
+    "/flags/rw.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mx",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mx.svg",
+   "options": [
+    "Messico",
+    "El Salvador",
+    "Saint Vincent e Grenadine",
+    "Cuba"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mx",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Messico",
+   "options": [
+    "Messico",
+    "Bahamas",
+    "Stati Uniti",
+    "Canada"
+   ],
+   "optionImages": [
+    "/flags/mx.svg",
+    "/flags/bs.svg",
+    "/flags/us.svg",
+    "/flags/ca.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-fm",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/fm.svg",
+   "options": [
+    "Micronesia",
+    "Samoa",
+    "Australia",
+    "Kiribati"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-fm",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Micronesia",
+   "options": [
+    "Micronesia",
+    "Kiribati",
+    "Isole Salomone",
+    "Australia"
+   ],
+   "optionImages": [
+    "/flags/fm.svg",
+    "/flags/ki.svg",
+    "/flags/sb.svg",
+    "/flags/au.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-md",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/md.svg",
+   "options": [
+    "Moldavia",
+    "Lussemburgo",
+    "Cipro",
+    "Paesi Bassi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-md",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Moldavia",
+   "options": [
+    "Moldavia",
+    "Cipro",
+    "Bosnia ed Erzegovina",
+    "Monaco"
+   ],
+   "optionImages": [
+    "/flags/md.svg",
+    "/flags/cy.svg",
+    "/flags/ba.svg",
+    "/flags/mc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mc",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mc.svg",
+   "options": [
+    "Monaco",
+    "Montenegro",
+    "Moldavia",
+    "Città del Vaticano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mc",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Monaco",
+   "options": [
+    "Monaco",
+    "Slovenia",
+    "Lussemburgo",
+    "San Marino"
+   ],
+   "optionImages": [
+    "/flags/mc.svg",
+    "/flags/si.svg",
+    "/flags/lu.svg",
+    "/flags/sm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mn.svg",
+   "options": [
+    "Mongolia",
+    "Tagikistan",
+    "Brunei",
+    "India"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Mongolia",
+   "options": [
+    "Mongolia",
+    "India",
+    "Libano",
+    "Kirghizistan"
+   ],
+   "optionImages": [
+    "/flags/mn.svg",
+    "/flags/in.svg",
+    "/flags/lb.svg",
+    "/flags/kg.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-me",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/me.svg",
+   "options": [
+    "Montenegro",
+    "Malta",
+    "Danimarca",
+    "Bulgaria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-me",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Montenegro",
+   "options": [
+    "Montenegro",
+    "Romania",
+    "Malta",
+    "Andorra"
+   ],
+   "optionImages": [
+    "/flags/me.svg",
+    "/flags/ro.svg",
+    "/flags/mt.svg",
+    "/flags/ad.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ma",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ma.svg",
+   "options": [
+    "Marocco",
+    "Seychelles",
+    "Comore",
+    "Repubblica Centrafricana"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ma",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Marocco",
+   "options": [
+    "Marocco",
+    "Benin",
+    "Ghana",
+    "Tanzania"
+   ],
+   "optionImages": [
+    "/flags/ma.svg",
+    "/flags/bj.svg",
+    "/flags/gh.svg",
+    "/flags/tz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mz.svg",
+   "options": [
+    "Mozambico",
+    "Guinea",
+    "Ciad",
+    "Burundi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Mozambico",
+   "options": [
+    "Mozambico",
+    "São Tomé e Príncipe",
+    "Gibuti",
+    "Comore"
+   ],
+   "optionImages": [
+    "/flags/mz.svg",
+    "/flags/st.svg",
+    "/flags/dj.svg",
+    "/flags/km.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mm",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mm.svg",
+   "options": [
+    "Myanmar",
+    "Bahrein",
+    "Sri Lanka",
+    "Azerbaigian"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mm",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Myanmar",
+   "options": [
+    "Myanmar",
+    "Singapore",
+    "Cina",
+    "Corea del Nord"
+   ],
+   "optionImages": [
+    "/flags/mm.svg",
+    "/flags/sg.svg",
+    "/flags/cn.svg",
+    "/flags/kp.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-na",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/na.svg",
+   "options": [
+    "Namibia",
+    "Kenya",
+    "Sierra Leone",
+    "Zambia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-na",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Namibia",
+   "options": [
+    "Namibia",
+    "Mali",
+    "Repubblica Centrafricana",
+    "Mauritius"
+   ],
+   "optionImages": [
+    "/flags/na.svg",
+    "/flags/ml.svg",
+    "/flags/cf.svg",
+    "/flags/mu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-nr",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/nr.svg",
+   "options": [
+    "Nauru",
+    "Papua Nuova Guinea",
+    "Figi",
+    "Tuvalu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-nr",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Nauru",
+   "options": [
+    "Nauru",
+    "Samoa",
+    "Kiribati",
+    "Micronesia"
+   ],
+   "optionImages": [
+    "/flags/nr.svg",
+    "/flags/ws.svg",
+    "/flags/ki.svg",
+    "/flags/fm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-np",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/np.svg",
+   "options": [
+    "Nepal",
+    "Bangladesh",
+    "Emirati Arabi Uniti",
+    "Azerbaigian"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-np",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Nepal",
+   "options": [
+    "Nepal",
+    "Uzbekistan",
+    "Singapore",
+    "Cambogia"
+   ],
+   "optionImages": [
+    "/flags/np.svg",
+    "/flags/uz.svg",
+    "/flags/sg.svg",
+    "/flags/kh.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-nl",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/nl.svg",
+   "options": [
+    "Paesi Bassi",
+    "Portogallo",
+    "Svizzera",
+    "Belgio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-nl",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Paesi Bassi",
+   "options": [
+    "Paesi Bassi",
+    "Macedonia del Nord",
+    "Moldavia",
+    "Russia"
+   ],
+   "optionImages": [
+    "/flags/nl.svg",
+    "/flags/mk.svg",
+    "/flags/md.svg",
+    "/flags/ru.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-nz",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/nz.svg",
+   "options": [
+    "Nuova Zelanda",
+    "Isole Marshall",
+    "Tuvalu",
+    "Palau"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-nz",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Nuova Zelanda",
+   "options": [
+    "Nuova Zelanda",
+    "Isole Marshall",
+    "Papua Nuova Guinea",
+    "Micronesia"
+   ],
+   "optionImages": [
+    "/flags/nz.svg",
+    "/flags/mh.svg",
+    "/flags/pg.svg",
+    "/flags/fm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ni",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ni.svg",
+   "options": [
+    "Nicaragua",
+    "El Salvador",
+    "Cuba",
+    "Bahamas"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ni",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Nicaragua",
+   "options": [
+    "Nicaragua",
+    "Messico",
+    "Honduras",
+    "Saint Lucia"
+   ],
+   "optionImages": [
+    "/flags/ni.svg",
+    "/flags/mx.svg",
+    "/flags/hn.svg",
+    "/flags/lc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ne",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ne.svg",
+   "options": [
+    "Niger",
+    "Angola",
+    "Botswana",
+    "Togo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ne",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Niger",
+   "options": [
+    "Niger",
+    "Seychelles",
+    "Burkina Faso",
+    "Sudan"
+   ],
+   "optionImages": [
+    "/flags/ne.svg",
+    "/flags/sc.svg",
+    "/flags/bf.svg",
+    "/flags/sd.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ng",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ng.svg",
+   "options": [
+    "Nigeria",
+    "Gibuti",
+    "Burundi",
+    "Comore"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ng",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Nigeria",
+   "options": [
+    "Nigeria",
+    "Angola",
+    "Repubblica del Congo",
+    "Mozambico"
+   ],
+   "optionImages": [
+    "/flags/ng.svg",
+    "/flags/ao.svg",
+    "/flags/cg.svg",
+    "/flags/mz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-mk",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/mk.svg",
+   "options": [
+    "Macedonia del Nord",
+    "Svizzera",
+    "Paesi Bassi",
+    "Portogallo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-mk",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Macedonia del Nord",
+   "options": [
+    "Macedonia del Nord",
+    "San Marino",
+    "Russia",
+    "Lussemburgo"
+   ],
+   "optionImages": [
+    "/flags/mk.svg",
+    "/flags/sm.svg",
+    "/flags/ru.svg",
+    "/flags/lu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-no",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/no.svg",
+   "options": [
+    "Norvegia",
+    "Malta",
+    "Repubblica Ceca",
+    "Islanda"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-no",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Norvegia",
+   "options": [
+    "Norvegia",
+    "San Marino",
+    "Polonia",
+    "Regno Unito"
+   ],
+   "optionImages": [
+    "/flags/no.svg",
+    "/flags/sm.svg",
+    "/flags/pl.svg",
+    "/flags/gb.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-om",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/om.svg",
+   "options": [
+    "Oman",
+    "Armenia",
+    "Sri Lanka",
+    "Laos"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-om",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Oman",
+   "options": [
+    "Oman",
+    "Emirati Arabi Uniti",
+    "Cina",
+    "Arabia Saudita"
+   ],
+   "optionImages": [
+    "/flags/om.svg",
+    "/flags/ae.svg",
+    "/flags/cn.svg",
+    "/flags/sa.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pk",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pk.svg",
+   "options": [
+    "Pakistan",
+    "Corea del Sud",
+    "Laos",
+    "Kuwait"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pk",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Pakistan",
+   "options": [
+    "Pakistan",
+    "Bahrein",
+    "Armenia",
+    "Turchia"
+   ],
+   "optionImages": [
+    "/flags/pk.svg",
+    "/flags/bh.svg",
+    "/flags/am.svg",
+    "/flags/tr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pw",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pw.svg",
+   "options": [
+    "Palau",
+    "Isole Salomone",
+    "Samoa",
+    "Nauru"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pw",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Palau",
+   "options": [
+    "Palau",
+    "Isole Marshall",
+    "Samoa",
+    "Vanuatu"
+   ],
+   "optionImages": [
+    "/flags/pw.svg",
+    "/flags/mh.svg",
+    "/flags/ws.svg",
+    "/flags/vu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pa",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pa.svg",
+   "options": [
+    "Panama",
+    "Antigua e Barbuda",
+    "Honduras",
+    "Bahamas"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pa",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Panama",
+   "options": [
+    "Panama",
+    "Messico",
+    "Saint Lucia",
+    "Saint Vincent e Grenadine"
+   ],
+   "optionImages": [
+    "/flags/pa.svg",
+    "/flags/mx.svg",
+    "/flags/lc.svg",
+    "/flags/vc.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pg",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pg.svg",
+   "options": [
+    "Papua Nuova Guinea",
+    "Nuova Zelanda",
+    "Vanuatu",
+    "Kiribati"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pg",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Papua Nuova Guinea",
+   "options": [
+    "Papua Nuova Guinea",
+    "Samoa",
+    "Figi",
+    "Micronesia"
+   ],
+   "optionImages": [
+    "/flags/pg.svg",
+    "/flags/ws.svg",
+    "/flags/fj.svg",
+    "/flags/fm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-py",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/py.svg",
+   "options": [
+    "Paraguay",
+    "Bolivia",
+    "Uruguay",
+    "Venezuela"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-py",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Paraguay",
+   "options": [
+    "Paraguay",
+    "Venezuela",
+    "Colombia",
+    "Brasile"
+   ],
+   "optionImages": [
+    "/flags/py.svg",
+    "/flags/ve.svg",
+    "/flags/co.svg",
+    "/flags/br.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pe",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pe.svg",
+   "options": [
+    "Perù",
+    "Colombia",
+    "Uruguay",
+    "Bolivia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pe",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Perù",
+   "options": [
+    "Perù",
+    "Paraguay",
+    "Guyana",
+    "Trinidad e Tobago"
+   ],
+   "optionImages": [
+    "/flags/pe.svg",
+    "/flags/py.svg",
+    "/flags/gy.svg",
+    "/flags/tt.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ph",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ph.svg",
+   "options": [
+    "Filippine",
+    "Iran",
+    "Mongolia",
+    "Corea del Sud"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ph",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Filippine",
+   "options": [
+    "Filippine",
+    "Mongolia",
+    "Giordania",
+    "Timor Est"
+   ],
+   "optionImages": [
+    "/flags/ph.svg",
+    "/flags/mn.svg",
+    "/flags/jo.svg",
+    "/flags/tl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pl",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pl.svg",
+   "options": [
+    "Polonia",
+    "Portogallo",
+    "Croazia",
+    "Ucraina"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pl",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Polonia",
+   "options": [
+    "Polonia",
+    "Repubblica Ceca",
+    "Città del Vaticano",
+    "San Marino"
+   ],
+   "optionImages": [
+    "/flags/pl.svg",
+    "/flags/cz.svg",
+    "/flags/va.svg",
+    "/flags/sm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-pt",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/pt.svg",
+   "options": [
+    "Portogallo",
+    "Liechtenstein",
+    "Cipro",
+    "Lussemburgo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-pt",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Portogallo",
+   "options": [
+    "Portogallo",
+    "Città del Vaticano",
+    "Monaco",
+    "Ungheria"
+   ],
+   "optionImages": [
+    "/flags/pt.svg",
+    "/flags/va.svg",
+    "/flags/mc.svg",
+    "/flags/hu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-qa",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/qa.svg",
+   "options": [
+    "Qatar",
+    "Filippine",
+    "Vietnam",
+    "Mongolia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-qa",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Qatar",
+   "options": [
+    "Qatar",
+    "Filippine",
+    "Arabia Saudita",
+    "Afghanistan"
+   ],
+   "optionImages": [
+    "/flags/qa.svg",
+    "/flags/ph.svg",
+    "/flags/sa.svg",
+    "/flags/af.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ro",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ro.svg",
+   "options": [
+    "Romania",
+    "Belgio",
+    "Regno Unito",
+    "Montenegro"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ro",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Romania",
+   "options": [
+    "Romania",
+    "Bulgaria",
+    "Monaco",
+    "Islanda"
+   ],
+   "optionImages": [
+    "/flags/ro.svg",
+    "/flags/bg.svg",
+    "/flags/mc.svg",
+    "/flags/is.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ru",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ru.svg",
+   "options": [
+    "Russia",
+    "Paesi Bassi",
+    "Romania",
+    "Finlandia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ru",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Russia",
+   "options": [
+    "Russia",
+    "Serbia",
+    "Austria",
+    "Danimarca"
+   ],
+   "optionImages": [
+    "/flags/ru.svg",
+    "/flags/rs.svg",
+    "/flags/at.svg",
+    "/flags/dk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-rw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/rw.svg",
+   "options": [
+    "Ruanda",
+    "Sudan",
+    "Lesotho",
+    "Uganda"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-rw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Ruanda",
+   "options": [
+    "Ruanda",
+    "Botswana",
+    "Nigeria",
+    "Repubblica del Congo"
+   ],
+   "optionImages": [
+    "/flags/rw.svg",
+    "/flags/bw.svg",
+    "/flags/ng.svg",
+    "/flags/cg.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-kn",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/kn.svg",
+   "options": [
+    "Saint Kitts e Nevis",
+    "Stati Uniti",
+    "Belize",
+    "El Salvador"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-kn",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Saint Kitts e Nevis",
+   "options": [
+    "Saint Kitts e Nevis",
+    "Belize",
+    "Honduras",
+    "Bahamas"
+   ],
+   "optionImages": [
+    "/flags/kn.svg",
+    "/flags/bz.svg",
+    "/flags/hn.svg",
+    "/flags/bs.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lc",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lc.svg",
+   "options": [
+    "Saint Lucia",
+    "Messico",
+    "Barbados",
+    "Antigua e Barbuda"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lc",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Saint Lucia",
+   "options": [
+    "Saint Lucia",
+    "Messico",
+    "Saint Vincent e Grenadine",
+    "Grenada"
+   ],
+   "optionImages": [
+    "/flags/lc.svg",
+    "/flags/mx.svg",
+    "/flags/vc.svg",
+    "/flags/gd.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-vc",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/vc.svg",
+   "options": [
+    "Saint Vincent e Grenadine",
+    "Antigua e Barbuda",
+    "Grenada",
+    "El Salvador"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-vc",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Saint Vincent e Grenadine",
+   "options": [
+    "Saint Vincent e Grenadine",
+    "Stati Uniti",
+    "Antigua e Barbuda",
+    "Panama"
+   ],
+   "optionImages": [
+    "/flags/vc.svg",
+    "/flags/us.svg",
+    "/flags/ag.svg",
+    "/flags/pa.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ws",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ws.svg",
+   "options": [
+    "Samoa",
+    "Micronesia",
+    "Kiribati",
+    "Nauru"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ws",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Samoa",
+   "options": [
+    "Samoa",
+    "Figi",
+    "Vanuatu",
+    "Micronesia"
+   ],
+   "optionImages": [
+    "/flags/ws.svg",
+    "/flags/fj.svg",
+    "/flags/vu.svg",
+    "/flags/fm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sm",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sm.svg",
+   "options": [
+    "San Marino",
+    "Italia",
+    "Austria",
+    "Estonia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sm",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: San Marino",
+   "options": [
+    "San Marino",
+    "Slovacchia",
+    "Andorra",
+    "Slovenia"
+   ],
+   "optionImages": [
+    "/flags/sm.svg",
+    "/flags/sk.svg",
+    "/flags/ad.svg",
+    "/flags/si.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-st",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/st.svg",
+   "options": [
+    "São Tomé e Príncipe",
+    "Ghana",
+    "Uganda",
+    "Mauritania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-st",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: São Tomé e Príncipe",
+   "options": [
+    "São Tomé e Príncipe",
+    "Sudafrica",
+    "Guinea-Bissau",
+    "Ruanda"
+   ],
+   "optionImages": [
+    "/flags/st.svg",
+    "/flags/za.svg",
+    "/flags/gw.svg",
+    "/flags/rw.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sa",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sa.svg",
+   "options": [
+    "Arabia Saudita",
+    "Turchia",
+    "Bahrein",
+    "Laos"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sa",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Arabia Saudita",
+   "options": [
+    "Arabia Saudita",
+    "Iran",
+    "Giordania",
+    "Myanmar"
+   ],
+   "optionImages": [
+    "/flags/sa.svg",
+    "/flags/ir.svg",
+    "/flags/jo.svg",
+    "/flags/mm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sn",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sn.svg",
+   "options": [
+    "Senegal",
+    "Guinea Equatoriale",
+    "Nigeria",
+    "Benin"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sn",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Senegal",
+   "options": [
+    "Senegal",
+    "Namibia",
+    "Burundi",
+    "Etiopia"
+   ],
+   "optionImages": [
+    "/flags/sn.svg",
+    "/flags/na.svg",
+    "/flags/bi.svg",
+    "/flags/et.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-rs",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/rs.svg",
+   "options": [
+    "Serbia",
+    "Grecia",
+    "Austria",
+    "Russia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-rs",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Serbia",
+   "options": [
+    "Serbia",
+    "Danimarca",
+    "Svezia",
+    "Città del Vaticano"
+   ],
+   "optionImages": [
+    "/flags/rs.svg",
+    "/flags/dk.svg",
+    "/flags/se.svg",
+    "/flags/va.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sc",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sc.svg",
+   "options": [
+    "Seychelles",
+    "Senegal",
+    "Comore",
+    "Sud Sudan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sc",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Seychelles",
+   "options": [
+    "Seychelles",
+    "Tunisia",
+    "Guinea",
+    "Capo Verde"
+   ],
+   "optionImages": [
+    "/flags/sc.svg",
+    "/flags/tn.svg",
+    "/flags/gn.svg",
+    "/flags/cv.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sl",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sl.svg",
+   "options": [
+    "Sierra Leone",
+    "Niger",
+    "Botswana",
+    "Etiopia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sl",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Sierra Leone",
+   "options": [
+    "Sierra Leone",
+    "Burkina Faso",
+    "Tanzania",
+    "Camerun"
+   ],
+   "optionImages": [
+    "/flags/sl.svg",
+    "/flags/bf.svg",
+    "/flags/tz.svg",
+    "/flags/cm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sg",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sg.svg",
+   "options": [
+    "Singapore",
+    "Bahrein",
+    "Thailandia",
+    "Arabia Saudita"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sg",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Singapore",
+   "options": [
+    "Singapore",
+    "Qatar",
+    "Kazakistan",
+    "Yemen"
+   ],
+   "optionImages": [
+    "/flags/sg.svg",
+    "/flags/qa.svg",
+    "/flags/kz.svg",
+    "/flags/ye.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sk",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sk.svg",
+   "options": [
+    "Slovacchia",
+    "Croazia",
+    "Bosnia ed Erzegovina",
+    "Russia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sk",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Slovacchia",
+   "options": [
+    "Slovacchia",
+    "Slovenia",
+    "Montenegro",
+    "San Marino"
+   ],
+   "optionImages": [
+    "/flags/sk.svg",
+    "/flags/si.svg",
+    "/flags/me.svg",
+    "/flags/sm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-si",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/si.svg",
+   "options": [
+    "Slovenia",
+    "Finlandia",
+    "Russia",
+    "Albania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-si",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Slovenia",
+   "options": [
+    "Slovenia",
+    "Croazia",
+    "Cipro",
+    "San Marino"
+   ],
+   "optionImages": [
+    "/flags/si.svg",
+    "/flags/hr.svg",
+    "/flags/cy.svg",
+    "/flags/sm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sb",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sb.svg",
+   "options": [
+    "Isole Salomone",
+    "Kiribati",
+    "Tuvalu",
+    "Nuova Zelanda"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sb",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Isole Salomone",
+   "options": [
+    "Isole Salomone",
+    "Australia",
+    "Kiribati",
+    "Nuova Zelanda"
+   ],
+   "optionImages": [
+    "/flags/sb.svg",
+    "/flags/au.svg",
+    "/flags/ki.svg",
+    "/flags/nz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-so",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/so.svg",
+   "options": [
+    "Somalia",
+    "Mauritania",
+    "Repubblica Democratica del Congo",
+    "Repubblica del Congo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-so",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Somalia",
+   "options": [
+    "Somalia",
+    "Costa d'Avorio",
+    "Gambia",
+    "Guinea Equatoriale"
+   ],
+   "optionImages": [
+    "/flags/so.svg",
+    "/flags/ci.svg",
+    "/flags/gm.svg",
+    "/flags/gq.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-za",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/za.svg",
+   "options": [
+    "Sudafrica",
+    "Liberia",
+    "Burundi",
+    "Kenya"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-za",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Sudafrica",
+   "options": [
+    "Sudafrica",
+    "Egitto",
+    "Sierra Leone",
+    "Uganda"
+   ],
+   "optionImages": [
+    "/flags/za.svg",
+    "/flags/eg.svg",
+    "/flags/sl.svg",
+    "/flags/ug.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ss",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ss.svg",
+   "options": [
+    "Sud Sudan",
+    "Zimbabwe",
+    "Togo",
+    "Guinea-Bissau"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ss",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Sud Sudan",
+   "options": [
+    "Sud Sudan",
+    "Guinea",
+    "Gabon",
+    "Mauritius"
+   ],
+   "optionImages": [
+    "/flags/ss.svg",
+    "/flags/gn.svg",
+    "/flags/ga.svg",
+    "/flags/mu.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-es",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/es.svg",
+   "options": [
+    "Spagna",
+    "Croazia",
+    "Austria",
+    "Polonia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-es",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Spagna",
+   "options": [
+    "Spagna",
+    "Grecia",
+    "Slovacchia",
+    "Macedonia del Nord"
+   ],
+   "optionImages": [
+    "/flags/es.svg",
+    "/flags/gr.svg",
+    "/flags/sk.svg",
+    "/flags/mk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-lk",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/lk.svg",
+   "options": [
+    "Sri Lanka",
+    "Turkmenistan",
+    "Iran",
+    "Iraq"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-lk",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Sri Lanka",
+   "options": [
+    "Sri Lanka",
+    "Corea del Sud",
+    "Oman",
+    "Libano"
+   ],
+   "optionImages": [
+    "/flags/lk.svg",
+    "/flags/kr.svg",
+    "/flags/om.svg",
+    "/flags/lb.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sd",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sd.svg",
+   "options": [
+    "Sudan",
+    "Tanzania",
+    "Libia",
+    "Somalia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sd",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Sudan",
+   "options": [
+    "Sudan",
+    "Burundi",
+    "Ciad",
+    "Angola"
+   ],
+   "optionImages": [
+    "/flags/sd.svg",
+    "/flags/bi.svg",
+    "/flags/td.svg",
+    "/flags/ao.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sr",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sr.svg",
+   "options": [
+    "Suriname",
+    "Guyana",
+    "Paraguay",
+    "Brasile"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sr",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Suriname",
+   "options": [
+    "Suriname",
+    "Uruguay",
+    "Brasile",
+    "Paraguay"
+   ],
+   "optionImages": [
+    "/flags/sr.svg",
+    "/flags/uy.svg",
+    "/flags/br.svg",
+    "/flags/py.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-se",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/se.svg",
+   "options": [
+    "Svezia",
+    "Monaco",
+    "Slovenia",
+    "Finlandia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-se",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Svezia",
+   "options": [
+    "Svezia",
+    "Montenegro",
+    "Irlanda",
+    "Macedonia del Nord"
+   ],
+   "optionImages": [
+    "/flags/se.svg",
+    "/flags/me.svg",
+    "/flags/ie.svg",
+    "/flags/mk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ch",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ch.svg",
+   "options": [
+    "Svizzera",
+    "Finlandia",
+    "Paesi Bassi",
+    "Cipro"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ch",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Svizzera",
+   "options": [
+    "Svizzera",
+    "Lussemburgo",
+    "Bulgaria",
+    "Svezia"
+   ],
+   "optionImages": [
+    "/flags/ch.svg",
+    "/flags/lu.svg",
+    "/flags/bg.svg",
+    "/flags/se.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-sy",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/sy.svg",
+   "options": [
+    "Siria",
+    "Thailandia",
+    "Kuwait",
+    "Singapore"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-sy",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Siria",
+   "options": [
+    "Siria",
+    "Libano",
+    "Maldive",
+    "Filippine"
+   ],
+   "optionImages": [
+    "/flags/sy.svg",
+    "/flags/lb.svg",
+    "/flags/mv.svg",
+    "/flags/ph.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tj",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tj.svg",
+   "options": [
+    "Tagikistan",
+    "Qatar",
+    "Maldive",
+    "Kuwait"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tj",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Tagikistan",
+   "options": [
+    "Tagikistan",
+    "Israele",
+    "Singapore",
+    "Indonesia"
+   ],
+   "optionImages": [
+    "/flags/tj.svg",
+    "/flags/il.svg",
+    "/flags/sg.svg",
+    "/flags/id.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tz.svg",
+   "options": [
+    "Tanzania",
+    "Lesotho",
+    "Benin",
+    "Sudan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tz",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Tanzania",
+   "options": [
+    "Tanzania",
+    "Lesotho",
+    "Algeria",
+    "Botswana"
+   ],
+   "optionImages": [
+    "/flags/tz.svg",
+    "/flags/ls.svg",
+    "/flags/dz.svg",
+    "/flags/bw.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-th",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/th.svg",
+   "options": [
+    "Thailandia",
+    "Georgia",
+    "Kazakistan",
+    "Singapore"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-th",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Thailandia",
+   "options": [
+    "Thailandia",
+    "Bahrein",
+    "Emirati Arabi Uniti",
+    "Armenia"
+   ],
+   "optionImages": [
+    "/flags/th.svg",
+    "/flags/bh.svg",
+    "/flags/ae.svg",
+    "/flags/am.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tl",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tl.svg",
+   "options": [
+    "Timor Est",
+    "Kirghizistan",
+    "Turkmenistan",
+    "Kazakistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tl",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Timor Est",
+   "options": [
+    "Timor Est",
+    "Singapore",
+    "Uzbekistan",
+    "Iraq"
+   ],
+   "optionImages": [
+    "/flags/tl.svg",
+    "/flags/sg.svg",
+    "/flags/uz.svg",
+    "/flags/iq.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tg.svg",
+   "options": [
+    "Togo",
+    "Sudan",
+    "Repubblica Centrafricana",
+    "Nigeria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tg",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Togo",
+   "options": [
+    "Togo",
+    "Ghana",
+    "Eswatini",
+    "Sierra Leone"
+   ],
+   "optionImages": [
+    "/flags/tg.svg",
+    "/flags/gh.svg",
+    "/flags/sz.svg",
+    "/flags/sl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-to",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/to.svg",
+   "options": [
+    "Tonga",
+    "Samoa",
+    "Kiribati",
+    "Tuvalu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-to",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Tonga",
+   "options": [
+    "Tonga",
+    "Kiribati",
+    "Isole Marshall",
+    "Samoa"
+   ],
+   "optionImages": [
+    "/flags/to.svg",
+    "/flags/ki.svg",
+    "/flags/mh.svg",
+    "/flags/ws.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tt",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tt.svg",
+   "options": [
+    "Trinidad e Tobago",
+    "Colombia",
+    "Venezuela",
+    "Perù"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tt",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Trinidad e Tobago",
+   "options": [
+    "Trinidad e Tobago",
+    "Argentina",
+    "Suriname",
+    "Colombia"
+   ],
+   "optionImages": [
+    "/flags/tt.svg",
+    "/flags/ar.svg",
+    "/flags/sr.svg",
+    "/flags/co.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tn",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tn.svg",
+   "options": [
+    "Tunisia",
+    "Seychelles",
+    "Togo",
+    "Burkina Faso"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tn",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Tunisia",
+   "options": [
+    "Tunisia",
+    "São Tomé e Príncipe",
+    "Mali",
+    "Sud Sudan"
+   ],
+   "optionImages": [
+    "/flags/tn.svg",
+    "/flags/st.svg",
+    "/flags/ml.svg",
+    "/flags/ss.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tr",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tr.svg",
+   "options": [
+    "Turchia",
+    "Mongolia",
+    "Arabia Saudita",
+    "Azerbaigian"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tr",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Turchia",
+   "options": [
+    "Turchia",
+    "Giappone",
+    "Mongolia",
+    "Sri Lanka"
+   ],
+   "optionImages": [
+    "/flags/tr.svg",
+    "/flags/jp.svg",
+    "/flags/mn.svg",
+    "/flags/lk.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tm",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tm.svg",
+   "options": [
+    "Turkmenistan",
+    "Emirati Arabi Uniti",
+    "Indonesia",
+    "Israele"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tm",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Turkmenistan",
+   "options": [
+    "Turkmenistan",
+    "Singapore",
+    "Pakistan",
+    "Azerbaigian"
+   ],
+   "optionImages": [
+    "/flags/tm.svg",
+    "/flags/sg.svg",
+    "/flags/pk.svg",
+    "/flags/az.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-tv",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/tv.svg",
+   "options": [
+    "Tuvalu",
+    "Tonga",
+    "Nuova Zelanda",
+    "Nauru"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-tv",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Tuvalu",
+   "options": [
+    "Tuvalu",
+    "Tonga",
+    "Figi",
+    "Nuova Zelanda"
+   ],
+   "optionImages": [
+    "/flags/tv.svg",
+    "/flags/to.svg",
+    "/flags/fj.svg",
+    "/flags/nz.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ug",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ug.svg",
+   "options": [
+    "Uganda",
+    "São Tomé e Príncipe",
+    "Camerun",
+    "Burundi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ug",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Uganda",
+   "options": [
+    "Uganda",
+    "Nigeria",
+    "Niger",
+    "Kenya"
+   ],
+   "optionImages": [
+    "/flags/ug.svg",
+    "/flags/ng.svg",
+    "/flags/ne.svg",
+    "/flags/ke.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ua",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ua.svg",
+   "options": [
+    "Ucraina",
+    "Estonia",
+    "Monaco",
+    "Albania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ua",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Ucraina",
+   "options": [
+    "Ucraina",
+    "Francia",
+    "Macedonia del Nord",
+    "Italia"
+   ],
+   "optionImages": [
+    "/flags/ua.svg",
+    "/flags/fr.svg",
+    "/flags/mk.svg",
+    "/flags/it.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ae",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ae.svg",
+   "options": [
+    "Emirati Arabi Uniti",
+    "Kazakistan",
+    "Yemen",
+    "Iraq"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ae",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Emirati Arabi Uniti",
+   "options": [
+    "Emirati Arabi Uniti",
+    "Vietnam",
+    "Kirghizistan",
+    "Bhutan"
+   ],
+   "optionImages": [
+    "/flags/ae.svg",
+    "/flags/vn.svg",
+    "/flags/kg.svg",
+    "/flags/bt.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-gb",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/gb.svg",
+   "options": [
+    "Regno Unito",
+    "Liechtenstein",
+    "Svizzera",
+    "Moldavia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-gb",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Regno Unito",
+   "options": [
+    "Regno Unito",
+    "Polonia",
+    "Norvegia",
+    "Estonia"
+   ],
+   "optionImages": [
+    "/flags/gb.svg",
+    "/flags/pl.svg",
+    "/flags/no.svg",
+    "/flags/ee.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-us",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/us.svg",
+   "options": [
+    "Stati Uniti",
+    "Saint Kitts e Nevis",
+    "Grenada",
+    "Barbados"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-us",
+   "categoryId": "nordamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Stati Uniti",
+   "options": [
+    "Stati Uniti",
+    "Cuba",
+    "Saint Kitts e Nevis",
+    "Guatemala"
+   ],
+   "optionImages": [
+    "/flags/us.svg",
+    "/flags/cu.svg",
+    "/flags/kn.svg",
+    "/flags/gt.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-uy",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/uy.svg",
+   "options": [
+    "Uruguay",
+    "Bolivia",
+    "Guyana",
+    "Trinidad e Tobago"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-uy",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Uruguay",
+   "options": [
+    "Uruguay",
+    "Trinidad e Tobago",
+    "Ecuador",
+    "Suriname"
+   ],
+   "optionImages": [
+    "/flags/uy.svg",
+    "/flags/tt.svg",
+    "/flags/ec.svg",
+    "/flags/sr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-uz",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/uz.svg",
+   "options": [
+    "Uzbekistan",
+    "Giappone",
+    "Oman",
+    "Corea del Nord"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-uz",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Uzbekistan",
+   "options": [
+    "Uzbekistan",
+    "Turkmenistan",
+    "Israele",
+    "Myanmar"
+   ],
+   "optionImages": [
+    "/flags/uz.svg",
+    "/flags/tm.svg",
+    "/flags/il.svg",
+    "/flags/mm.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-vu",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/vu.svg",
+   "options": [
+    "Vanuatu",
+    "Isole Salomone",
+    "Tuvalu",
+    "Samoa"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-vu",
+   "categoryId": "oceania",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Vanuatu",
+   "options": [
+    "Vanuatu",
+    "Isole Marshall",
+    "Samoa",
+    "Kiribati"
+   ],
+   "optionImages": [
+    "/flags/vu.svg",
+    "/flags/mh.svg",
+    "/flags/ws.svg",
+    "/flags/ki.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ve",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ve.svg",
+   "options": [
+    "Venezuela",
+    "Cile",
+    "Bolivia",
+    "Trinidad e Tobago"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ve",
+   "categoryId": "sudamerica",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Venezuela",
+   "options": [
+    "Venezuela",
+    "Brasile",
+    "Paraguay",
+    "Suriname"
+   ],
+   "optionImages": [
+    "/flags/ve.svg",
+    "/flags/br.svg",
+    "/flags/py.svg",
+    "/flags/sr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-vn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/vn.svg",
+   "options": [
+    "Vietnam",
+    "Afghanistan",
+    "Cina",
+    "Kirghizistan"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-vn",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Vietnam",
+   "options": [
+    "Vietnam",
+    "Turchia",
+    "Singapore",
+    "Timor Est"
+   ],
+   "optionImages": [
+    "/flags/vn.svg",
+    "/flags/tr.svg",
+    "/flags/sg.svg",
+    "/flags/tl.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ye",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ye.svg",
+   "options": [
+    "Yemen",
+    "Timor Est",
+    "India",
+    "Myanmar"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ye",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Yemen",
+   "options": [
+    "Yemen",
+    "Myanmar",
+    "Azerbaigian",
+    "Arabia Saudita"
+   ],
+   "optionImages": [
+    "/flags/ye.svg",
+    "/flags/mm.svg",
+    "/flags/az.svg",
+    "/flags/sa.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-zm",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/zm.svg",
+   "options": [
+    "Zambia",
+    "Burkina Faso",
+    "Repubblica del Congo",
+    "Marocco"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-zm",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Zambia",
+   "options": [
+    "Zambia",
+    "Madagascar",
+    "Nigeria",
+    "Guinea-Bissau"
+   ],
+   "optionImages": [
+    "/flags/zm.svg",
+    "/flags/mg.svg",
+    "/flags/ng.svg",
+    "/flags/gw.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-zw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/zw.svg",
+   "options": [
+    "Zimbabwe",
+    "Capo Verde",
+    "Mali",
+    "Togo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-zw",
+   "categoryId": "africa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Zimbabwe",
+   "options": [
+    "Zimbabwe",
+    "Ghana",
+    "Sud Sudan",
+    "Burkina Faso"
+   ],
+   "optionImages": [
+    "/flags/zw.svg",
+    "/flags/gh.svg",
+    "/flags/ss.svg",
+    "/flags/bf.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-va",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/va.svg",
+   "options": [
+    "Città del Vaticano",
+    "Islanda",
+    "Bielorussia",
+    "Serbia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-va",
+   "categoryId": "europa",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Città del Vaticano",
+   "options": [
+    "Città del Vaticano",
+    "Ucraina",
+    "Danimarca",
+    "Grecia"
+   ],
+   "optionImages": [
+    "/flags/va.svg",
+    "/flags/ua.svg",
+    "/flags/dk.svg",
+    "/flags/gr.svg"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "f-ps",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Di quale Paese è questa bandiera?",
+   "image": "/flags/ps.svg",
+   "options": [
+    "Palestina",
+    "Israele",
+    "Brunei",
+    "Myanmar"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "n-ps",
+   "categoryId": "asia",
+   "type": "multiple",
+   "text": "Trova la bandiera di questo Stato: Palestina",
+   "options": [
+    "Palestina",
+    "Bahrein",
+    "Malaysia",
+    "Libano"
+   ],
+   "optionImages": [
+    "/flags/ps.svg",
+    "/flags/bh.svg",
+    "/flags/my.svg",
+    "/flags/lb.svg"
+   ],
+   "correctIndex": 0
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "sapere-e-potere",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Party quiz game multiplayer in stile PlayLink: schermo principale 3D + smartphone come controller.",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false --ignore ./client --ignore ./dist server/index.ts",
+    "build": "vite build",
+    "start": "tsx server/index.ts --prod",
+    "typecheck": "tsc --noEmit",
+    "simulate": "tsx scripts/simulate.ts"
+  },
+  "dependencies": {
+    "@fontsource/baloo-2": "5.2.5",
+    "express": "4.21.2",
+    "gsap": "3.12.5",
+    "qrcode": "1.5.4",
+    "socket.io": "4.8.1",
+    "socket.io-client": "4.8.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "22.10.1",
+    "@types/qrcode": "1.5.5",
+    "@types/three": "0.170.0",
+    "flag-icons": "7.5.0",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

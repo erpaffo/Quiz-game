@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sapere è Potere</title>
+    <link rel="icon" href="data:," />
+    <style>
+      body { display: grid; place-items: center; min-height: 100dvh; padding: 16px; text-align: center; }
+      .home { display: flex; flex-direction: column; gap: 16px; align-items: center; max-width: 480px; }
+      .home h1 { margin: 0; font-size: clamp(2.4rem, 8vw, 3.6rem); color: var(--gold); text-shadow: 0 5px 0 #14063a; line-height: 1; }
+      .home h1 span { color: var(--pink); }
+      .home .btn { width: 100%; padding: 18px; font-size: 1.25rem; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <h1>Sapere <span>è</span> Potere</h1>
+      <p class="muted">Apri lo <b>schermo principale</b> sulla TV o sul PC, poi ogni giocatore entra con il proprio smartphone.</p>
+      <a class="btn" href="./host.html">📺 Schermo principale</a>
+      <a class="btn secondary" href="./controller.html">📱 Controller (smartphone)</a>
+      <a class="btn secondary" href="./editor.html">✏️ Laboratorio domande</a>
+    </div>
+    <script type="module">import '@fontsource/baloo-2/700.css'; import '@fontsource/baloo-2/800.css'; import './common/base.css';</script>
+  </body>
+</html>

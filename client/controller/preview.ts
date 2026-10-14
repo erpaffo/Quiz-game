@@ -1,0 +1,77 @@
+import * as THREE from 'three';
+import { CharacterRig } from '../common/characters3d';
+
+/**
+ * Anteprima 3D del personaggio nella lobby del controller. Un solo renderer WebGL
+ * riusato a ogni ridisegno della vista (i telefoni hanno pochi contesti WebGL disponibili).
+ */
+class Preview {
+  private renderer: THREE.WebGLRenderer | null = null;
+  private scene = new THREE.Scene();
+  private camera = new THREE.PerspectiveCamera(30, 1, 0.1, 50);
+  private rig: CharacterRig | null = null;
+  private clock = new THREE.Clock();
+  private running = false;
+  private lastFrame = 0;
+
+  private init() {
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    this.renderer.domElement.className = 'preview-canvas';
+    this.scene.add(new THREE.HemisphereLight('#ffffff', '#5a2ca0', 1.7));
+    const sun = new THREE.DirectionalLight('#ffffff', 2.2);
+    sun.position.set(3, 6, 6);
+    this.scene.add(sun);
+    this.camera.position.set(0, 1.6, 6.4);
+    this.camera.lookAt(0, 1.25, 0);
+  }
+
+  mount(container: HTMLElement) {
+    if (!this.renderer) this.init();
+    container.appendChild(this.renderer!.domElement);
+    const w = container.clientWidth || 240;
+    const h = container.clientHeight || 240;
+    this.renderer!.setSize(w, h);
+    this.camera.aspect = w / h;
+    this.camera.updateProjectionMatrix();
+    if (!this.running) {
+      this.running = true;
+      this.renderer!.setAnimationLoop((now) => this.frame(now));
+    }
+  }
+
+  show(characterId: string, skinId: string, selfie: string | null) {
+    if (!this.rig) {
+      this.rig = new CharacterRig(characterId, skinId);
+      this.scene.add(this.rig.root);
+    } else if (this.rig.characterId !== characterId || this.rig.skinId !== skinId) {
+      this.rig.setLook(characterId, skinId);
+      this.rig.play('hit');
+    }
+    this.rig.setSelfie(selfie);
+  }
+
+  wave() {
+    this.rig?.play('wave');
+  }
+
+  unmount() {
+    this.running = false;
+    this.renderer?.setAnimationLoop(null);
+    this.renderer?.domElement.remove();
+  }
+
+  private frame(now: number) {
+    // 30 fps bastano per un'anteprima e dimezzano il consumo di batteria del telefono.
+    if (now - this.lastFrame < 1000 / 30 - 2) return;
+    this.lastFrame = now;
+    const dt = Math.min(0.05, this.clock.getDelta());
+    if (this.rig) {
+      this.rig.update(dt);
+      this.rig.root.rotation.y = Math.sin(this.clock.elapsedTime * 0.7) * 0.5;
+    }
+    this.renderer!.render(this.scene, this.camera);
+  }
+}
+
+export const preview = new Preview();

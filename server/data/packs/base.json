@@ -1,0 +1,1659 @@
+{
+ "id": "base",
+ "name": "Pacchetto base",
+ "description": "Le domande di serie di Sapere è Potere.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "geografia",
+   "name": "Geografia",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "storia",
+   "name": "Storia",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  },
+  {
+   "id": "scienza",
+   "name": "Scienza",
+   "icon": "🔬",
+   "color": "#4361ee"
+  },
+  {
+   "id": "cinema",
+   "name": "Cinema & TV",
+   "icon": "🎬",
+   "color": "#e63946"
+  },
+  {
+   "id": "musica",
+   "name": "Musica",
+   "icon": "🎸",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "sport",
+   "name": "Sport & Giochi",
+   "icon": "⚽",
+   "color": "#f77f00"
+  },
+  {
+   "id": "arte",
+   "name": "Arte & Libri",
+   "icon": "🎨",
+   "color": "#e9a800"
+  },
+  {
+   "id": "cibo",
+   "name": "Cibo & Cucina",
+   "icon": "🍝",
+   "color": "#43aa8b"
+  }
+ ],
+ "questions": [
+  {
+   "id": "geo-01",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è il fiume più lungo d'Italia?",
+   "options": [
+    "Tevere",
+    "Po",
+    "Adige",
+    "Arno"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "geo-02",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è la capitale dell'Australia?",
+   "options": [
+    "Sydney",
+    "Melbourne",
+    "Canberra",
+    "Perth"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "geo-03",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è la vetta più alta delle Alpi?",
+   "options": [
+    "Monte Rosa",
+    "Cervino",
+    "Monte Bianco",
+    "Gran Paradiso"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "geo-04",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è il lago più grande d'Italia?",
+   "options": [
+    "Lago di Como",
+    "Lago Maggiore",
+    "Lago di Garda",
+    "Lago Trasimeno"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "geo-05",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "In quale continente si trova il deserto del Gobi?",
+   "options": [
+    "Africa",
+    "Asia",
+    "America",
+    "Oceania"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "geo-06",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Quante regioni ha l'Italia?",
+   "options": [
+    "18",
+    "19",
+    "20",
+    "21"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "geo-07",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è la capitale del Canada?",
+   "options": [
+    "Toronto",
+    "Ottawa",
+    "Vancouver",
+    "Montréal"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "geo-08",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è l'oceano più grande della Terra?",
+   "options": [
+    "Atlantico",
+    "Indiano",
+    "Pacifico",
+    "Artico"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "sto-01",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "In che anno Cristoforo Colombo raggiunse l'America?",
+   "options": [
+    "1492",
+    "1488",
+    "1501",
+    "1515"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "sto-02",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "Chi fu il primo imperatore romano?",
+   "options": [
+    "Giulio Cesare",
+    "Augusto",
+    "Nerone",
+    "Traiano"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sto-03",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "In che anno cadde il Muro di Berlino?",
+   "options": [
+    "1987",
+    "1989",
+    "1991",
+    "1993"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sto-04",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "Chi guidò la Spedizione dei Mille?",
+   "options": [
+    "Giuseppe Mazzini",
+    "Camillo Cavour",
+    "Giuseppe Garibaldi",
+    "Vittorio Emanuele II"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "sto-05",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "In che anno si tenne il referendum che fece nascere la Repubblica Italiana?",
+   "options": [
+    "1945",
+    "1946",
+    "1948",
+    "1950"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sto-06",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "In quale città fu assassinato Giulio Cesare?",
+   "options": [
+    "Roma",
+    "Alessandria d'Egitto",
+    "Ravenna",
+    "Milano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "sto-07",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "Chi fu la prima donna a volare nello spazio?",
+   "options": [
+    "Samantha Cristoforetti",
+    "Valentina Tereškova",
+    "Sally Ride",
+    "Mae Jemison"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sto-08",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "Quale civiltà costruì Machu Picchu?",
+   "options": [
+    "Maya",
+    "Aztechi",
+    "Inca",
+    "Olmechi"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "sci-01",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'oro?",
+   "options": [
+    "Ag",
+    "Au",
+    "Or",
+    "Go"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sci-02",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è il pianeta più vicino al Sole?",
+   "options": [
+    "Venere",
+    "Marte",
+    "Mercurio",
+    "Terra"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "sci-03",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Quante ossa ha il corpo di un essere umano adulto?",
+   "options": [
+    "186",
+    "206",
+    "226",
+    "256"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sci-04",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è il gas più abbondante nell'atmosfera terrestre?",
+   "options": [
+    "Ossigeno",
+    "Azoto",
+    "Anidride carbonica",
+    "Argon"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sci-05",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Chi formulò la teoria della relatività?",
+   "options": [
+    "Isaac Newton",
+    "Albert Einstein",
+    "Galileo Galilei",
+    "Niels Bohr"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sci-06",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è, circa, la velocità della luce nel vuoto?",
+   "options": [
+    "30.000 km/s",
+    "300.000 km/s",
+    "3.000 km/s",
+    "3.000.000 km/s"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "sci-07",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è la formula chimica dell'acqua?",
+   "options": [
+    "H₂O",
+    "CO₂",
+    "O₂H",
+    "HO₂"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "sci-08",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è il pianeta più grande del Sistema solare?",
+   "options": [
+    "Saturno",
+    "Giove",
+    "Nettuno",
+    "Urano"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cin-01",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Chi ha diretto il film «La vita è bella»?",
+   "options": [
+    "Nanni Moretti",
+    "Roberto Benigni",
+    "Paolo Sorrentino",
+    "Giuseppe Tornatore"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cin-02",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Quale film di Paolo Sorrentino ha vinto l'Oscar al miglior film straniero?",
+   "options": [
+    "La grande bellezza",
+    "Youth",
+    "Il divo",
+    "È stata la mano di Dio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cin-03",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Nel «Signore degli Anelli», chi porta l'Anello fino al Monte Fato?",
+   "options": [
+    "Aragorn",
+    "Gandalf",
+    "Frodo",
+    "Legolas"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "cin-04",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Come si chiama il cowboy di «Toy Story»?",
+   "options": [
+    "Buzz",
+    "Woody",
+    "Rex",
+    "Slinky"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cin-05",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Quale serie TV è ambientata nella città immaginaria di Hawkins?",
+   "options": [
+    "Dark",
+    "Stranger Things",
+    "Twin Peaks",
+    "Riverdale"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cin-06",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Chi compose le musiche de «Il buono, il brutto, il cattivo»?",
+   "options": [
+    "Nino Rota",
+    "Ennio Morricone",
+    "Hans Zimmer",
+    "John Williams"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cin-07",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "In quale saga si dice «Che la Forza sia con te»?",
+   "options": [
+    "Star Trek",
+    "Star Wars",
+    "Dune",
+    "Matrix"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cin-08",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Chi interpreta Jack nel film «Titanic» del 1997?",
+   "options": [
+    "Brad Pitt",
+    "Leonardo DiCaprio",
+    "Tom Cruise",
+    "Johnny Depp"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mus-01",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Quante corde ha una chitarra classica standard?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mus-02",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Chi ha composto «Le quattro stagioni»?",
+   "options": [
+    "Mozart",
+    "Vivaldi",
+    "Verdi",
+    "Bach"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mus-03",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Quale band ha pubblicato l'album «Abbey Road»?",
+   "options": [
+    "The Rolling Stones",
+    "The Beatles",
+    "Queen",
+    "Pink Floyd"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mus-04",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Chi era il cantante dei Queen?",
+   "options": [
+    "Mick Jagger",
+    "Freddie Mercury",
+    "Bono",
+    "Robert Plant"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mus-05",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "In quale città si svolge il Festival della Canzone Italiana?",
+   "options": [
+    "Sanremo",
+    "Venezia",
+    "Napoli",
+    "Milano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "mus-06",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Quante note ci sono nella scala musicale, dal do al si?",
+   "options": [
+    "5",
+    "7",
+    "8",
+    "12"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mus-07",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Chi compose l'opera «La traviata»?",
+   "options": [
+    "Giacomo Puccini",
+    "Giuseppe Verdi",
+    "Gioachino Rossini",
+    "Vincenzo Bellini"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mus-08",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Quale strumento ha reso celebre Jimi Hendrix?",
+   "options": [
+    "Batteria",
+    "Chitarra elettrica",
+    "Sassofono",
+    "Pianoforte"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "spo-01",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanti giocatori per squadra ci sono in campo in una partita di calcio?",
+   "options": [
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "spo-02",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Ogni quanti anni si svolgono le Olimpiadi estive?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "spo-03",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale sport si corre il Giro d'Italia?",
+   "options": [
+    "Atletica",
+    "Ciclismo",
+    "Automobilismo",
+    "Motociclismo"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "spo-04",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanti punti vale un canestro tirato da oltre l'arco nel basket?",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "spo-05",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanto è lunga una maratona?",
+   "options": [
+    "40 km",
+    "42,195 km",
+    "45 km",
+    "50 km"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "spo-06",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Di che colore è la maglia del leader del Tour de France?",
+   "options": [
+    "Rosa",
+    "Gialla",
+    "Verde",
+    "Bianca"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "spo-07",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanti cerchi ci sono nel simbolo olimpico?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "spo-08",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanti Mondiali di calcio maschile ha vinto l'Italia?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "art-01",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi dipinse la Gioconda?",
+   "options": [
+    "Michelangelo",
+    "Raffaello",
+    "Leonardo da Vinci",
+    "Caravaggio"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "art-02",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi scrisse «I promessi sposi»?",
+   "options": [
+    "Alessandro Manzoni",
+    "Ugo Foscolo",
+    "Giacomo Leopardi",
+    "Giovanni Verga"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "art-03",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Dove si trova la Cappella Sistina?",
+   "options": [
+    "Firenze",
+    "Città del Vaticano",
+    "Venezia",
+    "Milano"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "art-04",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi scolpì il David conservato alla Galleria dell'Accademia di Firenze?",
+   "options": [
+    "Donatello",
+    "Gian Lorenzo Bernini",
+    "Michelangelo",
+    "Antonio Canova"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "art-05",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi è l'autore de «Il nome della rosa»?",
+   "options": [
+    "Italo Calvino",
+    "Umberto Eco",
+    "Alberto Moravia",
+    "Elsa Morante"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "art-06",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi dipinse «Notte stellata»?",
+   "options": [
+    "Claude Monet",
+    "Vincent van Gogh",
+    "Pablo Picasso",
+    "Paul Cézanne"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "art-07",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Quante cantiche compongono la Divina Commedia?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "art-08",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi scrisse «Romeo e Giulietta»?",
+   "options": [
+    "Dante Alighieri",
+    "William Shakespeare",
+    "Molière",
+    "Goethe"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-01",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Qual è l'ingrediente principale del guacamole?",
+   "options": [
+    "Pomodoro",
+    "Avocado",
+    "Peperone",
+    "Zucchina"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-02",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Da quale regione viene il pesto alla genovese?",
+   "options": [
+    "Piemonte",
+    "Liguria",
+    "Toscana",
+    "Lombardia"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-03",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale formaggio si usa nella pizza Margherita?",
+   "options": [
+    "Gorgonzola",
+    "Mozzarella",
+    "Parmigiano",
+    "Pecorino"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-04",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale salume si usa nella carbonara tradizionale?",
+   "options": [
+    "Pancetta affumicata",
+    "Guanciale",
+    "Prosciutto cotto",
+    "Salsiccia"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-05",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Il sushi è un piatto tipico di quale Paese?",
+   "options": [
+    "Cina",
+    "Giappone",
+    "Corea",
+    "Thailandia"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-06",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Da quale pianta si ottiene il cioccolato?",
+   "options": [
+    "Caffè",
+    "Cacao",
+    "Carrubo",
+    "Vaniglia"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-07",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale formaggio si usa nel tiramisù tradizionale?",
+   "options": [
+    "Ricotta",
+    "Mascarpone",
+    "Robiola",
+    "Stracchino"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "cib-08",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale spezia dà il colore giallo al risotto alla milanese?",
+   "options": [
+    "Curcuma",
+    "Zafferano",
+    "Paprika",
+    "Curry"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-01",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è la capitale della Spagna?",
+   "options": [
+    "Barcellona",
+    "Madrid",
+    "Siviglia",
+    "Valencia"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-02",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "In quale regione si trova Matera?",
+   "options": [
+    "Puglia",
+    "Calabria",
+    "Basilicata",
+    "Campania"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-03",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Quale fiume attraversa Parigi?",
+   "options": [
+    "Loira",
+    "Senna",
+    "Rodano",
+    "Garonna"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-04",
+   "categoryId": "geografia",
+   "type": "multiple",
+   "text": "Qual è il Paese più grande del mondo per superficie?",
+   "options": [
+    "Canada",
+    "Cina",
+    "Russia",
+    "Stati Uniti"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-05",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "In che anno iniziò la Prima guerra mondiale?",
+   "options": [
+    "1912",
+    "1914",
+    "1916",
+    "1918"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-06",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "Chi fu il primo presidente degli Stati Uniti?",
+   "options": [
+    "Abraham Lincoln",
+    "Thomas Jefferson",
+    "George Washington",
+    "John Adams"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-07",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "In che anno fu proclamato il Regno d'Italia?",
+   "options": [
+    "1848",
+    "1861",
+    "1870",
+    "1871"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-08",
+   "categoryId": "storia",
+   "type": "multiple",
+   "text": "Quale regina d'Egitto fu legata a Giulio Cesare e a Marco Antonio?",
+   "options": [
+    "Nefertiti",
+    "Cleopatra",
+    "Hatshepsut",
+    "Nefertari"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-09",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Qual è l'organo più grande del corpo umano?",
+   "options": [
+    "Fegato",
+    "Pelle",
+    "Polmoni",
+    "Intestino"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-10",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Quanti pianeti ci sono nel Sistema solare?",
+   "options": [
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-11",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Quale metallo è liquido a temperatura ambiente?",
+   "options": [
+    "Piombo",
+    "Mercurio",
+    "Stagno",
+    "Zinco"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-12",
+   "categoryId": "scienza",
+   "type": "multiple",
+   "text": "Quale vitamina produce la pelle esposta al sole?",
+   "options": [
+    "Vitamina A",
+    "Vitamina C",
+    "Vitamina D",
+    "Vitamina K"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-13",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "In quale film Disney il protagonista è il leoncino Simba?",
+   "options": [
+    "Il re leone",
+    "Bambi",
+    "Tarzan",
+    "Il libro della giungla"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "mc2-14",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Chi ha diretto «Pulp Fiction»?",
+   "options": [
+    "Martin Scorsese",
+    "Quentin Tarantino",
+    "Steven Spielberg",
+    "Christopher Nolan"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-15",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Come si chiama il maghetto protagonista dei libri di J.K. Rowling?",
+   "options": [
+    "Harry Potter",
+    "Gandalf",
+    "Merlino",
+    "Doctor Strange"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "mc2-16",
+   "categoryId": "cinema",
+   "type": "multiple",
+   "text": "Quale attore interpreta Iron Man nei film Marvel?",
+   "options": [
+    "Chris Evans",
+    "Robert Downey Jr.",
+    "Chris Hemsworth",
+    "Mark Ruffalo"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-17",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Chi cantava «Nel blu, dipinto di blu»?",
+   "options": [
+    "Domenico Modugno",
+    "Adriano Celentano",
+    "Lucio Battisti",
+    "Gianni Morandi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "mc2-18",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Quale gruppo italiano ha vinto l'Eurovision nel 2021?",
+   "options": [
+    "Il Volo",
+    "Måneskin",
+    "Pinguini Tattici Nucleari",
+    "Negramaro"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-19",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Quanti musicisti compongono un quartetto?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-20",
+   "categoryId": "musica",
+   "type": "multiple",
+   "text": "Chi è conosciuto come il «Re del Pop»?",
+   "options": [
+    "Elvis Presley",
+    "Michael Jackson",
+    "Prince",
+    "Freddie Mercury"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-21",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale città si trova lo stadio di San Siro?",
+   "options": [
+    "Roma",
+    "Torino",
+    "Milano",
+    "Napoli"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-22",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quanti giocatori per squadra ci sono in campo nella pallavolo?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-23",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "In quale sport si cerca di mandare la pallina in buca col minor numero di colpi?",
+   "options": [
+    "Cricket",
+    "Golf",
+    "Hockey",
+    "Polo"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-24",
+   "categoryId": "sport",
+   "type": "multiple",
+   "text": "Quante caselle ha una scacchiera?",
+   "options": [
+    "36",
+    "49",
+    "64",
+    "81"
+   ],
+   "correctIndex": 2
+  },
+  {
+   "id": "mc2-25",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi ha scritto «Il Piccolo Principe»?",
+   "options": [
+    "Jules Verne",
+    "Antoine de Saint-Exupéry",
+    "Victor Hugo",
+    "Albert Camus"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-26",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi ha dipinto «La nascita di Venere»?",
+   "options": [
+    "Sandro Botticelli",
+    "Tiziano",
+    "Raffaello",
+    "Giotto"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "mc2-27",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "Chi ha scritto «Le avventure di Pinocchio»?",
+   "options": [
+    "Gianni Rodari",
+    "Carlo Collodi",
+    "Edmondo De Amicis",
+    "Italo Calvino"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-28",
+   "categoryId": "arte",
+   "type": "multiple",
+   "text": "In quale città si trova il museo del Louvre?",
+   "options": [
+    "Londra",
+    "Parigi",
+    "Madrid",
+    "Bruxelles"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-29",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "In quale città è nata la pizza Margherita?",
+   "options": [
+    "Roma",
+    "Napoli",
+    "Palermo",
+    "Bari"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-30",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Qual è l'ingrediente principale dell'hummus?",
+   "options": [
+    "Lenticchie",
+    "Ceci",
+    "Fagioli",
+    "Piselli"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-31",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Quale formaggio si usa nella pasta cacio e pepe?",
+   "options": [
+    "Parmigiano",
+    "Pecorino romano",
+    "Grana",
+    "Provolone"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "mc2-32",
+   "categoryId": "cibo",
+   "type": "multiple",
+   "text": "Il wasabi è tipico della cucina di quale Paese?",
+   "options": [
+    "Cina",
+    "Giappone",
+    "Thailandia",
+    "India"
+   ],
+   "correctIndex": 1
+  },
+  {
+   "id": "tf-01",
+   "categoryId": "geografia",
+   "type": "truefalse",
+   "text": "L'Australia è sia un continente sia uno Stato.",
+   "answer": true
+  },
+  {
+   "id": "tf-02",
+   "categoryId": "geografia",
+   "type": "truefalse",
+   "text": "La capitale del Brasile è Rio de Janeiro.",
+   "answer": false
+  },
+  {
+   "id": "tf-03",
+   "categoryId": "storia",
+   "type": "truefalse",
+   "text": "La Seconda guerra mondiale è finita nel 1945.",
+   "answer": true
+  },
+  {
+   "id": "tf-04",
+   "categoryId": "storia",
+   "type": "truefalse",
+   "text": "Cristoforo Colombo era nato a Venezia.",
+   "answer": false
+  },
+  {
+   "id": "tf-05",
+   "categoryId": "scienza",
+   "type": "truefalse",
+   "text": "Il suono viaggia più veloce nell'acqua che nell'aria.",
+   "answer": true
+  },
+  {
+   "id": "tf-06",
+   "categoryId": "scienza",
+   "type": "truefalse",
+   "text": "I pipistrelli sono ciechi.",
+   "answer": false
+  },
+  {
+   "id": "tf-07",
+   "categoryId": "cinema",
+   "type": "truefalse",
+   "text": "Il film «Titanic» del 1997 ha vinto 11 premi Oscar.",
+   "answer": true
+  },
+  {
+   "id": "tf-08",
+   "categoryId": "cinema",
+   "type": "truefalse",
+   "text": "Il primo cartone animato con Topolino è uscito nel 1950.",
+   "answer": false
+  },
+  {
+   "id": "tf-09",
+   "categoryId": "musica",
+   "type": "truefalse",
+   "text": "I Beatles erano un gruppo di Liverpool.",
+   "answer": true
+  },
+  {
+   "id": "tf-10",
+   "categoryId": "musica",
+   "type": "truefalse",
+   "text": "Mozart ha composto «Le quattro stagioni».",
+   "answer": false
+  },
+  {
+   "id": "tf-11",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "Le prime Olimpiadi moderne si sono svolte ad Atene nel 1896.",
+   "answer": true
+  },
+  {
+   "id": "tf-12",
+   "categoryId": "sport",
+   "type": "truefalse",
+   "text": "Nel calcio il portiere può prendere la palla con le mani in tutto il campo.",
+   "answer": false
+  },
+  {
+   "id": "tf-13",
+   "categoryId": "arte",
+   "type": "truefalse",
+   "text": "La Torre di Pisa è il campanile della cattedrale.",
+   "answer": true
+  },
+  {
+   "id": "tf-14",
+   "categoryId": "arte",
+   "type": "truefalse",
+   "text": "«I Malavoglia» è stato scritto da Alessandro Manzoni.",
+   "answer": false
+  },
+  {
+   "id": "tf-15",
+   "categoryId": "cibo",
+   "type": "truefalse",
+   "text": "Il tiramisù tradizionale contiene il caffè.",
+   "answer": true
+  },
+  {
+   "id": "tf-16",
+   "categoryId": "cibo",
+   "type": "truefalse",
+   "text": "La ricetta tradizionale dell'amatriciana prevede la panna.",
+   "answer": false
+  },
+  {
+   "id": "num-01",
+   "categoryId": "geografia",
+   "type": "numeric",
+   "text": "Quanti chilometri è lungo il fiume Po?",
+   "answer": 652,
+   "unit": "km"
+  },
+  {
+   "id": "num-02",
+   "categoryId": "geografia",
+   "type": "numeric",
+   "text": "Quanti milioni di abitanti ha l'Italia, circa?",
+   "answer": 59,
+   "unit": "milioni"
+  },
+  {
+   "id": "num-03",
+   "categoryId": "geografia",
+   "type": "numeric",
+   "text": "Quanti metri è alto il Monte Everest?",
+   "answer": 8849,
+   "unit": "m"
+  },
+  {
+   "id": "num-04",
+   "categoryId": "geografia",
+   "type": "numeric",
+   "text": "Quanti chilometri misura la circonferenza della Terra all'equatore?",
+   "answer": 40075,
+   "unit": "km"
+  },
+  {
+   "id": "num-05",
+   "categoryId": "geografia",
+   "type": "numeric",
+   "text": "Quanti metri è alta la Torre Eiffel, antenne comprese?",
+   "answer": 330,
+   "unit": "m"
+  },
+  {
+   "id": "num-06",
+   "categoryId": "geografia",
+   "type": "numeric",
+   "text": "Quanti Stati fanno parte dell'Unione Europea?",
+   "answer": 27,
+   "unit": "Stati"
+  },
+  {
+   "id": "num-07",
+   "categoryId": "storia",
+   "type": "numeric",
+   "text": "In che anno è caduto il Muro di Berlino?",
+   "answer": 1989,
+   "unit": ""
+  },
+  {
+   "id": "num-08",
+   "categoryId": "storia",
+   "type": "numeric",
+   "text": "In che anno l'uomo è sbarcato per la prima volta sulla Luna?",
+   "answer": 1969,
+   "unit": ""
+  },
+  {
+   "id": "num-09",
+   "categoryId": "storia",
+   "type": "numeric",
+   "text": "In che anno è nato Leonardo da Vinci?",
+   "answer": 1452,
+   "unit": ""
+  },
+  {
+   "id": "num-10",
+   "categoryId": "storia",
+   "type": "numeric",
+   "text": "Quanti anni è durata la Guerra dei cent'anni?",
+   "answer": 116,
+   "unit": "anni"
+  },
+  {
+   "id": "num-11",
+   "categoryId": "storia",
+   "type": "numeric",
+   "text": "In che anno è nato Dante Alighieri?",
+   "answer": 1265,
+   "unit": ""
+  },
+  {
+   "id": "num-12",
+   "categoryId": "storia",
+   "type": "numeric",
+   "text": "Quanti furono i re di Roma secondo la tradizione?",
+   "answer": 7,
+   "unit": "re"
+  },
+  {
+   "id": "num-13",
+   "categoryId": "scienza",
+   "type": "numeric",
+   "text": "Quante ossa ha il corpo di un essere umano adulto?",
+   "answer": 206,
+   "unit": "ossa"
+  },
+  {
+   "id": "num-14",
+   "categoryId": "scienza",
+   "type": "numeric",
+   "text": "Quanti chilometri separano in media la Terra dalla Luna?",
+   "answer": 384400,
+   "unit": "km"
+  },
+  {
+   "id": "num-15",
+   "categoryId": "scienza",
+   "type": "numeric",
+   "text": "A che velocità viaggia il suono nell'aria (a 20 °C)?",
+   "answer": 343,
+   "unit": "m/s"
+  },
+  {
+   "id": "num-16",
+   "categoryId": "scienza",
+   "type": "numeric",
+   "text": "Quanti cuori ha un polpo?",
+   "answer": 3,
+   "unit": "cuori"
+  },
+  {
+   "id": "num-17",
+   "categoryId": "scienza",
+   "type": "numeric",
+   "text": "A quanti gradi Fahrenheit bolle l'acqua al livello del mare?",
+   "answer": 212,
+   "unit": "°F"
+  },
+  {
+   "id": "num-18",
+   "categoryId": "scienza",
+   "type": "numeric",
+   "text": "Quanti denti ha la dentatura completa di un adulto?",
+   "answer": 32,
+   "unit": "denti"
+  },
+  {
+   "id": "num-19",
+   "categoryId": "cinema",
+   "type": "numeric",
+   "text": "In che anno è uscito al cinema il primo film di «Star Wars»?",
+   "answer": 1977,
+   "unit": ""
+  },
+  {
+   "id": "num-20",
+   "categoryId": "cinema",
+   "type": "numeric",
+   "text": "In che anno è uscito il film Disney «Il re leone»?",
+   "answer": 1994,
+   "unit": ""
+  },
+  {
+   "id": "num-21",
+   "categoryId": "cinema",
+   "type": "numeric",
+   "text": "Quanti nani accompagnano Biancaneve?",
+   "answer": 7,
+   "unit": "nani"
+  },
+  {
+   "id": "num-22",
+   "categoryId": "musica",
+   "type": "numeric",
+   "text": "Quanti tasti ha un pianoforte standard?",
+   "answer": 88,
+   "unit": "tasti"
+  },
+  {
+   "id": "num-23",
+   "categoryId": "musica",
+   "type": "numeric",
+   "text": "In che anno si è svolto il primo Festival di Sanremo?",
+   "answer": 1951,
+   "unit": ""
+  },
+  {
+   "id": "num-24",
+   "categoryId": "sport",
+   "type": "numeric",
+   "text": "Quanti chilometri è lunga una maratona?",
+   "answer": 42.195,
+   "unit": "km"
+  },
+  {
+   "id": "num-25",
+   "categoryId": "sport",
+   "type": "numeric",
+   "text": "Quanti giocatori ci sono in campo in tutto in una partita di rugby a 15?",
+   "answer": 30,
+   "unit": "giocatori"
+  },
+  {
+   "id": "num-26",
+   "categoryId": "sport",
+   "type": "numeric",
+   "text": "In che anno l'Italia ha vinto il suo ultimo Mondiale di calcio maschile?",
+   "answer": 2006,
+   "unit": ""
+  },
+  {
+   "id": "num-27",
+   "categoryId": "sport",
+   "type": "numeric",
+   "text": "Quante carte ha un mazzo di carte francesi senza jolly?",
+   "answer": 52,
+   "unit": "carte"
+  },
+  {
+   "id": "num-28",
+   "categoryId": "arte",
+   "type": "numeric",
+   "text": "In che anno è morto Michelangelo Buonarroti?",
+   "answer": 1564,
+   "unit": ""
+  },
+  {
+   "id": "num-29",
+   "categoryId": "arte",
+   "type": "numeric",
+   "text": "Quante lettere ha l'alfabeto italiano?",
+   "answer": 21,
+   "unit": "lettere"
+  },
+  {
+   "id": "num-30",
+   "categoryId": "cibo",
+   "type": "numeric",
+   "text": "Quanti litri di latte servono, circa, per fare 1 kg di Parmigiano Reggiano?",
+   "answer": 16,
+   "unit": "litri"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio Domande · Sapere è Potere</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body class="editor">
+    <header class="ed-top">
+      <div class="logo">✏️ Laboratorio <span>Domande</span></div>
+      <div class="muted small">Crea pacchetti, categorie e domande per giocare con i tuoi amici</div>
+      <a class="btn secondary" href="./host.html">📺 Torna al gioco</a>
+    </header>
+    <div class="ed-layout">
+      <aside class="ed-side">
+        <div class="ed-side-actions">
+          <button class="btn" data-act="new-pack">➕ Nuovo pacchetto</button>
+          <label class="btn secondary">📥 Importa<input type="file" accept=".json,application/json" id="import" hidden /></label>
+        </div>
+        <nav id="pack-list"></nav>
+      </aside>
+      <main id="ed-main"></main>
+    </div>
+    <script type="module" src="./editor/main.ts"></script>
+  </body>
+</html>

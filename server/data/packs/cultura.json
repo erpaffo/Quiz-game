@@ -1,0 +1,1631 @@
+{
+ "id": "cultura",
+ "name": "Cultura generale",
+ "description": "Domande di cultura generale, nello stile dei grandi quiz televisivi.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "geo",
+   "name": "Geografia",
+   "icon": "🗺️",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "sto",
+   "name": "Storia",
+   "icon": "📜",
+   "color": "#b5838d"
+  },
+  {
+   "id": "sci",
+   "name": "Scienza",
+   "icon": "🧪",
+   "color": "#4361ee"
+  },
+  {
+   "id": "nat",
+   "name": "Natura & Animali",
+   "icon": "🦁",
+   "color": "#43aa8b"
+  },
+  {
+   "id": "lin",
+   "name": "Lingua italiana",
+   "icon": "🔤",
+   "color": "#e9a800"
+  },
+  {
+   "id": "mit",
+   "name": "Miti & Leggende",
+   "icon": "⚡",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "spa",
+   "name": "Spazio",
+   "icon": "🚀",
+   "color": "#3a0ca3"
+  },
+  {
+   "id": "tec",
+   "name": "Tecnologia",
+   "icon": "💻",
+   "color": "#4cc9f0"
+  }
+ ],
+ "questions": [
+  {
+   "id": "cultura-m001",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la capitale della Turchia?",
+   "options": [
+    "Ankara",
+    "Istanbul",
+    "Smirne",
+    "Antalya"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m002",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Tra quali Paesi si trova il lago Titicaca?",
+   "options": [
+    "Perù e Bolivia",
+    "Cile e Argentina",
+    "Ecuador e Colombia",
+    "Brasile e Paraguay"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m003",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è lo Stato più piccolo del mondo?",
+   "options": [
+    "Città del Vaticano",
+    "Principato di Monaco",
+    "San Marino",
+    "Liechtenstein"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m004",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale stretto separa l'Europa dall'Africa?",
+   "options": [
+    "Stretto di Gibilterra",
+    "Bosforo",
+    "Stretto di Messina",
+    "Dardanelli"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m005",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il deserto caldo più grande del mondo?",
+   "options": [
+    "Sahara",
+    "Gobi",
+    "Kalahari",
+    "Atacama"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m006",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "In quale continente si trova il Kilimangiaro?",
+   "options": [
+    "Africa",
+    "Asia",
+    "America del Sud",
+    "Oceania"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m007",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la capitale della Norvegia?",
+   "options": [
+    "Oslo",
+    "Stoccolma",
+    "Helsinki",
+    "Copenaghen"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m008",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale catena montuosa segna il confine convenzionale tra Europa e Asia?",
+   "options": [
+    "Urali",
+    "Alpi",
+    "Pirenei",
+    "Ande"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m009",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale città è attraversata dall'Arno?",
+   "options": [
+    "Firenze",
+    "Bologna",
+    "Verona",
+    "Torino"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m010",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il vulcano attivo più alto dell'Europa continentale?",
+   "options": [
+    "Etna",
+    "Vesuvio",
+    "Stromboli",
+    "Vulcano"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m011",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la capitale dell'Argentina?",
+   "options": [
+    "Buenos Aires",
+    "Santiago del Cile",
+    "Montevideo",
+    "Lima"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m012",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "In quale Paese si trova la città di Marrakech?",
+   "options": [
+    "Marocco",
+    "Tunisia",
+    "Egitto",
+    "Algeria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m013",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale oceano bagna le coste del Portogallo?",
+   "options": [
+    "Atlantico",
+    "Indiano",
+    "Pacifico",
+    "Artico"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m014",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è l'isola più grande del Mediterraneo?",
+   "options": [
+    "Sicilia",
+    "Sardegna",
+    "Cipro",
+    "Corsica"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m015",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la capitale del Giappone?",
+   "options": [
+    "Tokyo",
+    "Kyoto",
+    "Osaka",
+    "Hiroshima"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m016",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi fu il primo uomo a camminare sulla Luna?",
+   "options": [
+    "Neil Armstrong",
+    "Buzz Aldrin",
+    "Jurij Gagarin",
+    "Michael Collins"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m017",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno iniziò la Rivoluzione francese?",
+   "options": [
+    "1789",
+    "1776",
+    "1804",
+    "1815"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m018",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi era il re d'Italia al momento del referendum del 1946?",
+   "options": [
+    "Umberto II",
+    "Vittorio Emanuele III",
+    "Umberto I",
+    "Vittorio Emanuele II"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m019",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale nave affondò nel 1912 dopo aver urtato un iceberg?",
+   "options": [
+    "Titanic",
+    "Lusitania",
+    "Britannic",
+    "Andrea Doria"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m020",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi scrisse il «Manifesto del Partito Comunista» insieme a Friedrich Engels?",
+   "options": [
+    "Karl Marx",
+    "Lenin",
+    "Lev Trotsky",
+    "Iosif Stalin"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m021",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale città fu sepolta dall'eruzione del Vesuvio del 79 d.C.?",
+   "options": [
+    "Pompei",
+    "Ostia",
+    "Paestum",
+    "Siracusa"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m022",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi fu il primo imperatore della Cina unificata?",
+   "options": [
+    "Qin Shi Huang",
+    "Gengis Khan",
+    "Kublai Khan",
+    "Confucio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m023",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno terminò la Prima guerra mondiale?",
+   "options": [
+    "1918",
+    "1915",
+    "1919",
+    "1920"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m024",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale mercante veneziano raccontò i suoi viaggi nel «Milione»?",
+   "options": [
+    "Marco Polo",
+    "Cristoforo Colombo",
+    "Amerigo Vespucci",
+    "Giovanni Caboto"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m025",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi era il presidente degli Stati Uniti durante la guerra di secessione?",
+   "options": [
+    "Abraham Lincoln",
+    "George Washington",
+    "Thomas Jefferson",
+    "Theodore Roosevelt"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m026",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale famiglia governò Firenze durante il Rinascimento?",
+   "options": [
+    "Medici",
+    "Sforza",
+    "Este",
+    "Gonzaga"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m027",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno è entrata in vigore la Costituzione italiana?",
+   "options": [
+    "1948",
+    "1946",
+    "1945",
+    "1950"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m028",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi era soprannominata «la Pulzella d'Orléans»?",
+   "options": [
+    "Giovanna d'Arco",
+    "Maria Antonietta",
+    "Caterina de' Medici",
+    "Elisabetta I"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m029",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi guidava l'Unione Sovietica durante la crisi dei missili di Cuba del 1962?",
+   "options": [
+    "Nikita Chruščëv",
+    "Iosif Stalin",
+    "Leonid Brežnev",
+    "Michail Gorbačëv"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m030",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale civiltà antica costruì le piramidi di Giza?",
+   "options": [
+    "Egizi",
+    "Babilonesi",
+    "Fenici",
+    "Sumeri"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m031",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico del ferro?",
+   "options": [
+    "Fe",
+    "F",
+    "Fr",
+    "Ir"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m032",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quanti cromosomi ha normalmente una cellula umana?",
+   "options": [
+    "46",
+    "23",
+    "44",
+    "48"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m033",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Chi scoprì la penicillina?",
+   "options": [
+    "Alexander Fleming",
+    "Louis Pasteur",
+    "Robert Koch",
+    "Marie Curie"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m034",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è l'unità di misura della resistenza elettrica?",
+   "options": [
+    "Ohm",
+    "Volt",
+    "Ampere",
+    "Watt"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m035",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale organo produce l'insulina?",
+   "options": [
+    "Pancreas",
+    "Fegato",
+    "Reni",
+    "Milza"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m036",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è il pH dell'acqua pura a 25 °C?",
+   "options": [
+    "7",
+    "0",
+    "14",
+    "1"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m037",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale scienziata vinse due premi Nobel in due discipline diverse?",
+   "options": [
+    "Marie Curie",
+    "Rita Levi-Montalcini",
+    "Rosalind Franklin",
+    "Ada Lovelace"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m038",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale particella dell'atomo ha carica negativa?",
+   "options": [
+    "Elettrone",
+    "Protone",
+    "Neutrone",
+    "Fotone"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m039",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Chi formulò le tre leggi della dinamica?",
+   "options": [
+    "Isaac Newton",
+    "Galileo Galilei",
+    "Giovanni Keplero",
+    "Albert Einstein"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m040",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale gas assorbono le piante durante la fotosintesi?",
+   "options": [
+    "Anidride carbonica",
+    "Ossigeno",
+    "Azoto",
+    "Idrogeno"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m041",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è l'osso più lungo del corpo umano?",
+   "options": [
+    "Femore",
+    "Tibia",
+    "Omero",
+    "Perone"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m042",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è l'elemento più abbondante nell'universo?",
+   "options": [
+    "Idrogeno",
+    "Elio",
+    "Ossigeno",
+    "Carbonio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m043",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Chi inventò la pila elettrica?",
+   "options": [
+    "Alessandro Volta",
+    "Thomas Edison",
+    "Nikola Tesla",
+    "Guglielmo Marconi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m044",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quanti lati ha un esagono?",
+   "options": [
+    "6",
+    "5",
+    "7",
+    "8"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m045",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Come si chiama la scienza che studia i terremoti?",
+   "options": [
+    "Sismologia",
+    "Meteorologia",
+    "Vulcanologia",
+    "Speleologia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m046",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Qual è il mammifero più grande del mondo?",
+   "options": [
+    "Balenottera azzurra",
+    "Elefante africano",
+    "Capodoglio",
+    "Orca"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m047",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Qual è l'animale terrestre più veloce?",
+   "options": [
+    "Ghepardo",
+    "Leone",
+    "Antilope",
+    "Levriero"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m048",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quante zampe ha un insetto?",
+   "options": [
+    "6",
+    "8",
+    "4",
+    "10"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m049",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Come si chiama il cucciolo del cavallo?",
+   "options": [
+    "Puledro",
+    "Vitello",
+    "Agnello",
+    "Capretto"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m050",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale di questi uccelli non sa volare?",
+   "options": [
+    "Pinguino",
+    "Gabbiano",
+    "Rondine",
+    "Aquila"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m051",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Di cosa si nutre soprattutto il panda gigante?",
+   "options": [
+    "Bambù",
+    "Pesce",
+    "Frutta",
+    "Insetti"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m052",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale foglia compare sulla bandiera del Canada?",
+   "options": [
+    "Acero",
+    "Quercia",
+    "Pino",
+    "Betulla"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m053",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Di quale Paese è originario il koala?",
+   "options": [
+    "Australia",
+    "Nuova Zelanda",
+    "Sudafrica",
+    "Indonesia"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m054",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale di questi animali è un marsupiale?",
+   "options": [
+    "Canguro",
+    "Lontra",
+    "Procione",
+    "Tasso"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m055",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale insetto produce il miele?",
+   "options": [
+    "Ape",
+    "Vespa",
+    "Calabrone",
+    "Formica"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m056",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Qual è il felino più grande del mondo?",
+   "options": [
+    "Tigre",
+    "Leone",
+    "Giaguaro",
+    "Leopardo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m057",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale di questi animali è un rettile?",
+   "options": [
+    "Coccodrillo",
+    "Rana",
+    "Salamandra",
+    "Delfino"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m058",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale rettile è famoso per cambiare colore?",
+   "options": [
+    "Camaleonte",
+    "Iguana",
+    "Geco",
+    "Tartaruga"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m059",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Quale animale ha il collo più lungo?",
+   "options": [
+    "Giraffa",
+    "Cammello",
+    "Struzzo",
+    "Lama"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m060",
+   "categoryId": "nat",
+   "type": "multiple",
+   "text": "Come si chiama la casa costruita dai castori?",
+   "options": [
+    "Diga",
+    "Tana",
+    "Nido",
+    "Covo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m061",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Qual è il plurale di «uovo»?",
+   "options": [
+    "Uova",
+    "Uovi",
+    "Uove",
+    "Uovà"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m062",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Quale di queste parole è scritta correttamente?",
+   "options": [
+    "Efficienza",
+    "Efficenza",
+    "Eficienza",
+    "Effiscienza"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m063",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Cosa significa «procrastinare»?",
+   "options": [
+    "Rimandare",
+    "Anticipare",
+    "Esagerare",
+    "Ripetere"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m064",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Qual è il contrario di «generoso»?",
+   "options": [
+    "Avaro",
+    "Gentile",
+    "Prodigo",
+    "Altruista"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m065",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Come si chiama una parola che si legge uguale anche al contrario, come «anna»?",
+   "options": [
+    "Palindromo",
+    "Anagramma",
+    "Sinonimo",
+    "Ossimoro"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m066",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Quale forma è corretta?",
+   "options": [
+    "Qual è",
+    "Qual'è",
+    "Quale'è",
+    "Qual é"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m067",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Cosa significa l'espressione «essere al verde»?",
+   "options": [
+    "Non avere soldi",
+    "Essere ecologisti",
+    "Essere inesperti",
+    "Essere invidiosi"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m068",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cos'è un ossimoro?",
+   "options": [
+    "L'accostamento di parole dal senso opposto",
+    "Una parola con più significati",
+    "Un'esagerazione voluta",
+    "La ripetizione di un suono"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m069",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Qual è il plurale di «uomo»?",
+   "options": [
+    "Uomini",
+    "Uomi",
+    "Uoma",
+    "Uomoni"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m070",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Da quale lingua deriva il saluto «ciao»?",
+   "options": [
+    "Veneziano",
+    "Latino",
+    "Francese",
+    "Spagnolo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m071",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Completa: «Penso che lui ___ ragione».",
+   "options": [
+    "abbia",
+    "ha",
+    "abbi",
+    "aveva"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m072",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Cosa vuol dire «lapalissiano»?",
+   "options": [
+    "Ovvio",
+    "Complicato",
+    "Antico",
+    "Triste"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m073",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi è il re degli dèi nella mitologia greca?",
+   "options": [
+    "Zeus",
+    "Ade",
+    "Poseidone",
+    "Apollo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m074",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Come si chiama il dio romano della guerra?",
+   "options": [
+    "Marte",
+    "Giove",
+    "Mercurio",
+    "Nettuno"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m075",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Quale eroe greco era vulnerabile solo nel tallone?",
+   "options": [
+    "Achille",
+    "Ulisse",
+    "Ercole",
+    "Perseo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m076",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi uccise la Medusa?",
+   "options": [
+    "Perseo",
+    "Teseo",
+    "Giasone",
+    "Achille"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m077",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Quale creatura aveva il corpo d'uomo e la testa di toro?",
+   "options": [
+    "Minotauro",
+    "Centauro",
+    "Ciclope",
+    "Grifone"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m078",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Secondo la leggenda, chi fondò Roma?",
+   "options": [
+    "Romolo e Remo",
+    "Enea e Ascanio",
+    "Castore e Polluce",
+    "Caino e Abele"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m079",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Come si chiama il martello del dio Thor?",
+   "options": [
+    "Mjöllnir",
+    "Excalibur",
+    "Gungnir",
+    "Durlindana"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m080",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi aprì il vaso che liberò tutti i mali del mondo?",
+   "options": [
+    "Pandora",
+    "Elena",
+    "Atena",
+    "Penelope"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m081",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Come si chiamava la spada di re Artù?",
+   "options": [
+    "Excalibur",
+    "Durlindana",
+    "Mjöllnir",
+    "Gram"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m082",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi era la dea greca della sapienza?",
+   "options": [
+    "Atena",
+    "Afrodite",
+    "Era",
+    "Artemide"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m083",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Quale eroe dovette compiere dodici fatiche?",
+   "options": [
+    "Ercole",
+    "Ulisse",
+    "Teseo",
+    "Giasone"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m084",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Come si chiama il cavallo alato della mitologia greca?",
+   "options": [
+    "Pegaso",
+    "Bucefalo",
+    "Sleipnir",
+    "Arione"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m085",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Quale pianeta è chiamato «pianeta rosso»?",
+   "options": [
+    "Marte",
+    "Venere",
+    "Giove",
+    "Mercurio"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m086",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Quale pianeta ha gli anelli più famosi e visibili?",
+   "options": [
+    "Saturno",
+    "Giove",
+    "Urano",
+    "Nettuno"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m087",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Come si chiama la nostra galassia?",
+   "options": [
+    "Via Lattea",
+    "Andromeda",
+    "Galassia di Orione",
+    "Galassia del Triangolo"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m088",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Chi fu il primo uomo a volare nello spazio?",
+   "options": [
+    "Jurij Gagarin",
+    "Neil Armstrong",
+    "John Glenn",
+    "Alan Shepard"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m089",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Qual è la stella più vicina alla Terra?",
+   "options": [
+    "Il Sole",
+    "Proxima Centauri",
+    "Sirio",
+    "Betelgeuse"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m090",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Qual è il pianeta più caldo del Sistema solare?",
+   "options": [
+    "Venere",
+    "Mercurio",
+    "Marte",
+    "Giove"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m091",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Come si chiamava la missione che portò l'uomo sulla Luna nel 1969?",
+   "options": [
+    "Apollo 11",
+    "Gemini 4",
+    "Vostok 1",
+    "Apollo 13"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m092",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Chi fu il primo astronauta italiano ad andare nello spazio?",
+   "options": [
+    "Franco Malerba",
+    "Luca Parmitano",
+    "Samantha Cristoforetti",
+    "Paolo Nespoli"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m093",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Quanto impiega, circa, la luce del Sole per arrivare sulla Terra?",
+   "options": [
+    "8 minuti",
+    "8 secondi",
+    "8 ore",
+    "1 giorno"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m094",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Quale pianeta ruota «coricato» su un fianco?",
+   "options": [
+    "Urano",
+    "Nettuno",
+    "Saturno",
+    "Marte"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m095",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Come si chiama il telescopio spaziale lanciato nel 1990?",
+   "options": [
+    "Hubble",
+    "James Webb",
+    "Kepler",
+    "Spitzer"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m096",
+   "categoryId": "spa",
+   "type": "multiple",
+   "text": "Quale pianeta è il più grande del Sistema solare?",
+   "options": [
+    "Giove",
+    "Saturno",
+    "Nettuno",
+    "Terra"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m097",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Chi fondò Microsoft insieme a Paul Allen?",
+   "options": [
+    "Bill Gates",
+    "Steve Jobs",
+    "Mark Zuckerberg",
+    "Larry Page"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m098",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Cosa significa la sigla «www»?",
+   "options": [
+    "World Wide Web",
+    "World Web Wide",
+    "Wide World Web",
+    "Web World Wide"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m099",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "In che anno è stato presentato il primo iPhone?",
+   "options": [
+    "2007",
+    "2005",
+    "2009",
+    "2010"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m100",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale azienda produce le console PlayStation?",
+   "options": [
+    "Sony",
+    "Nintendo",
+    "Microsoft",
+    "Sega"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m101",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale italiano vinse il Nobel per la fisica nel 1909 per la telegrafia senza fili?",
+   "options": [
+    "Guglielmo Marconi",
+    "Antonio Meucci",
+    "Enrico Fermi",
+    "Alessandro Volta"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m102",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quanti bit ci sono in un byte?",
+   "options": [
+    "8",
+    "4",
+    "16",
+    "10"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m103",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Come si chiama il sistema operativo per smartphone sviluppato da Google?",
+   "options": [
+    "Android",
+    "iOS",
+    "Windows Phone",
+    "Symbian"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m104",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale social network aveva come simbolo un uccellino azzurro prima del 2023?",
+   "options": [
+    "Twitter",
+    "Facebook",
+    "Instagram",
+    "Snapchat"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m105",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Cosa vuol dire la sigla «USB»?",
+   "options": [
+    "Universal Serial Bus",
+    "Unified System Board",
+    "Universal Storage Box",
+    "User Serial Bridge"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m106",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Chi ha fondato Facebook?",
+   "options": [
+    "Mark Zuckerberg",
+    "Jeff Bezos",
+    "Elon Musk",
+    "Jack Dorsey"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m107",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale linguaggio si usa per scrivere la struttura delle pagine web?",
+   "options": [
+    "HTML",
+    "SQL",
+    "Python",
+    "Excel"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-m108",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale azienda ha creato il sistema operativo Windows?",
+   "options": [
+    "Microsoft",
+    "Apple",
+    "IBM",
+    "Google"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "cultura-t001",
+   "categoryId": "geo",
+   "type": "truefalse",
+   "text": "Il Sahara è il deserto più grande del mondo.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t002",
+   "categoryId": "geo",
+   "type": "truefalse",
+   "text": "Il Monte Everest si trova al confine tra Nepal e Cina.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t003",
+   "categoryId": "geo",
+   "type": "truefalse",
+   "text": "Napoli è il capoluogo della Campania.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t004",
+   "categoryId": "geo",
+   "type": "truefalse",
+   "text": "Il Canada è il Paese con più laghi al mondo.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t005",
+   "categoryId": "geo",
+   "type": "truefalse",
+   "text": "La Svizzera fa parte dell'Unione Europea.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t006",
+   "categoryId": "geo",
+   "type": "truefalse",
+   "text": "Il Rio delle Amazzoni attraversa il Brasile.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t007",
+   "categoryId": "sto",
+   "type": "truefalse",
+   "text": "Giulio Cesare fu il primo imperatore di Roma.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t008",
+   "categoryId": "sto",
+   "type": "truefalse",
+   "text": "La Torre Eiffel fu costruita per l'Esposizione universale del 1889.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t009",
+   "categoryId": "sto",
+   "type": "truefalse",
+   "text": "La Grande Piramide di Giza è una delle sette meraviglie del mondo antico.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t010",
+   "categoryId": "sto",
+   "type": "truefalse",
+   "text": "Il Partenone si trova a Roma.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t011",
+   "categoryId": "sci",
+   "type": "truefalse",
+   "text": "Gli esseri umani usano solo il 10% del cervello.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t012",
+   "categoryId": "sci",
+   "type": "truefalse",
+   "text": "La Luna brilla di luce propria.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t013",
+   "categoryId": "sci",
+   "type": "truefalse",
+   "text": "Il diamante è fatto di carbonio.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t014",
+   "categoryId": "sci",
+   "type": "truefalse",
+   "text": "L'oro è un buon conduttore di elettricità.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t015",
+   "categoryId": "sci",
+   "type": "truefalse",
+   "text": "Il sangue nelle vene è di colore blu.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t016",
+   "categoryId": "sci",
+   "type": "truefalse",
+   "text": "Un fulmine non cade mai due volte nello stesso punto.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t017",
+   "categoryId": "nat",
+   "type": "truefalse",
+   "text": "Gli struzzi nascondono la testa sotto la sabbia quando hanno paura.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t018",
+   "categoryId": "nat",
+   "type": "truefalse",
+   "text": "Il cammello conserva l'acqua nelle gobbe.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t019",
+   "categoryId": "nat",
+   "type": "truefalse",
+   "text": "Le balene sono pesci.",
+   "answer": false
+  },
+  {
+   "id": "cultura-t020",
+   "categoryId": "nat",
+   "type": "truefalse",
+   "text": "Le stelle marine non hanno un cervello.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t021",
+   "categoryId": "nat",
+   "type": "truefalse",
+   "text": "Il pomodoro è arrivato in Europa dalle Americhe.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t022",
+   "categoryId": "spa",
+   "type": "truefalse",
+   "text": "Venere ruota su se stessa nel verso opposto rispetto alla Terra.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t023",
+   "categoryId": "spa",
+   "type": "truefalse",
+   "text": "Su Marte un anno dura più che sulla Terra.",
+   "answer": true
+  },
+  {
+   "id": "cultura-t024",
+   "categoryId": "mit",
+   "type": "truefalse",
+   "text": "Nella mitologia romana Nettuno è il dio del mare.",
+   "answer": true
+  }
+ ]
+}
