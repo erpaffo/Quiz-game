@@ -66,7 +66,8 @@
     "Adige",
     "Arno"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "geo-02",
@@ -79,7 +80,8 @@
     "Canberra",
     "Perth"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "geo-03",
@@ -92,7 +94,8 @@
     "Monte Bianco",
     "Gran Paradiso"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "geo-04",
@@ -105,7 +108,8 @@
     "Lago di Garda",
     "Lago Trasimeno"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "geo-05",
@@ -118,7 +122,8 @@
     "America",
     "Oceania"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "geo-06",
@@ -131,7 +136,8 @@
     "20",
     "21"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "geo-07",
@@ -144,7 +150,8 @@
     "Vancouver",
     "Montréal"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "geo-08",
@@ -157,7 +164,8 @@
     "Pacifico",
     "Artico"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "sto-01",
@@ -170,7 +178,8 @@
     "1501",
     "1515"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "sto-02",
@@ -183,7 +192,8 @@
     "Nerone",
     "Traiano"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sto-03",
@@ -196,7 +206,8 @@
     "1991",
     "1993"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sto-04",
@@ -209,7 +220,8 @@
     "Giuseppe Garibaldi",
     "Vittorio Emanuele II"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "sto-05",
@@ -222,7 +234,8 @@
     "1948",
     "1950"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sto-06",
@@ -235,7 +248,8 @@
     "Ravenna",
     "Milano"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "sto-07",
@@ -248,7 +262,8 @@
     "Sally Ride",
     "Mae Jemison"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sto-08",
@@ -261,7 +276,8 @@
     "Inca",
     "Olmechi"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "sci-01",
@@ -274,7 +290,8 @@
     "Or",
     "Go"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sci-02",
@@ -287,7 +304,8 @@
     "Mercurio",
     "Terra"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "sci-03",
@@ -300,7 +318,8 @@
     "226",
     "256"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sci-04",
@@ -313,7 +332,8 @@
     "Anidride carbonica",
     "Argon"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sci-05",
@@ -326,7 +346,8 @@
     "Galileo Galilei",
     "Niels Bohr"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sci-06",
@@ -339,7 +360,8 @@
     "3.000 km/s",
     "3.000.000 km/s"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "sci-07",
@@ -352,7 +374,8 @@
     "O₂H",
     "HO₂"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "sci-08",
@@ -365,7 +388,8 @@
     "Nettuno",
     "Urano"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cin-01",
@@ -378,7 +402,8 @@
     "Paolo Sorrentino",
     "Giuseppe Tornatore"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cin-02",
@@ -391,7 +416,8 @@
     "Il divo",
     "È stata la mano di Dio"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "cin-03",
@@ -404,7 +430,8 @@
     "Frodo",
     "Legolas"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "cin-04",
@@ -417,7 +444,8 @@
     "Rex",
     "Slinky"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cin-05",
@@ -430,7 +458,8 @@
     "Twin Peaks",
     "Riverdale"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cin-06",
@@ -443,7 +472,8 @@
     "Hans Zimmer",
     "John Williams"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cin-07",
@@ -456,7 +486,8 @@
     "Dune",
     "Matrix"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cin-08",
@@ -469,7 +500,8 @@
     "Tom Cruise",
     "Johnny Depp"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mus-01",
@@ -482,7 +514,8 @@
     "6",
     "7"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mus-02",
@@ -495,7 +528,8 @@
     "Verdi",
     "Bach"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mus-03",
@@ -508,7 +542,8 @@
     "Queen",
     "Pink Floyd"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mus-04",
@@ -521,7 +556,8 @@
     "Bono",
     "Robert Plant"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mus-05",
@@ -534,7 +570,8 @@
     "Napoli",
     "Milano"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "mus-06",
@@ -547,7 +584,8 @@
     "8",
     "12"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mus-07",
@@ -560,7 +598,8 @@
     "Gioachino Rossini",
     "Vincenzo Bellini"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mus-08",
@@ -573,7 +612,8 @@
     "Sassofono",
     "Pianoforte"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "spo-01",
@@ -586,7 +626,8 @@
     "11",
     "12"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "spo-02",
@@ -599,7 +640,8 @@
     "4",
     "5"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "spo-03",
@@ -612,7 +654,8 @@
     "Automobilismo",
     "Motociclismo"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "spo-04",
@@ -625,7 +668,8 @@
     "3",
     "4"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "spo-05",
@@ -638,7 +682,8 @@
     "45 km",
     "50 km"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "spo-06",
@@ -651,7 +696,8 @@
     "Verde",
     "Bianca"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "spo-07",
@@ -664,7 +710,8 @@
     "6",
     "7"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "spo-08",
@@ -677,7 +724,8 @@
     "4",
     "5"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "art-01",
@@ -690,7 +738,8 @@
     "Leonardo da Vinci",
     "Caravaggio"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "art-02",
@@ -703,7 +752,8 @@
     "Giacomo Leopardi",
     "Giovanni Verga"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "art-03",
@@ -716,7 +766,8 @@
     "Venezia",
     "Milano"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "art-04",
@@ -729,7 +780,8 @@
     "Michelangelo",
     "Antonio Canova"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "art-05",
@@ -742,7 +794,8 @@
     "Alberto Moravia",
     "Elsa Morante"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "art-06",
@@ -755,7 +808,8 @@
     "Pablo Picasso",
     "Paul Cézanne"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "art-07",
@@ -768,7 +822,8 @@
     "4",
     "5"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "art-08",
@@ -781,7 +836,8 @@
     "Molière",
     "Goethe"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-01",
@@ -794,7 +850,8 @@
     "Peperone",
     "Zucchina"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-02",
@@ -807,7 +864,8 @@
     "Toscana",
     "Lombardia"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-03",
@@ -820,7 +878,8 @@
     "Parmigiano",
     "Pecorino"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-04",
@@ -833,7 +892,8 @@
     "Prosciutto cotto",
     "Salsiccia"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-05",
@@ -846,7 +906,8 @@
     "Corea",
     "Thailandia"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-06",
@@ -859,7 +920,8 @@
     "Carrubo",
     "Vaniglia"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-07",
@@ -872,7 +934,8 @@
     "Robiola",
     "Stracchino"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "cib-08",
@@ -885,7 +948,8 @@
     "Paprika",
     "Curry"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-01",
@@ -898,7 +962,8 @@
     "Siviglia",
     "Valencia"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-02",
@@ -911,7 +976,8 @@
     "Basilicata",
     "Campania"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-03",
@@ -924,7 +990,8 @@
     "Rodano",
     "Garonna"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-04",
@@ -937,7 +1004,8 @@
     "Russia",
     "Stati Uniti"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-05",
@@ -950,7 +1018,8 @@
     "1916",
     "1918"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-06",
@@ -963,7 +1032,8 @@
     "George Washington",
     "John Adams"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-07",
@@ -976,7 +1046,8 @@
     "1870",
     "1871"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-08",
@@ -989,7 +1060,8 @@
     "Hatshepsut",
     "Nefertari"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-09",
@@ -1002,7 +1074,8 @@
     "Polmoni",
     "Intestino"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-10",
@@ -1015,7 +1088,8 @@
     "9",
     "10"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-11",
@@ -1028,7 +1102,8 @@
     "Stagno",
     "Zinco"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-12",
@@ -1041,7 +1116,8 @@
     "Vitamina D",
     "Vitamina K"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-13",
@@ -1054,7 +1130,8 @@
     "Tarzan",
     "Il libro della giungla"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "mc2-14",
@@ -1067,7 +1144,8 @@
     "Steven Spielberg",
     "Christopher Nolan"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-15",
@@ -1080,7 +1158,8 @@
     "Merlino",
     "Doctor Strange"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "mc2-16",
@@ -1093,7 +1172,8 @@
     "Chris Hemsworth",
     "Mark Ruffalo"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-17",
@@ -1106,7 +1186,8 @@
     "Lucio Battisti",
     "Gianni Morandi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "mc2-18",
@@ -1119,7 +1200,8 @@
     "Pinguini Tattici Nucleari",
     "Negramaro"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-19",
@@ -1132,7 +1214,8 @@
     "4",
     "5"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-20",
@@ -1145,7 +1228,8 @@
     "Prince",
     "Freddie Mercury"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-21",
@@ -1158,7 +1242,8 @@
     "Milano",
     "Napoli"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-22",
@@ -1171,7 +1256,8 @@
     "7",
     "8"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-23",
@@ -1184,7 +1270,8 @@
     "Hockey",
     "Polo"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-24",
@@ -1197,7 +1284,8 @@
     "64",
     "81"
    ],
-   "correctIndex": 2
+   "correctIndex": 2,
+   "difficulty": 1
   },
   {
    "id": "mc2-25",
@@ -1210,7 +1298,8 @@
     "Victor Hugo",
     "Albert Camus"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-26",
@@ -1223,7 +1312,8 @@
     "Raffaello",
     "Giotto"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 1
   },
   {
    "id": "mc2-27",
@@ -1236,7 +1326,8 @@
     "Edmondo De Amicis",
     "Italo Calvino"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-28",
@@ -1249,7 +1340,8 @@
     "Madrid",
     "Bruxelles"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-29",
@@ -1262,7 +1354,8 @@
     "Palermo",
     "Bari"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-30",
@@ -1275,7 +1368,8 @@
     "Fagioli",
     "Piselli"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-31",
@@ -1288,7 +1382,8 @@
     "Grana",
     "Provolone"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "mc2-32",
@@ -1301,119 +1396,136 @@
     "Thailandia",
     "India"
    ],
-   "correctIndex": 1
+   "correctIndex": 1,
+   "difficulty": 1
   },
   {
    "id": "tf-01",
    "categoryId": "geografia",
    "type": "truefalse",
    "text": "L'Australia è sia un continente sia uno Stato.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-02",
    "categoryId": "geografia",
    "type": "truefalse",
    "text": "La capitale del Brasile è Rio de Janeiro.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-03",
    "categoryId": "storia",
    "type": "truefalse",
    "text": "La Seconda guerra mondiale è finita nel 1945.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-04",
    "categoryId": "storia",
    "type": "truefalse",
    "text": "Cristoforo Colombo era nato a Venezia.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-05",
    "categoryId": "scienza",
    "type": "truefalse",
    "text": "Il suono viaggia più veloce nell'acqua che nell'aria.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-06",
    "categoryId": "scienza",
    "type": "truefalse",
    "text": "I pipistrelli sono ciechi.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-07",
    "categoryId": "cinema",
    "type": "truefalse",
    "text": "Il film «Titanic» del 1997 ha vinto 11 premi Oscar.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-08",
    "categoryId": "cinema",
    "type": "truefalse",
    "text": "Il primo cartone animato con Topolino è uscito nel 1950.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-09",
    "categoryId": "musica",
    "type": "truefalse",
    "text": "I Beatles erano un gruppo di Liverpool.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-10",
    "categoryId": "musica",
    "type": "truefalse",
    "text": "Mozart ha composto «Le quattro stagioni».",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-11",
    "categoryId": "sport",
    "type": "truefalse",
    "text": "Le prime Olimpiadi moderne si sono svolte ad Atene nel 1896.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-12",
    "categoryId": "sport",
    "type": "truefalse",
    "text": "Nel calcio il portiere può prendere la palla con le mani in tutto il campo.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-13",
    "categoryId": "arte",
    "type": "truefalse",
    "text": "La Torre di Pisa è il campanile della cattedrale.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-14",
    "categoryId": "arte",
    "type": "truefalse",
    "text": "«I Malavoglia» è stato scritto da Alessandro Manzoni.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "tf-15",
    "categoryId": "cibo",
    "type": "truefalse",
    "text": "Il tiramisù tradizionale contiene il caffè.",
-   "answer": true
+   "answer": true,
+   "difficulty": 1
   },
   {
    "id": "tf-16",
    "categoryId": "cibo",
    "type": "truefalse",
    "text": "La ricetta tradizionale dell'amatriciana prevede la panna.",
-   "answer": false
+   "answer": false,
+   "difficulty": 1
   },
   {
    "id": "num-01",
@@ -1421,7 +1533,8 @@
    "type": "numeric",
    "text": "Quanti chilometri è lungo il fiume Po?",
    "answer": 652,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 1
   },
   {
    "id": "num-02",
@@ -1429,7 +1542,8 @@
    "type": "numeric",
    "text": "Quanti milioni di abitanti ha l'Italia, circa?",
    "answer": 59,
-   "unit": "milioni"
+   "unit": "milioni",
+   "difficulty": 1
   },
   {
    "id": "num-03",
@@ -1437,7 +1551,8 @@
    "type": "numeric",
    "text": "Quanti metri è alto il Monte Everest?",
    "answer": 8849,
-   "unit": "m"
+   "unit": "m",
+   "difficulty": 1
   },
   {
    "id": "num-04",
@@ -1445,7 +1560,8 @@
    "type": "numeric",
    "text": "Quanti chilometri misura la circonferenza della Terra all'equatore?",
    "answer": 40075,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 1
   },
   {
    "id": "num-05",
@@ -1453,7 +1569,8 @@
    "type": "numeric",
    "text": "Quanti metri è alta la Torre Eiffel, antenne comprese?",
    "answer": 330,
-   "unit": "m"
+   "unit": "m",
+   "difficulty": 1
   },
   {
    "id": "num-06",
@@ -1461,7 +1578,8 @@
    "type": "numeric",
    "text": "Quanti Stati fanno parte dell'Unione Europea?",
    "answer": 27,
-   "unit": "Stati"
+   "unit": "Stati",
+   "difficulty": 1
   },
   {
    "id": "num-07",
@@ -1469,7 +1587,8 @@
    "type": "numeric",
    "text": "In che anno è caduto il Muro di Berlino?",
    "answer": 1989,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-08",
@@ -1477,7 +1596,8 @@
    "type": "numeric",
    "text": "In che anno l'uomo è sbarcato per la prima volta sulla Luna?",
    "answer": 1969,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-09",
@@ -1485,7 +1605,8 @@
    "type": "numeric",
    "text": "In che anno è nato Leonardo da Vinci?",
    "answer": 1452,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-10",
@@ -1493,7 +1614,8 @@
    "type": "numeric",
    "text": "Quanti anni è durata la Guerra dei cent'anni?",
    "answer": 116,
-   "unit": "anni"
+   "unit": "anni",
+   "difficulty": 1
   },
   {
    "id": "num-11",
@@ -1501,7 +1623,8 @@
    "type": "numeric",
    "text": "In che anno è nato Dante Alighieri?",
    "answer": 1265,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-12",
@@ -1509,7 +1632,8 @@
    "type": "numeric",
    "text": "Quanti furono i re di Roma secondo la tradizione?",
    "answer": 7,
-   "unit": "re"
+   "unit": "re",
+   "difficulty": 1
   },
   {
    "id": "num-13",
@@ -1517,7 +1641,8 @@
    "type": "numeric",
    "text": "Quante ossa ha il corpo di un essere umano adulto?",
    "answer": 206,
-   "unit": "ossa"
+   "unit": "ossa",
+   "difficulty": 1
   },
   {
    "id": "num-14",
@@ -1525,7 +1650,8 @@
    "type": "numeric",
    "text": "Quanti chilometri separano in media la Terra dalla Luna?",
    "answer": 384400,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 1
   },
   {
    "id": "num-15",
@@ -1533,7 +1659,8 @@
    "type": "numeric",
    "text": "A che velocità viaggia il suono nell'aria (a 20 °C)?",
    "answer": 343,
-   "unit": "m/s"
+   "unit": "m/s",
+   "difficulty": 1
   },
   {
    "id": "num-16",
@@ -1541,7 +1668,8 @@
    "type": "numeric",
    "text": "Quanti cuori ha un polpo?",
    "answer": 3,
-   "unit": "cuori"
+   "unit": "cuori",
+   "difficulty": 1
   },
   {
    "id": "num-17",
@@ -1549,7 +1677,8 @@
    "type": "numeric",
    "text": "A quanti gradi Fahrenheit bolle l'acqua al livello del mare?",
    "answer": 212,
-   "unit": "°F"
+   "unit": "°F",
+   "difficulty": 1
   },
   {
    "id": "num-18",
@@ -1557,7 +1686,8 @@
    "type": "numeric",
    "text": "Quanti denti ha la dentatura completa di un adulto?",
    "answer": 32,
-   "unit": "denti"
+   "unit": "denti",
+   "difficulty": 1
   },
   {
    "id": "num-19",
@@ -1565,7 +1695,8 @@
    "type": "numeric",
    "text": "In che anno è uscito al cinema il primo film di «Star Wars»?",
    "answer": 1977,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-20",
@@ -1573,7 +1704,8 @@
    "type": "numeric",
    "text": "In che anno è uscito il film Disney «Il re leone»?",
    "answer": 1994,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-21",
@@ -1581,7 +1713,8 @@
    "type": "numeric",
    "text": "Quanti nani accompagnano Biancaneve?",
    "answer": 7,
-   "unit": "nani"
+   "unit": "nani",
+   "difficulty": 1
   },
   {
    "id": "num-22",
@@ -1589,7 +1722,8 @@
    "type": "numeric",
    "text": "Quanti tasti ha un pianoforte standard?",
    "answer": 88,
-   "unit": "tasti"
+   "unit": "tasti",
+   "difficulty": 1
   },
   {
    "id": "num-23",
@@ -1597,7 +1731,8 @@
    "type": "numeric",
    "text": "In che anno si è svolto il primo Festival di Sanremo?",
    "answer": 1951,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-24",
@@ -1605,7 +1740,8 @@
    "type": "numeric",
    "text": "Quanti chilometri è lunga una maratona?",
    "answer": 42.195,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 1
   },
   {
    "id": "num-25",
@@ -1613,7 +1749,8 @@
    "type": "numeric",
    "text": "Quanti giocatori ci sono in campo in tutto in una partita di rugby a 15?",
    "answer": 30,
-   "unit": "giocatori"
+   "unit": "giocatori",
+   "difficulty": 1
   },
   {
    "id": "num-26",
@@ -1621,7 +1758,8 @@
    "type": "numeric",
    "text": "In che anno l'Italia ha vinto il suo ultimo Mondiale di calcio maschile?",
    "answer": 2006,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-27",
@@ -1629,7 +1767,8 @@
    "type": "numeric",
    "text": "Quante carte ha un mazzo di carte francesi senza jolly?",
    "answer": 52,
-   "unit": "carte"
+   "unit": "carte",
+   "difficulty": 1
   },
   {
    "id": "num-28",
@@ -1637,7 +1776,8 @@
    "type": "numeric",
    "text": "In che anno è morto Michelangelo Buonarroti?",
    "answer": 1564,
-   "unit": ""
+   "unit": "",
+   "difficulty": 1
   },
   {
    "id": "num-29",
@@ -1645,7 +1785,8 @@
    "type": "numeric",
    "text": "Quante lettere ha l'alfabeto italiano?",
    "answer": 21,
-   "unit": "lettere"
+   "unit": "lettere",
+   "difficulty": 1
   },
   {
    "id": "num-30",
@@ -1653,7 +1794,8 @@
    "type": "numeric",
    "text": "Quanti litri di latte servono, circa, per fare 1 kg di Parmigiano Reggiano?",
    "answer": 16,
-   "unit": "litri"
+   "unit": "litri",
+   "difficulty": 1
   }
  ]
 }

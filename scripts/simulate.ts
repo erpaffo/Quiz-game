@@ -73,6 +73,8 @@ function log(s: RoomSnapshot) {
       key += `${d.game}|${st.step}|${q}`;
       counts[`${d.game}:${st.step}`] = (counts[`${d.game}:${st.step}`] ?? 0) + 1;
       if (st.step === 'boom') line = `   💥 BOOM! -${st.penalty}`;
+      if (st.step === 'sabotageResult') line = `   🔻 sabotaggio: ${st.events.map((e) => `${CARDS[e.card].icon}${e.result}`).join(' ') || 'nessuno'}`;
+      if (st.step === 'question' && st.question.audio) line = `   🎵 ${st.question.audio}`;
       if (st.step === 'transfers') line = `   🦝 ${st.transfers.map((t) => t.amount).join(', ')}`;
       if (st.step === 'numericReveal') line = `   📏 risposta ${st.answer}: ${st.guesses.map((g) => `${g.value}→${g.points}`).join(' ')}`;
       if (st.step === 'blitzEnd') line = `   🔥 ${st.progress.map((p) => `${p.correct}/${p.answered} x${p.multiplier} ${p.points}`).join(' | ')}`;
@@ -90,6 +92,7 @@ function log(s: RoomSnapshot) {
       break;
   }
   if (!seen.has(key)) {
+    if (process.env.DEBUG) console.log(`  · ${key} t+${s.endsAt ? s.endsAt - s.serverNow : "-"}ms`);
     seen.add(key);
     if (line) console.log(line);
   }
@@ -124,6 +127,15 @@ me.on('ROOM_STATE', async (s) => {
 
   if (d.phase !== 'PLAY') return;
   const st = d.state;
+  if (st.step === 'sabotage' && m.sabotage && m.sabotage.left > 0) {
+    // Il tester in fondo alla piramide sabota il primo in classifica.
+    const ks = `sab|${s.endsAt}|${m.sabotage.left}`;
+    if (done.has(ks)) return;
+    done.add(ks);
+    const leader = others.slice().sort((a, b) => b.pyramidStep - a.pyramidStep)[0];
+    await soft('SABOTAGE', me.emitWithAck('GAME_ACTION', { type: 'sabotage', card: m.sabotage.left > 1 ? 'GOO' : 'ICE', targetId: leader.id }));
+    return;
+  }
   const k = `${d.game}|${st.step}|${'question' in st ? st.question.id : ''}|${m.blitz?.question.id ?? ''}`;
   if (done.has(k)) return;
 

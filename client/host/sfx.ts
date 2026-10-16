@@ -1,7 +1,9 @@
 import type { PowerType } from '../../shared/types';
+import { audio } from './audio';
 
-// Effetti sonori sintetizzati al volo con WebAudio: nessun file audio da scaricare.
-// Il browser sblocca l'audio solo dopo un gesto dell'utente: chiamare unlock() su un click.
+// Effetti sonori: prima si prova il file indicato in /audio/audio.json (audio.ts), altrimenti
+// si sintetizza al volo con WebAudio. Così il gioco suona anche senza file e chiunque può
+// sostituire i suoni con i propri. Il browser sblocca l'audio solo dopo un gesto dell'utente.
 
 class Sfx {
   private ctx: AudioContext | null = null;
@@ -9,6 +11,7 @@ class Sfx {
   muted = false;
 
   unlock() {
+    audio.unlock();
     if (!this.ctx) {
       this.ctx = new AudioContext();
       this.master = this.ctx.createGain();
@@ -19,7 +22,8 @@ class Sfx {
   }
 
   private tone(freq: number, dur: number, opts: { type?: OscillatorType; gain?: number; at?: number; slide?: number } = {}) {
-    if (!this.ctx || !this.master || this.muted) return;
+    if (!this.ctx || !this.master || this.muted || audio.settings.muted) return;
+    this.master.gain.value = 0.5 * audio.settings.sfx;
     const t0 = this.ctx.currentTime + (opts.at ?? 0);
     const osc = this.ctx.createOscillator();
     const g = this.ctx.createGain();
@@ -35,7 +39,8 @@ class Sfx {
   }
 
   private noise(dur: number, opts: { freq?: number; type?: BiquadFilterType; gain?: number; at?: number } = {}) {
-    if (!this.ctx || !this.master || this.muted) return;
+    if (!this.ctx || !this.master || this.muted || audio.settings.muted) return;
+    this.master.gain.value = 0.5 * audio.settings.sfx;
     const t0 = this.ctx.currentTime + (opts.at ?? 0);
     const len = Math.floor(this.ctx.sampleRate * dur);
     const buf = this.ctx.createBuffer(1, len, this.ctx.sampleRate);
@@ -53,10 +58,12 @@ class Sfx {
   }
 
   tick() {
+    if (audio.sfx('tick')) return;
     this.tone(1200, 0.05, { type: 'sine', gain: 0.15 });
   }
   private lastPop = 0;
   pop() {
+    if (audio.sfx('pop')) return;
     // Con tanti giocatori le risposte arrivano a raffica: un solo "pop" ogni 120 ms.
     const now = performance.now();
     if (now - this.lastPop < 120) return;
@@ -64,12 +71,15 @@ class Sfx {
     this.tone(500, 0.12, { type: 'sine', gain: 0.25, slide: 1100 });
   }
   join() {
+    if (audio.sfx('join')) return;
     [523, 659, 784].forEach((f, i) => this.tone(f, 0.15, { type: 'triangle', at: i * 0.07, gain: 0.2 }));
   }
   whoosh() {
+    if (audio.sfx('whoosh')) return;
     this.noise(0.5, { freq: 2500, type: 'bandpass', gain: 0.25 });
   }
   hit(type: PowerType) {
+    if (audio.sfx(`hit_${type.toLowerCase()}`)) return;
     switch (type) {
       case 'ICE':
         this.noise(0.35, { freq: 5000, type: 'highpass', gain: 0.35 });
@@ -90,32 +100,57 @@ class Sfx {
     }
   }
   correct() {
+    if (audio.sfx('correct')) return;
     [523, 659, 784, 1047].forEach((f, i) => this.tone(f, 0.22, { type: 'triangle', at: i * 0.08, gain: 0.22 }));
   }
   wrong() {
+    if (audio.sfx('wrong')) return;
     this.tone(180, 0.5, { type: 'sawtooth', gain: 0.15, slide: 110 });
   }
   reveal() {
+    if (audio.sfx('reveal')) return;
     for (let i = 0; i < 10; i++) this.noise(0.06, { freq: 900, at: i * 0.06, gain: 0.25 - i * 0.015 });
   }
   coin() {
+    if (audio.sfx('coin')) return;
     [1319, 1760].forEach((f, i) => this.tone(f, 0.12, { type: 'square', at: i * 0.07, gain: 0.1 }));
   }
   shield() {
+    if (audio.sfx('shield')) return;
     this.tone(660, 0.25, { type: 'triangle', gain: 0.2, slide: 990 });
     this.noise(0.15, { freq: 6000, type: 'highpass', gain: 0.15 });
   }
   boom() {
+    if (audio.sfx('boom')) return;
     this.noise(1.2, { freq: 300, gain: 0.9 });
     this.tone(70, 0.9, { type: 'sine', slide: 30, gain: 0.5 });
   }
   spin(steps = 16) {
+    if (audio.sfx('spin')) return;
     for (let i = 0; i < steps; i++) this.tone(900, 0.03, { type: 'square', at: (i / steps) ** 2 * 3.1, gain: 0.08 });
   }
+  card() {
+    if (audio.sfx('card')) return;
+    this.noise(0.12, { freq: 3000, type: 'bandpass', gain: 0.2 });
+  }
+  climb() {
+    if (audio.sfx('climb')) return;
+    [523, 587, 659, 784].forEach((f, i) => this.tone(f, 0.08, { type: 'triangle', at: i * 0.06, gain: 0.15 }));
+  }
+  sabotage() {
+    if (audio.sfx('sabotage')) return;
+    [330, 262, 220].forEach((f, i) => this.tone(f, 0.18, { type: 'sawtooth', at: i * 0.12, gain: 0.12 }));
+  }
+  steal() {
+    if (audio.sfx('steal')) return;
+    [784, 659, 523].forEach((f, i) => this.tone(f, 0.08, { type: 'square', at: i * 0.06, gain: 0.1 }));
+  }
   whoosh2() {
+    if (audio.sfx('question')) return;
     this.tone(300, 0.3, { type: 'sine', slide: 900, gain: 0.15 });
   }
   fanfare() {
+    if (audio.sfx('fanfare')) return;
     const notes = [523, 523, 523, 659, 784, 659, 784, 1047];
     const times = [0, 0.15, 0.3, 0.45, 0.75, 0.95, 1.1, 1.3];
     notes.forEach((f, i) => this.tone(f, i === notes.length - 1 ? 0.9 : 0.18, { type: 'square', at: times[i], gain: 0.15 }));

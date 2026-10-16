@@ -61,14 +61,15 @@ export function applyGoo(area: HTMLElement, stack: number, onCleared: () => void
     ctx.globalCompositeOperation = 'destination-out';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
-    ctx.lineWidth = 46 * dpr;
+    // Pennello largo: due o tre passate col dito bastano per staccare uno strato.
+    ctx.lineWidth = 72 * dpr;
     ctx.beginPath();
     ctx.moveTo(last?.x ?? p.x, last?.y ?? p.y);
     ctx.lineTo(p.x, p.y);
     ctx.stroke();
     ctx.restore();
     last = p;
-    if (!checkTimer) checkTimer = window.setTimeout(check, 180);
+    if (!checkTimer) checkTimer = window.setTimeout(check, 120);
   };
 
   function check() {

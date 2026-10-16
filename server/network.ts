@@ -23,6 +23,8 @@ export function lanAddresses(): LanAddress[] {
       let score = 0;
       if (WIFI.test(name)) score += 3;
       if (VIRTUAL.test(name)) score -= 5;
+      // 192.168.137.x è la rete dell'hotspot di Windows (npm run bosco): è quella giusta per i telefoni.
+      if (n.address.startsWith('192.168.137.')) score += 5;
       if (n.address.startsWith('192.168.')) score += 2;
       else if (n.address.startsWith('10.') || /^172\.(1[6-9]|2\d|3[01])\./.test(n.address)) score += 1;
       out.push({ address: n.address, name, score });

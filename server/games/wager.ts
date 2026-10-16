@@ -46,7 +46,7 @@ export class WagerGame implements GameMode {
   }
 
   private question() {
-    const def = this.ctx.pool.drawMc(this.category?.id);
+    const def = this.ctx.pool.drawMc({ categoryId: this.category?.id });
     const pub = this.ctx.publicMc(def, this.n, CONFIG.WAGER_QUESTIONS);
     this.round = new McRound(def, pub, this.ctx.dur('QUESTION'));
     this.ctx.present(def);

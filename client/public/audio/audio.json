@@ -1,0 +1,186 @@
+{
+  "_istruzioni": "Per sostituire un suono metti il tuo file (mp3, ogg o wav) in questa cartella e scrivi qui il suo nome. Una lista con più file = il gioco ne sceglie uno a caso (utile per variare le battute). Se un file manca il gioco usa un suono sintetizzato.",
+  "volume": {
+    "music": 0.35,
+    "sfx": 0.8,
+    "voice": 1.0
+  },
+  "music": {
+    "lobby": "music/lobby.mp3",
+    "game": "music/game.mp3",
+    "tension": "music/tension.mp3",
+    "final": "music/final.mp3",
+    "victory": "music/victory.mp3"
+  },
+  "sfx": {
+    "tick": [
+      "sfx/tick.mp3"
+    ],
+    "pop": [
+      "sfx/pop.mp3"
+    ],
+    "join": [
+      "sfx/join.mp3"
+    ],
+    "whoosh": [
+      "sfx/whoosh.mp3"
+    ],
+    "question": [
+      "sfx/question.mp3"
+    ],
+    "reveal": [
+      "sfx/reveal.mp3"
+    ],
+    "correct": [
+      "sfx/correct.mp3"
+    ],
+    "wrong": [
+      "sfx/wrong.mp3"
+    ],
+    "coin": [
+      "sfx/coin.mp3"
+    ],
+    "shield": [
+      "sfx/shield.mp3"
+    ],
+    "boom": [
+      "sfx/boom.mp3"
+    ],
+    "spin": [
+      "sfx/spin.mp3"
+    ],
+    "fanfare": [
+      "sfx/fanfare.mp3"
+    ],
+    "hit_ice": [
+      "sfx/hit_ice.mp3"
+    ],
+    "hit_goo": [
+      "sfx/hit_goo.mp3"
+    ],
+    "hit_bomb": [
+      "sfx/hit_bomb.mp3"
+    ],
+    "hit_lock": [
+      "sfx/hit_lock.mp3"
+    ],
+    "card": [
+      "sfx/card.mp3"
+    ],
+    "climb": [
+      "sfx/climb.mp3"
+    ],
+    "sabotage": [
+      "sfx/sabotage.mp3"
+    ],
+    "steal": [
+      "sfx/steal.mp3"
+    ]
+  },
+  "voice": {
+    "welcome": [
+      "voice/welcome-1.mp3"
+    ],
+    "player_join": [
+      "voice/player_join-1.mp3",
+      "voice/player_join-2.mp3",
+      "voice/player_join-3.mp3"
+    ],
+    "start": [
+      "voice/start-1.mp3"
+    ],
+    "wheel": [
+      "voice/wheel-1.mp3",
+      "voice/wheel-2.mp3"
+    ],
+    "game_classic": [
+      "voice/game_classic-1.mp3"
+    ],
+    "game_fastest": [
+      "voice/game_fastest-1.mp3"
+    ],
+    "game_bomb": [
+      "voice/game_bomb-1.mp3"
+    ],
+    "game_steal": [
+      "voice/game_steal-1.mp3"
+    ],
+    "game_wager": [
+      "voice/game_wager-1.mp3"
+    ],
+    "game_blitz": [
+      "voice/game_blitz-1.mp3"
+    ],
+    "game_estimate": [
+      "voice/game_estimate-1.mp3"
+    ],
+    "game_clues": [
+      "voice/game_clues-1.mp3"
+    ],
+    "game_music": [
+      "voice/game_music-1.mp3"
+    ],
+    "cards": [
+      "voice/cards-1.mp3",
+      "voice/cards-2.mp3"
+    ],
+    "hit": [
+      "voice/hit-1.mp3",
+      "voice/hit-2.mp3",
+      "voice/hit-3.mp3"
+    ],
+    "blocked": [
+      "voice/blocked-1.mp3",
+      "voice/blocked-2.mp3"
+    ],
+    "question": [
+      "voice/question-1.mp3",
+      "voice/question-2.mp3",
+      "voice/question-3.mp3"
+    ],
+    "last_seconds": [
+      "voice/last_seconds-1.mp3"
+    ],
+    "correct": [
+      "voice/correct-1.mp3",
+      "voice/correct-2.mp3",
+      "voice/correct-3.mp3"
+    ],
+    "wrong": [
+      "voice/wrong-1.mp3",
+      "voice/wrong-2.mp3"
+    ],
+    "nobody": [
+      "voice/nobody-1.mp3"
+    ],
+    "leaderboard": [
+      "voice/leaderboard-1.mp3",
+      "voice/leaderboard-2.mp3"
+    ],
+    "boom": [
+      "voice/boom-1.mp3"
+    ],
+    "steal": [
+      "voice/steal-1.mp3"
+    ],
+    "joker": [
+      "voice/joker-1.mp3"
+    ],
+    "final": [
+      "voice/final-1.mp3"
+    ],
+    "sabotage": [
+      "voice/sabotage-1.mp3"
+    ],
+    "climb": [
+      "voice/climb-1.mp3",
+      "voice/climb-2.mp3"
+    ],
+    "winner": [
+      "voice/winner-1.mp3"
+    ],
+    "restart": [
+      "voice/restart-1.mp3"
+    ]
+  }
+}

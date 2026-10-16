@@ -5,7 +5,7 @@ export type DefenseType = 'SHIELD' | 'MIRROR' | 'CLOAK' | 'ANTIDOTE';
 export type BonusType = 'DOUBLE' | 'FIFTY';
 export type CardType = PowerType | DefenseType | BonusType;
 
-export type GameId = 'classic' | 'fastest' | 'bomb' | 'steal' | 'wager' | 'blitz' | 'estimate' | 'clues';
+export type GameId = 'classic' | 'fastest' | 'bomb' | 'steal' | 'wager' | 'blitz' | 'estimate' | 'clues' | 'music';
 export type GameLength = 'short' | 'normal' | 'long';
 
 export type Phase =
@@ -63,6 +63,8 @@ export interface QuestionPublic {
   image?: string;
   /** Risposte illustrate: un'immagine per ogni opzione (stesso ordine di `options`). */
   optionImages?: string[];
+  /** Brano da ascoltare (Indovina il brano): lo suona lo schermo principale. */
+  audio?: string;
   /** Indizio dopo Indizio: ora di inizio (server) e ms per parola svelata. */
   clue?: { startedAt: number; wordMs: number };
 }
@@ -153,7 +155,10 @@ export type PlayState =
   | { step: 'numeric'; question: NumericPublic }
   | { step: 'numericReveal'; question: NumericPublic; answer: number; guesses: NumericGuess[] }
   | { step: 'blitz'; progress: BlitzProgress[] }
-  | { step: 'blitzEnd'; progress: BlitzProgress[] };
+  | { step: 'blitzEnd'; progress: BlitzProgress[] }
+  /** Piramide: gli ultimi in classifica scelgono chi sabotare prima della domanda. */
+  | { step: 'sabotage'; saboteurs: { playerId: string; left: number }[] }
+  | { step: 'sabotageResult'; events: CardEvent[] };
 
 export interface LobbySettings {
   length: GameLength;
@@ -203,6 +208,8 @@ export interface PrivateState {
   choose: { kind: 'pass' | 'steal'; amount: number; done: boolean } | null;
   blocked: boolean;
   blitz: { question: QuestionPublic; streak: number; multiplier: number; points: number; feedback: 'correct' | 'wrong' | null } | null;
+  /** Piramide: attacchi di sabotaggio ancora da lanciare. */
+  sabotage: { left: number } | null;
 }
 
 export interface RoomSnapshot {
@@ -223,7 +230,8 @@ export type GameAction =
   | { type: 'answer'; questionId: string; optionIndex: number }
   | { type: 'numeric'; questionId: string; value: number }
   | { type: 'bet'; index: number }
-  | { type: 'target'; targetId: string };
+  | { type: 'target'; targetId: string }
+  | { type: 'sabotage'; card: PowerType | null; targetId: string | null };
 
 /** Domanda inviata dal telefono durante la lobby. */
 export type PhoneQuestion =

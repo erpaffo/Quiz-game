@@ -22,6 +22,12 @@ export const CONFIG = {
   /** Serie di risposte giuste che fa guadagnare una carta extra. */
   STREAK_FOR_CARD: 3,
   ANTIDOTE_POINTS: 150,
+  /** Doppio: il bonus aggiunto non supera mai questa cifra (niente puntate quadruplicate). */
+  DOUBLE_MAX_BONUS: 500,
+  MUSIC_QUESTIONS: 4,
+  /** Piramide: attacchi di sabotaggio per l'ultimo e il penultimo in classifica. */
+  SABOTAGE_LAST: 2,
+  SABOTAGE_SECOND_LAST: 1,
 
   SCORE_MIN_CORRECT: 500,
   SCORE_MAX_CORRECT: 1000,
@@ -81,6 +87,9 @@ export const CONFIG = {
     GAME_RESULT: 5_500,
     PYRAMID_INTRO: 8_500,
     PYRAMID_QUESTION: 10_000,
+    SABOTAGE: 8_000,
+    SABOTAGE_RESULT: 2_800,
+    MUSIC_QUESTION: 15_000,
     PYRAMID_REVEAL: 3_800
   }
 } as const;

@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sapere è Potere · Schermo principale</title>
+    <title>%BRAND% · Schermo principale</title>
     <link rel="icon" href="data:," />
   </head>
   <body class="host">
     <div id="stage"></div>
 
     <header id="topbar">
-      <div class="logo">Sapere <span>è</span> Potere</div>
+      <div class="logo">%BRAND_LOGO%</div>
       <div id="phase-label" class="phase-label"></div>
       <div class="top-right">
         <span class="chip">Stanza <b id="code-chip">····</b></span>
+        <button id="vol-btn" class="vol-btn" title="Audio (M = muto)">🔊</button>
         <span id="timer-text" class="timer-text"></span>
       </div>
       <div class="timer-track"><div id="timer-bar"></div></div>
@@ -21,14 +22,54 @@
 
     <main id="panel"></main>
 
+    <div id="vol-panel" class="vol-panel" hidden>
+      <b>🔊 Audio</b>
+      <label>Musica <input type="range" min="0" max="1" step="0.05" data-vol="music"></label>
+      <label>Effetti <input type="range" min="0" max="1" step="0.05" data-vol="sfx"></label>
+      <label>Voce <input type="range" min="0" max="1" step="0.05" data-vol="voice"></label>
+      <div class="row-btns">
+        <button class="btn secondary" data-vol-act="mute">🔇 Muto</button>
+        <button class="btn secondary" data-vol-act="reset">↺ Predefiniti</button>
+      </div>
+      <small class="muted">I suoni sono in <code>audio/audio.json</code>: puoi sostituirli con i tuoi.</small>
+    </div>
+
     <div id="splash">
       <div class="splash-card pop">
-        <div class="splash-logo">Sapere <span>è</span> Potere</div>
+        <div class="splash-logo">%BRAND_LOGO%</div>
         <p class="muted">Il party quiz dove la conoscenza è un'arma. Da 2 a 6 giocatori, ognuno col proprio smartphone.</p>
         <button id="splash-btn" class="btn">▶ Apri una nuova stanza</button>
         <button id="new-room" class="link-btn">oppure crea una stanza nuova</button>
         <a class="btn secondary" href="./editor.html" target="_blank">✏️ Laboratorio domande</a>
+        <button id="guide-btn" class="link-btn">🌲 Come giocare senza internet</button>
         <p class="muted small">Consiglio: metti il browser a schermo intero (F11) e alza il volume.</p>
+      </div>
+    </div>
+
+    <div id="offline-guide" hidden>
+      <div class="guide-card pop">
+        <h2>🌲 Giocare senza internet</h2>
+        <p class="muted">Non servono internet né un router: basta una rete Wi-Fi creata dal PC o da un telefono, anche in mezzo a un bosco.</p>
+        <h3>Prima di partire (con internet)</h3>
+        <ol>
+          <li>Installa e compila il gioco una volta: <code>npm install</code> e <code>npm run build</code>.</li>
+          <li>Prova <code>npm run bosco</code> a casa: Windows chiederà il permesso del firewall, rispondi <b>Consenti</b> anche per le reti pubbliche.</li>
+        </ol>
+        <h3>A) L'hotspot lo crea il PC (consigliato)</h3>
+        <ol>
+          <li>Sul portatile apri il terminale nella cartella del gioco e scrivi <code>npm run bosco</code>.</li>
+          <li>Si accende l'hotspot di Windows e si apre questa pagina: sulla TV compaiono due QR.</li>
+          <li>Gli amici inquadrano il <b>QR 1</b> per collegarsi alla rete, poi il <b>QR 2</b> per entrare in partita.</li>
+          <li>Se il telefono avvisa «rete senza internet», scegli <b>Resta connesso</b>.</li>
+        </ol>
+        <h3>B) L'hotspot lo crea un telefono</h3>
+        <ol>
+          <li>Su un telefono attiva l'<b>hotspot</b> (vanno bene anche i dati spenti).</li>
+          <li>Collega il PC a quella rete e avvia il gioco con <code>npm start</code>.</li>
+          <li>Nella lobby premi «🌲 Senza internet? Mostra il QR dell'hotspot» e inserisci nome e password della rete: comparirà il QR per gli altri.</li>
+        </ol>
+        <p class="muted small">Il PC e il telefono che fa da hotspot consumano batteria: porta un caricatore o un power bank.</p>
+        <button class="btn" data-close>Ho capito</button>
       </div>
     </div>
 

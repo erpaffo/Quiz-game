@@ -9,10 +9,20 @@ export interface PackCategory {
 }
 
 /** `image`: immagine mostrata con la domanda (percorso locale, es. /flags/it.svg, o URL). */
+/** Campi comuni facoltativi: immagine, audio (Indovina il brano), difficoltà 1 facile · 2 media · 3 difficile. */
+interface QuestionExtras {
+  image?: string;
+  audio?: string;
+  difficulty?: Difficulty;
+}
+export type Difficulty = 1 | 2 | 3;
+
 export type PackQuestion =
-  | { id: string; categoryId: string; type: 'multiple'; text: string; options: string[]; correctIndex: number; image?: string; optionImages?: string[] }
-  | { id: string; categoryId: string; type: 'truefalse'; text: string; answer: boolean; image?: string }
-  | { id: string; categoryId: string; type: 'numeric'; text: string; answer: number; unit: string; image?: string };
+  | ({ id: string; categoryId: string; type: 'multiple'; text: string; options: string[]; correctIndex: number; optionImages?: string[] } & QuestionExtras)
+  | ({ id: string; categoryId: string; type: 'truefalse'; text: string; answer: boolean } & QuestionExtras)
+  | ({ id: string; categoryId: string; type: 'numeric'; text: string; answer: number; unit: string } & QuestionExtras);
+
+export const DIFFICULTY_LABEL: Record<Difficulty, string> = { 1: 'Facile', 2: 'Media', 3: 'Difficile' };
 
 export interface Pack {
   id: string;
@@ -95,7 +105,15 @@ export function validatePack(input: unknown): Pack {
     if (!catIds.has(categoryId)) throw new Error(`${label}: categoria inesistente`);
     const text = str(q?.text, PACK_LIMITS.TEXT, label);
     const img = image(q?.image, label);
-    const withImage = <T extends object>(o: T) => (img ? { ...o, image: img } : o);
+    const audio = image(q?.audio, `${label}, audio`);
+    const diff = Number(q?.difficulty);
+    if (q?.difficulty !== undefined && q?.difficulty !== null && ![1, 2, 3].includes(diff)) throw new Error(`${label}: difficoltà non valida (1, 2 o 3)`);
+    const withImage = <T extends object>(o: T) => ({
+      ...o,
+      ...(img ? { image: img } : {}),
+      ...(audio ? { audio } : {}),
+      ...([1, 2, 3].includes(diff) ? { difficulty: diff as Difficulty } : {})
+    });
     switch (q?.type) {
       case 'multiple': {
         if (!Array.isArray(q.options)) throw new Error(`${label}: risposte mancanti`);

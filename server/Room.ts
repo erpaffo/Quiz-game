@@ -13,6 +13,7 @@ import type {
   PhaseData,
   PlayerPublic,
   PlayState,
+  PowerType,
   PrivateState,
   RoomSnapshot
 } from '../shared/types';
@@ -188,12 +189,14 @@ export class Room {
         return applied;
       },
       boost: (p, base) => {
+        // Doppio: raddoppia, ma il bonus non supera DOUBLE_MAX_BONUS (es. niente Scommesse quadruplicate).
         if (base > 0 && p.doubleArmed) {
           p.doubleArmed = false;
-          return base * 2;
+          return base + Math.min(base, CONFIG.DOUBLE_MAX_BONUS);
         }
         return base;
       },
+      hit: (target, type, from) => room.hit(target, type, from),
       award: (p, base) => room.ctx.addScore(p, room.ctx.boost(p, base)),
       recordAnswer: (p, correct) => {
         if (!correct) {
@@ -215,6 +218,7 @@ export class Room {
         total,
         ...(def.image ? { image: def.image } : {}),
         ...(def.optionImages ? { optionImages: def.optionImages } : {}),
+        ...(def.audio ? { audio: def.audio } : {}),
         ...(clue ? { clue } : {})
       }),
       present: (def, to) => {
@@ -360,7 +364,8 @@ export class Room {
     if (this.players.size < 2) return this.beginGame(id);
     for (const p of this.players.values()) {
       const extra = Math.min(1, p.bonusPlays);
-      p.hand = dealHand(CONFIG.HAND_SIZE + extra);
+      // Bilanciamento: alcune carte non si pescano in certi giochi (shared/games.ts → cards.excluded).
+      p.hand = dealHand(CONFIG.HAND_SIZE + extra, GAMES[id].cards.excluded);
       p.playsLeft = 1 + extra;
       p.played = [];
       p.bonusPlays = 0;
@@ -378,25 +383,29 @@ export class Room {
     for (const play of plays) {
       const p = this.players.get(play.from)!;
       if (play.card === 'DOUBLE') p.doubleArmed = true;
-      if (play.card === 'FIFTY') p.fiftyLeft = 2;
+      if (play.card === 'FIFTY') p.fiftyLeft = GAMES[id].cards.fiftyUses;
     }
     for (const hit of res.hits) {
       const t = this.players.get(hit.to);
-      if (!t) continue;
-      const existing = t.pendingEffects.find((e) => e.type === hit.type);
-      if (existing) {
-        existing.stack++;
-        existing.from.push(hit.from);
-      } else {
-        t.pendingEffects.push({ type: hit.type, stack: 1, from: [hit.from] });
-      }
-      t.activeEffects.add(hit.type);
+      if (t) this.hit(t, hit.type, hit.from);
     }
     for (const [pid, count] of res.absorbed) this.ctx.addScore(this.players.get(pid)!, CONFIG.ANTIDOTE_POINTS * count);
 
     const attacks = res.events.filter((e) => e.result !== 'self').length;
     const duration = Math.min(this.dur('CARD_RESOLVE_MAX'), this.dur('CARD_RESOLVE_BASE') + attacks * this.dur('CARD_RESOLVE_PER_ATTACK'));
     this.setPhase({ phase: 'CARD_RESOLVE', game: id, events: res.events }, duration, () => this.beginGame(id));
+  }
+
+  /** Un attacco va a segno: l'effetto si applica alla prossima domanda del bersaglio (e si somma). */
+  hit(t: Player, type: PowerType, from: string) {
+    const existing = t.pendingEffects.find((e) => e.type === type);
+    if (existing) {
+      existing.stack++;
+      existing.from.push(from);
+    } else {
+      t.pendingEffects.push({ type, stack: 1, from: [from] });
+    }
+    t.activeEffects.add(type);
   }
 
   private beginGame(id: GameId) {
@@ -691,7 +700,8 @@ export class Room {
         betOptions: [],
         choose: null,
         blocked: false,
-        blitz: null
+        blitz: null,
+        sabotage: null
       };
       if (this.phase === 'PLAY' && this.game) Object.assign(me, this.game.privateFor(p));
       this.io.to(p.socketId).emit('ROOM_STATE', { ...base, me });

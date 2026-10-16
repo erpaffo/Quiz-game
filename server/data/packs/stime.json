@@ -43,7 +43,8 @@
    "type": "numeric",
    "text": "Quanti Stati formano gli Stati Uniti d'America?",
    "answer": 50,
-   "unit": "Stati"
+   "unit": "Stati",
+   "difficulty": 2
   },
   {
    "id": "stime-n002",
@@ -51,7 +52,8 @@
    "type": "numeric",
    "text": "Quanti Stati membri ha l'ONU?",
    "answer": 193,
-   "unit": "Stati"
+   "unit": "Stati",
+   "difficulty": 2
   },
   {
    "id": "stime-n003",
@@ -59,7 +61,8 @@
    "type": "numeric",
    "text": "Quanti milioni di abitanti ha la Cina, circa?",
    "answer": 1410,
-   "unit": "milioni"
+   "unit": "milioni",
+   "difficulty": 2
   },
   {
    "id": "stime-n004",
@@ -67,7 +70,8 @@
    "type": "numeric",
    "text": "Quanti km² misura la superficie dell'Italia, circa?",
    "answer": 302000,
-   "unit": "km²"
+   "unit": "km²",
+   "difficulty": 2
   },
   {
    "id": "stime-n005",
@@ -75,7 +79,8 @@
    "type": "numeric",
    "text": "Quanti fusi orari attraversa la Russia?",
    "answer": 11,
-   "unit": "fusi"
+   "unit": "fusi",
+   "difficulty": 2
   },
   {
    "id": "stime-n006",
@@ -83,7 +88,8 @@
    "type": "numeric",
    "text": "Con quanti Stati confina l'Italia?",
    "answer": 6,
-   "unit": "Stati"
+   "unit": "Stati",
+   "difficulty": 2
   },
   {
    "id": "stime-n007",
@@ -91,7 +97,8 @@
    "type": "numeric",
    "text": "Quanti km è lunga l'autostrada A1 Milano-Napoli, circa?",
    "answer": 760,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 2
   },
   {
    "id": "stime-n008",
@@ -99,7 +106,8 @@
    "type": "numeric",
    "text": "Quanti metri è profonda la Fossa delle Marianne, circa?",
    "answer": 10900,
-   "unit": "m"
+   "unit": "m",
+   "difficulty": 2
   },
   {
    "id": "stime-n009",
@@ -107,7 +115,8 @@
    "type": "numeric",
    "text": "Quanti milioni di abitanti ha il comune di Roma, circa?",
    "answer": 2.75,
-   "unit": "milioni"
+   "unit": "milioni",
+   "difficulty": 2
   },
   {
    "id": "stime-n010",
@@ -115,7 +124,8 @@
    "type": "numeric",
    "text": "Quanti km separano Milano e Roma in auto, circa?",
    "answer": 570,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 2
   },
   {
    "id": "stime-n011",
@@ -123,7 +133,8 @@
    "type": "numeric",
    "text": "In che anno fu fondata Roma secondo la tradizione?",
    "answer": 753,
-   "unit": "a.C."
+   "unit": "a.C.",
+   "difficulty": 2
   },
   {
    "id": "stime-n012",
@@ -131,7 +142,8 @@
    "type": "numeric",
    "text": "In che anno Gutenberg stampò la sua celebre Bibbia, circa?",
    "answer": 1455,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n013",
@@ -139,7 +151,8 @@
    "type": "numeric",
    "text": "In che anno cadde l'Impero romano d'Occidente?",
    "answer": 476,
-   "unit": "d.C."
+   "unit": "d.C.",
+   "difficulty": 2
   },
   {
    "id": "stime-n014",
@@ -147,7 +160,8 @@
    "type": "numeric",
    "text": "In che anno finì la Seconda guerra mondiale?",
    "answer": 1945,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n015",
@@ -155,7 +169,8 @@
    "type": "numeric",
    "text": "In che anno Galileo pubblicò il «Dialogo sopra i due massimi sistemi»?",
    "answer": 1632,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n016",
@@ -163,7 +178,8 @@
    "type": "numeric",
    "text": "In che anno fu firmato il Trattato di Maastricht?",
    "answer": 1992,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n017",
@@ -171,7 +187,8 @@
    "type": "numeric",
    "text": "In che anno l'euro è entrato in circolazione in monete e banconote?",
    "answer": 2002,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n018",
@@ -179,7 +196,8 @@
    "type": "numeric",
    "text": "Per quanti anni ha regnato la regina Elisabetta II?",
    "answer": 70,
-   "unit": "anni"
+   "unit": "anni",
+   "difficulty": 2
   },
   {
    "id": "stime-n019",
@@ -187,7 +205,8 @@
    "type": "numeric",
    "text": "In che anno fu ucciso Giulio Cesare?",
    "answer": 44,
-   "unit": "a.C."
+   "unit": "a.C.",
+   "difficulty": 2
   },
   {
    "id": "stime-n020",
@@ -195,7 +214,8 @@
    "type": "numeric",
    "text": "In che anno è stata proclamata la Repubblica Italiana?",
    "answer": 1946,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n021",
@@ -203,7 +223,8 @@
    "type": "numeric",
    "text": "Quanti km percorre la luce in un secondo, circa?",
    "answer": 299792,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 2
   },
   {
    "id": "stime-n022",
@@ -211,7 +232,8 @@
    "type": "numeric",
    "text": "Quanti elementi conta la tavola periodica?",
    "answer": 118,
-   "unit": "elementi"
+   "unit": "elementi",
+   "difficulty": 2
   },
   {
    "id": "stime-n023",
@@ -219,7 +241,8 @@
    "type": "numeric",
    "text": "Qual è la temperatura corporea normale di una persona, circa?",
    "answer": 37,
-   "unit": "°C"
+   "unit": "°C",
+   "difficulty": 2
   },
   {
    "id": "stime-n024",
@@ -227,7 +250,8 @@
    "type": "numeric",
    "text": "A quanti gradi Celsius corrisponde lo zero assoluto?",
    "answer": -273.15,
-   "unit": "°C"
+   "unit": "°C",
+   "difficulty": 2
   },
   {
    "id": "stime-n025",
@@ -235,7 +259,8 @@
    "type": "numeric",
    "text": "Quanti anni luce dista Proxima Centauri dalla Terra?",
    "answer": 4.24,
-   "unit": "anni luce"
+   "unit": "anni luce",
+   "difficulty": 2
   },
   {
    "id": "stime-n026",
@@ -243,7 +268,8 @@
    "type": "numeric",
    "text": "Quanti km misura il diametro della Terra, circa?",
    "answer": 12742,
-   "unit": "km"
+   "unit": "km",
+   "difficulty": 2
   },
   {
    "id": "stime-n027",
@@ -251,7 +277,8 @@
    "type": "numeric",
    "text": "Quante ossa ci sono in una mano umana?",
    "answer": 27,
-   "unit": "ossa"
+   "unit": "ossa",
+   "difficulty": 2
   },
   {
    "id": "stime-n028",
@@ -259,7 +286,8 @@
    "type": "numeric",
    "text": "Quanti giorni terrestri dura un anno su Marte?",
    "answer": 687,
-   "unit": "giorni"
+   "unit": "giorni",
+   "difficulty": 2
   },
   {
    "id": "stime-n029",
@@ -267,7 +295,8 @@
    "type": "numeric",
    "text": "Quanti milioni di km separano la Terra dal Sole, in media?",
    "answer": 150,
-   "unit": "milioni di km"
+   "unit": "milioni di km",
+   "difficulty": 2
   },
   {
    "id": "stime-n030",
@@ -275,7 +304,8 @@
    "type": "numeric",
    "text": "A quanti metri sotto il livello del mare si trova la riva del Mar Morto, circa?",
    "answer": 430,
-   "unit": "m"
+   "unit": "m",
+   "difficulty": 2
   },
   {
    "id": "stime-n031",
@@ -283,7 +313,8 @@
    "type": "numeric",
    "text": "Quanti metri è lunga una piscina olimpionica?",
    "answer": 50,
-   "unit": "m"
+   "unit": "m",
+   "difficulty": 2
   },
   {
    "id": "stime-n032",
@@ -291,7 +322,8 @@
    "type": "numeric",
    "text": "Quanti titoli mondiali costruttori di Formula 1 ha vinto la Ferrari?",
    "answer": 16,
-   "unit": "titoli"
+   "unit": "titoli",
+   "difficulty": 2
   },
   {
    "id": "stime-n033",
@@ -299,7 +331,8 @@
    "type": "numeric",
    "text": "Quanti titoli mondiali ha vinto Valentino Rossi, in tutte le classi?",
    "answer": 9,
-   "unit": "titoli"
+   "unit": "titoli",
+   "difficulty": 2
   },
   {
    "id": "stime-n034",
@@ -307,7 +340,8 @@
    "type": "numeric",
    "text": "In che anno è uscito al cinema il primo film di Harry Potter?",
    "answer": 2001,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n035",
@@ -315,7 +349,8 @@
    "type": "numeric",
    "text": "In che anno è uscito il primo cartone animato sonoro di Topolino?",
    "answer": 1928,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n036",
@@ -323,7 +358,8 @@
    "type": "numeric",
    "text": "Quanti minuti dura un quarto di una partita NBA?",
    "answer": 12,
-   "unit": "minuti"
+   "unit": "minuti",
+   "difficulty": 2
   },
   {
    "id": "stime-n037",
@@ -331,7 +367,8 @@
    "type": "numeric",
    "text": "Quante buche ha un percorso di golf regolamentare?",
    "answer": 18,
-   "unit": "buche"
+   "unit": "buche",
+   "difficulty": 2
   },
   {
    "id": "stime-n038",
@@ -339,7 +376,8 @@
    "type": "numeric",
    "text": "Quanti metri è lungo un campo da tennis?",
    "answer": 23.77,
-   "unit": "m"
+   "unit": "m",
+   "difficulty": 2
   },
   {
    "id": "stime-n039",
@@ -347,7 +385,8 @@
    "type": "numeric",
    "text": "Quanti premi Oscar ha vinto «Il Signore degli Anelli - Il ritorno del re»?",
    "answer": 11,
-   "unit": "Oscar"
+   "unit": "Oscar",
+   "difficulty": 2
   },
   {
    "id": "stime-n040",
@@ -355,7 +394,8 @@
    "type": "numeric",
    "text": "In che anno si è giocato il primo Mondiale di calcio?",
    "answer": 1930,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n041",
@@ -363,7 +403,8 @@
    "type": "numeric",
    "text": "Quante caselle ci sono sul tabellone del Monopoly?",
    "answer": 40,
-   "unit": "caselle"
+   "unit": "caselle",
+   "difficulty": 2
   },
   {
    "id": "stime-n042",
@@ -371,7 +412,8 @@
    "type": "numeric",
    "text": "In che anno si sono formati i Beatles con questo nome?",
    "answer": 1960,
-   "unit": ""
+   "unit": "",
+   "difficulty": 2
   },
   {
    "id": "stime-n043",
@@ -379,7 +421,8 @@
    "type": "numeric",
    "text": "Quanti grammi pesa, circa, un uovo di gallina medio?",
    "answer": 60,
-   "unit": "g"
+   "unit": "g",
+   "difficulty": 2
   },
   {
    "id": "stime-n044",
@@ -387,7 +430,8 @@
    "type": "numeric",
    "text": "Quanti centimetri è alto un foglio A4?",
    "answer": 29.7,
-   "unit": "cm"
+   "unit": "cm",
+   "difficulty": 2
   },
   {
    "id": "stime-n045",
@@ -395,7 +439,8 @@
    "type": "numeric",
    "text": "Quanti secondi ci sono in un'ora?",
    "answer": 3600,
-   "unit": "secondi"
+   "unit": "secondi",
+   "difficulty": 2
   },
   {
    "id": "stime-n046",
@@ -403,7 +448,8 @@
    "type": "numeric",
    "text": "Quanti giorni ha un anno bisestile?",
    "answer": 366,
-   "unit": "giorni"
+   "unit": "giorni",
+   "difficulty": 2
   },
   {
    "id": "stime-n047",
@@ -411,7 +457,8 @@
    "type": "numeric",
    "text": "Quante ore di differenza ci sono di solito tra Roma e New York?",
    "answer": 6,
-   "unit": "ore"
+   "unit": "ore",
+   "difficulty": 2
   },
   {
    "id": "stime-n048",
@@ -419,7 +466,8 @@
    "type": "numeric",
    "text": "Quanti millimetri misura il diametro di una moneta da 2 euro?",
    "answer": 25.75,
-   "unit": "mm"
+   "unit": "mm",
+   "difficulty": 2
   },
   {
    "id": "stime-n049",
@@ -427,7 +475,8 @@
    "type": "numeric",
    "text": "Quante calorie ha, circa, un cucchiaio (10 g) di olio d'oliva?",
    "answer": 90,
-   "unit": "kcal"
+   "unit": "kcal",
+   "difficulty": 2
   },
   {
    "id": "stime-n050",
@@ -435,7 +484,8 @@
    "type": "numeric",
    "text": "Quante tessere ci sono in un domino classico?",
    "answer": 28,
-   "unit": "tessere"
+   "unit": "tessere",
+   "difficulty": 2
   },
   {
    "id": "stime-n051",
@@ -443,7 +493,8 @@
    "type": "numeric",
    "text": "Quanti pezzi ci sono in tutto sulla scacchiera a inizio partita?",
    "answer": 32,
-   "unit": "pezzi"
+   "unit": "pezzi",
+   "difficulty": 2
   },
   {
    "id": "stime-n052",
@@ -451,7 +502,8 @@
    "type": "numeric",
    "text": "Quante settimane ci sono in un anno, circa?",
    "answer": 52,
-   "unit": "settimane"
+   "unit": "settimane",
+   "difficulty": 2
   }
  ]
 }

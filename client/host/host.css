@@ -229,3 +229,36 @@ body.host { overflow: hidden; }
 .plabel.compact { padding: 2px 9px 4px; min-width: 70px; border-width: 2px; }
 .plabel.compact .pl-name, .plabel.compact .pl-score { font-size: 0.85rem; }
 .plabel.compact .pl-float { font-size: 1.3rem; }
+
+/* ---------------------------------------------------------- gioco senza internet: QR della rete + QR del gioco */
+.join-steps { display: grid; grid-template-columns: auto auto auto; gap: 18px; align-items: start; }
+.join-step { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; max-width: 200px; }
+.join-step.code { align-self: center; }
+.step-n { position: absolute; top: -10px; left: -10px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: #14063a; font-weight: 800; font-size: 1.2rem; z-index: 1; }
+.qr.small { width: 150px; height: 150px; }
+.wifi-name { color: var(--cyan); font-size: 1.15rem; word-break: break-all; }
+.join-url.small { font-size: 0.95rem; }
+.wifi-form { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.wifi-form input { font: inherit; font-weight: 700; padding: 6px 10px; border-radius: 10px; border: 2px solid var(--line); background: rgba(0, 0, 0, 0.3); color: var(--ink); }
+#offline-guide { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(18, 6, 46, 0.85); z-index: 25; }
+#offline-guide[hidden] { display: none; }
+.guide-card { width: min(760px, 94vw); max-height: 90vh; overflow-y: auto; padding: 26px 30px; border-radius: 24px; background: #2b0f6b; border: 2px solid var(--line); text-align: left; }
+.guide-card h2 { margin: 0 0 6px; color: var(--gold); }
+.guide-card h3 { margin: 16px 0 4px; }
+.guide-card ol { margin: 0; padding-left: 22px; line-height: 1.5; }
+.guide-card code { background: rgba(0, 0, 0, 0.35); padding: 1px 6px; border-radius: 6px; }
+
+/* ---------------------------------------------------------- bilanciamento, gioco musicale, sabotaggio, volume */
+.card-note { font-size: 1.05rem; padding: 4px 14px; border-radius: 999px; background: rgba(255, 214, 10, 0.12); }
+.listening { display: flex; align-items: center; justify-content: center; gap: 12px; margin: -6px 0 12px; font-size: 1.6rem; font-weight: 800; color: var(--gold); }
+.eq { display: inline-flex; align-items: flex-end; gap: 4px; height: 34px; }
+.eq i { width: 7px; border-radius: 3px; background: var(--gold); animation: eq 0.9s ease-in-out infinite; }
+.eq i:nth-child(2) { animation-delay: 0.15s; } .eq i:nth-child(3) { animation-delay: 0.3s; } .eq i:nth-child(4) { animation-delay: 0.45s; } .eq i:nth-child(5) { animation-delay: 0.6s; }
+@keyframes eq { 0%, 100% { height: 20%; } 50% { height: 100%; } }
+.mg-badge.sabotage { background: var(--pink); color: #fff; }
+.vol-btn { min-width: 46px; height: 46px; border-radius: 50%; background: var(--card-strong); font-size: 1.3rem; }
+.vol-panel { position: fixed; top: 76px; right: 24px; z-index: 30; display: flex; flex-direction: column; gap: 8px; padding: 14px 18px; border-radius: 16px; background: rgba(18, 6, 46, 0.95); border: 2px solid var(--line); min-width: 260px; }
+.vol-panel[hidden] { display: none; }
+.vol-panel label { display: grid; grid-template-columns: 90px 1fr; align-items: center; gap: 10px; font-weight: 700; }
+.vol-panel input[type='range'] { accent-color: var(--gold); }
+.vol-panel .row-btns { display: flex; gap: 8px; justify-content: space-between; }

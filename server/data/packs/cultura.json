@@ -66,7 +66,8 @@
     "Smirne",
     "Antalya"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m002",
@@ -79,7 +80,8 @@
     "Ecuador e Colombia",
     "Brasile e Paraguay"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m003",
@@ -92,7 +94,8 @@
     "San Marino",
     "Liechtenstein"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m004",
@@ -105,7 +108,8 @@
     "Stretto di Messina",
     "Dardanelli"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m005",
@@ -118,7 +122,8 @@
     "Kalahari",
     "Atacama"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m006",
@@ -131,7 +136,8 @@
     "America del Sud",
     "Oceania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m007",
@@ -144,7 +150,8 @@
     "Helsinki",
     "Copenaghen"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m008",
@@ -157,7 +164,8 @@
     "Pirenei",
     "Ande"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m009",
@@ -170,7 +178,8 @@
     "Verona",
     "Torino"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m010",
@@ -183,7 +192,8 @@
     "Stromboli",
     "Vulcano"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m011",
@@ -196,7 +206,8 @@
     "Montevideo",
     "Lima"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m012",
@@ -209,7 +220,8 @@
     "Egitto",
     "Algeria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m013",
@@ -222,7 +234,8 @@
     "Pacifico",
     "Artico"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m014",
@@ -235,7 +248,8 @@
     "Cipro",
     "Corsica"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m015",
@@ -248,7 +262,8 @@
     "Osaka",
     "Hiroshima"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m016",
@@ -261,7 +276,8 @@
     "Jurij Gagarin",
     "Michael Collins"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m017",
@@ -274,7 +290,8 @@
     "1804",
     "1815"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m018",
@@ -287,7 +304,8 @@
     "Umberto I",
     "Vittorio Emanuele II"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m019",
@@ -300,7 +318,8 @@
     "Britannic",
     "Andrea Doria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m020",
@@ -313,7 +332,8 @@
     "Lev Trotsky",
     "Iosif Stalin"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m021",
@@ -326,7 +346,8 @@
     "Paestum",
     "Siracusa"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m022",
@@ -339,7 +360,8 @@
     "Kublai Khan",
     "Confucio"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m023",
@@ -352,7 +374,8 @@
     "1919",
     "1920"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m024",
@@ -365,7 +388,8 @@
     "Amerigo Vespucci",
     "Giovanni Caboto"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m025",
@@ -378,7 +402,8 @@
     "Thomas Jefferson",
     "Theodore Roosevelt"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m026",
@@ -391,7 +416,8 @@
     "Este",
     "Gonzaga"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m027",
@@ -404,7 +430,8 @@
     "1945",
     "1950"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m028",
@@ -417,7 +444,8 @@
     "Caterina de' Medici",
     "Elisabetta I"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m029",
@@ -430,7 +458,8 @@
     "Leonid Brežnev",
     "Michail Gorbačëv"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m030",
@@ -443,7 +472,8 @@
     "Fenici",
     "Sumeri"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m031",
@@ -456,7 +486,8 @@
     "Fr",
     "Ir"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m032",
@@ -469,7 +500,8 @@
     "44",
     "48"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m033",
@@ -482,7 +514,8 @@
     "Robert Koch",
     "Marie Curie"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m034",
@@ -495,7 +528,8 @@
     "Ampere",
     "Watt"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m035",
@@ -508,7 +542,8 @@
     "Reni",
     "Milza"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m036",
@@ -521,7 +556,8 @@
     "14",
     "1"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m037",
@@ -534,7 +570,8 @@
     "Rosalind Franklin",
     "Ada Lovelace"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m038",
@@ -547,7 +584,8 @@
     "Neutrone",
     "Fotone"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m039",
@@ -560,7 +598,8 @@
     "Giovanni Keplero",
     "Albert Einstein"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m040",
@@ -573,7 +612,8 @@
     "Azoto",
     "Idrogeno"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m041",
@@ -586,7 +626,8 @@
     "Omero",
     "Perone"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m042",
@@ -599,7 +640,8 @@
     "Ossigeno",
     "Carbonio"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m043",
@@ -612,7 +654,8 @@
     "Nikola Tesla",
     "Guglielmo Marconi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m044",
@@ -625,7 +668,8 @@
     "7",
     "8"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m045",
@@ -638,7 +682,8 @@
     "Vulcanologia",
     "Speleologia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m046",
@@ -651,7 +696,8 @@
     "Capodoglio",
     "Orca"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m047",
@@ -664,7 +710,8 @@
     "Antilope",
     "Levriero"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m048",
@@ -677,7 +724,8 @@
     "4",
     "10"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m049",
@@ -690,7 +738,8 @@
     "Agnello",
     "Capretto"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m050",
@@ -703,7 +752,8 @@
     "Rondine",
     "Aquila"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m051",
@@ -716,7 +766,8 @@
     "Frutta",
     "Insetti"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m052",
@@ -729,7 +780,8 @@
     "Pino",
     "Betulla"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m053",
@@ -742,7 +794,8 @@
     "Sudafrica",
     "Indonesia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m054",
@@ -755,7 +808,8 @@
     "Procione",
     "Tasso"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m055",
@@ -768,7 +822,8 @@
     "Calabrone",
     "Formica"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m056",
@@ -781,7 +836,8 @@
     "Giaguaro",
     "Leopardo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m057",
@@ -794,7 +850,8 @@
     "Salamandra",
     "Delfino"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m058",
@@ -807,7 +864,8 @@
     "Geco",
     "Tartaruga"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m059",
@@ -820,7 +878,8 @@
     "Struzzo",
     "Lama"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m060",
@@ -833,7 +892,8 @@
     "Nido",
     "Covo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m061",
@@ -846,7 +906,8 @@
     "Uove",
     "Uovà"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m062",
@@ -859,7 +920,8 @@
     "Eficienza",
     "Effiscienza"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m063",
@@ -872,7 +934,8 @@
     "Esagerare",
     "Ripetere"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m064",
@@ -885,7 +948,8 @@
     "Prodigo",
     "Altruista"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m065",
@@ -898,7 +962,8 @@
     "Sinonimo",
     "Ossimoro"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m066",
@@ -911,7 +976,8 @@
     "Quale'è",
     "Qual é"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m067",
@@ -924,7 +990,8 @@
     "Essere inesperti",
     "Essere invidiosi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m068",
@@ -937,7 +1004,8 @@
     "Un'esagerazione voluta",
     "La ripetizione di un suono"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m069",
@@ -950,7 +1018,8 @@
     "Uoma",
     "Uomoni"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m070",
@@ -963,7 +1032,8 @@
     "Francese",
     "Spagnolo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m071",
@@ -976,7 +1046,8 @@
     "abbi",
     "aveva"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m072",
@@ -989,7 +1060,8 @@
     "Antico",
     "Triste"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m073",
@@ -1002,7 +1074,8 @@
     "Poseidone",
     "Apollo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m074",
@@ -1015,7 +1088,8 @@
     "Mercurio",
     "Nettuno"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m075",
@@ -1028,7 +1102,8 @@
     "Ercole",
     "Perseo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m076",
@@ -1041,7 +1116,8 @@
     "Giasone",
     "Achille"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m077",
@@ -1054,7 +1130,8 @@
     "Ciclope",
     "Grifone"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m078",
@@ -1067,7 +1144,8 @@
     "Castore e Polluce",
     "Caino e Abele"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m079",
@@ -1080,7 +1158,8 @@
     "Gungnir",
     "Durlindana"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m080",
@@ -1093,7 +1172,8 @@
     "Atena",
     "Penelope"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m081",
@@ -1106,7 +1186,8 @@
     "Mjöllnir",
     "Gram"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m082",
@@ -1119,7 +1200,8 @@
     "Era",
     "Artemide"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m083",
@@ -1132,7 +1214,8 @@
     "Teseo",
     "Giasone"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m084",
@@ -1145,7 +1228,8 @@
     "Sleipnir",
     "Arione"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m085",
@@ -1158,7 +1242,8 @@
     "Giove",
     "Mercurio"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m086",
@@ -1171,7 +1256,8 @@
     "Urano",
     "Nettuno"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m087",
@@ -1184,7 +1270,8 @@
     "Galassia di Orione",
     "Galassia del Triangolo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m088",
@@ -1197,7 +1284,8 @@
     "John Glenn",
     "Alan Shepard"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m089",
@@ -1210,7 +1298,8 @@
     "Sirio",
     "Betelgeuse"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m090",
@@ -1223,7 +1312,8 @@
     "Marte",
     "Giove"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m091",
@@ -1236,7 +1326,8 @@
     "Vostok 1",
     "Apollo 13"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m092",
@@ -1249,7 +1340,8 @@
     "Samantha Cristoforetti",
     "Paolo Nespoli"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m093",
@@ -1262,7 +1354,8 @@
     "8 ore",
     "1 giorno"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m094",
@@ -1275,7 +1368,8 @@
     "Saturno",
     "Marte"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m095",
@@ -1288,7 +1382,8 @@
     "Kepler",
     "Spitzer"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m096",
@@ -1301,7 +1396,8 @@
     "Nettuno",
     "Terra"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m097",
@@ -1314,7 +1410,8 @@
     "Mark Zuckerberg",
     "Larry Page"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m098",
@@ -1327,7 +1424,8 @@
     "Wide World Web",
     "Web World Wide"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m099",
@@ -1340,7 +1438,8 @@
     "2009",
     "2010"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m100",
@@ -1353,7 +1452,8 @@
     "Microsoft",
     "Sega"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m101",
@@ -1366,7 +1466,8 @@
     "Enrico Fermi",
     "Alessandro Volta"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m102",
@@ -1379,7 +1480,8 @@
     "16",
     "10"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m103",
@@ -1392,7 +1494,8 @@
     "Windows Phone",
     "Symbian"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m104",
@@ -1405,7 +1508,8 @@
     "Instagram",
     "Snapchat"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m105",
@@ -1418,7 +1522,8 @@
     "Universal Storage Box",
     "User Serial Bridge"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m106",
@@ -1431,7 +1536,8 @@
     "Elon Musk",
     "Jack Dorsey"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m107",
@@ -1444,7 +1550,8 @@
     "Python",
     "Excel"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-m108",
@@ -1457,175 +1564,200 @@
     "IBM",
     "Google"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "cultura-t001",
    "categoryId": "geo",
    "type": "truefalse",
    "text": "Il Sahara è il deserto più grande del mondo.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t002",
    "categoryId": "geo",
    "type": "truefalse",
    "text": "Il Monte Everest si trova al confine tra Nepal e Cina.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t003",
    "categoryId": "geo",
    "type": "truefalse",
    "text": "Napoli è il capoluogo della Campania.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t004",
    "categoryId": "geo",
    "type": "truefalse",
    "text": "Il Canada è il Paese con più laghi al mondo.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t005",
    "categoryId": "geo",
    "type": "truefalse",
    "text": "La Svizzera fa parte dell'Unione Europea.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t006",
    "categoryId": "geo",
    "type": "truefalse",
    "text": "Il Rio delle Amazzoni attraversa il Brasile.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t007",
    "categoryId": "sto",
    "type": "truefalse",
    "text": "Giulio Cesare fu il primo imperatore di Roma.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t008",
    "categoryId": "sto",
    "type": "truefalse",
    "text": "La Torre Eiffel fu costruita per l'Esposizione universale del 1889.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t009",
    "categoryId": "sto",
    "type": "truefalse",
    "text": "La Grande Piramide di Giza è una delle sette meraviglie del mondo antico.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t010",
    "categoryId": "sto",
    "type": "truefalse",
    "text": "Il Partenone si trova a Roma.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t011",
    "categoryId": "sci",
    "type": "truefalse",
    "text": "Gli esseri umani usano solo il 10% del cervello.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t012",
    "categoryId": "sci",
    "type": "truefalse",
    "text": "La Luna brilla di luce propria.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t013",
    "categoryId": "sci",
    "type": "truefalse",
    "text": "Il diamante è fatto di carbonio.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t014",
    "categoryId": "sci",
    "type": "truefalse",
    "text": "L'oro è un buon conduttore di elettricità.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t015",
    "categoryId": "sci",
    "type": "truefalse",
    "text": "Il sangue nelle vene è di colore blu.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t016",
    "categoryId": "sci",
    "type": "truefalse",
    "text": "Un fulmine non cade mai due volte nello stesso punto.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t017",
    "categoryId": "nat",
    "type": "truefalse",
    "text": "Gli struzzi nascondono la testa sotto la sabbia quando hanno paura.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t018",
    "categoryId": "nat",
    "type": "truefalse",
    "text": "Il cammello conserva l'acqua nelle gobbe.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t019",
    "categoryId": "nat",
    "type": "truefalse",
    "text": "Le balene sono pesci.",
-   "answer": false
+   "answer": false,
+   "difficulty": 2
   },
   {
    "id": "cultura-t020",
    "categoryId": "nat",
    "type": "truefalse",
    "text": "Le stelle marine non hanno un cervello.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t021",
    "categoryId": "nat",
    "type": "truefalse",
    "text": "Il pomodoro è arrivato in Europa dalle Americhe.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t022",
    "categoryId": "spa",
    "type": "truefalse",
    "text": "Venere ruota su se stessa nel verso opposto rispetto alla Terra.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t023",
    "categoryId": "spa",
    "type": "truefalse",
    "text": "Su Marte un anno dura più che sulla Terra.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   },
   {
    "id": "cultura-t024",
    "categoryId": "mit",
    "type": "truefalse",
    "text": "Nella mitologia romana Nettuno è il dio del mare.",
-   "answer": true
+   "answer": true,
+   "difficulty": 2
   }
  ]
 }

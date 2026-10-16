@@ -2,7 +2,31 @@
 
 Uno schermo principale 3D (TV o PC) e da 2 a **16** smartphone come controller. La serata è uno **show di giochi estratti da una ruota**, con carte potere per attaccare e difendersi, e si chiude con la finale della Piramide. Le domande si possono scrivere da soli nel **Laboratorio Domande**.
 
-## Avvio
+Come funziona il gioco, architettura, scelte di progettazione e sviluppi futuri: [docs/PROGETTO.md](docs/PROGETTO.md).
+
+## Scaricare e giocare (consigliato): doppio clic
+
+Dalla pagina **Releases** del repository trovi un file per ogni sistema. Non serve installare nulla, né Node.js, né usare il terminale.
+
+| Sistema | File | Come si avvia |
+|---|---|---|
+| Windows | `...-win-x64.exe` | Doppio clic. Se compare «Windows ha protetto il PC»: *Ulteriori informazioni → Esegui comunque* |
+| macOS | `...-mac-universal.dmg` | Trascina l'app in Applicazioni, poi **tasto destro → Apri → Apri** la prima volta |
+| Linux | `...-linux-x64.AppImage` | Rendilo eseguibile (*Proprietà → Permessi*) e doppio clic. Se serve: `libfuse2` |
+
+Gli avvisi sono normali: le firme di Microsoft e Apple sono a pagamento e l'app è gratuita e non firmata. Per giocare: il gioco si apre a schermo intero (**F11** alterna, **Esc** esce), sullo schermo compare il QR e gli amici entrano col telefono sulla stessa rete Wi-Fi. Le istruzioni complete sono nel file `build/LEGGIMI.txt`, allegato a ogni release.
+
+Il menu **Gioco** ha il Laboratorio Domande, l'apertura della cartella dei pacchetti e, su Windows con Wi-Fi, l'**hotspot (modalità bosco)** con un clic. I pacchetti personali si salvano nella cartella dati dell'utente (`%APPDATA%\SapereEPotere` su Windows) e restano anche aggiornando l'app.
+
+### Creare gli eseguibili
+
+- **Automatico (GitHub Actions):** a ogni push il file `.github/workflows/desktop.yml` compila Windows, Mac e Linux su macchine apposite, controlla che l'app impacchettata parta (prova senza finestre) e salva i 3 file tra gli artefatti. Con un tag di versione (es. `git tag v1.0.0 && git push --tags`) crea anche la **Release** con i file da scaricare. Costa zero per i repository pubblici.
+- **Sul tuo PC:** `npm run desktop:build` crea l'eseguibile del tuo sistema nella cartella `release/`. Mac e Linux si possono creare solo sul rispettivo sistema (o con GitHub Actions).
+- `npm run desktop` prova l'app da sorgente; `npm run desktop:smoke` controlla l'app impacchettata (pagine, pacchetti, bandiere, WebSocket, salvataggio e caricamento della finestra) senza aprirla.
+- **Cambiare il nome del gioco:** modifica solo `shared/brand.json` (titoli, logo, nome dell'app e dei file si aggiornano da soli). «Sapere è Potere» è un marchio Sony: scegli un nome tuo prima di distribuire il gioco.
+- L'icona è provvisoria (`build/icon.png`, 1024×1024): sostituiscila con la tua.
+
+## Avvio da sorgente (sviluppo)
 
 ```bash
 npm install        # solo la prima volta (serve internet)
@@ -18,31 +42,56 @@ npm start          # avvia il gioco su http://localhost:3000
 
 Per provare da soli: nella lobby premi **«🤖 Aggiungi bot»**.
 
-## Giocare offline (senza internet)
+## Giocare senza internet (anche in un bosco 🌲)
 
-Dopo `npm install` e `npm run build` non serve più internet: font, librerie e domande sono tutti in locale. Serve solo che PC e telefoni siano sulla **stessa rete Wi-Fi**:
+Non servono né internet né un router: basta una **rete Wi-Fi locale**, che può creare il PC stesso oppure un telefono. Font, librerie, bandiere e domande sono tutti nel progetto.
 
-1. **Hotspot di un telefono** (il metodo più semplice): attiva l'hotspot su un telefono, anche con i dati mobili spenti, e collega a quella rete il PC e gli altri telefoni.
-2. **Un router di casa anche senza internet**: basta che sia acceso.
+### Prima di partire (a casa, con internet)
 
-Poi:
+1. Esegui `npm install` e `npm run build`.
+2. Fai una **prova generale senza internet**: stacca il router (o scollega il cavo) e prova `npm run bosco`. Se funziona a casa, funzionerà anche nel bosco.
+3. Al primo avvio Windows chiede il permesso del firewall per Node.js: spunta anche le **reti pubbliche**, perché la rete dell'hotspot viene di solito classificata così. Se hai già risposto di no, apri un prompt come amministratore ed esegui:
+   ```
+   netsh advfirewall firewall add rule name="Sapere e Potere" dir=in action=allow protocol=TCP localport=3000
+   ```
+4. Porta un caricatore o un power bank: l'hotspot consuma batteria.
 
-- Avvia il gioco con `npm start`. Nel terminale compaiono gli indirizzi per i telefoni.
-- Il QR code sullo schermo usa l'indirizzo del PC in quella rete. Se non funziona, premi **«Prova un altro indirizzo»** sotto il QR.
-- **Windows Firewall:** al primo avvio Windows chiede se consentire Node.js. Spunta anche le **reti pubbliche**, perché gli hotspot spesso vengono classificati come rete pubblica. Se hai già risposto di no, apri un prompt come amministratore ed esegui:
-  ```
-  netsh advfirewall firewall add rule name="Sapere e Potere" dir=in action=allow protocol=TCP localport=3000
-  ```
+### A) Hotspot creato dal PC: `npm run bosco` (consigliato)
+
+Serve un PC con Wi-Fi, ad esempio un portatile.
+
+```bash
+npm run bosco              # accende l'hotspot, avvia il gioco e apre lo schermo principale
+npm run bosco -- -Check    # verifica soltanto se il PC può creare l'hotspot (non cambia nulla)
+```
+
+- L'hotspot di Windows si accende anche senza internet, con nome rete `SaperePotere` e una password generata al primo avvio. Entrambi restano salvati in `bosco.json`, così i telefoni si ricollegano da soli le volte successive.
+- Sulla TV compaiono **due QR**: il **QR 1** collega il telefono alla rete, il **QR 2** apre il gioco.
+- Se il telefono avvisa «rete senza internet», scegli **Resta connesso**.
+- Con **Ctrl+C** si chiude il gioco e si spegne l'hotspot.
+- In *Impostazioni → Rete → Hotspot mobile* conviene disattivare lo spegnimento automatico per risparmio energetico.
+
+### B) Hotspot creato da un telefono
+
+1. Su un telefono attiva l'**hotspot**, anche con i dati mobili spenti. Android è il più affidabile; su iPhone l'hotspot può richiedere un piano dati attivo.
+2. Collega il PC a quella rete e avvia il gioco con `npm start`.
+3. Nella lobby premi **«🌲 Senza internet? Mostra il QR dell'hotspot»** e inserisci nome e password della rete. Compare il QR per collegarsi, che resta salvato anche per le volte successive.
+
+### Se il QR del gioco non funziona
+
+Sotto il QR c'è **«Prova un altro indirizzo»**, utile se il PC è collegato a più reti.
+
+Un PC **senza scheda Wi-Fi**, come un fisso collegato via cavo, non può creare l'hotspot né collegarsi a quello di un telefono: serve una chiavetta Wi-Fi USB. Con `npm run bosco -- -Check` lo verifichi subito.
 
 ## La serata
 
 1. **Lobby:** ognuno sceglie personaggio, skin e selfie dal telefono. Sul PC si scelgono:
    - **Ruota casuale**: la durata (Corta 3 giochi, Normale 5, Lunga 7) e quali giochi possono uscire;
    - oppure **Scaletta in ordine**: i giochi uno dopo l'altro, nell'ordine deciso da te (fino a 12), senza ruota;
-   - i **pacchetti di domande**: Pacchetto base, Cultura generale, Pop & Intrattenimento, Numeri & Stime, **Bandiere del mondo** e quelli creati da te.
+   - i **pacchetti di domande**: Pacchetto base, Cultura generale, Pop & Intrattenimento, Numeri & Stime, **Bandiere del mondo**, **Per esperti** (domande difficili), **Melodie famose** (per Indovina il Brano) e quelli creati da te.
    Le domande si estraggono **bilanciate per categoria**: un pacchetto grande, come le bandiere, non monopolizza la serata.
 2. Per ogni gioco: **ruota** → spiegazione delle regole → **carte** → gioco → classifica.
-3. **Finale:** Piramide della Conoscenza.
+3. **Finale:** Piramide della Conoscenza. Prima di ogni domanda c'è il **sabotaggio**: l'ultimo della piramide lancia 2 attacchi contro chi vuole, il penultimo 1 (con almeno 3 giocatori). Le domande sono sempre a risposta multipla e diventano più difficili salendo: prima Medie, poi Difficili.
 
 ### Giochi
 
@@ -56,6 +105,7 @@ Poi:
 | 🔥 | Raffica | 45 secondi al proprio ritmo; le serie di risposte giuste alzano il moltiplicatore fino a ×4 |
 | 📏 | La Stima | Risposte numeriche: vince il più vicino (+500 se esatta) |
 | 🧩 | Indizio dopo Indizio | La domanda si svela parola per parola: prima rispondi, più vinci, ma l'errore costa |
+| 🎵 | Indovina il Brano | Lo schermo suona una melodia: titolo o compositore dal telefono, punti per velocità. Esce solo se c'è il pacchetto Melodie famose (o domande tue con un brano) |
 
 ### Gruppi numerosi (da 7 a 16 giocatori)
 
@@ -79,8 +129,34 @@ All'inizio di ogni gioco peschi 3 carte e ne giochi 1. Con 3 risposte giuste di 
   - 👻 Mantello: devia gli attacchi su un altro giocatore.
   - 🧪 Antidoto: neutralizza gli attacchi e dà +150 punti per ognuno.
 - **Bonus**:
-  - 💎 Doppio: punti doppi alla prossima risposta giusta.
-  - ✂️ 50:50: elimina due risposte sbagliate nelle prossime 2 domande.
+  - 💎 Doppio: raddoppia la prossima risposta giusta, con un bonus massimo di +500.
+  - ✂️ 50:50: elimina due risposte sbagliate (per quante domande dipende dal gioco).
+
+La 🟢 Melma ha al massimo 2 strati e si stacca quando ne hai pulito poco più di metà.
+
+**Bilanciamento per gioco.** Alcune carte non si pescano in certi giochi, e lo schermo lo dice durante la scelta delle carte:
+
+| Gioco | Carte escluse | 50:50 | Perché |
+|---|---|---|---|
+| 🎯 Classico | — | 2 domande | |
+| ⚡ Il Più Veloce | — | 1 domanda | basta una domanda "facile" per vincere 1000 punti |
+| 💣 Bomba | 💎 Doppio | 2 domande | qui si vince evitando lo scoppio, non accumulando |
+| 🦝 Ruba Punti | — | 1 domanda | il Doppio raddoppia quanto rubi, con il tetto di +500 |
+| 🎰 Scommessa | 💎 Doppio | 1 domanda | la puntata è già un moltiplicatore: con il Doppio si quadruplicava |
+| 🔥 Raffica | 💎 Doppio, 🔒 Lucchetto | 4 domande | domande da 2 secondi: il lucchetto la rovinava |
+| 📏 La Stima | — | intervallo | |
+| 🧩 Indizi | — | 1 domanda | |
+| 🎵 Indovina il Brano | 💣 Bombette | 1 domanda | i titoli devono restare leggibili |
+
+## Audio e voce del presentatore
+
+Lo schermo principale ha musica di sottofondo (lobby, giochi, tensione della Bomba, finale, vittoria), effetti sonori e una voce che commenta: benvenuto, nomi dei giochi, carte, risposte giuste e sbagliate, sabotaggio, vincitore. Quelli inclusi sono **segnaposto**: le musiche e gli effetti sono sintetizzati, la voce è quella di sintesi di Windows.
+
+- Volume: pulsante 🔊 in alto a destra (musica, effetti e voce separati), tasto **M** per il muto.
+- I file stanno in `client/public/audio/` (`music/`, `sfx/`, `voice/`, `melodie/`). L'elenco è in `client/public/audio/audio.json`: ogni suono può avere più varianti, scelte a caso.
+- **Per usare la tua voce** registra file con lo stesso nome (es. `voice/welcome-1.mp3`) e sostituiscili. Oppure aggiungi varianti all'elenco in `audio.json`. Se un file manca, il gioco usa un suono sintetizzato.
+- **Nell'app desktop** usa il menu **Gioco → Apri la cartella degli audio personalizzati**: i file messi lì (stessi percorsi, es. `voice/welcome-1.mp3`, o un tuo `audio.json`) hanno la precedenza su quelli di serie, anche dopo un aggiornamento.
+- Per rigenerare i segnaposto: `python scripts/build-audio.py` (richiede Python con numpy e ffmpeg; la voce usa la sintesi vocale di Windows).
 
 ## Laboratorio Domande
 
@@ -88,6 +164,8 @@ Si apre da `editor.html`, oppure dal link nella lobby e nella schermata iniziale
 
 - Crea **pacchetti** e **categorie** con icona e colore.
 - Tipi di domanda: **risposta multipla** (da 2 a 4 risposte), **vero/falso**, **numerica** (per La Stima).
+- **Difficoltà** (Facile, Media, Difficile): la Piramide finale pesca solo domande Medie e Difficili.
+- **Immagini e brani**: il pulsante «Carica…» copia il file sul PC (cartella `user-media/`, nell'app desktop la cartella dati dell'utente) e funziona offline. Le domande con un brano finiscono in «Indovina il Brano».
 - Scrivi `{giocatore}` e in partita diventerà il nome di un giocatore a caso: «Qual è il film preferito di {giocatore}?».
 - **Esporta/Importa** in JSON per scambiare i pacchetti con gli amici.
 - Il pacchetto di serie non si modifica: usa **Duplica**.
@@ -119,9 +197,12 @@ shared/      contratto eventi, tipi, giochi, carte, pacchetti (validazione), con
 server/      Express + Socket.IO; Room.ts (regia dello show), games/ (un file per gioco),
              logic/ (carte, punteggi, voto, piramide), PackStore + QuestionPool (domande)
 client/      host (Three.js), controller (mobile), editor (Laboratorio)
-scripts/     simulate.ts: serata completa scriptata, senza browser
+desktop/     app Electron (finestra, menu, hotspot, prova automatica)
+scripts/     simulate.ts (serata scriptata, senza browser), desktop-*.mjs (impacchettamento)
+build/       icona e LEGGIMI.txt allegato alle release
 ```
 
 - `npm run dev`: avvia con ricarica automatica del codice.
 - `GAME_SPEED=10 npm run dev` + `npm run simulate`: simula una serata completa a velocità ×10. Variabili utili: `LENGTH=short|normal|long` (durata), `BOTS=15` (numero di bot, fino a 15), `SEQUENCE=bomb,estimate` (scaletta), `ONLY_GAMES=bomb,wager` (lato server: limita la ruota ai giochi indicati).
 - Tempi e punteggi sono in `shared/config.ts`.
+- `server/app.ts` contiene tutto il server come funzione `startServer(...)`: lo usano sia `server/index.ts` (terminale) sia l'app desktop.

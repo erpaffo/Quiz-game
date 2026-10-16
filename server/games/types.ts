@@ -1,5 +1,5 @@
 import type { DurationKey } from '../../shared/config';
-import type { GameAction, PlayState, PrivateState, QuestionPublic } from '../../shared/types';
+import type { GameAction, PlayState, PowerType, PrivateState, QuestionPublic } from '../../shared/types';
 import type { Player } from '../players';
 import type { McDef, NumDef, QuestionPool } from '../QuestionPool';
 
@@ -35,6 +35,8 @@ export interface GameContext {
   /** Fine del gioco: schermata dei risultati e poi ruota. */
   finish(): void;
   gameOver(podium: string[]): void;
+  /** Attacco diretto (sabotaggio della Piramide): effetto alla prossima domanda del bersaglio. */
+  hit(target: Player, type: PowerType, from: string): void;
   /** 7+ giocatori: alcuni giochi cambiano le regole per restare divertenti per tutti. */
   isLargeGroup(): boolean;
   /** Esegue un'azione per conto di un bot, passando dalla stanza come un giocatore vero. */

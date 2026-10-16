@@ -1,0 +1,599 @@
+{
+ "id": "melodie",
+ "name": "Melodie famose",
+ "description": "Brani di pubblico dominio per «Indovina il brano» (musica classica e canti popolari).",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "classica",
+   "name": "Musica classica",
+   "icon": "🎻",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "popolare",
+   "name": "Canti popolari e feste",
+   "icon": "🎶",
+   "color": "#ff9f1c"
+  },
+  {
+   "id": "compositori",
+   "name": "Chi l'ha composto?",
+   "icon": "🎼",
+   "color": "#4361ee"
+  }
+ ],
+ "questions": [
+  {
+   "id": "tit-inno",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Inno alla gioia",
+    "Guglielmo Tell (ouverture)",
+    "Quinta sinfonia",
+    "Per Elisa"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/inno.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-inno",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Ludwig van Beethoven",
+    "Jacques Offenbach",
+    "Gioachino Rossini",
+    "Scott Joplin"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/inno.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-elisa",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Per Elisa",
+    "Piccola serenata notturna",
+    "The Entertainer",
+    "Quinta sinfonia"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/elisa.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-elisa",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Ludwig van Beethoven",
+    "Wolfgang Amadeus Mozart",
+    "Richard Wagner",
+    "Franz Xaver Gruber"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/elisa.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-quinta",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Quinta sinfonia",
+    "Habanera (Carmen)",
+    "Marcia nuziale (Lohengrin)",
+    "Inno alla gioia"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/quinta.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-quinta",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Ludwig van Beethoven",
+    "Edvard Grieg",
+    "Franz Xaver Gruber",
+    "Gioachino Rossini"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/quinta.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-serenata",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Piccola serenata notturna",
+    "Marcia turca",
+    "Il mattino (Peer Gynt)",
+    "Habanera (Carmen)"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/serenata.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-serenata",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Wolfgang Amadeus Mozart",
+    "Edvard Grieg",
+    "Ludwig van Beethoven",
+    "Gioachino Rossini"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/serenata.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-turca",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Marcia turca",
+    "The Entertainer",
+    "Guglielmo Tell (ouverture)",
+    "Can-can (Orfeo all'inferno)"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/turca.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-turca",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Wolfgang Amadeus Mozart",
+    "Ludwig van Beethoven",
+    "Johann Sebastian Bach",
+    "Gioachino Rossini"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/turca.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-toccata",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Toccata e fuga in re minore",
+    "Nell'antro del re della montagna",
+    "Habanera (Carmen)",
+    "Marcia turca"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/toccata.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-toccata",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Johann Sebastian Bach",
+    "Edvard Grieg",
+    "Georges Bizet",
+    "Johann Strauss figlio"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/toccata.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-canone",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Canone in re",
+    "Toccata e fuga in re minore",
+    "Marcia turca",
+    "Quinta sinfonia"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/canone.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-canone",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Johann Pachelbel",
+    "Gioachino Rossini",
+    "Johann Sebastian Bach",
+    "Franz Xaver Gruber"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/canone.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-nuziale",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Marcia nuziale (Lohengrin)",
+    "Per Elisa",
+    "Canone in re",
+    "Can-can (Orfeo all'inferno)"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/nuziale.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-nuziale",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Richard Wagner",
+    "Johann Pachelbel",
+    "Wolfgang Amadeus Mozart",
+    "Jacques Offenbach"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/nuziale.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-montagna",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Nell'antro del re della montagna",
+    "Sul bel Danubio blu",
+    "Inno alla gioia",
+    "The Entertainer"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/montagna.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-montagna",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Edvard Grieg",
+    "Ludwig van Beethoven",
+    "Richard Wagner",
+    "Georges Bizet"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/montagna.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-mattino",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Il mattino (Peer Gynt)",
+    "Canone in re",
+    "Per Elisa",
+    "Nell'antro del re della montagna"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/mattino.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-mattino",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Edvard Grieg",
+    "Johann Pachelbel",
+    "Scott Joplin",
+    "Johann Sebastian Bach"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/mattino.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-habanera",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Habanera (Carmen)",
+    "Il mattino (Peer Gynt)",
+    "Piccola serenata notturna",
+    "The Entertainer"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/habanera.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-habanera",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Georges Bizet",
+    "Franz Xaver Gruber",
+    "Edvard Grieg",
+    "Jacques Offenbach"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/habanera.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-tell",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Guglielmo Tell (ouverture)",
+    "Sul bel Danubio blu",
+    "Marcia turca",
+    "Per Elisa"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/tell.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-tell",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Gioachino Rossini",
+    "Jacques Offenbach",
+    "Franz Xaver Gruber",
+    "Johann Strauss figlio"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/tell.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-entertainer",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "The Entertainer",
+    "Marcia turca",
+    "Marcia nuziale (Lohengrin)",
+    "Habanera (Carmen)"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/entertainer.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-entertainer",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Scott Joplin",
+    "Johann Pachelbel",
+    "Georges Bizet",
+    "Wolfgang Amadeus Mozart"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/entertainer.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-danubio",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Sul bel Danubio blu",
+    "Toccata e fuga in re minore",
+    "Piccola serenata notturna",
+    "Habanera (Carmen)"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/danubio.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-danubio",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Johann Strauss figlio",
+    "Jacques Offenbach",
+    "Franz Xaver Gruber",
+    "Georges Bizet"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/danubio.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-cancan",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Can-can (Orfeo all'inferno)",
+    "Nell'antro del re della montagna",
+    "Guglielmo Tell (ouverture)",
+    "Piccola serenata notturna"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/cancan.mp3",
+   "difficulty": 2
+  },
+  {
+   "id": "cmp-cancan",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Jacques Offenbach",
+    "Georges Bizet",
+    "Ludwig van Beethoven",
+    "Johann Strauss figlio"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/cancan.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-astro",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Astro del ciel",
+    "Jingle Bells",
+    "Greensleeves",
+    "Tanti auguri a te"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/astro.mp3",
+   "difficulty": 1
+  },
+  {
+   "id": "cmp-astro",
+   "categoryId": "compositori",
+   "type": "multiple",
+   "text": "Chi ha composto questo brano?",
+   "options": [
+    "Franz Xaver Gruber",
+    "Wolfgang Amadeus Mozart",
+    "Johann Sebastian Bach",
+    "Edvard Grieg"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/astro.mp3",
+   "difficulty": 3
+  },
+  {
+   "id": "tit-martino",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Fra Martino",
+    "Tanti auguri a te",
+    "Astro del ciel",
+    "Jingle Bells"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/martino.mp3",
+   "difficulty": 1
+  },
+  {
+   "id": "tit-auguri",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Tanti auguri a te",
+    "Brilla brilla la stellina",
+    "Jingle Bells",
+    "Astro del ciel"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/auguri.mp3",
+   "difficulty": 1
+  },
+  {
+   "id": "tit-jingle",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Jingle Bells",
+    "Fra Martino",
+    "Greensleeves",
+    "Tanti auguri a te"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/jingle.mp3",
+   "difficulty": 1
+  },
+  {
+   "id": "tit-stellina",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Brilla brilla la stellina",
+    "Fra Martino",
+    "Jingle Bells",
+    "Greensleeves"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/stellina.mp3",
+   "difficulty": 1
+  },
+  {
+   "id": "tit-greensleeves",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "Greensleeves",
+    "When the Saints Go Marching In",
+    "Jingle Bells",
+    "Fra Martino"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/greensleeves.mp3",
+   "difficulty": 1
+  },
+  {
+   "id": "tit-saints",
+   "categoryId": "popolare",
+   "type": "multiple",
+   "text": "Che brano è?",
+   "options": [
+    "When the Saints Go Marching In",
+    "Tanti auguri a te",
+    "Fra Martino",
+    "Brilla brilla la stellina"
+   ],
+   "correctIndex": 0,
+   "audio": "/audio/melodie/saints.mp3",
+   "difficulty": 1
+  }
+ ]
+}

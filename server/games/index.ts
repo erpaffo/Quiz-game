@@ -6,6 +6,7 @@ import { ClassicGame } from './classic';
 import { CluesGame } from './clues';
 import { EstimateGame } from './estimate';
 import { FastestGame } from './fastest';
+import { MusicGame } from './music';
 import { StealGame } from './steal';
 import type { GameContext, GameMode } from './types';
 import { WagerGame } from './wager';
@@ -28,6 +29,8 @@ export function createGame(id: GameId, ctx: GameContext): GameMode {
       return new EstimateGame(ctx);
     case 'clues':
       return new CluesGame(ctx);
+    case 'music':
+      return new MusicGame(ctx);
   }
 }
 
@@ -36,6 +39,8 @@ export function gameAvailable(id: GameId, pool: QuestionPool): boolean {
   switch (id) {
     case 'estimate':
       return pool.numericCount >= 2;
+    case 'music':
+      return pool.audioCount >= 3;
     case 'classic':
       return pool.categoriesWithMc(2).length >= 1;
     default:

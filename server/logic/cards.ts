@@ -3,9 +3,9 @@ import type { CardEvent, CardType, DefenseType, PowerType } from '../../shared/t
 import { pick, shuffle } from '../util';
 
 /** Pesca `n` carte diverse, con probabilità proporzionale al peso di ciascuna. */
-export function dealHand(n: number, rnd = Math.random): CardType[] {
+export function dealHand(n: number, excluded: readonly CardType[] = [], rnd = Math.random): CardType[] {
   const hand: CardType[] = [];
-  let pool = CARD_TYPES.slice();
+  let pool = CARD_TYPES.filter((c) => !excluded.includes(c));
   while (hand.length < n && pool.length) {
     const total = pool.reduce((s, c) => s + CARDS[c].weight, 0);
     let r = rnd() * total;

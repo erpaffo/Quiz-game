@@ -84,3 +84,13 @@ input[type='color'] { width: 60px; height: 42px; padding: 2px; }
 .q-thumb { width: 48px; height: 32px; object-fit: contain; border-radius: 4px; }
 .q-preview { max-height: 90px; max-width: 160px; border-radius: 8px; align-self: flex-start; }
 @media (max-width: 800px) { .q-row { grid-template-columns: 48px 1fr auto; } }
+
+/* difficoltà e file multimediali */
+.media-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.media-row .grow { flex: 1 1 240px; }
+.q-audio { width: 100%; max-width: 420px; }
+.q-thumb.audio { display: inline-grid; place-items: center; font-size: 1.3rem; }
+.diff { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+.diff.d1 { background: rgba(6, 214, 160, 0.2); }
+.diff.d2 { background: rgba(255, 214, 10, 0.2); }
+.diff.d3 { background: rgba(239, 71, 111, 0.25); }

@@ -1,5 +1,6 @@
 import { POWERS } from './powers';
-import type { CardType, DefenseType, PowerType } from './types';
+import { GAMES } from './games';
+import type { CardType, DefenseType, GameId, PowerType } from './types';
 
 export interface CardDef {
   kind: 'attack' | 'defense' | 'bonus';
@@ -22,7 +23,7 @@ export const CARDS: Record<CardType, CardDef> = {
   MIRROR: { kind: 'defense', label: 'Specchio', icon: '🪞', color: '#c77dff', description: 'Rimanda gli attacchi a chi te li ha lanciati.', weight: 6 },
   CLOAK: { kind: 'defense', label: 'Mantello', icon: '👻', color: '#adb5bd', description: 'Sei invisibile: gli attacchi colpiscono un altro giocatore a caso.', weight: 6 },
   ANTIDOTE: { kind: 'defense', label: 'Antidoto', icon: '🧪', color: '#7bd389', description: 'Neutralizza gli attacchi e ti dà 150 punti per ognuno.', weight: 5 },
-  DOUBLE: { kind: 'bonus', label: 'Doppio', icon: '💎', color: '#ffd60a', description: 'Punti doppi alla tua prossima risposta giusta.', weight: 8 },
+  DOUBLE: { kind: 'bonus', label: 'Doppio', icon: '💎', color: '#ffd60a', description: 'Punti doppi alla tua prossima risposta giusta (bonus massimo +500).', weight: 8 },
   FIFTY: { kind: 'bonus', label: '50:50', icon: '✂️', color: '#ff9f1c', description: 'Elimina due risposte sbagliate nelle prossime 2 domande.', weight: 8 }
 };
 
@@ -30,6 +31,16 @@ export const CARD_TYPES = Object.keys(CARDS) as CardType[];
 
 export function isAttack(c: CardType): c is PowerType {
   return CARDS[c].kind === 'attack';
+}
+
+/** Descrizione della carta adattata al gioco (es. per quante domande vale il 50:50). */
+export function cardDescription(c: CardType, game?: GameId | 'pyramid'): string {
+  if (c === 'FIFTY' && game && game !== 'pyramid') {
+    if (game === 'estimate') return 'Ti mostra un intervallo che contiene la risposta giusta.';
+    const n = GAMES[game].cards.fiftyUses;
+    return `Elimina due risposte sbagliate ${n === 1 ? 'nella prossima domanda' : `nelle prossime ${n} domande`}.`;
+  }
+  return CARDS[c].description;
 }
 
 export function isDefense(c: CardType): c is DefenseType {

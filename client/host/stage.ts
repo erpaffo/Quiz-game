@@ -2,6 +2,7 @@ import gsap from 'gsap';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { CSS2DObject, CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
+import { BRAND } from '../../shared/brand';
 import { CARDS } from '../../shared/cards';
 import { CONFIG } from '../../shared/config';
 import type { CardEvent, PlayerPublic, PowerType, PyramidMove } from '../../shared/types';
@@ -770,7 +771,7 @@ export class Stage {
     if (avg > 28) {
       this.quality = 'low';
       this.applyQuality();
-      console.info(`[Sapere è Potere] ${Math.round(1000 / avg)} fps medi: passo alla qualità bassa (?q=high per forzare l'alta)`);
+      console.info(`[${BRAND.name}] ${Math.round(1000 / avg)} fps medi: passo alla qualità bassa (?q=high per forzare l'alta)`);
     }
   }
 

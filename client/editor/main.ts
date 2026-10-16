@@ -1,7 +1,7 @@
 import '@fontsource/baloo-2/500.css';
 import '@fontsource/baloo-2/700.css';
 import '@fontsource/baloo-2/800.css';
-import { CATEGORY_COLORS, newId, PACK_LIMITS, PLACEHOLDER, validatePack, type Pack, type PackCategory, type PackQuestion } from '../../shared/packs';
+import { CATEGORY_COLORS, DIFFICULTY_LABEL, newId, PACK_LIMITS, PLACEHOLDER, validatePack, type Difficulty, type Pack, type PackCategory, type PackQuestion } from '../../shared/packs';
 import type { PackSummary } from '../../shared/types';
 import '../common/base.css';
 import { esc, OPTION_COLORS, OPTION_LETTERS } from '../common/net';
@@ -151,7 +151,8 @@ function catOf(id: string): PackCategory | undefined {
 
 function thumb(q: PackQuestion) {
   const src = q.image ?? (q.type === 'multiple' ? q.optionImages?.[q.correctIndex] : undefined);
-  return src ? `<img class="q-thumb" src="${esc(src)}" alt="" loading="lazy">` : '<span class="q-thumb"></span>';
+  if (src) return `<img class="q-thumb" src="${esc(src)}" alt="" loading="lazy">`;
+  return q.audio ? '<span class="q-thumb audio" title="Domanda con brano audio">🎵</span>' : '<span class="q-thumb"></span>';
 }
 
 function answerSummary(q: PackQuestion) {
@@ -215,7 +216,7 @@ function render() {
             <span class="q-type ${q.type}">${TYPE_LABEL[q.type]}</span>
             <span class="q-cat" style="--cc:${catOf(q.categoryId)?.color ?? '#888'}">${esc(catOf(q.categoryId)?.icon ?? '')}</span>
             ${thumb(q)}
-            <div class="q-body"><div>${esc(q.text)}</div><small>${answerSummary(q)}</small></div>
+            <div class="q-body"><div>${esc(q.text)}</div><small>${answerSummary(q)}${q.difficulty ? ` <span class="diff d${q.difficulty}">${DIFFICULTY_LABEL[q.difficulty]}</span>` : ''}</small></div>
             ${ro ? '' : `<button class="mini" data-edit-q="${esc(q.id)}">✎ Modifica</button>`}
           </div>`)).join('') || '<div class="empty">Nessuna domanda. Premi «Nuova domanda» per iniziare!</div>'}
       </div>
@@ -248,8 +249,22 @@ function questionForm(q: PackQuestion | null) {
       <input type="hidden" name="type" value="${type}">
       <label>Categoria<select name="categoryId">${pack!.categories.map((c) => `<option value="${esc(c.id)}" ${c.id === (q?.categoryId ?? defaultCat) ? 'selected' : ''}>${esc(c.icon)} ${esc(c.name)}</option>`).join('')}</select></label>
       <label>Domanda<textarea name="text" rows="2" maxlength="${PACK_LIMITS.TEXT}" required placeholder="Es: Qual è il film preferito di ${PLACEHOLDER}?">${esc(q?.text ?? '')}</textarea></label>
-      <label>Immagine (facoltativa)<input name="image" maxlength="${PACK_LIMITS.IMAGE}" value="${esc(q?.image ?? '')}" placeholder="Es: /flags/it.svg oppure https://…/foto.jpg"></label>
-      ${q?.image ? `<img class="q-preview" src="${esc(q.image)}" alt="">` : ''}
+      <label>Difficoltà<select name="difficulty">
+        <option value="">Automatica</option>
+        ${([1, 2, 3] as Difficulty[]).map((d) => `<option value="${d}" ${q?.difficulty === d ? 'selected' : ''}>${DIFFICULTY_LABEL[d]}</option>`).join('')}
+      </select></label>
+      <div class="muted small">La Piramide finale pesca solo domande a risposta multipla, prima Medie e poi Difficili. Senza indicazione una domanda conta come Media.</div>
+      <div class="media-row">
+        <label class="grow">Immagine (facoltativa)<input name="image" maxlength="${PACK_LIMITS.IMAGE}" value="${esc(q?.image ?? '')}" placeholder="Es: /flags/it.svg oppure https://…/foto.jpg"></label>
+        <button type="button" class="btn secondary" data-upload="image">📁 Carica…</button>
+      </div>
+      <img class="q-preview" data-preview="image" src="${esc(q?.image ?? '')}" alt="" ${q?.image ? '' : 'hidden'}>
+      <div class="media-row">
+        <label class="grow">Brano audio (facoltativo)<input name="audio" maxlength="${PACK_LIMITS.IMAGE}" value="${esc(q?.audio ?? '')}" placeholder="Es: /media/canzone.mp3"></label>
+        <button type="button" class="btn secondary" data-upload="audio">🎵 Carica…</button>
+      </div>
+      <audio class="q-audio" data-preview="audio" controls preload="none" src="${esc(q?.audio ?? '')}" ${q?.audio ? '' : 'hidden'}></audio>
+      <div class="muted small">🎵 Le domande con un brano finiscono nel gioco «Indovina il Brano»: lo schermo lo suona e i telefoni scelgono la risposta.</div>
       ${q?.type === 'multiple' && q.optionImages ? '<div class="muted small">🖼️ Le risposte di questa domanda sono illustrate: le immagini restano finché non cambi il numero di risposte.</div>' : ''}
       ${type === 'multiple' ? `
         <div class="muted small">Da 2 a 4 risposte: seleziona quella giusta.</div>
@@ -403,11 +418,15 @@ main.addEventListener('submit', (e) => {
     }
     if (form.id === 'q-form') {
       const imageUrl = String(data.get('image') ?? '').trim();
+      const audioUrl = String(data.get('audio') ?? '').trim();
+      const difficulty = Number(data.get('difficulty') ?? 0) as Difficulty | 0;
       const base = {
         id: editing === 'new' ? newId('q') : editing!,
         categoryId: String(data.get('categoryId')),
         text: String(data.get('text') ?? '').trim(),
-        ...(imageUrl ? { image: imageUrl } : {})
+        ...(imageUrl ? { image: imageUrl } : {}),
+        ...(audioUrl ? { audio: audioUrl } : {}),
+        ...(difficulty ? { difficulty } : {})
       };
       const previous = pack.questions.find((x) => x.id === editing);
       const type = String(data.get('type')) as QType;
@@ -437,6 +456,48 @@ main.addEventListener('submit', (e) => {
     toast(`⚠️ ${(err as Error).message}`, false);
   }
 });
+
+// ------------------------------------------------------------ caricamento di immagini e brani
+
+const ACCEPT = { image: '.png,.jpg,.jpeg,.gif,.webp,.svg', audio: '.mp3,.ogg,.wav,.m4a,.aac' } as const;
+
+main.addEventListener('click', (e) => {
+  const kind = (e.target as HTMLElement).closest<HTMLElement>('[data-upload]')?.dataset.upload as keyof typeof ACCEPT | undefined;
+  if (!kind) return;
+  const picker = document.createElement('input');
+  picker.type = 'file';
+  picker.accept = ACCEPT[kind];
+  picker.addEventListener('change', async () => {
+    const file = picker.files?.[0];
+    if (!file) return;
+    try {
+      toast(`⏳ Caricamento di ${file.name}…`);
+      const res = await fetch(`/api/media?name=${encodeURIComponent(file.name)}`, { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: file });
+      const body = await res.json();
+      if (!res.ok) throw new Error(body.error ?? res.statusText);
+      setMedia(kind, body.path);
+      toast('✓ File caricato: ricordati di applicare e salvare');
+    } catch (err) {
+      toast(`⚠️ ${(err as Error).message}`, false);
+    }
+  });
+  picker.click();
+});
+
+main.addEventListener('change', (e) => {
+  const t = e.target as HTMLInputElement;
+  if (t.name === 'image' || t.name === 'audio') setMedia(t.name, t.value.trim());
+});
+
+function setMedia(kind: 'image' | 'audio', path: string) {
+  const form = document.getElementById('q-form');
+  if (!form) return;
+  (form.querySelector(`input[name="${kind}"]`) as HTMLInputElement).value = path;
+  const preview = form.querySelector<HTMLImageElement | HTMLAudioElement>(`[data-preview="${kind}"]`)!;
+  preview.hidden = !path;
+  if (path) preview.src = path;
+  else preview.removeAttribute('src');
+}
 
 listEl.addEventListener('click', (e) => {
   const id = (e.target as HTMLElement).closest<HTMLElement>('[data-open]')?.dataset.open;

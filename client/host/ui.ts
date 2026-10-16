@@ -41,6 +41,9 @@ export class HostUI {
   private timerBar = document.getElementById('timer-bar')!;
   private key = '';
   private join: { urls: string[]; index: number; qr: string } | null = null;
+  /** Rete Wi-Fi senza internet (hotspot del PC o di un telefono) da mostrare come QR. */
+  private wifi: { ssid: string; password: string; qr: string; source: 'pc' | 'manual' } | null = null;
+  private wifiForm = false;
   private endsAt: number | null = null;
   private total = 1;
   private lastSecond = -1;
@@ -50,8 +53,19 @@ export class HostUI {
   constructor(
     private actions: HostActions,
     private onTick: (secondsLeft: number, phase: string) => void,
-    private onCycleUrl: () => void
+    private onCycleUrl: () => void,
+    private onWifiSave: (wifi: { ssid: string; password: string } | null) => void
   ) {
+    this.panel.addEventListener('submit', (e) => {
+      const form = e.target as HTMLFormElement;
+      if (form.id !== 'wifi-form') return;
+      e.preventDefault();
+      const data = new FormData(form);
+      const ssid = String(data.get('ssid') ?? '').trim();
+      if (!ssid) return;
+      this.wifiForm = false;
+      this.onWifiSave({ ssid, password: String(data.get('password') ?? '') });
+    });
     this.panel.addEventListener('click', (e) => {
       const t = e.target as HTMLElement;
       const act = t.closest<HTMLElement>('[data-act]')?.dataset.act;
@@ -59,6 +73,16 @@ export class HostUI {
       if (act === 'start') this.actions.start();
       if (act === 'restart') this.actions.restart();
       if (act === 'url') this.onCycleUrl();
+      if (act === 'wifi-open' || act === 'wifi-cancel') {
+        this.wifiForm = act === 'wifi-open';
+        this.key = '';
+        if (this.s) this.render(this.s);
+        if (this.wifiForm) this.panel.querySelector<HTMLInputElement>('#wifi-form input')?.focus();
+      }
+      if (act === 'wifi-clear') {
+        this.wifiForm = false;
+        this.onWifiSave(null);
+      }
       const len = t.closest<HTMLElement>('[data-length]')?.dataset.length as GameLength | undefined;
       if (len) this.actions.setSettings({ length: len });
       if (this.s?.phaseData.phase !== 'LOBBY') return;
@@ -86,6 +110,12 @@ export class HostUI {
       }
     });
     setInterval(() => this.updateTimer(), 100);
+  }
+
+  setWifi(wifi: HostUI['wifi']) {
+    this.wifi = wifi;
+    this.key = '';
+    if (this.s) this.render(this.s);
   }
 
   setJoin(urls: string[], index: number, qr: string) {
@@ -143,7 +173,7 @@ export class HostUI {
   private renderKey(s: RoomSnapshot) {
     const d = s.phaseData;
     if (d.phase === 'LOBBY') {
-      return `LOBBY|${this.join?.index}|${!!this.join}|${s.players.length}|${canStart(s)}|${JSON.stringify(d.settings)}|${JSON.stringify(d.packs)}`;
+      return `LOBBY|${this.join?.index}|${!!this.join}|${this.wifi?.ssid}|${this.wifi?.password}|${this.wifiForm}|${s.players.length}|${canStart(s)}|${JSON.stringify(d.settings)}|${JSON.stringify(d.packs)}`;
     }
     if (d.phase === 'PLAY' && (d.state.step === 'blitz' || d.state.step === 'blitzEnd')) return `${phaseKey(s)}|${JSON.stringify(d.state.progress)}`;
     return phaseKey(s);
@@ -237,9 +267,10 @@ export class HostUI {
         return `
           <div class="phase-title pop">🃏 Giocate le carte!</div>
           <div class="sub">Attacca, difenditi o prenditi un bonus dal telefono · Pronti: <b data-live></b></div>
-          <div class="card-legend">${CARD_TYPES.map((t) => `
+          <div class="card-legend">${CARD_TYPES.filter((t) => !GAMES[d.game].cards.excluded.includes(t)).map((t) => `
             <div class="legend-card ${CARDS[t].kind}" style="--pw:${CARDS[t].color}"><span>${CARDS[t].icon}</span><b>${CARDS[t].label}</b></div>`).join('')}
-          </div>`;
+          </div>
+          ${GAMES[d.game].cards.note ? `<div class="sub card-note">⚖️ ${esc(GAMES[d.game].cards.note)}</div>` : ''}`;
       case 'CARD_RESOLVE':
         return `
           <div class="phase-title pop">💥 Le carte!</div>
@@ -353,7 +384,8 @@ export class HostUI {
         if (game === 'bomb') head = `<span class="chip hot">💣 ${this.name(st.holder)}</span>` + head;
         if (game === 'fastest') head = '<span class="chip hot">⚡ Vince il primo!</span>' + head;
         if (game === 'clues') head = '<span class="chip hot">🧩 Prima rispondi, più vinci</span>' + head;
-        return this.qcard(st.question, head, this.options(st.question));
+        const listening = st.question.audio ? '<div class="listening">🎵 <span class="eq"><i></i><i></i><i></i><i></i><i></i></span> Ascoltate!</div>' : '';
+        return this.qcard(st.question, head, listening + this.options(st.question));
       }
       case 'reveal': {
         const extra =
@@ -424,6 +456,20 @@ export class HostUI {
               </div>`).join('')}
           </div>`;
       }
+      case 'sabotage':
+        return `
+          <div class="mg-intro pop">
+            <div class="mg-badge sabotage">SABOTAGGIO</div>
+            <div class="phase-title">Gli ultimi in classifica scelgono chi colpire!</div>
+            <div class="attacks">${st.saboteurs.map((s) => `
+              <div class="attack">🔻 <b>${this.name(s.playerId)}</b> · ${s.left} ${s.left === 1 ? 'attacco' : 'attacchi'}</div>`).join('')}
+            </div>
+            <div class="sub">Pronti: <b data-live></b></div>
+          </div>`;
+      case 'sabotageResult':
+        return `
+          <div class="phase-title pop">🔻 Sabotaggio!</div>
+          <div class="attacks">${st.events.map((e, i) => `<div class="attack pop" style="animation-delay:${0.15 + i * 0.45}s">${this.eventText(e)}</div>`).join('')}</div>`;
     }
   }
 
@@ -437,16 +483,38 @@ export class HostUI {
       ? `Servono almeno ${CONFIG.MIN_PLAYERS} giocatori (puoi aggiungere dei bot per provare).`
       : ok ? 'Tutti pronti! Si può partire.' : 'In attesa che tutti premano «Pronto!»…';
     const url = this.join?.urls[this.join.index];
-    const join = this.join && url
-      ? `<img class="qr" src="${this.join.qr}" alt="QR code per entrare">
+    const other = this.join && this.join.urls.length > 1 ? '<button class="link-btn small" data-act="url">Non funziona? Prova un altro indirizzo ↻</button>' : '';
+    const wifiForm = `
+      <form id="wifi-form" class="wifi-form">
+        <div class="muted small">Nome e password dell'hotspot (del telefono o del PC): comparirà il QR per collegarsi.</div>
+        <input name="ssid" placeholder="Nome della rete" maxlength="32" value="${esc(this.wifi?.ssid ?? '')}" required>
+        <input name="password" placeholder="Password" maxlength="63" value="${esc(this.wifi?.password ?? '')}">
+        <div><button class="btn" type="submit">Mostra QR</button> <button class="btn secondary" type="button" data-act="wifi-cancel">Annulla</button></div>
+      </form>`;
+    let join = '<div class="join-text"><div class="muted">Preparazione…</div></div>';
+    if (this.join && url && this.wifi && !this.wifiForm) {
+      // Gioco senza internet: prima ci si collega alla rete dell'hotspot, poi si apre il gioco.
+      join = `
+        <div class="join-steps">
+          <div class="join-step"><span class="step-n">1</span><img class="qr small" src="${this.wifi.qr}" alt="QR della rete Wi-Fi">
+            <div class="muted small">Collegati alla rete</div><b class="wifi-name">📶 ${esc(this.wifi.ssid)}</b>
+            ${this.wifi.password ? `<small>password: <b>${esc(this.wifi.password)}</b></small>` : '<small>rete aperta</small>'}</div>
+          <div class="join-step"><span class="step-n">2</span><img class="qr small" src="${this.join.qr}" alt="QR del gioco">
+            <div class="muted small">Apri il gioco</div><div class="join-url small">${esc(url.replace(/^https?:\/\//, ''))}</div>${other}</div>
+          <div class="join-step code"><div class="muted small">Codice stanza</div><div class="room-code">${esc(s.code)}</div>
+            ${this.wifi.source === 'manual' ? '<button class="link-btn small" data-act="wifi-open">Cambia rete</button> <button class="link-btn small" data-act="wifi-clear">Togli</button>' : '<small class="muted">Hotspot del PC 🌲</small>'}</div>
+        </div>`;
+    } else if (this.join && url) {
+      join = `<img class="qr" src="${this.join.qr}" alt="QR code per entrare">
          <div class="join-text">
            <div class="muted">Dal telefono (stesso Wi-Fi) inquadra il QR oppure apri</div>
            <div class="join-url">${esc(url.replace(/^https?:\/\//, ''))}</div>
-           ${this.join.urls.length > 1 ? '<button class="link-btn small" data-act="url">Non funziona? Prova un altro indirizzo ↻</button>' : ''}
+           ${other}
            <div class="muted">Codice stanza</div>
            <div class="room-code">${esc(s.code)}</div>
-         </div>`
-      : '<div class="join-text"><div class="muted">Preparazione…</div></div>';
+           ${this.wifiForm ? wifiForm : '<button class="link-btn small" data-act="wifi-open">🌲 Senza internet? Mostra il QR dell\'hotspot</button>'}
+         </div>`;
+    }
 
     const active = d.packs.filter((p) => !st.excluded.includes(p.id));
     const totals = active.reduce((t, p) => ({ mc: t.mc + p.multiple + p.truefalse, num: t.num + p.numeric }), { mc: 0, num: 0 });

@@ -1,0 +1,56 @@
+COME GIOCARE
+============
+
+Servono: un computer con lo schermo (o la TV) e gli smartphone degli amici, tutti collegati
+alla STESSA rete Wi-Fi. Non serve internet.
+
+1) Avvia il gioco (vedi sotto, secondo il tuo sistema).
+2) Sullo schermo compare un QR code: ogni amico lo inquadra col telefono ed entra in partita.
+3) Dalla lobby si sceglie la durata, i giochi e i pacchetti di domande. Il menu «Gioco» ha anche
+   il Laboratorio per scrivere le tue domande.
+
+Tasti utili: F11 = schermo intero, Esc = esci dallo schermo intero.
+
+
+WINDOWS
+-------
+Fai doppio clic sul file .exe: non si installa nulla.
+- Al primo avvio compare «Windows ha protetto il PC» (SmartScreen): premi «Ulteriori informazioni»
+  e poi «Esegui comunque». Succede con tutte le app gratuite non firmate.
+- Windows chiede il permesso del firewall: spunta ANCHE «Reti pubbliche» e consenti, altrimenti
+  i telefoni non riescono a collegarsi.
+
+MAC
+---
+Apri il .dmg e trascina l'app nella cartella Applicazioni.
+- Al primo avvio NON fare doppio clic: tasto destro sull'app → «Apri» → «Apri».
+  (L'app non è firmata da Apple, che richiede un abbonamento a pagamento.)
+- Se macOS dice che l'app «è danneggiata», apri il Terminale e scrivi:
+      xattr -cr /Applications/NOME-APP.app
+- macOS chiede il permesso per le connessioni di rete in ingresso: consenti.
+
+LINUX
+-----
+Il file .AppImage è un programma unico:
+- Rendilo eseguibile: tasto destro → Proprietà → Permessi → «Consenti l'esecuzione», oppure
+      chmod +x NomeFile.AppImage
+- Poi doppio clic (o ./NomeFile.AppImage da terminale).
+- Se non parte, serve FUSE: su Ubuntu/Debian installa «libfuse2» (o «libfuse2t64»).
+- Il firewall (ufw) deve lasciar passare la porta 3000:  sudo ufw allow 3000/tcp
+
+
+GIOCARE SENZA INTERNET (anche nel bosco)
+----------------------------------------
+Basta una rete Wi-Fi locale, anche senza internet:
+- Hotspot di un telefono: attivalo (anche con i dati mobili spenti), collega il computer a quella
+  rete e avvia il gioco. Nella lobby premi «Senza internet? Mostra il QR dell'hotspot».
+- Solo Windows con Wi-Fi: dal menu «Gioco» → «Accendi l'hotspot (modalità bosco)». Il computer crea
+  la rete da solo e sullo schermo compaiono due QR: il primo collega il telefono alla rete,
+  il secondo apre il gioco.
+
+
+LE TUE DOMANDE
+--------------
+I pacchetti creati nel Laboratorio si salvano nella cartella dei dati dell'utente
+(menu «Gioco» → «Apri la cartella dei pacchetti»). Fanne una copia per sicurezza: sono semplici
+file .json che puoi scambiare con gli amici.

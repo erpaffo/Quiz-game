@@ -3,29 +3,40 @@ import { resolve } from 'node:path';
 import { CATEGORY_COLORS, newId, validatePack, type Pack, type PackQuestion } from '../shared/packs';
 import type { PackSummary, PhoneQuestion } from '../shared/types';
 
-const BUILTIN_DIR = resolve(import.meta.dirname, 'data/packs');
+// Cartelle predefinite (avvio da terminale). L'app desktop passa le proprie: nel suo bundle CommonJS
+// import.meta non esiste, quindi i valori predefiniti si calcolano solo quando servono davvero.
+const defaultBuiltinDir = () => resolve(import.meta.dirname, 'data/packs');
 /** I pacchetti creati dagli utenti: file JSON leggibili e copiabili a mano. */
-export const USER_DIR = resolve(import.meta.dirname, '../user-packs');
+const defaultUserDir = () => resolve(import.meta.dirname, '../user-packs');
 export const PHONE_PACK_ID = 'telefono';
+
+export interface PackStoreOptions {
+  builtinDir?: string;
+  userDir?: string;
+}
 
 export class PackStore {
   private packs = new Map<string, Pack>();
   private listeners = new Set<() => void>();
+  readonly userDir: string;
+  private readonly builtinDir: string;
 
-  constructor() {
-    mkdirSync(USER_DIR, { recursive: true });
-    for (const file of readdirSync(BUILTIN_DIR).filter((f) => f.endsWith('.json'))) {
+  constructor(opts: PackStoreOptions = {}) {
+    this.builtinDir = opts.builtinDir ?? defaultBuiltinDir();
+    this.userDir = opts.userDir ?? defaultUserDir();
+    mkdirSync(this.userDir, { recursive: true });
+    for (const file of readdirSync(this.builtinDir).filter((f) => f.endsWith('.json'))) {
       try {
-        const raw = JSON.parse(readFileSync(resolve(BUILTIN_DIR, file), 'utf8'));
+        const raw = JSON.parse(readFileSync(resolve(this.builtinDir, file), 'utf8'));
         const pack = validatePack(raw);
         this.packs.set(raw.id, { ...pack, id: raw.id, builtIn: true, updatedAt: 0 });
       } catch (err) {
         console.warn(`[pacchetti] pacchetto di serie ${file} ignorato: ${(err as Error).message}`);
       }
     }
-    for (const file of readdirSync(USER_DIR).filter((f) => f.endsWith('.json'))) {
+    for (const file of readdirSync(this.userDir).filter((f) => f.endsWith('.json'))) {
       try {
-        const raw = JSON.parse(readFileSync(resolve(USER_DIR, file), 'utf8'));
+        const raw = JSON.parse(readFileSync(resolve(this.userDir, file), 'utf8'));
         const pack = validatePack(raw);
         if (this.packs.get(pack.id)?.builtIn) continue;
         this.packs.set(pack.id, { ...pack, updatedAt: Number(raw.updatedAt) || Date.now() });
@@ -69,7 +80,7 @@ export class PackStore {
   save(input: unknown, id?: string): Pack {
     const pack = validatePack(id ? { ...(input as object), id } : input);
     if (this.packs.get(pack.id)?.builtIn) throw new Error('Il pacchetto di serie non si può modificare: duplicalo e modifica la copia');
-    writeFileSync(resolve(USER_DIR, `${pack.id}.json`), JSON.stringify(pack, null, 1), 'utf8');
+    writeFileSync(resolve(this.userDir, `${pack.id}.json`), JSON.stringify(pack, null, 1), 'utf8');
     this.packs.set(pack.id, pack);
     this.changed();
     return pack;
@@ -79,7 +90,7 @@ export class PackStore {
     const pack = this.packs.get(id);
     if (!pack) throw new Error('Pacchetto inesistente');
     if (pack.builtIn) throw new Error('Il pacchetto di serie non si può eliminare');
-    const file = resolve(USER_DIR, `${id}.json`);
+    const file = resolve(this.userDir, `${id}.json`);
     if (existsSync(file)) unlinkSync(file);
     this.packs.delete(id);
     this.changed();

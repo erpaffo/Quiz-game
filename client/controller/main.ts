@@ -1,11 +1,12 @@
 import '@fontsource/baloo-2/500.css';
 import '@fontsource/baloo-2/700.css';
 import '@fontsource/baloo-2/800.css';
-import { CARDS, isAttack } from '../../shared/cards';
+import { brandLogoHtml } from '../../shared/brand';
+import { cardDescription, CARDS, isAttack } from '../../shared/cards';
 import { CHARACTERS, getCharacter } from '../../shared/characters';
 import { CONFIG } from '../../shared/config';
 import { GAMES } from '../../shared/games';
-import type { CardEvent, CardType, GameAction, PlayerPublic, PlayState, PowerType, RoomSnapshot } from '../../shared/types';
+import type { CardEvent, CardType, GameAction, GameId, PlayerPublic, PlayState, PowerType, RoomSnapshot } from '../../shared/types';
 import '../common/base.css';
 import { clock, createSocket, esc, OPTION_COLORS, OPTION_LETTERS, PLAYER_COLORS } from '../common/net';
 import { addQuestionSheet } from './addQuestion';
@@ -43,6 +44,7 @@ const local = {
   skinIdx: 0,
   jokerArmed: false,
   cardPick: null as CardType | null,
+  sabotagePick: null as PowerType | null,
   sheet: false,
   lastCategory: 'Domande degli amici',
   endsAt: null as number | null,
@@ -221,6 +223,8 @@ function keyOf(snap: RoomSnapshot, p: PlayerPublic): string {
           return `${g}|num|${st.question.id}|${m.myNumeric}`;
         case 'blitz':
           return `${g}|blitz|${m.blitz?.question.id}`;
+        case 'sabotage':
+          return `${g}|sab|${m.sabotage?.left ?? 0}|${local.sabotagePick}`;
         default:
           return `${g}|${st.step}|${'question' in st ? st.question.id : ''}|${snap.endsAt}`;
       }
@@ -248,6 +252,7 @@ function render(force = false) {
     lastPhase = phaseId;
     local.jokerArmed = false;
     local.cardPick = null;
+    local.sabotagePick = null;
     if (s.phase !== 'LOBBY') local.sheet = false;
   }
 
@@ -278,7 +283,7 @@ function render(force = false) {
     }
 
     case 'CARD_PICK':
-      return cardPickView(p);
+      return cardPickView(d.game, p);
 
     case 'CARD_RESOLVE':
       return cardResolveView(d.events, p);
@@ -325,7 +330,7 @@ function renderHeader(snap: RoomSnapshot, p: PlayerPublic) {
 
 // ------------------------------------------------------------ carte
 
-function cardPickView(p: PlayerPublic) {
+function cardPickView(game: GameId, p: PlayerPublic) {
   const m = s!.me!;
   if (m.playsLeft === 0) {
     const played = m.played.map((c) => `${CARDS[c.card].icon} ${CARDS[c.card].label}${c.targetId ? ` → ${nameOf(c.targetId)}` : ''}`);
@@ -342,9 +347,10 @@ function cardPickView(p: PlayerPublic) {
         <div class="card-list">${m.hand.map((t) => {
           const c = CARDS[t];
           return `<button class="card-btn ${c.kind}" data-card="${t}" style="--pw:${c.color}">
-            <span class="pi">${c.icon}</span><span><em>${{ attack: 'Attacco', defense: 'Difesa', bonus: 'Bonus' }[c.kind]}</em><b>${c.label}</b><small>${c.description}</small></span>
+            <span class="pi">${c.icon}</span><span><em>${{ attack: 'Attacco', defense: 'Difesa', bonus: 'Bonus' }[c.kind]}</em><b>${c.label}</b><small>${esc(cardDescription(t, game))}</small></span>
           </button>`;
         }).join('')}</div>
+        ${GAMES[game].cards.note ? `<div class="muted small">⚖️ ${esc(GAMES[game].cards.note)}</div>` : ''}
         <button class="link-btn" data-act="skip">Non giocare carte</button>
       </div>`;
   }
@@ -415,6 +421,7 @@ function questionBanner(game: string, st: Extract<PlayState, { step: 'question' 
   if (game === 'fastest') return `⚡ Solo il primo che risponde giusto vince!${extra}`;
   if (game === 'clues') return `🧩 Rispondi prima che si sveli tutto!${extra}`;
   if (game === 'pyramid') return '🔺 Finale: rispondi giusto per salire';
+  if (game === 'music' || st.question.audio) return `🎵 <b>Ascolta il brano dallo schermo!</b>${extra}`;
   return extra ? extra.slice(3) : undefined;
 }
 
@@ -587,7 +594,68 @@ function playView(game: string, st: PlayState, p: PlayerPublic) {
       const pr = st.progress.find((x) => x.playerId === p.id);
       return wait(`<div class="big-icon">🔥</div><b>${pr?.correct ?? 0}</b> giuste su ${pr?.answered ?? 0}<div class="points">${pts(pr?.points ?? 0)}</div>`, 'Guarda la classifica sullo schermo');
     }
+
+    case 'sabotage':
+      return sabotageView(st, p);
+
+    case 'sabotageResult': {
+      const lines = st.events.map((e) => describe(e, p.id)).filter(Boolean);
+      if (st.events.some((e) => e.result === 'hit' && e.path[e.path.length - 1] === p.id)) navigator.vibrate?.([120, 60, 120]);
+      if (!lines.length) return wait('<div class="big-icon">🔻</div>Nessun sabotaggio per te', 'Prossima domanda in arrivo…');
+      app.innerHTML = `<div class="view center"><div class="title">🔻 Sabotaggio</div><div class="incoming">${lines.map((l) => `<div class="pop">${l}</div>`).join('')}</div></div>`;
+      return;
+    }
   }
+}
+
+const SABOTAGE_CARDS: PowerType[] = ['ICE', 'GOO', 'BOMB', 'LOCK'];
+
+/** Piramide: chi è in fondo sceglie un attacco e il bersaglio (l'ultimo ne ha 2, il penultimo 1). */
+function sabotageView(st: Extract<PlayState, { step: 'sabotage' }>, p: PlayerPublic) {
+  const left = s!.me!.sabotage?.left ?? 0;
+  if (left === 0) {
+    const mine = st.saboteurs.some((x) => x.playerId === p.id);
+    return wait(
+      mine ? '<div class="big-icon">🔻</div>Attacchi inviati!' : '<div class="big-icon">😬</div>Sabotaggio in corso…',
+      mine ? 'Guarda lo schermo' : `Stanno scegliendo: ${st.saboteurs.map((x) => nameOf(x.playerId)).join(', ')}`
+    );
+  }
+  if (local.sabotagePick) {
+    const c = CARDS[local.sabotagePick];
+    targetList(`${c.icon} ${c.label}: chi colpisci?`, p, '‹ Cambia attacco');
+  } else {
+    app.innerHTML = `
+      <div class="view">
+        <div class="title">🔻 Sabotaggio!</div>
+        <div class="q-banner">Sei in fondo alla piramide: hai <b>${left}</b> ${left === 1 ? 'attacco' : 'attacchi'} da lanciare contro chi vuoi</div>
+        <div class="card-list">${SABOTAGE_CARDS.map((t) => {
+          const c = CARDS[t];
+          return `<button class="card-btn attack" data-card="${t}" style="--pw:${c.color}">
+            <span class="pi">${c.icon}</span><span><em>Attacco</em><b>${c.label}</b><small>${esc(cardDescription(t, 'pyramid'))}</small></span>
+          </button>`;
+        }).join('')}</div>
+        <button class="link-btn" data-act="skip">Rinuncia</button>
+      </div>`;
+  }
+  onClick((t) => {
+    const card = t.closest<HTMLElement>('[data-card]')?.dataset.card as PowerType | undefined;
+    const target = t.closest<HTMLElement>('[data-target]')?.dataset.target;
+    if (card) {
+      local.sabotagePick = card;
+      return render();
+    }
+    if (target && local.sabotagePick) {
+      const c = local.sabotagePick;
+      local.sabotagePick = null;
+      navigator.vibrate?.(25);
+      return void gameAction({ type: 'sabotage', card: c, targetId: target });
+    }
+    if (t.closest('[data-act="back"]')) {
+      local.sabotagePick = null;
+      return render();
+    }
+    if (t.closest('[data-act="skip"]')) void gameAction({ type: 'sabotage', card: null, targetId: null });
+  });
 }
 
 // ------------------------------------------------------------ lobby
@@ -739,7 +807,7 @@ function renderJoin(error = '') {
   head.innerHTML = '';
   app.innerHTML = `
     <form class="view join">
-      <div class="join-logo">Sapere <span>è</span> Potere</div>
+      <div class="join-logo">${brandLogoHtml()}</div>
       <label>Codice stanza
         <input name="code" maxlength="4" autocomplete="off" autocapitalize="characters" required value="${esc(urlRoom || session?.code || '')}" placeholder="ABCD">
       </label>

@@ -42,7 +42,7 @@ export class ClassicGame implements GameMode {
   private next() {
     if (this.n >= CONFIG.CLASSIC_QUESTIONS) return this.ctx.finish();
     this.n++;
-    const def = this.ctx.pool.drawMc(this.category?.id);
+    const def = this.ctx.pool.drawMc({ categoryId: this.category?.id });
     const pub = this.ctx.publicMc(def, this.n, CONFIG.CLASSIC_QUESTIONS);
     this.round = new McRound(def, pub, this.ctx.dur('QUESTION'));
     this.ctx.present(def);

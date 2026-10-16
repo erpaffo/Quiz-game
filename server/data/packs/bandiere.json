@@ -55,7 +55,8 @@
     "Uzbekistan",
     "Corea del Nord"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-af",
@@ -74,7 +75,8 @@
     "/flags/il.svg",
     "/flags/bh.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-al",
@@ -88,7 +90,8 @@
     "Regno Unito",
     "Bosnia ed Erzegovina"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-al",
@@ -107,7 +110,8 @@
     "/flags/bg.svg",
     "/flags/is.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-dz",
@@ -121,7 +125,8 @@
     "Ghana",
     "Sudan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-dz",
@@ -140,7 +145,8 @@
     "/flags/cf.svg",
     "/flags/dj.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ad",
@@ -154,7 +160,8 @@
     "Slovenia",
     "Città del Vaticano"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ad",
@@ -173,7 +180,8 @@
     "/flags/ua.svg",
     "/flags/me.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ao",
@@ -187,7 +195,8 @@
     "Sierra Leone",
     "Gabon"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ao",
@@ -206,7 +215,8 @@
     "/flags/mg.svg",
     "/flags/sd.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ag",
@@ -220,7 +230,8 @@
     "Saint Kitts e Nevis",
     "Panama"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ag",
@@ -239,7 +250,8 @@
     "/flags/bs.svg",
     "/flags/us.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ar",
@@ -253,7 +265,8 @@
     "Venezuela",
     "Bolivia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ar",
@@ -272,7 +285,8 @@
     "/flags/uy.svg",
     "/flags/pe.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-am",
@@ -286,7 +300,8 @@
     "Bangladesh",
     "Brunei"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-am",
@@ -305,7 +320,8 @@
     "/flags/af.svg",
     "/flags/my.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-au",
@@ -319,7 +335,8 @@
     "Papua Nuova Guinea",
     "Samoa"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-au",
@@ -338,7 +355,8 @@
     "/flags/mh.svg",
     "/flags/fm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-at",
@@ -352,7 +370,8 @@
     "Estonia",
     "Liechtenstein"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-at",
@@ -371,7 +390,8 @@
     "/flags/no.svg",
     "/flags/ch.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-az",
@@ -385,7 +405,8 @@
     "Bahrein",
     "Afghanistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-az",
@@ -404,7 +425,8 @@
     "/flags/la.svg",
     "/flags/bt.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bs",
@@ -418,7 +440,8 @@
     "Belize",
     "Barbados"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-bs",
@@ -437,7 +460,8 @@
     "/flags/ag.svg",
     "/flags/hn.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-bh",
@@ -451,7 +475,8 @@
     "Indonesia",
     "Iraq"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bh",
@@ -470,7 +495,8 @@
     "/flags/vn.svg",
     "/flags/qa.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bd",
@@ -484,7 +510,8 @@
     "Libano",
     "Mongolia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bd",
@@ -503,7 +530,8 @@
     "/flags/ps.svg",
     "/flags/tr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bb",
@@ -517,7 +545,8 @@
     "Saint Kitts e Nevis",
     "Panama"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-bb",
@@ -536,7 +565,8 @@
     "/flags/dm.svg",
     "/flags/ht.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-by",
@@ -550,7 +580,8 @@
     "Slovenia",
     "Danimarca"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-by",
@@ -569,7 +600,8 @@
     "/flags/ua.svg",
     "/flags/se.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-be",
@@ -583,7 +615,8 @@
     "Bosnia ed Erzegovina",
     "Lituania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-be",
@@ -602,7 +635,8 @@
     "/flags/ch.svg",
     "/flags/ad.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-bz",
@@ -616,7 +650,8 @@
     "Barbados",
     "Bahamas"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-bz",
@@ -635,7 +670,8 @@
     "/flags/hn.svg",
     "/flags/lc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-bj",
@@ -649,7 +685,8 @@
     "Algeria",
     "Gibuti"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bj",
@@ -668,7 +705,8 @@
     "/flags/st.svg",
     "/flags/ng.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bt",
@@ -682,7 +720,8 @@
     "Oman",
     "Uzbekistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bt",
@@ -701,7 +740,8 @@
     "/flags/mn.svg",
     "/flags/iq.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bo",
@@ -715,7 +755,8 @@
     "Venezuela",
     "Colombia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-bo",
@@ -734,7 +775,8 @@
     "/flags/gy.svg",
     "/flags/cl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ba",
@@ -748,7 +790,8 @@
     "Svizzera",
     "Serbia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ba",
@@ -767,7 +810,8 @@
     "/flags/hr.svg",
     "/flags/cz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-bw",
@@ -781,7 +825,8 @@
     "Ciad",
     "Guinea Equatoriale"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bw",
@@ -800,7 +845,8 @@
     "/flags/eg.svg",
     "/flags/sl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-br",
@@ -814,7 +860,8 @@
     "Perù",
     "Colombia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-br",
@@ -833,7 +880,8 @@
     "/flags/sr.svg",
     "/flags/ar.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-bn",
@@ -847,7 +895,8 @@
     "Palestina",
     "Thailandia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bn",
@@ -866,7 +915,8 @@
     "/flags/np.svg",
     "/flags/qa.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bg",
@@ -880,7 +930,8 @@
     "Norvegia",
     "Danimarca"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-bg",
@@ -899,7 +950,8 @@
     "/flags/cy.svg",
     "/flags/mk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-bf",
@@ -913,7 +965,8 @@
     "Namibia",
     "Gibuti"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bf",
@@ -932,7 +985,8 @@
     "/flags/ls.svg",
     "/flags/tz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-bi",
@@ -946,7 +1000,8 @@
     "Namibia",
     "Sud Sudan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-bi",
@@ -965,7 +1020,8 @@
     "/flags/zw.svg",
     "/flags/za.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-cv",
@@ -979,7 +1035,8 @@
     "Sudafrica",
     "Sud Sudan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-cv",
@@ -998,7 +1055,8 @@
     "/flags/cm.svg",
     "/flags/lr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kh",
@@ -1012,7 +1070,8 @@
     "Emirati Arabi Uniti",
     "Corea del Nord"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-kh",
@@ -1031,7 +1090,8 @@
     "/flags/ps.svg",
     "/flags/ye.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-cm",
@@ -1045,7 +1105,8 @@
     "Gibuti",
     "Mauritania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-cm",
@@ -1064,7 +1125,8 @@
     "/flags/ne.svg",
     "/flags/na.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ca",
@@ -1078,7 +1140,8 @@
     "Haiti",
     "Honduras"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ca",
@@ -1097,7 +1160,8 @@
     "/flags/gt.svg",
     "/flags/jm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-cf",
@@ -1111,7 +1175,8 @@
     "São Tomé e Príncipe",
     "Mozambico"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-cf",
@@ -1130,7 +1195,8 @@
     "/flags/mg.svg",
     "/flags/mz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-td",
@@ -1144,7 +1210,8 @@
     "Mali",
     "Malawi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-td",
@@ -1163,7 +1230,8 @@
     "/flags/ss.svg",
     "/flags/ng.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-cl",
@@ -1177,7 +1245,8 @@
     "Trinidad e Tobago",
     "Ecuador"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-cl",
@@ -1196,7 +1265,8 @@
     "/flags/uy.svg",
     "/flags/br.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-cn",
@@ -1210,7 +1280,8 @@
     "Sri Lanka",
     "Palestina"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-cn",
@@ -1229,7 +1300,8 @@
     "/flags/in.svg",
     "/flags/my.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-co",
@@ -1243,7 +1315,8 @@
     "Ecuador",
     "Argentina"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-co",
@@ -1262,7 +1335,8 @@
     "/flags/bo.svg",
     "/flags/br.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-km",
@@ -1276,7 +1350,8 @@
     "Repubblica Democratica del Congo",
     "Egitto"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-km",
@@ -1295,7 +1370,8 @@
     "/flags/zw.svg",
     "/flags/gn.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-cg",
@@ -1309,7 +1385,8 @@
     "Mozambico",
     "Comore"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-cg",
@@ -1328,7 +1405,8 @@
     "/flags/cf.svg",
     "/flags/mu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-cd",
@@ -1342,7 +1420,8 @@
     "Costa d'Avorio",
     "Somalia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-cd",
@@ -1361,7 +1440,8 @@
     "/flags/ls.svg",
     "/flags/ml.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-cr",
@@ -1375,7 +1455,8 @@
     "Stati Uniti",
     "Guatemala"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-cr",
@@ -1394,7 +1475,8 @@
     "/flags/hn.svg",
     "/flags/sv.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ci",
@@ -1408,7 +1490,8 @@
     "Sud Sudan",
     "Somalia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ci",
@@ -1427,7 +1510,8 @@
     "/flags/gw.svg",
     "/flags/cg.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-hr",
@@ -1441,7 +1525,8 @@
     "Serbia",
     "Monaco"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-hr",
@@ -1460,7 +1545,8 @@
     "/flags/ua.svg",
     "/flags/ad.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-cu",
@@ -1474,7 +1560,8 @@
     "Saint Kitts e Nevis",
     "Dominica"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-cu",
@@ -1493,7 +1580,8 @@
     "/flags/kn.svg",
     "/flags/bz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-cy",
@@ -1507,7 +1595,8 @@
     "San Marino",
     "Russia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-cy",
@@ -1526,7 +1615,8 @@
     "/flags/mc.svg",
     "/flags/md.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-cz",
@@ -1540,7 +1630,8 @@
     "Belgio",
     "Albania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-cz",
@@ -1559,7 +1650,8 @@
     "/flags/gb.svg",
     "/flags/al.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-dk",
@@ -1573,7 +1665,8 @@
     "Germania",
     "Liechtenstein"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-dk",
@@ -1592,7 +1685,8 @@
     "/flags/no.svg",
     "/flags/nl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-dj",
@@ -1606,7 +1700,8 @@
     "Algeria",
     "Kenya"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-dj",
@@ -1625,7 +1720,8 @@
     "/flags/cg.svg",
     "/flags/mw.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-dm",
@@ -1639,7 +1735,8 @@
     "Saint Lucia",
     "El Salvador"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-dm",
@@ -1658,7 +1755,8 @@
     "/flags/bz.svg",
     "/flags/cu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-do",
@@ -1672,7 +1770,8 @@
     "Saint Lucia",
     "Guatemala"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-do",
@@ -1691,7 +1790,8 @@
     "/flags/jm.svg",
     "/flags/ca.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ec",
@@ -1705,7 +1805,8 @@
     "Venezuela",
     "Perù"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ec",
@@ -1724,7 +1825,8 @@
     "/flags/tt.svg",
     "/flags/ve.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-eg",
@@ -1738,7 +1840,8 @@
     "Guinea",
     "Sierra Leone"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-eg",
@@ -1757,7 +1860,8 @@
     "/flags/tn.svg",
     "/flags/na.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sv",
@@ -1771,7 +1875,8 @@
     "Saint Lucia",
     "Repubblica Dominicana"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-sv",
@@ -1790,7 +1895,8 @@
     "/flags/pa.svg",
     "/flags/hn.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-gq",
@@ -1804,7 +1910,8 @@
     "Ruanda",
     "Nigeria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-gq",
@@ -1823,7 +1930,8 @@
     "/flags/mg.svg",
     "/flags/td.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-er",
@@ -1837,7 +1945,8 @@
     "Sudafrica",
     "Mozambico"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-er",
@@ -1856,7 +1965,8 @@
     "/flags/tz.svg",
     "/flags/dj.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ee",
@@ -1870,7 +1980,8 @@
     "Ucraina",
     "Spagna"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ee",
@@ -1889,7 +2000,8 @@
     "/flags/ua.svg",
     "/flags/ru.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-sz",
@@ -1903,7 +2015,8 @@
     "Namibia",
     "Angola"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sz",
@@ -1922,7 +2035,8 @@
     "/flags/bj.svg",
     "/flags/sn.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-et",
@@ -1936,7 +2050,8 @@
     "Capo Verde",
     "Camerun"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-et",
@@ -1955,7 +2070,8 @@
     "/flags/lr.svg",
     "/flags/cd.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-fj",
@@ -1969,7 +2085,8 @@
     "Kiribati",
     "Tonga"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-fj",
@@ -1988,7 +2105,8 @@
     "/flags/au.svg",
     "/flags/fm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-fi",
@@ -2002,7 +2120,8 @@
     "Cipro",
     "Città del Vaticano"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-fi",
@@ -2021,7 +2140,8 @@
     "/flags/ad.svg",
     "/flags/cy.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-fr",
@@ -2035,7 +2155,8 @@
     "Russia",
     "Liechtenstein"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-fr",
@@ -2054,7 +2175,8 @@
     "/flags/cz.svg",
     "/flags/mk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ga",
@@ -2068,7 +2190,8 @@
     "Costa d'Avorio",
     "Ghana"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ga",
@@ -2087,7 +2210,8 @@
     "/flags/mw.svg",
     "/flags/ma.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-gm",
@@ -2101,7 +2225,8 @@
     "Burkina Faso",
     "Nigeria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-gm",
@@ -2120,7 +2245,8 @@
     "/flags/tz.svg",
     "/flags/sc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ge",
@@ -2134,7 +2260,8 @@
     "Corea del Nord",
     "Kazakistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ge",
@@ -2153,7 +2280,8 @@
     "/flags/kg.svg",
     "/flags/bh.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-de",
@@ -2167,7 +2295,8 @@
     "Italia",
     "Norvegia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-de",
@@ -2186,7 +2315,8 @@
     "/flags/al.svg",
     "/flags/is.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-gh",
@@ -2200,7 +2330,8 @@
     "Burundi",
     "Eswatini"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-gh",
@@ -2219,7 +2350,8 @@
     "/flags/sd.svg",
     "/flags/ao.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-gr",
@@ -2233,7 +2365,8 @@
     "Bielorussia",
     "Spagna"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-gr",
@@ -2252,7 +2385,8 @@
     "/flags/rs.svg",
     "/flags/de.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-gd",
@@ -2266,7 +2400,8 @@
     "El Salvador",
     "Saint Lucia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-gd",
@@ -2285,7 +2420,8 @@
     "/flags/jm.svg",
     "/flags/us.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-gt",
@@ -2299,7 +2435,8 @@
     "Messico",
     "Haiti"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-gt",
@@ -2318,7 +2455,8 @@
     "/flags/mx.svg",
     "/flags/do.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-gn",
@@ -2332,7 +2470,8 @@
     "Gambia",
     "Benin"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-gn",
@@ -2351,7 +2490,8 @@
     "/flags/tg.svg",
     "/flags/rw.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-gw",
@@ -2365,7 +2505,8 @@
     "Angola",
     "Algeria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-gw",
@@ -2384,7 +2525,8 @@
     "/flags/rw.svg",
     "/flags/sz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-gy",
@@ -2398,7 +2540,8 @@
     "Suriname",
     "Uruguay"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-gy",
@@ -2417,7 +2560,8 @@
     "/flags/tt.svg",
     "/flags/ar.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ht",
@@ -2431,7 +2575,8 @@
     "Guatemala",
     "Nicaragua"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ht",
@@ -2450,7 +2595,8 @@
     "/flags/gt.svg",
     "/flags/mx.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-hn",
@@ -2464,7 +2610,8 @@
     "Repubblica Dominicana",
     "Dominica"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-hn",
@@ -2483,7 +2630,8 @@
     "/flags/cu.svg",
     "/flags/jm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-hu",
@@ -2497,7 +2645,8 @@
     "Malta",
     "Montenegro"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-hu",
@@ -2516,7 +2665,8 @@
     "/flags/ee.svg",
     "/flags/ba.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-is",
@@ -2530,7 +2680,8 @@
     "Albania",
     "Repubblica Ceca"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-is",
@@ -2549,7 +2700,8 @@
     "/flags/md.svg",
     "/flags/es.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-in",
@@ -2563,7 +2715,8 @@
     "Yemen",
     "Israele"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-in",
@@ -2582,7 +2735,8 @@
     "/flags/sg.svg",
     "/flags/bd.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-id",
@@ -2596,7 +2750,8 @@
     "Armenia",
     "Yemen"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-id",
@@ -2615,7 +2770,8 @@
     "/flags/kg.svg",
     "/flags/az.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ir",
@@ -2629,7 +2785,8 @@
     "Armenia",
     "Uzbekistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ir",
@@ -2648,7 +2805,8 @@
     "/flags/pk.svg",
     "/flags/qa.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-iq",
@@ -2662,7 +2820,8 @@
     "Myanmar",
     "Vietnam"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-iq",
@@ -2681,7 +2840,8 @@
     "/flags/bh.svg",
     "/flags/kr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ie",
@@ -2695,7 +2855,8 @@
     "Liechtenstein",
     "Danimarca"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ie",
@@ -2714,7 +2875,8 @@
     "/flags/rs.svg",
     "/flags/mc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-il",
@@ -2728,7 +2890,8 @@
     "Cambogia",
     "Thailandia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-il",
@@ -2747,7 +2910,8 @@
     "/flags/iq.svg",
     "/flags/af.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-it",
@@ -2761,7 +2925,8 @@
     "Montenegro",
     "Irlanda"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-it",
@@ -2780,7 +2945,8 @@
     "/flags/hu.svg",
     "/flags/nl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-jm",
@@ -2794,7 +2960,8 @@
     "Saint Lucia",
     "Nicaragua"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-jm",
@@ -2813,7 +2980,8 @@
     "/flags/kn.svg",
     "/flags/bb.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-jp",
@@ -2827,7 +2995,8 @@
     "Kazakistan",
     "Iraq"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-jp",
@@ -2846,7 +3015,8 @@
     "/flags/ps.svg",
     "/flags/bt.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-jo",
@@ -2860,7 +3030,8 @@
     "Malaysia",
     "Bangladesh"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-jo",
@@ -2879,7 +3050,8 @@
     "/flags/pk.svg",
     "/flags/ye.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kz",
@@ -2893,7 +3065,8 @@
     "Cambogia",
     "Singapore"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-kz",
@@ -2912,7 +3085,8 @@
     "/flags/in.svg",
     "/flags/az.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ke",
@@ -2926,7 +3100,8 @@
     "Burundi",
     "Nigeria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ke",
@@ -2945,7 +3120,8 @@
     "/flags/sl.svg",
     "/flags/bi.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ki",
@@ -2959,7 +3135,8 @@
     "Isole Marshall",
     "Isole Salomone"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ki",
@@ -2978,7 +3155,8 @@
     "/flags/fm.svg",
     "/flags/to.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kp",
@@ -2992,7 +3170,8 @@
     "Tagikistan",
     "Pakistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-kp",
@@ -3011,7 +3190,8 @@
     "/flags/ge.svg",
     "/flags/ir.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kr",
@@ -3025,7 +3205,8 @@
     "Armenia",
     "Israele"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-kr",
@@ -3044,7 +3225,8 @@
     "/flags/my.svg",
     "/flags/kp.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kw",
@@ -3058,7 +3240,8 @@
     "Thailandia",
     "Kazakistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-kw",
@@ -3077,7 +3260,8 @@
     "/flags/kr.svg",
     "/flags/iq.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kg",
@@ -3091,7 +3275,8 @@
     "Kazakistan",
     "Singapore"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-kg",
@@ -3110,7 +3295,8 @@
     "/flags/my.svg",
     "/flags/ge.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-la",
@@ -3124,7 +3310,8 @@
     "Turchia",
     "Uzbekistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-la",
@@ -3143,7 +3330,8 @@
     "/flags/ph.svg",
     "/flags/in.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-lv",
@@ -3157,7 +3345,8 @@
     "Lituania",
     "Francia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-lv",
@@ -3176,7 +3365,8 @@
     "/flags/md.svg",
     "/flags/ba.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-lb",
@@ -3190,7 +3380,8 @@
     "Iran",
     "Armenia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-lb",
@@ -3209,7 +3400,8 @@
     "/flags/ps.svg",
     "/flags/om.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ls",
@@ -3223,7 +3415,8 @@
     "Mauritania",
     "Kenya"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ls",
@@ -3242,7 +3435,8 @@
     "/flags/ga.svg",
     "/flags/ly.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-lr",
@@ -3256,7 +3450,8 @@
     "São Tomé e Príncipe",
     "Botswana"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-lr",
@@ -3275,7 +3470,8 @@
     "/flags/gw.svg",
     "/flags/na.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ly",
@@ -3289,7 +3485,8 @@
     "Repubblica del Congo",
     "Ghana"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ly",
@@ -3308,7 +3505,8 @@
     "/flags/et.svg",
     "/flags/km.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-li",
@@ -3322,7 +3520,8 @@
     "Lettonia",
     "Irlanda"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-li",
@@ -3341,7 +3540,8 @@
     "/flags/gb.svg",
     "/flags/mc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-lt",
@@ -3355,7 +3555,8 @@
     "Bielorussia",
     "Montenegro"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-lt",
@@ -3374,7 +3575,8 @@
     "/flags/es.svg",
     "/flags/ad.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-lu",
@@ -3388,7 +3590,8 @@
     "Bielorussia",
     "Paesi Bassi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-lu",
@@ -3407,7 +3610,8 @@
     "/flags/hu.svg",
     "/flags/hr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-mg",
@@ -3421,7 +3625,8 @@
     "Namibia",
     "Angola"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mg",
@@ -3440,7 +3645,8 @@
     "/flags/eg.svg",
     "/flags/ug.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mw",
@@ -3454,7 +3660,8 @@
     "Comore",
     "Mali"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mw",
@@ -3473,7 +3680,8 @@
     "/flags/cd.svg",
     "/flags/bj.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-my",
@@ -3487,7 +3695,8 @@
     "Afghanistan",
     "Cambogia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-my",
@@ -3506,7 +3715,8 @@
     "/flags/vn.svg",
     "/flags/mv.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mv",
@@ -3520,7 +3730,8 @@
     "Timor Est",
     "Indonesia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mv",
@@ -3539,7 +3750,8 @@
     "/flags/cn.svg",
     "/flags/pk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ml",
@@ -3553,7 +3765,8 @@
     "Niger",
     "Repubblica del Congo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ml",
@@ -3572,7 +3785,8 @@
     "/flags/tg.svg",
     "/flags/tn.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mt",
@@ -3586,7 +3800,8 @@
     "Grecia",
     "Belgio"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-mt",
@@ -3605,7 +3820,8 @@
     "/flags/lu.svg",
     "/flags/li.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-mh",
@@ -3619,7 +3835,8 @@
     "Tonga",
     "Tuvalu"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mh",
@@ -3638,7 +3855,8 @@
     "/flags/sb.svg",
     "/flags/nz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mr",
@@ -3652,7 +3870,8 @@
     "Camerun",
     "Lesotho"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mr",
@@ -3671,7 +3890,8 @@
     "/flags/mw.svg",
     "/flags/ls.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mu",
@@ -3685,7 +3905,8 @@
     "Comore",
     "São Tomé e Príncipe"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mu",
@@ -3704,7 +3925,8 @@
     "/flags/sl.svg",
     "/flags/rw.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mx",
@@ -3718,7 +3940,8 @@
     "Saint Vincent e Grenadine",
     "Cuba"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-mx",
@@ -3737,7 +3960,8 @@
     "/flags/us.svg",
     "/flags/ca.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-fm",
@@ -3751,7 +3975,8 @@
     "Australia",
     "Kiribati"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-fm",
@@ -3770,7 +3995,8 @@
     "/flags/sb.svg",
     "/flags/au.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-md",
@@ -3784,7 +4010,8 @@
     "Cipro",
     "Paesi Bassi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-md",
@@ -3803,7 +4030,8 @@
     "/flags/ba.svg",
     "/flags/mc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-mc",
@@ -3817,7 +4045,8 @@
     "Moldavia",
     "Città del Vaticano"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-mc",
@@ -3836,7 +4065,8 @@
     "/flags/lu.svg",
     "/flags/sm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-mn",
@@ -3850,7 +4080,8 @@
     "Brunei",
     "India"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mn",
@@ -3869,7 +4100,8 @@
     "/flags/lb.svg",
     "/flags/kg.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-me",
@@ -3883,7 +4115,8 @@
     "Danimarca",
     "Bulgaria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-me",
@@ -3902,7 +4135,8 @@
     "/flags/mt.svg",
     "/flags/ad.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ma",
@@ -3916,7 +4150,8 @@
     "Comore",
     "Repubblica Centrafricana"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ma",
@@ -3935,7 +4170,8 @@
     "/flags/gh.svg",
     "/flags/tz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mz",
@@ -3949,7 +4185,8 @@
     "Ciad",
     "Burundi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mz",
@@ -3968,7 +4205,8 @@
     "/flags/dj.svg",
     "/flags/km.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mm",
@@ -3982,7 +4220,8 @@
     "Sri Lanka",
     "Azerbaigian"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-mm",
@@ -4001,7 +4240,8 @@
     "/flags/cn.svg",
     "/flags/kp.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-na",
@@ -4015,7 +4255,8 @@
     "Sierra Leone",
     "Zambia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-na",
@@ -4034,7 +4275,8 @@
     "/flags/cf.svg",
     "/flags/mu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-nr",
@@ -4048,7 +4290,8 @@
     "Figi",
     "Tuvalu"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-nr",
@@ -4067,7 +4310,8 @@
     "/flags/ki.svg",
     "/flags/fm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-np",
@@ -4081,7 +4325,8 @@
     "Emirati Arabi Uniti",
     "Azerbaigian"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-np",
@@ -4100,7 +4345,8 @@
     "/flags/sg.svg",
     "/flags/kh.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-nl",
@@ -4114,7 +4360,8 @@
     "Svizzera",
     "Belgio"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-nl",
@@ -4133,7 +4380,8 @@
     "/flags/md.svg",
     "/flags/ru.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-nz",
@@ -4147,7 +4395,8 @@
     "Tuvalu",
     "Palau"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-nz",
@@ -4166,7 +4415,8 @@
     "/flags/pg.svg",
     "/flags/fm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ni",
@@ -4180,7 +4430,8 @@
     "Cuba",
     "Bahamas"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ni",
@@ -4199,7 +4450,8 @@
     "/flags/hn.svg",
     "/flags/lc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ne",
@@ -4213,7 +4465,8 @@
     "Botswana",
     "Togo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ne",
@@ -4232,7 +4485,8 @@
     "/flags/bf.svg",
     "/flags/sd.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ng",
@@ -4246,7 +4500,8 @@
     "Burundi",
     "Comore"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ng",
@@ -4265,7 +4520,8 @@
     "/flags/cg.svg",
     "/flags/mz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-mk",
@@ -4279,7 +4535,8 @@
     "Paesi Bassi",
     "Portogallo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-mk",
@@ -4298,7 +4555,8 @@
     "/flags/ru.svg",
     "/flags/lu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-no",
@@ -4312,7 +4570,8 @@
     "Repubblica Ceca",
     "Islanda"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-no",
@@ -4331,7 +4590,8 @@
     "/flags/pl.svg",
     "/flags/gb.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-om",
@@ -4345,7 +4605,8 @@
     "Sri Lanka",
     "Laos"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-om",
@@ -4364,7 +4625,8 @@
     "/flags/cn.svg",
     "/flags/sa.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-pk",
@@ -4378,7 +4640,8 @@
     "Laos",
     "Kuwait"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-pk",
@@ -4397,7 +4660,8 @@
     "/flags/am.svg",
     "/flags/tr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-pw",
@@ -4411,7 +4675,8 @@
     "Samoa",
     "Nauru"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-pw",
@@ -4430,7 +4695,8 @@
     "/flags/ws.svg",
     "/flags/vu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-pa",
@@ -4444,7 +4710,8 @@
     "Honduras",
     "Bahamas"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-pa",
@@ -4463,7 +4730,8 @@
     "/flags/lc.svg",
     "/flags/vc.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-pg",
@@ -4477,7 +4745,8 @@
     "Vanuatu",
     "Kiribati"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-pg",
@@ -4496,7 +4765,8 @@
     "/flags/fj.svg",
     "/flags/fm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-py",
@@ -4510,7 +4780,8 @@
     "Uruguay",
     "Venezuela"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-py",
@@ -4529,7 +4800,8 @@
     "/flags/co.svg",
     "/flags/br.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-pe",
@@ -4543,7 +4815,8 @@
     "Uruguay",
     "Bolivia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-pe",
@@ -4562,7 +4835,8 @@
     "/flags/gy.svg",
     "/flags/tt.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ph",
@@ -4576,7 +4850,8 @@
     "Mongolia",
     "Corea del Sud"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ph",
@@ -4595,7 +4870,8 @@
     "/flags/jo.svg",
     "/flags/tl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-pl",
@@ -4609,7 +4885,8 @@
     "Croazia",
     "Ucraina"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-pl",
@@ -4628,7 +4905,8 @@
     "/flags/va.svg",
     "/flags/sm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-pt",
@@ -4642,7 +4920,8 @@
     "Cipro",
     "Lussemburgo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-pt",
@@ -4661,7 +4940,8 @@
     "/flags/mc.svg",
     "/flags/hu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-qa",
@@ -4675,7 +4955,8 @@
     "Vietnam",
     "Mongolia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-qa",
@@ -4694,7 +4975,8 @@
     "/flags/sa.svg",
     "/flags/af.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ro",
@@ -4708,7 +4990,8 @@
     "Regno Unito",
     "Montenegro"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ro",
@@ -4727,7 +5010,8 @@
     "/flags/mc.svg",
     "/flags/is.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ru",
@@ -4741,7 +5025,8 @@
     "Romania",
     "Finlandia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ru",
@@ -4760,7 +5045,8 @@
     "/flags/at.svg",
     "/flags/dk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-rw",
@@ -4774,7 +5060,8 @@
     "Lesotho",
     "Uganda"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-rw",
@@ -4793,7 +5080,8 @@
     "/flags/ng.svg",
     "/flags/cg.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-kn",
@@ -4807,7 +5095,8 @@
     "Belize",
     "El Salvador"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-kn",
@@ -4826,7 +5115,8 @@
     "/flags/hn.svg",
     "/flags/bs.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-lc",
@@ -4840,7 +5130,8 @@
     "Barbados",
     "Antigua e Barbuda"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-lc",
@@ -4859,7 +5150,8 @@
     "/flags/vc.svg",
     "/flags/gd.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-vc",
@@ -4873,7 +5165,8 @@
     "Grenada",
     "El Salvador"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-vc",
@@ -4892,7 +5185,8 @@
     "/flags/ag.svg",
     "/flags/pa.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ws",
@@ -4906,7 +5200,8 @@
     "Kiribati",
     "Nauru"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ws",
@@ -4925,7 +5220,8 @@
     "/flags/vu.svg",
     "/flags/fm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sm",
@@ -4939,7 +5235,8 @@
     "Austria",
     "Estonia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-sm",
@@ -4958,7 +5255,8 @@
     "/flags/ad.svg",
     "/flags/si.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-st",
@@ -4972,7 +5270,8 @@
     "Uganda",
     "Mauritania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-st",
@@ -4991,7 +5290,8 @@
     "/flags/gw.svg",
     "/flags/rw.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sa",
@@ -5005,7 +5305,8 @@
     "Bahrein",
     "Laos"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sa",
@@ -5024,7 +5325,8 @@
     "/flags/jo.svg",
     "/flags/mm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sn",
@@ -5038,7 +5340,8 @@
     "Nigeria",
     "Benin"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sn",
@@ -5057,7 +5360,8 @@
     "/flags/bi.svg",
     "/flags/et.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-rs",
@@ -5071,7 +5375,8 @@
     "Austria",
     "Russia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-rs",
@@ -5090,7 +5395,8 @@
     "/flags/se.svg",
     "/flags/va.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-sc",
@@ -5104,7 +5410,8 @@
     "Comore",
     "Sud Sudan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sc",
@@ -5123,7 +5430,8 @@
     "/flags/gn.svg",
     "/flags/cv.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sl",
@@ -5137,7 +5445,8 @@
     "Botswana",
     "Etiopia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sl",
@@ -5156,7 +5465,8 @@
     "/flags/tz.svg",
     "/flags/cm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sg",
@@ -5170,7 +5480,8 @@
     "Thailandia",
     "Arabia Saudita"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sg",
@@ -5189,7 +5500,8 @@
     "/flags/kz.svg",
     "/flags/ye.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sk",
@@ -5203,7 +5515,8 @@
     "Bosnia ed Erzegovina",
     "Russia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-sk",
@@ -5222,7 +5535,8 @@
     "/flags/me.svg",
     "/flags/sm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-si",
@@ -5236,7 +5550,8 @@
     "Russia",
     "Albania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-si",
@@ -5255,7 +5570,8 @@
     "/flags/cy.svg",
     "/flags/sm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-sb",
@@ -5269,7 +5585,8 @@
     "Tuvalu",
     "Nuova Zelanda"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sb",
@@ -5288,7 +5605,8 @@
     "/flags/ki.svg",
     "/flags/nz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-so",
@@ -5302,7 +5620,8 @@
     "Repubblica Democratica del Congo",
     "Repubblica del Congo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-so",
@@ -5321,7 +5640,8 @@
     "/flags/gm.svg",
     "/flags/gq.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-za",
@@ -5335,7 +5655,8 @@
     "Burundi",
     "Kenya"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-za",
@@ -5354,7 +5675,8 @@
     "/flags/sl.svg",
     "/flags/ug.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ss",
@@ -5368,7 +5690,8 @@
     "Togo",
     "Guinea-Bissau"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ss",
@@ -5387,7 +5710,8 @@
     "/flags/ga.svg",
     "/flags/mu.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-es",
@@ -5401,7 +5725,8 @@
     "Austria",
     "Polonia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-es",
@@ -5420,7 +5745,8 @@
     "/flags/sk.svg",
     "/flags/mk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-lk",
@@ -5434,7 +5760,8 @@
     "Iran",
     "Iraq"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-lk",
@@ -5453,7 +5780,8 @@
     "/flags/om.svg",
     "/flags/lb.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sd",
@@ -5467,7 +5795,8 @@
     "Libia",
     "Somalia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sd",
@@ -5486,7 +5815,8 @@
     "/flags/td.svg",
     "/flags/ao.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-sr",
@@ -5500,7 +5830,8 @@
     "Paraguay",
     "Brasile"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-sr",
@@ -5519,7 +5850,8 @@
     "/flags/br.svg",
     "/flags/py.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-se",
@@ -5533,7 +5865,8 @@
     "Slovenia",
     "Finlandia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-se",
@@ -5552,7 +5885,8 @@
     "/flags/ie.svg",
     "/flags/mk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ch",
@@ -5566,7 +5900,8 @@
     "Paesi Bassi",
     "Cipro"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ch",
@@ -5585,7 +5920,8 @@
     "/flags/bg.svg",
     "/flags/se.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-sy",
@@ -5599,7 +5935,8 @@
     "Kuwait",
     "Singapore"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-sy",
@@ -5618,7 +5955,8 @@
     "/flags/mv.svg",
     "/flags/ph.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tj",
@@ -5632,7 +5970,8 @@
     "Maldive",
     "Kuwait"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tj",
@@ -5651,7 +5990,8 @@
     "/flags/sg.svg",
     "/flags/id.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tz",
@@ -5665,7 +6005,8 @@
     "Benin",
     "Sudan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tz",
@@ -5684,7 +6025,8 @@
     "/flags/dz.svg",
     "/flags/bw.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-th",
@@ -5698,7 +6040,8 @@
     "Kazakistan",
     "Singapore"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-th",
@@ -5717,7 +6060,8 @@
     "/flags/ae.svg",
     "/flags/am.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tl",
@@ -5731,7 +6075,8 @@
     "Turkmenistan",
     "Kazakistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tl",
@@ -5750,7 +6095,8 @@
     "/flags/uz.svg",
     "/flags/iq.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tg",
@@ -5764,7 +6110,8 @@
     "Repubblica Centrafricana",
     "Nigeria"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tg",
@@ -5783,7 +6130,8 @@
     "/flags/sz.svg",
     "/flags/sl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-to",
@@ -5797,7 +6145,8 @@
     "Kiribati",
     "Tuvalu"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-to",
@@ -5816,7 +6165,8 @@
     "/flags/mh.svg",
     "/flags/ws.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tt",
@@ -5830,7 +6180,8 @@
     "Venezuela",
     "Perù"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-tt",
@@ -5849,7 +6200,8 @@
     "/flags/sr.svg",
     "/flags/co.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-tn",
@@ -5863,7 +6215,8 @@
     "Togo",
     "Burkina Faso"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tn",
@@ -5882,7 +6235,8 @@
     "/flags/ml.svg",
     "/flags/ss.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tr",
@@ -5896,7 +6250,8 @@
     "Arabia Saudita",
     "Azerbaigian"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tr",
@@ -5915,7 +6270,8 @@
     "/flags/mn.svg",
     "/flags/lk.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tm",
@@ -5929,7 +6285,8 @@
     "Indonesia",
     "Israele"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tm",
@@ -5948,7 +6305,8 @@
     "/flags/pk.svg",
     "/flags/az.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-tv",
@@ -5962,7 +6320,8 @@
     "Nuova Zelanda",
     "Nauru"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-tv",
@@ -5981,7 +6340,8 @@
     "/flags/fj.svg",
     "/flags/nz.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ug",
@@ -5995,7 +6355,8 @@
     "Camerun",
     "Burundi"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ug",
@@ -6014,7 +6375,8 @@
     "/flags/ne.svg",
     "/flags/ke.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ua",
@@ -6028,7 +6390,8 @@
     "Monaco",
     "Albania"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ua",
@@ -6047,7 +6410,8 @@
     "/flags/mk.svg",
     "/flags/it.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ae",
@@ -6061,7 +6425,8 @@
     "Yemen",
     "Iraq"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ae",
@@ -6080,7 +6445,8 @@
     "/flags/kg.svg",
     "/flags/bt.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-gb",
@@ -6094,7 +6460,8 @@
     "Svizzera",
     "Moldavia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-gb",
@@ -6113,7 +6480,8 @@
     "/flags/no.svg",
     "/flags/ee.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-us",
@@ -6127,7 +6495,8 @@
     "Grenada",
     "Barbados"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-us",
@@ -6146,7 +6515,8 @@
     "/flags/kn.svg",
     "/flags/gt.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-uy",
@@ -6160,7 +6530,8 @@
     "Guyana",
     "Trinidad e Tobago"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-uy",
@@ -6179,7 +6550,8 @@
     "/flags/ec.svg",
     "/flags/sr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-uz",
@@ -6193,7 +6565,8 @@
     "Oman",
     "Corea del Nord"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-uz",
@@ -6212,7 +6585,8 @@
     "/flags/il.svg",
     "/flags/mm.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-vu",
@@ -6226,7 +6600,8 @@
     "Tuvalu",
     "Samoa"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-vu",
@@ -6245,7 +6620,8 @@
     "/flags/ws.svg",
     "/flags/ki.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ve",
@@ -6259,7 +6635,8 @@
     "Bolivia",
     "Trinidad e Tobago"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-ve",
@@ -6278,7 +6655,8 @@
     "/flags/py.svg",
     "/flags/sr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-vn",
@@ -6292,7 +6670,8 @@
     "Cina",
     "Kirghizistan"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-vn",
@@ -6311,7 +6690,8 @@
     "/flags/sg.svg",
     "/flags/tl.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-ye",
@@ -6325,7 +6705,8 @@
     "India",
     "Myanmar"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ye",
@@ -6344,7 +6725,8 @@
     "/flags/az.svg",
     "/flags/sa.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-zm",
@@ -6358,7 +6740,8 @@
     "Repubblica del Congo",
     "Marocco"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-zm",
@@ -6377,7 +6760,8 @@
     "/flags/ng.svg",
     "/flags/gw.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-zw",
@@ -6391,7 +6775,8 @@
     "Mali",
     "Togo"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-zw",
@@ -6410,7 +6795,8 @@
     "/flags/ss.svg",
     "/flags/bf.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "f-va",
@@ -6424,7 +6810,8 @@
     "Bielorussia",
     "Serbia"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "n-va",
@@ -6443,7 +6830,8 @@
     "/flags/dk.svg",
     "/flags/gr.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 2
   },
   {
    "id": "f-ps",
@@ -6457,7 +6845,8 @@
     "Brunei",
     "Myanmar"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   },
   {
    "id": "n-ps",
@@ -6476,7 +6865,8 @@
     "/flags/my.svg",
     "/flags/lb.svg"
    ],
-   "correctIndex": 0
+   "correctIndex": 0,
+   "difficulty": 3
   }
  ]
 }

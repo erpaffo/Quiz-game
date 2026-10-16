@@ -54,8 +54,8 @@ export function powerParams<T extends PowerType>(type: T, stack: number): PowerP
   const extra = Math.max(0, stack - 1);
   const all: PowerParams = {
     ICE: { taps: 8 + extra * 6 },
-    // Ogni strato di melma richiede una pulita in più.
-    GOO: { layers: Math.min(3, stack), clearThreshold: 0.78 },
+    // Ogni strato di melma richiede una pulita in più (al massimo 2); basta pulirne poco più di metà.
+    GOO: { layers: Math.min(2, stack), clearThreshold: 0.55 },
     BOMB: { hiddenRatio: Math.min(0.8, 0.4 + extra * 0.2) },
     LOCK: { lockedOptions: Math.min(3, stack), holdMs: 1100 + extra * 400 }
   };

@@ -1,0 +1,2073 @@
+{
+ "id": "esperti",
+ "name": "Sfida da esperti",
+ "description": "Domande più difficili, ideali per la finale. Difficoltà media e difficile.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "geo",
+   "name": "Geografia per esperti",
+   "icon": "🧭",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "sto",
+   "name": "Storia per esperti",
+   "icon": "⚔️",
+   "color": "#b5838d"
+  },
+  {
+   "id": "sci",
+   "name": "Scienza per esperti",
+   "icon": "⚛️",
+   "color": "#4361ee"
+  },
+  {
+   "id": "art",
+   "name": "Arte & Letteratura",
+   "icon": "🖋️",
+   "color": "#e9a800"
+  },
+  {
+   "id": "cin",
+   "name": "Cinema & Serie",
+   "icon": "🎞️",
+   "color": "#e63946"
+  },
+  {
+   "id": "mus",
+   "name": "Musica per esperti",
+   "icon": "🎼",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "spo",
+   "name": "Sport per esperti",
+   "icon": "🏅",
+   "color": "#f77f00"
+  },
+  {
+   "id": "lin",
+   "name": "Parole difficili",
+   "icon": "📚",
+   "color": "#43aa8b"
+  },
+  {
+   "id": "mit",
+   "name": "Miti e leggende",
+   "icon": "🏺",
+   "color": "#6a4c93"
+  },
+  {
+   "id": "tec",
+   "name": "Tecnologia e invenzioni",
+   "icon": "🔧",
+   "color": "#4cc9f0"
+  }
+ ],
+ "questions": [
+  {
+   "id": "esp-001",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la capitale del Kazakistan?",
+   "options": [
+    "Astana",
+    "Almaty",
+    "Biškek",
+    "Taškent"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-002",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il lago più profondo del mondo?",
+   "options": [
+    "Bajkal",
+    "Tanganica",
+    "Mar Caspio",
+    "Lago Superiore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-003",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale fiume attraversa Baghdad?",
+   "options": [
+    "Tigri",
+    "Eufrate",
+    "Giordano",
+    "Nilo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-004",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la capitale della Nuova Zelanda?",
+   "options": [
+    "Wellington",
+    "Auckland",
+    "Christchurch",
+    "Hamilton"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-005",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Dove si trova il punto più basso delle terre emerse?",
+   "options": [
+    "Sulle rive del Mar Morto",
+    "Nella Valle della Morte",
+    "Nella depressione di Qattara",
+    "Sul lago Assal"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-006",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Di quale Stato africano è capitale Ouagadougou?",
+   "options": [
+    "Burkina Faso",
+    "Mali",
+    "Niger",
+    "Senegal"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-007",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il fiume più lungo d'Europa?",
+   "options": [
+    "Volga",
+    "Danubio",
+    "Reno",
+    "Dnepr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-008",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "In quale Paese si trova gran parte del deserto di Atacama?",
+   "options": [
+    "Cile",
+    "Perù",
+    "Argentina",
+    "Bolivia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-009",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale stretto separa l'Asia dall'America?",
+   "options": [
+    "Stretto di Bering",
+    "Stretto di Magellano",
+    "Stretto di Hormuz",
+    "Stretto di Malacca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-010",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il Paese più popoloso dell'Africa?",
+   "options": [
+    "Nigeria",
+    "Etiopia",
+    "Egitto",
+    "Repubblica Democratica del Congo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-011",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale città calabrese si affaccia sullo Stretto di Messina?",
+   "options": [
+    "Reggio Calabria",
+    "Catanzaro",
+    "Cosenza",
+    "Crotone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-012",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è la regione italiana più estesa?",
+   "options": [
+    "Sicilia",
+    "Piemonte",
+    "Sardegna",
+    "Lombardia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-013",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il capoluogo del Molise?",
+   "options": [
+    "Campobasso",
+    "Isernia",
+    "Termoli",
+    "Pescara"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-014",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Qual è il lago più grande dell'Africa?",
+   "options": [
+    "Lago Vittoria",
+    "Lago Tanganica",
+    "Lago Ciad",
+    "Lago Malawi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-015",
+   "categoryId": "geo",
+   "type": "multiple",
+   "text": "Quale Paese ha il maggior numero di fusi orari, contando i territori d'oltremare?",
+   "options": [
+    "Francia",
+    "Russia",
+    "Stati Uniti",
+    "Regno Unito"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-016",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno si combatté la battaglia di Waterloo?",
+   "options": [
+    "1815",
+    "1805",
+    "1812",
+    "1821"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-017",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale re di Francia fu ghigliottinato nel 1793?",
+   "options": [
+    "Luigi XVI",
+    "Luigi XIV",
+    "Luigi XV",
+    "Carlo X"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-018",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale imperatore fece costruire il vallo nel nord della Britannia a partire dal 122 d.C.?",
+   "options": [
+    "Adriano",
+    "Traiano",
+    "Claudio",
+    "Antonino Pio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-019",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno furono firmati i Trattati di Roma che istituirono la CEE?",
+   "options": [
+    "1957",
+    "1951",
+    "1962",
+    "1949"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-020",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi fu il primo Capo provvisorio dello Stato della Repubblica Italiana?",
+   "options": [
+    "Enrico De Nicola",
+    "Luigi Einaudi",
+    "Alcide De Gasperi",
+    "Giovanni Gronchi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-021",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In quale città fu assassinato l'arciduca Francesco Ferdinando nel 1914?",
+   "options": [
+    "Sarajevo",
+    "Vienna",
+    "Belgrado",
+    "Budapest"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-022",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale dinastia regnò sul Regno delle Due Sicilie?",
+   "options": [
+    "Borbone",
+    "Savoia",
+    "Asburgo",
+    "Angiò"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-023",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale condottiero cartaginese attraversò le Alpi con gli elefanti?",
+   "options": [
+    "Annibale",
+    "Amilcare",
+    "Asdrubale",
+    "Scipione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-024",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno Costantinopoli cadde in mano agli Ottomani?",
+   "options": [
+    "1453",
+    "1492",
+    "1204",
+    "1389"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-025",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi fu l'ultimo zar di Russia?",
+   "options": [
+    "Nicola II",
+    "Alessandro III",
+    "Pietro il Grande",
+    "Alessandro II"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-026",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale papa bandì la prima crociata nel 1095?",
+   "options": [
+    "Urbano II",
+    "Gregorio VII",
+    "Innocenzo III",
+    "Bonifacio VIII"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-027",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Come si chiamava la nave del viaggio di Charles Darwin?",
+   "options": [
+    "Beagle",
+    "Endeavour",
+    "Bounty",
+    "Victoria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-028",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "In che anno si dissolse l'Unione Sovietica?",
+   "options": [
+    "1991",
+    "1989",
+    "1993",
+    "1985"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-029",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Quale battaglia del 1571 vide la flotta della Lega Santa sconfiggere quella ottomana?",
+   "options": [
+    "Lepanto",
+    "Azio",
+    "Trafalgar",
+    "Salamina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-030",
+   "categoryId": "sto",
+   "type": "multiple",
+   "text": "Chi era il presidente degli Stati Uniti durante la crisi dei missili di Cuba?",
+   "options": [
+    "John F. Kennedy",
+    "Dwight Eisenhower",
+    "Lyndon Johnson",
+    "Richard Nixon"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-031",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico del potassio?",
+   "options": [
+    "K",
+    "P",
+    "Po",
+    "Pt"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-032",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quanti sono i pianeti nani riconosciuti dall'Unione Astronomica Internazionale?",
+   "options": [
+    "5",
+    "3",
+    "8",
+    "1"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-033",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è l'unità di misura della frequenza?",
+   "options": [
+    "Hertz",
+    "Newton",
+    "Pascal",
+    "Joule"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-034",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Chi propose il modello atomico detto «a panettone»?",
+   "options": [
+    "J. J. Thomson",
+    "Ernest Rutherford",
+    "Niels Bohr",
+    "John Dalton"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-035",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è l'osso più piccolo del corpo umano?",
+   "options": [
+    "Staffa",
+    "Incudine",
+    "Martello",
+    "Ioide"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-036",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale gas nobile è il più abbondante nell'atmosfera terrestre?",
+   "options": [
+    "Argon",
+    "Neon",
+    "Elio",
+    "Xeno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-037",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Come si chiama la costante che vale circa 6,022 × 10²³?",
+   "options": [
+    "Numero di Avogadro",
+    "Costante di Planck",
+    "Costante di Boltzmann",
+    "Costante di Faraday"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-038",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Chi scoprì la radioattività naturale nel 1896?",
+   "options": [
+    "Henri Becquerel",
+    "Marie Curie",
+    "Ernest Rutherford",
+    "Wilhelm Röntgen"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-039",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale organello produce la maggior parte dell'energia della cellula?",
+   "options": [
+    "Mitocondrio",
+    "Ribosoma",
+    "Lisosoma",
+    "Apparato di Golgi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-040",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è il numero atomico del carbonio?",
+   "options": [
+    "6",
+    "12",
+    "8",
+    "14"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-041",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale vitamina è chiamata anche acido ascorbico?",
+   "options": [
+    "Vitamina C",
+    "Vitamina B12",
+    "Vitamina D",
+    "Vitamina E"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-042",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Come si chiama il passaggio diretto dallo stato solido a quello gassoso?",
+   "options": [
+    "Sublimazione",
+    "Evaporazione",
+    "Condensazione",
+    "Fusione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-043",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Intorno a quale pianeta orbita Titano?",
+   "options": [
+    "Saturno",
+    "Giove",
+    "Urano",
+    "Nettuno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-044",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Qual è la luna più grande del Sistema solare?",
+   "options": [
+    "Ganimede",
+    "Titano",
+    "Callisto",
+    "Io"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-045",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale scienziato italiano guidò la prima reazione nucleare a catena controllata, nel 1942?",
+   "options": [
+    "Enrico Fermi",
+    "Ettore Majorana",
+    "Emilio Segrè",
+    "Bruno Pontecorvo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-046",
+   "categoryId": "sci",
+   "type": "multiple",
+   "text": "Quale legge afferma che, a temperatura costante, pressione e volume di un gas sono inversamente proporzionali?",
+   "options": [
+    "Legge di Boyle",
+    "Legge di Charles",
+    "Legge di Avogadro",
+    "Legge di Hooke"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-047",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi ha scritto «Il Principe»?",
+   "options": [
+    "Niccolò Machiavelli",
+    "Francesco Guicciardini",
+    "Baldassarre Castiglione",
+    "Tommaso Moro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-048",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi dipinse «La Primavera» conservata agli Uffizi?",
+   "options": [
+    "Sandro Botticelli",
+    "Raffaello",
+    "Leonardo da Vinci",
+    "Tiziano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-049",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi scrisse «L'infinito»?",
+   "options": [
+    "Giacomo Leopardi",
+    "Ugo Foscolo",
+    "Giosuè Carducci",
+    "Giovanni Pascoli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-050",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi è l'autore de «Il fu Mattia Pascal»?",
+   "options": [
+    "Luigi Pirandello",
+    "Italo Svevo",
+    "Gabriele D'Annunzio",
+    "Giovanni Verga"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-051",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Quale pittore dipinse «Guernica»?",
+   "options": [
+    "Pablo Picasso",
+    "Salvador Dalí",
+    "Joan Miró",
+    "Francisco Goya"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-052",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi ha scritto «Cent'anni di solitudine»?",
+   "options": [
+    "Gabriel García Márquez",
+    "Jorge Luis Borges",
+    "Isabel Allende",
+    "Mario Vargas Llosa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-053",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "In quale museo è esposta «La ronda di notte» di Rembrandt?",
+   "options": [
+    "Rijksmuseum di Amsterdam",
+    "Louvre di Parigi",
+    "Museo del Prado",
+    "National Gallery di Londra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-054",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi scolpì «Apollo e Dafne» della Galleria Borghese?",
+   "options": [
+    "Gian Lorenzo Bernini",
+    "Antonio Canova",
+    "Michelangelo",
+    "Donatello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-055",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi è l'autore de «La coscienza di Zeno»?",
+   "options": [
+    "Italo Svevo",
+    "Luigi Pirandello",
+    "Alberto Moravia",
+    "Cesare Pavese"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-056",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi scrisse la poesia «X Agosto»?",
+   "options": [
+    "Giovanni Pascoli",
+    "Giacomo Leopardi",
+    "Giosuè Carducci",
+    "Eugenio Montale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-057",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi ha scritto «Guerra e pace»?",
+   "options": [
+    "Lev Tolstoj",
+    "Fëdor Dostoevskij",
+    "Anton Čechov",
+    "Ivan Turgenev"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-058",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi dipinse «La persistenza della memoria», con gli orologi molli?",
+   "options": [
+    "Salvador Dalí",
+    "René Magritte",
+    "Max Ernst",
+    "Joan Miró"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-059",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Quale poeta, autore di «Ossi di seppia», vinse il Nobel nel 1975?",
+   "options": [
+    "Eugenio Montale",
+    "Salvatore Quasimodo",
+    "Giuseppe Ungaretti",
+    "Umberto Saba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-060",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Quale opera giovanile di Dante alterna prosa e poesia ed è dedicata a Beatrice?",
+   "options": [
+    "Vita nova",
+    "Convivio",
+    "De vulgari eloquentia",
+    "Monarchia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-061",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "Chi affrescò la Cappella degli Scrovegni a Padova?",
+   "options": [
+    "Giotto",
+    "Masaccio",
+    "Cimabue",
+    "Piero della Francesca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-062",
+   "categoryId": "art",
+   "type": "multiple",
+   "text": "In quale città è ambientato l'«Ulisse» di James Joyce?",
+   "options": [
+    "Dublino",
+    "Londra",
+    "Trieste",
+    "Parigi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-063",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Quale film vinse il primo Oscar al miglior film?",
+   "options": [
+    "Ali (Wings)",
+    "Metropolis",
+    "Il cantante di jazz",
+    "Aurora"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-064",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Chi ha diretto «2001: Odissea nello spazio»?",
+   "options": [
+    "Stanley Kubrick",
+    "Steven Spielberg",
+    "Ridley Scott",
+    "George Lucas"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-065",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Quale attore ha vinto più Oscar come miglior attore protagonista?",
+   "options": [
+    "Daniel Day-Lewis",
+    "Jack Nicholson",
+    "Marlon Brando",
+    "Tom Hanks"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-066",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "In quale film di Sergio Leone si sente «L'estasi dell'oro»?",
+   "options": [
+    "Il buono, il brutto, il cattivo",
+    "Per un pugno di dollari",
+    "C'era una volta il West",
+    "Giù la testa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-067",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Chi interpretò il Joker ne «Il cavaliere oscuro» del 2008?",
+   "options": [
+    "Heath Ledger",
+    "Joaquin Phoenix",
+    "Jack Nicholson",
+    "Jared Leto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-068",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Chi diresse «Ladri di biciclette»?",
+   "options": [
+    "Vittorio De Sica",
+    "Roberto Rossellini",
+    "Federico Fellini",
+    "Luchino Visconti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-069",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Come si chiama l'albergo di «Shining»?",
+   "options": [
+    "Overlook Hotel",
+    "Bates Motel",
+    "Grand Budapest Hotel",
+    "Hotel Continental"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-070",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Quale film di Hayao Miyazaki vinse l'Oscar al miglior film d'animazione?",
+   "options": [
+    "La città incantata",
+    "Il mio vicino Totoro",
+    "Principessa Mononoke",
+    "Il castello errante di Howl"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-071",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "In «Casablanca», come si chiama il locale di Rick?",
+   "options": [
+    "Rick's Café Américain",
+    "Moulin Rouge",
+    "Copacabana",
+    "Blue Parrot"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-072",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Chi diresse «Il Gattopardo» del 1963?",
+   "options": [
+    "Luchino Visconti",
+    "Federico Fellini",
+    "Michelangelo Antonioni",
+    "Pier Paolo Pasolini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-073",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Quante stagioni ha «Breaking Bad»?",
+   "options": [
+    "5",
+    "4",
+    "6",
+    "7"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-074",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "In quale serie compare il pubblicitario Don Draper?",
+   "options": [
+    "Mad Men",
+    "Suits",
+    "I Soprano",
+    "Boardwalk Empire"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-075",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Quale film ha vinto 11 Oscar, come «Titanic» e «Ben-Hur»?",
+   "options": [
+    "Il Signore degli Anelli - Il ritorno del re",
+    "Avatar",
+    "Il Padrino",
+    "La La Land"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-076",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Chi interpretò Mary Poppins nel film del 1964?",
+   "options": [
+    "Julie Andrews",
+    "Audrey Hepburn",
+    "Judy Garland",
+    "Emily Blunt"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-077",
+   "categoryId": "cin",
+   "type": "multiple",
+   "text": "Quale regista italiano ha vinto l'Oscar per «Mediterraneo»?",
+   "options": [
+    "Gabriele Salvatores",
+    "Giuseppe Tornatore",
+    "Roberto Benigni",
+    "Nanni Moretti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-078",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Chi compose «Le nozze di Figaro»?",
+   "options": [
+    "Wolfgang Amadeus Mozart",
+    "Gioachino Rossini",
+    "Giuseppe Verdi",
+    "Antonio Salieri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-079",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Chi compose «Il barbiere di Siviglia» del 1816?",
+   "options": [
+    "Gioachino Rossini",
+    "Wolfgang Amadeus Mozart",
+    "Gaetano Donizetti",
+    "Vincenzo Bellini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-080",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quante sinfonie completò Beethoven?",
+   "options": [
+    "9",
+    "7",
+    "10",
+    "12"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-081",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quale strumento suonava Niccolò Paganini?",
+   "options": [
+    "Violino",
+    "Pianoforte",
+    "Violoncello",
+    "Chitarra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-082",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Da quale opera è tratta l'aria «Nessun dorma»?",
+   "options": [
+    "Turandot",
+    "Tosca",
+    "La bohème",
+    "Madama Butterfly"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-083",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quale gruppo pubblicò l'album «OK Computer» nel 1997?",
+   "options": [
+    "Radiohead",
+    "Oasis",
+    "Blur",
+    "Muse"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-084",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Chi vinse il primo Festival di Sanremo nel 1951?",
+   "options": [
+    "Nilla Pizzi",
+    "Domenico Modugno",
+    "Claudio Villa",
+    "Mina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-085",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quale cantautore scrisse «Bocca di rosa»?",
+   "options": [
+    "Fabrizio De André",
+    "Francesco Guccini",
+    "Francesco De Gregori",
+    "Luigi Tenco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-086",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "In che anno morì Freddie Mercury?",
+   "options": [
+    "1991",
+    "1987",
+    "1995",
+    "1989"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-087",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Chi compose il balletto «Il lago dei cigni»?",
+   "options": [
+    "Pëtr Il'ič Čajkovskij",
+    "Sergej Rachmaninov",
+    "Igor' Stravinskij",
+    "Sergej Prokof'ev"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-088",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quale band pubblicò l'album «The Wall» nel 1979?",
+   "options": [
+    "Pink Floyd",
+    "Genesis",
+    "Queen",
+    "The Who"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-089",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Come si chiama una scala di cinque note?",
+   "options": [
+    "Pentatonica",
+    "Cromatica",
+    "Esatonale",
+    "Diatonica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-090",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Chi cantò «Almeno tu nell'universo» a Sanremo 1989?",
+   "options": [
+    "Mia Martini",
+    "Loredana Bertè",
+    "Mina",
+    "Patty Pravo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-091",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quale trombettista jazz era soprannominato «Satchmo»?",
+   "options": [
+    "Louis Armstrong",
+    "Duke Ellington",
+    "Miles Davis",
+    "Dizzy Gillespie"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-092",
+   "categoryId": "mus",
+   "type": "multiple",
+   "text": "Quale compositore scrisse la «Messa da requiem» in memoria di Alessandro Manzoni?",
+   "options": [
+    "Giuseppe Verdi",
+    "Giacomo Puccini",
+    "Gioachino Rossini",
+    "Pietro Mascagni"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-093",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quale nazionale vinse il primo Mondiale di calcio, nel 1930?",
+   "options": [
+    "Uruguay",
+    "Argentina",
+    "Brasile",
+    "Italia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-094",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quanti Tour de France ha vinto Eddy Merckx?",
+   "options": [
+    "5",
+    "4",
+    "6",
+    "7"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-095",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "In quale sport si assegna la Stanley Cup?",
+   "options": [
+    "Hockey su ghiaccio",
+    "Baseball",
+    "Football americano",
+    "Basket"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-096",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quale tennista è stato il primo uomo a vincere 24 titoli del Grande Slam?",
+   "options": [
+    "Novak Djokovic",
+    "Rafael Nadal",
+    "Roger Federer",
+    "Pete Sampras"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-097",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Chi vinse il primo campionato mondiale di Formula 1, nel 1950?",
+   "options": [
+    "Giuseppe Farina",
+    "Juan Manuel Fangio",
+    "Alberto Ascari",
+    "Stirling Moss"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-098",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quanti punti vale un touchdown nel football americano?",
+   "options": [
+    "6",
+    "7",
+    "3",
+    "5"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-099",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Qual è la gara di nuoto in piscina più lunga alle Olimpiadi?",
+   "options": [
+    "1500 metri stile libero",
+    "800 metri stile libero",
+    "400 metri misti",
+    "3000 metri stile libero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-100",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quale squadra italiana ha vinto più Champions League/Coppe dei Campioni?",
+   "options": [
+    "Milan",
+    "Inter",
+    "Juventus",
+    "Roma"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-101",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Chi vinse il Pallone d'Oro nel 2006?",
+   "options": [
+    "Fabio Cannavaro",
+    "Andrea Pirlo",
+    "Zinedine Zidane",
+    "Ronaldinho"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-102",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "In quale sport si usa il termine «albatross»?",
+   "options": [
+    "Golf",
+    "Tennis",
+    "Cricket",
+    "Vela"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-103",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quante prove compongono il decathlon?",
+   "options": [
+    "10",
+    "7",
+    "8",
+    "12"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-104",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "In che anno l'Italia vinse il suo primo Mondiale di calcio?",
+   "options": [
+    "1934",
+    "1938",
+    "1930",
+    "1950"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-105",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Chi è stato il primo italiano a vincere le ATP Finals di tennis?",
+   "options": [
+    "Jannik Sinner",
+    "Adriano Panatta",
+    "Matteo Berrettini",
+    "Lorenzo Musetti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-106",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "Quale pugile era soprannominato «The Greatest»?",
+   "options": [
+    "Muhammad Ali",
+    "Mike Tyson",
+    "Joe Frazier",
+    "George Foreman"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-107",
+   "categoryId": "spo",
+   "type": "multiple",
+   "text": "In quale città si sono svolte le prime Olimpiadi invernali, nel 1924?",
+   "options": [
+    "Chamonix",
+    "Sankt Moritz",
+    "Lake Placid",
+    "Oslo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-108",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cosa significa l'espressione latina «ad hoc»?",
+   "options": [
+    "Apposta per questo scopo",
+    "In ritardo",
+    "Per sempre",
+    "A caso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-109",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cos'è un'«ubbia»?",
+   "options": [
+    "Un timore o pregiudizio infondato",
+    "Un'ubriacatura",
+    "Una bugia",
+    "Una gran fretta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-110",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Quale parola è un sinonimo di «prolisso»?",
+   "options": [
+    "Verboso",
+    "Conciso",
+    "Prodigo",
+    "Pigro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-111",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Da quale lingua deriva la parola «algebra»?",
+   "options": [
+    "Arabo",
+    "Greco",
+    "Latino",
+    "Persiano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-112",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cosa significa «ipso facto»?",
+   "options": [
+    "Immediatamente, per il fatto stesso",
+    "Per ipotesi",
+    "Al contrario",
+    "Senza alcun dubbio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-113",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Qual è il plurale corretto di «capoufficio»?",
+   "options": [
+    "Capiufficio",
+    "Capouffici",
+    "Capiuffici",
+    "Capoufficio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-114",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Da quale città deriva il nome «jeans»?",
+   "options": [
+    "Genova",
+    "Nîmes",
+    "Napoli",
+    "Venezia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-115",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cos'è una «sinecura»?",
+   "options": [
+    "Un incarico ben pagato e poco faticoso",
+    "Una malattia leggera",
+    "Una medicina",
+    "Un'attenzione eccessiva per sé"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-116",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cos'è un «lapsus»?",
+   "options": [
+    "Un errore involontario",
+    "Un ritardo",
+    "Un'abbreviazione",
+    "Un proverbio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-117",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Quale parola indica l'avversione verso gli stranieri?",
+   "options": [
+    "Xenofobia",
+    "Misantropia",
+    "Misoginia",
+    "Agorafobia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-118",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Che cosa significa «serendipità»?",
+   "options": [
+    "Trovare qualcosa di buono per caso, cercando altro",
+    "Serenità d'animo",
+    "Sincerità assoluta",
+    "Malinconia della sera"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-119",
+   "categoryId": "lin",
+   "type": "multiple",
+   "text": "Quale figura retorica c'è in «Il silenzio assordante»?",
+   "options": [
+    "Ossimoro",
+    "Metafora",
+    "Iperbole",
+    "Anafora"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-120",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi era la moglie di Ulisse?",
+   "options": [
+    "Penelope",
+    "Elena",
+    "Andromaca",
+    "Circe"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-121",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Quale titano fu condannato a reggere la volta celeste?",
+   "options": [
+    "Atlante",
+    "Prometeo",
+    "Crono",
+    "Iperione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-122",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi è il padre di Thor nella mitologia norrena?",
+   "options": [
+    "Odino",
+    "Loki",
+    "Baldr",
+    "Týr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-123",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Qual era il nome romano di Afrodite?",
+   "options": [
+    "Venere",
+    "Minerva",
+    "Diana",
+    "Giunone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-124",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi uccise il Minotauro?",
+   "options": [
+    "Teseo",
+    "Perseo",
+    "Giasone",
+    "Eracle"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-125",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Come si chiama il cane a tre teste guardiano dell'Ade?",
+   "options": [
+    "Cerbero",
+    "Ortro",
+    "Idra",
+    "Chimera"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-126",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi rubò il fuoco agli dèi per darlo agli uomini?",
+   "options": [
+    "Prometeo",
+    "Epimeteo",
+    "Atlante",
+    "Efesto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-127",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi guidò gli Argonauti alla ricerca del vello d'oro?",
+   "options": [
+    "Giasone",
+    "Teseo",
+    "Achille",
+    "Perseo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-128",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Quale dio egizio aveva la testa di sciacallo?",
+   "options": [
+    "Anubi",
+    "Horus",
+    "Ra",
+    "Thot"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-129",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Quale re trasformava in oro tutto ciò che toccava?",
+   "options": [
+    "Mida",
+    "Creso",
+    "Minosse",
+    "Tantalo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-130",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Come si chiama il serpente del mondo, nemico di Thor?",
+   "options": [
+    "Jörmungandr",
+    "Fenrir",
+    "Níðhöggr",
+    "Sleipnir"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-131",
+   "categoryId": "mit",
+   "type": "multiple",
+   "text": "Chi era la musa della poesia epica?",
+   "options": [
+    "Calliope",
+    "Clio",
+    "Euterpe",
+    "Talia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-132",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Chi è considerato l'inventore del World Wide Web?",
+   "options": [
+    "Tim Berners-Lee",
+    "Vint Cerf",
+    "Bill Gates",
+    "Alan Turing"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-133",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "In che anno è stata fondata Google?",
+   "options": [
+    "1998",
+    "1995",
+    "2001",
+    "2004"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-134",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale linguaggio di programmazione creò Guido van Rossum?",
+   "options": [
+    "Python",
+    "Java",
+    "Ruby",
+    "C++"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-135",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Che cosa significa la sigla «CPU»?",
+   "options": [
+    "Central Processing Unit",
+    "Computer Personal Unit",
+    "Central Program Utility",
+    "Control Power Unit"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-136",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale azienda mise in commercio il primo microprocessore, il 4004?",
+   "options": [
+    "Intel",
+    "IBM",
+    "Motorola",
+    "AMD"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-137",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quanti byte ci sono in un kibibyte (KiB)?",
+   "options": [
+    "1024",
+    "1000",
+    "512",
+    "2048"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-138",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale ingegnere italiano progettò l'Intel 4004?",
+   "options": [
+    "Federico Faggin",
+    "Pier Giorgio Perotto",
+    "Guglielmo Marconi",
+    "Antonio Meucci"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-139",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Chi guidò il progetto dell'Olivetti Programma 101, uno dei primi personal computer?",
+   "options": [
+    "Pier Giorgio Perotto",
+    "Federico Faggin",
+    "Adriano Olivetti",
+    "Camillo Olivetti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-140",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Che cosa significa la sigla «HTTP»?",
+   "options": [
+    "HyperText Transfer Protocol",
+    "High Transfer Text Protocol",
+    "HyperText Transmission Process",
+    "Host Text Transfer Protocol"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-141",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Come si chiamava il primo satellite artificiale?",
+   "options": [
+    "Sputnik 1",
+    "Explorer 1",
+    "Vostok 1",
+    "Telstar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "esp-142",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Chi è considerata la prima programmatrice della storia?",
+   "options": [
+    "Ada Lovelace",
+    "Grace Hopper",
+    "Margaret Hamilton",
+    "Hedy Lamarr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "esp-143",
+   "categoryId": "tec",
+   "type": "multiple",
+   "text": "Quale scienziato ideò la macchina astratta alla base dell'informatica teorica?",
+   "options": [
+    "Alan Turing",
+    "John von Neumann",
+    "Claude Shannon",
+    "Charles Babbage"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  }
+ ]
+}

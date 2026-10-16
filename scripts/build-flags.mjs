@@ -33,6 +33,9 @@ const NAME_FIX = {
 };
 const nameOf = (code) => (NAME_FIX[code] ?? names.of(code.toUpperCase())).replace(/’/g, "'");
 
+// Difficoltà: i continenti con Stati meno noti sono più difficili (la Piramide sceglie per difficoltà).
+const DIFFICULTY = { europa: 2, nordamerica: 2, sudamerica: 2, asia: 3, africa: 3, oceania: 3 };
+
 const CONTINENTS = {
   Europe: { id: 'europa', name: "Bandiere d'Europa", icon: '🇪🇺', color: '#4361ee' },
   Asia: { id: 'asia', name: "Bandiere d'Asia", icon: '🏯', color: '#e63946' },
@@ -74,7 +77,8 @@ for (const s of states) {
     text: 'Di quale Paese è questa bandiera?',
     image: flag(s.code),
     options: opts.map((o) => o.name),
-    correctIndex: 0
+    correctIndex: 0,
+    difficulty: DIFFICULTY[s.continent.id]
   });
   const wrong2 = sample(neighbours, 3);
   const opts2 = [s, ...wrong2];
@@ -85,7 +89,8 @@ for (const s of states) {
     text: `Trova la bandiera di questo Stato: ${s.name}`,
     options: opts2.map((o) => o.name),
     optionImages: opts2.map((o) => flag(o.code)),
-    correctIndex: 0
+    correctIndex: 0,
+    difficulty: DIFFICULTY[s.continent.id]
   });
 }
 
