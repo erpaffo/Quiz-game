@@ -23,8 +23,16 @@ function findExecutable() {
     if (dir) return join(RELEASE, dir, brand.shortName);
   }
   if (process.platform === 'darwin') {
-    const dir = dirs.find((d) => d.startsWith('mac'));
-    if (dir) return join(RELEASE, dir, `${brand.name}.app`, 'Contents', 'MacOS', brand.name);
+    // L'app si chiama come il gioco («Sapere è Potere.app»), l'eseguibile interno come shortName
+    // (executableName in electron-builder). Si cercano entrambi invece di ricostruire i nomi:
+    // macOS può salvare la «è» in forma Unicode diversa da quella scritta qui.
+    for (const dir of dirs.filter((d) => d.startsWith('mac'))) {
+      const app = readdirSync(join(RELEASE, dir)).find((f) => f.endsWith('.app'));
+      if (!app) continue;
+      const macos = join(RELEASE, dir, app, 'Contents', 'MacOS');
+      const bin = readdirSync(macos).find((f) => f === brand.shortName) ?? readdirSync(macos)[0];
+      if (bin) return join(macos, bin);
+    }
   }
   throw new Error(`Nessuna app impacchettata trovata in release/ per ${process.platform}.`);
 }
@@ -36,7 +44,11 @@ const out = join(mkdtempSync(join(tmpdir(), 'smoke-')), 'result.json');
 // Su Linux senza schermo serve un display virtuale (xvfb-run, già presente su GitHub Actions dopo apt install xvfb).
 const useXvfb = process.platform === 'linux' && !process.env.DISPLAY;
 const cmd = useXvfb ? 'xvfb-run' : exe;
-const args = useXvfb ? ['-a', exe, `--smoke-test=${out}`] : [`--smoke-test=${out}`];
+// Linux: chrome-sandbox dovrebbe appartenere a root con permessi 4755, cosa impossibile sui server di
+// GitHub (e dentro un AppImage). Chromium lo controlla prima di eseguire il nostro codice, quindi
+// --no-sandbox va passato all'avvio: lo switch impostato in desktop/main.ts arriva troppo tardi.
+const appArgs = [`--smoke-test=${out}`, ...(process.platform === 'linux' ? ['--no-sandbox'] : [])];
+const args = useXvfb ? ['-a', exe, ...appArgs] : appArgs;
 
 console.log(`Avvio: ${exe}`);
 // ELECTRON_RUN_AS_NODE (impostata da alcuni editor/terminali) trasformerebbe l'app in un semplice Node.

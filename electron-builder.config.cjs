@@ -35,7 +35,9 @@ module.exports = {
     target: [{ target: 'AppImage', arch: ['x64'] }],
     icon: 'build/icon.png',
     category: 'Game',
-    maintainer: 'erpaffo'
+    maintainer: 'erpaffo',
+    // Su molte distribuzioni l'AppImage non può usare la sandbox SUID di Chromium: si avvia senza.
+    executableArgs: ['--no-sandbox']
   },
   appImage: { artifactName: artifact }
 };

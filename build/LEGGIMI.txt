@@ -36,6 +36,8 @@ Il file .AppImage è un programma unico:
       chmod +x NomeFile.AppImage
 - Poi doppio clic (o ./NomeFile.AppImage da terminale).
 - Se non parte, serve FUSE: su Ubuntu/Debian installa «libfuse2» (o «libfuse2t64»).
+- Se si chiude subito con un errore sulla «sandbox», avvialo da terminale così:
+      ./NomeFile.AppImage --no-sandbox
 - Il firewall (ufw) deve lasciar passare la porta 3000:  sudo ufw allow 3000/tcp
 
 
