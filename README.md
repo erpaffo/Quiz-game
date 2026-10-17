@@ -1,4 +1,4 @@
-# Sapere è Potere: party quiz in stile PlayLink / Buzz!
+# Potere è Sapere : party quiz in stile PlayLink / Buzz!
 
 Uno schermo principale 3D (TV o PC) e da 2 a **16** smartphone come controller. La serata è uno **show di giochi estratti da una ruota**, con carte potere per attaccare e difendersi, e si chiude con la finale della Piramide. Le domande si possono scrivere da soli nel **Laboratorio Domande**.
 
@@ -23,7 +23,7 @@ Il menu **Gioco** ha il Laboratorio Domande, l'apertura della cartella dei pacch
 - **Automatico (GitHub Actions):** a ogni push il file `.github/workflows/desktop.yml` compila Windows, Mac e Linux su macchine apposite, controlla che l'app impacchettata parta (prova senza finestre) e salva i 3 file tra gli artefatti. Con un tag di versione (es. `git tag v1.0.0 && git push --tags`) crea anche la **Release** con i file da scaricare. Costa zero per i repository pubblici.
 - **Sul tuo PC:** `npm run desktop:build` crea l'eseguibile del tuo sistema nella cartella `release/`. Mac e Linux si possono creare solo sul rispettivo sistema (o con GitHub Actions).
 - `npm run desktop` prova l'app da sorgente; `npm run desktop:smoke` controlla l'app impacchettata (pagine, pacchetti, bandiere, WebSocket, salvataggio e caricamento della finestra) senza aprirla.
-- **Cambiare il nome del gioco:** modifica solo `shared/brand.json` (titoli, logo, nome dell'app e dei file si aggiornano da soli). «Sapere è Potere» è un marchio Sony: scegli un nome tuo prima di distribuire il gioco.
+- **Cambiare il nome del gioco:** modifica solo `shared/brand.json` (titoli, logo, nome dell'app e dei file si aggiornano da soli). «Potere è Sapere » è un marchio Sony: scegli un nome tuo prima di distribuire il gioco.
 - L'icona è provvisoria (`build/icon.png`, 1024×1024): sostituiscila con la tua.
 
 ## Avvio da sorgente (sviluppo)
