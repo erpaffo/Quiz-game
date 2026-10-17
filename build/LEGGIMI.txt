@@ -25,6 +25,8 @@ MAC
 Apri il .dmg e trascina l'app nella cartella Applicazioni.
 - Al primo avvio NON fare doppio clic: tasto destro sull'app → «Apri» → «Apri».
   (L'app non è firmata da Apple, che richiede un abbonamento a pagamento.)
+- Su macOS 15 (Sequoia) o successivi: se compare solo «Fine», vai in
+  Impostazioni di Sistema → Privacy e sicurezza → in fondo «Apri comunque».
 - Se macOS dice che l'app «è danneggiata», apri il Terminale e scrivi:
       xattr -cr /Applications/NOME-APP.app
 - macOS chiede il permesso per le connessioni di rete in ingresso: consenti.

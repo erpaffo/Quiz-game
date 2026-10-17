@@ -3,8 +3,8 @@
 //   npm run desktop:smoke
 
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync, readdirSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { existsSync, mkdtempSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { homedir, tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -52,13 +52,34 @@ const args = useXvfb ? ['-a', exe, ...appArgs] : appArgs;
 
 console.log(`Avvio: ${exe}`);
 // ELECTRON_RUN_AS_NODE (impostata da alcuni editor/terminali) trasformerebbe l'app in un semplice Node.
-const env = { ...process.env };
+const env = { ...process.env, ELECTRON_ENABLE_LOGGING: '1', ELECTRON_ENABLE_STACK_DUMPING: '1' };
 delete env.ELECTRON_RUN_AS_NODE;
+if (process.platform === 'darwin') {
+  // Stato della firma (utile se macOS rifiuta l'app).
+  const app = exe.slice(0, exe.indexOf('.app') + 4);
+  spawnSync('codesign', ['-dv', '--verbose=2', app], { stdio: 'inherit' });
+}
+const started = Date.now();
 const res = spawnSync(cmd, args, { stdio: 'inherit', timeout: 120_000, env });
 if (!existsSync(out)) {
   console.error(`L'app non ha scritto l'esito (uscita ${res.status ?? res.signal}).`);
+  if (process.platform === 'darwin') printMacCrashReport(started);
   process.exit(1);
 }
 const result = JSON.parse(readFileSync(out, 'utf8'));
 console.log(JSON.stringify(result, null, 2));
 process.exit(result.esito === 'OK' ? 0 : 1);
+
+/** macOS: stampa l'inizio del rapporto di crash appena scritto dal sistema, per capire cosa è successo. */
+function printMacCrashReport(since) {
+  const dir = join(homedir(), 'Library', 'Logs', 'DiagnosticReports');
+  if (!existsSync(dir)) return;
+  const reports = readdirSync(dir)
+    .filter((f) => f.includes(brand.shortName) || f.includes('Electron'))
+    .map((f) => ({ f, t: statSync(join(dir, f)).mtimeMs }))
+    .filter((r) => r.t >= since - 5_000)
+    .sort((a, b) => b.t - a.t);
+  if (!reports.length) return console.error('Nessun rapporto di crash trovato.');
+  console.error(`--- ${reports[0].f} ---`);
+  console.error(readFileSync(join(dir, reports[0].f), 'utf8').split('\n').slice(0, 120).join('\n'));
+}

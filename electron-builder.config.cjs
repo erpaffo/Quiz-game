@@ -21,12 +21,16 @@ module.exports = {
   win: { target: [{ target: 'portable', arch: ['x64'] }], icon: 'build/icon.png' },
   portable: { artifactName: artifact },
 
-  // macOS: .dmg per Intel e Apple Silicon. Non firmato (identity: null): al primo avvio tasto destro → Apri.
+  // macOS: .dmg per Intel e Apple Silicon. Firma «ad-hoc» (identity: '-'): gratuita, senza certificato Apple.
+  // Sui Mac con chip Apple un'app modificata e senza nessuna firma non parte (o risulta «danneggiata»);
+  // con la firma ad-hoc basta aprirla la prima volta con tasto destro → Apri.
+  // Niente hardened runtime: senza certificato bloccherebbe il caricamento delle librerie di Electron.
   mac: {
     target: [{ target: 'dmg', arch: ['universal'] }],
     icon: 'build/icon.png',
     category: 'public.app-category.trivia-games',
-    identity: null
+    identity: '-',
+    hardenedRuntime: false
   },
   dmg: { artifactName: artifact, title: '${productName}' },
 
