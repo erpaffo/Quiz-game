@@ -3,7 +3,7 @@
  "name": "📱 Domande degli amici",
  "description": "Domande aggiunte dal telefono durante la lobby.",
  "builtIn": false,
- "updatedAt": 1792083426657,
+ "updatedAt": 1792250403364,
  "categories": [
   {
    "id": "c_8pgrt5ge",
@@ -70,6 +70,17 @@
   },
   {
    "id": "q_8jv7f3j2",
+   "categoryId": "c_8pgrt5ge",
+   "type": "multiple",
+   "text": "Chi vince sempre a {giocatore}?",
+   "options": [
+    "Io",
+    "Tu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "q_e5ug34c2",
    "categoryId": "c_8pgrt5ge",
    "type": "multiple",
    "text": "Chi vince sempre a {giocatore}?",

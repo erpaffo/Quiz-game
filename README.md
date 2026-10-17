@@ -85,7 +85,7 @@ Un PC **senza scheda Wi-Fi**, come un fisso collegato via cavo, non può creare 
 
 ## La serata
 
-1. **Lobby:** ognuno sceglie personaggio, skin e selfie dal telefono. Sul PC si scelgono:
+1. **Lobby:** ognuno sceglie personaggio, skin e selfie dal telefono. Il selfie viene ritagliato da solo (solo testa e capelli, senza sfondo) e diventa la testa del personaggio, come in Buzz!; se il ritaglio non riesce lo si sistema a mano in un ovale. Sul PC si scelgono:
    - **Ruota casuale**: la durata (Corta 3 giochi, Normale 5, Lunga 7) e quali giochi possono uscire;
    - oppure **Scaletta in ordine**: i giochi uno dopo l'altro, nell'ordine deciso da te (fino a 12), senza ruota;
    - i **pacchetti di domande**: Pacchetto base, Cultura generale, Pop & Intrattenimento, Numeri & Stime, **Bandiere del mondo**, **Per esperti** (domande difficili), **Melodie famose** (per Indovina il Brano) e quelli creati da te.
@@ -117,6 +117,13 @@ Dai 7 giocatori in su il gioco cambia alcune regole per restare divertente per t
 - **Ruba Punti**: nessuno paga più di due furti per domanda. Oltre, paga la banca.
 - **Ritmo**: le animazioni delle carte durano al massimo 7 secondi. Classifiche e risultati vanno su due colonne e mostrano i conteggi invece delle liste di nomi.
 - **Carte**: chi è al centro dell'attenzione (il primo in classifica) è protetto dal tetto agli attacchi; a tutti conviene giocare le difese.
+
+### Personaggi
+
+8 personaggi cartoon, con 2 o 3 skin ciascuno: Rocky Ciuffo, Cap. Orbita, Chef Baffo, Nonna Sprint, Quizbot 3000, Barba Libro, **Sandro** e **Basso**. In lobby, **🎨 Personalizza** permette di ricolorare la skin e, per alcuni personaggi, di scegliere gli accessori:
+
+- **Sandro**: occhiali, barba, gratta e vinci oppure schedina con le carte, fiches o carte in tasca, espressione fiduciosa o preoccupata.
+- **Basso**: capelli corti o codino, barbetta, manga o action figure, borsa a tracolla con spille, stampa della felpa (robot o stella), posa tranquilla o dinamica.
 
 ### Carte potere
 
@@ -206,3 +213,8 @@ build/       icona e LEGGIMI.txt allegato alle release
 - `GAME_SPEED=10 npm run dev` + `npm run simulate`: simula una serata completa a velocità ×10. Variabili utili: `LENGTH=short|normal|long` (durata), `BOTS=15` (numero di bot, fino a 15), `SEQUENCE=bomb,estimate` (scaletta), `ONLY_GAMES=bomb,wager` (lato server: limita la ruota ai giochi indicati).
 - Tempi e punteggi sono in `shared/config.ts`.
 - `server/app.ts` contiene tutto il server come funzione `startServer(...)`: lo usano sia `server/index.ts` (terminale) sia l'app desktop.
+
+## Crediti
+
+- Bandiere: [flag-icons](https://github.com/lipis/flag-icons) (MIT).
+- Ritaglio del selfie: [MediaPipe](https://ai.google.dev/edge/mediapipe) e il modello *selfie multiclass* di Google (Apache 2.0), eseguiti sul telefono senza internet.

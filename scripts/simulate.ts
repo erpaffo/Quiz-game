@@ -109,7 +109,7 @@ me.on('ROOM_STATE', async (s) => {
     if (!done.has('lobby') && s.players.find((p) => p.id === m.playerId)) {
       done.add('lobby');
       await soft('ADD_QUESTION', me.emitWithAck('ADD_QUESTION', { type: 'multiple', categoryName: 'Test simulazione', text: 'Chi vince sempre a {giocatore}?', options: ['Io', 'Tu'], correctIndex: 0 }));
-      must('SELECT', await me.emitWithAck('SELECT_CHARACTER', { characterId: 'robot', skinId: 'glitch' }));
+      must('SELECT', await me.emitWithAck('SELECT_CHARACTER', { characterId: 'robot', skinId: 'glitch', custom: { 'color-body': 'c2', hacker: 'x' } }));
       me.emit('PLAYER_READY', { ready: true });
       setTimeout(async () => must('START', await me.emitWithAck('START_GAME', {})), 300);
     }

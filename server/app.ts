@@ -85,7 +85,7 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
   const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer, {
     // Lascia passare gli upgrade WebSocket di Vite (HMR) sullo stesso server HTTP.
     destroyUpgrade: false,
-    maxHttpBufferSize: 200_000
+    maxHttpBufferSize: 400_000
   });
   const packs = new PackStore({ builtinDir: opts.builtinPacksDir, userDir: opts.userPacksDir });
   const rooms = new RoomManager(io, packs, opts.speed ?? 1);
@@ -240,7 +240,7 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
 
     socket.on('SELECT_CHARACTER', safe((p, ack) => {
       const pl = player();
-      reply(ack, pl ? pl.room.selectCharacter(pl.playerId, p?.characterId, p?.skinId) : NOT_IN_ROOM);
+      reply(ack, pl ? pl.room.selectCharacter(pl.playerId, p?.characterId, p?.skinId, p?.custom) : NOT_IN_ROOM);
     }));
 
     socket.on('UPLOAD_SELFIE', safe((p, ack) => {

@@ -10,6 +10,7 @@ export interface Player {
   isBot: boolean;
   characterId: string | null;
   skinId: string | null;
+  custom: Record<string, string>;
   selfie: string | null;
   ready: boolean;
   score: number;
@@ -43,6 +44,7 @@ export function newPlayer(name: string, isBot: boolean): Player {
     isBot,
     characterId: null,
     skinId: null,
+    custom: {},
     selfie: null,
     ready: isBot,
     score: 0,

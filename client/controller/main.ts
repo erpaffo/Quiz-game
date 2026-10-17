@@ -3,7 +3,7 @@ import '@fontsource/baloo-2/700.css';
 import '@fontsource/baloo-2/800.css';
 import { brandLogoHtml } from '../../shared/brand';
 import { cardDescription, CARDS, isAttack } from '../../shared/cards';
-import { CHARACTERS, getCharacter } from '../../shared/characters';
+import { CHARACTERS, getCharacter, lookKey, traitValue, type CustomChoice } from '../../shared/characters';
 import { CONFIG } from '../../shared/config';
 import { GAMES } from '../../shared/games';
 import type { CardEvent, CardType, GameAction, GameId, PlayerPublic, PlayState, PowerType, RoomSnapshot } from '../../shared/types';
@@ -42,6 +42,9 @@ let selectTimer = 0;
 const local = {
   charIdx: -1,
   skinIdx: 0,
+  /** Tratti personalizzati in modifica (si azzerano cambiando personaggio o skin). */
+  custom: {} as CustomChoice,
+  customOpen: false,
   jokerArmed: false,
   cardPick: null as CardType | null,
   sabotagePick: null as PowerType | null,
@@ -196,7 +199,7 @@ function keyOf(snap: RoomSnapshot, p: PlayerPublic): string {
   switch (d.phase) {
     case 'LOBBY':
       if (local.sheet) return 'SHEET';
-      return ['L', local.charIdx, local.skinIdx, p.ready, p.hasSelfie, [...takenCombos(snap, p)].join(), p.isVip, canStart(snap), p.characterId, p.skinId].join('|');
+      return ['L', local.charIdx, local.skinIdx, lookKey(null, null, local.custom), local.customOpen, p.ready, p.hasSelfie, [...takenCombos(snap, p)].join(), p.isVip, canStart(snap), lookKey(p.characterId, p.skinId, p.custom)].join('|');
     case 'WHEEL':
     case 'GAME_INTRO':
     case 'GAME_RESULT':
@@ -690,6 +693,7 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
     if (ci >= 0) {
       local.charIdx = ci;
       local.skinIdx = Math.max(0, CHARACTERS[ci].skins.findIndex((k) => k.id === p.skinId));
+      local.custom = { ...p.custom };
     } else {
       const usedChars = new Set(snap.players.map((o) => o.characterId));
       local.charIdx = Math.max(0, CHARACTERS.findIndex((c, i) => !usedChars.has(c.id) && free(i) >= 0));
@@ -698,15 +702,34 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
   }
   if (!p.ready && taken.has(`${CHARACTERS[local.charIdx].id}/${CHARACTERS[local.charIdx].skins[local.skinIdx].id}`)) {
     const f = free(local.charIdx);
-    if (f >= 0) local.skinIdx = f;
+    if (f >= 0) {
+      local.skinIdx = f;
+      local.custom = {};
+    }
   }
 
   const ch = CHARACTERS[local.charIdx];
   const sk = ch.skins[local.skinIdx];
-  if (p.characterId !== ch.id || p.skinId !== sk.id) {
+  const select = () => socket.emitWithAck('SELECT_CHARACTER', { characterId: ch.id, skinId: sk.id, custom: local.custom });
+  if (lookKey(p.characterId, p.skinId, p.custom) !== lookKey(ch.id, sk.id, local.custom)) {
     clearTimeout(selectTimer);
-    selectTimer = window.setTimeout(() => void act(socket.emitWithAck('SELECT_CHARACTER', { characterId: ch.id, skinId: sk.id })), 200);
+    selectTimer = window.setTimeout(() => void act(select()), 200);
   }
+
+  const customPanel = !ch.custom?.length
+    ? ''
+    : `<button class="link-btn custom-toggle" data-act="custom" ${p.ready ? 'disabled' : ''}>🎨 ${local.customOpen ? 'Chiudi la personalizzazione' : 'Personalizza'}</button>
+      ${local.customOpen && !p.ready ? `<div class="custom-panel">${ch.custom.map((def) => `
+        <div class="custom-row">
+          <span class="custom-label">${esc(def.label)}</span>
+          <div class="custom-opts">${def.options.map((o) => {
+            const on = traitValue(def, sk, local.custom) === o.id;
+            return def.recolor
+              ? `<button class="swatch ${on ? 'on' : ''}" data-trait="${def.id}" data-opt="${o.id}" title="${esc(o.label)}" aria-label="${esc(o.label)}" style="--sw:${o.color ?? sk.colors[def.recolor]}">${o.color ? '' : '↺'}</button>`
+              : `<button class="trait ${on ? 'on' : ''}" data-trait="${def.id}" data-opt="${o.id}">${esc(o.label)}</button>`;
+          }).join('')}</div>
+        </div>`).join('')}
+      </div>` : ''}`;
 
   const selfieThumb = mySelfie ? `style="background-image:url(${mySelfie})"` : '';
   app.innerHTML = `
@@ -722,6 +745,7 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
         <button class="skin ${i === local.skinIdx ? 'on' : ''}" data-skin="${i}" ${taken.has(`${ch.id}/${k.id}`) || p.ready ? 'disabled' : ''}
           style="--a:${k.colors.body};--b:${k.colors.accent};--c:${k.colors.skin}"><i></i>${esc(k.name)}</button>`).join('')}
       </div>
+      ${customPanel}
       <div class="selfie-row">
         <div class="selfie-thumb" ${selfieThumb}>${mySelfie ? '' : p.hasSelfie ? '✓' : '🙂'}</div>
         <button class="btn secondary" data-act="selfie">📸 ${mySelfie || p.hasSelfie ? 'Rifai il selfie' : 'Scatta un selfie'}</button>
@@ -736,7 +760,7 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
     </div>`;
 
   preview.mount(document.getElementById('preview')!);
-  preview.show(ch.id, sk.id, mySelfie);
+  preview.show(ch.id, sk.id, mySelfie, local.custom);
 
   const step = (dir: number) => {
     for (let k = 1; k <= CHARACTERS.length; k++) {
@@ -745,6 +769,7 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
       if (f >= 0) {
         local.charIdx = ci;
         local.skinIdx = f;
+        local.custom = {};
         break;
       }
     }
@@ -756,7 +781,14 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
     const a = t.closest<HTMLElement>('[data-act]')?.dataset.act;
     const skin = t.closest<HTMLElement>('[data-skin]')?.dataset.skin;
     if (skin !== undefined) {
+      if (Number(skin) !== local.skinIdx) local.custom = {};
       local.skinIdx = Number(skin);
+      return render();
+    }
+    const trait = t.closest<HTMLElement>('[data-trait]');
+    if (trait && !p.ready) {
+      local.custom = { ...local.custom, [trait.dataset.trait!]: trait.dataset.opt! };
+      navigator.vibrate?.(10);
       return render();
     }
     switch (a) {
@@ -764,12 +796,15 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
         return step(-1);
       case 'next':
         return step(1);
+      case 'custom':
+        local.customOpen = !local.customOpen;
+        return render();
       case 'sheet':
         local.sheet = true;
         return render(true);
       case 'selfie': {
         const data = await pickSelfie();
-        if (!data) return toast('Foto non valida, riprova');
+        if (!data) return; // annullato
         mySelfie = data;
         store(SELFIE_KEY, data);
         await act(socket.emitWithAck('UPLOAD_SELFIE', { dataUrl: data }));
@@ -784,7 +819,7 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
       case 'ready':
         if (!p.ready) {
           clearTimeout(selectTimer);
-          const r = await socket.emitWithAck('SELECT_CHARACTER', { characterId: ch.id, skinId: sk.id });
+          const r = await select();
           if (!r.ok) return toast(r.error);
           preview.wave();
         }

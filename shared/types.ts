@@ -31,6 +31,8 @@ export interface PlayerPublic {
   name: string;
   characterId: string | null;
   skinId: string | null;
+  /** Tratti personalizzati scelti dal giocatore (id del tratto → opzione). */
+  custom: Record<string, string>;
   hasSelfie: boolean;
   ready: boolean;
   connected: boolean;

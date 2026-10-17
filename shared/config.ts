@@ -59,7 +59,8 @@ export const CONFIG = {
 
   /** Pausa dopo che tutti hanno agito, prima di chiudere la fase. */
   ALL_DONE_GRACE_MS: 700,
-  SELFIE_MAX_CHARS: 40_000,
+  /** Selfie ritagliato (WebP o PNG trasparente): circa 224×300 pixel. */
+  SELFIE_MAX_CHARS: 180_000,
   NAME_MAX_CHARS: 12,
 
   DURATION: {

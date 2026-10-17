@@ -5,3 +5,4 @@ app-build/
 release/
 user-media/
 docs/
+client/public/mediapipe/wasm/

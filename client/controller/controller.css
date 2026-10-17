@@ -65,7 +65,7 @@ body.controller {
 .skin.on { border-color: var(--gold); background: var(--card-strong); }
 .skin:disabled { opacity: 0.35; text-decoration: line-through; }
 .selfie-row { display: flex; gap: 10px; align-items: center; justify-content: center; }
-.selfie-thumb { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--card-strong) center / cover; font-size: 1.6rem; border: 3px solid var(--gold); flex: none; }
+.selfie-thumb { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--card-strong) center / contain no-repeat; font-size: 1.6rem; border: 3px solid var(--gold); flex: none; }
 
 /* voto */
 .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -245,3 +245,28 @@ body.controller {
 .reveal-img { height: 2.4em; border-radius: 4px; margin-right: 8px; vertical-align: middle; }
 .target-list.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .target-list.grid .target-btn { padding: 10px 12px; font-size: 1.05rem; }
+
+/* personalizzazione del personaggio */
+.custom-toggle { align-self: center; }
+.custom-panel { display: flex; flex-direction: column; gap: 10px; padding: 12px; border-radius: 16px; background: var(--card); }
+.custom-row { display: flex; flex-direction: column; gap: 6px; }
+.custom-label { font-weight: 800; font-size: 0.9rem; opacity: 0.85; }
+.custom-opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.trait { padding: 6px 12px; border-radius: 999px; background: var(--card-strong); border: 2px solid transparent; font-weight: 700; font-size: 0.9rem; }
+.trait.on { border-color: var(--gold); }
+.swatch { width: 34px; height: 34px; border-radius: 50%; background: var(--sw); border: 3px solid rgba(255, 255, 255, 0.25); font-weight: 800; color: #fff; text-shadow: 0 1px 2px #000; }
+.swatch.on { border-color: var(--gold); transform: scale(1.12); }
+
+/* editor del selfie: ritaglio automatico della testa o a mano nell'ovale */
+.selfie-modal { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px; background: rgba(8, 2, 24, 0.85); }
+.selfie-card { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; max-width: 360px; padding: 16px; border-radius: 20px; background: var(--card-strong); }
+.selfie-stage { position: relative; overflow: hidden; border-radius: 16px; touch-action: none;
+  background: repeating-conic-gradient(#3a2a66 0 25%, #2a1d4f 0 50%) 0 0 / 24px 24px; }
+.selfie-stage canvas { width: 100%; height: 100%; display: block; }
+.selfie-stage.manual { cursor: grab; background: #12062e; }
+.selfie-oval { position: absolute; left: 4%; right: 4%; top: 2%; bottom: 2%; border-radius: 50%; border: 3px dashed var(--gold);
+  box-shadow: 0 0 0 999px rgba(8, 2, 24, 0.6); pointer-events: none; }
+.selfie-status { text-align: center; min-height: 2.6em; }
+.selfie-zoom { display: flex; align-items: center; gap: 8px; width: 100%; }
+.selfie-zoom input { flex: 1; accent-color: var(--gold); }
+.selfie-actions { display: flex; flex-direction: column; gap: 8px; width: 100%; }

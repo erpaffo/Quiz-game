@@ -3,6 +3,7 @@ import '@fontsource/baloo-2/700.css';
 import '@fontsource/baloo-2/800.css';
 import QRCode from 'qrcode';
 import { CARDS } from '../../shared/cards';
+import { lookKey } from '../../shared/characters';
 import { CONFIG } from '../../shared/config';
 import { GAMES } from '../../shared/games';
 import type { CardEvent, PowerType, RoomSnapshot } from '../../shared/types';
@@ -222,7 +223,7 @@ function playerReactions(s: RoomSnapshot, prev: RoomSnapshot | null) {
       if (s.phase === 'LOBBY') audio.say('player_join', 4000);
       continue;
     }
-    if (old.characterId !== p.characterId || old.skinId !== p.skinId) {
+    if (lookKey(old.characterId, old.skinId, old.custom) !== lookKey(p.characterId, p.skinId, p.custom)) {
       stage.play(p.id, 'wave');
       sfx.pop();
     }

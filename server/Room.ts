@@ -1,6 +1,6 @@
 import type { Server } from 'socket.io';
 import { isAttack } from '../shared/cards';
-import { CHARACTERS, getSkin } from '../shared/characters';
+import { CHARACTERS, getSkin, sanitizeCustom } from '../shared/characters';
 import { CONFIG, type DurationKey } from '../shared/config';
 import type { ClientToServerEvents, ServerToClientEvents } from '../shared/events';
 import { GAME_IDS, GAMES } from '../shared/games';
@@ -527,7 +527,7 @@ export class Room {
 
   // ---------------------------------------------------------------- azioni lobby
 
-  selectCharacter(playerId: string, characterId: string, skinId: string): ActionResult {
+  selectCharacter(playerId: string, characterId: string, skinId: string, custom?: unknown): ActionResult {
     const p = this.players.get(playerId);
     if (!p || this.phase !== 'LOBBY') return 'Non puoi cambiare personaggio ora';
     if (!getSkin(characterId, skinId)) return 'Personaggio non valido';
@@ -535,6 +535,7 @@ export class Room {
     if (taken) return 'Questa skin è già stata scelta';
     p.characterId = characterId;
     p.skinId = skinId;
+    p.custom = sanitizeCustom(characterId, custom);
     this.touch();
     this.broadcast();
     return null;
@@ -544,7 +545,7 @@ export class Room {
     const p = this.players.get(playerId);
     if (!p) return 'Giocatore sconosciuto';
     if (dataUrl !== null) {
-      if (typeof dataUrl !== 'string' || !dataUrl.startsWith('data:image/jpeg;base64,')) return 'Formato non valido';
+      if (typeof dataUrl !== 'string' || !/^data:image\/(jpeg|png|webp);base64,/.test(dataUrl)) return 'Formato non valido';
       if (dataUrl.length > CONFIG.SELFIE_MAX_CHARS) return 'Foto troppo grande';
     }
     p.selfie = dataUrl;
@@ -656,6 +657,7 @@ export class Room {
       name: p.name,
       characterId: p.characterId,
       skinId: p.skinId,
+      custom: p.custom,
       hasSelfie: !!p.selfie,
       ready: p.ready,
       connected: p.connected,

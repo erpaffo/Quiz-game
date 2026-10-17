@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { CharacterRig } from '../common/characters3d';
+import { lookKey, type CustomChoice } from '../../shared/characters';
 
 /**
  * Anteprima 3D del personaggio nella lobby del controller. Un solo renderer WebGL
@@ -40,13 +41,16 @@ class Preview {
     }
   }
 
-  show(characterId: string, skinId: string, selfie: string | null) {
+  show(characterId: string, skinId: string, selfie: string | null, custom: CustomChoice = {}) {
     if (!this.rig) {
-      this.rig = new CharacterRig(characterId, skinId);
+      this.rig = new CharacterRig(characterId, skinId, custom);
       this.scene.add(this.rig.root);
-    } else if (this.rig.characterId !== characterId || this.rig.skinId !== skinId) {
-      this.rig.setLook(characterId, skinId);
-      this.rig.play('hit');
+    } else if (this.rig.lookKey !== lookKey(characterId, skinId, custom)) {
+      // cambio di personaggio o skin: piccolo sobbalzo; cambio di un tratto: saluto
+      const bigChange = this.rig.characterId !== characterId || this.rig.skinId !== skinId;
+      this.rig.setLook(characterId, skinId, custom);
+      this.rig.play(bigChange ? 'hit' : 'wave');
+      if (!bigChange) setTimeout(() => this.rig?.currentAnim === 'wave' && this.rig.play('idle'), 900);
     }
     this.rig.setSelfie(selfie);
   }

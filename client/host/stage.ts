@@ -329,13 +329,13 @@ export class Stage {
 
       if (p.characterId && p.skinId) {
         if (!slot.rig) {
-          slot.rig = new CharacterRig(p.characterId, p.skinId);
+          slot.rig = new CharacterRig(p.characterId, p.skinId, p.custom);
           slot.rig.setSelfie(slot.selfie);
           slot.rig.root.rotation.y = 0;
           slot.anchor.add(slot.rig.root);
           slot.rig.play('wave');
         } else {
-          slot.rig.setLook(p.characterId, p.skinId);
+          slot.rig.setLook(p.characterId, p.skinId, p.custom);
         }
       }
       if (!this.attacking) slot.rig?.setEffects(p.activeEffects);

@@ -41,8 +41,12 @@ def fix_links(body):
     return body
 
 
-if os.path.isdir(OUT):
-    shutil.rmtree(OUT)
+# Si cancellano solo le note generate: quelle scritte a mano (es. la cartella Progetto/) restano.
+os.makedirs(OUT, exist_ok=True)
+for f in os.listdir(OUT):
+    if re.match(r'^\d\d .+\.md$', f) or f == INDEX + '.md':
+        os.remove(os.path.join(OUT, f))
+shutil.rmtree(os.path.join(OUT, 'Giochi'), ignore_errors=True)
 os.makedirs(os.path.join(OUT, 'Giochi'))
 
 # ----------------------------------------------------------------- note per sezione
@@ -55,7 +59,7 @@ for idx, (n, title, body) in enumerate(sections):
     extra = ''
     if n == 3:
         # una nota per ogni gioco, ricavata dalla tabella
-        rows = re.findall(r'(?m)^\| (\S+) \*\*(.+?)\*\* \| (.+?) \| (.+?) \| (.+?) \|$', body)
+        rows = re.findall(r'(?m)^\| (\S+) \*\*(.+?)\*\*[^|]* \| (.+?) \| (.+?) \| (.+?) \|$', body)
         links = []
         for icon, name, mech, pts, steps in rows:
             clean = re.sub(r'\*\*', '', name)
@@ -113,6 +117,11 @@ for g, nums in groups:
     for n in nums:
         lines.append(f'- [[{names[n]}|{n}. {title_of[n]}]]')
     lines.append('')
+manual = os.path.join(OUT, 'Progetto')
+if os.path.isdir(manual):
+    lines.append('## Lavori in corso')
+    lines += [f'- [[Progetto/{f[:-3]}]]' for f in sorted(os.listdir(manual)) if f.endswith('.md')]
+    lines.append('')
 lines += [
     '## Giochi',
     *[f'- [[Giochi/{f[:-3]}]]' for f in sorted(os.listdir(os.path.join(OUT, 'Giochi')))],
@@ -120,12 +129,12 @@ lines += [
     '## Come usare questa cartella',
     'Apri in Obsidian la cartella `docs/obsidian` come vault (*Apri cartella come vault*). I diagrammi Mermaid si vedono nella lettura. Il grafo mostra come sono collegate le sezioni e le schede dei giochi.',
     '',
-    '> Le note sono generate da `docs/PROGETTO.md` con `python scripts/make-obsidian.py`: modifica il file originale e rigenera, altrimenti le modifiche alle note andranno perse.',
+    '> Le note numerate, le schede dei giochi e questo indice sono generati da `docs/PROGETTO.md` con `python scripts/make-obsidian.py`: modifica il file originale e rigenera. Le note nella cartella `Progetto/` sono scritte a mano e non vengono toccate.',
 ]
 open(os.path.join(OUT, INDEX + '.md'), 'w', encoding='utf8', newline='\n').write('\n'.join(lines) + '\n')
 
 # impostazioni minime del vault: collegamenti wiki con percorsi più brevi
-os.makedirs(os.path.join(OUT, '.obsidian'))
-open(os.path.join(OUT, '.obsidian', 'app.json'), 'w', encoding='utf8', newline='\n').write(
+os.makedirs(os.path.join(OUT, '.obsidian'), exist_ok=True)
+if not os.path.exists(os.path.join(OUT, '.obsidian', 'app.json')): open(os.path.join(OUT, '.obsidian', 'app.json'), 'w', encoding='utf8', newline='\n').write(
     '{\n  "newLinkFormat": "shortest",\n  "useMarkdownLinks": false,\n  "showFrontmatter": false\n}\n')
 print(len(sections), 'sezioni,', len(os.listdir(os.path.join(OUT, 'Giochi'))), 'giochi')

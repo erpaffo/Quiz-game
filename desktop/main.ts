@@ -244,7 +244,7 @@ async function smokeTest(port: number) {
     });
     const saved = existsSync(join(userDir(), 'pk_smoke.json'));
     await fetch(`http://localhost:${port}/api/packs/pk_smoke`, { method: 'DELETE' });
-    result.salvataggioPacchetti = res.ok && saved ? 'ok' : 'FALLITO';
+    result.salvataggioPacchetti = res.ok && saved ? 'ok' : `FALLITO (HTTP ${res.status}${saved ? '' : ', file non scritto'}: ${res.ok ? '' : (await res.text()).slice(0, 200)})`;
     ok &&= res.ok && saved;
   } catch (err) {
     result.salvataggioPacchetti = `ERRORE ${(err as Error).message}`;
@@ -300,7 +300,8 @@ if (!smokeFile && !app.requestSingleInstanceLock()) {
     try {
       migrateDevPacks();
       server = await startServer({
-        port: PREFERRED_PORT,
+        // La prova automatica usa una porta sua, per non parlare con una partita già aperta sulla 3000.
+        port: smokeFile !== undefined ? PREFERRED_PORT + 900 : PREFERRED_PORT,
         portTries: 10,
         staticDir: join(appPath, 'client'),
         builtinPacksDir: join(appPath, 'packs'),

@@ -23,7 +23,7 @@ export interface ClientToServerEvents {
 
   // --- Controller ---
   JOIN_ROOM: (p: { code: string; name: string; playerId?: string }, ack: Ack<{ playerId: string; reconnected: boolean }>) => void;
-  SELECT_CHARACTER: (p: { characterId: string; skinId: string }, ack: Ack) => void;
+  SELECT_CHARACTER: (p: { characterId: string; skinId: string; custom?: Record<string, string> }, ack: Ack) => void;
   UPLOAD_SELFIE: (p: { dataUrl: string | null }, ack: Ack) => void;
   PLAYER_READY: (p: { ready: boolean }) => void;
   ADD_QUESTION: (p: PhoneQuestion, ack: Ack<{ total: number }>) => void;
