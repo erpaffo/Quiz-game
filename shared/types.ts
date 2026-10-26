@@ -1,5 +1,7 @@
 // Modelli dati condivisi tra server, schermo principale (host) e controller.
 
+import type { MenuState, ShowId } from './shows';
+
 export type PowerType = 'ICE' | 'GOO' | 'BOMB' | 'LOCK';
 export type DefenseType = 'SHIELD' | 'MIRROR' | 'CLOAK' | 'ANTIDOTE';
 export type BonusType = 'DOUBLE' | 'FIFTY';
@@ -17,7 +19,9 @@ export type Phase =
   | 'PLAY'
   | 'GAME_RESULT'
   | 'PYRAMID_INTRO'
-  | 'GAME_OVER';
+  | 'GAME_OVER'
+  /** È in corso uno Show dell'Hub diverso dal quiz: lo stato è in `RoomSnapshot.show`. */
+  | 'SHOW';
 
 export interface Category {
   id: string;
@@ -163,6 +167,12 @@ export type PlayState =
   | { step: 'sabotageResult'; events: CardEvent[] };
 
 export interface LobbySettings {
+  /** Show selezionato nel Party Hub ('quiz' di default). */
+  showId?: ShowId;
+  /** Round scelti nel menù per ogni gioco (mancante = valore predefinito, vedi roundsFor in shows.ts). */
+  rounds?: Partial<Record<ShowId, number>>;
+  /** Regole scelte nel sottomenù di ogni gioco: id gioco → (id regola → id scelta). Vedi optionFor in shows.ts. */
+  options?: Partial<Record<ShowId, Record<string, string>>>;
   length: GameLength;
   /** Pacchetti esclusi (quelli nuovi sono inclusi automaticamente). */
   excluded: string[];
@@ -191,7 +201,8 @@ export type PhaseData =
   | { phase: 'PLAY'; game: GameId | 'pyramid'; state: PlayState }
   | { phase: 'GAME_RESULT'; game: GameId; deltas: Record<string, number>; gameNumber: number; totalGames: number }
   | { phase: 'PYRAMID_INTRO'; steps: number }
-  | { phase: 'GAME_OVER'; winnerId: string; podium: string[] };
+  | { phase: 'GAME_OVER'; winnerId: string; podium: string[] }
+  | { phase: 'SHOW'; show: ShowId };
 
 /** Dati visibili solo al singolo giocatore che riceve lo snapshot. */
 export interface PrivateState {
@@ -212,6 +223,8 @@ export interface PrivateState {
   blitz: { question: QuestionPublic; streak: number; multiplier: number; points: number; feedback: 'correct' | 'wrong' | null } | null;
   /** Piramide: attacchi di sabotaggio ancora da lanciare. */
   sabotage: { left: number } | null;
+  /** Stato privato generico per i nuovi Party Show dell'Hub (Fase 3). */
+  show?: unknown;
 }
 
 export interface RoomSnapshot {
@@ -222,9 +235,15 @@ export interface RoomSnapshot {
   endsAt: number | null;
   /** Ora del server all'invio: serve ai client per calcolare lo scarto d'orologio. */
   serverNow: number;
+  /** Partita in pausa dallo schermo principale: conti alla rovescia fermi. */
+  paused?: boolean;
   pyramidSteps: number;
   players: PlayerPublic[];
   me: PrivateState | null;
+  /** Stato pubblico generico per lo Show attivo nell'Hub Multi-Gioco. */
+  show?: { id: ShowId; state: unknown } | null;
+  /** Menù del Pack (copertina / griglia / dettaglio), pilotato da capo stanza o schermo principale. */
+  menu?: MenuState;
 }
 
 export type GameAction =

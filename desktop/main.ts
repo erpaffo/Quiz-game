@@ -1,7 +1,7 @@
 // App desktop (Electron): contiene il server del gioco e lo schermo principale.
 // Doppio clic → il server parte in-process e si apre la finestra a schermo intero; i telefoni
 // si collegano come sempre (QR → controller.html). Nessun comando da terminale, nessun Node.js da installare.
-import { app, BrowserWindow, dialog, Menu, shell, type MenuItemConstructorOptions } from 'electron';
+import { app, BrowserWindow, dialog, ipcMain, Menu, screen, shell, type MenuItemConstructorOptions } from 'electron';
 import { spawn } from 'node:child_process';
 import { copyFileSync, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -53,18 +53,72 @@ function createMainWindow() {
     backgroundColor: '#12062e',
     title: BRAND.name,
     autoHideMenuBar: true,
-    webPreferences: { contextIsolation: true, nodeIntegration: false, sandbox: true, backgroundThrottling: false }
+    // preload: il menù di pausa del gioco può gestire finestra, monitor e uscita (vedi desktop/preload.ts)
+    webPreferences: { contextIsolation: true, nodeIntegration: false, sandbox: true, backgroundThrottling: false, preload: join(__dirname, 'preload.cjs') }
   });
   mainWindow = win;
   void win.loadURL(`${origin()}/host.html`);
   win.on('closed', () => {
     mainWindow = null;
   });
-  // Esc esce dallo schermo intero (F11 lo alterna).
-  win.webContents.on('before-input-event', (_e, input) => {
-    if (input.type === 'keyDown' && input.key === 'Escape' && win.isFullScreen()) win.setFullScreen(false);
-  });
+  // Esc NON esce dallo schermo intero: arriva al gioco, che apre il menù di pausa (F11 alterna lo schermo intero).
   return win;
+}
+
+// ------------------------------------------------------------ comandi dal menù di pausa del gioco
+
+/** Accetta i comandi solo dalla finestra principale del gioco. */
+function fromMain(e: Electron.IpcMainInvokeEvent) {
+  return !!mainWindow && e.sender === mainWindow.webContents;
+}
+
+function desktopInfo() {
+  const win = mainWindow!;
+  const current = screen.getDisplayMatching(win.getBounds());
+  return {
+    fullscreen: win.isFullScreen(),
+    size: win.getContentSize(),
+    displays: screen.getAllDisplays().map((d, i) => ({
+      id: d.id,
+      label: `Schermo ${i + 1}${d.id === screen.getPrimaryDisplay().id ? ' (principale)' : ''} · ${d.size.width}×${d.size.height}`,
+      current: d.id === current.id
+    }))
+  };
+}
+
+function registerDesktopIpc() {
+  ipcMain.handle('desktop:info', (e) => (fromMain(e) ? desktopInfo() : null));
+  ipcMain.handle('desktop:fullscreen', (e, on: unknown) => {
+    if (!fromMain(e) || typeof on !== 'boolean') return null;
+    mainWindow!.setFullScreen(on);
+    return desktopInfo();
+  });
+  ipcMain.handle('desktop:display', (e, id: unknown) => {
+    if (!fromMain(e) || typeof id !== 'number') return null;
+    const target = screen.getAllDisplays().find((d) => d.id === id);
+    if (!target) return null;
+    const win = mainWindow!;
+    const wasFull = win.isFullScreen();
+    // In schermo intero la finestra non si sposta: si esce, si sposta, si rientra.
+    if (wasFull) win.setFullScreen(false);
+    const { x, y, width, height } = target.workArea;
+    const [w, h] = win.getSize();
+    win.setBounds({ x: x + Math.max(0, Math.round((width - w) / 2)), y: y + Math.max(0, Math.round((height - h) / 2)), width: Math.min(w, width), height: Math.min(h, height) });
+    if (wasFull) setTimeout(() => win.setFullScreen(true), 150);
+    return desktopInfo();
+  });
+  ipcMain.handle('desktop:size', (e, width: unknown, height: unknown) => {
+    if (!fromMain(e) || !Number.isInteger(width) || !Number.isInteger(height)) return null;
+    const win = mainWindow!;
+    if (win.isFullScreen()) win.setFullScreen(false);
+    const area = screen.getDisplayMatching(win.getBounds()).workArea;
+    win.setContentSize(Math.min(width as number, area.width), Math.min(height as number, area.height));
+    win.center();
+    return desktopInfo();
+  });
+  ipcMain.handle('desktop:quit', (e) => {
+    if (fromMain(e)) app.quit();
+  });
 }
 
 function openEditor() {
@@ -318,6 +372,7 @@ if (!smokeFile && !app.requestSingleInstanceLock()) {
 
     app.on('web-contents-created', (_e, contents) => guardNavigation(contents));
     buildMenu();
+    registerDesktopIpc();
     createMainWindow();
   });
 

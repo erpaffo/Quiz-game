@@ -4,6 +4,7 @@ import { CHARACTERS, getSkin, sanitizeCustom } from '../shared/characters';
 import { CONFIG, type DurationKey } from '../shared/config';
 import type { ClientToServerEvents, ServerToClientEvents } from '../shared/events';
 import { GAME_IDS, GAMES } from '../shared/games';
+import { clampRounds, getShowMeta, isMenuView, isShowId, sanitizeOptions, type MenuState, type ShowId } from '../shared/shows';
 import type {
   CardType,
   GameAction,
@@ -17,6 +18,7 @@ import type {
   PrivateState,
   RoomSnapshot
 } from '../shared/types';
+import { ShowRegistry, type RoomSessionContext, type ShowPlugin } from './core/ShowPlugin';
 import { createGame, gameAvailable } from './games';
 import { PyramidGame } from './games/pyramid';
 import type { GameContext, GameMode } from './games/types';
@@ -26,7 +28,12 @@ import { computeRanks } from './logic/scoring';
 import type { PackStore } from './PackStore';
 import { newPlayer, resetForGame, resetForShow, type Player } from './players';
 import { QuestionPool } from './QuestionPool';
+import { QuizShowPlugin } from './shows/quiz';
+import { registerShows } from './shows';
+import { PausableTimers } from './core/timers';
 import { pick, randomBetween, shuffle } from './util';
+
+const PAUSED = '⏸️ Partita in pausa: aspetta lo schermo principale';
 
 export type IO = Server<ClientToServerEvents, ServerToClientEvents>;
 
@@ -35,6 +42,8 @@ type ActionResult = string | null;
 
 const BOT_NAMES = ['Ugo', 'Lia', 'Bruno', 'Ada', 'Tito', 'Gina', 'Pino', 'Rita', 'Dino', 'Vera', 'Nico', 'Elsa', 'Zeno', 'Olga', 'Remo', 'Iris'];
 const LOBBY_DISCONNECT_GRACE_MS = 20_000;
+/** Un capo stanza che perde la connessione tiene la corona per questo tempo (micro-cali del Wi-Fi). */
+const VIP_DISCONNECT_GRACE_MS = 15_000;
 const MIN_MC_QUESTIONS = 10;
 const REEL_LENGTH = 16;
 const REEL_STOP = 13;
@@ -43,21 +52,42 @@ export class Room {
   hostSocketId: string | null = null;
   lastActivity = Date.now();
   readonly players = new Map<string, Player>();
-  settings: LobbySettings = { length: 'normal', excluded: [], mode: 'wheel', games: [...GAME_IDS], sequence: ['classic', 'fastest', 'bomb', 'blitz', 'estimate'] };
+  readonly registry = new ShowRegistry();
+  settings: LobbySettings = {
+    showId: 'quiz',
+    length: 'normal',
+    excluded: [],
+    mode: 'wheel',
+    games: [...GAME_IDS],
+    sequence: ['classic', 'fastest', 'bomb', 'blitz', 'estimate']
+  };
 
   private phaseData: Exclude<PhaseData, { phase: 'LOBBY' }> | { phase: 'LOBBY' } = { phase: 'LOBBY' };
   private endsAt: number | null = null;
   private stepEnd: (() => void) | null = null;
   private graceScheduled = false;
-  private timers = new Set<NodeJS.Timeout>();
+  /** Timer del passo corrente e timer del gioco: si fermano tutti insieme con la pausa. */
+  private timers = new PausableTimers((err) => console.error(`[stanza ${this.code}] errore nel timer:`, err));
+  private gameTimers = new PausableTimers((err) => console.error(`[stanza ${this.code}] errore nel timer di gioco:`, err));
+  /** Partita in pausa dallo schermo principale (Esc): timer fermi, azioni dei telefoni rifiutate. */
+  private paused = false;
+  private pausedAt = 0;
   private lobbyRemovals = new Map<string, NodeJS.Timeout>();
+  /** Capo stanza attuale: resta lo stesso finché non esce davvero (vedi vipId). */
+  private vip: string | null = null;
+  private vipLostAt: number | null = null;
+  private vipGraceTimer: NodeJS.Timeout | null = null;
 
   private pool: QuestionPool | null = null;
   private game: GameMode | null = null;
   private gameId: GameId | 'pyramid' | null = null;
+  private activeShow: ShowPlugin | null = null;
+  /** Menù del Pack: si parte dalla copertina, dopo ogni gioco si torna alla griglia. */
+  menu: MenuState = { view: 'cover', focus: 'quiz' };
   /** `order`: scaletta fissa (null = ruota); `wheel`: giochi che la ruota può estrarre. */
   private show = { total: 0, played: [] as GameId[], order: null as GameId[] | null, wheel: [] as GameId[] };
   private readonly ctx: GameContext;
+  private readonly sessionCtx: RoomSessionContext;
 
   constructor(
     private readonly io: IO,
@@ -68,6 +98,25 @@ export class Room {
     private readonly speed = 1
   ) {
     this.ctx = this.createContext();
+    this.sessionCtx = this.createSessionContext();
+    this.registry.register('quiz', (sctx) =>
+      new QuizShowPlugin(sctx, {
+        getPhaseData: () => (this.phaseData.phase === 'LOBBY' ? { phase: 'LOBBY', settings: this.settings, packs: this.packs.list() } : this.phaseData),
+        getPrivateFor: (p) => (this.phase === 'PLAY' && this.game ? this.game.privateFor(p) : {}),
+        hasPlayerActed: (p) => this.hasActed(p),
+        onGameAction: (p, a) => this.gameAction(p.id, a),
+        onBotTurn: (p) => {
+          if (this.phase === 'PLAY' && this.game) this.game.bot(p);
+        }
+      })
+    );
+    registerShows(this.registry, {
+      questionPool: () =>
+        new QuestionPool(
+          this.packs.all().filter((p) => !this.settings.excluded.includes(p.id)),
+          () => [...this.players.values()].map((p) => p.name)
+        )
+    });
   }
 
   get phase(): Phase {
@@ -89,24 +138,62 @@ export class Room {
   }
 
   private later(fn: () => void, delay: number) {
-    const t = setTimeout(() => {
-      this.timers.delete(t);
-      try {
-        fn();
-      } catch (err) {
-        console.error(`[stanza ${this.code}] errore nel timer:`, err);
-      }
-    }, delay);
-    this.timers.add(t);
+    this.timers.add(fn, delay);
   }
 
   private clearTimers() {
-    for (const t of this.timers) clearTimeout(t);
     this.timers.clear();
+  }
+
+  /** Timer del gioco corrente: non toccato da setPhase/endStep, annullato da setGame(). */
+  private gameTimer(fn: () => void, delay: number): () => void {
+    return this.gameTimers.add(fn, delay);
+  }
+
+  /** Unico punto in cui cambia il gioco attivo: i timer del gioco precedente non devono sopravvivergli. */
+  private setGame(game: GameMode | null) {
+    this.gameTimers.clear();
+    this.game = game;
+  }
+
+  // ---------------------------------------------------------------- pausa (schermo principale)
+
+  get isPaused() {
+    return this.paused;
+  }
+
+  /** Pausa o ripresa della partita. Nella lobby non c'è niente da fermare. */
+  setPaused(paused: boolean): ActionResult {
+    if (paused === this.paused) return null;
+    if (paused && this.phase === 'LOBBY') return 'Non c’è una partita da mettere in pausa';
+    if (paused) {
+      this.paused = true;
+      this.pausedAt = Date.now();
+      this.timers.pause();
+      this.gameTimers.pause();
+    } else {
+      this.paused = false;
+      // il conto alla rovescia riparte da dove si era fermato
+      if (this.endsAt !== null) this.endsAt += Date.now() - this.pausedAt;
+      this.timers.resume();
+      this.gameTimers.resume();
+    }
+    this.broadcast();
+    return null;
+  }
+
+  /** Uscendo da una partita (menù o nuova partita) la pausa non ha più senso. */
+  private clearPause() {
+    if (!this.paused) return;
+    this.paused = false;
+    this.timers.resume();
+    this.gameTimers.resume();
   }
 
   destroy() {
     this.clearTimers();
+    this.setGame(null);
+    if (this.vipGraceTimer) clearTimeout(this.vipGraceTimer);
     for (const t of this.lobbyRemovals.values()) clearTimeout(t);
     this.lobbyRemovals.clear();
   }
@@ -149,6 +236,8 @@ export class Room {
         return p.playsLeft === 0;
       case 'PLAY':
         return this.game?.hasActed(p) ?? false;
+      case 'SHOW':
+        return this.activeShow?.hasActed(p) ?? false;
       default:
         return false;
     }
@@ -156,7 +245,7 @@ export class Room {
 
   /** Se tutti i giocatori connessi hanno agito, chiude il passo dopo una breve pausa. */
   private checkAllActed() {
-    if (!this.stepEnd || this.graceScheduled || (this.phase !== 'PLAY' && this.phase !== 'CARD_PICK')) return;
+    if (!this.stepEnd || this.graceScheduled || (this.phase !== 'PLAY' && this.phase !== 'CARD_PICK' && this.phase !== 'SHOW')) return;
     const active = [...this.players.values()].filter((p) => p.connected);
     if (active.length === 0 || !active.every((p) => this.hasActed(p))) return;
     this.graceScheduled = true;
@@ -182,6 +271,7 @@ export class Room {
       },
       endStep: (delay) => room.endStep(delay ?? 0),
       later: (fn, ms) => room.later(fn, ms),
+      gameTimer: (fn, ms) => room.gameTimer(fn, ms),
       addScore: (p, delta) => {
         const applied = Math.max(-p.score, Math.round(delta));
         p.score += applied;
@@ -253,7 +343,7 @@ export class Room {
       finish: () => room.finishGame(),
       isLargeGroup: () => room.players.size >= CONFIG.LARGE_GROUP,
       gameOver: (podium) => {
-        room.game = null;
+        room.setGame(null);
         room.setPhase({ phase: 'GAME_OVER', winnerId: podium[0], podium }, null);
       },
       act: (p, a) => {
@@ -262,15 +352,67 @@ export class Room {
     };
   }
 
+  private createSessionContext(): RoomSessionContext {
+    const room = this;
+    return {
+      players: () => [...room.players.values()],
+      connected: () => [...room.players.values()].filter((p) => p.connected),
+      get: (id) => room.players.get(id),
+      dur: (key) => room.dur(key),
+      scale: (ms) => room.scale(ms),
+      setStep: (_state, durationMs, onEnd) => {
+        // Un timer rimasto da uno Show già chiuso non deve far ripartire nulla nella lobby.
+        if (room.phase !== 'SHOW') return;
+        room.clearTimers();
+        room.graceScheduled = false;
+        room.stepEnd = onEnd ?? null;
+        room.endsAt = durationMs === null ? null : Date.now() + durationMs;
+        if (durationMs !== null && onEnd) room.later(() => room.runStepEnd(onEnd), durationMs);
+        room.broadcast();
+        room.scheduleBots();
+      },
+      endStep: (delay) => room.endStep(delay ?? 0),
+      later: (fn, ms) => room.later(fn, ms),
+      gameTimer: (fn, ms) => room.gameTimer(fn, ms),
+      clearTimers: () => room.clearTimers(),
+      addScore: (p, delta) => room.ctx.addScore(p, delta),
+      act: (p, payload) => {
+        room.showAction(p.id, payload);
+      },
+      broadcast: () => room.broadcast(),
+      returnToHub: () => room.returnToHub()
+    };
+  }
+
   canStart(): boolean {
     const connected = [...this.players.values()].filter((p) => p.connected);
     return this.phase === 'LOBBY' && connected.length >= CONFIG.MIN_PLAYERS && connected.every((p) => p.ready && p.characterId);
   }
 
-  setSettings(s: Partial<LobbySettings>): ActionResult {
+  setSettings(s: Partial<LobbySettings>, byPlayerId: string | null = null): ActionResult {
     if (this.phase !== 'LOBBY') return 'Puoi cambiare le impostazioni solo nella lobby';
+    if (byPlayerId !== null && byPlayerId !== this.vipId()) return 'Solo il capo stanza può scegliere il gioco';
     const isGame = (id: unknown): id is GameId => typeof id === 'string' && (GAME_IDS as string[]).includes(id);
-    if (s.length && s.length in CONFIG.GAMES_PER_LENGTH) this.settings.length = s.length;
+    if (isShowId(s.showId)) this.settings.showId = this.menu.focus = s.showId;
+    if (s.length && s.length in CONFIG.GAMES_PER_LENGTH) {
+      this.settings.length = s.length;
+      // La Durata del quiz sostituisce un numero di minigiochi scelto in precedenza.
+      if (this.settings.rounds) delete this.settings.rounds.quiz;
+    }
+    if (s.rounds && typeof s.rounds === 'object') {
+      for (const [id, n] of Object.entries(s.rounds)) {
+        const value = isShowId(id) ? clampRounds(id, n) : null;
+        if (value !== null) this.settings.rounds = { ...this.settings.rounds, [id]: value };
+      }
+    }
+    if (s.options && typeof s.options === 'object') {
+      // Ogni gioco mantiene le sue scelte; quelle inviate si fondono con le precedenti.
+      for (const [id, choices] of Object.entries(s.options)) {
+        if (!isShowId(id)) continue;
+        const merged = { ...this.settings.options?.[id], ...sanitizeOptions(id, choices) };
+        this.settings.options = { ...this.settings.options, [id]: merged };
+      }
+    }
     if (Array.isArray(s.excluded)) this.settings.excluded = s.excluded.filter((id) => typeof id === 'string').slice(0, 100);
     if (s.mode === 'wheel' || s.mode === 'sequence') this.settings.mode = s.mode;
     if (Array.isArray(s.games)) {
@@ -288,6 +430,37 @@ export class Room {
     if (byPlayerId && byPlayerId !== this.vipId()) return 'Solo il capo stanza può avviare la partita';
     if (!this.canStart()) return `Servono almeno ${CONFIG.MIN_PLAYERS} giocatori pronti`;
 
+    const showId: ShowId = this.settings.showId ?? 'quiz';
+    const showMeta = getShowMeta(showId);
+    if (!showMeta.available || !this.registry.has(showId)) {
+      return `«${showMeta.name}» è in arrivo: scegli un altro gioco dal menù.`;
+    }
+
+    if (showId !== 'quiz') {
+      const plugin = this.registry.create(showId, this.sessionCtx);
+      const blocked = plugin.canStart([...this.players.values()].filter((p) => p.connected), this.settings);
+      if (blocked) {
+        plugin.destroy?.();
+        return blocked;
+      }
+      for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
+      for (const p of this.players.values()) resetForShow(p);
+      // Fase SHOW prima di start(): da qui in poi niente nuovi ingressi, niente espulsioni "da lobby",
+      // e checkAllActed chiude i passi in anticipo usando plugin.hasActed().
+      this.clearTimers();
+      this.stepEnd = null;
+      this.endsAt = null;
+      this.phaseData = { phase: 'SHOW', show: showId };
+      this.activeShow = plugin;
+      const err = plugin.start(this.settings);
+      if (err) {
+        this.restart(null);
+        return err;
+      }
+      this.broadcast();
+      return null;
+    }
+
     const packs = this.packs.all().filter((p) => !this.settings.excluded.includes(p.id));
     const pool = new QuestionPool(packs, () => [...this.players.values()].map((p) => p.name));
     if (pool.mcCount < MIN_MC_QUESTIONS) {
@@ -303,27 +476,72 @@ export class Room {
     } else {
       const wheel = st.games.filter((id) => gameAvailable(id, pool));
       if (wheel.length === 0) return 'Nessuno dei giochi scelti ha abbastanza domande nei pacchetti selezionati';
-      this.show = { total: CONFIG.GAMES_PER_LENGTH[st.length], played: [], order: null, wheel };
+      this.show = { total: st.rounds?.quiz ?? CONFIG.GAMES_PER_LENGTH[st.length], played: [], order: null, wheel };
     }
     this.pool = pool;
 
     for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
     for (const p of this.players.values()) resetForShow(p);
+    this.activeShow = this.registry.create('quiz', this.sessionCtx);
     this.nextGame();
     return null;
   }
 
   restart(byPlayerId: string | null): ActionResult {
-    if (this.phase === 'LOBBY') return null;
-    if (byPlayerId && (byPlayerId !== this.vipId() || this.phase !== 'GAME_OVER')) return 'Non puoi riavviare ora';
+    if (this.phase === 'LOBBY' && !this.activeShow) return null;
+    if (byPlayerId && byPlayerId !== this.vipId()) return 'Solo il capo stanza può tornare al menù';
+    if (byPlayerId && this.paused) return 'La partita è in pausa: aspetta lo schermo principale';
+    this.clearPause();
+    // Durante uno Show del Pack si torna alla griglia senza ripetere "Pronto".
+    if (this.phase === 'SHOW') return this.returnToHub();
+    if (byPlayerId && this.phase !== 'GAME_OVER') return 'Non puoi riavviare ora';
     for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
     for (const p of this.players.values()) {
       p.ready = p.isBot;
       resetForShow(p);
     }
-    this.game = null;
+    this.activeShow?.destroy?.();
+    this.activeShow = null;
+    this.setGame(null);
     this.gameId = null;
     this.setPhase({ phase: 'LOBBY' }, null);
+    return null;
+  }
+
+  /** Fine di uno Show del Pack: si torna alla griglia del menù tenendo giocatori, personaggi e "Pronto". */
+  returnToHub(): ActionResult {
+    this.clearPause();
+    for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
+    for (const p of this.players.values()) resetForShow(p);
+    this.activeShow?.destroy?.();
+    this.activeShow = null;
+    this.setGame(null);
+    this.gameId = null;
+    this.menu = { view: 'grid', focus: this.settings.showId ?? 'quiz' };
+    this.setPhase({ phase: 'LOBBY' }, null);
+    return null;
+  }
+
+  /** Navigazione nel menù del Pack (capo stanza o schermo principale, solo in lobby). */
+  menuNav(byPlayerId: string | null, nav: { view?: unknown; focus?: unknown }): ActionResult {
+    if (this.phase !== 'LOBBY') return 'Il menù è disponibile solo tra un gioco e l’altro';
+    if (byPlayerId !== null && byPlayerId !== this.vipId()) return 'Solo il capo stanza può usare il menù';
+    if (nav.view !== undefined && !isMenuView(nav.view)) return 'Schermata non valida';
+    if (nav.focus !== undefined && !isShowId(nav.focus)) return 'Gioco non valido';
+    if (isShowId(nav.focus)) this.settings.showId = this.menu.focus = nav.focus;
+    if (isMenuView(nav.view)) this.menu.view = nav.view;
+    this.touch();
+    this.broadcast();
+    return null;
+  }
+
+  /** Il capo stanza (o lo schermo principale) salta la spiegazione del gioco o della Piramide. */
+  skipIntro(byPlayerId: string | null): ActionResult {
+    if (this.paused) return PAUSED;
+    if (this.phase !== 'GAME_INTRO' && this.phase !== 'PYRAMID_INTRO') return 'Nessuna spiegazione da saltare ora';
+    if (byPlayerId && byPlayerId !== this.vipId()) return 'Solo il capo stanza può saltare la spiegazione';
+    // endStep è idempotente: un doppio tocco non fa saltare anche la fase successiva.
+    this.endStep(0);
     return null;
   }
 
@@ -353,7 +571,7 @@ export class Room {
   private intro(id: GameId) {
     this.show.played.push(id);
     this.gameId = id;
-    this.game = null;
+    this.setGame(null);
     for (const p of this.players.values()) resetForGame(p);
     this.setPhase({ phase: 'GAME_INTRO', game: id, gameNumber: this.show.played.length, totalGames: this.show.total }, this.dur('GAME_INTRO'), () =>
       this.cardPick(id)
@@ -410,13 +628,14 @@ export class Room {
 
   private beginGame(id: GameId) {
     this.gameId = id;
-    this.game = createGame(id, this.ctx);
-    this.game.start();
+    const game = createGame(id, this.ctx);
+    this.setGame(game);
+    game.start();
   }
 
   private finishGame() {
     const id = this.gameId as GameId;
-    this.game = null;
+    this.setGame(null);
     const deltas = Object.fromEntries([...this.players.values()].map((p) => [p.id, p.gameDelta]));
     for (const p of this.players.values()) {
       p.cur = null;
@@ -436,8 +655,9 @@ export class Room {
     for (const p of this.players.values()) p.pyramidStep = starts.get(p.id) ?? 0;
     this.gameId = 'pyramid';
     this.setPhase({ phase: 'PYRAMID_INTRO', steps: CONFIG.PYRAMID_STEPS }, this.dur('PYRAMID_INTRO'), () => {
-      this.game = new PyramidGame(this.ctx);
-      this.game.start();
+      const game = new PyramidGame(this.ctx);
+      this.setGame(game);
+      game.start();
     });
   }
 
@@ -458,6 +678,7 @@ export class Room {
     if (existing && !existing.isBot) {
       existing.socketId = socketId;
       existing.connected = true;
+      if (existing.id === this.vip) this.vipLostAt = null;
       const pending = this.lobbyRemovals.get(existing.id);
       if (pending) clearTimeout(pending);
       this.lobbyRemovals.delete(existing.id);
@@ -487,6 +708,16 @@ export class Room {
     if (!p) return;
     p.socketId = null;
     p.connected = false;
+    if (this.phase === 'SHOW') this.activeShow?.onPlayerDisconnect?.(p);
+    if (p.id === this.vip) {
+      this.vipLostAt = Date.now();
+      // Allo scadere della tolleranza la corona passa a un altro: serve un broadcast per mostrarlo.
+      if (this.vipGraceTimer) clearTimeout(this.vipGraceTimer);
+      this.vipGraceTimer = setTimeout(() => {
+        this.vipGraceTimer = null;
+        this.broadcast();
+      }, VIP_DISCONNECT_GRACE_MS + 50);
+    }
     if (this.phase === 'LOBBY') {
       this.lobbyRemovals.set(
         p.id,
@@ -521,8 +752,17 @@ export class Room {
     this.lastActivity = Date.now();
   }
 
+  /**
+   * Il capo stanza (👑) è il primo umano connesso, ma una volta scelto resta lui:
+   * la corona passa a un altro solo se esce dalla stanza o resta offline oltre VIP_DISCONNECT_GRACE_MS.
+   */
   private vipId(): string | null {
-    return [...this.players.values()].find((p) => !p.isBot && p.connected)?.id ?? null;
+    const cur = this.vip ? this.players.get(this.vip) : undefined;
+    if (cur?.connected) return cur.id;
+    if (cur && this.vipLostAt !== null && Date.now() - this.vipLostAt < VIP_DISCONNECT_GRACE_MS) return cur.id;
+    this.vip = [...this.players.values()].find((p) => !p.isBot && p.connected)?.id ?? null;
+    this.vipLostAt = null;
+    return this.vip;
   }
 
   // ---------------------------------------------------------------- azioni lobby
@@ -584,6 +824,7 @@ export class Room {
   // ---------------------------------------------------------------- azioni di gioco
 
   playCard(playerId: string, card: CardType | null, targetId: string | null): ActionResult {
+    if (this.paused) return PAUSED;
     const p = this.players.get(playerId);
     if (!p || this.phase !== 'CARD_PICK') return 'Non è il momento delle carte';
     if (p.playsLeft <= 0) return 'Hai già giocato';
@@ -593,7 +834,8 @@ export class Room {
       const idx = p.hand.indexOf(card);
       if (idx < 0) return 'Non hai questa carta';
       if (isAttack(card)) {
-        if (!targetId || targetId === playerId || !this.players.has(targetId)) return 'Scegli un avversario da colpire';
+        const target = targetId ? this.players.get(targetId) : undefined;
+        if (!targetId || targetId === playerId || !target || !target.connected) return 'Scegli un avversario connesso da colpire';
       } else {
         targetId = null;
       }
@@ -607,11 +849,24 @@ export class Room {
   }
 
   gameAction(playerId: string, a: GameAction): ActionResult {
+    if (this.paused) return PAUSED;
     const p = this.players.get(playerId);
     if (!p || this.phase !== 'PLAY' || !this.game || !a || typeof a !== 'object') return 'Azione non valida ora';
     const err = this.game.action(p, a);
     if (err) return err;
     if (a.type === 'answer' || a.type === 'numeric') p.activeEffects.clear();
+    this.broadcast();
+    this.checkAllActed();
+    return null;
+  }
+
+  /** Gestisce un'azione generica destinata al plugin dello Show attivo nell'Hub Multi-Gioco. */
+  showAction(playerId: string, payload: unknown): ActionResult {
+    if (this.paused) return PAUSED;
+    const p = this.players.get(playerId);
+    if (!p || !this.activeShow) return 'Nessun gioco attivo ora';
+    const err = this.activeShow.handleAction(p, payload);
+    if (err) return err;
     this.broadcast();
     this.checkAllActed();
     return null;
@@ -627,6 +882,10 @@ export class Room {
 
   private scheduleBots() {
     const bots = [...this.players.values()].filter((p) => p.isBot);
+    if (this.activeShow && this.activeShow.id !== 'quiz' && this.activeShow.bot) {
+      for (const b of bots) this.activeShow.bot(b);
+      return;
+    }
     if (this.phase === 'PLAY' && this.game) {
       for (const b of bots) this.game.bot(b);
     }
@@ -636,7 +895,8 @@ export class Room {
           if (this.phase !== 'CARD_PICK' || b.playsLeft <= 0) return;
           if (!b.hand.length || Math.random() < 0.15) return void this.playCard(b.id, null, null);
           const card = pick(b.hand);
-          const others = [...this.players.values()].filter((o) => o.id !== b.id);
+          const others = [...this.players.values()].filter((o) => o.id !== b.id && o.connected);
+          if (isAttack(card) && others.length === 0) return void this.playCard(b.id, null, null);
           const target = isAttack(card) ? (Math.random() < 0.5 ? others.sort((x, y) => y.score - x.score)[0] : pick(others)) : null;
           this.playCard(b.id, card, target?.id ?? null);
           if (b.playsLeft > 0) this.later(playOne, this.scale(randomBetween(600, 1500)));
@@ -681,9 +941,12 @@ export class Room {
       phaseData,
       endsAt: this.endsAt,
       serverNow: Date.now(),
+      paused: this.paused,
       pyramidSteps: CONFIG.PYRAMID_STEPS,
+      menu: this.menu,
       players,
-      me: null
+      me: null,
+      show: this.activeShow ? { id: this.activeShow.id, state: this.activeShow.publicState() } : null
     };
 
     if (this.hostSocketId) this.io.to(this.hostSocketId).emit('ROOM_STATE', base);
@@ -703,7 +966,8 @@ export class Room {
         choose: null,
         blocked: false,
         blitz: null,
-        sabotage: null
+        sabotage: null,
+        show: this.activeShow ? this.activeShow.privateState(p) : null
       };
       if (this.phase === 'PLAY' && this.game) Object.assign(me, this.game.privateFor(p));
       this.io.to(p.socketId).emit('ROOM_STATE', { ...base, me });

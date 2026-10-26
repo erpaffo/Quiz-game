@@ -21,7 +21,7 @@ export interface SkinDef {
   traits?: Record<string, string>;
 }
 
-export type CharacterKind = 'rocker' | 'astronaut' | 'chef' | 'granny' | 'robot' | 'pirate' | 'sandro' | 'basso';
+export type CharacterKind = 'rocker' | 'astronaut' | 'chef' | 'granny' | 'robot' | 'pirate' | 'sandro' | 'basso' | 'samuele' | 'valerio' | 'paffo' | 'pacio' | 'j';
 
 export interface CustomOption {
   id: string;
@@ -54,6 +54,9 @@ const CLOTHES = ['#e63946', '#f77f00', '#ffd60a', '#06d6a0', '#118ab2', '#4361ee
 const HAIR = ['#1b1b1f', '#4a2c1a', '#8b5a2b', '#c68642', '#f4d35e', '#e9ecef', '#d62828', '#ff4fb8', '#4361ee', '#39d353'];
 const NAMES = ['Rosso', 'Arancio', 'Giallo', 'Verde', 'Petrolio', 'Blu', 'Viola', 'Rosa', 'Bianco', 'Nero'];
 const HAIR_NAMES = ['Nero', 'Castano scuro', 'Castano', 'Rame', 'Biondo', 'Grigio', 'Rosso', 'Rosa', 'Blu', 'Verde'];
+
+const PANTS = ['#3d5a80', '#1d3557', '#5c677d', '#2b2b2b', '#8d6e63', '#2a9d8f', '#e76f51', '#4361ee'];
+const PANTS_NAMES = ['Jeans', 'Blu scuro', 'Grigio', 'Nero', 'Marrone', 'Verde acqua', 'Corallo', 'Blu'];
 
 /** Tratto di ricolorazione: «Originale» più una tavolozza. */
 function recolor(target: keyof SkinColors, label: string, palette = CLOTHES, names = NAMES): CustomDef {
@@ -138,36 +141,43 @@ export const CHARACTERS: CharacterDef[] = [
     tagline: 'Oggi è la volta buona. Come ieri.',
     skins: [
       {
+        id: 'rilassato',
+        name: 'Rilassato',
+        variant: 'relax',
+        colors: { skin: '#e8b48c', hair: '#1f1a17', body: '#e8b48c', pants: '#3d5a80', accent: '#e63946' },
+        traits: { glasses: 'no', beard: 'full', chest: 'hairy', hands: 'none', pocket: 'none', mood: 'normal' }
+      },
+      {
         id: 'gratta',
         name: 'Gratta e Vinci',
         variant: 'gratta',
-        colors: { skin: '#f0bf98', hair: '#3b2a20', body: '#4c7a3d', pants: '#3d5a80', accent: '#e63946' },
-        traits: { glasses: 'yes', beard: 'short', hands: 'tickets', pocket: 'chips', mood: 'happy' }
+        colors: { skin: '#e8b48c', hair: '#1f1a17', body: '#e8b48c', pants: '#4c7a3d', accent: '#e63946' },
+        traits: { glasses: 'no', beard: 'full', chest: 'hairy', hands: 'tickets', pocket: 'chips', mood: 'happy' }
       },
       {
         id: 'schedina',
         name: 'Schedina',
         variant: 'schedina',
-        colors: { skin: '#f0bf98', hair: '#3b2a20', body: '#9a3b3b', pants: '#34495e', accent: '#ffd60a' },
-        traits: { glasses: 'no', beard: 'short', hands: 'slip', pocket: 'cards', mood: 'worried' }
+        colors: { skin: '#e8b48c', hair: '#1f1a17', body: '#e8b48c', pants: '#34495e', accent: '#ffd60a' },
+        traits: { glasses: 'no', beard: 'full', chest: 'hairy', hands: 'slip', pocket: 'cards', mood: 'worried' }
       }
     ],
     custom: [
-      { id: 'glasses', label: 'Occhiali', options: [{ id: 'yes', label: '👓 Sì' }, { id: 'no', label: 'No' }] },
-      { id: 'beard', label: 'Barba', options: [{ id: 'short', label: '🧔 Corta' }, { id: 'none', label: 'No' }] },
+      { id: 'beard', label: 'Barba', options: [{ id: 'full', label: '🧔 Folta' }, { id: 'short', label: 'Corta' }, { id: 'none', label: 'No' }] },
+      { id: 'chest', label: 'Petto', options: [{ id: 'hairy', label: '🐻 Villoso' }, { id: 'none', label: 'Liscio' }] },
+      { id: 'glasses', label: 'Occhiali', options: [{ id: 'no', label: 'No' }, { id: 'yes', label: '👓 Sì' }] },
       {
         id: 'hands',
         label: 'In mano',
         options: [
+          { id: 'none', label: 'Niente' },
           { id: 'tickets', label: '🎟️ Gratta e vinci' },
-          { id: 'slip', label: '🧾 Schedina e carte' },
-          { id: 'none', label: 'Niente' }
+          { id: 'slip', label: '🧾 Schedina e carte' }
         ]
       },
-      { id: 'pocket', label: 'In tasca', options: [{ id: 'chips', label: '🪙 Fiches' }, { id: 'cards', label: '🃏 Carte' }, { id: 'none', label: 'Niente' }] },
-      { id: 'mood', label: 'Espressione', options: [{ id: 'happy', label: '😁 Fiducioso' }, { id: 'worried', label: '😰 Preoccupato' }] },
-      recolor('body', 'Maglia'),
-      recolor('pants', 'Jeans', ['#3d5a80', '#1d3557', '#5c677d', '#2b2b2b', '#8d6e63', '#6c757d'], ['Jeans', 'Blu scuro', 'Grigio', 'Nero', 'Marrone', 'Grigio chiaro']),
+      { id: 'pocket', label: 'In tasca', options: [{ id: 'none', label: 'Niente' }, { id: 'chips', label: '🪙 Fiches' }, { id: 'cards', label: '🃏 Carte' }] },
+      { id: 'mood', label: 'Espressione', options: [{ id: 'normal', label: '😌 Rilassato' }, { id: 'happy', label: '😁 Fiducioso' }, { id: 'worried', label: '😰 Preoccupato' }] },
+      recolor('pants', 'Pantaloni', ['#3d5a80', '#1d3557', '#5c677d', '#2b2b2b', '#8d6e63', '#4c7a3d'], ['Jeans', 'Blu scuro', 'Grigio', 'Nero', 'Marrone', 'Verde']),
       recolor('hair', 'Capelli', HAIR, HAIR_NAMES)
     ]
   },
@@ -208,6 +218,85 @@ export const CHARACTERS: CharacterDef[] = [
       { id: 'pose', label: 'Posa', options: [{ id: 'calm', label: 'Tranquilla' }, { id: 'dynamic', label: '💥 Dinamica' }] },
       recolor('body', 'Felpa'),
       recolor('hair', 'Colore capelli', HAIR, HAIR_NAMES)
+    ]
+  },
+  {
+    id: 'samuele',
+    name: 'Samuele',
+    tagline: 'Fisico asciutto, occhi chiari, mente allenata.',
+    skins: [
+      { id: 'estate', name: 'Estate', variant: 'estate', colors: { skin: '#f1c9a0', hair: '#a98458', body: '#f1c9a0', pants: '#3d5a80', accent: '#ffd166' }, traits: { necklace: 'yes', stubble: 'yes' } },
+      { id: 'mare', name: 'Mare', variant: 'mare', colors: { skin: '#e8b98a', hair: '#b8935a', body: '#e8b98a', pants: '#2a9d8f', accent: '#ff6b35' }, traits: { necklace: 'yes', stubble: 'yes' } },
+      { id: 'notte', name: 'Notte', variant: 'notte', colors: { skin: '#f1c9a0', hair: '#8c6a3f', body: '#f1c9a0', pants: '#2b2d42', accent: '#c9ced6' }, traits: { necklace: 'yes', stubble: 'yes' } }
+    ],
+    custom: [
+      { id: 'necklace', label: 'Catenina', options: [{ id: 'yes', label: '⛓️ Sì' }, { id: 'no', label: 'No' }] },
+      { id: 'stubble', label: 'Barba incolta', options: [{ id: 'yes', label: 'Sì' }, { id: 'no', label: 'No' }] },
+      recolor('hair', 'Capelli', HAIR, HAIR_NAMES),
+      recolor('pants', 'Pantaloni', PANTS, PANTS_NAMES)
+    ]
+  },
+  {
+    id: 'valerio',
+    name: 'Valerio',
+    tagline: 'Sorride prima ancora di rispondere.',
+    skins: [
+      { id: 'sole', name: 'Sole', variant: 'sole', colors: { skin: '#eac09a', hair: '#6b4a2f', body: '#eac09a', pants: '#3d5a80', accent: '#f4d35e' }, traits: { earring: 'yes', choker: 'yes' } },
+      { id: 'mare', name: 'Mare', variant: 'mare', colors: { skin: '#e2b48c', hair: '#5a3a24', body: '#e2b48c', pants: '#06a77d', accent: '#ff9f1c' }, traits: { earring: 'yes', choker: 'yes' } },
+      { id: 'sera', name: 'Sera', variant: 'sera', colors: { skin: '#eac09a', hair: '#4a2c1a', body: '#eac09a', pants: '#1d1d24', accent: '#e63946' }, traits: { earring: 'yes', choker: 'yes' } }
+    ],
+    custom: [
+      { id: 'earring', label: 'Orecchino', options: [{ id: 'yes', label: '⭕ Sì' }, { id: 'no', label: 'No' }] },
+      { id: 'choker', label: 'Collana di perline', options: [{ id: 'yes', label: '📿 Sì' }, { id: 'no', label: 'No' }] },
+      recolor('hair', 'Capelli', HAIR, HAIR_NAMES),
+      recolor('pants', 'Pantaloni', PANTS, PANTS_NAMES)
+    ]
+  },
+  {
+    id: 'paffo',
+    name: 'Paffo',
+    tagline: 'Occhiali tondi, sguardo serio, risposta pronta.',
+    skins: [
+      { id: 'classico', name: 'Classico', variant: 'classico', colors: { skin: '#efc29c', hair: '#2a1d17', body: '#efc29c', pants: '#2b2d42', accent: '#4cc9f0' }, traits: { glasses: 'yes' } },
+      { id: 'jeans', name: 'Jeans', variant: 'jeans', colors: { skin: '#e8b890', hair: '#33231a', body: '#e8b890', pants: '#3d5a80', accent: '#ff4d6d' }, traits: { glasses: 'yes' } },
+      { id: 'verde', name: 'Verde', variant: 'verde', colors: { skin: '#efc29c', hair: '#2a1d17', body: '#efc29c', pants: '#2f5d50', accent: '#ffd60a' }, traits: { glasses: 'yes' } }
+    ],
+    custom: [
+      { id: 'glasses', label: 'Occhiali', options: [{ id: 'yes', label: '👓 Sì' }, { id: 'no', label: 'No' }] },
+      recolor('hair', 'Capelli', HAIR, HAIR_NAMES),
+      recolor('pants', 'Pantaloni', PANTS, PANTS_NAMES)
+    ]
+  },
+  {
+    id: 'pacio',
+    name: 'Pacio',
+    tagline: 'Compatto, preciso, sempre in forma.',
+    skins: [
+      { id: 'catena', name: 'Catena', variant: 'catena', colors: { skin: '#d6a276', hair: '#2b2420', body: '#d6a276', pants: '#2b2d42', accent: '#c9ced6' }, traits: { chain: 'yes', beard: 'yes' } },
+      { id: 'mare', name: 'Mare', variant: 'mare', colors: { skin: '#cf9a6c', hair: '#2b2420', body: '#cf9a6c', pants: '#e76f51', accent: '#c9ced6' }, traits: { chain: 'yes', beard: 'yes' } },
+      { id: 'sport', name: 'Sport', variant: 'sport', colors: { skin: '#d6a276', hair: '#2b2420', body: '#d6a276', pants: '#4361ee', accent: '#c9ced6' }, traits: { chain: 'yes', beard: 'yes' } }
+    ],
+    custom: [
+      { id: 'chain', label: 'Catenina a maglia', options: [{ id: 'yes', label: '⛓️ Sì' }, { id: 'no', label: 'No' }] },
+      { id: 'beard', label: 'Barba', options: [{ id: 'yes', label: '🧔 Corta' }, { id: 'no', label: 'No' }] },
+      recolor('hair', 'Capelli', HAIR, HAIR_NAMES),
+      recolor('pants', 'Pantaloni', PANTS, PANTS_NAMES)
+    ]
+  },
+  {
+    id: 'j',
+    name: 'J',
+    tagline: 'Relax totale, anche sotto pressione.',
+    skins: [
+      { id: 'nera', name: 'T-shirt nera', variant: 'nera', colors: { skin: '#efc39b', hair: '#141114', body: '#2b2b30', pants: '#3d5a80', accent: '#ffd60a' }, traits: { print: 'bolt' } },
+      { id: 'grafite', name: 'Grafite', variant: 'grafite', colors: { skin: '#efc39b', hair: '#141114', body: '#44464f', pants: '#1d1d24', accent: '#4cc9f0' }, traits: { print: 'bolt' } },
+      { id: 'blu', name: 'Blu notte', variant: 'blu', colors: { skin: '#efc39b', hair: '#141114', body: '#1d2b4f', pants: '#5c677d', accent: '#ff4d6d' }, traits: { print: 'bolt' } }
+    ],
+    custom: [
+      { id: 'print', label: 'Stampa', options: [{ id: 'bolt', label: '⚡ Fulmine' }, { id: 'none', label: 'Nessuna' }] },
+      recolor('body', 'T-shirt'),
+      recolor('hair', 'Capelli', HAIR, HAIR_NAMES),
+      recolor('pants', 'Pantaloni', PANTS, PANTS_NAMES)
     ]
   }
 ];

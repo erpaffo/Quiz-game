@@ -6,8 +6,11 @@ import { cardDescription, CARDS, isAttack } from '../../shared/cards';
 import { CHARACTERS, getCharacter, lookKey, traitValue, type CustomChoice } from '../../shared/characters';
 import { CONFIG } from '../../shared/config';
 import { GAMES } from '../../shared/games';
+import { getShowMeta, isShowId, type ShowId } from '../../shared/shows';
 import type { CardEvent, CardType, GameAction, GameId, PlayerPublic, PlayState, PowerType, RoomSnapshot } from '../../shared/types';
 import '../common/base.css';
+import { handlePackClick, menuView, packDetail, packGrid } from '../common/pack-menu';
+import '../common/pack.css';
 import { clock, createSocket, esc, OPTION_COLORS, OPTION_LETTERS, PLAYER_COLORS } from '../common/net';
 import { addQuestionSheet } from './addQuestion';
 import './controller.css';
@@ -15,6 +18,7 @@ import { formatNumber, numericView } from './numeric';
 import { preview } from './preview';
 import { questionView } from './question';
 import { pickSelfie } from './selfie';
+import { controllerShowKey, renderControllerShow } from '../shows/controller-shows';
 
 interface Session {
   code: string;
@@ -45,12 +49,14 @@ const local = {
   /** Tratti personalizzati in modifica (si azzerano cambiando personaggio o skin). */
   custom: {} as CustomChoice,
   customOpen: false,
+  hubShow: 'quiz' as ShowId,
   jokerArmed: false,
   cardPick: null as CardType | null,
   sabotagePick: null as PowerType | null,
   sheet: false,
   lastCategory: 'Domande degli amici',
   endsAt: null as number | null,
+  wasPaused: false,
   total: 1
 };
 
@@ -148,7 +154,8 @@ function colorOf(id: string) {
 }
 function canStart(snap: RoomSnapshot) {
   const online = snap.players.filter((p) => p.connected);
-  return online.length >= CONFIG.MIN_PLAYERS && online.every((p) => p.ready && p.characterId);
+  const show = getShowMeta(activeShowId(snap));
+  return online.length >= show.minPlayers && online.length <= show.maxPlayers && online.every((p) => p.ready && p.characterId);
 }
 function takenCombos(snap: RoomSnapshot, me: PlayerPublic) {
   return new Set(snap.players.filter((p) => p.id !== me.id && p.characterId).map((p) => `${p.characterId}/${p.skinId}`));
@@ -178,7 +185,7 @@ function onClick(handler: (target: HTMLElement) => void) {
 
 /** Lista degli avversari da toccare (bersaglio di carte, bomba, furto). */
 function targetList(title: string, me: PlayerPublic, back?: string) {
-  const others = s!.players.filter((o) => o.id !== me.id);
+  const others = s!.players.filter((o) => o.id !== me.id && o.connected);
   app.innerHTML = `
     <div class="view">
       <div class="title">${title}</div>
@@ -193,13 +200,21 @@ function targetList(title: string, me: PlayerPublic, back?: string) {
 
 // ------------------------------------------------------------ chiavi di vista
 
+function activeShowId(snap: RoomSnapshot): ShowId {
+  if (snap.phaseData.phase === 'LOBBY') {
+    const serverShow = snap.menu?.focus ?? (snap.phaseData.settings as { showId?: ShowId }).showId;
+    if (isShowId(serverShow)) local.hubShow = serverShow;
+  }
+  return local.hubShow;
+}
+
 function keyOf(snap: RoomSnapshot, p: PlayerPublic): string {
   const d = snap.phaseData;
   const m = snap.me!;
   switch (d.phase) {
     case 'LOBBY':
       if (local.sheet) return 'SHEET';
-      return ['L', local.charIdx, local.skinIdx, lookKey(null, null, local.custom), local.customOpen, p.ready, p.hasSelfie, [...takenCombos(snap, p)].join(), p.isVip, canStart(snap), lookKey(p.characterId, p.skinId, p.custom)].join('|');
+      return ['L', activeShowId(snap), local.charIdx, local.skinIdx, JSON.stringify(snap.menu), JSON.stringify(d.settings), lookKey(null, null, local.custom), local.customOpen, p.ready, p.hasSelfie, [...takenCombos(snap, p)].join(), p.isVip, canStart(snap), lookKey(p.characterId, p.skinId, p.custom)].join('|');
     case 'WHEEL':
     case 'GAME_INTRO':
     case 'GAME_RESULT':
@@ -234,10 +249,19 @@ function keyOf(snap: RoomSnapshot, p: PlayerPublic): string {
     }
     case 'PYRAMID_INTRO':
       return 'PI';
+    case 'SHOW':
+      return controllerShowKey(snap, p);
     case 'GAME_OVER':
       return `GO|${p.isVip}`;
   }
 }
+
+// Schermata «partita in pausa» (la pausa la decide lo schermo principale con Esc).
+const pauseOverlay = document.createElement('div');
+pauseOverlay.className = 'pause-overlay';
+pauseOverlay.hidden = true;
+pauseOverlay.innerHTML = '<div><div class="pause-icon">⏸️</div><b>Partita in pausa</b><small>Aspetta: si riprende dallo schermo principale</small></div>';
+document.body.appendChild(pauseOverlay);
 
 // ------------------------------------------------------------ rendering
 
@@ -247,9 +271,12 @@ function render(force = false) {
   if (!p) return;
   renderHeader(s, p);
   if (s.endsAt !== local.endsAt) {
+    const resumed = local.wasPaused && !s.paused;
     local.endsAt = s.endsAt;
-    local.total = Math.max(1, clock.remaining(s.endsAt) ?? 1);
+    if (!resumed) local.total = Math.max(1, clock.remaining(s.endsAt) ?? 1);
   }
+  local.wasPaused = !!s.paused;
+  pauseOverlay.hidden = !s.paused;
   const phaseId = `${s.phase}|${s.phaseData.phase === 'PLAY' ? s.phaseData.state.step : ''}`;
   if (phaseId !== lastPhase) {
     lastPhase = phaseId;
@@ -281,7 +308,13 @@ function render(force = false) {
           <div class="game-badge pop" style="--gc:${g.color}"><span>${g.icon}</span>${esc(g.name)}</div>
           <ul class="rules">${g.rules.map((r) => `<li>${esc(r)}</li>`).join('')}</ul>
           <p class="muted">Gioco ${d.gameNumber} di ${d.totalGames} · tra poco le carte!</p>
+          ${p.isVip ? '<button class="btn secondary" data-act="skip-intro">⏭️ Salta spiegazione</button>' : ''}
         </div>`;
+      if (p.isVip) {
+        onClick((t) => {
+          if (t.closest('[data-act="skip-intro"]')) void act(socket.emitWithAck('SKIP_INTRO', {}));
+        });
+      }
       return;
     }
 
@@ -303,10 +336,27 @@ function render(force = false) {
     }
 
     case 'PYRAMID_INTRO':
-      return wait(
-        `<div class="game-badge" style="--gc:#e9a800"><span>🔺</span>FINALE</div><div class="title">La Piramide della Conoscenza</div>Parti dal gradino <b>${p.pyramidStep}</b> di ${s.pyramidSteps}`,
-        'Risposta giusta +1 · la più veloce +2 · vince chi arriva in cima'
-      );
+      app.innerHTML = `
+        <div class="view center">
+          <div class="done pop"><div class="game-badge" style="--gc:#e9a800"><span>🔺</span>FINALE</div><div class="title">La Piramide della Conoscenza</div>Parti dal gradino <b>${p.pyramidStep}</b> di ${s.pyramidSteps}</div>
+          <p class="muted">Risposta giusta +1 · la più veloce +2 · vince chi arriva in cima</p>
+          ${p.isVip ? '<button class="btn secondary" data-act="skip-intro">⏭️ Salta spiegazione</button>' : ''}
+        </div>`;
+      if (p.isVip) {
+        onClick((t) => {
+          if (t.closest('[data-act="skip-intro"]')) void act(socket.emitWithAck('SKIP_INTRO', {}));
+        });
+      }
+      return;
+
+    case 'SHOW':
+      return renderControllerShow(s, p, {
+        app,
+        onClick,
+        sendShowAction: (payload) => act(socket.emitWithAck('SHOW_ACTION', { payload })),
+        restartGame: () => act(socket.emitWithAck('RESTART_GAME', {})),
+        toast
+      });
 
     case 'GAME_OVER': {
       const pos = d.podium.indexOf(p.id) + 1;
@@ -314,7 +364,7 @@ function render(force = false) {
         <div class="view center">
           ${d.winnerId === p.id ? '<div class="big-icon">🏆</div><div class="title">HAI VINTO!</div>' : `<div class="rank-big">${pos}°</div><div class="title">posto</div>`}
           <div class="muted">${p.score.toLocaleString('it-IT')} punti · gradino ${p.pyramidStep}</div>
-          ${p.isVip ? '<button class="btn big" data-act="again">🔁 Gioca ancora</button>' : '<div class="muted small">Il capo stanza 👑 può avviare una nuova partita</div>'}
+          ${p.isVip ? '<button class="btn big" data-act="again">🎮 Torna al Party Hub / Gioca ancora</button>' : '<div class="muted small">Il capo stanza 👑 può riportare tutti al Party Hub</div>'}
         </div>`;
       onClick((t) => {
         if (t.closest('[data-act="again"]')) void act(socket.emitWithAck('RESTART_GAME', {}));
@@ -731,6 +781,19 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
         </div>`).join('')}
       </div>` : ''}`;
 
+  const selectedShow = getShowMeta(activeShowId(snap));
+  const view = menuView(snap);
+  // Griglia per categoria o sottomenù del gioco (regole, durata, avvio): stesso menù della TV.
+  const hubPicker = p.isVip
+    ? `<div class="c-hub">${
+        view === 'detail'
+          ? packDetail(snap, { canControl: true })
+          : `<div class="c-hub-label">🎮 Scegli il gioco della serata</div>${packGrid(snap, { canControl: true })}`
+      }</div>`
+    : view === 'detail'
+      ? `<div class="c-hub">${packDetail(snap, { canControl: false })}</div>`
+      : `<div class="muted small">🎮 Il capo stanza 👑 sta scegliendo il gioco · Ora: <b>${selectedShow.icon} ${esc(selectedShow.name)}</b></div>`;
+
   const selfieThumb = mySelfie ? `style="background-image:url(${mySelfie})"` : '';
   app.innerHTML = `
     <div class="view lobby">
@@ -752,10 +815,8 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
         ${mySelfie || p.hasSelfie ? '<button class="btn secondary icon" data-act="noselfie" aria-label="Rimuovi selfie">✕</button>' : ''}
       </div>
       <button class="btn big ${p.ready ? 'is-ready' : ''}" data-act="ready">${p.ready ? '✅ Pronto! <small>tocca per modificare</small>' : '✋ Sono pronto!'}</button>
-      ${p.isVip
-        ? `<button class="btn pink big" data-act="start" ${canStart(snap) ? '' : 'disabled'}>👑 Avvia la partita</button>
-           ${canStart(snap) ? '' : '<div class="muted small">Sei il capo stanza: potrai avviare quando tutti sono pronti</div>'}`
-        : '<div class="muted small">Il capo stanza 👑 avvierà la partita</div>'}
+      ${hubPicker}
+      ${p.isVip && view !== 'detail' ? '<div class="muted small">Tocca un gioco per leggere le regole, scegliere la durata e avviarlo.</div>' : ''}
       <button class="btn secondary" data-act="sheet">➕ Aggiungi una domanda per gli amici</button>
     </div>`;
 
@@ -778,6 +839,15 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
   };
 
   onClick(async (t) => {
+    if (
+      handlePackClick(t, snap, {
+        nav: (n) => void act(socket.emitWithAck('MENU_NAV', n)),
+        set: (x) => void act(socket.emitWithAck('SET_SETTINGS', x))
+      })
+    ) {
+      navigator.vibrate?.(10);
+      return;
+    }
     const a = t.closest<HTMLElement>('[data-act]')?.dataset.act;
     const skin = t.closest<HTMLElement>('[data-skin]')?.dataset.skin;
     if (skin !== undefined) {
@@ -865,6 +935,7 @@ function renderJoin(error = '') {
 // ------------------------------------------------------------ timer
 
 setInterval(() => {
+  if (s?.paused) return; // in pausa la barra del tempo resta ferma
   const rem = local.endsAt === null ? null : clock.remaining(local.endsAt);
   timerBar.style.transform = `scaleX(${rem === null ? 0 : Math.min(1, rem / local.total)})`;
   timerBar.classList.toggle('urgent', rem !== null && rem < 5000);

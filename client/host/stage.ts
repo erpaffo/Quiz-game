@@ -31,6 +31,19 @@ const RISER_H = 0.8;
 const STUDIO_CAM = { pos: new THREE.Vector3(0, 3.3, 11.5), target: new THREE.Vector3(0, 3.1, 0) };
 const STUDIO_CAM_LARGE = { pos: new THREE.Vector3(0, 4.2, 14.2), target: new THREE.Vector3(0, 3.3, -0.6) };
 
+export interface VideoSettings {
+  /** Qualità degli effetti (luci, ombre, materiali): automatica, alta o bassa. */
+  quality: 'auto' | 'high' | 'low';
+  /** Scala della risoluzione di disegno (0.5 = metà, 1 = piena, 1.5 = super-nitida). */
+  scale: number;
+  shadows: boolean;
+  antialias: boolean;
+  /** Limite di fotogrammi al secondo (0 = nessun limite). */
+  fps: number;
+}
+
+export const DEFAULT_VIDEO: VideoSettings = { quality: 'auto', scale: 1, shadows: true, antialias: true, fps: 60 };
+
 export class Stage {
   private renderer: THREE.WebGLRenderer;
   private labels: CSS2DRenderer;
@@ -60,11 +73,20 @@ export class Stage {
   private lastPlayers: PlayerPublic[] = [];
   mode: 'studio' | 'pyramid' = 'studio';
 
-  constructor(private container: HTMLElement) {
+  /** Impostazioni video scelte nel menù di pausa (Esc). */
+  private video: VideoSettings;
+
+  constructor(
+    private container: HTMLElement,
+    video: VideoSettings = DEFAULT_VIDEO
+  ) {
+    this.video = video;
     const q = new URLSearchParams(location.search).get('q');
-    this.quality = q === 'low' ? 'low' : 'high';
-    this.autoQuality = q !== 'low' && q !== 'high';
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+    const quality = q === 'low' || q === 'high' ? q : video.quality;
+    this.quality = quality === 'low' ? 'low' : 'high';
+    this.autoQuality = quality === 'auto';
+    // L'antialiasing si sceglie solo alla creazione del renderer: cambiarlo richiede di ricaricare lo schermo.
+    this.renderer = new THREE.WebGLRenderer({ antialias: video.antialias, alpha: true, powerPreference: 'high-performance' });
     this.renderer.shadowMap.type = THREE.PCFShadowMap;
     container.appendChild(this.renderer.domElement);
 
@@ -745,12 +767,25 @@ export class Stage {
     this.camera.updateProjectionMatrix();
   }
 
+  /** Applica subito le impostazioni video (tranne l'antialiasing, che vale dal prossimo avvio). */
+  setVideo(video: VideoSettings) {
+    this.video = video;
+    this.autoQuality = video.quality === 'auto';
+    if (video.quality !== 'auto') this.quality = video.quality;
+    this.perf = { since: performance.now() + 4000, sum: 0, n: 0 };
+    this.applyQuality();
+  }
+
   private applyQuality() {
     const low = this.quality === 'low';
-    this.renderer.setPixelRatio(low ? 1 : Math.min(window.devicePixelRatio, 1.25));
-    this.renderer.shadowMap.enabled = !low;
-    this.sun.castShadow = !low;
-    this.maxFps = low ? 30 : 60;
+    // risoluzione di disegno: quella dello schermo × la scala scelta (sotto 100% = più fluido, sopra = più nitido)
+    const base = low ? 1 : Math.min(window.devicePixelRatio, 1.25);
+    this.renderer.setPixelRatio(Math.max(0.4, base * this.video.scale));
+    const shadows = !low && this.video.shadows;
+    this.renderer.shadowMap.enabled = shadows;
+    this.sun.castShadow = shadows;
+    const fps = this.video.fps > 0 ? this.video.fps : 1000;
+    this.maxFps = low ? Math.min(30, fps) : fps;
     // Attivare/disattivare le ombre richiede di ricompilare i materiali.
     this.scene.traverse((o) => {
       const m = (o as THREE.Mesh).material;

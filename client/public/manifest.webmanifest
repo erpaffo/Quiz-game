@@ -1,0 +1,35 @@
+{
+  "name": "Sapere è Potere · Party Hub",
+  "short_name": "Party Hub",
+  "description": "Suite di Party Games per TV e modalita Passa-il-Telefono (senza TV).",
+  "lang": "it-IT",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#14063a",
+  "theme_color": "#2b0f6b",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Telecomando Partita TV",
+      "short_name": "Controller",
+      "description": "Entra in una stanza attiva sulla TV",
+      "url": "/controller.html"
+    },
+    {
+      "name": "Party Hub Home",
+      "short_name": "Party Hub",
+      "description": "Scegli tra modalità TV o Passa-il-Telefono",
+      "url": "/index.html"
+    }
+  ]
+}
+

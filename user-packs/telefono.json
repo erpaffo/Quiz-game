@@ -3,7 +3,7 @@
  "name": "📱 Domande degli amici",
  "description": "Domande aggiunte dal telefono durante la lobby.",
  "builtIn": false,
- "updatedAt": 1792250403364,
+ "updatedAt": 1792421023312,
  "categories": [
   {
    "id": "c_8pgrt5ge",
@@ -81,6 +81,50 @@
   },
   {
    "id": "q_e5ug34c2",
+   "categoryId": "c_8pgrt5ge",
+   "type": "multiple",
+   "text": "Chi vince sempre a {giocatore}?",
+   "options": [
+    "Io",
+    "Tu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "q_0b5vbzx9",
+   "categoryId": "c_8pgrt5ge",
+   "type": "multiple",
+   "text": "Chi vince sempre a {giocatore}?",
+   "options": [
+    "Io",
+    "Tu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "q_jcyrhit0",
+   "categoryId": "c_8pgrt5ge",
+   "type": "multiple",
+   "text": "Chi vince sempre a {giocatore}?",
+   "options": [
+    "Io",
+    "Tu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "q_srbrcd7o",
+   "categoryId": "c_8pgrt5ge",
+   "type": "multiple",
+   "text": "Chi vince sempre a {giocatore}?",
+   "options": [
+    "Io",
+    "Tu"
+   ],
+   "correctIndex": 0
+  },
+  {
+   "id": "q_zzlu8wop",
    "categoryId": "c_8pgrt5ge",
    "type": "multiple",
    "text": "Chi vince sempre a {giocatore}?",

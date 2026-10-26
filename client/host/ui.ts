@@ -2,13 +2,17 @@ import { CARDS, CARD_TYPES } from '../../shared/cards';
 import { CONFIG } from '../../shared/config';
 import { GAME_IDS, GAMES } from '../../shared/games';
 import type { AnswerResult, CardEvent, GameId, GameLength, LobbySettings, PlayerPublic, PlayState, QuestionPublic, RoomSnapshot } from '../../shared/types';
-import { clock, esc, OPTION_COLORS, OPTION_LETTERS } from '../common/net';
+import { PACK, getShowMeta, type MenuView, type ShowId } from '../../shared/shows';
+import { categorySummary, handlePackClick, menuFocus, menuView, packDetail, packGrid } from '../common/pack-menu';
+import { clock, esc, OPTION_COLORS, OPTION_LETTERS, PLAYER_COLORS } from '../common/net';
+import { renderHostShow, showRenderKey } from '../shows/host-shows';
 
 export interface HostActions {
   addBot(): void;
   start(): void;
   restart(): void;
   setSettings(s: Partial<LobbySettings>): void;
+  menuNav(nav: { view?: MenuView; focus?: ShowId }): void;
 }
 
 const LENGTHS: { id: GameLength; label: string }[] = [
@@ -25,6 +29,8 @@ export function phaseKey(s: RoomSnapshot): string {
   }
   if (d.phase === 'WHEEL' || d.phase === 'GAME_INTRO' || d.phase === 'GAME_RESULT') return `${d.phase}|${d.gameNumber}`;
   if (d.phase === 'CARD_PICK' || d.phase === 'CARD_RESOLVE') return `${d.phase}|${d.game}|${s.endsAt === null}`;
+  // Gli Show cambiano stato di continuo: per la musica e le reazioni conta solo quale Show è in corso.
+  if (d.phase === 'SHOW') return `SHOW|${d.show}`;
   return s.phase;
 }
 
@@ -46,6 +52,8 @@ export class HostUI {
   private wifiForm = false;
   private endsAt: number | null = null;
   private total = 1;
+  /** Era in pausa all'ultimo aggiornamento: alla ripresa la barra del tempo non deve tornare piena. */
+  private wasPaused = false;
   private lastSecond = -1;
   private s: RoomSnapshot | null = null;
   private panelCleanup: (() => void) | null = null;
@@ -83,6 +91,7 @@ export class HostUI {
         this.wifiForm = false;
         this.onWifiSave(null);
       }
+      if (this.s && handlePackClick(t, this.s, { nav: (n) => this.actions.menuNav(n), set: (x) => this.actions.setSettings(x) })) return;
       const len = t.closest<HTMLElement>('[data-length]')?.dataset.length as GameLength | undefined;
       if (len) this.actions.setSettings({ length: len });
       if (this.s?.phaseData.phase !== 'LOBBY') return;
@@ -131,10 +140,12 @@ export class HostUI {
   render(s: RoomSnapshot) {
     this.s = s;
     if (s.endsAt !== this.endsAt) {
+      const resumed = this.wasPaused && !s.paused;
       this.endsAt = s.endsAt;
-      this.total = Math.max(1, clock.remaining(s.endsAt) ?? 1);
+      if (!resumed) this.total = Math.max(1, clock.remaining(s.endsAt) ?? 1);
       this.lastSecond = -1;
     }
+    this.wasPaused = !!s.paused;
     this.codeChip.textContent = s.code;
     this.phaseLabel.textContent = this.phaseText(s);
 
@@ -167,14 +178,18 @@ export class HostUI {
         return `${GAMES[d.game].icon} ${GAMES[d.game].name}`;
       case 'PLAY':
         return d.game === 'pyramid' ? '🔺 Finale' : `${GAMES[d.game].icon} ${GAMES[d.game].name}`;
+      case 'SHOW':
+        return `${getShowMeta(d.show).icon} ${getShowMeta(d.show).name}`;
     }
   }
 
   private renderKey(s: RoomSnapshot) {
     const d = s.phaseData;
     if (d.phase === 'LOBBY') {
-      return `LOBBY|${this.join?.index}|${!!this.join}|${this.wifi?.ssid}|${this.wifi?.password}|${this.wifiForm}|${s.players.length}|${canStart(s)}|${JSON.stringify(d.settings)}|${JSON.stringify(d.packs)}`;
+      const ready = s.players.map((p) => `${p.connected ? 1 : 0}${p.ready ? 1 : 0}${p.characterId ? 1 : 0}`).join('');
+      return `LOBBY|${this.join?.index}|${!!this.join}|${this.wifi?.ssid}|${this.wifi?.password}|${this.wifiForm}|${s.players.length}|${ready}|${JSON.stringify(s.menu)}|${JSON.stringify(d.settings)}|${JSON.stringify(d.packs)}`;
     }
+    if (d.phase === 'SHOW') return showRenderKey(s);
     if (d.phase === 'PLAY' && (d.state.step === 'blitz' || d.state.step === 'blitzEnd')) return `${phaseKey(s)}|${JSON.stringify(d.state.progress)}`;
     return phaseKey(s);
   }
@@ -189,6 +204,7 @@ export class HostUI {
   }
 
   private updateTimer() {
+    if (this.s?.paused) return; // in pausa il conto alla rovescia resta fermo
     const rem = this.endsAt === null ? null : clock.remaining(this.endsAt);
     if (rem === null) {
       if (this.timerText.textContent) this.timerText.textContent = '';
@@ -278,6 +294,8 @@ export class HostUI {
             ${d.events.length > 12 ? `<div class="attack">…e altre ${d.events.length - 12} carte!</div>` : ''}</div>`;
       case 'PLAY':
         return this.play(d.game, d.state);
+      case 'SHOW':
+        return renderHostShow(s, (id) => this.name(id), (id) => PLAYER_COLORS[Math.max(0, s.players.findIndex((p) => p.id === id)) % PLAYER_COLORS.length]);
       case 'GAME_RESULT':
         return this.scoreboard(s.players, `${GAMES[d.game].icon} ${GAMES[d.game].name} · Classifica`, d.deltas);
       case 'PYRAMID_INTRO':
@@ -476,12 +494,7 @@ export class HostUI {
   private lobby(s: RoomSnapshot) {
     const d = s.phaseData;
     if (d.phase !== 'LOBBY') return '';
-    const st = d.settings;
     const n = s.players.length;
-    const ok = canStart(s);
-    const hint = n < CONFIG.MIN_PLAYERS
-      ? `Servono almeno ${CONFIG.MIN_PLAYERS} giocatori (puoi aggiungere dei bot per provare).`
-      : ok ? 'Tutti pronti! Si può partire.' : 'In attesa che tutti premano «Pronto!»…';
     const url = this.join?.urls[this.join.index];
     const other = this.join && this.join.urls.length > 1 ? '<button class="link-btn small" data-act="url">Non funziona? Prova un altro indirizzo ↻</button>' : '';
     const wifiForm = `
@@ -516,6 +529,58 @@ export class HostUI {
          </div>`;
     }
 
+    const view = menuView(s);
+    const focus = menuFocus(s);
+    const hint = view === 'cover' ? 'Premi «Scegli un gioco» per cominciare.' : view === 'grid' ? 'Tocca un gioco per vederne le regole.' : '';
+
+    let main: string;
+    if (view === 'cover') {
+      main = this.packCover();
+    } else if (view === 'grid') {
+      main = `
+        <div class="hub-header-row">
+          <span class="hub-section-title">🎮 Scegli il gioco della serata</span>
+          <button class="pk-back" data-pk-view="cover">◀ Copertina</button>
+        </div>
+        ${packGrid(s, { canControl: true, tv: true })}`;
+    } else {
+      main = packDetail(s, { canControl: true, tv: true, extra: focus === 'quiz' ? this.quizExtra(s) : '' });
+    }
+
+    return `
+      <div class="lobby pop">
+        <div class="lobby-left">
+          <div class="join-card">${join}</div>
+          <div class="lobby-players-card">
+            <h2>Giocatori ${n}/${CONFIG.MAX_PLAYERS}</h2>
+            ${hint ? `<div class="muted small">${hint}</div>` : ''}
+            <div class="lobby-actions">
+              <button class="btn secondary" data-act="bot" ${n >= CONFIG.MAX_PLAYERS ? 'disabled' : ''}>🤖 Aggiungi bot</button>
+            </div>
+          </div>
+        </div>
+        <div class="lobby-side">${main}</div>
+      </div>`;
+  }
+
+  /** Copertina del Pack: la prima schermata, prima della griglia dei giochi. */
+  private packCover() {
+    return `
+      <div class="pk pk-tv pk-cover">
+        <span class="pk-edition">${esc(PACK.edition)}</span>
+        <h1>${esc(PACK.name)}</h1>
+        <p class="pk-tagline">${esc(PACK.tagline)}</p>
+        <div class="pk-cats">${categorySummary().map((c) => `<span>${c.icon} ${esc(c.label)}<small>${c.count}</small></span>`).join('')}</div>
+        <button class="btn pk-go" data-pk-view="grid">▶ Scegli un gioco</button>
+        <div class="muted small">I giocatori entrano dal telefono con il QR a sinistra. Il capo stanza 👑 sceglie il gioco.</div>
+      </div>`;
+  }
+
+  /** Impostazioni in più del quiz (modalità, giochi della ruota o scaletta, pacchetti), dentro il suo sottomenù. */
+  private quizExtra(s: RoomSnapshot) {
+    const d = s.phaseData;
+    if (d.phase !== 'LOBBY') return '';
+    const st = d.settings;
     const active = d.packs.filter((p) => !st.excluded.includes(p.id));
     const totals = active.reduce((t, p) => ({ mc: t.mc + p.multiple + p.truefalse, num: t.num + p.numeric }), { mc: 0, num: 0 });
     // Stessi requisiti del server (games/index.ts → gameAvailable), stimati dai totali dei pacchetti.
@@ -526,10 +591,7 @@ export class HostUI {
     };
 
     const gamesSetting = st.mode === 'wheel'
-      ? `<div class="setting"><span class="muted">Durata</span>
-           <div class="seg">${LENGTHS.map((l) => `<button data-length="${l.id}" class="${st.length === l.id ? 'on' : ''}">${l.label}</button>`).join('')}</div>
-         </div>
-         <div class="setting"><span class="muted">Giochi che possono uscire dalla ruota <small>(${st.games.length}/${GAME_IDS.length})</small></span>
+      ? `<div class="setting"><span class="muted">Giochi che possono uscire dalla ruota <small>(${st.games.length}/${GAME_IDS.length})</small></span>
            <div class="games">${GAME_IDS.map((id) => chip(id, `data-game="${id}"`, st.games.includes(id) ? 'on' : '')).join('')}</div>
          </div>`
       : `<div class="setting"><span class="muted">Scaletta: ${st.sequence.length} giochi, poi la finale <small>(tocca un gioco qui sotto per aggiungerlo)</small></span>
@@ -542,32 +604,22 @@ export class HostUI {
          </div>`;
 
     return `
-      <div class="lobby pop">
-        <div class="join-card">${join}</div>
-        <div class="lobby-side">
-          <div class="lobby-row">
-            <h2>Giocatori ${n}/${CONFIG.MAX_PLAYERS}</h2>
-            <div class="lobby-actions">
-              <button class="btn secondary" data-act="bot" ${n >= CONFIG.MAX_PLAYERS ? 'disabled' : ''}>🤖 Aggiungi bot</button>
-              <button class="btn" data-act="start" ${ok ? '' : 'disabled'}>▶ Avvia partita</button>
-            </div>
-          </div>
-          <div class="muted small">${hint}</div>
-          <div class="setting"><span class="muted">Come si scelgono i giochi</span>
-            <div class="seg">
-              <button data-mode="wheel" class="${st.mode === 'wheel' ? 'on' : ''}">🎡 Ruota casuale</button>
-              <button data-mode="sequence" class="${st.mode === 'sequence' ? 'on' : ''}">📋 Scaletta in ordine</button>
-            </div>
-          </div>
-          ${gamesSetting}
-          <div class="setting"><span class="muted">Pacchetti di domande <small>(${totals.mc} domande + ${totals.num} numeriche)</small></span>
-            <div class="packs">${d.packs.map((p) => `
-              <button class="pack ${st.excluded.includes(p.id) ? '' : 'on'}" data-pack="${p.id}">
-                ${st.excluded.includes(p.id) ? '⬜' : '✅'} ${esc(p.name)} <small>${p.multiple + p.truefalse + p.numeric}</small>
-              </button>`).join('')}
-              <a class="pack add" href="./editor.html" target="_blank">✏️ Laboratorio</a>
-            </div>
-          </div>
+      <div class="setting"><span class="muted">Come si scelgono i minigiochi</span>
+        <div class="seg">
+          <button data-mode="wheel" class="${st.mode === 'wheel' ? 'on' : ''}">🎡 Ruota casuale</button>
+          <button data-mode="sequence" class="${st.mode === 'sequence' ? 'on' : ''}">📋 Scaletta in ordine</button>
+        </div>
+      </div>
+      ${st.mode === 'wheel' ? `<div class="setting"><span class="muted">Durata rapida</span>
+        <div class="seg">${LENGTHS.map((l) => `<button data-length="${l.id}" class="${st.length === l.id ? 'on' : ''}">${l.label}</button>`).join('')}</div>
+      </div>` : ''}
+      ${gamesSetting}
+      <div class="setting"><span class="muted">Pacchetti di domande <small>(${totals.mc} domande + ${totals.num} numeriche)</small></span>
+        <div class="packs">${d.packs.map((p) => `
+          <button class="pack ${st.excluded.includes(p.id) ? '' : 'on'}" data-pack="${p.id}">
+            ${st.excluded.includes(p.id) ? '⬜' : '✅'} ${esc(p.name)} <small>${p.multiple + p.truefalse + p.numeric}</small>
+          </button>`).join('')}
+          <a class="pack add" href="./editor.html" target="_blank">✏️ Laboratorio</a>
         </div>
       </div>`;
   }

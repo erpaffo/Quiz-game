@@ -18,6 +18,8 @@ export class BombGame implements GameMode {
   private fuseTotal = 0;
   private fuseLeft = 0;
   private tickFrom = 0;
+  /** Annulla il timer della miccia; null = miccia ferma. */
+  private cancelFuse: (() => void) | null = null;
   private holderCorrect = false;
   private exploded = false;
   private n = 0;
@@ -36,18 +38,36 @@ export class BombGame implements GameMode {
     return Math.max(0, Math.min(1, 1 - this.fuseLeft / this.fuseTotal));
   }
 
-  /** Avvia la miccia per il passo corrente: se si esaurisce, BOOM. */
+  /**
+   * Accende la miccia: se si esaurisce, BOOM. È un timer di gioco (non di passo), così
+   * endStep() non lo cancella durante la breve pausa prima del passo successivo.
+   */
   private burn() {
+    this.stopBurn();
     this.tickFrom = Date.now();
-    this.ctx.later(() => this.boom(), Math.max(0, this.fuseLeft));
+    this.cancelFuse = this.ctx.gameTimer(() => {
+      this.cancelFuse = null;
+      this.fuseLeft = 0;
+      this.boom();
+    }, Math.max(0, this.fuseLeft));
   }
 
+  /** Spegne la miccia conservando il tempo residuo. Idempotente: chiamarla due volte non scala il tempo due volte. */
   private stopBurn() {
+    if (!this.cancelFuse) return;
+    this.cancelFuse();
+    this.cancelFuse = null;
     this.fuseLeft -= Date.now() - this.tickFrom;
   }
 
   private next() {
     if (this.n >= MAX_QUESTIONS) return this.boom();
+    // Il portatore è uscito: la bomba passa a un giocatore connesso, altrimenti nessuno potrebbe lanciarla.
+    if (!this.ctx.get(this.holder)?.connected) {
+      const holder = this.ctx.get(this.holder);
+      const heir = holder ? richestOther(this.ctx, holder) : pick(this.ctx.connected());
+      if (heir?.connected) this.holder = heir.id;
+    }
     this.n++;
     this.holderCorrect = false;
     const def = this.ctx.pool.drawMc();
@@ -90,6 +110,7 @@ export class BombGame implements GameMode {
   private boom() {
     if (this.exploded) return;
     this.exploded = true;
+    this.stopBurn();
     const holder = this.ctx.get(this.holder);
     const penalty = holder ? -this.ctx.addScore(holder, -CONFIG.BOMB_PENALTY) : 0;
     this.step = 'boom';
@@ -112,6 +133,8 @@ export class BombGame implements GameMode {
     if (p.id === this.holder) {
       if (correct) {
         this.holderCorrect = true;
+        // Ha risposto in tempo: la miccia si ferma ora, la pausa prima del lancio non la consuma.
+        this.stopBurn();
         this.ctx.endStep(this.ctx.scale(400));
       }
     } else if (correct) {

@@ -92,7 +92,8 @@ function writeLines(g: CanvasRenderingContext2D, w: number, h: number, lines: st
 
 /** Posa di riposo (animazione idle) scelta dagli oggetti in mano. */
 type Pose = 'normal' | 'read' | 'readL' | 'raise';
-type Mood = 'normal' | 'happy' | 'worried';
+/** Espressione a riposo: la bocca è un arco (sorriso) che si schiaccia o si allarga. */
+type Mood = 'normal' | 'happy' | 'worried' | 'serious' | 'smirk' | 'smile';
 
 interface Parts {
   model: THREE.Group;
@@ -122,8 +123,10 @@ function starShape(outer: number, inner: number) {
 function buildModel(k: Kit, kind: CharacterKind, look: ResolvedLook): Parts {
   const c = look.colors;
   const robot = kind === 'robot';
-  // Corporatura: Sandro è robusto (W > 1), Basso è piccolo (si rimpicciolisce tutto tranne la testa).
-  const W = kind === 'sandro' ? 1.12 : 1;
+  // Corporatura: Sandro è robusto (W > 1), Basso è piccolo (si rimpicciolisce tutto tranne la testa);
+  // gli amici hanno le misure in PLANS (busto, forma della testa, occhi, sopracciglia).
+  const plan = PLANS[kind];
+  const W = plan?.w ?? 1;
   const model = new THREE.Group();
   const body = new THREE.Group();
   model.add(body);
@@ -135,7 +138,7 @@ function buildModel(k: Kit, kind: CharacterKind, look: ResolvedLook): Parts {
   }
   k.sphere(0.4, c.pants, body, { p: [0, 0.6, 0], s: [W, 0.62, 0.85 * W] });
   k.sphere(0.42, c.body, body, { p: [0, 0.9, 0], s: [W, 1.05, 0.85 * W] });
-  if (W > 1) k.sphere(0.3, c.body, body, { p: [0, 0.8, 0.13], s: [1.05, 0.95, 0.9] }); // pancia
+  if (kind === 'sandro') k.sphere(0.3, c.body, body, { p: [0, 0.8, 0.13], s: [1.05, 0.95, 0.9] }); // pancia
   k.mesh(new THREE.TorusGeometry(0.36 * W, 0.05, 8, 28), k.mat(c.accent), body, { p: [0, 0.68, 0], r: [Math.PI / 2, 0, 0], s: [1, 0.85, 1] });
 
   // --- braccia (pivot sulla spalla, il braccio pende verso -Y)
@@ -167,23 +170,32 @@ function buildModel(k: Kit, kind: CharacterKind, look: ResolvedLook): Parts {
     k.mesh(new RoundedBoxGeometry(0.46, 0.14, 0.06, 2, 0.03), k.mat(c.hair), face, { p: [0, 0.3, 0.46] });
     mouth = k.mesh(new THREE.TorusGeometry(0.1, 0.022, 6, 16, Math.PI), k.flat(c.accent), face, { p: [0, 0.31, 0.5], r: [0, 0, Math.PI], outline: false });
   } else {
-    k.sphere(HEAD_R, c.skin, head, { p: [0, 0.55, 0], s: [1, 0.95, 0.95] });
+    const hsc: V3 = plan?.head ?? [1, 0.95, 0.95];
+    k.sphere(HEAD_R, c.skin, head, { p: [0, 0.55, 0], s: hsc });
     for (const sx of [-1, 1]) {
-      k.sphere(0.12, c.skin, head, { p: [0.59 * sx, 0.52, 0], s: [0.6, 1, 0.8] });
+      k.sphere(0.12, c.skin, head, { p: [0.59 * hsc[0] * sx, 0.52, 0], s: [0.6, 1, 0.8] });
       k.sphere(0.15, '#ffffff', face, { p: [0.21 * sx, 0.63, 0.47], s: [1, 1.18, 0.6], outline: 0.015 });
-      k.mesh(new THREE.SphereGeometry(0.075, 14, 10), k.flat('#14101f'), face, { p: [0.21 * sx, 0.61, 0.55], outline: false });
+      if (plan?.iris) {
+        // occhi chiari: iride colorata con una pupilla scura al centro
+        k.mesh(new THREE.SphereGeometry(0.09, 14, 10), k.flat(plan.iris), face, { p: [0.21 * sx, 0.61, 0.545], outline: false });
+        k.mesh(new THREE.SphereGeometry(0.045, 12, 8), k.flat('#14101f'), face, { p: [0.21 * sx, 0.61, 0.6], outline: false });
+      } else {
+        k.mesh(new THREE.SphereGeometry(0.075, 14, 10), k.flat('#14101f'), face, { p: [0.21 * sx, 0.61, 0.55], outline: false });
+      }
       // sopracciglia: con l'espressione preoccupata si alzano verso il centro
-      const brow = look.traits.mood === 'worried' ? -0.38 * sx : 0.18 * sx;
-      k.capsule(0.03, 0.12, c.hair, face, { p: [0.21 * sx, 0.86, 0.5], r: [0, 0, Math.PI / 2 + brow], outline: 0.01 });
+      const brow = look.traits.mood === 'worried' ? -0.38 * sx : (plan?.browTilt ?? 0.18) * sx;
+      k.capsule(plan?.brow ?? 0.03, 0.12, c.hair, face, { p: [0.21 * sx, 0.86, 0.5], r: [0, 0, Math.PI / 2 + brow], outline: 0.01 });
     }
     k.sphere(0.1, c.skin, face, { p: [0, 0.5, 0.58], s: [1, 0.9, 1] });
     mouth = k.mesh(new THREE.TorusGeometry(0.12, 0.028, 8, 20, Math.PI), k.flat('#7a1f2b'), face, { p: [0, 0.33, 0.52], r: [0, 0, Math.PI], outline: false });
   }
 
-  const { pose = 'normal', mood = 'normal' } = addAccessories(k, kind, look, { body, head, face, armL, armR }) ?? {};
+  const { pose = 'normal', mood = 'normal' } = addAccessories(k, kind, look, { body, head, face, armL, armR, mouth }) ?? {};
   if (kind === 'basso') {
     model.scale.setScalar(0.68);
     head.scale.setScalar(1.32);
+  } else if (plan?.scale) {
+    model.scale.setScalar(plan.scale);
   }
   return { model, body, head, armL, armR, face, mouth, pose, mood };
 }
@@ -216,7 +228,7 @@ function addAccessories(
   k: Kit,
   kind: CharacterKind,
   look: ResolvedLook,
-  { body, head, face, armL, armR }: { body: THREE.Group; head: THREE.Group; face: THREE.Group; armL: THREE.Group; armR: THREE.Group }
+  { body, head, face, armL, armR, mouth }: Friend
 ): { pose?: Pose; mood?: Mood } | void {
   const c = look.colors;
   const skin = look.skin;
@@ -226,6 +238,16 @@ function addAccessories(
       return sandro(k, look, { body, head, face, armL, armR });
     case 'basso':
       return basso(k, look, { body, head, face, armR });
+    case 'samuele':
+      return samuele(k, look, { body, head, face, armL, armR, mouth });
+    case 'valerio':
+      return valerio(k, look, { body, head, face, armL, armR, mouth });
+    case 'paffo':
+      return paffo(k, look, { body, head, face, armL, armR, mouth });
+    case 'pacio':
+      return pacio(k, look, { body, head, face, armL, armR, mouth });
+    case 'j':
+      return jay(k, look, { body, head, face, armL, armR, mouth });
     case 'rocker': {
       if (v === 'mohawk') {
         for (let i = 0; i < 6; i++) {
@@ -358,24 +380,32 @@ function addAccessories(
 // ------------------------------------------------------------------ Sandro e Basso
 
 type Rig = { body: THREE.Group; head: THREE.Group; face: THREE.Group; armL: THREE.Group; armR: THREE.Group };
+/** Rig completo, con la bocca (Valerio ci attacca i denti). */
+type Friend = Rig & { mouth: THREE.Mesh };
 
-/** Sandro, il giocatore incallito: robusto, gratta e vinci, schedine, carte e fiches. */
+/**
+ * Sandro: capelli scuri corti, sopracciglia marcate, barba e baffi ben definiti, fisico robusto a torso nudo
+ * con il petto villoso, espressione rilassata. Gratta e vinci, schedine, carte e fiches restano come oggetti facoltativi.
+ */
 function sandro(k: Kit, look: ResolvedLook, { body, head, face, armL, armR }: Rig): { pose: Pose; mood: Mood } {
   const c = look.colors;
   const t = look.traits;
-  // capelli un po' lunghi: calotta ampia, massa sulla nuca e ciocche sopra le orecchie
-  hairCap(k, c.hair, head, 1.28);
-  k.sphere(0.42, c.hair, head, { p: [0, 0.42, -0.3], s: [1.15, 0.9, 0.7] });
-  for (const sx of [-1, 1]) k.sphere(0.18, c.hair, head, { p: [0.55 * sx, 0.58, -0.12], s: [0.6, 1.3, 1] });
-  if (t.beard === 'short') {
-    // barba corta: guscio sul mento e sulla mascella, basette e baffetti
+  hairCapFit(k, c.hair, head, PLANS.sandro!.head, 1.1, { grow: 1.045, tilt: -0.36 });
+  if (t.beard === 'full') {
+    // barba folta con baffi marcati e basette
+    beardShell(k, face, c.hair, { sideburns: true, mustache: true, stache: 0.05 });
+    k.sphere(0.16, c.hair, face, { p: [0, 0.12, 0.4], s: [1.5, 0.8, 0.8], outline: 0.01 });
+  } else if (t.beard === 'short') {
     beardShell(k, face, shade(c.hair, -0.1), { sideburns: true, mustache: true });
   }
+  if (t.chest === 'hairy') chestHair(k, body, c.hair, PLANS.sandro!.w);
   if (t.glasses === 'yes') glasses(k, face, '#2b2b2b');
   if (t.mood === 'worried') {
     // goccia di sudore sulla tempia
     k.sphere(0.07, '#8fd3ff', head, { p: [0.5, 0.82, 0.3], s: [0.8, 1.3, 0.6], outline: 0.008 });
   }
+  // espressione rilassata = sorriso disteso
+  const mood = (t.mood === 'normal' ? 'smile' : t.mood) as Mood;
 
   // tasca dei jeans (a destra) con fiches o carte che spuntano
   const pocket = new THREE.Group();
@@ -418,7 +448,7 @@ function sandro(k: Kit, look: ResolvedLook, { body, head, face, armL, armR }: Ri
       });
       k.card(0.3, 0.19, tex, fan, { p: [(i - 1) * 0.07, (1 - Math.abs(i - 1)) * 0.03, i * 0.012], r: [0, 0, (1 - i) * 0.32] });
     });
-    return { pose: 'normal', mood: (t.mood as Mood) ?? 'happy' };
+    return { pose: 'normal', mood };
   }
   if (t.hands === 'slip') {
     // schedina da controllare nella mano sinistra, carte da gioco nella destra
@@ -458,9 +488,9 @@ function sandro(k: Kit, look: ResolvedLook, { body, head, face, armL, armR }: Ri
       });
       k.card(0.13, 0.18, tex, fan, { p: [(i - 1) * 0.045, 0, i * 0.01], r: [0, 0, (1 - i) * 0.3] });
     });
-    return { pose: 'readL', mood: (t.mood as Mood) ?? 'worried' };
+    return { pose: 'readL', mood };
   }
-  return { pose: 'normal', mood: (t.mood as Mood) ?? 'normal' };
+  return { pose: 'normal', mood };
 }
 
 /** Basso, il fan degli anime: piccolo, biondo, felpa a tema, manga o action figure. */
@@ -548,13 +578,14 @@ function basso(k: Kit, look: ResolvedLook, { body, head, face, armR }: Pick<Rig,
  * Barba sul mento e sulla mascella (sotto la bocca), più basette e baffetti a scelta.
  * Sta nel gruppo `face`, quindi sparisce con il selfie come il resto del viso disegnato.
  */
-function beardShell(k: Kit, face: THREE.Group, color: THREE.ColorRepresentation, o: { sideburns?: boolean; mustache?: boolean; light?: boolean } = {}) {
-  const mat = k.mat(color, { side: THREE.DoubleSide, ...(o.light ? { transparent: true, opacity: 0.8 } : {}) });
+function beardShell(k: Kit, face: THREE.Group, color: THREE.ColorRepresentation, o: { sideburns?: boolean; mustache?: boolean; light?: boolean; opacity?: number; stache?: number } = {}) {
+  const translucent = o.light || o.opacity !== undefined;
+  const mat = k.mat(color, { side: THREE.DoubleSide, ...(translucent ? { transparent: true, opacity: o.opacity ?? 0.8 } : {}) });
   // leggera: copre solo la parte bassa del mento
   const start = o.light ? 2.3 : 2.18;
-  k.mesh(new THREE.SphereGeometry(HEAD_R * 1.03, 28, 12, 0.2, Math.PI - 0.4, start, o.light ? 0.6 : 0.85), mat, face, { p: [0, 0.55, 0], s: [1, 0.95, 0.95], outline: o.light ? false : 0.012 });
+  k.mesh(new THREE.SphereGeometry(HEAD_R * 1.03, 28, 12, 0.2, Math.PI - 0.4, start, o.light ? 0.6 : 0.85), mat, face, { p: [0, 0.55, 0], s: [1, 0.95, 0.95], outline: o.light || (o.opacity ?? 1) < 0.6 ? false : 0.012 });
   if (o.sideburns) for (const sx of [-1, 1]) k.capsule(0.07, 0.22, color, face, { p: [0.56 * sx, 0.42, 0.18], r: [0.35, 0, -0.2 * sx], outline: 0.01 });
-  if (o.mustache) for (const sx of [-1, 1]) k.capsule(0.035, 0.1, color, face, { p: [0.07 * sx, 0.41, 0.585], r: [0, 0, (Math.PI / 2 - 0.25) * sx], outline: 0.008 });
+  if (o.mustache) for (const sx of [-1, 1]) k.capsule(o.stache ?? 0.035, 0.1, color, face, { p: [0.07 * sx, 0.41, 0.585], r: [0, 0, (Math.PI / 2 - 0.25) * sx], outline: 0.008 });
   if (o.light) k.sphere(0.06, color, face, { p: [0, 0.12, 0.38], s: [1.1, 0.9, 0.7], outline: 0.008 }); // pizzetto sulla punta del mento
 }
 
@@ -885,6 +916,218 @@ function buildPhotoHead(k: Kit, a: SelfieAssets): { group: THREE.Group; top: num
   return { group, top: bottom + H };
 }
 
+// ------------------------------------------------------------------ gli amici: Samuele, Valerio, Paffo, Pacio, J (e Sandro)
+
+/** Corporatura, forma della testa, colore dell'iride e spessore delle sopracciglia: valori di partenza = personaggio «tondo». */
+interface BodyPlan {
+  /** Larghezza del busto (1 = normale). */
+  w: number;
+  /** Scala della testa: [larghezza, altezza, profondità]. */
+  head: V3;
+  /** Iride chiara (di default gli occhi sono scuri). */
+  iris?: string;
+  /** Raggio delle sopracciglia (0.03 = sottili). */
+  brow?: number;
+  /** Inclinazione delle sopracciglia (0.18 = default, 0 = dritte e serie). */
+  browTilt?: number;
+  /** Rimpicciolisce tutto il personaggio (corporatura più raccolta). */
+  scale?: number;
+}
+
+const PLANS: Partial<Record<CharacterKind, BodyPlan>> = {
+  sandro: { w: 1.12, head: [1.02, 0.95, 0.95], brow: 0.05 },
+  samuele: { w: 0.94, head: [1, 0.93, 0.95], iris: '#8ecae6' },
+  valerio: { w: 0.95, head: [0.9, 1.1, 0.95] },
+  paffo: { w: 0.9, head: [0.96, 0.98, 0.95], browTilt: 0.02 },
+  pacio: { w: 1.04, head: [1, 0.94, 0.95], brow: 0.045, scale: 0.92 },
+  j: { w: 1.06, head: [1.08, 0.96, 0.98], brow: 0.05 }
+};
+
+/** Calotta di capelli che segue la forma della testa; `grow` la ingrossa, `tilt` la porta indietro. */
+function hairCapFit(k: Kit, color: THREE.ColorRepresentation, head: THREE.Group, scale: V3, coverage = 1.15, o: { grow?: number; tilt?: number; opacity?: number } = {}) {
+  const mat = k.mat(color, o.opacity !== undefined ? { transparent: true, opacity: o.opacity } : undefined);
+  k.mesh(new THREE.SphereGeometry(HEAD_R * (o.grow ?? 1.04), 28, 14, 0, Math.PI * 2, 0, coverage), mat, head, {
+    p: [0, 0.55, -0.02],
+    s: scale,
+    r: [o.tilt ?? -0.38, 0, 0],
+    outline: o.opacity !== undefined ? false : undefined
+  });
+}
+
+/** Occhiali grandi e tondi con montatura nera spessa. */
+function bigGlasses(k: Kit, face: THREE.Group) {
+  const m = k.mat('#14101f');
+  for (const sx of [-1, 1]) k.mesh(new THREE.TorusGeometry(0.185, 0.03, 10, 30), m, face, { p: [0.21 * sx, 0.625, 0.575], outline: 0.008 });
+  k.mesh(new THREE.CylinderGeometry(0.025, 0.025, 0.1, 8), m, face, { p: [0, 0.66, 0.6], r: [0, 0, Math.PI / 2], outline: false });
+  for (const sx of [-1, 1]) k.mesh(new THREE.CylinderGeometry(0.022, 0.022, 0.3, 8), m, face, { p: [0.4 * sx, 0.64, 0.42], r: [Math.PI / 2, 0, 0], outline: false });
+}
+
+/**
+ * Punto appena fuori dal busto (un ellissoide: raggio 0.42, schiacciato in z) all'angolo `a` attorno al collo.
+ * `droop` abbassa la parte davanti: la catenina pende a V sul petto.
+ */
+function neckPoint(a: number, w: number, droop: number, y0 = 1.24): THREE.Vector3 {
+  const y = y0 - droop * Math.pow(Math.max(0, Math.sin(a)), 1.4);
+  const kk = Math.sqrt(Math.max(0.04, 1 - ((y - 0.9) / 0.441) ** 2));
+  return new THREE.Vector3(Math.cos(a) * 0.42 * w * kk + Math.sign(Math.cos(a)) * 0.012, y, Math.sin(a) * 0.357 * w * kk + 0.02);
+}
+
+/** Catenina al collo: un filo sottile continuo, oppure una catena a maglia (anelli alternati). */
+function neckChain(k: Kit, body: THREE.Group, o: { color: string; w: number; droop: number; tube?: number; links?: boolean }) {
+  if (!o.links) {
+    const pts = Array.from({ length: 48 }, (_, i) => neckPoint((i / 48) * Math.PI * 2, o.w, o.droop));
+    k.mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts, true), 96, o.tube ?? 0.013, 6, true), k.mat(o.color), body, { outline: 0.005 });
+    return;
+  }
+  const N = 30;
+  for (let i = 0; i < N; i++) {
+    const cur = neckPoint((i / N) * Math.PI * 2, o.w, o.droop);
+    const next = neckPoint(((i + 1) / N) * Math.PI * 2, o.w, o.droop);
+    const link = k.mesh(new THREE.TorusGeometry(0.036, 0.013, 6, 12), k.mat(o.color), body, { p: [cur.x, cur.y, cur.z], outline: 0.006 });
+    // il piano dell'anello contiene la direzione della catena; gli anelli si alternano di 90°
+    link.quaternion.setFromUnitVectors(new THREE.Vector3(1, 0, 0), next.sub(cur).normalize());
+    if (i % 2) link.rotateX(Math.PI / 2);
+  }
+}
+
+/** Giro di perline chiare (girocollo) attorno al collo. */
+function beadChoker(k: Kit, body: THREE.Group, color: string, w: number) {
+  const n = 16;
+  for (let i = 0; i < n; i++) {
+    const pt = neckPoint((i / n) * Math.PI * 2, w, 0.05, 1.22);
+    k.mesh(new THREE.SphereGeometry(0.043, 12, 10), k.mat(color), body, { p: [pt.x, pt.y, pt.z], outline: 0.008 });
+  }
+}
+
+/** Piccoli riccioli sul petto (texture trasparente, sempre uguale: niente casualità vera). */
+function chestHair(k: Kit, body: THREE.Group, color: string, w: number) {
+  let seed = 7;
+  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const tex = k.canvas(256, 256, (g, cw, ch) => {
+    g.strokeStyle = color;
+    g.lineWidth = 5;
+    g.lineCap = 'round';
+    for (let i = 0; i < 380; i++) {
+      const u = rnd() * 2 - 1;
+      const v = rnd() * 2 - 1;
+      // due placche ai lati dello sterno + una striscia centrale verso la pancia
+      const inPecs = u * u + (v + 0.15) * (v + 0.15) < 0.9 && Math.abs(u) > 0.06;
+      const inLine = Math.abs(u) < 0.1 && v > -0.1;
+      if (!inPecs && !inLine) continue;
+      g.beginPath();
+      const a = rnd() * Math.PI * 2;
+      g.arc(cw / 2 + u * cw * 0.46, ch / 2 + v * ch * 0.46, 3 + rnd() * 3, a, a + Math.PI * 0.9);
+      g.stroke();
+    }
+  });
+  const y = 0.98;
+  const z = 0.357 * w * Math.sqrt(Math.max(0, 1 - ((y - 0.9) / 0.441) ** 2)) + 0.012;
+  const m = k.card(0.5, 0.5, tex, body, { p: [0, y, z], r: [-0.18, 0, 0] });
+  (m.material as THREE.MeshBasicMaterial).transparent = true;
+}
+
+/** Samuele: asciutto, capelli corti con ciuffo, occhi chiari, viso squadrato con barba incolta, catenina sottile. */
+function samuele(k: Kit, look: ResolvedLook, { body, head, face }: Friend): { pose: Pose; mood: Mood } {
+  const c = look.colors;
+  const t = look.traits;
+  const hs = PLANS.samuele!.head;
+  hairCapFit(k, c.hair, head, hs, 1.1, { grow: 1.035, tilt: -0.34 });
+  // ciuffo leggero sulla fronte
+  k.sphere(0.17, c.hair, head, { p: [0.1, 1.0, 0.4], s: [1.35, 0.7, 0.9], r: [0.5, 0, -0.2] });
+  k.capsule(0.06, 0.2, c.hair, head, { p: [-0.1, 0.97, 0.47], r: [1.15, 0, 0.35] });
+  // mascella squadrata
+  k.mesh(new RoundedBoxGeometry(0.72, 0.3, 0.5, 3, 0.13), k.mat(c.skin), head, { p: [0, 0.19, 0.0], outline: false });
+  if (t.stubble === 'yes') beardShell(k, face, shade(c.skin, -0.62), { opacity: 0.62 });
+  if (t.necklace === 'yes') neckChain(k, body, { color: '#e2e6ec', tube: 0.014, w: PLANS.samuele!.w, droop: 0.2 });
+  return { pose: 'normal', mood: 'normal' };
+}
+
+/** Valerio: viso allungato, ciuffo morbido all'insù, orecchino a cerchio, sorriso con i denti, girocollo di perline. */
+function valerio(k: Kit, look: ResolvedLook, { body, head, mouth }: Friend): { pose: Pose; mood: Mood } {
+  const c = look.colors;
+  const t = look.traits;
+  const hs = PLANS.valerio!.head;
+  hairCapFit(k, c.hair, head, hs, 1.1, { grow: 1.04 });
+  // ciuffo pettinato verso l'alto
+  k.capsule(0.17, 0.2, c.hair, head, { p: [0, 1.14, 0.24], r: [-0.8, 0, 0], s: [1.2, 1, 1] });
+  k.sphere(0.2, c.hair, head, { p: [0, 1.08, -0.1], s: [1.1, 0.8, 1] });
+  if (t.earring === 'yes') k.mesh(new THREE.TorusGeometry(0.07, 0.017, 8, 20), k.mat('#e3c25a'), head, { p: [0.53, 0.33, 0.03], r: [0, 0.5, 0], outline: 0.006 });
+  if (t.choker === 'yes') beadChoker(k, body, '#f3ecd9', PLANS.valerio!.w);
+  // denti: mezzo disco bianco dentro l'arco del sorriso (figlio della bocca, quindi si muove con lei)
+  k.mesh(new THREE.CircleGeometry(0.112, 20, 0, Math.PI), k.flat('#ffffff'), mouth, { p: [0, 0, -0.004], outline: false, shadow: false });
+  return { pose: 'normal', mood: 'happy' };
+}
+
+/** Paffo: capelli scuri mossi con ciocche sulla fronte, grandi occhiali tondi neri, slanciato, sguardo serio. */
+function paffo(k: Kit, look: ResolvedLook, { head, face }: Friend): { pose: Pose; mood: Mood } {
+  const c = look.colors;
+  const t = look.traits;
+  const hs = PLANS.paffo!.head;
+  hairCapFit(k, c.hair, head, hs, 1.2, { grow: 1.055, tilt: -0.3 });
+  // ciocche mosse che ricadono sulla fronte
+  const locks: [number, number, number][] = [[-0.3, -0.35, 1.2], [-0.1, 0.1, 1.35], [0.12, -0.15, 1.2], [0.31, 0.35, 1.3]];
+  locks.forEach(([x, tilt, len]) => k.sphere(0.1, c.hair, head, { p: [x, 0.9, 0.465], s: [0.75, len, 0.45], r: [0.45, 0, tilt] }));
+  // onde ai lati della testa
+  for (const sx of [-1, 1]) {
+    k.sphere(0.2, c.hair, head, { p: [0.5 * sx, 0.78, -0.05], s: [0.7, 1.2, 1] });
+    k.sphere(0.16, c.hair, head, { p: [0.46 * sx, 0.52, -0.22] });
+  }
+  k.sphere(0.34, c.hair, head, { p: [0, 0.5, -0.4], s: [1.15, 1.1, 0.7] });
+  if (t.glasses === 'yes') bigGlasses(k, face);
+  return { pose: 'normal', mood: 'serious' };
+}
+
+/** Pacio: testa rasata, barba corta curata, sorriso accennato, catenina a maglia metallica, corporatura compatta. */
+function pacio(k: Kit, look: ResolvedLook, { body, head, face }: Friend): { pose: Pose; mood: Mood } {
+  const c = look.colors;
+  const t = look.traits;
+  const hs = PLANS.pacio!.head;
+  // rasato: solo un velo scuro sul cranio
+  hairCapFit(k, c.hair, head, hs, 1.05, { grow: 1.012, tilt: -0.45, opacity: 0.55 });
+  if (t.beard === 'yes') beardShell(k, face, c.hair, { mustache: true, stache: 0.03, opacity: 0.92 });
+  if (t.chain === 'yes') neckChain(k, body, { color: '#c3c8d0', links: true, w: PLANS.pacio!.w, droop: 0.15 });
+  return { pose: 'normal', mood: 'smirk' };
+}
+
+/** J: capelli neri pettinati all'indietro, barba e baffi pieni, viso pieno, t-shirt scura con stampa. */
+function jay(k: Kit, look: ResolvedLook, { body, head, face, armL, armR }: Friend): { pose: Pose; mood: Mood } {
+  const c = look.colors;
+  const t = look.traits;
+  const hs = PLANS.j!.head;
+  hairCapFit(k, c.hair, head, hs, 1.08, { grow: 1.05, tilt: -0.62 });
+  k.sphere(0.4, c.hair, head, { p: [0, 0.88, -0.2], s: [1.05, 0.75, 0.9] });
+  // barba piena e ben rifinita + baffi
+  beardShell(k, face, c.hair, { sideburns: true, mustache: true, stache: 0.045 });
+  k.sphere(0.17, c.hair, face, { p: [0, 0.13, 0.4], s: [1.5, 0.8, 0.8], outline: 0.01 });
+  // t-shirt: maniche corte (avambraccio scoperto), colletto a girocollo e stampa
+  for (const [arm, sx] of [[armL, -1], [armR, 1]] as const) {
+    k.capsule(0.096, 0.1, c.skin, arm, { p: [0.0715 * sx, -0.345, 0], r: [0, 0, 0.18 * sx], outline: 0.012 });
+  }
+  k.mesh(new THREE.TorusGeometry(0.26, 0.05, 8, 28), k.mat(shade(c.body, 0.14)), body, { p: [0, 1.22, 0.03], r: [Math.PI / 2 + 0.25, 0, 0], s: [1, 1, 0.9], outline: 0.012 });
+  if (t.print === 'bolt') {
+    const tex = k.canvas(256, 256, (g, w, h) => {
+      g.fillStyle = c.accent;
+      g.beginPath();
+      g.moveTo(w * 0.56, h * 0.08);
+      g.lineTo(w * 0.28, h * 0.54);
+      g.lineTo(w * 0.47, h * 0.54);
+      g.lineTo(w * 0.4, h * 0.94);
+      g.lineTo(w * 0.74, h * 0.4);
+      g.lineTo(w * 0.53, h * 0.4);
+      g.closePath();
+      g.fill();
+      g.lineWidth = 8;
+      g.strokeStyle = '#ffffff';
+      g.stroke();
+    });
+    const y = 0.97;
+    const z = 0.357 * 1.06 * Math.sqrt(Math.max(0, 1 - ((y - 0.9) / 0.441) ** 2)) + 0.012;
+    const m = k.card(0.3, 0.3, tex, body, { p: [0, y, z], r: [-0.18, 0, 0] });
+    (m.material as THREE.MeshBasicMaterial).transparent = true;
+  }
+  return { pose: 'normal', mood: 'smile' };
+}
+
 // ------------------------------------------------------------------ rig pubblico
 
 export class CharacterRig {
@@ -1118,6 +1361,11 @@ export class CharacterRig {
         mouth.scale.set(0.7, 0.6, 1);
       } else if (mood === 'happy' && this.anim === 'idle') {
         mouth.scale.set(1.25, 1.35, 1);
+      } else if (this.anim !== 'think') {
+        // seria = quasi una riga; sorriso accennato = arco piccolo; sorriso disteso = arco largo e basso
+        if (mood === 'serious') mouth.scale.set(0.85, 0.22, 1);
+        else if (mood === 'smirk') mouth.scale.set(0.75, 0.55, 1);
+        else if (mood === 'smile') mouth.scale.set(1.15, 0.8, 1);
       }
     }
   }

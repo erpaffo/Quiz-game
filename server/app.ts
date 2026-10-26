@@ -218,8 +218,11 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
     }));
 
     socket.on('SET_SETTINGS', safe((p, ack) => {
-      const room = host();
-      reply(ack, room ? room.setSettings(p ?? {}) : 'Solo lo schermo principale può cambiare le impostazioni');
+      const h = host();
+      const pl = player();
+      if (h) return reply(ack, h.setSettings(p ?? {}, null));
+      if (pl) return reply(ack, pl.room.setSettings(p ?? {}, pl.playerId));
+      reply(ack, 'Solo lo schermo principale o il capo stanza può cambiare le impostazioni');
     }));
 
     socket.on('START_GAME', safe((_p, ack) => {
@@ -235,6 +238,29 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
       const pl = player();
       if (h) return reply(ack, h.restart(null));
       if (pl) return reply(ack, pl.room.restart(pl.playerId));
+      reply(ack, NOT_IN_ROOM);
+    }));
+
+    socket.on('PAUSE_GAME', safe((p, ack) => {
+      // Solo lo schermo principale: i telefoni non possono fermare la partita degli altri.
+      const h = host();
+      if (!h) return reply(ack, 'Solo lo schermo principale può mettere in pausa');
+      reply(ack, h.setPaused(p?.paused === true));
+    }));
+
+    socket.on('MENU_NAV', safe((p, ack) => {
+      const h = host();
+      const pl = player();
+      if (h) return reply(ack, h.menuNav(null, p ?? {}));
+      if (pl) return reply(ack, pl.room.menuNav(pl.playerId, p ?? {}));
+      reply(ack, NOT_IN_ROOM);
+    }));
+
+    socket.on('SKIP_INTRO', safe((_p, ack) => {
+      const h = host();
+      const pl = player();
+      if (h) return reply(ack, h.skipIntro(null));
+      if (pl) return reply(ack, pl.room.skipIntro(pl.playerId));
       reply(ack, NOT_IN_ROOM);
     }));
 
@@ -270,6 +296,11 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
     socket.on('GAME_ACTION', safe((p, ack) => {
       const pl = player();
       reply(ack, pl ? pl.room.gameAction(pl.playerId, p) : NOT_IN_ROOM);
+    }));
+
+    socket.on('SHOW_ACTION', safe((p, ack) => {
+      const pl = player();
+      reply(ack, pl ? pl.room.showAction(pl.playerId, p?.payload) : NOT_IN_ROOM);
     }));
 
     socket.on('CLEAR_EFFECT', safe((p) => {

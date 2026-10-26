@@ -20,6 +20,11 @@ export interface GameContext {
   endStep(delayMs?: number): void;
   /** Timer legato al passo corrente (annullato al passo successivo). */
   later(fn: () => void, ms: number): void;
+  /**
+   * Timer legato al gioco intero: sopravvive ai cambi di passo (es. la miccia della Bomba),
+   * annullato a fine gioco o alla chiusura della stanza. Restituisce la funzione che lo annulla.
+   */
+  gameTimer(fn: () => void, ms: number): () => void;
   /** Aggiunge/toglie punti (mai sotto zero). Restituisce la variazione effettiva. */
   addScore(p: Player, delta: number): number;
   /** Raddoppia `base` se il giocatore ha la carta Doppio attiva (e la consuma). */

@@ -6,3 +6,6 @@ release/
 user-media/
 docs/
 client/public/mediapipe/wasm/
+build-*
+*.md
+docker*

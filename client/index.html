@@ -2,25 +2,54 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>%BRAND%</title>
-    <link rel="icon" href="data:," />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#2b0f6b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Party Hub" />
+    <title>%BRAND% · Party Hub</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
     <style>
-      body { display: grid; place-items: center; min-height: 100dvh; padding: 16px; text-align: center; }
-      .home { display: flex; flex-direction: column; gap: 16px; align-items: center; max-width: 480px; }
-      .home h1 { margin: 0; font-size: clamp(2.4rem, 8vw, 3.6rem); color: var(--gold); text-shadow: 0 5px 0 #14063a; line-height: 1; }
+      body { display: grid; place-items: center; min-height: 100dvh; padding: calc(16px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom)); text-align: center; }
+      .home { display: flex; flex-direction: column; gap: 14px; align-items: center; max-width: 480px; width: 100%; }
+      .home h1 { margin: 0; font-size: clamp(2.2rem, 8vw, 3.4rem); color: var(--gold); text-shadow: 0 5px 0 #14063a; line-height: 1; }
       .home h1 span { color: var(--pink); }
-      .home .btn { width: 100%; padding: 18px; font-size: 1.25rem; text-decoration: none; }
+      .home .btn { width: 100%; padding: 16px; font-size: 1.18rem; text-decoration: none; }
+      .home-card { width: 100%; padding: 14px 16px; border-radius: 18px; background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.14); text-align: left; display: flex; flex-direction: column; gap: 8px; }
+      .home-card h3 { margin: 0; font-size: 1.05rem; color: var(--gold); }
+      .home-card p { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+      .pwa-tip { font-size: 0.82rem; padding: 10px 14px; border-radius: 14px; background: rgba(76, 201, 240, 0.12); border: 1px solid rgba(76, 201, 240, 0.35); color: #d8f3ff; }
     </style>
   </head>
   <body>
     <div class="home">
       <h1>%BRAND_LOGO%</h1>
-      <p class="muted">Apri lo <b>schermo principale</b> sulla TV o sul PC, poi ogni giocatore entra con il proprio smartphone.</p>
-      <a class="btn" href="./host.html">📺 Schermo principale</a>
-      <a class="btn secondary" href="./controller.html">📱 Controller (smartphone)</a>
+      <p class="muted">Suite di Party Games da salotto (TV + Telefoni) e da tavolo (Passa-il-Telefono).</p>
+      <a class="btn" href="./controller.html">📱 Entra come Controller (Smartphone)</a>
+      <a class="btn secondary" href="./host.html">📺 Apri Schermo Principale (TV / PC)</a>
+      <a class="btn" href="./pass/">🔄 Party Tascabile · un solo telefono, anche offline</a>
+      <div class="home-card">
+        <h3>🔄 Modalità «Passa-il-Telefono» (senza TV)</h3>
+        <p>8 giochi da fare al bar, in viaggio o a tavola passandosi un unico telefono: <i>Parola in Fronte</i>, <i>Bomba Verbale</i>, <i>L'Impostore Tascabile</i>, <i>5 Secondi di Panico</i>, <i>Lunghezza d'Onda</i>, <i>Il Tribunale degli Amici</i>, <i>Catena Scarabocchiata</i> e <i>Duello al Tavolo</i>. Si installa dal browser e funziona senza internet.</p>
+      </div>
       <a class="btn secondary" href="./editor.html">✏️ Laboratorio domande</a>
+      <div class="pwa-tip" id="pwa-tip">
+        📲 <b>Usi iPhone?</b> Tocca <b>Condividi</b> in Safari e scegli <b>«Aggiungi alla schermata Home»</b> per installarla come App a schermo intero!
+      </div>
     </div>
-    <script type="module">import '@fontsource/baloo-2/700.css'; import '@fontsource/baloo-2/800.css'; import './common/base.css';</script>
+    <script type="module">
+      import '@fontsource/baloo-2/700.css';
+      import '@fontsource/baloo-2/800.css';
+      import './common/base.css';
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+        document.getElementById('pwa-tip')?.setAttribute('hidden', '');
+      }
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+      }
+    </script>
   </body>
 </html>

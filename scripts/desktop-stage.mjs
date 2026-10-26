@@ -47,6 +47,19 @@ await build({
   logLevel: 'info'
 });
 
+// Preload della finestra del gioco (comandi del menù di pausa: finestra, monitor, esci).
+await build({
+  entryPoints: [resolve(ROOT, 'desktop/preload.ts')],
+  outfile: resolve(OUT, 'preload.cjs'),
+  bundle: true,
+  platform: 'node',
+  format: 'cjs',
+  target: 'node22',
+  external: ['electron'],
+  legalComments: 'none',
+  logLevel: 'info'
+});
+
 copyDir(resolve(ROOT, 'dist'), resolve(OUT, 'client'));
 copyDir(resolve(ROOT, 'server/data/packs'), resolve(OUT, 'packs'));
 copyFileSync(resolve(ROOT, 'scripts/bosco.ps1'), resolve(OUT, 'bosco.ps1'));

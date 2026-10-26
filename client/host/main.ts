@@ -8,16 +8,18 @@ import { CONFIG } from '../../shared/config';
 import { GAMES } from '../../shared/games';
 import type { CardEvent, PowerType, RoomSnapshot } from '../../shared/types';
 import '../common/base.css';
+import '../common/pack.css';
 import { clock, createSocket } from '../common/net';
 import { audio } from './audio';
 import './host.css';
 import { sfx } from './sfx';
+import { createPauseMenu, loadVideo } from './pause-menu';
 import { Stage } from './stage';
 import { HostUI, phaseKey } from './ui';
 
 const SESSION_KEY = 'sep:host';
 const socket = createSocket();
-const stage = new Stage(document.getElementById('stage')!);
+const stage = new Stage(document.getElementById('stage')!, loadVideo());
 const selfies = new Map<string, string>();
 let last: RoomSnapshot | null = null;
 let session: { code: string; hostKey: string } | null = null;
@@ -40,7 +42,8 @@ const ui = new HostUI(
     addBot: () => void report(socket.emitWithAck('ADD_BOT', {})),
     start: () => void report(socket.emitWithAck('START_GAME', {})),
     restart: () => void report(socket.emitWithAck('RESTART_GAME', {})),
-    setSettings: (s) => void report(socket.emitWithAck('SET_SETTINGS', s))
+    setSettings: (s) => void report(socket.emitWithAck('SET_SETTINGS', s)),
+    menuNav: (nav) => void report(socket.emitWithAck('MENU_NAV', nav))
   },
   (sec, phase) => {
     if (sec > 0 && sec <= 5 && ['CARD_PICK', 'PLAY'].includes(phase)) sfx.tick();
@@ -182,6 +185,32 @@ document.addEventListener('keydown', (e) => {
 });
 syncVolume();
 
+// ------------------------------------------------------------ pausa e impostazioni (Esc)
+
+const pauseMenu = createPauseMenu({
+  stage,
+  inGame: () => !!last && last.phase !== 'LOBBY',
+  setPaused: async (paused) => {
+    const r = await socket.emitWithAck('PAUSE_GAME', { paused });
+    return r.ok ? null : r.error;
+  },
+  exitGame: async () => {
+    const r = await socket.emitWithAck('RESTART_GAME', {});
+    return r.ok ? null : r.error;
+  },
+  onAudioChange: syncVolume,
+  toast: (t) => ui.toast(t)
+});
+document.getElementById('pause-btn')!.addEventListener('click', () => void pauseMenu.toggle());
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  e.preventDefault();
+  // prima si chiudono le finestrelle aperte, poi il menù di pausa
+  if (!guide.hidden) return void (guide.hidden = true);
+  if (!volPanel.hidden) return void (volPanel.hidden = true);
+  void pauseMenu.toggle();
+});
+
 const guide = document.getElementById('offline-guide')!;
 document.getElementById('guide-btn')!.addEventListener('click', () => (guide.hidden = false));
 guide.addEventListener('click', (e) => {
@@ -210,6 +239,7 @@ socket.on('ROOM_STATE', (s) => {
   playerReactions(s, prev);
   if (!prev || phaseKey(prev) !== phaseKey(s)) onPhaseEnter(s, prev);
   ui.render(s);
+  pauseMenu.syncPaused(!!s.paused);
 });
 
 const nameOf = (s: RoomSnapshot, id: string) => s.players.find((p) => p.id === id)?.name ?? '';

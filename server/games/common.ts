@@ -48,10 +48,11 @@ export function botAnswer(ctx: GameContext, round: McRound, bot: Player, answer:
   ctx.later(() => answer(right ? round.def.correctIndex : pick(wrong)), delay);
 }
 
-/** Il giocatore più ricco tra gli altri: bersaglio preferito di bot e scelte automatiche. */
+/**
+ * Il giocatore più ricco tra gli altri: bersaglio preferito di bot e scelte automatiche.
+ * Preferisce chi è connesso (un assente non può reagire); solo se sono tutti offline ripiega su di loro.
+ */
 export function richestOther(ctx: GameContext, self: Player): Player | undefined {
-  return ctx
-    .players()
-    .filter((o) => o.id !== self.id)
-    .sort((a, b) => b.score - a.score)[0];
+  const byScore = (list: Player[]) => list.filter((o) => o.id !== self.id).sort((a, b) => b.score - a.score)[0];
+  return byScore(ctx.connected()) ?? byScore(ctx.players());
 }

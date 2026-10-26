@@ -1,0 +1,66 @@
+name: App Tascabile (GitHub Pages)
+
+# Pubblica l'app «Party Tascabile» (client/pass) su un indirizzo https:// di GitHub Pages.
+# Serve https perché l'iPhone attivi il funzionamento offline (service worker).
+# Per attivarla: GitHub → Settings → Pages → Build and deployment → Source: «GitHub Actions».
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'client/pass/**'
+      - 'client/common/base.css'
+      - 'vite.pass.config.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tests/pass-*.test.ts'
+      - '.github/workflows/pass-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dipendenze
+        run: npm ci
+
+      - name: Controllo dei tipi
+        run: npm run typecheck
+
+      - name: Test dell'app tascabile
+        run: npx tsx --test tests/pass-*.test.ts
+
+      - name: Build
+        run: npm run build:pass
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/pass
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

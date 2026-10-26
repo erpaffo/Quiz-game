@@ -14,5 +14,5 @@
     "noUnusedLocals": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["shared", "server", "client", "desktop", "scripts", "vite.config.ts"]
+  "include": ["shared", "server", "client", "desktop", "scripts", "tests", "vite.config.ts", "vite.pass.config.ts"]
 }
