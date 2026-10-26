@@ -1,6 +1,6 @@
 // Nome del gioco: si cambia SOLO in shared/brand.json.
 // Lo leggono i titoli delle pagine, il logo, la finestra dell'app e la configurazione di electron-builder.
-// «Sapere è Potere» è un marchio Sony: prima di pubblicare conviene sceglierne uno proprio.
+// Nome proprio del gioco: «Quiz del Pozzo» (in inglese «Quiz of Well»). Non usare nomi di giochi di altri.
 import brand from './brand.json';
 
 export const BRAND = brand;

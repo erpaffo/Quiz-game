@@ -1,0 +1,402 @@
+[
+ {
+  "word": "Alibi",
+  "taboo": [
+   "colpevole",
+   "innocente",
+   "processo",
+   "scusa"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Empatia",
+  "taboo": [
+   "sentimenti",
+   "emozioni",
+   "capire",
+   "panni"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Utopia",
+  "taboo": [
+   "ideale",
+   "impossibile",
+   "mondo",
+   "sogno"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Carisma",
+  "taboo": [
+   "leader",
+   "fascino",
+   "seguire",
+   "personalità"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Dilemma",
+  "taboo": [
+   "scelta",
+   "dubbio",
+   "decidere",
+   "alternativa"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Karma",
+  "taboo": [
+   "destino",
+   "azioni",
+   "oriente",
+   "tornare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Censura",
+  "taboo": [
+   "vietato",
+   "tagliare",
+   "stampa",
+   "libertà"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Eredità",
+  "taboo": [
+   "testamento",
+   "soldi",
+   "parente",
+   "lasciare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Liutaio",
+  "taboo": [
+   "violino",
+   "strumenti",
+   "legno",
+   "bottega"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Sommelier",
+  "taboo": [
+   "vino",
+   "assaggiare",
+   "ristorante",
+   "calice"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Notaio",
+  "taboo": [
+   "atto",
+   "firma",
+   "casa",
+   "contratto"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Doppiatore",
+  "taboo": [
+   "voce",
+   "film",
+   "cinema",
+   "microfono"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Orologiaio",
+  "taboo": [
+   "lancette",
+   "tempo",
+   "ingranaggi",
+   "riparare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Stuntman",
+  "taboo": [
+   "controfigura",
+   "pericolo",
+   "scene",
+   "attore"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Archeologo",
+  "taboo": [
+   "scavi",
+   "antico",
+   "reperti",
+   "Indiana Jones"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Faro",
+  "taboo": [
+   "mare",
+   "luce",
+   "nave",
+   "scogli"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Grammofono",
+  "taboo": [
+   "disco",
+   "vinile",
+   "tromba",
+   "musica"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Macchina da scrivere",
+  "taboo": [
+   "tasti",
+   "lettere",
+   "fogli",
+   "inchiostro"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Gettone telefonico",
+  "taboo": [
+   "cabina",
+   "moneta",
+   "chiamare",
+   "cornetta"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Musicassetta",
+  "taboo": [
+   "nastro",
+   "matita",
+   "walkman",
+   "riavvolgere"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Lanterna",
+  "taboo": [
+   "candela",
+   "luce",
+   "buio",
+   "vetro"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Pergamena",
+  "taboo": [
+   "carta",
+   "antica",
+   "rotolo",
+   "piuma"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Calamaio",
+  "taboo": [
+   "inchiostro",
+   "penna",
+   "scrivere",
+   "vetro"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Miraggio",
+  "taboo": [
+   "deserto",
+   "oasi",
+   "illusione",
+   "sete"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Marea",
+  "taboo": [
+   "acqua",
+   "luna",
+   "alta",
+   "bassa"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Geyser",
+  "taboo": [
+   "acqua",
+   "bollente",
+   "Islanda",
+   "spruzzo"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Stalattite",
+  "taboo": [
+   "grotta",
+   "goccia",
+   "soffitto",
+   "roccia"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Monsone",
+  "taboo": [
+   "pioggia",
+   "vento",
+   "India",
+   "tropicale"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Sabbie mobili",
+  "taboo": [
+   "affondare",
+   "deserto",
+   "palude",
+   "uscire"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Bussola",
+  "taboo": [
+   "nord",
+   "ago",
+   "magnetico",
+   "orientarsi"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Parafulmine",
+  "taboo": [
+   "tetto",
+   "temporale",
+   "elettricità",
+   "Franklin"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Telescopio",
+  "taboo": [
+   "stelle",
+   "lente",
+   "Galileo",
+   "spazio"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Stetoscopio",
+  "taboo": [
+   "medico",
+   "cuore",
+   "ascoltare",
+   "petto"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Codice a barre",
+  "taboo": [
+   "strisce",
+   "prezzo",
+   "cassa",
+   "lettore"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Paracadute",
+  "taboo": [
+   "lanciarsi",
+   "aereo",
+   "aprire",
+   "volare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Colosseo",
+  "taboo": [
+   "Roma",
+   "gladiatori",
+   "anfiteatro",
+   "arena"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Muraglia cinese",
+  "taboo": [
+   "Cina",
+   "muro",
+   "lunga",
+   "imperatore"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Stonehenge",
+  "taboo": [
+   "pietre",
+   "Inghilterra",
+   "cerchio",
+   "preistoria"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Machu Picchu",
+  "taboo": [
+   "Inca",
+   "Perù",
+   "montagna",
+   "rovine"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Triangolo delle Bermude",
+  "taboo": [
+   "oceano",
+   "sparire",
+   "navi",
+   "aerei"
+  ],
+  "pack": "difficile"
+ }
+]

@@ -1,12 +1,15 @@
 // «Bomba Verbale»: inneschi. Sillabe (la parola deve contenerle), categorie lampo e lettere per la catena.
 
-export const BOMBA_SYLLABLES: string[] = [
+import GEN_BOMBA_SILLABA from './generated/bomba-sillaba.json';
+import GEN_BOMBA_CATEGORIA from './generated/bomba-categoria.json';
+
+const BASE_BOMBA_SYLLABLES: string[] = [
   'STR', 'CA', 'TO', 'GLI', 'SCI', 'ZZ', 'RRO', 'PE', 'MAN', 'GNO', 'CHI', 'ORE', 'TTA', 'BRA', 'ONE', 'LLO',
   'SPA', 'TRE', 'CON', 'PIA', 'ELL', 'MO', 'FRA', 'ISS', 'ANTE', 'ZIO', 'GHE', 'NTO', 'SSA', 'CRE', 'POR', 'OLA',
   'DI', 'TRA', 'ERA', 'UNO', 'VER', 'CIA', 'ATTO', 'GIO'
 ];
 
-export const BOMBA_CATEGORIES: string[] = [
+const BASE_BOMBA_CATEGORIES: string[] = [
   'Cose che si trovano in frigo',
   'Animali con la coda',
   'Film famosi',
@@ -51,3 +54,7 @@ export const BOMBA_CATEGORIES: string[] = [
 
 /** Prime lettere per la «Catena ultima lettera» (lettere comode per l'italiano). */
 export const BOMBA_CHAIN_LETTERS = ['A', 'B', 'C', 'D', 'F', 'G', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'V'];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const BOMBA_SYLLABLES: string[] = [...BASE_BOMBA_SYLLABLES, ...(GEN_BOMBA_SILLABA as string[])];
+export const BOMBA_CATEGORIES: string[] = [...BASE_BOMBA_CATEGORIES, ...(GEN_BOMBA_CATEGORIA as string[])];

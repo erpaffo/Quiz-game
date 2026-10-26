@@ -1,0 +1,3136 @@
+{
+ "id": "banca-geografia",
+ "name": "📚 Geografia",
+ "description": "Banca domande · 234 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "capitali",
+   "name": "Paesi e capitali",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "fisica",
+   "name": "Fiumi, monti e mari",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "bandiere",
+   "name": "Bandiere",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "numeri",
+   "name": "Geografia in numeri",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "citta",
+   "name": "Città del mondo",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-9y5crj",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Uzbekistan: qual è la sua capitale?",
+   "options": [
+    "Tashkent",
+    "Amman",
+    "Islamabad",
+    "Riad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-13tm403",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Nuova Delhi?",
+   "options": [
+    "India",
+    "Bangladesh",
+    "Afghanistan",
+    "Armenia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tv3k0w",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Pakistan: qual è la sua capitale?",
+   "options": [
+    "Islamabad",
+    "Riad",
+    "Tashkent",
+    "Amman"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1jp0vg6",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Abu Dhabi?",
+   "options": [
+    "Emirati Arabi Uniti",
+    "Kirghizistan",
+    "Qatar",
+    "Turkmenistan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1vnm2gw",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Venezuela: qual è la sua capitale?",
+   "options": [
+    "Caracas",
+    "Montevideo",
+    "Quito",
+    "Asunción"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1bnwsbu",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Vaduz?",
+   "options": [
+    "Liechtenstein",
+    "Montenegro",
+    "Moldavia",
+    "Malta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-s3zlyo",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Cambogia: qual è la sua capitale?",
+   "options": [
+    "Phnom Penh",
+    "Dušanbe",
+    "Vientiane",
+    "Abu Dhabi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-kkkopf",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bangkok?",
+   "options": [
+    "Tailandia",
+    "Corea del Sud",
+    "Indonesia",
+    "Azerbaigian"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1vdprg8",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Armenia: qual è la sua capitale?",
+   "options": [
+    "Erevan",
+    "Beirut",
+    "Manila",
+    "Nuova Delhi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-165g7tn",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Nassau?",
+   "options": [
+    "Bahamas",
+    "Barbados",
+    "Trinidad e Tobago",
+    "Belize"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xpj787",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Colombia: qual è la sua capitale?",
+   "options": [
+    "Bogotà",
+    "Caracas",
+    "Montevideo",
+    "Quito"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1di1ls2",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Quito?",
+   "options": [
+    "Ecuador",
+    "Paraguay",
+    "Suriname",
+    "Uruguay"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-rrpmft",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Paraguay: qual è la sua capitale?",
+   "options": [
+    "Asunción",
+    "Quito",
+    "Paramaribo",
+    "Montevideo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1anbcso",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Paramaribo?",
+   "options": [
+    "Suriname",
+    "Paraguay",
+    "Guyana",
+    "Ecuador"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-7ralj2",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Costa Rica: qual è la sua capitale?",
+   "options": [
+    "San José",
+    "San Salvador",
+    "Santo Domingo",
+    "Belmopan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1lr2l0y",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale San Salvador?",
+   "options": [
+    "El Salvador",
+    "Costa Rica",
+    "Belize",
+    "Repubblica Dominicana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-11gjw7p",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Honduras: qual è la sua capitale?",
+   "options": [
+    "Tegucigalpa",
+    "Port-au-Prince",
+    "Kingston",
+    "Santo Domingo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-7jzk0b",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Teheran?",
+   "options": [
+    "Iran",
+    "Siria",
+    "Azerbaigian",
+    "Indonesia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-qp1tce",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Ciad: qual è la sua capitale?",
+   "options": [
+    "N’Djamena",
+    "Kigali",
+    "Maputo",
+    "Antananarivo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-kg6l4e",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Riad?",
+   "options": [
+    "Arabia Saudita",
+    "Pakistan",
+    "Uzbekistan",
+    "Giordania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-55twr3",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Serbia: qual è la sua capitale?",
+   "options": [
+    "Belgrado",
+    "Tallinn",
+    "Vilnius",
+    "Sofia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-mjbque",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Damasco?",
+   "options": [
+    "Siria",
+    "Iran",
+    "Azerbaigian",
+    "Indonesia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-14m9lmz",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Giordania: qual è la sua capitale?",
+   "options": [
+    "Amman",
+    "Tashkent",
+    "Islamabad",
+    "Riad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-woodtt",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Beirut?",
+   "options": [
+    "Libano",
+    "Armenia",
+    "Filippine",
+    "India"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ui143k",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Oman: qual è la sua capitale?",
+   "options": [
+    "Mascate",
+    "Dili",
+    "Naypyidaw",
+    "Bandar Seri Begawan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1dedgmc",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Doha?",
+   "options": [
+    "Qatar",
+    "Turkmenistan",
+    "Emirati Arabi Uniti",
+    "Kirghizistan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-hva3xa",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Bahrein: qual è la sua capitale?",
+   "options": [
+    "Manama",
+    "Thimphu",
+    "Vientiane",
+    "Bandar Seri Begawan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1mdthai",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Dili?",
+   "options": [
+    "Timor Est",
+    "Oman",
+    "Myanmar",
+    "Brunei"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-6xs71q",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Laos: qual è la sua capitale?",
+   "options": [
+    "Vientiane",
+    "Dušanbe",
+    "Phnom Penh",
+    "Thimphu"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-18fguf",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Male?",
+   "options": [
+    "Maldive",
+    "Myanmar",
+    "Oman",
+    "Timor Est"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1kkkbqi",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Kirghizistan: qual è la sua capitale?",
+   "options": [
+    "Biškek",
+    "Abu Dhabi",
+    "Doha",
+    "Aşgabat"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-hy0obk",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Dušanbe?",
+   "options": [
+    "Tagikistan",
+    "Cambogia",
+    "Laos",
+    "Emirati Arabi Uniti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1bsagw4",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Guyana: qual è la sua capitale?",
+   "options": [
+    "Georgetown",
+    "Paramaribo",
+    "Asunción",
+    "Quito"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-w15ruu",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Majuro?",
+   "options": [
+    "Isole Marshall",
+    "Tonga",
+    "Stati Federati di Micronesia",
+    "Nauru"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1sea0t9",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Corea del Nord: qual è la sua capitale?",
+   "options": [
+    "Pyongyang",
+    "Hanoi",
+    "Islamabad",
+    "Riad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1h01y1e",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Ulan Bator?",
+   "options": [
+    "Mongolia",
+    "Qatar",
+    "Turkmenistan",
+    "Uzbekistan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-fzra1c",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Turkmenistan: qual è la sua capitale?",
+   "options": [
+    "Aşgabat",
+    "Doha",
+    "Abu Dhabi",
+    "Biškek"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2pmyj2",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Tuvalu: qual è la sua capitale?",
+   "options": [
+    "Funafuti",
+    "Honiara",
+    "Port Vila",
+    "Suva"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1epup0e",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Port-au-Prince?",
+   "options": [
+    "Haiti",
+    "Honduras",
+    "Giamaica",
+    "Repubblica Dominicana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-6ajz45",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Giamaica: qual è la sua capitale?",
+   "options": [
+    "Kingston",
+    "Tegucigalpa",
+    "Port-au-Prince",
+    "Santo Domingo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-173psmw",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Santo Domingo?",
+   "options": [
+    "Repubblica Dominicana",
+    "Costa Rica",
+    "El Salvador",
+    "Haiti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ng3e7c",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Samoa: qual è la sua capitale?",
+   "options": [
+    "Apia",
+    "Port Moresby",
+    "Nukuʻalofa",
+    "Majuro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1so8hlh",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Saint John's?",
+   "options": [
+    "Antigua e Barbuda",
+    "Trinidad e Tobago",
+    "Saint Lucia",
+    "Grenada"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1k3tv1v",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Dominica: qual è la sua capitale?",
+   "options": [
+    "Roseau",
+    "Basseterre",
+    "Saint George's",
+    "Castries"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1w7zjke",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Port Moresby?",
+   "options": [
+    "Papua Nuova Guinea",
+    "Samoa",
+    "Tonga",
+    "Isole Marshall"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qoyw3c",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Myanmar: qual è la sua capitale?",
+   "options": [
+    "Naypyidaw",
+    "Mascate",
+    "Dili",
+    "Male"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xdwn85",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Port Vila?",
+   "options": [
+    "Vanuatu",
+    "Figi",
+    "Isole Salomone",
+    "Tuvalu"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1vyoydi",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Figi: qual è la sua capitale?",
+   "options": [
+    "Suva",
+    "Port Vila",
+    "Honiara",
+    "Funafuti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1a90gwn",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Nukuʻalofa?",
+   "options": [
+    "Tonga",
+    "Isole Marshall",
+    "Stati Federati di Micronesia",
+    "Nauru"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1py07lx",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Trinidad e Tobago: qual è la sua capitale?",
+   "options": [
+    "Port of Spain",
+    "Nassau",
+    "Saint John's",
+    "Bridgetown"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-criv60",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Honiara?",
+   "options": [
+    "Isole Salomone",
+    "Tuvalu",
+    "Vanuatu",
+    "Figi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-15xokfr",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Saint Kitts e Nevis: qual è la sua capitale?",
+   "options": [
+    "Basseterre",
+    "Roseau",
+    "Kingstown",
+    "Saint George's"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-cwayk2",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Kingstown?",
+   "options": [
+    "Saint Vincent e Grenadine",
+    "Saint Kitts e Nevis",
+    "Dominica",
+    "Grenada"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-l6tgtb",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Grenada: qual è la sua capitale?",
+   "options": [
+    "Saint George's",
+    "Castries",
+    "Roseau",
+    "Saint John's"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1wp6z38",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Castries?",
+   "options": [
+    "Saint Lucia",
+    "Grenada",
+    "Antigua e Barbuda",
+    "Dominica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ugynw7",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Stati Federati di Micronesia: qual è la sua capitale?",
+   "options": [
+    "Palikir",
+    "Majuro",
+    "Nukuʻalofa",
+    "Yaren"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1qj2hek",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Tarawa Sud?",
+   "options": [
+    "Kiribati",
+    "Palau",
+    "Tuvalu",
+    "Isole Salomone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10alsuw",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Palau: qual è la sua capitale?",
+   "options": [
+    "Ngerulmud",
+    "Tarawa Sud",
+    "Funafuti",
+    "Honiara"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ajtyuo",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Managua?",
+   "options": [
+    "Nicaragua",
+    "Saint Vincent e Grenadine",
+    "Saint Kitts e Nevis",
+    "Dominica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1r3e7av",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Indonesia: qual è la sua capitale?",
+   "options": [
+    "Giacarta",
+    "Baku",
+    "Damasco",
+    "Seul"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-unrvgi",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Copenaghen?",
+   "options": [
+    "Danimarca",
+    "Belgio",
+    "Irlanda",
+    "Romania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1w84b9x",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Zambia: qual è la sua capitale?",
+   "options": [
+    "Lusaka",
+    "Asmara",
+    "N’Djamena",
+    "Yaoundé"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1szbiph",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Harare?",
+   "options": [
+    "Zimbabwe",
+    "Namibia",
+    "Repubblica del Congo",
+    "Mali"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-obwchm",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Bangladesh: qual è la sua capitale?",
+   "options": [
+    "Dacca",
+    "Nuova Delhi",
+    "Kabul",
+    "Erevan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-13binta",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Manila?",
+   "options": [
+    "Filippine",
+    "Vietnam",
+    "Corea del Nord",
+    "Armenia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1jtax3d",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Vietnam: qual è la sua capitale?",
+   "options": [
+    "Hanoi",
+    "Pyongyang",
+    "Manila",
+    "Islamabad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12q8ntf",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bamako?",
+   "options": [
+    "Mali",
+    "Senegal",
+    "Zimbabwe",
+    "Namibia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1uhdgos",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Togo: qual è la sua capitale?",
+   "options": [
+    "Lomé",
+    "Conakry",
+    "Gaborone",
+    "N’Djamena"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1rbo1c2",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bangui?",
+   "options": [
+    "Repubblica Centrafricana",
+    "Capo Verde",
+    "Tanzania",
+    "Costa d'Avorio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-isnz1j",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Tanzania: qual è la sua capitale?",
+   "options": [
+    "Dodoma",
+    "Bangui",
+    "Praia",
+    "Porto-Novo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10nyktp",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Luanda?",
+   "options": [
+    "Angola",
+    "Libia",
+    "Sudan",
+    "Uganda"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-tfmasb",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Afghanistan: qual è la sua capitale?",
+   "options": [
+    "Kabul",
+    "Dacca",
+    "Nuova Delhi",
+    "Erevan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-u5kt3v",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Seul?",
+   "options": [
+    "Corea del Sud",
+    "Tailandia",
+    "Indonesia",
+    "Azerbaigian"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-o638f5",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Bhutan: qual è la sua capitale?",
+   "options": [
+    "Thimphu",
+    "Manama",
+    "Vientiane",
+    "Bandar Seri Begawan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-195cjsm",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bandar Seri Begawan?",
+   "options": [
+    "Brunei",
+    "Oman",
+    "Timor Est",
+    "Myanmar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1a9nr9x",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Paesi Bassi: qual è la sua capitale?",
+   "options": [
+    "Amsterdam",
+    "Varsavia",
+    "Tirana",
+    "Atene"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-hzn78n",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Berlino?",
+   "options": [
+    "Germania",
+    "Regno Unito",
+    "Austria",
+    "Finlandia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12g7piz",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Regno Unito: qual è la sua capitale?",
+   "options": [
+    "Londra",
+    "Berlino",
+    "Vienna",
+    "Helsinki"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1pvjyqz",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Il Cairo?",
+   "options": [
+    "Egitto",
+    "Kenya",
+    "Repubblica Democratica del Congo",
+    "Ghana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-19b9fe6",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Lituania: qual è la sua capitale?",
+   "options": [
+    "Vilnius",
+    "Belgrado",
+    "Sofia",
+    "Tallinn"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1vz2z5u",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bruxelles?",
+   "options": [
+    "Belgio",
+    "Irlanda",
+    "Romania",
+    "Danimarca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-11h5w9h",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Polonia: qual è la sua capitale?",
+   "options": [
+    "Varsavia",
+    "Atene",
+    "Amsterdam",
+    "Helsinki"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-rferxq",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Skopje?",
+   "options": [
+    "Macedonia del Nord",
+    "Moldavia",
+    "Montenegro",
+    "Cipro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-vukdbw",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Slovenia: qual è la sua capitale?",
+   "options": [
+    "Lubiana",
+    "Nicosia",
+    "Skopje",
+    "Reykjavík"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-m8clg",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Sofia?",
+   "options": [
+    "Bulgaria",
+    "Lituania",
+    "Georgia",
+    "Serbia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-o7pq61",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Georgia: qual è la sua capitale?",
+   "options": [
+    "Tbilisi",
+    "Sofia",
+    "Bratislava",
+    "Vilnius"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-16r7jwz",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Praga?",
+   "options": [
+    "Repubblica Ceca",
+    "Ungheria",
+    "Ucraina",
+    "Svezia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1mkpus5",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Uruguay: qual è la sua capitale?",
+   "options": [
+    "Montevideo",
+    "Caracas",
+    "Quito",
+    "Asunción"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1xad5h5",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Zagabria?",
+   "options": [
+    "Croazia",
+    "Bosnia ed Erzegovina",
+    "Islanda",
+    "Lettonia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-v4s2w0",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Grecia: qual è la sua capitale?",
+   "options": [
+    "Atene",
+    "Varsavia",
+    "Helsinki",
+    "Amsterdam"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-15k48gx",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale L'Avana?",
+   "options": [
+    "Cuba",
+    "Giamaica",
+    "Honduras",
+    "Haiti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-nxuwc",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Austria: qual è la sua capitale?",
+   "options": [
+    "Vienna",
+    "Helsinki",
+    "Atene",
+    "Varsavia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tqawbp",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Stoccolma?",
+   "options": [
+    "Svezia",
+    "Albania",
+    "Ucraina",
+    "Paesi Bassi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1tk12gn",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Finlandia: qual è la sua capitale?",
+   "options": [
+    "Helsinki",
+    "Vienna",
+    "Atene",
+    "Varsavia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1kcb2dh",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Dublino?",
+   "options": [
+    "Irlanda",
+    "Romania",
+    "Belgio",
+    "Bielorussia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1gh8r6p",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Islanda: qual è la sua capitale?",
+   "options": [
+    "Reykjavík",
+    "Zagabria",
+    "Sarajevo",
+    "Riga"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-19pjbkc",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Tallinn?",
+   "options": [
+    "Estonia",
+    "Serbia",
+    "Lituania",
+    "Bulgaria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ay1cbx",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Lettonia: qual è la sua capitale?",
+   "options": [
+    "Riga",
+    "Bratislava",
+    "Tbilisi",
+    "Sofia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-n2jc9l",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bratislava?",
+   "options": [
+    "Slovacchia",
+    "Georgia",
+    "Lettonia",
+    "Bulgaria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-pldc1y",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Ungheria: qual è la sua capitale?",
+   "options": [
+    "Budapest",
+    "Praga",
+    "Copenaghen",
+    "Kiev"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-eczg19",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Kiev?",
+   "options": [
+    "Ucraina",
+    "Svezia",
+    "Albania",
+    "Paesi Bassi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-9fai83",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Sudan del Sud: qual è la sua capitale?",
+   "options": [
+    "Giuba",
+    "Maseru",
+    "Victoria",
+    "Port Louis"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-huwz84",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Khartum?",
+   "options": [
+    "Sudan",
+    "Uganda",
+    "Angola",
+    "Libia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-y9j34p",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Bielorussia: qual è la sua capitale?",
+   "options": [
+    "Minsk",
+    "Belgrado",
+    "Tallinn",
+    "Vilnius"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-kye6qj",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Mogadiscio?",
+   "options": [
+    "Somalia",
+    "Repubblica del Congo",
+    "Zimbabwe",
+    "Camerun"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1fumyhk",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Belize: qual è la sua capitale?",
+   "options": [
+    "Belmopan",
+    "San Salvador",
+    "Bridgetown",
+    "San José"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-32tk0m",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Rabat?",
+   "options": [
+    "Marocco",
+    "Libia",
+    "Angola",
+    "Sudan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-3lxsta",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Libia: qual è la sua capitale?",
+   "options": [
+    "Tripoli",
+    "Luanda",
+    "Rabat",
+    "Khartum"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-z2vquu",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Addis Abeba?",
+   "options": [
+    "Etiopia",
+    "Ghana",
+    "Repubblica Democratica del Congo",
+    "Marocco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1um6td7",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Eritrea: qual è la sua capitale?",
+   "options": [
+    "Asmara",
+    "Lusaka",
+    "N’Djamena",
+    "Yaoundé"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-2atys3",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Niamey?",
+   "options": [
+    "Niger",
+    "Gambia",
+    "Liberia",
+    "Togo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1lp6l1i",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Mauritania: qual è la sua capitale?",
+   "options": [
+    "Nouakchott",
+    "Lilongwe",
+    "Yamoussoukro",
+    "Freetown"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ivrpj9",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Dakar?",
+   "options": [
+    "Senegal",
+    "Mali",
+    "Zimbabwe",
+    "Namibia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ccl2vu",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Gambia: qual è la sua capitale?",
+   "options": [
+    "Banjul",
+    "Niamey",
+    "Monrovia",
+    "Lomé"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-stnivv",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Conakry?",
+   "options": [
+    "Guinea",
+    "Togo",
+    "Botswana",
+    "Ciad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-177jaff",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Liberia: qual è la sua capitale?",
+   "options": [
+    "Monrovia",
+    "Niamey",
+    "Banjul",
+    "Lomé"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ccc5zl",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Praia?",
+   "options": [
+    "Capo Verde",
+    "Repubblica Centrafricana",
+    "Tanzania",
+    "Costa d'Avorio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-155niv8",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Ghana: qual è la sua capitale?",
+   "options": [
+    "Accra",
+    "Addis Abeba",
+    "Kinshasa",
+    "Rabat"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1pylpc9",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Yamoussoukro?",
+   "options": [
+    "Costa d'Avorio",
+    "Sierra Leone",
+    "Mauritania",
+    "Malawi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ieqaw8",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Sierra Leone: qual è la sua capitale?",
+   "options": [
+    "Freetown",
+    "Yamoussoukro",
+    "Nouakchott",
+    "Lilongwe"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-9wqx6m",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Porto-Novo?",
+   "options": [
+    "Benin",
+    "Gabon",
+    "Tanzania",
+    "Repubblica Centrafricana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-h2ercw",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Camerun: qual è la sua capitale?",
+   "options": [
+    "Yaoundé",
+    "Lusaka",
+    "Asmara",
+    "N’Djamena"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-wzp5zc",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Libreville?",
+   "options": [
+    "Gabon",
+    "Benin",
+    "Tanzania",
+    "Repubblica Centrafricana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ybuvlx",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Repubblica Democratica del Congo: qual è la sua capitale?",
+   "options": [
+    "Kinshasa",
+    "Accra",
+    "Addis Abeba",
+    "Rabat"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-8kk8z4",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Brazzaville?",
+   "options": [
+    "Repubblica del Congo",
+    "Zimbabwe",
+    "Namibia",
+    "Somalia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1eorhyc",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Cipro: qual è la sua capitale?",
+   "options": [
+    "Nicosia",
+    "Lubiana",
+    "Skopje",
+    "Chișinău"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1fw7jxx",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Kigali?",
+   "options": [
+    "Ruanda",
+    "Ciad",
+    "Mozambico",
+    "Madagascar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bvtmvd",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Kenya: qual è la sua capitale?",
+   "options": [
+    "Nairobi",
+    "Il Cairo",
+    "Kinshasa",
+    "Accra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-15fd1cf",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Lilongwe?",
+   "options": [
+    "Malawi",
+    "Mauritania",
+    "Costa d'Avorio",
+    "Sierra Leone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1clkziw",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Mozambico: qual è la sua capitale?",
+   "options": [
+    "Maputo",
+    "N’Djamena",
+    "Kigali",
+    "Antananarivo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1su17h1",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Kampala?",
+   "options": [
+    "Uganda",
+    "Sudan",
+    "Angola",
+    "Libia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-122fna4",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Comore: qual è la sua capitale?",
+   "options": [
+    "Moroni",
+    "Victoria",
+    "Giuba",
+    "Maseru"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1h5nv8p",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Maseru?",
+   "options": [
+    "Lesotho",
+    "Mauritius",
+    "Sudan del Sud",
+    "Mauritania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gun1g1",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Madagascar: qual è la sua capitale?",
+   "options": [
+    "Antananarivo",
+    "N’Djamena",
+    "Kigali",
+    "Maputo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-5x89m7",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Gaborone?",
+   "options": [
+    "Botswana",
+    "Togo",
+    "Guinea",
+    "Ciad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-fgs35s",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Mauritius: qual è la sua capitale?",
+   "options": [
+    "Port Louis",
+    "Nouakchott",
+    "Lilongwe",
+    "Yamoussoukro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-18k6kht",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Windhoek?",
+   "options": [
+    "Namibia",
+    "Zimbabwe",
+    "Repubblica del Congo",
+    "Mali"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-hftxs8",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Seychelles: qual è la sua capitale?",
+   "options": [
+    "Victoria",
+    "Giuba",
+    "Moroni",
+    "Maseru"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8cpzmf",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Baku?",
+   "options": [
+    "Azerbaigian",
+    "Indonesia",
+    "Siria",
+    "Iran"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-8bp48s",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Bosnia ed Erzegovina: qual è la sua capitale?",
+   "options": [
+    "Sarajevo",
+    "Zagabria",
+    "Reykjavík",
+    "Riga"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-2pdk1",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Bucarest?",
+   "options": [
+    "Romania",
+    "Irlanda",
+    "Belgio",
+    "Bielorussia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1cmafl",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Albania: qual è la sua capitale?",
+   "options": [
+    "Tirana",
+    "Stoccolma",
+    "Kiev",
+    "Amsterdam"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-pm3jfo",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale Chișinău?",
+   "options": [
+    "Moldavia",
+    "Montenegro",
+    "Macedonia del Nord",
+    "Liechtenstein"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-h20nun",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Montenegro: qual è la sua capitale?",
+   "options": [
+    "Podgorica",
+    "Chișinău",
+    "Vaduz",
+    "Skopje"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1e62kw4",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Di quale Stato è capitale La Valletta?",
+   "options": [
+    "Malta",
+    "Liechtenstein",
+    "Montenegro",
+    "Moldavia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1kgko5n",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Barbados: qual è la sua capitale?",
+   "options": [
+    "Bridgetown",
+    "Nassau",
+    "Belmopan",
+    "San Salvador"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-c0zpbd",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Fuji» (Giappone)?",
+   "answer": 3776,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1szpe00",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Denali (Monte McKinley)» (Stati Uniti)?",
+   "answer": 6190,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1fo247n",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Mauna Kea» (Stati Uniti)?",
+   "answer": 4207,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1jncdrf",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Saint Helens» (Stati Uniti)?",
+   "answer": 2549,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-uo77w6",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Logan» (Canada)?",
+   "answer": 5959,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-16eu1fl",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Vesuvio» (Italia)?",
+   "answer": 1281,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-95dnhg",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Cervino» (Italia / Svizzera)?",
+   "answer": 4478,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1wq7tef",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Ararat» (Turchia)?",
+   "answer": 5137,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-t3ui72",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Zugspitze» (Austria / Germania)?",
+   "answer": 2962,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-pphjou",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Ben Nevis» (Regno Unito)?",
+   "answer": 1345,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-kvcko3",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Shisha Pangma» (Cina)?",
+   "answer": 8027,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1w2dzba",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Paektu» (Cina / Corea del Nord)?",
+   "answer": 2744,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-5wnjne",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Lhotse» (Cina / Nepal)?",
+   "answer": 8516,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-zjeqts",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Makalu» (Cina / Nepal)?",
+   "answer": 8485,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-p72ige",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Cho Oyu» (Cina / Nepal)?",
+   "answer": 8188,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1i7ylhz",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Broad Peak» (Cina / Pakistan)?",
+   "answer": 8051,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-aex8a4",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Gasherbrum II» (Cina / Pakistan)?",
+   "answer": 8034,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-181p93p",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Gasherbrum I» (Cina / Pakistan)?",
+   "answer": 8080,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-11c9niw",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Tai» (Cina)?",
+   "answer": 1545,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-17lq7a4",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Kailash» (Cina)?",
+   "answer": 6638,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-szhi25",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Kenya» (Kenya)?",
+   "answer": 5199,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-14tdvk3",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Elbrus» (Russia)?",
+   "answer": 5642,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1aju0o1",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Puncak Jaya» (Indonesia)?",
+   "answer": 4884,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-ra6qjm",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Ojos del Salado» (Cile / Argentina)?",
+   "answer": 6893,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-u4jic8",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Kosciuszko» (Australia)?",
+   "answer": 2228,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-185osrm",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Montagna della Tavola» (Sudafrica)?",
+   "answer": 1085,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-xwj9u7",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Chimborazo» (Ecuador)?",
+   "answer": 6263,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-bieijz",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Monte Kinabalu» (Malaysia)?",
+   "answer": 4095,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-10zzvfx",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Kangchenjunga» (Nepal / India)?",
+   "answer": 8586,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1sm9i6e",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Dhaulagiri» (Nepal)?",
+   "answer": 8167,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-vdlfah",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Manaslu» (Nepal)?",
+   "answer": 8163,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1vn4l4",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Nanga Parbat» (Pakistan)?",
+   "answer": 8126,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-r0o7e4",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «K2» (Pakistan)?",
+   "answer": 8611,
+   "unit": "metri",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-19ey3am",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Pinatubo» (Filippine)?",
+   "answer": 1486,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-atdygc",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri è alta la montagna «Mayon» (Filippine)?",
+   "answer": 2462,
+   "unit": "metri",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bn13ew",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "In quale contea inglese si trova l'Università dell'East Anglia?",
+   "options": [
+    "Norfolk",
+    "Suffolk",
+    "Essex",
+    "Cambridgeshire"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-31ebfg",
+   "categoryId": "bandiere",
+   "type": "multiple",
+   "text": "Quale di queste nazioni del Regno Unito NON è rappresentata sulla Union Jack?",
+   "options": [
+    "Galles",
+    "Scozia",
+    "Irlanda del Nord (croce di San Patrizio)",
+    "Inghilterra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1l5jmjw",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale di questi Paesi è «doppiamente senza sbocco sul mare», cioè circondato solo da Stati a loro volta senza sbocco?",
+   "options": [
+    "Uzbekistan",
+    "Svizzera",
+    "Bolivia",
+    "Etiopia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1t050qn",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "In quale isola delle Canarie avvenne nel 1977 il peggior incidente aereo della storia, con lo scontro di due Boeing 747?",
+   "options": [
+    "Tenerife",
+    "Fuerteventura",
+    "Gran Canaria",
+    "La Palma"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ev2iw2",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "In quale provincia canadese si trova Montréal?",
+   "options": [
+    "Québec",
+    "Ontario",
+    "Nuova Scozia",
+    "Alberta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-lj4nwk",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale di queste isole NON fa parte delle Filippine?",
+   "options": [
+    "Giava",
+    "Luzon",
+    "Mindanao",
+    "Palawan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-mqlyrx",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Come si chiamava lo Stato a cui sono succeduti Serbia, Croazia, Slovenia e altri Paesi?",
+   "options": [
+    "Jugoslavia",
+    "Cecoslovacchia",
+    "Abcasia",
+    "Ossezia del Sud"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1g9m0u7",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "In quale Paese europeo ha sede l'Organizzazione Mondiale della Sanità?",
+   "options": [
+    "Svizzera",
+    "Regno Unito",
+    "Francia",
+    "Belgio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-in062u",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "I Pirenei segnano il confine tra quali due Paesi?",
+   "options": [
+    "Francia e Spagna",
+    "Italia e Svizzera",
+    "Norvegia e Svezia",
+    "Russia e Ucraina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1eomisc",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "Con quale soprannome è conosciuto il quartiere giapponese di Akihabara?",
+   "options": [
+    "Electric Town",
+    "Moon Walk River",
+    "Otaku Central",
+    "Big Eyes"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1oduhtb",
+   "categoryId": "fisica",
+   "type": "truefalse",
+   "text": "La Tasmania è uno Stato insulare dell'Australia.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1hq27tf",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Gibilterra, all'estremità meridionale della penisola iberica, è un territorio di quale Paese?",
+   "options": [
+    "Regno Unito",
+    "Spagna",
+    "Portogallo",
+    "Francia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-rzixve",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Qual è la capitale della Columbia Britannica, in Canada?",
+   "options": [
+    "Victoria",
+    "Vancouver",
+    "Hope",
+    "Kelowna"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nly629",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "In quale Paese si trova la città di Timbuctù?",
+   "options": [
+    "Mali",
+    "Azerbaigian",
+    "Bangladesh",
+    "Mauritania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1l9o7ga",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Qual è il centro amministrativo e l'insediamento più grande dell'arcipelago norvegese delle Svalbard?",
+   "options": [
+    "Longyearbyen",
+    "Sveagruva",
+    "Ny-Ålesund",
+    "Barentsburg"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-14imqii",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "Qual era il nome originario di Ho Chi Minh City, in Vietnam?",
+   "options": [
+    "Saigon",
+    "Hanoi",
+    "Dar es Salaam",
+    "Angkor Wat"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-19ddk10",
+   "categoryId": "bandiere",
+   "type": "multiple",
+   "text": "Quale di questi Stati africani ha un fucile sulla propria bandiera?",
+   "options": [
+    "Mozambico",
+    "Uganda",
+    "Etiopia",
+    "Nigeria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-mp42p4",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Qual è l'isola più grande del Canada?",
+   "options": [
+    "Isola di Baffin",
+    "Isola del Principe Edoardo",
+    "Isola di Vancouver",
+    "Terranova"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-esvqek",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fiume fu sbarrato per creare il lago Gatún e il Canale di Panama?",
+   "options": [
+    "Chagres",
+    "Tuira",
+    "Chucunaque",
+    "Chepo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1yl2r78",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "In quale isola gallese si trova il paese dal nome lunghissimo Llanfairpwllgwyngyll…?",
+   "options": [
+    "Anglesey",
+    "Barry",
+    "Bardsey",
+    "Caldey"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-13v3l0a",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Quale di questi Paesi NON faceva parte della Jugoslavia?",
+   "options": [
+    "Albania",
+    "Croazia",
+    "Serbia",
+    "Macedonia del Nord"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-13rzxi7",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Qual è la via normale più seguita per salire sul K2, ideata dagli italiani?",
+   "options": [
+    "Sperone degli Abruzzi",
+    "Magic Line",
+    "Via Cesen",
+    "Via Polacca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1sk9rq5",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "A quale Paese appartengono le isole Molucche, dette anche «isole delle Spezie»?",
+   "options": [
+    "Indonesia",
+    "Cile",
+    "Nuova Zelanda",
+    "Figi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1iv1kp6",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Quale di questi NON è un Paese africano?",
+   "options": [
+    "Guyana",
+    "Senegal",
+    "Liberia",
+    "Somalia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-10az9hy",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Qual è la capitale delle Bermuda?",
+   "options": [
+    "Hamilton",
+    "Santo Domingo",
+    "San Juan",
+    "L'Avana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1vqh2qg",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Quale di questi Paesi NON si trova nel continente asiatico?",
+   "options": [
+    "Suriname",
+    "Georgia",
+    "Russia",
+    "Singapore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-19l4l1d",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Qual è la capitale del Michigan?",
+   "options": [
+    "Lansing",
+    "Kalamazoo",
+    "Ann Arbor",
+    "Detroit"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xfat6g",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Quanti chilometri quadrati misura la Città del Vaticano?",
+   "options": [
+    "0,44",
+    "0,10",
+    "0,86",
+    "12,00"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-fh5ilq",
+   "categoryId": "numeri",
+   "type": "multiple",
+   "text": "Con quanti Paesi confina la Russia (esclusi i territori contesi)?",
+   "options": [
+    "14",
+    "12",
+    "10",
+    "8"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-l9kapb",
+   "categoryId": "citta",
+   "type": "multiple",
+   "text": "Quale di queste NON è una città dell'India?",
+   "options": [
+    "Islamabad",
+    "Hyderabad",
+    "Ahmedabad",
+    "Ghaziabad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1xy6us9",
+   "categoryId": "capitali",
+   "type": "multiple",
+   "text": "Qual è la capitale del Wisconsin (USA)?",
+   "options": [
+    "Madison",
+    "Milwaukee",
+    "Wisconsin Dells",
+    "Green Bay"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1b5wbpl",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "In quale mare sfocia il Danubio con un grande delta, riserva naturale protetta dall'UNESCO?",
+   "options": [
+    "Mar Nero",
+    "Mar Caspio",
+    "Mar Baltico",
+    "Mar Egeo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-xopwtr",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fiume forma il più grande delta del mondo, condiviso tra India e Bangladesh?",
+   "options": [
+    "Gange-Brahmaputra",
+    "Mekong",
+    "Nilo",
+    "Mississippi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-l7wety",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fiume africano attraversa la Repubblica Democratica del Congo e ha una portata seconda solo al Rio delle Amazzoni?",
+   "options": [
+    "Congo",
+    "Niger",
+    "Zambesi",
+    "Limpopo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xec8q5",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fiume è il più lungo dell'Asia, con circa 6300 km?",
+   "options": [
+    "Fiume Azzurro (Yangtze)",
+    "Fiume Giallo",
+    "Mekong",
+    "Gange"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3vzxd8",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "In quale Paese nasce il fiume Reno?",
+   "options": [
+    "Svizzera",
+    "Germania",
+    "Austria",
+    "Francia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-jvjpz4",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale grande fiume sudamericano, secondo per lunghezza dopo il Rio delle Amazzoni, sfocia nel Rio de la Plata?",
+   "options": [
+    "Paraná",
+    "Orinoco",
+    "Madeira",
+    "São Francisco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-lmy27x",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale dei Grandi Laghi nordamericani si trova interamente negli Stati Uniti?",
+   "options": [
+    "Lago Michigan",
+    "Lago Superiore",
+    "Lago Huron",
+    "Lago Erie"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-11ev9in",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Qual è il lago più grande del mondo per superficie?",
+   "options": [
+    "Mar Caspio",
+    "Lago Superiore",
+    "Lago Vittoria",
+    "Lago Bajkal"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-oz0eyu",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale grande lago africano è condiviso tra Uganda, Kenya e Tanzania?",
+   "options": [
+    "Lago Vittoria",
+    "Lago Tanganica",
+    "Lago Malawi",
+    "Lago Ciad"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1a5k2bk",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale lago prosciugato dell'Asia centrale ha perso gran parte dell'acqua dagli anni Sessanta per l'irrigazione del cotone?",
+   "options": [
+    "Lago d'Aral",
+    "Lago Balkhaš",
+    "Lago Issyk-Kul",
+    "Lago Urmia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-yai04z",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Qual è l'isola più grande del mondo (esclusi i continenti)?",
+   "options": [
+    "Groenlandia",
+    "Nuova Guinea",
+    "Borneo",
+    "Madagascar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1rz235z",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale isola è divisa tra tre Stati: Indonesia, Malaysia e Brunei?",
+   "options": [
+    "Borneo",
+    "Sumatra",
+    "Nuova Guinea",
+    "Timor"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-66d0ox",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale arcipelago appartiene all'Ecuador e fu studiato da Charles Darwin nel 1835?",
+   "options": [
+    "Galápagos",
+    "Falkland",
+    "Juan Fernández",
+    "Isole Cook"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-yeew7u",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "In quale Paese si trova il deserto del Namib, tra i più antichi del mondo?",
+   "options": [
+    "Namibia",
+    "Botswana",
+    "Sudafrica",
+    "Angola"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1m11guf",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Qual è il deserto più grande del mondo (compresi i deserti freddi)?",
+   "options": [
+    "Antartide",
+    "Sahara",
+    "Artico",
+    "Gobi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-tgzhl4",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale deserto dell'America meridionale è considerato il luogo non polare più arido della Terra?",
+   "options": [
+    "Atacama",
+    "Patagonia",
+    "Sechura",
+    "Monte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-h3z2yl",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale canale artificiale collega il Mar Mediterraneo al Mar Rosso?",
+   "options": [
+    "Canale di Suez",
+    "Canale di Panama",
+    "Canale di Corinto",
+    "Canale di Kiel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1d1l6xg",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale stretto separa l'Asia dall'America, tra Russia e Alaska?",
+   "options": [
+    "Stretto di Bering",
+    "Stretto di Magellano",
+    "Stretto di Malacca",
+    "Stretto di Hormuz"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1vk35uj",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale stretto, tra Penisola Arabica e Iran, è il punto di passaggio di gran parte del petrolio mondiale?",
+   "options": [
+    "Stretto di Hormuz",
+    "Bab el-Mandeb",
+    "Stretto dei Dardanelli",
+    "Stretto di Malacca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-pfa312",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale vulcano siciliano è il più alto vulcano attivo d'Europa?",
+   "options": [
+    "Etna",
+    "Stromboli",
+    "Vulcano",
+    "Vesuvio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-68ai69",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale eruzione del 1883 in Indonesia produsse uno dei suoni più forti mai registrati?",
+   "options": [
+    "Krakatoa",
+    "Tambora",
+    "Pinatubo",
+    "Merapi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-46j9mr",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Come si chiama la zona di intensa attività sismica e vulcanica che circonda l'Oceano Pacifico?",
+   "options": [
+    "Cintura di fuoco",
+    "Anello di Gaia",
+    "Faglia del Pacifico",
+    "Dorsale oceanica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  }
+ ]
+}

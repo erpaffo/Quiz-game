@@ -1,6 +1,7 @@
 {
-  "name": "Sapere è Potere",
-  "shortName": "SapereEPotere",
-  "appId": "it.example.sapere-e-potere",
+  "name": "Quiz del Pozzo",
+  "nameEn": "Quiz of Well",
+  "shortName": "QuizDelPozzo",
+  "appId": "it.example.quiz-del-pozzo",
   "description": "Party quiz multiplayer: uno schermo 3D sulla TV e gli smartphone come controller."
 }

@@ -1,7 +1,7 @@
 {
  "id": "base",
  "name": "Pacchetto base",
- "description": "Le domande di serie di Sapere è Potere.",
+ "description": "Le domande di serie del Quiz del Pozzo.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [

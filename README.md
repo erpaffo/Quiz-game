@@ -1,4 +1,4 @@
-# Potere è Sapere : party quiz in stile PlayLink / Buzz!
+# Quiz del Pozzo (Quiz of Well): party quiz in stile PlayLink / Buzz!
 
 Uno schermo principale 3D (TV o PC) e da 2 a **16** smartphone come controller. La serata è uno **show di giochi estratti da una ruota**, con carte potere per attaccare e difendersi, e si chiude con la finale della Piramide. Le domande si possono scrivere da soli nel **Laboratorio Domande**.
 
@@ -16,14 +16,14 @@ Dalla pagina **Releases** del repository trovi un file per ogni sistema. Non ser
 
 Gli avvisi sono normali: le firme di Microsoft e Apple sono a pagamento e l'app è gratuita e non firmata. Per giocare: il gioco si apre a schermo intero (**F11** alterna, **Esc** esce), sullo schermo compare il QR e gli amici entrano col telefono sulla stessa rete Wi-Fi. Le istruzioni complete sono nel file `build/LEGGIMI.txt`, allegato a ogni release.
 
-Il menu **Gioco** ha il Laboratorio Domande, l'apertura della cartella dei pacchetti e, su Windows con Wi-Fi, l'**hotspot (modalità bosco)** con un clic. I pacchetti personali si salvano nella cartella dati dell'utente (`%APPDATA%\SapereEPotere` su Windows) e restano anche aggiornando l'app.
+Il menu **Gioco** ha il Laboratorio Domande, l'apertura della cartella dei pacchetti e, su Windows con Wi-Fi, l'**hotspot (modalità bosco)** con un clic. I pacchetti personali si salvano nella cartella dati dell'utente (`%APPDATA%\QuizDelPozzo` su Windows) e restano anche aggiornando l'app.
 
 ### Creare gli eseguibili
 
 - **Automatico (GitHub Actions):** a ogni push il file `.github/workflows/desktop.yml` compila Windows, Mac e Linux su macchine apposite, controlla che l'app impacchettata parta (prova senza finestre) e salva i 3 file tra gli artefatti. Con un tag di versione (es. `git tag v1.0.0 && git push --tags`) crea anche la **Release** con i file da scaricare. Costa zero per i repository pubblici.
 - **Sul tuo PC:** `npm run desktop:build` crea l'eseguibile del tuo sistema nella cartella `release/`. Mac e Linux si possono creare solo sul rispettivo sistema (o con GitHub Actions).
 - `npm run desktop` prova l'app da sorgente; `npm run desktop:smoke` controlla l'app impacchettata (pagine, pacchetti, bandiere, WebSocket, salvataggio e caricamento della finestra) senza aprirla.
-- **Cambiare il nome del gioco:** modifica solo `shared/brand.json` (titoli, logo, nome dell'app e dei file si aggiornano da soli). «Potere è Sapere » è un marchio Sony: scegli un nome tuo prima di distribuire il gioco.
+- **Cambiare il nome del gioco:** modifica solo `shared/brand.json` (titoli, logo, nome dell'app e dei file si aggiornano da soli). Il nome scelto, «Quiz del Pozzo» (in inglese «Quiz of Well»), è nostro: non usare nomi di giochi di altri.
 - L'icona è provvisoria (`build/icon.png`, 1024×1024): sostituiscila con la tua.
 
 ## Avvio da sorgente (sviluppo)
@@ -52,7 +52,7 @@ Non servono né internet né un router: basta una **rete Wi-Fi locale**, che pu�
 2. Fai una **prova generale senza internet**: stacca il router (o scollega il cavo) e prova `npm run bosco`. Se funziona a casa, funzionerà anche nel bosco.
 3. Al primo avvio Windows chiede il permesso del firewall per Node.js: spunta anche le **reti pubbliche**, perché la rete dell'hotspot viene di solito classificata così. Se hai già risposto di no, apri un prompt come amministratore ed esegui:
    ```
-   netsh advfirewall firewall add rule name="Sapere e Potere" dir=in action=allow protocol=TCP localport=3000
+   netsh advfirewall firewall add rule name="Quiz del Pozzo" dir=in action=allow protocol=TCP localport=3000
    ```
 4. Porta un caricatore o un power bank: l'hotspot consuma batteria.
 
@@ -65,7 +65,7 @@ npm run bosco              # accende l'hotspot, avvia il gioco e apre lo schermo
 npm run bosco -- -Check    # verifica soltanto se il PC può creare l'hotspot (non cambia nulla)
 ```
 
-- L'hotspot di Windows si accende anche senza internet, con nome rete `SaperePotere` e una password generata al primo avvio. Entrambi restano salvati in `bosco.json`, così i telefoni si ricollegano da soli le volte successive.
+- L'hotspot di Windows si accende anche senza internet, con nome rete `QuizDelPozzo` e una password generata al primo avvio. Entrambi restano salvati in `bosco.json`, così i telefoni si ricollegano da soli le volte successive.
 - Sulla TV compaiono **due QR**: il **QR 1** collega il telefono alla rete, il **QR 2** apre il gioco.
 - Se il telefono avvisa «rete senza internet», scegli **Resta connesso**.
 - Con **Ctrl+C** si chiude il gioco e si spegne l'hotspot.

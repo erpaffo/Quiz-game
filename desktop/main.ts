@@ -3,7 +3,7 @@
 // si collegano come sempre (QR → controller.html). Nessun comando da terminale, nessun Node.js da installare.
 import { app, BrowserWindow, dialog, ipcMain, Menu, screen, shell, type MenuItemConstructorOptions } from 'electron';
 import { spawn } from 'node:child_process';
-import { copyFileSync, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { startServer, type RunningServer } from '../server/app';
 import { BRAND } from '../shared/brand';
@@ -15,6 +15,11 @@ const smokeFile = smokeArg?.slice('--smoke-test='.length);
 // La cartella dei dati dipende dal nome breve (non da quello mostrato): cambiare il nome del gioco non fa "perdere" i pacchetti.
 app.setName(BRAND.name);
 app.setPath('userData', join(app.getPath('appData'), BRAND.shortName));
+// Il gioco si chiamava «Sapere è Potere»: i pacchetti e le impostazioni di allora si spostano nella nuova cartella (una volta sola).
+const oldData = join(app.getPath('appData'), 'SapereEPotere');
+if (existsSync(oldData) && !existsSync(app.getPath('userData'))) {
+  try { renameSync(oldData, app.getPath('userData')); } catch { /* cartella in uso: si riparte da zero, i vecchi dati restano dove sono */ }
+}
 // I suoni partono senza bisogno di un clic.
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 // Linux: dentro un AppImage la sandbox di Chromium spesso non può partire (namespace utente limitati,

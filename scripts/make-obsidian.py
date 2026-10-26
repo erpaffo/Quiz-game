@@ -4,7 +4,7 @@ import os, re, sys, shutil
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'docs', 'PROGETTO.md')
 OUT = os.path.join(ROOT, 'docs', 'obsidian')
-INDEX = 'Sapere è Potere'
+INDEX = 'Quiz del Pozzo'
 
 text = open(SRC, encoding='utf8').read()
 parts = re.split(r'(?m)^## (\d+)\. (.+)$', text)
@@ -104,12 +104,12 @@ groups = [
 title_of = {n: t for n, t, _ in sections}
 lines = [
     '---', 'tags: [indice]', '---',
-    '# Sapere è Potere',
+    '# Quiz del Pozzo',
     '',
     'Documentazione del progetto: party quiz multiplayer locale con schermo 3D e smartphone come controller.',
     'Documento originale in un unico file: `docs/PROGETTO.md`. Per installare e giocare: `README.md` nella radice del progetto.',
     '',
-    '> «Sapere è Potere» è un nome provvisorio (marchio Sony). Si cambia in un solo punto: `shared/brand.json`.',
+    '> «Quiz del Pozzo» (in inglese «Quiz of Well») è il nome scelto per non usare marchi altrui. Si cambia in un solo punto: `shared/brand.json`.',
     '',
 ]
 for g, nums in groups:

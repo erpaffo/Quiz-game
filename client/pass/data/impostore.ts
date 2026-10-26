@@ -1,12 +1,15 @@
 // «L'Impostore Tascabile»: categorie con parole (variante classica + griglia dell'ultima possibilità)
 // e coppie di parole simili per la variante «Camaleonte» (l'infiltrato ha la parola gemella e non lo sa).
 
+import GEN_IMPOSTORE from './generated/impostore.json';
+import GEN_CAMALEONTE from './generated/camaleonte.json';
+
 export interface ImpostoreCategory {
   name: string;
   words: string[];
 }
 
-export const IMPOSTORE_CATEGORIES: ImpostoreCategory[] = [
+const BASE_IMPOSTORE_CATEGORIES: ImpostoreCategory[] = [
   { name: 'Luoghi', words: ['Stazione spaziale', 'Ospedale', 'Spiaggia', 'Scuola', 'Aeroporto', 'Cinema', 'Supermercato', 'Ristorante', 'Museo', 'Palestra', 'Circo', 'Biblioteca'] },
   { name: 'Cibo', words: ['Pizza', 'Sushi', 'Lasagna', 'Gelato', 'Hamburger', 'Tiramisù', 'Risotto', 'Patatine', 'Kebab', 'Cannolo', 'Minestrone', 'Popcorn'] },
   { name: 'Animali', words: ['Leone', 'Pinguino', 'Giraffa', 'Delfino', 'Gatto', 'Cavallo', 'Aquila', 'Serpente', 'Elefante', 'Coniglio', 'Squalo', 'Tartaruga'] },
@@ -25,7 +28,7 @@ export interface ChameleonPair {
   words: [string, string];
 }
 
-export const CHAMELEON_PAIRS: ChameleonPair[] = [
+const BASE_CHAMELEON_PAIRS: ChameleonPair[] = [
   { category: 'Luoghi', words: ['Spiaggia', 'Piscina'] },
   { category: 'Luoghi', words: ['Cinema', 'Teatro'] },
   { category: 'Luoghi', words: ['Ospedale', 'Farmacia'] },
@@ -79,3 +82,7 @@ export const CHAMELEON_PAIRS: ChameleonPair[] = [
   { category: 'Mestieri', words: ['Pompiere', 'Poliziotto'] },
   { category: 'Mestieri', words: ['Maestro', 'Professore'] }
 ];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const IMPOSTORE_CATEGORIES: ImpostoreCategory[] = [...BASE_IMPOSTORE_CATEGORIES, ...(GEN_IMPOSTORE as ImpostoreCategory[])];
+export const CHAMELEON_PAIRS: ChameleonPair[] = [...BASE_CHAMELEON_PAIRS, ...(GEN_CAMALEONTE as ChameleonPair[])];

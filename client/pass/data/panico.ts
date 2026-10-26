@@ -1,6 +1,8 @@
 // «5 Secondi di Panico»: sfide «Cita 3…». Facili da capire al volo, con tante risposte possibili.
 
-export const PANICO_PROMPTS: string[] = [
+import GEN_PANICO from './generated/panico.json';
+
+const BASE_PANICO_PROMPTS: string[] = [
   'Cita 3 cose che fai appena sveglio',
   'Cita 3 cattivi dei cartoni animati',
   'Cita 3 motivi per cui si litiga in macchina',
@@ -72,3 +74,6 @@ export const PANICO_PROMPTS: string[] = [
   'Cita 3 cose che fanno ridere',
   'Cita 3 modi per spostarsi in città'
 ];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const PANICO_PROMPTS: string[] = [...BASE_PANICO_PROMPTS, ...(GEN_PANICO as string[])];

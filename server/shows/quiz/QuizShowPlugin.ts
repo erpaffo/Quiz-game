@@ -13,7 +13,7 @@ export interface QuizPluginBridge {
 }
 
 /**
- * Adapter oficiale `ShowPlugin` per lo Show principale "Sapere è Potere" (`id: 'quiz'`).
+ * Adapter oficiale `ShowPlugin` per lo Show principale "Quiz del Pozzo" (`id: 'quiz'`).
  * Incapsula il ciclo di vita del Quiz con Carte e Piramide Finale all'interno del registro dell'Hub Multi-Gioco.
  */
 export class QuizShowPlugin implements ShowPlugin<PhaseData, Partial<PrivateState>, GameAction, LobbySettings> {

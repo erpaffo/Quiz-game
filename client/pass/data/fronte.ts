@@ -1,5 +1,7 @@
 // «Parola in Fronte»: parole da indovinare, ognuna con 4 parole vietate (modalità Tabù), divise in mazzi.
 
+import GEN_FRONTE from './generated/fronte.json';
+
 export type FrontePack = 'pop' | 'casa' | 'natura' | 'difficile';
 
 export interface FronteCard {
@@ -13,7 +15,7 @@ const c = (pack: FrontePack, word: string, taboo: string): FronteCard => {
   return { pack, word, taboo: [t[0], t[1], t[2], t[3]] };
 };
 
-export const FRONTE_CARDS: FronteCard[] = [
+const BASE_FRONTE_CARDS: FronteCard[] = [
   // ------------------------------------------------------------------ cultura pop
   c('pop', 'Harry Potter', 'mago, occhiali, cicatrice, Hogwarts'),
   c('pop', 'Super Mario', 'idraulico, funghi, Luigi, Nintendo'),
@@ -139,3 +141,6 @@ export const FRONTE_CARDS: FronteCard[] = [
   c('difficile', 'Clessidra', 'sabbia, tempo, vetro, girare'),
   c('difficile', 'Labirinto', 'uscita, perdersi, strade, Minotauro')
 ];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const FRONTE_CARDS: FronteCard[] = [...BASE_FRONTE_CARDS, ...(GEN_FRONTE as FronteCard[])];

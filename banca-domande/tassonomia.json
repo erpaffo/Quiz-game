@@ -1,0 +1,44 @@
+{
+  "versione": 1,
+  "nota": "Categorie UNICHE per tutta la banca domande. Si aggiungono sottocategorie qui (mai inventarle nei lotti). Gli id non si cambiano più una volta usati.",
+  "categorie": [
+    { "id": "geografia", "nome": "Geografia", "icona": "🌍", "colore": "#2a9d8f", "sottocategorie": [
+      { "id": "capitali", "nome": "Paesi e capitali" }, { "id": "fisica", "nome": "Fiumi, monti e mari" }, { "id": "italia", "nome": "Geografia d'Italia" },
+      { "id": "bandiere", "nome": "Bandiere" }, { "id": "numeri", "nome": "Geografia in numeri" }, { "id": "citta", "nome": "Città del mondo" } ] },
+    { "id": "storia", "nome": "Storia", "icona": "🏛️", "colore": "#b5838d", "sottocategorie": [
+      { "id": "antica", "nome": "Storia antica" }, { "id": "medievale", "nome": "Medioevo" }, { "id": "moderna", "nome": "Età moderna" },
+      { "id": "contemporanea", "nome": "Novecento e oggi" }, { "id": "italia", "nome": "Storia d'Italia" }, { "id": "date", "nome": "Date storiche" } ] },
+    { "id": "scienza", "nome": "Scienza", "icona": "🔬", "colore": "#4361ee", "sottocategorie": [
+      { "id": "fisica", "nome": "Fisica" }, { "id": "chimica", "nome": "Chimica" }, { "id": "biologia", "nome": "Biologia e corpo umano" },
+      { "id": "matematica", "nome": "Matematica" }, { "id": "medicina", "nome": "Medicina" }, { "id": "numeri", "nome": "Scienza in numeri" } ] },
+    { "id": "natura", "nome": "Natura & Animali", "icona": "🦁", "colore": "#43aa8b", "sottocategorie": [
+      { "id": "animali", "nome": "Animali" }, { "id": "piante", "nome": "Piante" }, { "id": "ambiente", "nome": "Ambiente e clima" } ] },
+    { "id": "spazio", "nome": "Spazio", "icona": "🚀", "colore": "#3a0ca3", "sottocategorie": [
+      { "id": "sistema-solare", "nome": "Sistema solare" }, { "id": "astronomia", "nome": "Stelle e galassie" }, { "id": "esplorazione", "nome": "Esplorazione spaziale" } ] },
+    { "id": "tecnologia", "nome": "Tecnologia", "icona": "💻", "colore": "#4cc9f0", "sottocategorie": [
+      { "id": "informatica", "nome": "Informatica" }, { "id": "invenzioni", "nome": "Invenzioni e inventori" }, { "id": "internet", "nome": "Internet e app" } ] },
+    { "id": "arte", "nome": "Arte & Letteratura", "icona": "🎨", "colore": "#9d4edd", "sottocategorie": [
+      { "id": "pittura", "nome": "Pittura" }, { "id": "architettura", "nome": "Scultura e architettura" }, { "id": "libri", "nome": "Libri e autori" },
+      { "id": "poesia", "nome": "Poesia" }, { "id": "teatro", "nome": "Teatro e opera" } ] },
+    { "id": "lingua", "nome": "Lingua & Parole", "icona": "📖", "colore": "#f77f00", "sottocategorie": [
+      { "id": "italiano", "nome": "Lingua italiana" }, { "id": "etimologia", "nome": "Etimologia" }, { "id": "parole-difficili", "nome": "Parole difficili" },
+      { "id": "modi-di-dire", "nome": "Modi di dire e proverbi" }, { "id": "lingue-straniere", "nome": "Lingue straniere" } ] },
+    { "id": "miti", "nome": "Miti & Religioni", "icona": "⚡", "colore": "#e9c46a", "sottocategorie": [
+      { "id": "greco-romani", "nome": "Mitologia greca e romana" }, { "id": "nordici", "nome": "Mitologia nordica" }, { "id": "leggende", "nome": "Leggende e fiabe" },
+      { "id": "religioni", "nome": "Religioni del mondo" } ] },
+    { "id": "cinema", "nome": "Cinema & TV", "icona": "🎬", "colore": "#e63946", "sottocategorie": [
+      { "id": "film", "nome": "Film" }, { "id": "serie", "nome": "Serie TV" }, { "id": "animazione", "nome": "Cartoni e fumetti" },
+      { "id": "personaggi", "nome": "Attori e registi" }, { "id": "tv-italiana", "nome": "TV italiana" } ] },
+    { "id": "musica", "nome": "Musica", "icona": "🎸", "colore": "#ff4d6d", "sottocategorie": [
+      { "id": "italiana", "nome": "Musica italiana" }, { "id": "internazionale", "nome": "Musica internazionale" }, { "id": "classica", "nome": "Musica classica" },
+      { "id": "strumenti", "nome": "Strumenti e teoria" } ] },
+    { "id": "sport", "nome": "Sport & Giochi", "icona": "⚽", "colore": "#06d6a0", "sottocategorie": [
+      { "id": "calcio", "nome": "Calcio" }, { "id": "olimpiadi", "nome": "Olimpiadi" }, { "id": "motori", "nome": "Motori" }, { "id": "altri-sport", "nome": "Altri sport" },
+      { "id": "videogiochi", "nome": "Videogiochi" }, { "id": "giochi-da-tavolo", "nome": "Giochi da tavolo" } ] },
+    { "id": "cibo", "nome": "Cibo & Cucina", "icona": "🍝", "colore": "#ff9f1c", "sottocategorie": [
+      { "id": "italiana", "nome": "Cucina italiana" }, { "id": "mondo", "nome": "Cucina dal mondo" }, { "id": "ingredienti", "nome": "Ingredienti" }, { "id": "bevande", "nome": "Bevande" } ] },
+    { "id": "societa", "nome": "Società & Curiosità", "icona": "🧭", "colore": "#8ecae6", "sottocategorie": [
+      { "id": "economia", "nome": "Economia e marchi" }, { "id": "istituzioni", "nome": "Politica e istituzioni" }, { "id": "curiosita", "nome": "Curiosità" },
+      { "id": "quotidiano", "nome": "Vita quotidiana" } ] }
+  ]
+}

@@ -1,5 +1,5 @@
 ﻿<#
-  Sapere e Potere - Modalita' Bosco
+  Quiz del Pozzo - Modalita' Bosco
   Accende l'hotspot Wi-Fi di Windows (anche SENZA internet), avvia il gioco e apre lo schermo principale.
   Alla chiusura (Ctrl+C) spegne l'hotspot.
 
@@ -71,14 +71,14 @@ function Get-BoscoConfig {
   # Password leggibile (niente 0/O, 1/l) da dettare facilmente agli amici.
   $chars = 'abcdefghjkmnpqrstuvwxyz23456789'.ToCharArray()
   $pass = -join (1..10 | ForEach-Object { $chars | Get-Random })
-  $cfg = [pscustomobject]@{ ssid = 'SaperePotere'; password = $pass }
+  $cfg = [pscustomobject]@{ ssid = 'QuizDelPozzo'; password = $pass }
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $ConfigFile) | Out-Null
   $cfg | ConvertTo-Json | Set-Content -Path $ConfigFile -Encoding UTF8
   return $cfg
 }
 
 Write-Host ''
-Say 'SAPERE E POTERE - Modalita Bosco (gioco senza internet)' 'Yellow'
+Say 'QUIZ DEL POZZO - Modalita Bosco (gioco senza internet)' 'Yellow'
 Write-Host ''
 
 $wifi = Get-WifiAdapter

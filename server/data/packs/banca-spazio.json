@@ -1,0 +1,839 @@
+{
+ "id": "banca-spazio",
+ "name": "📚 Spazio",
+ "description": "Banca domande · 59 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "sistema-solare",
+   "name": "Sistema solare",
+   "icon": "🚀",
+   "color": "#3a0ca3"
+  },
+  {
+   "id": "astronomia",
+   "name": "Stelle e galassie",
+   "icon": "🚀",
+   "color": "#3a0ca3"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-17regmc",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Fobos?",
+   "options": [
+    "Marte",
+    "Urano",
+    "Nettuno",
+    "Giove"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1tx2hn9",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Europa?",
+   "options": [
+    "Giove",
+    "Urano",
+    "Nettuno",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-suwcv7",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Ganimede?",
+   "options": [
+    "Giove",
+    "Marte",
+    "Saturno",
+    "Urano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1i20lew",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Deimos?",
+   "options": [
+    "Marte",
+    "Nettuno",
+    "Urano",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-xbgsdq",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Callisto?",
+   "options": [
+    "Giove",
+    "Nettuno",
+    "Marte",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ionv28",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Tritone?",
+   "options": [
+    "Nettuno",
+    "Marte",
+    "Urano",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xkili",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Encelado?",
+   "options": [
+    "Saturno",
+    "Urano",
+    "Marte",
+    "Nettuno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-16ejtf1",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Titania?",
+   "options": [
+    "Urano",
+    "Giove",
+    "Nettuno",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-bt4vz0",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Oberon?",
+   "options": [
+    "Urano",
+    "Nettuno",
+    "Giove",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-n89r9s",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Mimas?",
+   "options": [
+    "Saturno",
+    "Marte",
+    "Nettuno",
+    "Giove"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1p45b1h",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Rea?",
+   "options": [
+    "Saturno",
+    "Nettuno",
+    "Giove",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-yv4gs",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Dione?",
+   "options": [
+    "Saturno",
+    "Giove",
+    "Urano",
+    "Nettuno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ig9ibv",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Metis?",
+   "options": [
+    "Giove",
+    "Marte",
+    "Nettuno",
+    "Urano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-46u4mh",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Umbriel?",
+   "options": [
+    "Urano",
+    "Nettuno",
+    "Marte",
+    "Giove"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-9u070k",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Giapeto?",
+   "options": [
+    "Saturno",
+    "Marte",
+    "Giove",
+    "Nettuno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-vc2yoa",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Ariel?",
+   "options": [
+    "Urano",
+    "Nettuno",
+    "Saturno",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-afqvkd",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Miranda?",
+   "options": [
+    "Urano",
+    "Giove",
+    "Nettuno",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-cyh8cz",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Teti?",
+   "options": [
+    "Saturno",
+    "Nettuno",
+    "Urano",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-5wt8cm",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Adrastea?",
+   "options": [
+    "Giove",
+    "Saturno",
+    "Urano",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-xib7la",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Amaltea?",
+   "options": [
+    "Giove",
+    "Saturno",
+    "Urano",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-hdd4v1",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Tebe?",
+   "options": [
+    "Giove",
+    "Urano",
+    "Marte",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-oakos2",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Proteo?",
+   "options": [
+    "Nettuno",
+    "Marte",
+    "Saturno",
+    "Giove"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1euyhlx",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Nereide?",
+   "options": [
+    "Nettuno",
+    "Saturno",
+    "Giove",
+    "Urano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-h101y4",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Iperione?",
+   "options": [
+    "Saturno",
+    "Marte",
+    "Urano",
+    "Giove"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-cnjmp2",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Imalia?",
+   "options": [
+    "Giove",
+    "Urano",
+    "Marte",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1v5o8xe",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Galatea?",
+   "options": [
+    "Nettuno",
+    "Urano",
+    "Giove",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-x629hb",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Naiade?",
+   "options": [
+    "Nettuno",
+    "Giove",
+    "Urano",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1os7c6",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Larissa?",
+   "options": [
+    "Nettuno",
+    "Marte",
+    "Urano",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nolb79",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Ofelia?",
+   "options": [
+    "Urano",
+    "Nettuno",
+    "Giove",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1y894zr",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Despina?",
+   "options": [
+    "Nettuno",
+    "Urano",
+    "Giove",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-93r7ng",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Talassa?",
+   "options": [
+    "Nettuno",
+    "Marte",
+    "Urano",
+    "Saturno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-c6sd9q",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Puck?",
+   "options": [
+    "Urano",
+    "Giove",
+    "Nettuno",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-kkfcs",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Attorno a quale pianeta orbita il satellite naturale Cordelia?",
+   "options": [
+    "Urano",
+    "Giove",
+    "Saturno",
+    "Marte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ha0o64",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Qual è l'unico satellite del Sistema solare con un'atmosfera densa?",
+   "options": [
+    "Titano",
+    "Europa",
+    "Miranda",
+    "Callisto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1rvnpmo",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Qual è la stella più luminosa del cielo notturno, visibile dall'Italia in inverno?",
+   "options": [
+    "Sirio",
+    "Betelgeuse",
+    "Vega",
+    "Polare"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-10buyf0",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "In quale costellazione si trova la stella rossa supergigante Betelgeuse?",
+   "options": [
+    "Orione",
+    "Toro",
+    "Cigno",
+    "Scorpione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1gherq9",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale stella è il centro della costellazione dello Scorpione, rossa e chiamata «cuore dello Scorpione»?",
+   "options": [
+    "Antares",
+    "Aldebaran",
+    "Rigel",
+    "Arturo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ydu2v3",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Come si chiama la stella che indica il Nord celeste per chi osserva dall'emisfero boreale?",
+   "options": [
+    "Stella Polare",
+    "Sirio",
+    "Capella",
+    "Deneb"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-19hqzer",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale stella blu, nella costellazione di Orione, è la più luminosa tra quelle del «piede» del cacciatore?",
+   "options": [
+    "Rigel",
+    "Bellatrix",
+    "Mintaka",
+    "Saiph"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1jczs2q",
+   "categoryId": "astronomia",
+   "type": "numeric",
+   "text": "A quanti anni luce dalla Terra si trova, circa, la stella Sirio?",
+   "answer": 8.6,
+   "unit": "anni luce",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-z62tfv",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale costellazione è formata da sette stelle molto note e chiamata anche «Grande Carro»?",
+   "options": [
+    "Orsa Maggiore",
+    "Orsa Minore",
+    "Cassiopea",
+    "Cigno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1tocw4r",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale costellazione ha la forma di una «W» o di una «M» ed è circumpolare per l'Italia?",
+   "options": [
+    "Cassiopea",
+    "Cefeo",
+    "Perseo",
+    "Andromeda"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1mr08l9",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale di queste NON è una delle dodici costellazioni dello zodiaco?",
+   "options": [
+    "Orione",
+    "Ariete",
+    "Pesci",
+    "Sagittario"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1lcpjw2",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale costellazione contiene il «Triangolo estivo» insieme a Lira e Aquila?",
+   "options": [
+    "Cigno",
+    "Ercole",
+    "Pegaso",
+    "Boote"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-19mgyhk",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Come si chiama la galassia a spirale più vicina alla Via Lattea, visibile a occhio nudo?",
+   "options": [
+    "Andromeda",
+    "Triangolo",
+    "Sigaro",
+    "Girandola"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-ys62hc",
+   "categoryId": "astronomia",
+   "type": "numeric",
+   "text": "Quanti milioni di anni luce dista, circa, la galassia di Andromeda dalla Terra?",
+   "answer": 2.5,
+   "unit": "milioni di anni luce",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-eevdbs",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Come si chiama il buco nero supermassiccio al centro della Via Lattea?",
+   "options": [
+    "Sagittarius A*",
+    "Cygnus X-1",
+    "M87*",
+    "Ton 618"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ev6rz2",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale galassia ha avuto il suo buco nero fotografato per la prima volta, nel 2019?",
+   "options": [
+    "M87",
+    "Via Lattea",
+    "Andromeda",
+    "Triangolo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-temnrh",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Nel 1995 quali astronomi scoprirono il primo esopianeta attorno a una stella simile al Sole (51 Pegasi b)?",
+   "options": [
+    "Michel Mayor e Didier Queloz",
+    "Carl Sagan e Frank Drake",
+    "Edwin Hubble e Harlow Shapley",
+    "Jocelyn Bell e Antony Hewish"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1c268qb",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale telescopio spaziale, lanciato nel 2009, ha scoperto migliaia di esopianeti con il metodo dei transiti?",
+   "options": [
+    "Kepler",
+    "Hubble",
+    "James Webb",
+    "Spitzer"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-u75v0z",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Come si chiama il pianeta potenzialmente abitabile scoperto nel 2016 attorno alla stella più vicina al Sole?",
+   "options": [
+    "Proxima b",
+    "Kepler-452b",
+    "TRAPPIST-1e",
+    "Gliese 581g"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-uin86o",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Che cosa è una pulsar?",
+   "options": [
+    "Una stella di neutroni che ruota emettendo impulsi",
+    "Una galassia attiva",
+    "Un tipo di stella variabile gigante",
+    "Una nebulosa planetaria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-rjalyw",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Che cosa diventerà il Sole, tra circa cinque miliardi di anni, dopo la fase di gigante rossa?",
+   "options": [
+    "Una nana bianca",
+    "Un buco nero",
+    "Una stella di neutroni",
+    "Una supernova"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ynewat",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Come si chiama il limite di massa oltre il quale una nana bianca esplode come supernova di tipo Ia?",
+   "options": [
+    "Limite di Chandrasekhar",
+    "Limite di Roche",
+    "Limite di Eddington",
+    "Limite di Schwarzschild"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1iurjtt",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Che cosa sono i quasar?",
+   "options": [
+    "Nuclei galattici attivi molto luminosi",
+    "Stelle binarie a eclisse",
+    "Resti di supernove",
+    "Ammassi globulari"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-hub1jl",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Chi, nel 1543, pubblicò il «De revolutionibus orbium coelestium», proponendo il sistema eliocentrico?",
+   "options": [
+    "Niccolò Copernico",
+    "Tycho Brahe",
+    "Giovanni Keplero",
+    "Galileo Galilei"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1vg0a7k",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Chi scoprì nel 1610, con il telescopio, le quattro lune maggiori di Giove?",
+   "options": [
+    "Galileo Galilei",
+    "Giovanni Domenico Cassini",
+    "Christiaan Huygens",
+    "William Herschel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-aqfh2d",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Chi scoprì Urano nel 1781?",
+   "options": [
+    "William Herschel",
+    "Johann Galle",
+    "Urbain Le Verrier",
+    "Percival Lowell"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-n16c1c",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Quale telescopio spaziale, lanciato nel 2021, osserva soprattutto nell'infrarosso?",
+   "options": [
+    "James Webb",
+    "Hubble",
+    "Chandra",
+    "Gaia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  }
+ ]
+}

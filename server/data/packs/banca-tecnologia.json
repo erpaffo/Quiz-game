@@ -1,0 +1,473 @@
+{
+ "id": "banca-tecnologia",
+ "name": "📚 Tecnologia",
+ "description": "Banca domande · 33 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "informatica",
+   "name": "Informatica",
+   "icon": "💻",
+   "color": "#4cc9f0"
+  },
+  {
+   "id": "invenzioni",
+   "name": "Invenzioni e inventori",
+   "icon": "💻",
+   "color": "#4cc9f0"
+  },
+  {
+   "id": "internet",
+   "name": "Internet e app",
+   "icon": "💻",
+   "color": "#4cc9f0"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-11sfnz4",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Che cosa significa la sigla LCD nei monitor e nei televisori?",
+   "options": [
+    "Liquid Crystal Display (schermo a cristalli liquidi)",
+    "Language Control Design",
+    "Last Common Difference",
+    "Long Continuous Design"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-qbrwgj",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quale di questi è stato creato da Linus Torvalds?",
+   "options": [
+    "Linux",
+    "Microsoft Windows",
+    "Python",
+    "Wikipedia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ou7dhu",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Che cosa significa CLI, la sigla dell'interfaccia usata nel terminale?",
+   "options": [
+    "Command Line Interface (riga di comando)",
+    "Common Language Input",
+    "Control Line Interface",
+    "Common Language Interface"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1b8zznx",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Apple è nata in California: in quale stato degli USA fu fondata Microsoft nel 1975?",
+   "options": [
+    "Nuovo Messico",
+    "Washington",
+    "Colorado",
+    "Arizona"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-17sw7a8",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Che cosa significa la sigla MIME, usata per gli allegati e-mail?",
+   "options": [
+    "Multipurpose Internet Mail Extensions",
+    "Mail Internet Mail Exchange",
+    "Multipurpose Interleave Mail Exchange",
+    "Mail Interleave Method Exchange"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-r6reeq",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Su quale componente del computer si trova il chip BIOS?",
+   "options": [
+    "Scheda madre",
+    "Disco rigido",
+    "Processore (CPU)",
+    "Scheda grafica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-sn3qva",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Qual è il motto, di cinque lettere, dell'azienda IBM?",
+   "options": [
+    "Think",
+    "Click",
+    "Logic",
+    "Pixel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-k7ezv4",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Nei sistemi Windows Server, che cosa indica la sigla AD?",
+   "options": [
+    "Active Directory",
+    "Alternative Drive",
+    "Automated Database",
+    "Active Department"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gua2r",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "In quale città della Silicon Valley ha sede Nvidia?",
+   "options": [
+    "Santa Clara",
+    "Palo Alto",
+    "Cupertino",
+    "Mountain View"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-m7hnfe",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quale linguaggio di programmazione fu sviluppato da Sun Microsystems e presentato nel 1995?",
+   "options": [
+    "Java",
+    "Python",
+    "Solaris",
+    "C++"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1qm8l3l",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quanti tasti ha una tastiera standard americana (layout ANSI) per PC Windows?",
+   "options": [
+    "104",
+    "64",
+    "94",
+    "76"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-17k8ype",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quale di questi programmi NON è un editor di grafica raster, ma vettoriale?",
+   "options": [
+    "Inkscape",
+    "Paint.NET",
+    "GIMP",
+    "Adobe Photoshop"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-16k9sje",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Che cosa significa HP nel nome dell'azienda tecnologica?",
+   "options": [
+    "Hewlett-Packard",
+    "Howard Packmann",
+    "Husker-Pollosk",
+    "Hellman-Pohl"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1etvxue",
+   "categoryId": "informatica",
+   "type": "truefalse",
+   "text": "I computer Raspberry Pi sono stati creati negli Stati Uniti.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-gww4kg",
+   "categoryId": "informatica",
+   "type": "truefalse",
+   "text": "Per aggirare le leggi USA sull'esportazione di armi, il creatore di PGP pubblicò il codice sorgente in forma di libro.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ryhi58",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Da quale momento l'Unix Time conta i secondi trascorsi?",
+   "options": [
+    "Mezzanotte del 1° gennaio 1970",
+    "Mezzanotte del 4 luglio 1976",
+    "Mezzanotte del compleanno del creatore di Unix",
+    "Mezzanotte del 4 luglio 1980"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1gf5xc2",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Che cosa significa DOS nel nome del primo sistema operativo Microsoft, MS-DOS?",
+   "options": [
+    "Disk Operating System",
+    "Dumb Operating System",
+    "Driver Oriented System",
+    "Diskless Operating System"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-7v0hqa",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Il dominio internet .at appartiene a quale paese?",
+   "options": [
+    "Austria",
+    "Argentina",
+    "Australia",
+    "Angola"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-tz2aom",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Il dominio internet .fm appartiene a quale Stato insulare dell'Oceano Pacifico?",
+   "options": [
+    "Micronesia",
+    "Figi",
+    "Tuvalu",
+    "Isole Marshall"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-114u03",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Quale protocollo di Internet è descritto dalla RFC 1459?",
+   "options": [
+    "IRC",
+    "HTTP",
+    "HTTPS",
+    "FTP"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-15dc3tu",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Quale di questi NON è uno strato del modello OSI per le comunicazioni di dati?",
+   "options": [
+    "Strato di connessione",
+    "Strato applicazione",
+    "Strato di trasporto",
+    "Strato fisico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ork95b",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "A quanti Hz funziona lo standard video PAL?",
+   "options": [
+    "50",
+    "59",
+    "60",
+    "25"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1fn6wbw",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Come si chiama il grave difetto scoperto nell'aprile 2014 nella libreria crittografica OpenSSL?",
+   "options": [
+    "Heartbleed",
+    "Shellshock",
+    "Corrupted Blood",
+    "Shellscript"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1qw2z15",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale di questi computer è uscito per primo?",
+   "options": [
+    "TRS-80",
+    "Commodore 64",
+    "ZX Spectrum",
+    "Apple III"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-idge7o",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Come si chiama la vulnerabilità di sicurezza scoperta nella shell Bash nel 2014?",
+   "options": [
+    "Shellshock",
+    "Heartbleed",
+    "Bashbug",
+    "Stagefright"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ln81vo",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Come si chiama il livello 4 del modello OSI (ISO)?",
+   "options": [
+    "Trasporto",
+    "Sessione",
+    "Collegamento dati",
+    "Rete"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1y2tg54",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quale linguaggio di programmazione è alla base di Unreal Engine 4?",
+   "options": [
+    "C++",
+    "Assembly",
+    "C sharp (C#)",
+    "ECMAScript"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-9uhuel",
+   "categoryId": "internet",
+   "type": "truefalse",
+   "text": "La sigla DHCP significa Dynamic Host Configuration Port.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10lazw7",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quale tipo di RAID è associato alla copia speculare (mirroring) dei dati?",
+   "options": [
+    "RAID 1",
+    "RAID 0",
+    "RAID 6",
+    "RAID 5"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xehqt7",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Qual è il nome in codice della microarchitettura Intel Core di ottava generazione, lanciata nell'ottobre 2017?",
+   "options": [
+    "Coffee Lake",
+    "Sandy Bridge",
+    "Skylake",
+    "Broadwell"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-z3xeau",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "Quale di questi NON è un algoritmo di ordinamento noto in informatica?",
+   "options": [
+    "Float Sort",
+    "Bubble Sort",
+    "Merge Sort",
+    "Quick Sort"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-15b1eg3",
+   "categoryId": "internet",
+   "type": "multiple",
+   "text": "Chi inventò lo Spanning Tree Protocol per le reti Ethernet?",
+   "options": [
+    "Radia Perlman",
+    "Paul Vixie",
+    "Vint Cerf",
+    "Michael Roberts"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gyobla",
+   "categoryId": "informatica",
+   "type": "multiple",
+   "text": "A quale struttura dati si applica il principio FILO (first in, last out)?",
+   "options": [
+    "Pila (stack)",
+    "Coda (queue)",
+    "Heap",
+    "Albero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  }
+ ]
+}

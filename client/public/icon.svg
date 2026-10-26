@@ -5,17 +5,21 @@
       <stop offset="50%" stop-color="#2b0f6b"/>
       <stop offset="100%" stop-color="#14063a"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff38f"/>
-      <stop offset="100%" stop-color="#ffd60a"/>
-    </linearGradient>
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="196" fill="none" stroke="#ff4d6d" stroke-width="14" stroke-dasharray="28 18" opacity="0.65"/>
-  <path d="M116 336 L146 184 L214 252 L256 144 L298 252 L366 184 L396 336 Z" fill="url(#gold)" stroke="#14063a" stroke-width="14" stroke-linejoin="round"/>
-  <rect x="126" y="352" width="260" height="36" rx="16" fill="#ff4d6d" stroke="#14063a" stroke-width="10"/>
-  <circle cx="146" cy="166" r="18" fill="#4cc9f0"/>
-  <circle cx="256" cy="122" r="22" fill="#ff4d6d"/>
-  <circle cx="366" cy="166" r="18" fill="#7bd389"/>
+  <!-- tetto -->
+  <path d="M116 206 L256 108 L396 206 Z" fill="#ff4d6d" stroke="#14063a" stroke-width="12" stroke-linejoin="round"/>
+  <!-- pali, corda e secchio -->
+  <rect x="146" y="200" width="22" height="120" fill="#c9a66b" stroke="#14063a" stroke-width="8"/>
+  <rect x="344" y="200" width="22" height="120" fill="#c9a66b" stroke="#14063a" stroke-width="8"/>
+  <rect x="150" y="226" width="212" height="14" rx="7" fill="#ffd60a" stroke="#14063a" stroke-width="6"/>
+  <line x1="256" y1="240" x2="256" y2="292" stroke="#14063a" stroke-width="8"/>
+  <rect x="236" y="288" width="40" height="34" rx="8" fill="#4cc9f0" stroke="#14063a" stroke-width="8"/>
+  <!-- bocca e muro del pozzo -->
+  <path d="M126 330 H386 V412 Q386 440 358 440 H154 Q126 440 126 412 Z" fill="#9aa5c4" stroke="#14063a" stroke-width="12" stroke-linejoin="round"/>
+  <ellipse cx="256" cy="330" rx="130" ry="34" fill="#14063a" stroke="#14063a" stroke-width="12"/>
+  <ellipse cx="256" cy="332" rx="96" ry="20" fill="#4cc9f0" opacity="0.85"/>
+  <path d="M166 372 H214 M246 372 H298 M298 404 H350 M162 404 H212 M236 404 H274" stroke="#14063a" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+  <!-- punto interrogativo -->
+  <text x="256" y="196" font-family="Arial Black, Arial, sans-serif" font-size="64" font-weight="900" text-anchor="middle" fill="#ffd60a" stroke="#14063a" stroke-width="6" paint-order="stroke">?</text>
 </svg>
-

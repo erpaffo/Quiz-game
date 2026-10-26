@@ -1,0 +1,328 @@
+{
+ "id": "banca-arte",
+ "name": "📚 Arte & Letteratura",
+ "description": "Banca domande · 25 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "libri",
+   "name": "Libri e autori",
+   "icon": "🎨",
+   "color": "#9d4edd"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-1ph053",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale scrittore russo è l'autore del romanzo satirico e fantastico «Il Maestro e Margherita», ambientato tra la Mosca degli anni Trenta e la Gerusalemme di Ponzio Pilato?",
+   "options": [
+    "Michail Bulgakov",
+    "Boris Pasternak",
+    "Maksim Gor'kij",
+    "Ivan Bunin"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-s0nz6k",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Nel romanzo «Le anime morte» (1842) di Nikolaj Gogol', come si chiama l'astuto protagonista che viaggia nella provincia russa comprando i nomi dei servi della gleba defunti?",
+   "options": [
+    "Pavel Ivanovič Čičikov",
+    "Rodion Romanovič Raskol'nikov",
+    "Evgenij Onegin",
+    "Il'ja Il'ič Oblomov"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1goyj6c",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Qual è il nome del giovane e ambizioso protagonista de «Il rosso e il nero» (1830), capolavoro dello scrittore francese Stendhal?",
+   "options": [
+    "Julien Sorel",
+    "Fabrizio del Dongo",
+    "Eugène de Rastignac",
+    "Lucien de Rubempré"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-komvuf",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale romanzo del 1885 di Émile Zola, parte del ciclo dei «Rougon-Macquart», racconta le durissime condizioni di vita e lo sciopero dei minatori di carbone nel nord della Francia?",
+   "options": [
+    "Germinal",
+    "L'Assommoir",
+    "Nanà",
+    "La bestia umana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-mhqgaa",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale autore statunitense narrò in «Furore» («The Grapes of Wrath», 1939) l'esodo della famiglia Joad dall'Oklahoma alla California durante la Grande Depressione?",
+   "options": [
+    "John Steinbeck",
+    "Ernest Hemingway",
+    "John Dos Passos",
+    "Sinclair Lewis"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-guj6li",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Da quale tragedia di William Shakespeare è tratta la citazione che dà il titolo al romanzo «L'urlo e il furore» (1929) di William Faulkner?",
+   "options": [
+    "Macbeth",
+    "Amleto",
+    "Re Lear",
+    "Otello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-16crdvs",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Come si chiama il giovane ufficiale protagonista del romanzo «Il deserto dei Tartari» (1940) di Dino Buzzati, che trascorre la vita in attesa del nemico nella Fortezza Bastiani?",
+   "options": [
+    "Giovanni Drogo",
+    "Pietro Angustina",
+    "Simeoni",
+    "Amerigo Ormea"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-125nehc",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Di quale trilogia allegorica di Italo Calvino fa parte il romanzo «Il barone rampante» (1957), insieme a «Il visconte dimezzato» e «Il cavaliere inesistente»?",
+   "options": [
+    "I nostri antenati",
+    "Le cosmicomiche",
+    "Marcovaldo",
+    "Gli amori difficili"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-f0l0cr",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale scrittrice sarda, autrice di «Canne al vento», ricevette il Premio Nobel per la letteratura nel 1926, unica donna italiana a vincerlo?",
+   "options": [
+    "Grazia Deledda",
+    "Matilde Serao",
+    "Sibilla Aleramo",
+    "Ada Negri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ppcztr",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale poeta siciliano, esponente dell'Ermetismo e autore della raccolta «Acque e terre», fu insignito del Premio Nobel per la letteratura nel 1959?",
+   "options": [
+    "Salvatore Quasimodo",
+    "Giuseppe Ungaretti",
+    "Alfonso Gatto",
+    "Mario Luzi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bk8l2m",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale scrittore argentino è l'autore della celebre raccolta di racconti «Finzioni» («Ficciones», 1944), che include «La biblioteca di Babele»?",
+   "options": [
+    "Jorge Luis Borges",
+    "Julio Cortázar",
+    "Adolfo Bioy Casares",
+    "Ernesto Sabato"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-hn7mzf",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Chi scrisse il romanzo breve «Pedro Páramo» (1955), ambientato nel villaggio fantasma di Comala e considerato un precursore del realismo magico latinoamericano?",
+   "options": [
+    "Juan Rulfo",
+    "Carlos Fuentes",
+    "Octavio Paz",
+    "Miguel Ángel Asturias"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1p9iu6k",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale scrittore cileno è l'autore del romanzo «I detective selvaggi» (1998) e del monumentale «2666», pubblicato postumo nel 2004?",
+   "options": [
+    "Roberto Bolaño",
+    "José Donoso",
+    "Luis Sepúlveda",
+    "Antonio Skármeta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-w23ibb",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale scrittore latino del II secolo d.C. compose «Le metamorfosi» (note anche come «L'asino d'oro»), unico romanzo latino giunto fino a noi per intero?",
+   "options": [
+    "Apuleio",
+    "Petronio",
+    "Luciano di Samosata",
+    "Marziale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-19hl348",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "A quale tragediografo greco del V secolo a.C. si deve l'«Orestea» («Agamennone», «Coefore», «Eumenidi»), l'unica trilogia tragica greca giunta integra?",
+   "options": [
+    "Eschilo",
+    "Sofocle",
+    "Euripide",
+    "Aristofane"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pe6yq3",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Quale autrice svedese creò nel 1945 il celebre personaggio per ragazzi di «Pippi Calzelunghe» («Pippi Långstrump»)?",
+   "options": [
+    "Astrid Lindgren",
+    "Selma Lagerlöf",
+    "Tove Jansson",
+    "Maria Gripe"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-haj18h",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Chi è l'autrice del classico per ragazzi «Il giardino segreto» («The Secret Garden», 1911), che ha per protagonista la giovane orfana Mary Lennox?",
+   "options": [
+    "Frances Hodgson Burnett",
+    "Louisa May Alcott",
+    "Lucy Maud Montgomery",
+    "Edith Nesbit"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1uc8nrg",
+   "categoryId": "libri",
+   "type": "multiple",
+   "text": "Nel romanzo «Il grande Gatsby» (1925) di Francis Scott Fitzgerald, come si chiama il narratore che affitta una casa a West Egg accanto alla villa di Jay Gatsby?",
+   "options": [
+    "Nick Carraway",
+    "Tom Buchanan",
+    "Dick Diver",
+    "Amory Blaine"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-gw06w1",
+   "categoryId": "libri",
+   "type": "truefalse",
+   "text": "Il romanzo «Il Gattopardo» di Giuseppe Tomasi di Lampedusa fu pubblicato postumo nel 1958, dopo la scomparsa dell'autore avvenuta l'anno precedente.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-kmbo1q",
+   "categoryId": "libri",
+   "type": "truefalse",
+   "text": "Il celebre episodio della «Cena di Trimalcione» appartiene al romanzo satirico latino «Satyricon», attribuito a Petronio Arbitro.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1hwfiic",
+   "categoryId": "libri",
+   "type": "truefalse",
+   "text": "Il romanzo realista «Madame Bovary» (1857) fu scritto dal romanziere francese Honoré de Balzac come parte della «Commedia umana».",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-15gm8mv",
+   "categoryId": "libri",
+   "type": "truefalse",
+   "text": "Ne «I fratelli Karamazov» di Fëdor Dostoevskij, il celebre poema filosofico del «Grande Inquisitore» è raccontato da Ivan al fratello minore Alëša.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-12gfrls",
+   "categoryId": "libri",
+   "type": "numeric",
+   "text": "Di quanti libri si compone il romanzo latino «Le metamorfosi» (o «L'asino d'oro») di Apuleio?",
+   "answer": 11,
+   "unit": "libri",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-bm773n",
+   "categoryId": "libri",
+   "type": "numeric",
+   "text": "In che anno fu stampata per la prima volta nel dopoguerra (presso l'editore De Silva) l'opera testimoniale «Se questo è un uomo» di Primo Levi?",
+   "answer": 1947,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-wr1uld",
+   "categoryId": "libri",
+   "type": "numeric",
+   "text": "In che anno il drammaturgo italiano Dario Fo ricevette il Premio Nobel per la letteratura?",
+   "answer": 1997,
+   "unit": "anno",
+   "difficulty": 2
+  }
+ ]
+}

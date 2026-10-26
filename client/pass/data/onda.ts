@@ -1,5 +1,7 @@
 // «Lunghezza d'Onda»: coppie di opposti. Il bersaglio sta da qualche parte tra sinistra (0) e destra (100).
 
+import GEN_ONDA from './generated/onda.json';
+
 export interface Spectrum {
   left: string;
   right: string;
@@ -7,7 +9,7 @@ export interface Spectrum {
 
 const s = (left: string, right: string): Spectrum => ({ left, right });
 
-export const ONDA_SPECTRA: Spectrum[] = [
+const BASE_ONDA_SPECTRA: Spectrum[] = [
   s('🥶 Cibo triste', 'Cibo che rende felici 🤩'),
   s('📉 Inutile', 'Indispensabile 📈'),
   s('👼 Da santo', 'Da criminale 😈'),
@@ -59,3 +61,6 @@ export const ONDA_SPECTRA: Spectrum[] = [
   s('📦 Si può fare da soli', 'Serve un gruppo 👨‍👩‍👧‍👦'),
   s('🤏 Peccato veniale', 'Peccato mortale 🔥')
 ];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const ONDA_SPECTRA: Spectrum[] = [...BASE_ONDA_SPECTRA, ...(GEN_ONDA as Spectrum[])];

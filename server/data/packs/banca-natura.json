@@ -1,0 +1,669 @@
+{
+ "id": "banca-natura",
+ "name": "📚 Natura & Animali",
+ "description": "Banca domande · 50 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "animali",
+   "name": "Animali",
+   "icon": "🦁",
+   "color": "#43aa8b"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-qwrgin",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Che tipo di animale è il «natterjack»?",
+   "options": [
+    "Un rospo (rospo calamita)",
+    "Un uccello",
+    "Un pesce",
+    "Un insetto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-p5qqg9",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "La tigre ha la pelle di un solo colore, nonostante il pelo a strisce.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xvuw3m",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Di che sostanza sono fatte le squame dei serpenti e della maggior parte delle lucertole?",
+   "options": [
+    "Cheratina",
+    "Ecdisi",
+    "Epidermide",
+    "Anchiloglossia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1sgvf9k",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "Le spugne marine possono avere un cuore.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1unf11f",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "A quale famiglia appartiene il gatto domestico?",
+   "options": [
+    "Felidi (Felidae)",
+    "Felini (Felinae)",
+    "Felis",
+    "Gatti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-ei13k4",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "L'echidna è un monotremo.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1a6wym2",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "In quale regione era diffuso il tilacino, oggi estinto?",
+   "options": [
+    "Tasmania, Australia",
+    "Belucistan, Pakistan",
+    "Valacchia, Romania",
+    "Oregon, Stati Uniti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-13rbnov",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale razza di cane prende il nome da una regione della Croazia?",
+   "options": [
+    "Dalmata",
+    "Pechinese",
+    "Chihuahua",
+    "Volpino di Pomerania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-15x57zc",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "Dal numero di puntini sul dorso si capisce l'età di una coccinella.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-104qtp3",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è il serpente velenoso più lungo del mondo?",
+   "options": [
+    "Cobra reale",
+    "Anaconda verde",
+    "Taipan dell'entroterra",
+    "Serpente marino dal ventre giallo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-2ndyqf",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "Il cane da pastore lappone finlandese (Lapphund) era usato per radunare le renne.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-13j1meb",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "Le lontre hanno delle tasche sotto le ascelle per tenere i sassi e gli spuntini preferiti.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-50zyjx",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è la durata media della vita di un coniglio domestico?",
+   "options": [
+    "8-12 anni",
+    "1-2 anni",
+    "4-7 anni",
+    "14-20 anni"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-mjghqe",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Di che colore è la pelle dell'orso polare?",
+   "options": [
+    "Nera",
+    "Bianca",
+    "Rosa",
+    "Verde"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-6oxk3k",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Il cachemire è la lana di quale animale?",
+   "options": [
+    "Capra",
+    "Pecora",
+    "Cammello",
+    "Lama"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-i8kx2t",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è il nome scientifico dello scimpanzé comune?",
+   "options": [
+    "Pan troglodytes",
+    "Gorilla gorilla",
+    "Pan paniscus",
+    "Panthera leo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-170xjrx",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "Un polpo riesce a passare attraverso qualunque foro più largo del suo becco.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-8d3pg4",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Come si chiama il maschio dell'ape che nasce da un uovo non fecondato?",
+   "options": [
+    "Fuco",
+    "Soldato",
+    "Operaia",
+    "Maschio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-5vonah",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale di queste specie NON è estinta?",
+   "options": [
+    "Drago di Komodo",
+    "Leone marino giapponese",
+    "Tilacino",
+    "Gazzella saudita"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1u5rn12",
+   "categoryId": "animali",
+   "type": "truefalse",
+   "text": "Il Ceratosaurus, dinosauro con un corno sul naso, era un discendente del Tyrannosaurus rex.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-11vrmyx",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale di questi serpenti NON è velenoso?",
+   "options": [
+    "Pitone reticolato",
+    "Krait malese",
+    "Serpente marino dal ventre giallo",
+    "Mamba nero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-w9koyh",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Un animale carnivoro mangia carne: di che cosa si nutre un animale nucivoro?",
+   "options": [
+    "Noci",
+    "Nulla",
+    "Frutta",
+    "Alghe"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-18r0oxw",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Il fugu, piatto giapponese, si prepara con quale tipo di pesce?",
+   "options": [
+    "Pesce palla",
+    "Spigola",
+    "Salmone",
+    "Sgombro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zc5ass",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Come si chiama la proteina contenente rame che dà il sangue blu ai polpi?",
+   "options": [
+    "Emocianina",
+    "Citocromo",
+    "Ferro",
+    "Metionina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-17pwdo1",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è il nome scientifico del ghepardo?",
+   "options": [
+    "Acinonyx jubatus",
+    "Panthera onca",
+    "Lynx rufus",
+    "Felis catus"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-83rc2s",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "A differenza della maggior parte delle salamandre, quale parte del corpo dei tritoni è appiattita?",
+   "options": [
+    "La coda",
+    "La testa",
+    "I denti",
+    "Le zampe"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bpgbyc",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale di questi non è una medusa, ma una colonia di polipi?",
+   "options": [
+    "Caravella portoghese",
+    "Vespa di mare",
+    "Irukandji",
+    "Ortica di mare"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-cs0cl1",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Che animale è la «mountain chicken» (pollo di montagna)?",
+   "options": [
+    "Una rana",
+    "Un pollo",
+    "Un cavallo",
+    "Una mosca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ks3cz0",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "A quale phylum appartengono tutti i mammiferi, gli uccelli e i rettili?",
+   "options": [
+    "Cordati",
+    "Echinodermi",
+    "Anellidi",
+    "Placozoi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-120s9h7",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "A quale famiglia appartiene il protelo (Proteles cristata)?",
+   "options": [
+    "Iene (Hyaenidae)",
+    "Canidi",
+    "Felidi",
+    "Eupleridi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-s3bxju",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "La malattia del deperimento cronico (CWD) colpisce solo membri di quale famiglia di animali?",
+   "options": [
+    "Cervidi",
+    "Ominidi",
+    "Felidi",
+    "Canidi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-vwlgxs",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quante specie viventi di iene esistono?",
+   "options": [
+    "4",
+    "8",
+    "2",
+    "6"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-lcocxo",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Che animale è il bonobo?",
+   "options": [
+    "Una scimmia antropomorfa",
+    "Un leone",
+    "Un pappagallo",
+    "Un gatto selvatico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-e3254",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale di questi animali NON è una lucertola?",
+   "options": [
+    "Tuatara",
+    "Drago di Komodo",
+    "Mostro di Gila",
+    "Iguana verde"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-15pjpvg",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale uccello nasce con artigli sulle dita delle ali?",
+   "options": [
+    "Hoatzin",
+    "Cormorano",
+    "Casuario",
+    "Serpentario"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-nknoam",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è l'uccello più veloce del mondo in picchiata?",
+   "options": [
+    "Falco pellegrino",
+    "Aquila reale",
+    "Martin pescatore",
+    "Rondone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-17j2vzz",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è il mammifero terrestre più lento, famoso per muoversi appeso ai rami?",
+   "options": [
+    "Bradipo",
+    "Koala",
+    "Pangolino",
+    "Armadillo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-15ri758",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è il più grande rettile vivente?",
+   "options": [
+    "Coccodrillo marino",
+    "Drago di Komodo",
+    "Anaconda",
+    "Tartaruga liuto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-4wd3je",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Qual è l'unico mammifero capace di volo attivo?",
+   "options": [
+    "Pipistrello",
+    "Scoiattolo volante",
+    "Colugo",
+    "Petauro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-a2w2ej",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "A quale gruppo appartengono le rane e le salamandre?",
+   "options": [
+    "Anfibi",
+    "Rettili",
+    "Pesci",
+    "Mammiferi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1o5sncm",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "A quale ordine appartengono canguri e koala?",
+   "options": [
+    "Marsupiali",
+    "Monotremi",
+    "Roditori",
+    "Primati"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-gyz2cf",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale animale è l'unico mammifero a deporre uova insieme all'echidna?",
+   "options": [
+    "Ornitorinco",
+    "Pangolino",
+    "Oritteropo",
+    "Formichiere"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1e9tj7k",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale animale è noto per la sua danza per comunicare la posizione dei fiori alle compagne?",
+   "options": [
+    "Ape",
+    "Formica",
+    "Farfalla",
+    "Vespa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-7w25cg",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale uccello migra ogni anno dall'Artico all'Antartide, percorrendo la distanza più lunga di ogni altro animale?",
+   "options": [
+    "Sterna codalunga (artica)",
+    "Albatro urlatore",
+    "Rondine",
+    "Cicogna bianca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-13qzvk",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale sottospecie di orso, endemica dell'Appennino centrale, è il simbolo del Parco Nazionale d'Abruzzo?",
+   "options": [
+    "Orso bruno marsicano",
+    "Orso bruno europeo",
+    "Orso polare",
+    "Orso nero americano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ywouzo",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale mammifero caprino dalle grandi corna ricurve vive sulle Alpi e fu salvato dall'estinzione nel Parco del Gran Paradiso?",
+   "options": [
+    "Stambecco",
+    "Camoscio",
+    "Muflone",
+    "Capriolo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-de3nyu",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale grande avvoltoio delle Alpi, reintrodotto con successo, si nutre soprattutto di ossa?",
+   "options": [
+    "Gipeto",
+    "Grifone",
+    "Aquila reale",
+    "Nibbio reale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-fj2ysb",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale grande squalo gigante estinto viveva nei mari del Miocene ed era lungo oltre 15 metri?",
+   "options": [
+    "Megalodonte",
+    "Squalo bianco",
+    "Mosasauro",
+    "Dunkleosteus"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-blnt1t",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale uccello inetto al volo dell'isola di Mauritius si estinse nel XVII secolo?",
+   "options": [
+    "Dodo",
+    "Moa",
+    "Kakapo",
+    "Gallinella sultana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1qua189",
+   "categoryId": "animali",
+   "type": "multiple",
+   "text": "Quale grande mammifero della Siberia, coperto di lunghi peli, si estinse circa 4000 anni fa?",
+   "options": [
+    "Mammut lanoso",
+    "Rinoceronte lanoso",
+    "Megaloceros",
+    "Mastodonte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  }
+ ]
+}

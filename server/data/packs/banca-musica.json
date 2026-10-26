@@ -1,0 +1,286 @@
+{
+ "id": "banca-musica",
+ "name": "📚 Musica",
+ "description": "Banca domande · 22 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "italiana",
+   "name": "Musica italiana",
+   "icon": "🎸",
+   "color": "#ff4d6d"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-6o59jg",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Con quale cantante franco-italiana Luigi Tenco presentò in coppia il brano «Ciao amore, ciao» al Festival di Sanremo del 1967?",
+   "options": [
+    "Dalida",
+    "Caterina Caselli",
+    "Patty Pravo",
+    "Ornella Vanoni"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-j6m36k",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale cantautore calabrese incise nel 1975 il celebre singolo «Ma il cielo è sempre più blu» e partecipò a Sanremo 1978 con «Gianna»?",
+   "options": [
+    "Rino Gaetano",
+    "Sergio Endrigo",
+    "Ivan Graziani",
+    "Edoardo Bennato"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1yy3muu",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale cantautore e avvocato astigiano ha scritto i brani «Via con me», «Bartali» e «Azzurro» (portata al successo da Celentano)?",
+   "options": [
+    "Paolo Conte",
+    "Giorgio Gaber",
+    "Enzo Jannacci",
+    "Bruno Lauzi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1v8378",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale trio vinse il Festival di Sanremo del 1987 cantando il brano «Si può dare di più»?",
+   "options": [
+    "Gianni Morandi, Enrico Ruggeri e Umberto Tozzi",
+    "Fausto Leali, Toto Cutugno e Al Bano",
+    "Raf, Luca Carboni e Biagio Antonacci",
+    "Riccardo Cocciante, Gianni Bella e Mango"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1lqcy74",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale gruppo pop ligure ha vinto per due volte il Festival di Sanremo, nel 1978 con «...e dirsi ciao!» e nel 2002 con «Messaggio d'amore»?",
+   "options": [
+    "Matia Bazar",
+    "Ricchi e Poveri",
+    "New Trolls",
+    "Stadio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1mjt9fd",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale album di Franco Battiato del 1981, contenente «Centro di gravità permanente» e «Bandiera bianca», fu il primo LP italiano a superare il milione di copie?",
+   "options": [
+    "La voce del padrone",
+    "L'era del cinghiale bianco",
+    "Patriots",
+    "Fisiognomica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1nbprt",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Con quale brano satirico il gruppo Elio e le Storie Tese si classificò al secondo posto e vinse il Premio della Critica al Festival di Sanremo 1996?",
+   "options": [
+    "La terra dei cachi",
+    "Servi della gleba",
+    "Italia sì, Italia no",
+    "La canzone mononota"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-3kk586",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Come si intitola lo storico album del 1994 del gruppo bolognese Sangue Misto (Neffa, Deda e DJ Gruff), considerato una pietra miliare dell'hip hop italiano?",
+   "options": [
+    "SxM",
+    "Novecinquanta",
+    "60 Hz",
+    "Odio pieno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1waygo9",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Con quale nome d'arte è noto Michele Salvemini, rapper pugliese di Molfetta autore di «Fuori dal tunnel» e «Vieni a ballare in Puglia»?",
+   "options": [
+    "Caparezza",
+    "Fabri Fibra",
+    "Ghemon",
+    "Mondo Marcio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-kilspx",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale celebre ricercatore vocale e cantante di origini greco-egiziane fu il frontman dello storico gruppo progressive e sperimentale degli Area negli anni Settanta?",
+   "options": [
+    "Demetrio Stratos",
+    "Francesco Di Giacomo",
+    "Aldo Tagliapietra",
+    "Bernardo Lanzetti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-betyta",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale gruppo etno-pop sardo cantò con Pierangelo Bertoli al Festival di Sanremo 1991 il brano bilingue italiano-logudorese «Spunta la luna dal monte»?",
+   "options": [
+    "Tazenda",
+    "Istentales",
+    "Cordas et Cannas",
+    "Tenores di Bitti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-19ay8er",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale cantautrice canadese del duo «Ian & Sylvia» compose nel 1962 «You Were on My Mind», divenuta in Italia «Io ho in mente te» nell'incisione dell'Equipe 84?",
+   "options": [
+    "Sylvia Fricker",
+    "Joni Mitchell",
+    "Buffy Sainte-Marie",
+    "Gordon Lightfoot"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1umcfxs",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale duo musicale italiano scrisse il brano «Acqua e sale», portato al successo nel 1998 dallo storico duetto tra Mina e Adriano Celentano?",
+   "options": [
+    "Audio 2",
+    "Jalisse",
+    "Zero Assoluto",
+    "Paola & Chiara"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1cwspxm",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale cantautore genovese scrisse per Mia Martini «La costruzione di un amore», contenuta nell'album «Danza» del 1979?",
+   "options": [
+    "Ivano Fossati",
+    "Umberto Bindi",
+    "Gino Paoli",
+    "Bruno Lauzi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-14qv0hi",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale band rock fiorentina, fondata da Piero Pelù e Ghigo Renzulli, pubblicò tra il 1985 e il 1988 la «Trilogia del potere» («Desaparecido», «17 Re», «Litfiba 3»)?",
+   "options": [
+    "Litfiba",
+    "Diaframma",
+    "Negrita",
+    "Bandabardò"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-jlwefn",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "La Premiata Forneria Marconi (PFM) realizzò nel 1979 una storica tournée e due album dal vivo insieme a Fabrizio De André, riarrangiandone il repertorio.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-d3svfv",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "Il gruppo rock-elettronico dei Subsonica, autore di «Tutti i miei sbagli», si è formato a Napoli nella seconda metà degli anni Novanta.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1iew0z6",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "Giorgio Gaber ed Enzo Jannacci esordirono insieme alla fine degli anni Cinquanta formando il duo rock and roll milanese «I Due Corsari».",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1u1gjb5",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "Il brano «Senza fine» (1961) nacque dall'incontro artistico e sentimentale tra l'autore Gino Paoli e l'interprete Ornella Vanoni.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1j7tnin",
+   "categoryId": "italiana",
+   "type": "numeric",
+   "text": "Quante tracce compongono l'edizione originale dell'album «La voce del padrone» (1981) di Franco Battiato?",
+   "answer": 7,
+   "unit": "tracce",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1cqs2p5",
+   "categoryId": "italiana",
+   "type": "numeric",
+   "text": "In che anno uscì «Terra mia», l'album d'esordio del cantautore e chitarrista napoletano Pino Daniele?",
+   "answer": 1977,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-cm56ei",
+   "categoryId": "italiana",
+   "type": "numeric",
+   "text": "Quante volte in carriera sia Domenico Modugno sia Claudio Villa hanno vinto il Festival di Sanremo, condividendo il record assoluto di vittorie?",
+   "answer": 4,
+   "unit": "vittorie",
+   "difficulty": 3
+  }
+ ]
+}

@@ -1,4 +1,4 @@
-// Modulo autonomo per lo Show "Sapere è Potere" (Modalità Quiz con Carte e Piramide).
+// Modulo autonomo per lo Show "Quiz del Pozzo" (Modalità Quiz con Carte e Piramide).
 // Raggruppa ed esporta i componenti del quiz e il plugin QuizShowPlugin per l'architettura Hub Multi-Gioco
 // mantenendo la piena retrocompatibilità con i percorsi esistenti in `server/games/*` e `server/logic/*`.
 

@@ -1,0 +1,645 @@
+{
+ "id": "banca-storia",
+ "name": "📚 Storia",
+ "description": "Banca domande · 50 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "antica",
+   "name": "Storia antica",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  },
+  {
+   "id": "contemporanea",
+   "name": "Novecento e oggi",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-fgnqgt",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale faraone della XVIII dinastia promosse una riforma religiosa imponendo il culto solare del dio Aton?",
+   "options": [
+    "Akhenaton",
+    "Tutankhamon",
+    "Seti I",
+    "Thutmose III"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-oppa2l",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale celebre architetto e visir progettò la piramide a gradoni del faraone Djoser a Saqqara?",
+   "options": [
+    "Imhotep",
+    "Hemiunu",
+    "Senenmut",
+    "Khaemwaset"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-w52zfr",
+   "categoryId": "antica",
+   "type": "truefalse",
+   "text": "La celebre Stele di Rosetta riporta lo stesso testo scritto in caratteri geroglifici, demotici e in greco antico.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-l49ov2",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale re babilonese fece edificare la monumentale Porta di Ishtar all'inizio del VI secolo a.C.?",
+   "options": [
+    "Nabucodonosor II",
+    "Hammurabi",
+    "Nabonido",
+    "Baldassarre"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-lfcnwl",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "A quale sovrano dell'impero neo-assiro si deve la grandiosa biblioteca reale scoperta tra le rovine di Ninive?",
+   "options": [
+    "Assurbanipal",
+    "Sargon II",
+    "Sennacherib",
+    "Tiglatpileser III"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1ell7t0",
+   "categoryId": "antica",
+   "type": "numeric",
+   "text": "Quanti articoli di legge sono incisi sulla celebre stele di diorite del Codice di Hammurabi?",
+   "answer": 282,
+   "unit": "articoli",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-oc69bd",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale sovrano persiano della dinastia achemenide avviò la costruzione della capitale cerimoniale di Persepoli?",
+   "options": [
+    "Dario I",
+    "Ciro il Grande",
+    "Serse I",
+    "Cambise II"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1qkvubw",
+   "categoryId": "antica",
+   "type": "truefalse",
+   "text": "Nello zoroastrismo, religione dell'antica Persia, Ahura Mazda rappresenta il principio supremo del bene e della verità.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1mi8829",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Nell'Impero persiano achemenide, come venivano chiamati i governatori a capo delle grandi circoscrizioni provinciali?",
+   "options": [
+    "Satrapi",
+    "Efori",
+    "Strategi",
+    "Arconti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1blappu",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale legislatore ateniese nel 594 a.C. introdusse la «seisachtheia», cancellando i debiti e vietando la schiavitù per debito?",
+   "options": [
+    "Solone",
+    "Dracone",
+    "Clistene",
+    "Pisistrato"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1me2bq3",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale generale tebano sconfisse gli Spartani a Leuttra nel 371 a.C. impiegando la tattica militare dell'ordine obliquo?",
+   "options": [
+    "Epaminonda",
+    "Pelopida",
+    "Lisandro",
+    "Pausania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-cr6xsw",
+   "categoryId": "antica",
+   "type": "truefalse",
+   "text": "La Lega delio-attica, nata nel 478 a.C., custodiva originariamente il proprio tesoro federale nel santuario dell'isola di Delo.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-13ljpcn",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Nell'Atene democratica dopo le riforme di Clistene, quale organo collegiale era composto da 500 cittadini estratti a sorte?",
+   "options": [
+    "Boulè",
+    "Areopago",
+    "Ecclesia",
+    "Eliea"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-nqinv",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "In quale storica battaglia del 331 a.C. Alessandro Magno sconfisse definitivamente l'esercito del re persiano Dario III?",
+   "options": [
+    "Gaugamela",
+    "Granico",
+    "Isso",
+    "Cheronea"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nffi2t",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale dinastia ellenistica regnò sull'Egitto dalla spartizione dell'impero macedone fino alla conquista romana nel 30 a.C.?",
+   "options": [
+    "Tolomei",
+    "Seleucidi",
+    "Antigonidi",
+    "Attalidi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-dafe26",
+   "categoryId": "antica",
+   "type": "numeric",
+   "text": "In quale anno a.C. morì Alessandro Magno a Babilonia, evento che segnò convenzionalmente l'inizio dell'età ellenistica?",
+   "answer": 323,
+   "unit": "a.C.",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10opcqd",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale comandante romano ricevette il soprannome di «Temporeggiatore» per la sua strategia di attrito contro Annibale?",
+   "options": [
+    "Quinto Fabio Massimo",
+    "Scipione l'Africano",
+    "Lucio Emilio Paolo",
+    "Marco Claudio Marcello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-23vnaw",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "In quale battaglia navale del 241 a.C. il console Gaio Lutazio Catulo sconfisse la flotta cartaginese chiudendo la prima guerra punica?",
+   "options": [
+    "Isole Egadi",
+    "Capo Ecnomo",
+    "Milazzo",
+    "Isole Lipari"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-gfor3q",
+   "categoryId": "antica",
+   "type": "truefalse",
+   "text": "Al termine della terza guerra punica nel 146 a.C., la città di Cartagine fu rasa al suolo dalle truppe di Scipione Emiliano.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-hfnsm",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quali due fratelli tribuni della plebe furono promotori di radicali leggi agrarie a Roma tra il 133 e il 121 a.C.?",
+   "options": [
+    "Tiberio e Gaio Gracco",
+    "Lucio e Quinto Cincinnato",
+    "Marco e Manio Curio",
+    "Publio e Gneo Scipione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-2jq0l0",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale capo dei Galli Senoni guidò il sacco di Roma intorno al 390 a.C., a cui la tradizione attribuisce l'esclamazione «Vae victis»?",
+   "options": [
+    "Brenno",
+    "Vercingetorige",
+    "Ambiorige",
+    "Ariovisto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1j65swb",
+   "categoryId": "antica",
+   "type": "numeric",
+   "text": "In quale anno a.C. si combatté la celebre battaglia di Canne, in cui l'esercito cartaginese annientò otto legioni romane?",
+   "answer": 216,
+   "unit": "a.C.",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xh37ig",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale corrente filosofica dell'antica Cina, sostenuta da filosofi come Han Feizi, promuoveva l'assoluto primato della legge dello Stato?",
+   "options": [
+    "Legalismo",
+    "Confucianesimo",
+    "Taoismo",
+    "Moismo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-xvooul",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Quale imperatore indiano della dinastia Maurya, dopo la cruenta conquista di Kalinga nel III secolo a.C., si convertì al buddismo?",
+   "options": [
+    "Ashoka",
+    "Chandragupta",
+    "Kanishka",
+    "Samudragupta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-er25kd",
+   "categoryId": "antica",
+   "type": "multiple",
+   "text": "Qual è il più antico tra i quattro testi sacri dei Veda composti nell'India antica in sanscrito arcaico?",
+   "options": [
+    "Rigveda",
+    "Samaveda",
+    "Yajurveda",
+    "Atharvaveda"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1wr4iux",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "In quale città dell'Indonesia si tenne nell'aprile 1955 la storica conferenza afro-asiatica che pose le basi del Movimento dei Non Allineati?",
+   "options": [
+    "Bandung",
+    "Giacarta",
+    "Surabaya",
+    "Medan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1rig0nw",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale generale vietnamita comandò le forze del Viet Minh nella decisiva vittoria di Dien Bien Phu contro l'esercito francese nel 1954?",
+   "options": [
+    "Vo Nguyen Giap",
+    "Pham Van Dong",
+    "Ngo Dinh Diem",
+    "Le Duan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1y5cbo9",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale leader anticolonialista divenne nel giugno 1960 il primo Primo Ministro del Congo indipendente dal Belgio, prima di essere deposto e ucciso nel 1961?",
+   "options": [
+    "Patrice Lumumba",
+    "Joseph Kasavubu",
+    "Moïse Tshombe",
+    "Léopold Sédar Senghor"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1x11ym1",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Come si chiamava il pilota statunitense dell'aereo-spia Lockheed U-2 abbattuto sui cieli sovietici il 1° maggio 1960?",
+   "options": [
+    "Francis Gary Powers",
+    "Rudolf Abel",
+    "Chuck Yeager",
+    "Richard Bong"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nfv6eh",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale documento e movimento del dissenso cecoslovacco, tra i cui primi firmatari e portavoce figurarono Václav Havel e Jan Patočka, fu pubblicato a Praga nel gennaio 1977?",
+   "options": [
+    "Charta 77",
+    "Duecento parole",
+    "Solidarność",
+    "Manifesto di Korčula"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1sv0fg8",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale primo ministro iraniano, promotore della nazionalizzazione del petrolio, fu rovesciato nell'agosto 1953 dal golpe anglo-americano noto come «Operazione Ajax»?",
+   "options": [
+    "Mohammad Mossadeq",
+    "Ali Razmara",
+    "Shapour Bakhtiar",
+    "Mehdi Bazargan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bsip8o",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quali due leader mediorientali firmarono nel settembre 1978 gli Accordi di Camp David con la mediazione del presidente statunitense Jimmy Carter?",
+   "options": [
+    "Anwar Sadat e Menachem Begin",
+    "Gamal Abdel Nasser e David Ben Gurion",
+    "Hosni Mubarak e Yitzhak Rabin",
+    "Hafez al-Assad e Golda Meir"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-yt2elt",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale presidente del Guatemala, autore di una riforma agraria che colpì la United Fruit Company, fu deposto nel 1954 dall'operazione della CIA «PBSUCCESS»?",
+   "options": [
+    "Jacobo Árbenz Guzmán",
+    "Juan José Arévalo",
+    "Carlos Castillo Armas",
+    "Jorge Ubico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1kvsvpg",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Tra quali due Paesi sudamericani fu combattuta tra il 1932 e il 1935 la sanguinosa Guerra del Chaco per il controllo del Gran Chaco Boreal?",
+   "options": [
+    "Bolivia e Paraguay",
+    "Perù ed Ecuador",
+    "Cile e Argentina",
+    "Colombia e Venezuela"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1kuetm8",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "In quale piazza di Città del Messico avvenne il 2 ottobre 1968 il massacro di studenti manifestanti a pochi giorni dall'apertura delle Olimpiadi?",
+   "options": [
+    "Piazza delle Tre Culture a Tlatelolco",
+    "Plaza de la Constitución (Zócalo)",
+    "Plaza Garibaldi",
+    "Alameda Central"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-uqc7ut",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Chi guidò nel gennaio 1947 la «scissione di Palazzo Barberini» dal Partito Socialista, fondando il Partito Socialista dei Lavoratori Italiani (poi PSDI)?",
+   "options": [
+    "Giuseppe Saragat",
+    "Pietro Nenni",
+    "Lelio Basso",
+    "Sandro Pertini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1unh7t7",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Con quale trattato bilaterale del 10 novembre 1975 l'Italia e la Jugoslavia definirono in modo definitivo i confini tra la Zona A (Trieste) e la Zona B (Istria)?",
+   "options": [
+    "Trattato di Osimo",
+    "Trattato di Rapallo",
+    "Memorandum di Londra",
+    "Accordo De Gasperi-Gruber"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8sp1u9",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale statista francese presentò il 9 maggio 1950 la dichiarazione che portò l'anno successivo alla nascita della CECA (Comunità Europea del Carbone e dell'Acciaio)?",
+   "options": [
+    "Robert Schuman",
+    "Jean Monnet",
+    "René Pleven",
+    "Paul-Henri Spaak"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qgs9pf",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "In quale località al confine tra le repubbliche sovietiche fu firmato l'8 dicembre 1991 l'accordo tra Russia, Ucraina e Bielorussia che sancì la fine dell'URSS e la nascita della CSI?",
+   "options": [
+    "Beloveža",
+    "Alma-Ata",
+    "Jalta",
+    "Brest-Litovsk"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-17y8z5x",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Con quale nome è passato alla storia l'attentato ferroviario del 18 settembre 1931 usato dall'esercito imperiale giapponese come pretesto per invadere la Manciuria?",
+   "options": [
+    "Incidente di Mukden",
+    "Incidente del ponte di Marco Polo",
+    "Incidente di Nomonhan",
+    "Incidente della Panay"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1dzx2e0",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "In quale villaggio lungo il 38° parallelo fu firmato il 27 luglio 1953 l'armistizio che pose fine ai combattimenti della Guerra di Corea?",
+   "options": [
+    "Panmunjom",
+    "Incheon",
+    "Kaesong",
+    "Pusan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1069cbe",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quali accordi, firmati il 18 marzo 1962 tra il governo francese e il Fronte di Liberazione Nazionale (FLN), posero fine alla guerra d'Algeria?",
+   "options": [
+    "Accordi di Évian",
+    "Accordi di Ginevra",
+    "Accordi di Lusaka",
+    "Accordi di Lancaster House"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qtzjet",
+   "categoryId": "contemporanea",
+   "type": "multiple",
+   "text": "Quale movimento studentesco e antimperialista esplose a Pechino nel 1919 contro le clausole del Trattato di Versailles che cedevano lo Shandong al Giappone?",
+   "options": [
+    "Movimento del 4 maggio",
+    "Rivolta dei Boxer",
+    "Movimento della Nuova Vita",
+    "Campagna dei Cento Fiori"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-u7qfgy",
+   "categoryId": "contemporanea",
+   "type": "truefalse",
+   "text": "La crisi di Suez del 1956 scaturì dalla decisione del presidente egiziano Gamal Abdel Nasser di nazionalizzare la Compagnia del Canale di Suez.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-5ydthh",
+   "categoryId": "contemporanea",
+   "type": "truefalse",
+   "text": "Il «Trattato dell'Eliseo» del gennaio 1963 per la riconciliazione franco-tedesca fu firmato da Charles de Gaulle e dal cancelliere Willy Brandt.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1py37ai",
+   "categoryId": "contemporanea",
+   "type": "truefalse",
+   "text": "La strategia politica del «compromesso storico» fu formulata da Enrico Berlinguer nel 1973 sull'onda delle riflessioni sul colpo di Stato in Cile contro Salvador Allende.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-ikgkhf",
+   "categoryId": "contemporanea",
+   "type": "truefalse",
+   "text": "La «Catena Baltica» dell'agosto 1989 fu una catena umana pacifica che collegò le capitali di Estonia, Lettonia e Lituania nel 50° anniversario del patto Molotov-Ribbentrop.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-vazq2y",
+   "categoryId": "contemporanea",
+   "type": "numeric",
+   "text": "Quanti Stati europei fondatori firmarono a Parigi il 18 aprile 1951 il trattato istitutivo della CECA (Comunità Europea del Carbone e dell'Acciaio)?",
+   "answer": 6,
+   "unit": "Stati",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-plkrdx",
+   "categoryId": "contemporanea",
+   "type": "numeric",
+   "text": "In che anno entrò in vigore in Italia la legge n. 898 («legge Fortuna-Baslini») che introdusse l'istituto del divorzio nell'ordinamento repubblicano?",
+   "answer": 1970,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-137pjpk",
+   "categoryId": "contemporanea",
+   "type": "numeric",
+   "text": "Quanti Paesi africani ottennero l'indipendenza nel corso del 1960, passato per questo alla storia come l'«Anno dell'Africa»?",
+   "answer": 17,
+   "unit": "Paesi",
+   "difficulty": 3
+  }
+ ]
+}

@@ -1,5 +1,7 @@
 // «Duello al Tavolo»: affermazioni lampo vere o false (cultura generale facile, da leggere in un attimo).
 
+import GEN_DUELLO from './generated/duello.json';
+
 export interface Fact {
   text: string;
   truth: boolean;
@@ -7,7 +9,7 @@ export interface Fact {
 
 const f = (truth: boolean, text: string): Fact => ({ text, truth });
 
-export const DUELLO_FACTS: Fact[] = [
+const BASE_DUELLO_FACTS: Fact[] = [
   f(true, 'L’Australia è più grande della Luna?'),
   f(false, 'I ragni hanno 6 zampe?'),
   f(true, 'Il cuore umano ha 4 cavità?'),
@@ -58,3 +60,6 @@ export const STROOP_COLORS: { name: string; hex: string }[] = [
   { name: 'GIALLO', hex: '#ffd60a' },
   { name: 'VIOLA', hex: '#b388ff' }
 ];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const DUELLO_FACTS: Fact[] = [...BASE_DUELLO_FACTS, ...(GEN_DUELLO as Fact[])];

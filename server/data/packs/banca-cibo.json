@@ -1,0 +1,645 @@
+{
+ "id": "banca-cibo",
+ "name": "📚 Cibo & Cucina",
+ "description": "Banca domande · 50 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "italiana",
+   "name": "Cucina italiana",
+   "icon": "🍝",
+   "color": "#ff9f1c"
+  },
+  {
+   "id": "mondo",
+   "name": "Cucina dal mondo",
+   "icon": "🍝",
+   "color": "#ff9f1c"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-1kski10",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale gastronomo romagnolo pubblicò a proprie spese nel 1891 il celebre manuale «La scienza in cucina e l'arte di mangiar bene»?",
+   "options": [
+    "Pellegrino Artusi",
+    "Gualtiero Marchesi",
+    "Ada Boni",
+    "Bartolomeo Scappi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-vil2d7",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale dei quattro stomachi del bovino viene utilizzato per preparare il «lampredotto», celebre cibo di strada fiorentino?",
+   "options": [
+    "Abomaso",
+    "Rumine",
+    "Reticolo",
+    "Omaso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-xufl3q",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "In quale comune della Costiera Amalfitana si produce per tradizione la pregiata «colatura di alici» maturata in botti di legno (terzigni)?",
+   "options": [
+    "Cetara",
+    "Positano",
+    "Ravello",
+    "Maiori"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pwzbsh",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "In quali contenitori tradizionali viene fatto stagionare con sale, spezie ed erbe aromatiche il celebre Lardo di Colonnata IGP?",
+   "options": [
+    "Conche di marmo bianco di Carrara",
+    "Botti di rovere di Slavonia",
+    "Anfore di terracotta dell'Impruneta",
+    "Tini di legno di castagno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3bs41r",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Come si chiamano i tradizionali ravioli sardi originari dell'Ogliastra, farciti con patate, pecorino e menta e chiusi con la tipica cucitura «a spiga»?",
+   "options": [
+    "Culurgiones",
+    "Malloreddus",
+    "Fregula",
+    "Lorighittas"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ytta44",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale varietà di ortaggio piemontese, sbiancato sottoterra fino ad assumere una caratteristica curvatura, è l'accompagnamento principe della «bagna cauda»?",
+   "options": [
+    "Cardo gobbo di Nizza Monferrato",
+    "Carciofo romanesco del Lazio",
+    "Radicchio rosso di Treviso",
+    "Sedano nero di Trevi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1et5r31",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Con quale sfarinatura, mescolata a farina di grano tenero, si preparano i «pizzoccheri della Valtellina» IGP?",
+   "options": [
+    "Farina di grano saraceno",
+    "Farina di castagne",
+    "Semola di grano duro",
+    "Farina di mais bramata"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-10ve1vi",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Di quale regione italiana sono originari i «vincisgrassi», storica pasta al forno a strati condita con un ricco ragù di rigaglie e carni miste?",
+   "options": [
+    "Marche",
+    "Abruzzo",
+    "Molise",
+    "Basilicata"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-n5y2rm",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale dolce friulano originario delle Valli del Natisone ha una caratteristica forma a chiocciola ed è ripieno di noci, uvetta, pinoli e grappa?",
+   "options": [
+    "Gubana",
+    "Zelten",
+    "Strudel",
+    "Pinza triestina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1y0ulcm",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale località romagnola in provincia di Forlì-Cesena è celebre per le fosse scavate nel tufo in cui viene affinato in autunno il «Formaggio di Fossa» DOP?",
+   "options": [
+    "Sogliano al Rubicone",
+    "Brisighella",
+    "Santarcangelo di Romagna",
+    "Bagnacavallo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1dtrex",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Nel tradizionale «risotto alla pilota» mantovano, come viene chiamata la carne di maiale macinata grossolanamente e insaporita con sale, pepe e aglio?",
+   "options": [
+    "Salamella (o pistume)",
+    "Nduja",
+    "Finocchiona",
+    "Ciauscolo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ujl2f5",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale salume calabrese spalmabile, dal gusto fortemente piccante per l'abbondante peperoncino rosso, è originario dell'altopiano del Poro e del comune di Spilinga?",
+   "options": [
+    "'Nduja",
+    "Soppressata",
+    "Capocollo",
+    "Ventricina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-pjq5ox",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Oltre a ricotta, uova, canditi e acqua di fiori d'arancio, quale ingrediente bollito nel latte è indispensabile nel ripieno della pastiera napoletana?",
+   "options": [
+    "Grano tenero cotto",
+    "Riso originario",
+    "Farro perlato",
+    "Semolino tostato"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-v0edp5",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Come si chiama il pregiato salume DOP della Bassa Parmense ricavato dalla parte muscolare posteriore della coscia del suino e insaccato nella vescica?",
+   "options": [
+    "Culatello di Zibello",
+    "Spalla cotta di San Secondo",
+    "Salame di Felino",
+    "Coppa Piacentina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1wg9l7",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale piatto della tradizione ebraico-romanesca prevede una doppia frittura del capolino intero, fino a rendere le brattee esterne croccanti come petali?",
+   "options": [
+    "Carciofo alla giudia",
+    "Carciofo alla romana",
+    "Puntarelle alla romana",
+    "Vignarola"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-19l8seo",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale dolce tradizionale sardo è costituito da un disco di pasta di semola fritto, ripieno di formaggio pecorino fresco acidulo e ricoperto di miele caldo?",
+   "options": [
+    "Seada (o sebada)",
+    "Pardula",
+    "Pabassina",
+    "Gueffu"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nxsdmo",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "In quale città siciliana è nata e viene prodotta secondo disciplinare IGP la celebre cioccolata lavorata «a freddo», dalla consistenza granulosa?",
+   "options": [
+    "Modica",
+    "Bronte",
+    "Noto",
+    "Pachino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8g55m1",
+   "categoryId": "italiana",
+   "type": "multiple",
+   "text": "Quale pasta fresca ligure ha la forma di medaglioni o dischetti su cui viene impresso uno stemma o un decoro mediante un apposito timbro di legno intagliato?",
+   "options": [
+    "Corzetti (o croxetti)",
+    "Trofie",
+    "Pansoti",
+    "Trenette"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-acojki",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "Il sottilissimo «pane carasau» della tradizione pastorale sarda è chiamato in italiano anche «carta da musica» per la sua sfoglia croccante e sonora.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1jmgh64",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "La «cassata siciliana» deve il suo nome al verbo italiano «cassare» perché un tempo veniva preparata solo alla fine della Quaresima.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-wornii",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "Il formaggio «Gorgonzola» DOP prende nome dall'omonima cittadina situata nella città metropolitana di Milano, in Lombardia.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1xmjcn6",
+   "categoryId": "italiana",
+   "type": "truefalse",
+   "text": "I «canederli» (Knödel) della tradizione altoatesina e trentina sono gnocchi preparati principalmente con farina di mais giallo e patate lesse.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-9dd3m0",
+   "categoryId": "italiana",
+   "type": "numeric",
+   "text": "Quante ricette raccoglie l'edizione definitiva (1911) de «La scienza in cucina e l'arte di mangiar bene» curata in vita da Pellegrino Artusi?",
+   "answer": 790,
+   "unit": "ricette",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-10jro5",
+   "categoryId": "italiana",
+   "type": "numeric",
+   "text": "Di quanti mesi è la stagionatura minima prevista dal disciplinare DOP per ogni forma di Parmigiano Reggiano prima della marchiatura a fuoco?",
+   "answer": 12,
+   "unit": "mesi",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-lvby19",
+   "categoryId": "italiana",
+   "type": "numeric",
+   "text": "In che anno l'UNESCO ha iscritto «L'Arte del Pizzaiuolo Napoletano» nella Lista del Patrimonio Culturale Immateriale dell'Umanità?",
+   "answer": 2017,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1a3hj4n",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Di quale Paese sudamericano è piatto nazionale il «ceviche», a base di pesce crudo marinato nel succo di lime con cipolla rossa e peperoncino?",
+   "options": [
+    "Perù",
+    "Argentina",
+    "Brasile",
+    "Colombia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-8aqvup",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Quale inusuale ingrediente viene unito a diverse varietà di peperoncino e spezie per preparare la celebre salsa messicana «mole poblano»?",
+   "options": [
+    "Cioccolato amaro (cacao)",
+    "Miele d'agave",
+    "Latte di cocco",
+    "Sciroppo d'acero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-106wg9i",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Quale ortaggio conferisce il tipico colore rosso rubino al «borscht» (o boršč), tradizionale zuppa dell'Ucraina e dell'Europa orientale?",
+   "options": [
+    "Barbabietola rossa",
+    "Cavolo rosso",
+    "Pomodoro",
+    "Peperone rosso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-7efb2b",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Con quale cereale privo di glutine, originario del Corno d'Africa, si prepara tradizionalmente l'«injera», il pane spugnoso etiope ed eritreo?",
+   "options": [
+    "Teff",
+    "Sorgo",
+    "Miglio",
+    "Quinoa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-4lbgqd",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Di quale città portuale francese è originaria la «bouillabaisse», celebre zuppa di pesce di scoglio servita con crostini e salsa rouille?",
+   "options": [
+    "Marsiglia",
+    "Bordeaux",
+    "Nantes",
+    "Lione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1m2uccn",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Quale piccolo mammifero asiatico mangia e parzialmente digerisce le bacche da cui si ricava il costoso caffè indonesiano «Kopi Luwak»?",
+   "options": [
+    "Zibetto delle palme",
+    "Pangolino",
+    "Lemure",
+    "Tapiro malese"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1u3he3b",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Per quale statista austriaco il sedicenne apprendista Franz Sacher creò a Vienna nel 1832 la celebre torta al cioccolato con confettura di albicocche?",
+   "options": [
+    "Klemens von Metternich",
+    "Francesco Giuseppe I",
+    "Maria Teresa d'Austria",
+    "Eugenio di Savoia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-v3x3z1",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Di quale Paese del Caucaso è piatto nazionale il «khachapuri», pane lievitato spesso a forma di barca farcito con formaggio fuso, burro e un tuorlo d'uovo?",
+   "options": [
+    "Georgia",
+    "Armenia",
+    "Azerbaigian",
+    "Kazakistan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1jf74uf",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Qual è il piatto nazionale della Scozia, preparato insaccando nello stomaco di una pecora le interiora dell'animale tritate con cipolla, grasso e farina d'avena?",
+   "options": [
+    "Haggis",
+    "Cullen skink",
+    "Black pudding",
+    "Welsh rarebit"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-b5ilou",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Con quale latte viene prodotto esclusivamente il celebre formaggio erborinato francese «Roquefort» DOP, affinato nelle grotte naturali di Combalou?",
+   "options": [
+    "Latte crudo di pecora",
+    "Latte vaccino pastorizzato",
+    "Latte di capra",
+    "Latte di bufala"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-kp8xl1",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Come si chiama il piatto nazionale del Brasile, un ricco stufato a base di fagioli neri cotti lentamente con diversi tagli di carne di maiale e manzo?",
+   "options": [
+    "Feijoada",
+    "Moqueca",
+    "Churrasco",
+    "Pão de queijo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-7z6txo",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "In quale provincia canadese è nata negli anni Cinquanta la «poutine», piatto a base di patatine fritte, cagliata di formaggio fresco e salsa gravy bollente?",
+   "options": [
+    "Québec",
+    "Columbia Britannica",
+    "Nuova Scozia",
+    "Manitoba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-us9ci7",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Quale sottilissima sfoglia a base di farina e acqua viene sovrapposta in decine di strati imburrati per preparare il dolce mediorientale e balcanico «baklava»?",
+   "options": [
+    "Pasta fillo",
+    "Pasta kataifi",
+    "Pasta brisée",
+    "Pasta choux"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ni6sft",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Di quale regione della Spagna meridionale è originario il «gazpacho», celebre zuppa fredda estiva a base di pomodori, peperoni, cetrioli, pane, aglio e olio d'oliva?",
+   "options": [
+    "Andalusia",
+    "Galizia",
+    "Catalogna",
+    "Paesi Baschi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bylnqt",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Da quale Paese del Sud-Est asiatico proviene il «phở», profumata zuppa di tagliolini di riso in brodo di manzo o pollo aromatizzato con anice stellato e cannella?",
+   "options": [
+    "Vietnam",
+    "Thailandia",
+    "Cambogia",
+    "Malesia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-14n1j8a",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Come si chiama il celebre condimento giapponese in pasta, ottenuto dalla fermentazione dei fagioli di soia con sale marino e il fungo «kōji» (Aspergillus oryzae)?",
+   "options": [
+    "Miso",
+    "Mirin",
+    "Ponzu",
+    "Dashi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-hvg3v6",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "Come si chiamano i tradizionali ravioli a mezzaluna della cucina polacca, bolliti e poi spesso dorati nel burro, ripieni di patate e formaggio, crauti o carne?",
+   "options": [
+    "Pierogi",
+    "Pelmeni",
+    "Vareniki",
+    "Knödel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ir7uzy",
+   "categoryId": "mondo",
+   "type": "multiple",
+   "text": "In Sudafrica e Namibia, come viene chiamata la carne (di manzo o di antilope) marinata nell'aceto, speziata con coriandolo ed essiccata all'aria?",
+   "options": [
+    "Biltong",
+    "Bobotie",
+    "Chakalaka",
+    "Boerewors"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-skrcja",
+   "categoryId": "mondo",
+   "type": "truefalse",
+   "text": "La «Tarte Tatin» francese è una torta di mele caramellate nel burro e nello zucchero che viene cotta in forno con la pasta sopra le mele e poi capovolta prima di essere servita.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-yqxi9i",
+   "categoryId": "mondo",
+   "type": "truefalse",
+   "text": "Il «couscous» tradizionale del Maghreb è costituito dai semi interi di una pianta erbacea spontanea del deserto del Sahara, affine al miglio.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-2ay21v",
+   "categoryId": "mondo",
+   "type": "truefalse",
+   "text": "Nella cucina indiana, l'espressione «garam masala» indica una miscela di spezie tostate e macinate il cui nome significa letteralmente «spezia calda».",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1rjw4g8",
+   "categoryId": "mondo",
+   "type": "truefalse",
+   "text": "Secondo il decreto bavarese sulla purezza della birra («Reinheitsgebot») del 1516, gli unici ingredienti consentiti nella versione originaria erano acqua, malto d'orzo, luppolo e mais.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-e1a6pk",
+   "categoryId": "mondo",
+   "type": "numeric",
+   "text": "In che anno i duchi di Baviera Guglielmo IV e Ludovico X promulgarono a Ingolstadt il celebre «Reinheitsgebot» (Editto della purezza della birra)?",
+   "answer": 1516,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-xjfd2k",
+   "categoryId": "mondo",
+   "type": "numeric",
+   "text": "Qual è il numero massimo di stelle che la celebre «Guida Michelin» può assegnare a un singolo ristorante per l'eccellenza della sua cucina?",
+   "answer": 3,
+   "unit": "stelle",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-sdyy68",
+   "categoryId": "mondo",
+   "type": "numeric",
+   "text": "Quante unità misura un comune peperone dolce (privo di capsaicina) sulla scala Scoville della piccantezza?",
+   "answer": 0,
+   "unit": "SHU",
+   "difficulty": 3
+  }
+ ]
+}

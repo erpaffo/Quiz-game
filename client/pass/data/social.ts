@@ -1,7 +1,10 @@
 // Domande «Chi di noi…» (Il Tribunale degli Amici) e frasi bizzarre di partenza (Catena Scarabocchiata).
 // Scherzose ma gentili: nessuna domanda deve mettere davvero in imbarazzo qualcuno.
 
-export const TRIBUNALE_QUESTIONS: string[] = [
+import GEN_TRIBUNALE from './generated/tribunale.json';
+import GEN_CATENA from './generated/catena.json';
+
+const BASE_TRIBUNALE_QUESTIONS: string[] = [
   'Chi di noi finirebbe per primo i soldi se vincesse alla lotteria?',
   'Chi di noi sopravviverebbe più a lungo in un film horror?',
   'Chi di noi ha la galleria del telefono più imbarazzante?',
@@ -54,7 +57,7 @@ export const TRIBUNALE_QUESTIONS: string[] = [
   'Chi di noi diventerebbe milionario e poi lo perderebbe tutto?'
 ];
 
-export const CATENA_PHRASES: string[] = [
+const BASE_CATENA_PHRASES: string[] = [
   'Un T-Rex che cerca di rifare il letto',
   'Un gatto che rapina una banca',
   'Una nonna che fa surf su uno squalo',
@@ -96,3 +99,7 @@ export const CATENA_PHRASES: string[] = [
   'Un sole con gli occhiali da sole',
   'Una scimmia che pilota un aereo'
 ];
+
+// Contenuti approvati nella banca domande (npm run banca -- costruisci).
+export const TRIBUNALE_QUESTIONS: string[] = [...BASE_TRIBUNALE_QUESTIONS, ...(GEN_TRIBUNALE as string[])];
+export const CATENA_PHRASES: string[] = [...BASE_CATENA_PHRASES, ...(GEN_CATENA as string[])];

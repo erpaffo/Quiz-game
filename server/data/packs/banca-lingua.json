@@ -1,0 +1,314 @@
+{
+ "id": "banca-lingua",
+ "name": "📚 Lingua & Parole",
+ "description": "Banca domande · 24 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "etimologia",
+   "name": "Etimologia",
+   "icon": "📖",
+   "color": "#f77f00"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-1hj3w9j",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Dall'arabo «sikka» deriva la parola italiana «zecca» (luogo dove si batte moneta): che cosa significava originariamente il termine arabo?",
+   "options": [
+    "Conio o stampo per monete",
+    "Forziere del sultano",
+    "Bilancia per l'oro",
+    "Lingotto d'argento"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-14z3ggn",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Nel gioco degli scacchi il pezzo chiamato «alfiere» deve il suo nome all'arabo «al-fīl»: quale animale indicava in origine questa parola?",
+   "options": [
+    "L'elefante",
+    "Il cammello",
+    "Il falco",
+    "Il destriero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-goidtz",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Quale coppia di parole marinare italiane condivide la medesima origine dall'espressione araba «dār aṣ-ṣināʿa» («casa del mestiere»)?",
+   "options": [
+    "Darsena e arsenale",
+    "Banchina e molo",
+    "Caravella e galeone",
+    "Gomena e bitta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3coww9",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Nell'antica Atene l'«ostracismo» prendeva nome dall'«óstrakon» su cui si incideva il nome dell'esiliato: che cos'era in greco un óstrakon?",
+   "options": [
+    "Un coccio di terracotta",
+    "Una tavoletta di cera",
+    "Una foglia di ulivo",
+    "Un ciottolo di marmo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-pp0qmq",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "La parola «tragedia» risale al greco «tragōidía», composto da «ōidḗ» (canto) e «trágos»: quale animale significa «trágos»?",
+   "options": [
+    "Capro",
+    "Toro",
+    "Ariete",
+    "Cigno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-dzepx6",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "In latino il sostantivo «rivalis» (da cui l'italiano «rivale») indicava in origine chi condivideva con un vicino quale elemento naturale?",
+   "options": [
+    "Un ruscello per l'irrigazione",
+    "Un pascolo d'altura",
+    "Un bosco sacro",
+    "Una vena mineraria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8tabcz",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Il vocabolo latino «pecunia» (denaro) deriva da «pecus»: che cosa indicava «pecus» nell'economia pastorale romana arcaica?",
+   "options": [
+    "Il bestiame",
+    "Il grano",
+    "Il sale",
+    "Il rame grezzo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1qwe6u7",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Da quale popolo germanico è entrata nell'italiano la parola «faida», nel senso di vendetta tra famiglie?",
+   "options": [
+    "I Longobardi",
+    "I Vichinghi",
+    "I Goti orientali",
+    "I Franchi sàlici"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-mn5z9w",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Da quale voce germanica e longobarda, che indicava una trave o un asse di legno, deriva il sostantivo italiano «palco»?",
+   "options": [
+    "Balk",
+    "Stall",
+    "Bank",
+    "Panka"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-6zc8sr",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "L'italiano «sussiego» (contegno altezzoso e grave) è un prestito dallo spagnolo «sosiego»: quale significato aveva il termine in spagnolo?",
+   "options": [
+    "Calma, quiete",
+    "Orgoglio nobiliare",
+    "Inchino di corte",
+    "Silenzio imposto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1y67nuu",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Il termine marinaresco «nostromo» non deriva da «nostro uomo», ma è un adattamento dello spagnolo gergale «nuestramo»: cosa significa alla lettera?",
+   "options": [
+    "Nostro padrone",
+    "Nostro timoniere",
+    "Nostro fratello",
+    "Nostro capitano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pztzfr",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "La parola «cravatta» entrò in Europa tramite il francese «cravate» nel Seicento: a quale popolo faceva riferimento il termine?",
+   "options": [
+    "Ai cavalieri croati",
+    "Ai mercenari cosacchi",
+    "Ai tessitori fiamminghi",
+    "Agli ussari ungheresi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1wvpj6m",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "L'eponimo «silhouette» (ritratto in sagoma nera) prende nome da Étienne de Silhouette: quale incarico ricopriva nella Francia di Luigi XV?",
+   "options": [
+    "Controllore generale delle finanze",
+    "Pittore di corte a Versailles",
+    "Direttore del Teatro dell'Opera",
+    "Maestro degli specchi reali"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-6r782",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Da quale dialetto e ambito professionale è entrato nell'italiano comune il sostantivo onomatopeico «mugugno» (borbottio di malcontento)?",
+   "options": [
+    "Dal genovese marinaresco",
+    "Dal veneziano mercantile",
+    "Dal livornese portuale",
+    "Dal napoletano teatrale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-56hcwf",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Il regionalismo centro-meridionale «abbiocco» (sonnolenza improvvisa) deriva da «abbioccarsi», legato a «biocca»: che cosa indica la «biocca»?",
+   "options": [
+    "La chioccia che cova",
+    "La pecora al pascolo",
+    "La botte di vino",
+    "La gerla di vimini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ga4kk",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Lo spagnolo «aceite» è un classico falso amico per gli italiani: deriva dall'arabo «az-zayt» e non significa aceto, bensì che cosa?",
+   "options": [
+    "Olio",
+    "Sciroppo",
+    "Sale",
+    "Strutto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gyto9s",
+   "categoryId": "etimologia",
+   "type": "multiple",
+   "text": "Tra i falsi amici tra francese e italiano, che cosa indica in Francia il sostantivo «cantine» (mentre la cantina per il vino si chiama «cave»)?",
+   "options": [
+    "La mensa scolastica o aziendale",
+    "La soffitta del palazzo",
+    "La biglietteria della stazione",
+    "La bottega del fornaio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-12k5z3i",
+   "categoryId": "etimologia",
+   "type": "truefalse",
+   "text": "Nell'uso dantesco e nell'italiano antico l'aggettivo «bizzarro» significava originariamente «iracondo, collerico» e non «stravagante».",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-b296lg",
+   "categoryId": "etimologia",
+   "type": "truefalse",
+   "text": "La parola «alambicco» è giunta in Europa tramite l'arabo «al-anbīq», che a sua volta adattava il sostantivo greco antico «ámbix» («coppa, vaso»).",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-145l5f7",
+   "categoryId": "etimologia",
+   "type": "truefalse",
+   "text": "L'eponimo «nicotina» deriva dal medico inglese Nicholas Nicot, che per primo isolò chimicamente l'alcaloide in laboratorio a Londra nel 1828.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-t2mf5c",
+   "categoryId": "etimologia",
+   "type": "truefalse",
+   "text": "Nell'antica Roma il «candidato» si chiamava così perché indossava una toga appositamente sbiancata con il gesso («toga candida») durante le campagne elettorali.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-sj9blm",
+   "categoryId": "etimologia",
+   "type": "numeric",
+   "text": "Secondo l'etimologia greca di «ecatombe» («hekatón» + «boûs»), di quanti buoi era composto in origine il sacrificio sacro?",
+   "answer": 100,
+   "unit": "buoi",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-lps097",
+   "categoryId": "etimologia",
+   "type": "numeric",
+   "text": "In che anno fu stampata a Venezia la prima edizione del «Vocabolario degli Accademici della Crusca», primo grande dizionario storico ed etimologico dell'italiano?",
+   "answer": 1612,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-30qjy",
+   "categoryId": "etimologia",
+   "type": "numeric",
+   "text": "In che anno i contadini irlandesi isolarono l'amministratore terriero Charles Cunningham Boycott, facendo nascere il verbo eponimo «boicottare»?",
+   "answer": 1880,
+   "unit": "anno",
+   "difficulty": 3
+  }
+ ]
+}

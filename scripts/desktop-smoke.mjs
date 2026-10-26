@@ -23,7 +23,7 @@ function findExecutable() {
     if (dir) return join(RELEASE, dir, brand.shortName);
   }
   if (process.platform === 'darwin') {
-    // L'app si chiama come il gioco («Sapere è Potere.app»), l'eseguibile interno come shortName
+    // L'app si chiama come il gioco («Quiz del Pozzo.app»), l'eseguibile interno come shortName
     // (executableName in electron-builder). Si cercano entrambi invece di ricostruire i nomi:
     // macOS può salvare la «è» in forma Unicode diversa da quella scritta qui.
     for (const dir of dirs.filter((d) => d.startsWith('mac'))) {

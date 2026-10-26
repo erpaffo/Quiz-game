@@ -1,0 +1,198 @@
+[
+ {
+  "name": "Strumenti musicali",
+  "words": [
+   "Chitarra",
+   "Violino",
+   "Pianoforte",
+   "Batteria",
+   "Flauto",
+   "Tromba",
+   "Arpa",
+   "Sassofono",
+   "Clarinetto"
+  ]
+ },
+ {
+  "name": "Supereroi",
+  "words": [
+   "Superman",
+   "Batman",
+   "Spider-Man",
+   "Hulk",
+   "Thor",
+   "Wonder Woman",
+   "Flash",
+   "Aquaman"
+  ]
+ },
+ {
+  "name": "Frutti tropicali",
+  "words": [
+   "Mango",
+   "Papaya",
+   "Ananas",
+   "Cocco",
+   "Banana",
+   "Avocado",
+   "Frutto della passione",
+   "Litchi"
+  ]
+ },
+ {
+  "name": "Pizze",
+  "words": [
+   "Margherita",
+   "Marinara",
+   "Diavola",
+   "Quattro formaggi",
+   "Capricciosa",
+   "Napoli",
+   "Prosciutto e funghi",
+   "Bufalina"
+  ]
+ },
+ {
+  "name": "Parti del corpo",
+  "words": [
+   "Gomito",
+   "Ginocchio",
+   "Spalla",
+   "Polso",
+   "Caviglia",
+   "Schiena",
+   "Orecchio",
+   "Mento"
+  ]
+ },
+ {
+  "name": "Cartoni animati",
+  "words": [
+   "Topolino",
+   "Paperino",
+   "Pluto",
+   "Bugs Bunny",
+   "Tom e Jerry",
+   "Titti",
+   "Daffy Duck",
+   "Homer Simpson"
+  ]
+ },
+ {
+  "name": "Videogiochi",
+  "words": [
+   "Super Mario",
+   "Zelda",
+   "Pokémon",
+   "Minecraft",
+   "Fortnite",
+   "Tetris",
+   "Pac-Man",
+   "FIFA"
+  ]
+ },
+ {
+  "name": "Mestieri creativi",
+  "words": [
+   "Pittore",
+   "Scultore",
+   "Fotografo",
+   "Scrittore",
+   "Musicista",
+   "Regista",
+   "Illustratore",
+   "Stilista"
+  ]
+ },
+ {
+  "name": "Pasta",
+  "words": [
+   "Spaghetti",
+   "Penne",
+   "Fusilli",
+   "Rigatoni",
+   "Tagliatelle",
+   "Farfalle",
+   "Lasagne",
+   "Gnocchi"
+  ]
+ },
+ {
+  "name": "Emozioni",
+  "words": [
+   "Gioia",
+   "Tristezza",
+   "Rabbia",
+   "Paura",
+   "Sorpresa",
+   "Noia",
+   "Vergogna",
+   "Nostalgia"
+  ]
+ },
+ {
+  "name": "Capitali europee",
+  "words": [
+   "Parigi",
+   "Madrid",
+   "Berlino",
+   "Vienna",
+   "Lisbona",
+   "Atene",
+   "Praga",
+   "Budapest"
+  ]
+ },
+ {
+  "name": "Dolci",
+  "words": [
+   "Tiramisù",
+   "Cannolo",
+   "Panna cotta",
+   "Cornetto",
+   "Gelato",
+   "Torta",
+   "Biscotti",
+   "Cheesecake"
+  ]
+ },
+ {
+  "name": "Social network",
+  "words": [
+   "Instagram",
+   "TikTok",
+   "WhatsApp",
+   "Facebook",
+   "Telegram",
+   "Snapchat",
+   "YouTube",
+   "X"
+  ]
+ },
+ {
+  "name": "Giochi da tavolo",
+  "words": [
+   "Monopoli",
+   "Scarabeo",
+   "Risiko",
+   "Cluedo",
+   "Dama",
+   "Scacchi",
+   "Carte",
+   "Taboo"
+  ]
+ },
+ {
+  "name": "Veicoli",
+  "words": [
+   "Auto",
+   "Moto",
+   "Bici",
+   "Treno",
+   "Aereo",
+   "Nave",
+   "Monopattino",
+   "Autobus"
+  ]
+ }
+]

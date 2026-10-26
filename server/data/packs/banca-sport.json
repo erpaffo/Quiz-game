@@ -1,0 +1,328 @@
+{
+ "id": "banca-sport",
+ "name": "📚 Sport & Giochi",
+ "description": "Banca domande · 25 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "calcio",
+   "name": "Calcio",
+   "icon": "⚽",
+   "color": "#06d6a0"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-1f8urtj",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale squadra vinse nel 1929-1930 il primo campionato italiano di Serie A a girone unico, trascinata dalle 31 reti di Giuseppe Meazza?",
+   "options": [
+    "Ambrosiana (Inter)",
+    "Juventus",
+    "Bologna",
+    "Genoa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1rm8xxx",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale allenatore guidò l'Hellas Verona alla conquista del suo storico scudetto nella stagione di Serie A 1984-1985?",
+   "options": [
+    "Osvaldo Bagnoli",
+    "Nils Liedholm",
+    "Vujadin Boškov",
+    "Eugenio Bersellini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-13vpgh2",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Con quale soprannome il giornalista Gianni Brera ribattezzò Gigi Riva, protagonista dello scudetto vinto dal Cagliari nel 1969-1970?",
+   "options": [
+    "Rombo di Tuono",
+    "Bonimba",
+    "Il Poeta del Gol",
+    "Pablito"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-19dc3k2",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Nella finale dei Mondiali del 1954, passata alla storia come il «Miracolo di Berna», quale favoritissima nazionale fu sconfitta per 3-2 dalla Germania Ovest?",
+   "options": [
+    "Ungheria",
+    "Brasile",
+    "Uruguay",
+    "Austria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-16725kf",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "In quale Paese fu definitivamente trafugata nel dicembre 1983 la Coppa Jules Rimet, assegnata in perpetuo nel 1970 dopo il terzo titolo mondiale?",
+   "options": [
+    "Brasile",
+    "Italia",
+    "Uruguay",
+    "Inghilterra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-68taxa",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale club italiano vinse il 19 maggio 1999 a Birmingham l'ultima edizione nella storia della Coppa delle Coppe UEFA, battendo in finale il Maiorca?",
+   "options": [
+    "Lazio",
+    "Parma",
+    "Sampdoria",
+    "Fiorentina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qqzqmk",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale squadra rumena vinse la Coppa dei Campioni 1985-1986 a Siviglia contro il Barcellona, grazie ai quattro rigori parati dal portiere Helmuth Duckadam?",
+   "options": [
+    "Steaua Bucarest",
+    "Dinamo Bucarest",
+    "Universitatea Craiova",
+    "Rapid Bucarest"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-jbx96i",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale allenatore inglese portò il Nottingham Forest a vincere due Coppe dei Campioni consecutive nel 1979 e nel 1980?",
+   "options": [
+    "Brian Clough",
+    "Bob Paisley",
+    "Matt Busby",
+    "Bill Shankly"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-2ypp03",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "In quale quartiere di Genova sorge lo storico Stadio Luigi Ferraris, impianto inaugurato nel 1911 che ospita le gare di Genoa e Sampdoria?",
+   "options": [
+    "Marassi",
+    "Sampierdarena",
+    "Albaro",
+    "Boccadasse"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1x4q21i",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "A quale storico presidente del Bologna FC è intitolato dal 1983 lo stadio cittadino, originariamente inaugurato nel 1927 come «Stadio Littorale»?",
+   "options": [
+    "Renato Dall'Ara",
+    "Giacomo Bulgarelli",
+    "Angelo Schiavio",
+    "Ezio Pascutti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bym467",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale commissario tecnico guidò la Nazionale italiana alle due vittorie consecutive dei Mondiali del 1934 e del 1938 e all'oro olimpico di Berlino 1936?",
+   "options": [
+    "Vittorio Pozzo",
+    "Ferruccio Valcareggi",
+    "Enzo Bearzot",
+    "Fulvio Bernardini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-m71s5u",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Con quale soprannome triestino era conosciuto l'allenatore Nereo Rocco, storico artefice dei trionfi del Milan in Coppa dei Campioni nel 1963 e 1969?",
+   "options": [
+    "El Paròn",
+    "Il Mago",
+    "Il Barone",
+    "Il Professore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-13kyofc",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale allenatore franco-argentino, soprannominato «Il Mago», guidò la «Grande Inter» di Angelo Moratti a due Coppe dei Campioni consecutive nel 1964 e 1965?",
+   "options": [
+    "Helenio Herrera",
+    "Alfredo Foni",
+    "Bersellini",
+    "Ernst Happel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-r4yb0y",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "A quale arbitro inglese si deve l'ideazione dei cartellini giallo e rosso, introdotti per la prima volta ai Mondiali di Messico 1970?",
+   "options": [
+    "Ken Aston",
+    "Stanley Rous",
+    "Gottfried Dienst",
+    "Jack Taylor"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-19cev9q",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale arbitro italiano ha diretto il 30 giugno 2002 a Yokohama la finale della Coppa del Mondo FIFA tra Brasile e Germania?",
+   "options": [
+    "Pierluigi Collina",
+    "Sergio Gonella",
+    "Nicola Rizzoli",
+    "Concetto Lo Bello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-232p95",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale nazionale vinse nel 1991 in Cina la prima edizione ufficiale del Campionato mondiale femminile di calcio organizzato dalla FIFA?",
+   "options": [
+    "Stati Uniti",
+    "Norvegia",
+    "Germania",
+    "Svezia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-m1d218",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Quale ex attaccante, più volte capocannoniera della Serie A femminile, fu CT della nazionale femminile del Canada dal 2009 al 2011?",
+   "options": [
+    "Carolina Morace",
+    "Patrizia Panico",
+    "Betty Vignotto",
+    "Milena Bertolini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-mayy4l",
+   "categoryId": "calcio",
+   "type": "multiple",
+   "text": "Di quale squadra leggendaria era capitano Valentino Mazzola, scomparso con i compagni nella tragedia aerea di Superga il 4 maggio 1949?",
+   "options": [
+    "Il Grande Torino",
+    "Il Bologna dello scudetto",
+    "Il Grande Milan",
+    "La Pro Vercelli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1q1vlmw",
+   "categoryId": "calcio",
+   "type": "truefalse",
+   "text": "Nel regolamento del calcio, il divieto per il portiere di raccogliere con le mani un retropassaggio volontario di piede di un compagno fu introdotto dall'IFAB nel 1992.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-i7hjgm",
+   "categoryId": "calcio",
+   "type": "truefalse",
+   "text": "Nel regolamento ufficiale del calcio un calciatore si trova in posizione di fuorigioco anche quando riceve il pallone direttamente da una rimessa laterale.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1toug0f",
+   "categoryId": "calcio",
+   "type": "truefalse",
+   "text": "La Serie A di calcio femminile in Italia ha acquisito ufficialmente lo status di campionato professionistico a partire dalla stagione 2022-2023.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-gruso6",
+   "categoryId": "calcio",
+   "type": "truefalse",
+   "text": "La prima edizione della Coppa dei Campioni d'Europa nella stagione 1955-1956 fu vinta dal Benfica di Lisbona.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-10bloya",
+   "categoryId": "calcio",
+   "type": "numeric",
+   "text": "A quanti metri di distanza dalla linea di porta è posto il dischetto del calcio di rigore secondo il regolamento ufficiale (pari a 12 iarde)?",
+   "answer": 11,
+   "unit": "metri",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-tbay30",
+   "categoryId": "calcio",
+   "type": "numeric",
+   "text": "Quante reti realizzò sia Gino Rossetti (1928-29) sia Gonzalo Higuaín (2015-16) sia Ciro Immobile (2019-20), stabilendo il record in un singolo campionato di Serie A?",
+   "answer": 36,
+   "unit": "reti",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-62b5e9",
+   "categoryId": "calcio",
+   "type": "numeric",
+   "text": "Quanti scudetti consecutivi conquistò il «Grande Torino» tra il 1942-1943 e il 1948-1949 (escludendo l'interruzione bellica del 1944-1945)?",
+   "answer": 5,
+   "unit": "scudetti",
+   "difficulty": 3
+  }
+ ]
+}

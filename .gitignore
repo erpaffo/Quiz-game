@@ -1,11 +1,46 @@
+# Dipendenze e build
 node_modules/
 dist/
-bosco.json
 app-build/
 release/
-user-media/
-docs/
 client/public/mediapipe/wasm/
+
+# File di runtime, media locali e dati utente
+bosco.json
+user-media/
+user-packs/
+
+# Script batch di build e launcher personali
 build-*
-*.md
+*.bat
+
+# File Docker e configurazioni server personali
 docker*
+Dockerfile
+
+# Documentazione personale e note di progetto (escluso il solo README.md in root)
+docs/
+*.md
+!/README.md
+
+# File di configurazione, prompt e regole per AI / agenti
+.agents/
+.claude/
+.gemini/
+CLAUDE*
+GEMINI*
+PROMPT*
+TASKS*
+STATO_PROGETTO*
+TODO*
+
+# File di ambiente e credenziali locali
+.env*
+*.local
+*.log
+
+# File di sistema e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,7 @@
+{"kind":"fronte","word":"Astronauta","taboo":["spazio","razzo","casco","Luna"],"pack":"pop","difficulty":2,"author":"claude","source":"ai:claude","license":"originale","id":"fronte-vo0ssp"}
+{"kind":"panico","text":"Cita 3 cose che non porteresti mai su un'isola deserta","difficulty":2,"author":"claude","source":"ai:claude","license":"originale","id":"panico-1l3j5wl"}
+{"kind":"bomba-sillaba","text":"SCH","difficulty":4,"author":"claude","source":"ai:claude","license":"originale","id":"bomba-sillaba-18joy6b"}
+{"kind":"duello","text":"Il Monte Everest è più alto del Monte Bianco?","truth":true,"difficulty":1,"author":"claude","source":"ai:claude","license":"originale","id":"duello-1bnjsd"}
+{"kind":"onda","left":"🙈 Segreto da custodire","right":"Da raccontare a tutti 📣","difficulty":2,"author":"claude","source":"ai:claude","license":"originale","id":"onda-y2tx9t"}
+{"kind":"impostore","name":"Strumenti musicali","words":["Chitarra","Violino","Pianoforte","Batteria","Flauto","Tromba","Arpa","Sassofono"],"difficulty":2,"author":"claude","source":"ai:claude","license":"originale","id":"impostore-1pc1dll"}
+{"kind":"camaleonte","category":"Sport","words":["Rugby","Football americano"],"difficulty":3,"author":"claude","source":"ai:claude","license":"originale","id":"camaleonte-15w3lf1"}

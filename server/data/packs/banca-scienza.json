@@ -1,0 +1,1753 @@
+{
+ "id": "banca-scienza",
+ "name": "📚 Scienza",
+ "description": "Banca domande · 128 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "fisica",
+   "name": "Fisica",
+   "icon": "🔬",
+   "color": "#4361ee"
+  },
+  {
+   "id": "chimica",
+   "name": "Chimica",
+   "icon": "🔬",
+   "color": "#4361ee"
+  },
+  {
+   "id": "biologia",
+   "name": "Biologia e corpo umano",
+   "icon": "🔬",
+   "color": "#4361ee"
+  },
+  {
+   "id": "medicina",
+   "name": "Medicina",
+   "icon": "🔬",
+   "color": "#4361ee"
+  }
+ ],
+ "questions": [
+  {
+   "id": "multiple-13ywwh5",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento idrogeno?",
+   "options": [
+    "H",
+    "He",
+    "Li",
+    "Be"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1auavcd",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «He»?",
+   "options": [
+    "Elio",
+    "Idrogeno",
+    "Litio",
+    "Berillio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-bc9pr9",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento litio?",
+   "options": [
+    "Li",
+    "He",
+    "Be",
+    "H"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-19pepyz",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Be»?",
+   "options": [
+    "Berillio",
+    "Litio",
+    "Boro",
+    "Elio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1mrxxj8",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento boro?",
+   "options": [
+    "B",
+    "Be",
+    "C",
+    "Li"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-13rejt9",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento azoto?",
+   "options": [
+    "N",
+    "C",
+    "O",
+    "B"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1yy7gcb",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «O»?",
+   "options": [
+    "Ossigeno",
+    "Azoto",
+    "Fluoro",
+    "Carbonio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-114e7ld",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento fluoro?",
+   "options": [
+    "F",
+    "O",
+    "Ne",
+    "N"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-10u41rr",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Ne»?",
+   "options": [
+    "Neon",
+    "Fluoro",
+    "Sodio",
+    "Ossigeno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tc5bz6",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento sodio?",
+   "options": [
+    "Na",
+    "Ne",
+    "Mg",
+    "F"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-wyla5u",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Mg»?",
+   "options": [
+    "Magnesio",
+    "Sodio",
+    "Alluminio",
+    "Neon"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-17lcrzy",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento alluminio?",
+   "options": [
+    "Al",
+    "Mg",
+    "Si",
+    "Na"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-19nwso2",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Si»?",
+   "options": [
+    "Silicio",
+    "Alluminio",
+    "Fosforo",
+    "Magnesio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-iyj88s",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento fosforo?",
+   "options": [
+    "P",
+    "Si",
+    "S",
+    "Al"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1tefegv",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «S»?",
+   "options": [
+    "Zolfo",
+    "Fosforo",
+    "Cloro",
+    "Silicio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-igbrdv",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento cloro?",
+   "options": [
+    "Cl",
+    "S",
+    "Ar",
+    "P"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12ry44l",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Ar»?",
+   "options": [
+    "Argon",
+    "Cloro",
+    "Potassio",
+    "Zolfo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-131retm",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Ca»?",
+   "options": [
+    "Calcio",
+    "Potassio",
+    "Scandio",
+    "Argon"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ksho3r",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento scandio?",
+   "options": [
+    "Sc",
+    "Ca",
+    "Ti",
+    "K"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-10s01z1",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Ti»?",
+   "options": [
+    "Titanio",
+    "Scandio",
+    "Vanadio",
+    "Calcio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1l4xpb0",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento vanadio?",
+   "options": [
+    "V",
+    "Ti",
+    "Cr",
+    "Sc"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ob4gal",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento manganese?",
+   "options": [
+    "Mn",
+    "Cr",
+    "Fe",
+    "V"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1xxadz8",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento cobalto?",
+   "options": [
+    "Co",
+    "Fe",
+    "Ni",
+    "Mn"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-xi8tg3",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Ni»?",
+   "options": [
+    "Nichel",
+    "Cobalto",
+    "Rame",
+    "Ferro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1vs8he7",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento rame?",
+   "options": [
+    "Cu",
+    "Ni",
+    "Zn",
+    "Co"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-yv2sbi",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Zn»?",
+   "options": [
+    "Zinco",
+    "Rame",
+    "Gallio",
+    "Nichel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-lfymk0",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento gallio?",
+   "options": [
+    "Ga",
+    "Zn",
+    "Ge",
+    "Cu"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-xhkjci",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Ge»?",
+   "options": [
+    "Germanio",
+    "Gallio",
+    "Arsenico",
+    "Zinco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-d6iysw",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento arsenico?",
+   "options": [
+    "As",
+    "Ge",
+    "Se",
+    "Ga"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1arv7fy",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Se»?",
+   "options": [
+    "Selenio",
+    "Arsenico",
+    "Bromo",
+    "Germanio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-caps9t",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento bromo?",
+   "options": [
+    "Br",
+    "Se",
+    "Kr",
+    "As"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12sj8q7",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Kr»?",
+   "options": [
+    "Kripton",
+    "Bromo",
+    "Rubidio",
+    "Selenio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1fx8mqr",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento ittrio?",
+   "options": [
+    "Y",
+    "Sr",
+    "Zr",
+    "Rb"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-9a8bdt",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento rodio?",
+   "options": [
+    "Rh",
+    "Ru",
+    "Pd",
+    "Tc"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-i6nezm",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento argento?",
+   "options": [
+    "Ag",
+    "Pd",
+    "Cd",
+    "Rh"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-79lsgi",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento antimonio?",
+   "options": [
+    "Sb",
+    "Sn",
+    "Te",
+    "In"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-159ck9p",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Dy»?",
+   "options": [
+    "Disprosio",
+    "Terbio",
+    "Olmio",
+    "Gadolinio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1mof9d6",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento olmio?",
+   "options": [
+    "Ho",
+    "Dy",
+    "Er",
+    "Tb"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-14b8el5",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento tulio?",
+   "options": [
+    "Tm",
+    "Er",
+    "Yb",
+    "Ho"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1bmtyq5",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Yb»?",
+   "options": [
+    "Itterbio",
+    "Tulio",
+    "Lutezio",
+    "Erbio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1a0c29g",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Hf»?",
+   "options": [
+    "Afnio",
+    "Lutezio",
+    "Tantalio",
+    "Itterbio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1sagzoz",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «W»?",
+   "options": [
+    "Tungsteno",
+    "Tantalio",
+    "Renio",
+    "Afnio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1aabnyf",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Hg»?",
+   "options": [
+    "Mercurio",
+    "Oro",
+    "Tallio",
+    "Platino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-14e9plc",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Pb»?",
+   "options": [
+    "Piombo",
+    "Tallio",
+    "Bismuto",
+    "Mercurio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-xidwr8",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento attinio?",
+   "options": [
+    "Ac",
+    "Ra",
+    "Th",
+    "Fr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10i0ga2",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Th»?",
+   "options": [
+    "Torio",
+    "Attinio",
+    "Protoattinio",
+    "Radio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1sug72x",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «U»?",
+   "options": [
+    "Uranio",
+    "Protoattinio",
+    "Nettunio",
+    "Torio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-q84b2q",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il simbolo chimico dell'elemento nettunio?",
+   "options": [
+    "Np",
+    "U",
+    "Pu",
+    "Pa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-zpw6hy",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento chimico ha il simbolo «Cm»?",
+   "options": [
+    "Curio",
+    "Americio",
+    "Berkelio",
+    "Plutonio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-11og892",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale chimico russo pubblicò nel 1869 una tavola periodica con caselle vuote per elementi ancora da scoprire?",
+   "options": [
+    "Dmitrij Mendeleev",
+    "Antoine Lavoisier",
+    "John Dalton",
+    "Amedeo Avogadro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-dzhhgz",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Chi formulò la legge di conservazione della massa ed è considerato il padre della chimica moderna?",
+   "options": [
+    "Antoine Lavoisier",
+    "Robert Boyle",
+    "John Dalton",
+    "Joseph Priestley"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2vvbrp",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale scienziato inglese propose all'inizio dell'Ottocento la prima teoria atomica moderna?",
+   "options": [
+    "John Dalton",
+    "J. J. Thomson",
+    "Ernest Rutherford",
+    "Robert Boyle"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-157l99c",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale chimico sintetizzò l'urea nel 1828, dimostrando che un composto organico si può ottenere in laboratorio?",
+   "options": [
+    "Friedrich Wöhler",
+    "August Kekulé",
+    "Justus von Liebig",
+    "Louis Pasteur"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-q9f6d2",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale chimico propose la struttura ad anello del benzene, ispirato (si racconta) da un sogno di un serpente che si morde la coda?",
+   "options": [
+    "August Kekulé",
+    "Friedrich Wöhler",
+    "Jöns Jacob Berzelius",
+    "Justus von Liebig"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nwetg8",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale chimico italiano sintetizzò per primo la nitroglicerina, nel 1847?",
+   "options": [
+    "Ascanio Sobrero",
+    "Stanislao Cannizzaro",
+    "Giulio Natta",
+    "Amedeo Avogadro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-9rusak",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale chimico italiano diffuse al congresso di Karlsruhe del 1860 il «Sunto» che chiarì la differenza tra atomi e molecole?",
+   "options": [
+    "Stanislao Cannizzaro",
+    "Ascanio Sobrero",
+    "Giulio Natta",
+    "Raffaele Piria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pe04ia",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale chimico italiano vinse il premio Nobel nel 1963 per i suoi studi sui polimeri, come il polipropilene isotattico?",
+   "options": [
+    "Giulio Natta",
+    "Stanislao Cannizzaro",
+    "Ascanio Sobrero",
+    "Primo Levi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-15tvd95",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento, previsto da Mendeleev con il nome di «eka-alluminio», fu scoperto nel 1875?",
+   "options": [
+    "Gallio",
+    "Germanio",
+    "Scandio",
+    "Indio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-p189x0",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento fu osservato nello spettro del Sole prima di essere trovato sulla Terra?",
+   "options": [
+    "Elio",
+    "Neon",
+    "Argon",
+    "Idrogeno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1namyid",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento prende il nome dalla Polonia?",
+   "options": [
+    "Polonio",
+    "Francio",
+    "Germanio",
+    "Rutenio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ohoytr",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento sintetico porta il nome di un fisico italiano?",
+   "options": [
+    "Fermio",
+    "Einsteinio",
+    "Bohrio",
+    "Nobelio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ab60h9",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il metallo più abbondante nella crosta terrestre?",
+   "options": [
+    "Alluminio",
+    "Ferro",
+    "Calcio",
+    "Sodio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-u8bvr0",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è l'elemento più elettronegativo della tavola periodica?",
+   "options": [
+    "Fluoro",
+    "Ossigeno",
+    "Cloro",
+    "Azoto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-p99ork",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale gas nobile è radioattivo e si può accumulare nelle cantine e nei piani interrati?",
+   "options": [
+    "Radon",
+    "Xenon",
+    "Kripton",
+    "Neon"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-125jfu0",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Nell'equazione dei gas perfetti PV = nRT, che cosa indica la lettera R?",
+   "options": [
+    "La costante universale dei gas",
+    "Il raggio delle molecole",
+    "La resistenza del recipiente",
+    "Il rapporto tra pressione e volume"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-ejg62b",
+   "categoryId": "chimica",
+   "type": "numeric",
+   "text": "Quanti litri occupa una mole di gas ideale a 0 °C e alla pressione di 1 atmosfera?",
+   "answer": 22.4,
+   "unit": "litri",
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1s8gqx2",
+   "categoryId": "chimica",
+   "type": "truefalse",
+   "text": "A parità di temperatura e pressione, volumi uguali di gas diversi contengono lo stesso numero di molecole.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1li4tuq",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è l'unità di misura della quantità di sostanza nel Sistema Internazionale?",
+   "options": [
+    "La mole",
+    "Il grammo",
+    "Il kelvin",
+    "La candela"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ynqfbp",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "La costante di Faraday corrisponde al modulo della carica elettrica di una mole di quali particelle?",
+   "options": [
+    "Elettroni",
+    "Neutroni",
+    "Particelle alfa",
+    "Atomi di elio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1d6su2l",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quanti atomi di carbonio ha una molecola di benzene?",
+   "options": [
+    "6",
+    "4",
+    "8",
+    "12"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1kusqlz",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è il più semplice degli alcani, componente principale del gas naturale?",
+   "options": [
+    "Metano",
+    "Etano",
+    "Propano",
+    "Butano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1jxb3ow",
+   "categoryId": "chimica",
+   "type": "truefalse",
+   "text": "La formula del bicarbonato di sodio è NaHCO3.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3psdyc",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale gas dà il tipico odore di uova marce?",
+   "options": [
+    "Acido solfidrico",
+    "Ammoniaca",
+    "Metano",
+    "Anidride solforosa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-192m9m0",
+   "categoryId": "chimica",
+   "type": "truefalse",
+   "text": "L'acqua pesante contiene deuterio al posto dell'idrogeno comune.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nh50s0",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Che cosa misura il «numero di ottano» di una benzina?",
+   "options": [
+    "La resistenza alla detonazione",
+    "Il contenuto di zolfo",
+    "La densità",
+    "Il potere calorifico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nm1ue8",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Il ritmo circadiano del corpo umano segue un ciclo di circa quante ore?",
+   "options": [
+    "24",
+    "8",
+    "16",
+    "32"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-17z76vt",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Il meteorologo Tetsuya Fujita ha ideato la scala di intensità di quale fenomeno naturale?",
+   "options": [
+    "Tornado",
+    "Uragani",
+    "Terremoti",
+    "Eruzioni vulcaniche"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1x4hrk4",
+   "categoryId": "medicina",
+   "type": "truefalse",
+   "text": "Il primo vaccino contro la rabbia fu sperimentato su un essere umano da Louis Pasteur nel 1885.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1gf3b54",
+   "categoryId": "medicina",
+   "type": "multiple",
+   "text": "Quale parte del corpo colpisce il glaucoma?",
+   "options": [
+    "Gli occhi",
+    "La gola",
+    "Lo stomaco",
+    "Il sangue"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-17n294m",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Come si chiama in psicologia il disagio di chi tiene insieme convinzioni in contrasto tra loro?",
+   "options": [
+    "Dissonanza cognitiva",
+    "Sindrome del voltagabbana",
+    "Cervello diviso",
+    "Visione cieca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1qjbn4c",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Di quali due elementi è composto in gran parte il Sole?",
+   "options": [
+    "Idrogeno ed elio",
+    "Idrogeno e azoto",
+    "Carbonio e azoto",
+    "Carbonio ed elio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-wz1rl4",
+   "categoryId": "biologia",
+   "type": "truefalse",
+   "text": "Come con i Neanderthal, anche l'Homo sapiens si è incrociato con l'uomo di Denisova.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1deigvs",
+   "categoryId": "medicina",
+   "type": "multiple",
+   "text": "Di quale articolazione fa parte il menisco mediale?",
+   "options": [
+    "Ginocchio",
+    "Gomito",
+    "Caviglia",
+    "Spalla"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1iy6xed",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Quale di queste ossa NON si trova nel braccio umano?",
+   "options": [
+    "Tibia",
+    "Omero",
+    "Ulna",
+    "Radio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-gazrsx",
+   "categoryId": "fisica",
+   "type": "truefalse",
+   "text": "Il suono può propagarsi nel vuoto.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-74mjr2",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Quale di queste NON fa parte della struttura di un neurone?",
+   "options": [
+    "Isole di Langerhans",
+    "Nodo di Ranvier",
+    "Cellula di Schwann",
+    "Guaina mielinica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-mhnlgx",
+   "categoryId": "medicina",
+   "type": "truefalse",
+   "text": "Si parla di tachicardia quando a riposo il cuore batte più di circa 100 volte al minuto.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ycz245",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "L'afnio, elemento numero 72, prende il nome da quale città danese?",
+   "options": [
+    "Copenaghen",
+    "Odense",
+    "Aarhus",
+    "Skagen"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-71kexn",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale di questi composti NON si trova nel succo gastrico?",
+   "options": [
+    "Acido solforico",
+    "Acido cloridrico",
+    "Cloruro di potassio",
+    "Cloruro di sodio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-szip8b",
+   "categoryId": "chimica",
+   "type": "truefalse",
+   "text": "Il nome del litio deriva da quello della Lituania.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1v6aa4i",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "In fisica, la conservazione dell'energia e quella della quantità di moto sono conseguenze di quale teorema?",
+   "options": [
+    "Teorema di Noether",
+    "Teorema di Bell",
+    "Teorema di Wick",
+    "Teorema di Carnot"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1qp9rpy",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Quale estinzione di massa, causata dall'impatto di un asteroide, eliminò gran parte dei dinosauri?",
+   "options": [
+    "Cretaceo-Paleogene",
+    "Triassico-Giurassico",
+    "Permiano-Triassico",
+    "Ordoviciano-Siluriano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1g2uxrv",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale gruppo funzionale rende un composto organico un alcol?",
+   "options": [
+    "Ossidrile (–OH)",
+    "Carbonile",
+    "Alchile",
+    "Aldeide"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1k0r2d3",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Qual è la tossina più potente conosciuta?",
+   "options": [
+    "Tossina botulinica",
+    "Ricina",
+    "Cianuro",
+    "Amianto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pvveg7",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Qual è la formula chimica dell'ozono?",
+   "options": [
+    "O3",
+    "O2",
+    "N2O",
+    "SO4"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-3vy7jm",
+   "categoryId": "medicina",
+   "type": "multiple",
+   "text": "La coulrofobia è la paura irrazionale di che cosa?",
+   "options": [
+    "Dei clown",
+    "Dei cimiteri",
+    "Degli aghi",
+    "Delle gallerie"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qufmyz",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale elemento si usa comunemente per «drogare» il silicio dei semiconduttori?",
+   "options": [
+    "Boro",
+    "Ossigeno",
+    "Carbonio",
+    "Ferro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-68xu2u",
+   "categoryId": "biologia",
+   "type": "multiple",
+   "text": "Quante zampe è biologicamente impossibile che abbia un centopiedi?",
+   "options": [
+    "100",
+    "26",
+    "50",
+    "74"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-grvmfa",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Nella scala Beaufort del vento, come si chiama il grado 8?",
+   "options": [
+    "Burrasca moderata",
+    "Tempesta",
+    "Uragano",
+    "Brezza tesa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-o5fwof",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale legge lega il flusso del campo elettrico uscente da una superficie chiusa alla carica che essa racchiude?",
+   "options": [
+    "Legge di Gauss",
+    "Legge di Faraday",
+    "Legge di Ampère",
+    "Legge di Biot-Savart"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-4ryxlx",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale esperimento dimostra che la Terra ruota su sé stessa?",
+   "options": [
+    "Il pendolo di Foucault",
+    "La Stella Polare",
+    "La meridiana",
+    "Le placche tettoniche"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1m3ozq9",
+   "categoryId": "chimica",
+   "type": "multiple",
+   "text": "Quale di questi liquidi è il meno viscoso a 25 °C?",
+   "options": [
+    "Acetone",
+    "Acqua",
+    "Mercurio",
+    "Benzene"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-vs9uyl",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale scienziato italiano studiò il moto dei corpi sul piano inclinato e formulò il principio di inerzia?",
+   "options": [
+    "Galileo Galilei",
+    "Evangelista Torricelli",
+    "Alessandro Volta",
+    "Giovanni Borelli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-16wwy8p",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale unità di misura del Sistema Internazionale esprime la pressione?",
+   "options": [
+    "Pascal",
+    "Joule",
+    "Watt",
+    "Newton"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1hlgnys",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Chi misurò per primo la pressione atmosferica con un barometro a mercurio nel 1643?",
+   "options": [
+    "Evangelista Torricelli",
+    "Blaise Pascal",
+    "Robert Boyle",
+    "Otto von Guericke"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1sroruh",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale principio afferma che un corpo immerso in un fluido riceve una spinta verso l'alto pari al peso del fluido spostato?",
+   "options": [
+    "Principio di Archimede",
+    "Principio di Pascal",
+    "Principio di Bernoulli",
+    "Legge di Stevino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1yosp2u",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "Quanti metri al secondo quadrato vale, circa, l'accelerazione di gravità sulla superficie della Terra?",
+   "answer": 9.8,
+   "unit": "m/s²",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-93jmz8",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Come si chiama la grandezza fisica che si misura in kg·m/s e si conserva negli urti?",
+   "options": [
+    "Quantità di moto",
+    "Energia cinetica",
+    "Impulso angolare",
+    "Potenza"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1a7i2aa",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale scala di temperatura ha lo zero fissato allo zero assoluto?",
+   "options": [
+    "Kelvin",
+    "Celsius",
+    "Fahrenheit",
+    "Réaumur"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-l7w8ny",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale principio della termodinamica afferma che l'entropia di un sistema isolato non può diminuire?",
+   "options": [
+    "Secondo principio",
+    "Primo principio",
+    "Principio zero",
+    "Terzo principio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1h1v66",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "In quale modo si propaga principalmente il calore del Sole fino alla Terra?",
+   "options": [
+    "Irraggiamento",
+    "Conduzione",
+    "Convezione",
+    "Evaporazione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-dzb0ho",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Chi formulò il concetto di «macchina termica ideale» con un ciclo di quattro trasformazioni, nel 1824?",
+   "options": [
+    "Sadi Carnot",
+    "James Joule",
+    "Rudolf Clausius",
+    "Lord Kelvin"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-bd998m",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale scienziato scoprì nel 1820 che una corrente elettrica devia l'ago di una bussola?",
+   "options": [
+    "Hans Christian Ørsted",
+    "Michael Faraday",
+    "André-Marie Ampère",
+    "James Clerk Maxwell"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-i2xocr",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Che cosa scoprì Michael Faraday nel 1831?",
+   "options": [
+    "L'induzione elettromagnetica",
+    "L'elettrone",
+    "La radioattività",
+    "L'effetto fotoelettrico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-p2lhln",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Qual è l'unità di misura del campo magnetico nel Sistema Internazionale?",
+   "options": [
+    "Tesla",
+    "Weber",
+    "Henry",
+    "Gauss"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-11p89co",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Chi riassunse l'elettromagnetismo in quattro equazioni, prevedendo l'esistenza delle onde elettromagnetiche?",
+   "options": [
+    "James Clerk Maxwell",
+    "Heinrich Hertz",
+    "Nikola Tesla",
+    "Guglielmo Marconi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1hl6re7",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fisico italiano compì nel 1895 i primi esperimenti di telegrafia senza fili?",
+   "options": [
+    "Guglielmo Marconi",
+    "Antonio Meucci",
+    "Alessandro Volta",
+    "Enrico Fermi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1w11k2n",
+   "categoryId": "fisica",
+   "type": "truefalse",
+   "text": "In un circuito in serie, la corrente elettrica è uguale in tutti i componenti.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-7xw87y",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Come si chiama il fenomeno per cui la luce cambia direzione passando dall'aria all'acqua?",
+   "options": [
+    "Rifrazione",
+    "Riflessione",
+    "Diffrazione",
+    "Assorbimento"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-12ifyig",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fenomeno ottico scompone la luce bianca nei colori dell'arcobaleno attraverso un prisma?",
+   "options": [
+    "Dispersione",
+    "Interferenza",
+    "Polarizzazione",
+    "Fluorescenza"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xw7gg3",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale tipo di lente corregge la miopia?",
+   "options": [
+    "Divergente (concava)",
+    "Convergente (convessa)",
+    "Cilindrica",
+    "Bifocale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1n00fhk",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Per la spiegazione di quale fenomeno Einstein ricevette il Nobel per la Fisica nel 1921?",
+   "options": [
+    "L'effetto fotoelettrico",
+    "La relatività generale",
+    "Il moto browniano",
+    "L'equivalenza massa-energia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-18n5r4d",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale principio afferma che non si possono conoscere con precisione assoluta insieme posizione e quantità di moto di una particella?",
+   "options": [
+    "Principio di indeterminazione di Heisenberg",
+    "Principio di esclusione di Pauli",
+    "Principio di complementarità di Bohr",
+    "Principio di Fermat"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1c7yh5m",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale fisico propose nel 1900 che l'energia venga emessa in «quanti», dando inizio alla fisica quantistica?",
+   "options": [
+    "Max Planck",
+    "Niels Bohr",
+    "Louis de Broglie",
+    "Erwin Schrödinger"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3x8gpl",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale esperimento del 1919, durante un'eclissi solare, confermò la deviazione della luce prevista dalla relatività generale?",
+   "options": [
+    "La spedizione di Eddington",
+    "L'esperimento di Michelson-Morley",
+    "L'esperimento di Millikan",
+    "L'esperimento di Davisson-Germer"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1irqpe8",
+   "categoryId": "fisica",
+   "type": "multiple",
+   "text": "Quale particella fu confermata al CERN nel 2012, spiegando l'origine della massa delle altre particelle?",
+   "options": [
+    "Bosone di Higgs",
+    "Quark top",
+    "Neutrino tauonico",
+    "Gravitone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-n7j2ut",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "In che anno Albert Einstein pubblicò la teoria della relatività generale?",
+   "answer": 1915,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-17z5vb9",
+   "categoryId": "fisica",
+   "type": "numeric",
+   "text": "A quanti kelvin corrisponde, circa, la temperatura della radiazione cosmica di fondo?",
+   "answer": 2.7,
+   "unit": "K",
+   "difficulty": 3
+  }
+ ]
+}

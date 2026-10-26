@@ -184,7 +184,7 @@ export function sanitizeOptions(id: ShowId, input: unknown): Record<string, stri
 
 /** Copertina del pack (schermata iniziale del menù). */
 export const PACK = {
-  name: 'Sapere è Potere',
+  name: 'Quiz del Pozzo',
   edition: 'Party Pack',
   tagline: '14 giochi per il divano: prendi il telefono e unisciti!'
 } as const;
@@ -210,9 +210,9 @@ const show = (m: ShowInput): ShowMeta => ({
 export const SHOWS: Record<ShowId, ShowMeta> = {
   quiz: show({
     id: 'quiz',
-    name: 'Sapere è Potere',
+    name: 'Quiz del Pozzo',
     subtitle: 'Quiz show con carte ostacolo e scalata della Piramide',
-    icon: '👑',
+    icon: '🪣',
     color: '#ffd60a',
     badge: 'COMPLETO · 9 GIOCHI',
     durationLabel: '12–25 min',
