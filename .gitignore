@@ -14,10 +14,6 @@ user-packs/
 build-*
 *.bat
 
-# File Docker e configurazioni server personali
-docker*
-Dockerfile
-
 # Documentazione personale e note di progetto (escluso il solo README.md in root)
 docs/
 *.md

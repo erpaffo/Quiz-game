@@ -17,9 +17,8 @@ export class BombGame implements GameMode {
   private holder = '';
   private fuseTotal = 0;
   private fuseLeft = 0;
-  private tickFrom = 0;
-  /** Annulla il timer della miccia; null = miccia ferma. */
-  private cancelFuse: (() => void) | null = null;
+  /** Annulla il timer della miccia e dice quanto ne restava; null = miccia ferma. */
+  private cancelFuse: (() => number) | null = null;
   private holderCorrect = false;
   private exploded = false;
   private n = 0;
@@ -44,7 +43,6 @@ export class BombGame implements GameMode {
    */
   private burn() {
     this.stopBurn();
-    this.tickFrom = Date.now();
     this.cancelFuse = this.ctx.gameTimer(() => {
       this.cancelFuse = null;
       this.fuseLeft = 0;
@@ -52,12 +50,11 @@ export class BombGame implements GameMode {
     }, Math.max(0, this.fuseLeft));
   }
 
-  /** Spegne la miccia conservando il tempo residuo. Idempotente: chiamarla due volte non scala il tempo due volte. */
+  /** Spegne la miccia conservando il tempo residuo (la pausa non lo consuma). Idempotente. */
   private stopBurn() {
     if (!this.cancelFuse) return;
-    this.cancelFuse();
+    this.fuseLeft = this.cancelFuse();
     this.cancelFuse = null;
-    this.fuseLeft -= Date.now() - this.tickFrom;
   }
 
   private next() {
@@ -72,7 +69,7 @@ export class BombGame implements GameMode {
     this.holderCorrect = false;
     const def = this.ctx.pool.drawMc();
     const pub = this.ctx.publicMc(def, this.n, 0);
-    this.round = new McRound(def, pub, this.ctx.dur('QUESTION'));
+    this.round = new McRound(def, pub, this.ctx.dur('QUESTION'), this.ctx.now);
     this.ctx.present(def);
     this.step = 'question';
     this.ctx.setStep({ step: 'question', question: pub, holder: this.holder, fuse: this.heat() }, this.round.durationMs, () => this.endQuestion());

@@ -29,7 +29,7 @@ export interface ClientToServerEvents {
   MENU_NAV: (p: { view?: MenuView; focus?: ShowId }, ack: Ack) => void;
 
   // --- Controller ---
-  JOIN_ROOM: (p: { code: string; name: string; playerId?: string }, ack: Ack<{ playerId: string; reconnected: boolean }>) => void;
+  JOIN_ROOM: (p: { code: string; name: string; playerId?: string; rejoinKey?: string }, ack: Ack<{ playerId: string; rejoinKey: string; reconnected: boolean }>) => void;
   SELECT_CHARACTER: (p: { characterId: string; skinId: string; custom?: Record<string, string> }, ack: Ack) => void;
   UPLOAD_SELFIE: (p: { dataUrl: string | null }, ack: Ack) => void;
   PLAYER_READY: (p: { ready: boolean }) => void;

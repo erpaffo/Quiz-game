@@ -26,16 +26,27 @@ export class CluesGame implements GameMode {
     const def = this.ctx.pool.drawMc();
     const duration = this.ctx.dur('CLUE_QUESTION');
     this.revealMs = duration * REVEAL_SHARE;
-    const words = def.text.split(/\s+/).length;
-    const pub = this.ctx.publicMc(def, this.n, CONFIG.CLUES_QUESTIONS, { startedAt: Date.now(), wordMs: this.revealMs / words });
-    this.round = new McRound(def, pub, duration);
+    const words = def.text.split(/\s+/);
+    const wordMs = this.revealMs / words.length;
+    // Ai telefoni arrivano solo le parole già svelate: le altre sono segnaposto della stessa lunghezza.
+    const masked = (shown: number) => words.map((w, i) => (i < shown ? w : '▮'.repeat(Math.min(6, w.length)))).join(' ');
+    const pub = this.ctx.publicMc(def, this.n, CONFIG.CLUES_QUESTIONS, { startedAt: Date.now(), wordMs });
+    pub.text = masked(1);
+    this.round = new McRound(def, pub, duration, this.ctx.now);
     this.ctx.present(def);
     this.step = 'question';
     this.ctx.setStep({ step: 'question', question: pub }, duration, () => this.reveal());
+    for (let shown = 2; shown <= words.length; shown++) {
+      this.ctx.later(() => {
+        pub.text = masked(shown);
+        this.ctx.patchStep({ step: 'question', question: pub });
+      }, Math.round(wordMs * (shown - 1)));
+    }
   }
 
   private reveal() {
     const r = this.round!;
+    r.pub.text = r.def.text;
     this.step = 'reveal';
     this.ctx.setStep(
       { step: 'reveal', question: r.pub, correctIndex: r.def.correctIndex, results: r.results(this.ctx.players()) },

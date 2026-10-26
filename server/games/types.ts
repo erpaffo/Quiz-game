@@ -22,9 +22,12 @@ export interface GameContext {
   later(fn: () => void, ms: number): void;
   /**
    * Timer legato al gioco intero: sopravvive ai cambi di passo (es. la miccia della Bomba),
-   * annullato a fine gioco o alla chiusura della stanza. Restituisce la funzione che lo annulla.
+   * annullato a fine gioco o alla chiusura della stanza. Restituisce la funzione che lo annulla
+   * (e restituisce i ms che mancavano, senza contare le pause).
    */
-  gameTimer(fn: () => void, ms: number): () => void;
+  gameTimer(fn: () => void, ms: number): () => number;
+  /** Orologio di gioco: come Date.now() ma senza il tempo passato in pausa (per misurare i tempi di risposta). */
+  now(): number;
   /** Aggiunge/toglie punti (mai sotto zero). Restituisce la variazione effettiva. */
   addScore(p: Player, delta: number): number;
   /** Raddoppia `base` se il giocatore ha la carta Doppio attiva (e la consuma). */

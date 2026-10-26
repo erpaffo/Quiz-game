@@ -24,6 +24,7 @@ interface Session {
   code: string;
   name: string;
   playerId: string;
+  rejoinKey: string;
 }
 
 const SESSION_KEY = 'sep:player';
@@ -88,7 +89,7 @@ function toast(text: string, good = false) {
 
 socket.on('connect', () => {
   conn.hidden = true;
-  if (session && (!urlRoom || urlRoom === session.code)) void join(session.code, session.name, session.playerId, true);
+  if (session && (!urlRoom || urlRoom === session.code)) void join(session.code, session.name, session, true);
   else if (!joined) renderJoin();
 });
 socket.on('disconnect', () => {
@@ -101,8 +102,8 @@ socket.on('ROOM_STATE', (snap) => {
 });
 socket.on('KICKED', () => leave('Sei stato rimosso dalla stanza.'));
 
-async function join(code: string, name: string, playerId?: string, silent = false) {
-  const r = await socket.emitWithAck('JOIN_ROOM', { code: code.toUpperCase(), name, playerId });
+async function join(code: string, name: string, prev?: Pick<Session, 'playerId' | 'rejoinKey'>, silent = false) {
+  const r = await socket.emitWithAck('JOIN_ROOM', { code: code.toUpperCase(), name, playerId: prev?.playerId, rejoinKey: prev?.rejoinKey });
   if (!r.ok) {
     if (silent) {
       session = null;
@@ -111,7 +112,7 @@ async function join(code: string, name: string, playerId?: string, silent = fals
     return renderJoin(silent ? '' : r.error);
   }
   joined = true;
-  session = { code: code.toUpperCase(), name, playerId: r.playerId };
+  session = { code: code.toUpperCase(), name, playerId: r.playerId, rejoinKey: r.rejoinKey };
   store(SESSION_KEY, session);
   if (!r.reconnected) {
     local.charIdx = -1;

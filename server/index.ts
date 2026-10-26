@@ -12,6 +12,7 @@ await startServer({
   root: ROOT,
   staticDir: PROD ? resolve(ROOT, 'dist') : undefined,
   mediaDir: resolve(ROOT, 'user-media'),
+  editorKey: process.env.EDITOR_KEY || undefined,
   speed: Number(process.env.GAME_SPEED ?? 1) || 1,
   hotspot: process.env.HOTSPOT_SSID ? { ssid: process.env.HOTSPOT_SSID, password: process.env.HOTSPOT_PASS ?? '' } : null
 });

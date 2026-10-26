@@ -1,0 +1,57 @@
+# ==============================================================================
+# Docker Compose per Raspberry Pi (Gioco Locale + Online + Web App iPhone)
+# ==============================================================================
+# Installazione rapida su Raspberry Pi tramite GitHub:
+#   1. git clone <URL_DEL_TUO_REPO_GITHUB>
+#   2. cd "Sapere è Potere"
+#   3. docker compose up -d --build
+#
+# Per aggiornare il server dopo un git push:
+#   git pull && docker compose up -d --build
+# ==============================================================================
+
+services:
+  party-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sapere-party-hub
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - GAME_SPEED=1
+      # Chiave del Laboratorio domande: OBBLIGATORIA se attivi il tunnel qui sotto (senza, chiunque online
+      # può cancellare i pacchetti). Mettila nel file .env accanto a questo: EDITOR_KEY=una-frase-lunga
+      - EDITOR_KEY=${EDITOR_KEY:-}
+    volumes:
+      # Mantiene salvi sul Raspberry Pi i pacchetti di domande creati dal telefono/editor
+      - ./user-packs:/app/user-packs
+      # Mantiene salvi i file multimediali (immagini/audio) caricati nel Laboratorio
+      - ./user-media:/app/user-media
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/info"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ----------------------------------------------------------------------------
+  # OPZIONALE: Giocare ONLINE da fuori casa in HTTPS (Cloudflare Tunnel gratuito)
+  # ----------------------------------------------------------------------------
+  # Vantaggi:
+  # - Non devi aprire porte sul router di casa.
+  # - Fornisce HTTPS automatico (fondamentale su iPhone per Web App, sensori e audio).
+  # Per attivarlo: togli i '#' qui sotto e inserisci il tuo CLOUDFLARE_TUNNEL_TOKEN.
+  #
+  # cloudflared:
+  #   image: cloudflare/cloudflared:latest
+  #   container_name: sapere-party-tunnel
+  #   restart: unless-stopped
+  #   command: tunnel --no-autoupdate run
+  #   environment:
+  #     - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+  #   depends_on:
+  #     - party-hub
+

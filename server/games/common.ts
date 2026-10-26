@@ -6,18 +6,21 @@ import type { GameContext } from './types';
 
 /** Una domanda a scelta multipla in corso: raccoglie risposte e tempi. */
 export class McRound {
-  readonly startedAt = Date.now();
+  readonly startedAt: number;
   readonly answers = new Map<string, { optionIndex: number; timeMs: number }>();
   /** Punti assegnati durante la domanda (giochi che premiano subito, es. Il Più Veloce). */
   readonly points = new Map<string, number>();
 
-  constructor(readonly def: McDef, readonly pub: QuestionPublic, readonly durationMs: number) {}
+  /** `clock`: orologio di gioco (ctx.now), così il tempo in pausa non conta come tempo di risposta. */
+  constructor(readonly def: McDef, readonly pub: QuestionPublic, readonly durationMs: number, private readonly clock: () => number) {
+    this.startedAt = clock();
+  }
 
   answer(p: Player, a: GameAction): string | null {
     if (a.type !== 'answer' || a.questionId !== this.def.id) return 'Domanda non attiva';
     if (this.answers.has(p.id)) return 'Hai già risposto';
     if (!Number.isInteger(a.optionIndex) || a.optionIndex < 0 || a.optionIndex >= this.def.options.length) return 'Risposta non valida';
-    this.answers.set(p.id, { optionIndex: a.optionIndex, timeMs: Date.now() - this.startedAt });
+    this.answers.set(p.id, { optionIndex: a.optionIndex, timeMs: this.clock() - this.startedAt });
     return null;
   }
 

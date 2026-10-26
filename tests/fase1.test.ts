@@ -4,6 +4,7 @@
 import assert from 'node:assert/strict';
 import { afterEach, beforeEach, describe, it, mock } from 'node:test';
 import type { PlayState } from '../shared/types';
+import { PausableTimers } from '../server/core/timers';
 import { BombGame } from '../server/games/bomb';
 import { richestOther } from '../server/games/common';
 import type { GameContext } from '../server/games/types';
@@ -40,6 +41,7 @@ function fakeContext(players: Player[]) {
     }, ms);
     stepTimers.add(t);
   };
+  const gameTimers = new PausableTimers();
   const ctx = {
     players: () => players,
     connected: () => players.filter((p) => p.connected),
@@ -63,10 +65,8 @@ function fakeContext(players: Player[]) {
       later(end, delay);
     },
     later,
-    gameTimer: (fn: () => void, ms: number) => {
-      const t = setTimeout(fn, ms);
-      return () => clearTimeout(t);
-    },
+    gameTimer: (fn: () => void, ms: number) => gameTimers.add(fn, ms),
+    now: () => Date.now(),
     addScore: (p: Player, d: number) => {
       const applied = Math.max(-p.score, d);
       p.score += applied;
@@ -86,7 +86,8 @@ function bombWithFuse(fuseMs: number) {
   const f = fakeContext(players);
   const game = new BombGame(f.ctx);
   game.start();
-  const internals = game as unknown as { holder: string; fuseLeft: number; burn(): void };
+  const internals = game as unknown as { holder: string; fuseLeft: number; burn(): void; stopBurn(): void };
+  internals.stopBurn();
   internals.fuseLeft = fuseMs;
   internals.burn();
   const holder = players.find((p) => p.id === internals.holder)!;
@@ -151,30 +152,39 @@ describe('Room: capo stanza e SKIP_INTRO', () => {
 
   function roomWithTwo() {
     const room = new Room(io, 'TEST', 'host-key', packs);
-    const a = room.join('sock-a', 'Ada') as { playerId: string };
+    const a = room.join('sock-a', 'Ada') as { playerId: string; rejoinKey: string };
     const b = room.join('sock-b', 'Bruno') as { playerId: string };
     const vip = () => (room as unknown as { vipId(): string | null }).vipId();
-    return { room, a: a.playerId, b: b.playerId, vip };
+    return { room, a: a.playerId, aKey: a.rejoinKey, b: b.playerId, vip };
   }
 
+  it('riconnettersi richiede la chiave segreta: con il solo id (pubblico) non si ruba il posto', () => {
+    const { room, a, aKey } = roomWithTwo();
+    room.disconnect('sock-a');
+    assert.equal(room.join('sock-ladro', 'Ladro', a, 'chiave-sbagliata') && room.players.get(a)!.socketId, null);
+    assert.deepEqual(room.join('sock-a2', 'Ada', a, aKey), { playerId: a, rejoinKey: aKey, reconnected: true });
+    assert.equal(room.players.get(a)!.socketId, 'sock-a2');
+    room.destroy();
+  });
+
   it('un micro-calo di rete non sposta la corona', () => {
-    const { room, a, vip } = roomWithTwo();
+    const { room, a, aKey, vip } = roomWithTwo();
     assert.equal(vip(), a);
     room.disconnect('sock-a');
     mock.timers.tick(5_000);
     assert.equal(vip(), a);
-    room.join('sock-a2', 'Ada', a);
+    room.join('sock-a2', 'Ada', a, aKey);
     assert.equal(vip(), a);
     room.destroy();
   });
 
   it('dopo la tolleranza la corona passa e non torna indietro', () => {
-    const { room, a, b, vip } = roomWithTwo();
+    const { room, a, aKey, b, vip } = roomWithTwo();
     vip();
     room.disconnect('sock-a');
     mock.timers.tick(15_100);
     assert.equal(vip(), b);
-    room.join('sock-a2', 'Ada', a);
+    room.join('sock-a2', 'Ada', a, aKey);
     assert.equal(vip(), b);
     room.destroy();
   });

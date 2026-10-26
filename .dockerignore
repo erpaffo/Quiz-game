@@ -11,3 +11,5 @@ Thumbs.db
 user-media/*
 !user-media/.gitkeep
 
+app-build
+build

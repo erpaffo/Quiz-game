@@ -23,7 +23,7 @@ export class FastestGame implements GameMode {
     this.winners = [];
     const def = this.ctx.pool.drawMc();
     const pub = this.ctx.publicMc(def, this.n, CONFIG.FASTEST_QUESTIONS);
-    this.round = new McRound(def, pub, this.ctx.dur('QUESTION'));
+    this.round = new McRound(def, pub, this.ctx.dur('QUESTION'), this.ctx.now);
     this.ctx.present(def);
     this.step = 'question';
     this.ctx.setStep({ step: 'question', question: pub, firstCorrect: null }, this.round.durationMs, () => this.reveal());

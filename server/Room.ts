@@ -72,6 +72,8 @@ export class Room {
   /** Partita in pausa dallo schermo principale (Esc): timer fermi, azioni dei telefoni rifiutate. */
   private paused = false;
   private pausedAt = 0;
+  /** Tempo totale passato in pausa: l'orologio di gioco (ctx.now) lo esclude. */
+  private pausedTotal = 0;
   private lobbyRemovals = new Map<string, NodeJS.Timeout>();
   /** Capo stanza attuale: resta lo stesso finché non esce davvero (vedi vipId). */
   private vip: string | null = null;
@@ -146,7 +148,7 @@ export class Room {
   }
 
   /** Timer del gioco corrente: non toccato da setPhase/endStep, annullato da setGame(). */
-  private gameTimer(fn: () => void, delay: number): () => void {
+  private gameTimer(fn: () => void, delay: number): () => number {
     return this.gameTimers.add(fn, delay);
   }
 
@@ -173,8 +175,12 @@ export class Room {
       this.gameTimers.pause();
     } else {
       this.paused = false;
-      // il conto alla rovescia riparte da dove si era fermato
-      if (this.endsAt !== null) this.endsAt += Date.now() - this.pausedAt;
+      // il conto alla rovescia (e le parole di Indizio dopo Indizio) ripartono da dove si erano fermati
+      const shift = Date.now() - this.pausedAt;
+      this.pausedTotal += shift;
+      if (this.endsAt !== null) this.endsAt += shift;
+      const st = this.phaseData.phase === 'PLAY' ? this.phaseData.state : null;
+      if (st && 'question' in st && 'clue' in st.question && st.question.clue) st.question.clue.startedAt += shift;
       this.timers.resume();
       this.gameTimers.resume();
     }
@@ -272,6 +278,7 @@ export class Room {
       endStep: (delay) => room.endStep(delay ?? 0),
       later: (fn, ms) => room.later(fn, ms),
       gameTimer: (fn, ms) => room.gameTimer(fn, ms),
+      now: () => Date.now() - room.pausedTotal,
       addScore: (p, delta) => {
         const applied = Math.max(-p.score, Math.round(delta));
         p.score += applied;
@@ -672,10 +679,10 @@ export class Room {
     this.broadcast();
   }
 
-  join(socketId: string, rawName: string, playerId?: string): { playerId: string; reconnected: boolean } | string {
+  join(socketId: string, rawName: string, playerId?: string, rejoinKey?: string): { playerId: string; rejoinKey: string; reconnected: boolean } | string {
     this.touch();
     const existing = playerId ? this.players.get(playerId) : undefined;
-    if (existing && !existing.isBot) {
+    if (existing && !existing.isBot && rejoinKey === existing.rejoinKey) {
       existing.socketId = socketId;
       existing.connected = true;
       if (existing.id === this.vip) this.vipLostAt = null;
@@ -683,7 +690,7 @@ export class Room {
       if (pending) clearTimeout(pending);
       this.lobbyRemovals.delete(existing.id);
       this.broadcast();
-      return { playerId: existing.id, reconnected: true };
+      return { playerId: existing.id, rejoinKey: existing.rejoinKey, reconnected: true };
     }
 
     if (this.phase !== 'LOBBY') return 'La partita è già iniziata';
@@ -696,7 +703,7 @@ export class Room {
     p.socketId = socketId;
     this.players.set(p.id, p);
     this.broadcast();
-    return { playerId: p.id, reconnected: false };
+    return { playerId: p.id, rejoinKey: p.rejoinKey, reconnected: false };
   }
 
   disconnect(socketId: string) {

@@ -25,7 +25,7 @@ export class MusicGame implements GameMode {
     this.n++;
     const def = this.ctx.pool.drawMc({ audio: true });
     const pub = this.ctx.publicMc(def, this.n, CONFIG.MUSIC_QUESTIONS);
-    this.round = new McRound(def, pub, this.ctx.dur('MUSIC_QUESTION'));
+    this.round = new McRound(def, pub, this.ctx.dur('MUSIC_QUESTION'), this.ctx.now);
     this.ctx.present(def);
     this.step = 'question';
     this.ctx.setStep({ step: 'question', question: pub }, this.round.durationMs, () => this.reveal());

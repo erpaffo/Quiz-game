@@ -27,6 +27,8 @@ export interface ServerOptions {
   audioOverrideDir?: string;
   /** Hotspot acceso dal PC: lo schermo principale mostra il QR per collegarsi alla rete. */
   hotspot?: { ssid: string; password: string } | null;
+  /** Se impostata, creare/modificare/cancellare pacchetti e caricare file richiede l'header X-Editor-Key (server esposto online). */
+  editorKey?: string;
   /** Moltiplicatore di velocità (solo test). */
   speed?: number;
   log?: (line: string) => void;
@@ -94,6 +96,13 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
 
   // ---------------------------------------------------------------- API
   app.use('/api', express.json({ limit: '3mb' }));
+  const editorKey = opts.editorKey;
+  if (editorKey) {
+    app.use('/api', (req, res, next) => {
+      if (req.method === 'GET' || req.get('x-editor-key') === editorKey) return next();
+      res.status(401).json({ error: 'Chiave del Laboratorio mancante o sbagliata' });
+    });
+  }
 
   app.get('/api/info', (_req, res) => {
     res.json({ port, lan: lanAddresses(), hotspot });
@@ -201,7 +210,7 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
     socket.on('JOIN_ROOM', safe((p, ack) => {
       const room = rooms.get(p?.code);
       if (!room) return reply(ack, 'Codice stanza non valido');
-      const res = room.join(socket.id, p.name, p.playerId);
+      const res = room.join(socket.id, p.name, p.playerId, p.rejoinKey);
       if (typeof res === 'string') return reply(ack, res);
       socket.data = { room, playerId: res.playerId };
       socket.join(room.channel);

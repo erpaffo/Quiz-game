@@ -262,8 +262,9 @@ export function build(tax: Taxonomy, opts: { packsDir?: string; passDir?: string
   const items = approved();
   const result: BuildResult = { packs: [], offline: {} };
 
-  // pacchetti del gioco: uno per macro-categoria, con le sottocategorie come categorie del pacchetto
-  for (const f of readdirSync(packsDir).filter((x) => x.startsWith('banca-') && x.endsWith('.json'))) rmSync(join(packsDir, f));
+  // pacchetti del gioco: uno per macro-categoria, con le sottocategorie come categorie del pacchetto.
+  // Prima si validano tutti, poi si sostituiscono i vecchi: un errore a metà non lascia il gioco senza categorie.
+  const built: { file: string; pack: Pack; questions: number }[] = [];
   for (const cat of tax.categorie) {
     const qs = items.filter((i): i is BankQuiz => isQuiz(i) && i.category === cat.id);
     if (!qs.length) continue;
@@ -277,9 +278,12 @@ export function build(tax: Taxonomy, opts: { packsDir?: string; passDir?: string
       categories: used.map((s) => ({ id: s.id, name: s.nome.slice(0, 30), icon: cat.icona, color: cat.colore })),
       questions: qs.map(toPackQuestion)
     });
-    const file = join(packsDir, `banca-${cat.id}.json`);
+    built.push({ file: join(packsDir, `banca-${cat.id}.json`), pack, questions: qs.length });
+  }
+  for (const f of readdirSync(packsDir).filter((x) => x.startsWith('banca-') && x.endsWith('.json'))) rmSync(join(packsDir, f));
+  for (const { file, pack, questions } of built) {
     writeFileSync(file, JSON.stringify({ ...pack, builtIn: true, updatedAt: 0 }, null, 1), 'utf8');
-    result.packs.push({ file: relative(ROOT, file), questions: qs.length });
+    result.packs.push({ file: relative(ROOT, file), questions });
   }
 
   // contenuti dell'app tascabile: un file per tipo (sempre presenti, anche vuoti, perché l'app li importa)

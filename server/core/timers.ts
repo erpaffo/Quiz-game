@@ -18,8 +18,8 @@ export class PausableTimers {
     return this.pausedAt !== null;
   }
 
-  /** Pianifica `fn` tra `delay` ms; restituisce la funzione che lo annulla. */
-  add(fn: () => void, delay: number): () => void {
+  /** Pianifica `fn` tra `delay` ms; restituisce la funzione che lo annulla (e dice quanti ms mancavano, pause escluse). */
+  add(fn: () => void, delay: number): () => number {
     const entry: Entry = { fn, due: Date.now() + Math.max(0, delay), handle: null };
     this.entries.add(entry);
     if (!this.paused) this.arm(entry);
@@ -62,8 +62,9 @@ export class PausableTimers {
     }, Math.max(0, e.due - Date.now()));
   }
 
-  private cancel(e: Entry) {
+  private cancel(e: Entry): number {
     if (e.handle) clearTimeout(e.handle);
     this.entries.delete(e);
+    return Math.max(0, e.due - (this.pausedAt ?? Date.now()));
   }
 }

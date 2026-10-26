@@ -44,7 +44,7 @@ export class ClassicGame implements GameMode {
     this.n++;
     const def = this.ctx.pool.drawMc({ categoryId: this.category?.id });
     const pub = this.ctx.publicMc(def, this.n, CONFIG.CLASSIC_QUESTIONS);
-    this.round = new McRound(def, pub, this.ctx.dur('QUESTION'));
+    this.round = new McRound(def, pub, this.ctx.dur('QUESTION'), this.ctx.now);
     this.ctx.present(def);
     this.step = 'question';
     this.ctx.setStep({ step: 'question', question: pub }, this.round.durationMs, () => this.reveal());

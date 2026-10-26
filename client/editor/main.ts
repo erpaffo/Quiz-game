@@ -36,8 +36,21 @@ function toast(text: string, good = true) {
   setTimeout(() => el.remove(), 3000);
 }
 
+const KEY_STORE = 'sep:editorKey';
+
+/** fetch con la chiave del Laboratorio (serve solo se il server ha EDITOR_KEY): chiesta al primo rifiuto e ricordata. */
+async function send(url: string, init: RequestInit & { headers?: Record<string, string> }): Promise<Response> {
+  const go = () => fetch(url, { ...init, headers: { ...init.headers, 'X-Editor-Key': localStorage.getItem(KEY_STORE) ?? '' } });
+  const res = await go();
+  if (res.status !== 401) return res;
+  const key = prompt('Chiave del Laboratorio (EDITOR_KEY del server):');
+  if (!key) return res;
+  localStorage.setItem(KEY_STORE, key.trim());
+  return go();
+}
+
 async function api<T>(method: string, url: string, body?: unknown): Promise<T> {
-  const res = await fetch(url, { method, headers: body ? { 'Content-Type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined });
+  const res = await send(url, { method, headers: body ? { 'Content-Type': 'application/json' } : {}, body: body ? JSON.stringify(body) : undefined });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error ?? 'Errore del server');
   return data as T;
@@ -472,7 +485,7 @@ main.addEventListener('click', (e) => {
     if (!file) return;
     try {
       toast(`⏳ Caricamento di ${file.name}…`);
-      const res = await fetch(`/api/media?name=${encodeURIComponent(file.name)}`, { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: file });
+      const res = await send(`/api/media?name=${encodeURIComponent(file.name)}`, { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: file });
       const body = await res.json();
       if (!res.ok) throw new Error(body.error ?? res.statusText);
       setMedia(kind, body.path);

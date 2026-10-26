@@ -1,7 +1,7 @@
 // Banca domande: formato, controlli, doppioni, revisione incrociata, promozione e costruzione dei pacchetti.
 
 import assert from 'node:assert/strict';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
@@ -126,6 +126,20 @@ describe('Banca domande: lavoro a due (lotto → revisione → approvate → gio
     assert.deepEqual(pack.categories.map((c) => c.id), ['antica']);
     assert.deepEqual(JSON.parse(readFileSync(join(pass, 'fronte.json'), 'utf8')), [{ word: 'Zattera', taboo: ['mare', 'legno', 'naufrago', 'galleggiare'], pack: 'natura' }]);
     assert.deepEqual(JSON.parse(readFileSync(join(pass, 'panico.json'), 'utf8')), [], 'un file per ogni tipo, anche vuoto');
+  });
+
+  it('se un pacchetto non è valido, «costruisci» si ferma senza cancellare quelli già presenti', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'banca-'));
+    useBankDir(dir);
+    mkdirSync(join(dir, 'approvate', 'quiz'), { recursive: true });
+    writeFileSync(join(dir, 'approvate', 'quiz', 'storia.jsonl'), JSON.stringify({ ...quiz(), id: 'x1' }));
+    const packs = join(dir, 'packs');
+    mkdirSync(packs);
+    writeFileSync(join(packs, 'banca-vecchio.json'), '{}');
+    // sottocategoria tolta dalla tassonomia: la domanda punta a una categoria inesistente
+    const broken = { ...tax, categorie: tax.categorie.map((c) => (c.id === 'storia' ? { ...c, sottocategorie: [] } : c)) };
+    assert.throws(() => build(broken, { packsDir: packs, passDir: join(dir, 'pass') }), /categoria inesistente/);
+    assert.ok(existsSync(join(packs, 'banca-vecchio.json')), 'i pacchetti di prima restano finché il nuovo giro non è tutto valido');
   });
 });
 

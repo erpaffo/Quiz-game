@@ -4,6 +4,8 @@ import { randomId } from './util';
 
 export interface Player {
   id: string;
+  /** Segreto per riprendere il posto dopo una disconnessione (l'id è pubblico, questo no). */
+  rejoinKey: string;
   name: string;
   socketId: string | null;
   connected: boolean;
@@ -38,6 +40,7 @@ export interface Player {
 export function newPlayer(name: string, isBot: boolean): Player {
   return {
     id: randomId(isBot ? 'bot' : 'p'),
+    rejoinKey: randomId('k'),
     name,
     socketId: null,
     connected: true,

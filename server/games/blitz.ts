@@ -40,7 +40,7 @@ export class BlitzGame implements GameMode {
     const def = lane.deck[lane.idx % lane.deck.length];
     // Id univoco per corsia: la stessa domanda può tornare se il mazzo finisce.
     const unique = { ...def, id: `${def.id}#${lane.idx}` };
-    lane.round = new McRound(unique, this.ctx.publicMc(unique, lane.answered + 1, 0), this.ctx.dur('BLITZ'));
+    lane.round = new McRound(unique, this.ctx.publicMc(unique, lane.answered + 1, 0), this.ctx.dur('BLITZ'), this.ctx.now);
     this.ctx.present(unique, [p]);
   }
 

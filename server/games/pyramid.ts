@@ -71,7 +71,7 @@ export class PyramidGame implements GameMode {
   private question() {
     const def = this.ctx.pool.drawMc({ difficulty: this.difficulty(), multipleOnly: true });
     const pub = this.ctx.publicMc(def, this.n, CONFIG.PYRAMID_MAX_QUESTIONS);
-    this.round = new McRound(def, pub, this.ctx.dur('PYRAMID_QUESTION'));
+    this.round = new McRound(def, pub, this.ctx.dur('PYRAMID_QUESTION'), this.ctx.now);
     this.ctx.present(def);
     this.step = 'question';
     this.ctx.setStep({ step: 'question', question: pub }, this.round.durationMs, () => this.reveal());

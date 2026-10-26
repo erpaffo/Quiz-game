@@ -26,7 +26,7 @@ export interface RoomSessionContext {
   /** Pianifica un timeout associato al passo corrente dello Show. */
   later(fn: () => void, ms: number): void;
   /** Timer che sopravvive ai cambi di passo e viene pulito solo a fine gioco/show; restituisce la funzione per annullarlo. */
-  gameTimer(fn: () => void, ms: number): () => void;
+  gameTimer(fn: () => void, ms: number): () => number;
   /** Cancella i timer del passo corrente. */
   clearTimers(): void;
   /** Aggiunge (o toglie, senza scendere sotto zero) punti a un giocatore. */
@@ -95,10 +95,6 @@ export class ShowRegistry {
       throw new Error(`La modalità «${meta.name}» non è ancora registrata sul server.`);
     }
     return factory(ctx);
-  }
-
-  availableIds(): ShowId[] {
-    return [...this.factories.keys()];
   }
 }
 
