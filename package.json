@@ -21,6 +21,7 @@
     "desktop:smoke": "node scripts/desktop-smoke.mjs"
   },
   "devDependencies": {
+    "@fontsource-variable/bricolage-grotesque": "5.3.0",
     "@fontsource/baloo-2": "5.2.5",
     "@mediapipe/tasks-vision": "1.0.1",
     "@types/express": "4.17.21",

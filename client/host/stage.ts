@@ -28,8 +28,12 @@ const PYRAMID_ORIGIN = new THREE.Vector3(60, 0, 0);
 const PYRAMID_SCALE = 0.72;
 /** Altezza della gradinata della fila posteriore (gruppi numerosi). */
 const RISER_H = 0.8;
-const STUDIO_CAM = { pos: new THREE.Vector3(0, 3.3, 11.5), target: new THREE.Vector3(0, 3.1, 0) };
-const STUDIO_CAM_LARGE = { pos: new THREE.Vector3(0, 4.2, 14.2), target: new THREE.Vector3(0, 3.3, -0.6) };
+// Il target è alto di proposito: la scena scende nella metà bassa dello schermo, sotto i pannelli e le targhe dei giocatori restano visibili.
+const STUDIO_CAM = { pos: new THREE.Vector3(0, 3.3, 11.5), target: new THREE.Vector3(0, 3.9, 0) };
+// Menù dei giochi aperto in sala d'attesa: camera più lontana e più alta, i personaggi diventano una fascia in basso.
+const MENU_CAM = { pos: new THREE.Vector3(0, 3.0, 16.5), target: new THREE.Vector3(0, 5.6, 0) };
+const MENU_CAM_LARGE = { pos: new THREE.Vector3(0, 3.6, 19.5), target: new THREE.Vector3(0, 6.6, -0.6) };
+const STUDIO_CAM_LARGE = { pos: new THREE.Vector3(0, 4.2, 14.2), target: new THREE.Vector3(0, 3.9, -0.6) };
 
 export interface VideoSettings {
   /** Qualità degli effetti (luci, ombre, materiali): automatica, alta o bassa. */
@@ -49,7 +53,7 @@ export class Stage {
   private labels: CSS2DRenderer;
   private scene = new THREE.Scene();
   private camera = new THREE.PerspectiveCamera(38, 1, 0.1, 300);
-  private camTarget = new THREE.Vector3(0, 3.1, 0);
+  private camTarget = STUDIO_CAM.target.clone();
   private clock = new THREE.Clock();
   private slots = new Map<string, Slot>();
   private bulbs: THREE.MeshBasicMaterial[] = [];
@@ -58,6 +62,7 @@ export class Stage {
   private trophy: THREE.Object3D | null = null;
   private riser: THREE.Mesh | null = null;
   private large = false;
+  private menuOpen = false;
   private laneSpacing = 1.5;
   private sun!: THREE.DirectionalLight;
   // Qualità: "high" di default, scende da sola a "low" se il PC non regge.
@@ -107,7 +112,7 @@ export class Stage {
   // ------------------------------------------------------------ scena
 
   private buildLights() {
-    this.scene.add(new THREE.HemisphereLight('#ffffff', '#5a2ca0', 1.6));
+    this.scene.add(new THREE.HemisphereLight('#ffffff', '#2f6f80', 1.6));
     const sun = new THREE.DirectionalLight('#ffffff', 2.2);
     this.sun = sun;
     sun.position.set(4, 10, 8);
@@ -117,12 +122,12 @@ export class Stage {
   }
 
   private buildStudio() {
-    const floor = new THREE.Mesh(new THREE.CylinderGeometry(14, 14, 0.2, 64), toonMat('#2a1060'));
+    const floor = new THREE.Mesh(new THREE.CylinderGeometry(14, 14, 0.2, 64), toonMat('#123241'));
     floor.position.y = -0.1;
     floor.receiveShadow = true;
     this.scene.add(floor);
 
-    const ringColors = ['#ff4d6d', '#ffd60a', '#4cc9f0'];
+    const ringColors = ['#ff6b5e', '#ffb52e', '#5fd4e8'];
     ringColors.forEach((col, i) => {
       const ring = new THREE.Mesh(new THREE.RingGeometry(4.5 + i * 1.6, 4.65 + i * 1.6, 96), new THREE.MeshBasicMaterial({ color: col }));
       ring.rotation.x = -Math.PI / 2;
@@ -166,8 +171,8 @@ export class Stage {
     c.height = 820;
     const g = c.getContext('2d')!;
     const grad = g.createLinearGradient(0, 0, 0, c.height);
-    grad.addColorStop(0, '#3a0ca3');
-    grad.addColorStop(1, '#14063a');
+    grad.addColorStop(0, '#1a4a5b');
+    grad.addColorStop(1, '#06121a');
     g.fillStyle = grad;
     g.fillRect(0, 0, c.width, c.height);
     // raggi
@@ -185,7 +190,7 @@ export class Stage {
     g.restore();
     // Punti interrogativi decorativi sul fondale
     g.textAlign = 'center';
-    g.font = '900 120px "Baloo 2", "Trebuchet MS", sans-serif';
+    g.font = '900 120px "Bricolage Grotesque Variable", "Trebuchet MS", sans-serif';
     g.fillStyle = 'rgba(255,214,10,0.10)';
     for (let i = 0; i < 9; i++) g.fillText('?', 120 + i * 225, 180 + (i % 2) * 330);
     return c;
@@ -198,13 +203,13 @@ export class Stage {
     this.laneSpacing = Math.min(1.5, 13 / Math.max(lanes, 1));
     const width = Math.max(4, lanes) * this.laneSpacing + 1.2;
 
-    const ground = new THREE.Mesh(new THREE.CylinderGeometry(16, 16, 0.2, 48), toonMat('#2a1060'));
+    const ground = new THREE.Mesh(new THREE.CylinderGeometry(16, 16, 0.2, 48), toonMat('#123241'));
     ground.position.set(0, -0.1, -4);
     ground.receiveShadow = true;
     g.add(ground);
 
-    const low = new THREE.Color('#5a2ca0');
-    const high = new THREE.Color('#ffd60a');
+    const low = new THREE.Color('#2f6f80');
+    const high = new THREE.Color('#ffb52e');
     for (let i = 1; i <= steps; i++) {
       const col = low.clone().lerp(high, i / steps);
       const box = new THREE.Mesh(new RoundedBoxGeometry(width - i * 0.12, STEP_H * i, STEP_D, 2, 0.05), toonMat(col));
@@ -225,7 +230,7 @@ export class Stage {
     // Trofeo in cima
     const trophy = new THREE.Group();
     trophy.position.set(0, STEP_H * steps, -steps * STEP_D - 0.1);
-    const gold = toonMat('#ffd60a');
+    const gold = toonMat('#ffb52e');
     const cup = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.2, 0.6, 24), gold);
     cup.position.y = 1.0;
     const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.4, 12), gold);
@@ -277,25 +282,40 @@ export class Stage {
     if (large === this.large) return;
     this.large = large;
     if (large && !this.riser) {
-      this.riser = new THREE.Mesh(new RoundedBoxGeometry(17, RISER_H, 2.6, 2, 0.08), toonMat('#3a1786'));
+      this.riser = new THREE.Mesh(new RoundedBoxGeometry(17, RISER_H, 2.6, 2, 0.08), toonMat('#1d4658'));
       this.riser.position.set(0, RISER_H / 2, -1.5);
       this.riser.receiveShadow = true;
       addOutline(this.riser, 0.02);
       this.scene.add(this.riser);
     }
     if (this.riser) this.riser.visible = large;
-    for (const slot of this.slots.values()) slot.labelEl.classList.toggle('compact', large);
-    if (this.mode === 'studio') {
-      const cam = large ? STUDIO_CAM_LARGE : STUDIO_CAM;
-      this.moveCamera(cam.pos, cam.target, 1);
-    }
+    this.refreshStudio(1);
+  }
+
+  /** Sala d'attesa: con la griglia dei giochi o le regole aperte il pannello è grande e i personaggi si fanno da parte. */
+  setMenuOpen(open: boolean) {
+    if (open === this.menuOpen) return;
+    this.menuOpen = open;
+    this.refreshStudio(0.7);
+  }
+
+  private studioCam() {
+    if (this.menuOpen) return this.large ? MENU_CAM_LARGE : MENU_CAM;
+    return this.large ? STUDIO_CAM_LARGE : STUDIO_CAM;
+  }
+
+  private refreshStudio(duration: number) {
+    for (const slot of this.slots.values()) slot.labelEl.classList.toggle('compact', this.large || this.menuOpen);
+    if (this.mode !== 'studio') return;
+    const cam = this.studioCam();
+    this.moveCamera(cam.pos, cam.target, duration);
   }
 
   private createSlot(p: PlayerPublic, index: number): Slot {
     const color = PLAYER_COLORS[index % PLAYER_COLORS.length];
     const podium = new THREE.Group();
     const podiumTop = toonMat(color);
-    const base = new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.82, 0.5, 32), toonMat('#1d0b4a'));
+    const base = new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.82, 0.5, 32), toonMat('#0b2330'));
     base.position.y = 0.25;
     base.castShadow = base.receiveShadow = true;
     addOutline(base, 0.02);
@@ -313,7 +333,7 @@ export class Stage {
     podium.add(anchor);
 
     const labelEl = document.createElement('div');
-    labelEl.className = `plabel ${this.large ? 'compact' : ''}`;
+    labelEl.className = `plabel ${this.large || this.menuOpen ? 'compact' : ''}`;
     labelEl.style.setProperty('--pc', color);
     const label = new CSS2DObject(labelEl);
     label.position.set(0, 2.95, 0);
@@ -374,9 +394,11 @@ export class Stage {
   }
 
   private renderLabel(slot: Slot, p: PlayerPublic, phase: string) {
+    slot.labelEl.classList.toggle('in-lobby', phase === 'LOBBY');
+    // In sala d'attesa lo stato è sempre scritto (icona + parola, non solo colore): si vede subito chi deve ancora premere «Pronto».
     const status =
-      !p.connected ? '<span class="pl-status off">offline</span>' :
-      phase === 'LOBBY' ? (p.ready ? '<span class="pl-status ok">PRONTO</span>' : p.characterId ? '' : '<span class="pl-status">sceglie…</span>') :
+      !p.connected ? '<span class="pl-status off">Offline</span>' :
+      phase === 'LOBBY' ? (p.ready ? '<span class="pl-status ready">Pronto</span>' : p.characterId ? '<span class="pl-status wait">Non pronto</span>' : '<span class="pl-status wait">Sceglie…</span>') :
       p.hasActed ? '<span class="pl-status ok">✓</span>' : '';
     const html =
       `<div class="pl-name">${p.isVip ? '👑 ' : ''}${esc(p.name)}${p.isBot ? ' 🤖' : ''}</div>` +
@@ -666,7 +688,7 @@ export class Stage {
     const end = this.rigOf(toId)?.headWorldPosition();
     if (!start || !end) return;
     for (let i = 0; i < 6; i++) {
-      const coin = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.05, 18), toonMat('#ffd60a'));
+      const coin = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.05, 18), toonMat('#ffb52e'));
       coin.position.copy(start);
       this.scene.add(coin);
       const tw = this.arc(coin, start, end, 2.4, 0.7);
@@ -744,7 +766,7 @@ export class Stage {
     this.pyramid?.removeFromParent();
     this.pyramid = null;
     this.trophy = null;
-    const cam = this.large ? STUDIO_CAM_LARGE : STUDIO_CAM;
+    const cam = this.studioCam();
     this.moveCamera(cam.pos, cam.target, 1.2);
     this.sync(this.lastPlayers, { phase: 'LOBBY' });
   }
@@ -828,7 +850,7 @@ export class Stage {
         (Math.floor(t * 1.5) + i) % 6 !== 0;
       if (this.bulbOn[i] !== on) {
         this.bulbOn[i] = on;
-        this.bulbs[i].color.set(on ? '#fff3b0' : '#6b4fa0');
+        this.bulbs[i].color.set(on ? '#fff3b0' : '#36596a');
       }
     }
     if (this.trophy) this.trophy.rotation.y += dt * 1.2;

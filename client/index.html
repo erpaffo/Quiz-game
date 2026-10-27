@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-    <meta name="theme-color" content="#2b0f6b" />
+    <meta name="theme-color" content="#0f2c3a" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,13 +15,13 @@
     <style>
       body { display: grid; place-items: center; min-height: 100dvh; padding: calc(16px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom)); text-align: center; }
       .home { display: flex; flex-direction: column; gap: 14px; align-items: center; max-width: 480px; width: 100%; }
-      .home h1 { margin: 0; font-size: clamp(2.2rem, 8vw, 3.4rem); color: var(--gold); text-shadow: 0 5px 0 #14063a; line-height: 1; }
+      .home h1 { margin: 0; font-size: clamp(2.2rem, 8vw, 3.4rem); color: var(--gold); text-shadow: 0 5px 0 #06121a; line-height: 1; }
       .home h1 span { color: var(--pink); }
       .home .btn { width: 100%; padding: 16px; font-size: 1.18rem; text-decoration: none; }
       .home-card { width: 100%; padding: 14px 16px; border-radius: 18px; background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.14); text-align: left; display: flex; flex-direction: column; gap: 8px; }
       .home-card h3 { margin: 0; font-size: 1.05rem; color: var(--gold); }
       .home-card p { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
-      .pwa-tip { font-size: 0.82rem; padding: 10px 14px; border-radius: 14px; background: rgba(76, 201, 240, 0.12); border: 1px solid rgba(76, 201, 240, 0.35); color: #d8f3ff; }
+      .pwa-tip { font-size: 0.82rem; padding: 10px 14px; border-radius: 14px; background: rgba(95, 212, 232, 0.12); border: 1px solid rgba(95, 212, 232, 0.35); color: #d8f3ff; }
     </style>
   </head>
   <body>
@@ -41,8 +41,7 @@
       </div>
     </div>
     <script type="module">
-      import '@fontsource/baloo-2/700.css';
-      import '@fontsource/baloo-2/800.css';
+      import '@fontsource-variable/bricolage-grotesque/wght.css';
       import './common/base.css';
       if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
         document.getElementById('pwa-tip')?.setAttribute('hidden', '');

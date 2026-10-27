@@ -1,6 +1,4 @@
-import '@fontsource/baloo-2/500.css';
-import '@fontsource/baloo-2/700.css';
-import '@fontsource/baloo-2/800.css';
+import '@fontsource-variable/bricolage-grotesque/wght.css';
 import { brandLogoHtml } from '../../shared/brand';
 import { cardDescription, CARDS, isAttack } from '../../shared/cards';
 import { CHARACTERS, getCharacter, lookKey, traitValue, type CustomChoice } from '../../shared/characters';

@@ -83,7 +83,7 @@ function writeLines(g: CanvasRenderingContext2D, w: number, h: number, lines: st
   lines.forEach((line, i) => {
     let size = Math.floor(h / (lines.length + 0.6));
     do {
-      g.font = `${weight} ${size}px Baloo 2, Arial, sans-serif`;
+      g.font = `${weight} ${size}px Bricolage Grotesque Variable, Arial, sans-serif`;
       size -= 2;
     } while (g.measureText(line).width > w * 0.88 && size > 8);
     g.fillText(line, w / 2, (h * (i + 1)) / (lines.length + 1));

@@ -186,7 +186,7 @@ export class HostUI {
   private renderKey(s: RoomSnapshot) {
     const d = s.phaseData;
     if (d.phase === 'LOBBY') {
-      const ready = s.players.map((p) => `${p.connected ? 1 : 0}${p.ready ? 1 : 0}${p.characterId ? 1 : 0}`).join('');
+      const ready = s.players.map((p) => `${p.connected ? 1 : 0}${p.ready ? 1 : 0}${p.characterId ? 1 : 0}${p.name}`).join('|');
       return `LOBBY|${this.join?.index}|${!!this.join}|${this.wifi?.ssid}|${this.wifi?.password}|${this.wifiForm}|${s.players.length}|${ready}|${JSON.stringify(s.menu)}|${JSON.stringify(d.settings)}|${JSON.stringify(d.packs)}`;
     }
     if (d.phase === 'SHOW') return showRenderKey(s);
@@ -529,6 +529,8 @@ export class HostUI {
          </div>`;
     }
 
+    const online = s.players.filter((p) => p.connected);
+    const ready = { total: online.length, done: online.filter((p) => p.ready && p.characterId).length, missing: online.filter((p) => !(p.ready && p.characterId)).map((p) => p.name) };
     const view = menuView(s);
     const focus = menuFocus(s);
     const hint = view === 'cover' ? 'Premi «Scegli un gioco» per cominciare.' : view === 'grid' ? 'Tocca un gioco per vederne le regole.' : '';
@@ -552,7 +554,8 @@ export class HostUI {
         <div class="lobby-left">
           <div class="join-card">${join}</div>
           <div class="lobby-players-card">
-            <h2>Giocatori ${n}/${CONFIG.MAX_PLAYERS}</h2>
+            <h2>${ready.done} su ${ready.total} pronti <small>(max ${CONFIG.MAX_PLAYERS})</small></h2>
+            <div class="ready-line ${ready.missing.length ? 'wait' : 'all'}">${n === 0 ? 'Nessuno è ancora entrato.' : ready.missing.length ? `Aspettiamo ${ready.missing.map(esc).join(', ')}` : 'Tutti pronti: il capo stanza può avviare.'}</div>
             ${hint ? `<div class="muted small">${hint}</div>` : ''}
             <div class="lobby-actions">
               <button class="btn secondary" data-act="bot" ${n >= CONFIG.MAX_PLAYERS ? 'disabled' : ''}>🤖 Aggiungi bot</button>

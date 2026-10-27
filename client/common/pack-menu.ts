@@ -86,7 +86,7 @@ export function packGrid(s: RoomSnapshot, o: PackMenuOptions): string {
         .map((c) => {
           const cat = SHOW_CATEGORIES[c.id];
           return `
-          <section class="pk-cat">
+          <section class="pk-cat" style="--n:${Math.min(c.ids.length, 4)}">
             <h3><span>${cat.icon}</span> ${esc(cat.label)} <small>${c.ids.length} ${c.ids.length === 1 ? 'gioco' : 'giochi'}</small></h3>
             <div class="pk-cards">${c.ids.map(card).join('')}</div>
           </section>`;

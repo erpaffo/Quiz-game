@@ -1,6 +1,4 @@
-import '@fontsource/baloo-2/500.css';
-import '@fontsource/baloo-2/700.css';
-import '@fontsource/baloo-2/800.css';
+import '@fontsource-variable/bricolage-grotesque/wght.css';
 import QRCode from 'qrcode';
 import { CARDS } from '../../shared/cards';
 import { lookKey } from '../../shared/characters';
@@ -9,6 +7,7 @@ import { GAMES } from '../../shared/games';
 import type { CardEvent, PowerType, RoomSnapshot } from '../../shared/types';
 import '../common/base.css';
 import '../common/pack.css';
+import { menuView } from '../common/pack-menu';
 import { clock, createSocket } from '../common/net';
 import { audio } from './audio';
 import './host.css';
@@ -235,6 +234,7 @@ socket.on('ROOM_STATE', (s) => {
   const prev = last;
   last = s;
   stage.sync(s.players, { phase: s.phase });
+  stage.setMenuOpen(s.phase === 'LOBBY' && menuView(s) !== 'cover');
   for (const p of s.players) stage.setSelfie(p.id, selfies.get(p.id) ?? null);
   playerReactions(s, prev);
   if (!prev || phaseKey(prev) !== phaseKey(s)) onPhaseEnter(s, prev);

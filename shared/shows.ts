@@ -212,7 +212,7 @@ export const SHOWS: Record<ShowId, ShowMeta> = {
     id: 'quiz',
     name: 'Quiz del Pozzo',
     subtitle: 'Quiz show con carte ostacolo e scalata della Piramide',
-    icon: '🪣',
+    icon: '💧',
     color: '#ffd60a',
     badge: 'COMPLETO · 9 GIOCHI',
     durationLabel: '12–25 min',

@@ -10,33 +10,33 @@
 .pk-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); gap: 0.65em; }
 .pk-card {
   position: relative; display: flex; align-items: center; gap: 0.8em; min-height: 4.6em; padding: 0.65em 0.9em;
-  border-radius: 1em; text-align: left; color: #fff; cursor: pointer;
-  background: rgba(255, 255, 255, 0.07); border: 2px solid rgba(255, 255, 255, 0.14); border-left: 0.35em solid var(--sc, var(--gold));
+  border-radius: var(--radius); text-align: left; color: var(--ink); cursor: pointer;
+  background: var(--card); border: 1px solid var(--surface-line);
   transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.pk-card:hover:not(:disabled) { transform: translateY(-2px); background: rgba(255, 255, 255, 0.13); border-color: var(--sc, var(--gold)); }
-.pk-card.on { background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06)); border-color: var(--sc, var(--gold)); box-shadow: 0 0 0 2px var(--sc, var(--gold)), 0 8px 22px rgba(0, 0, 0, 0.35); }
+.pk-card:hover:not(:disabled) { transform: translateY(-2px); background: var(--card-strong); border-color: var(--sc, var(--gold)); }
+.pk-card.on { background: color-mix(in srgb, var(--sc, var(--gold)) 16%, var(--bg-1)); border-color: var(--sc, var(--gold)); box-shadow: 0 0 0 1px var(--sc, var(--gold)), 0 8px 22px rgba(0, 0, 0, 0.35); }
 .pk-card.soon { opacity: 0.6; }
 .pk-card:disabled { cursor: default; }
-.pk-icon { font-size: 2.1em; line-height: 1; flex-shrink: 0; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4)); }
+.pk-icon { width: 2.3em; height: 2.3em; border-radius: var(--radius-sm); display: grid; place-items: center; font-size: 1.7em; line-height: 1; flex-shrink: 0; background: color-mix(in srgb, var(--sc, var(--gold)) 24%, var(--bg-1)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sc, var(--gold)) 50%, transparent); }
 .pk-body { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 0.15em; }
 .pk-body b { font-size: 1.02em; font-weight: 800; line-height: 1.15; }
 .pk-sub { font-size: 0.8em; color: rgba(255, 255, 255, 0.8); font-weight: 600; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .pk-tags { display: flex; flex-wrap: wrap; gap: 0.3em 0.5em; font-size: 0.74em; font-weight: 700; color: var(--ink-soft); }
-.pk-tags .pk-warn { color: #14063a; background: var(--gold); padding: 0 0.55em; border-radius: 999px; }
+.pk-tags .pk-warn { color: var(--ink-deep); background: var(--gold); padding: 0 0.55em; border-radius: 6px; }
 
 /* ------------------------------------------------------------ sottomenù del gioco */
-.pk-detail { border-radius: 1.2em; padding: 1.1em 1.3em; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)); border: 2px solid var(--sc, var(--gold)); border-left-width: 0.4em; }
+.pk-detail { border-radius: var(--radius); padding: 1.1em 1.3em; background: color-mix(in srgb, var(--sc, var(--gold)) 10%, var(--bg-1)); border: 1px solid color-mix(in srgb, var(--sc, var(--gold)) 60%, transparent); }
 .pk-detail-head { display: flex; align-items: center; gap: 1em; flex-wrap: wrap; }
-.pk-back { color: #fff; padding: 0.45em 1em; border-radius: 999px; font-weight: 800; background: var(--card-strong); border: 1px solid var(--line); }
+.pk-back { color: var(--ink); padding: 0.45em 1em; border-radius: var(--radius-sm); font-weight: 800; background: var(--card-strong); border: 1px solid var(--line); }
 .pk-back:hover { background: rgba(255, 255, 255, 0.22); }
-.pk-big { font-size: 3.4em; line-height: 1; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4)); }
+.pk-big { width: 1.7em; height: 1.7em; border-radius: var(--radius); display: grid; place-items: center; font-size: 2.6em; line-height: 1; background: color-mix(in srgb, var(--sc, var(--gold)) 26%, var(--bg-1)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sc, var(--gold)) 55%, transparent); }
 .pk-title { min-width: 0; flex: 1; }
 .pk-title h2 { margin: 0.1em 0 0; font-size: 1.9em; line-height: 1.05; }
 .pk-title p { margin: 0.15em 0 0.35em; }
-.pk-badge { display: inline-block; padding: 0.15em 0.8em; border-radius: 999px; font-size: 0.78em; font-weight: 800; background: var(--sc, var(--gold)); color: #14063a; }
+.pk-badge { display: inline-block; padding: 0.15em 0.7em; border-radius: 6px; font-size: 0.8em; font-weight: 800; background: var(--sc, var(--gold)); color: var(--ink-deep); }
 .pk-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; align-items: start; }
-.pk-panel { padding: 0.9em 1.1em; border-radius: 1em; background: rgba(0, 0, 0, 0.26); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; flex-direction: column; gap: 0.7em; }
+.pk-panel { padding: 0.9em 1.1em; border-radius: var(--radius); background: rgba(0, 0, 0, 0.26); border: 1px solid var(--surface-line); display: flex; flex-direction: column; gap: 0.7em; }
 .pk-panel h4 { margin: 0; font-size: 1.05em; font-weight: 800; color: var(--sc, var(--gold)); }
 .pk-rules { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 0.35em; font-weight: 700; }
 .pk-rules li::marker { color: var(--sc, var(--gold)); font-weight: 900; }
@@ -47,14 +47,14 @@
 .pk-row-label { display: flex; flex-direction: column; min-width: 9em; flex: 1; }
 .pk-row-label b { font-size: 1em; }
 .pk-row-label small { color: var(--ink-soft); font-weight: 600; font-size: 0.75em; line-height: 1.25; }
-.pk-stepper { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.25em 0.45em; border-radius: 999px; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.16); }
+.pk-stepper { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.25em 0.45em; border-radius: var(--radius-sm); background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.16); }
 .pk-stepper b { min-width: 1.8em; text-align: center; font-size: 1.35em; color: var(--gold); }
-.pk-stepper button { width: 2.1em; height: 2.1em; border-radius: 50%; display: grid; place-items: center; font-size: 1.15em; font-weight: 900; background: var(--card-strong); }
-.pk-stepper button:hover:not(:disabled) { background: var(--gold); color: #2b0f6b; }
+.pk-stepper button { width: 2.1em; height: 2.1em; border-radius: 8px; display: grid; place-items: center; font-size: 1.15em; font-weight: 900; background: var(--card-strong); }
+.pk-stepper button:hover:not(:disabled) { background: var(--gold); color: var(--ink-deep); }
 .pk-stepper button:disabled { opacity: 0.35; cursor: default; }
-.pk-seg { display: flex; flex-wrap: wrap; gap: 0.3em; padding: 0.25em; border-radius: 1.2em; background: rgba(0, 0, 0, 0.3); }
-.pk-seg button { background: transparent; padding: 0.4em 0.9em; border-radius: 999px; font-weight: 800; font-size: 0.9em; white-space: nowrap; }
-.pk-seg button.on { background: var(--gold); color: #2b0f6b; }
+.pk-seg { display: flex; flex-wrap: wrap; gap: 0.3em; padding: 0.25em; border-radius: var(--radius-sm); background: rgba(0, 0, 0, 0.3); }
+.pk-seg button { background: transparent; padding: 0.4em 0.9em; border-radius: 8px; font-weight: 800; font-size: 0.9em; white-space: nowrap; }
+.pk-seg button.on { background: var(--gold); color: var(--ink-deep); }
 .pk-seg button:disabled:not(.on) { opacity: 0.55; cursor: default; }
 .pk-start { display: flex; align-items: center; justify-content: space-between; gap: 1em; flex-wrap: wrap; }
 .pk-hint { font-weight: 700; font-size: 0.95em; }
@@ -63,12 +63,12 @@
 .pk-go { font-size: 1.15em; padding: 0.7em 1.6em; }
 
 /* ------------------------------------------------------------ copertina (solo TV) */
-.pk-cover { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.9em; padding: 1.6em 1em; min-height: 22em; }
-.pk-cover .pk-edition { font-size: 1em; font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); }
-.pk-cover h1 { margin: 0; font-size: 4.4em; line-height: 1; text-shadow: 0 5px 0 #14063a, 0 0 40px rgba(255, 214, 10, 0.35); }
-.pk-cover .pk-tagline { font-size: 1.25em; color: var(--ink-soft); max-width: 28em; }
-.pk-cats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6em; margin: 0.4em 0 0.8em; }
-.pk-cats span { padding: 0.4em 1em; border-radius: 999px; font-weight: 800; background: var(--card-strong); border: 1px solid var(--line); }
+.pk-cover { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.6em; padding: 0.6em 1em; min-height: 0; }
+.pk-cover .pk-edition { font-size: 1em; font-weight: 700; color: var(--cyan); }
+.pk-cover h1 { margin: 0; font-size: 3.6em; line-height: 1; letter-spacing: -0.04em; }
+.pk-cover .pk-tagline { font-size: 1.15em; color: var(--ink-soft); max-width: 28em; margin: 0; }
+.pk-cats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5em; margin: 0.2em 0 0.4em; }
+.pk-cats span { padding: 0.3em 0.8em; border-radius: var(--radius-sm); font-weight: 700; background: var(--card); border: 1px solid var(--line); }
 .pk-cats small { color: var(--ink-soft); margin-left: 0.3em; }
 
 /* ------------------------------------------------------------ telefono (e finestre strette) */
@@ -87,17 +87,21 @@
 }
 
 /* ------------------------------------------------------------ TV: tutto in una schermata */
-/* Le categorie scorrono su due colonne, così le 6 categorie entrano senza scorrere. */
-.pk-tv.pk-grid { display: block; column-count: 2; column-gap: 1.6em; }
-.pk-tv.pk-grid .pk-cat { break-inside: avoid; margin-bottom: 0.9em; }
-.pk-tv.pk-grid .pk-cards { grid-template-columns: repeat(auto-fill, minmax(13em, 1fr)); }
+/* 4 colonne: ogni categoria occupa tante colonne quanti giochi ha (--n) e le categorie piccole
+   riempiono i buchi accanto alle grandi (dense). Tutti i 14 giochi in 4 righe, senza spazi vuoti. */
+.pk-tv.pk-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-flow: row dense; gap: 0.7em 0.65em; }
+.pk-tv.pk-grid .pk-cat { grid-column: span var(--n, 1); min-width: 0; }
+.pk-tv.pk-grid .pk-cat h3 { margin-bottom: 0.35em; }
+.pk-tv.pk-grid .pk-cards { grid-template-columns: repeat(var(--n, 1), minmax(0, 1fr)); }
 .pk-tv .pk-card { min-height: 4.2em; }
+/* TV: la colonna delle impostazioni è più larga, così il sottomenù del quiz è meno alto */
+.pk-tv .pk-cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
 
 /* Il pannello della sala d'attesa sta sopra personaggi ed etichette 3D e non lascia trasparire nulla. */
 #panel:has(.lobby) { z-index: 8; }
-#panel .lobby-side:has(.pk) { background: rgba(18, 6, 46, 0.94); backdrop-filter: blur(8px); }
-#panel .lobby-left > .join-card, #panel .lobby-left > .lobby-players-card { background: rgba(18, 6, 46, 0.94); }
+#panel .lobby-side:has(.pk) { background: rgba(8, 20, 28, 0.94); }
+#panel .lobby-left > .join-card, #panel .lobby-left > .lobby-players-card { background: rgba(8, 20, 28, 0.94); }
 
 /* Selettori del quiz (stile esistente): i bottoni non scelti non avevano sfondo e restavano bianchi su bianco. */
 .seg button { background: transparent; color: var(--ink); }
-.seg button.on { color: #2b0f6b; }
+.seg button.on { color: var(--ink-deep); }

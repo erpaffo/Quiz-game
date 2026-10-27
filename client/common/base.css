@@ -1,35 +1,53 @@
 :root {
-  --bg-1: #12062e;
-  --bg-2: #2b0f6b;
-  --bg-3: #4a1fa8;
-  --ink: #ffffff;
-  --ink-soft: #cbbdf5;
-  --card: rgba(255, 255, 255, 0.08);
-  --card-strong: rgba(255, 255, 255, 0.14);
-  --line: rgba(255, 255, 255, 0.18);
-  --gold: #ffd60a;
-  --pink: #ff4d6d;
-  --cyan: #4cc9f0;
-  --green: #52d273;
+  /* Quiz del Pozzo: acqua scura di notte, pietra, luce di lanterna. Tutti i colori del sito partono da qui. */
+  --bg-1: #08141c;      /* fondo del pozzo */
+  --bg-2: #0f2c3a;      /* acqua profonda */
+  --bg-3: #1a4a5b;      /* acqua in superficie */
+  --ink: #f6f1e4;       /* testo: bianco gesso */
+  --ink-soft: #a9c4c6;
+  --ink-deep: #06121a;  /* testo sui bottoni chiari e contorni */
+  --card: rgba(246, 241, 228, 0.06);
+  --card-strong: rgba(246, 241, 228, 0.12);
+  --line: rgba(246, 241, 228, 0.14);
+  --gold: #ffb52e;      /* lanterna: azione principale */
+  --pink: #ff6b5e;      /* corallo: pericolo, sabotaggi */
+  --cyan: #5fd4e8;      /* acqua: informazioni */
+  --green: #7ed56f;     /* muschio: pronto, giusto */
   --red: #ff5d5d;
   --opt-a: #3a86ff;
   --opt-b: #fb8500;
   --opt-c: #2a9d8f;
   --opt-d: #e9a800;
-  --radius: 18px;
-  --font: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --ledge: 4px;         /* spessore del «gradino» sotto i bottoni */
+  --font: 'Bricolage Grotesque Variable', 'Trebuchet MS', system-ui, sans-serif;
+  --surface: rgba(8, 20, 28, 0.82);   /* pannelli sopra la scena 3D */
+  --surface-line: rgba(246, 241, 228, 0.16);
 }
 
 * { box-sizing: border-box; }
 
+/* Lo sfondo sta su <html>: così copre sempre tutta la finestra anche quando la pagina scorre (niente fasce che si ripetono). */
+html {
+  min-height: 100%;
+  background:
+    repeating-radial-gradient(ellipse 90% 70% at 50% 135%, transparent 0 46px, rgba(95, 212, 232, 0.05) 46px 48px),
+    radial-gradient(120% 90% at 50% 0%, var(--bg-3) 0%, var(--bg-2) 45%, var(--bg-1) 100%) var(--bg-1);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 html, body {
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   color: var(--ink);
   font-family: var(--font);
-  background: radial-gradient(120% 90% at 50% 0%, var(--bg-3) 0%, var(--bg-2) 45%, var(--bg-1) 100%);
+  font-weight: 500;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
 }
+body { height: 100%; }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; }
 
 button {
   font: inherit;
@@ -38,6 +56,7 @@ button {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
 
 .btn {
   display: inline-flex;
@@ -45,18 +64,19 @@ button {
   justify-content: center;
   gap: 8px;
   padding: 12px 22px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   font-weight: 800;
   font-size: 1.05rem;
   background: var(--gold);
-  color: #2b0f6b;
-  box-shadow: 0 5px 0 #b38f00;
-  transition: transform 0.08s, box-shadow 0.08s, opacity 0.2s;
+  color: var(--ink-deep);
+  box-shadow: 0 var(--ledge) 0 #a86a00, inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.08s, box-shadow 0.08s, opacity 0.2s, filter 0.15s;
 }
-.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 #b38f00; }
+.btn:hover { filter: brightness(1.07); }
+.btn:active { transform: translateY(var(--ledge)); box-shadow: 0 0 0 #a86a00; }
 .btn:disabled { opacity: 0.45; pointer-events: none; }
-.btn.secondary { background: var(--card-strong); color: var(--ink); box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3); }
-.btn.pink { background: var(--pink); color: #fff; box-shadow: 0 5px 0 #a8263f; }
+.btn.secondary { background: var(--card-strong); color: var(--ink); box-shadow: 0 var(--ledge) 0 rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(246, 241, 228, 0.12); }
+.btn.pink { background: var(--pink); color: var(--ink-deep); box-shadow: 0 var(--ledge) 0 #a63a30, inset 0 1px 0 rgba(255, 255, 255, 0.3); }
 
 .chip {
   display: inline-flex;

@@ -1,8 +1,7 @@
 // App «Party Tascabile»: 8 giochi da fare passandosi un solo telefono, 100% offline.
 // Schermate: home (tavolo + giochi per categoria) → sottomenù del gioco → partita → riepilogo · Coppa · Installa.
 
-import '@fontsource/baloo-2/latin-700.css';
-import '@fontsource/baloo-2/latin-800.css';
+import '@fontsource-variable/bricolage-grotesque/wght.css';
 import '../common/base.css';
 import './pass.css';
 import { createSfx } from './audio';
