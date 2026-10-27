@@ -1,4 +1,4 @@
 Contenuti della banca domande provenienti da fonti esterne (generato da `npm run banca -- costruisci`):
 
-- CC0 · wikidata: 263 elementi
+- CC0 · wikidata: 357 elementi
 - CC BY-SA 4.0 · opentdb: 156 elementi

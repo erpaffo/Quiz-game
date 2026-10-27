@@ -33,9 +33,11 @@ body.editor { min-height: 100dvh; }
 .cat-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .cat-chip { display: inline-flex; align-items: center; gap: 2px; border-radius: 999px; background: var(--card); border: 3px solid var(--cc, transparent); font-weight: 700; }
 .cat-chip button, button.cat-chip { padding: 6px 12px; border-radius: 999px; }
+/* i bottoni dentro il chip non hanno sfondo proprio: senza, il browser mette il suo grigio chiaro e il testo sparisce */
+.cat-chip button { background: transparent; }
 .cat-chip small { color: var(--ink-soft); }
-.cat-chip.on { background: var(--cc, var(--gold)); color: #06121a; }
-.cat-chip.on small { color: #06121a; }
+.cat-chip.on { background: var(--cc, var(--gold)); color: var(--ink-deep); }
+.cat-chip.on small { color: var(--ink-deep); }
 button.cat-chip.on { background: var(--gold); }
 .cat-chip.add { border: 2px dashed var(--line); }
 .mini { padding: 4px 10px; border-radius: 999px; background: var(--card-strong); font-weight: 700; font-size: 0.9rem; white-space: nowrap; }

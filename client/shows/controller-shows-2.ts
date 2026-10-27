@@ -7,7 +7,7 @@ import { type SocialPrivate, type SocialPublic } from '../../shared/social';
 import { SONDAGGI, type SondaggiPrivate, type SondaggiPublic } from '../../shared/sondaggi';
 import type { PlayerPublic, RoomSnapshot } from '../../shared/types';
 import { esc } from '../common/net';
-import { playerColor, playerName, renderShowFinalController, type ControllerShowContext } from './controller-shows';
+import { playerColor, playerName, playerShapeCss, renderShowFinalController, type ControllerShowContext } from './controller-shows';
 import { renderControllerShowBatch3 } from './controller-shows-3';
 
 let draftSondaggiKey = '';
@@ -70,7 +70,7 @@ function renderSocialController(snap: RoomSnapshot, p: PlayerPublic, meta: ShowM
           ${online.map((o) => {
             const ch = getCharacter(o.characterId);
             const picked = priv.myVote === o.id;
-            return `<button class="target-btn ${picked ? 'on' : ''}" data-vote="${o.id}" style="--pc:${playerColor(snap, o.id)}"><b>${picked ? '✓ ' : ''}${esc(o.name)}${o.id === p.id ? ' (Tu)' : ''}</b><small>${esc(ch?.name ?? 'Giocatore')}</small></button>`;
+            return `<button class="target-btn ${picked ? 'on' : ''}" data-vote="${o.id}" style="--pc:${playerColor(snap, o.id)};${playerShapeCss(snap, o.id)}"><b>${picked ? '✓ ' : ''}${esc(o.name)}${o.id === p.id ? ' (Tu)' : ''}</b><small>${esc(ch?.name ?? 'Giocatore')}</small></button>`;
           }).join('')}
         </div>
       </div>`;

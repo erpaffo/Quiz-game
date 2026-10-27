@@ -1,13 +1,37 @@
 {
  "id": "banca-sport",
  "name": "📚 Sport & Giochi",
- "description": "Banca domande · 25 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 121 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
   {
    "id": "calcio",
    "name": "Calcio",
+   "icon": "⚽",
+   "color": "#06d6a0"
+  },
+  {
+   "id": "olimpiadi",
+   "name": "Olimpiadi",
+   "icon": "⚽",
+   "color": "#06d6a0"
+  },
+  {
+   "id": "motori",
+   "name": "Motori",
+   "icon": "⚽",
+   "color": "#06d6a0"
+  },
+  {
+   "id": "altri-sport",
+   "name": "Altri sport",
+   "icon": "⚽",
+   "color": "#06d6a0"
+  },
+  {
+   "id": "videogiochi",
+   "name": "Videogiochi",
    "icon": "⚽",
    "color": "#06d6a0"
   }
@@ -323,6 +347,1210 @@
    "answer": 5,
    "unit": "scudetti",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-9l88pu",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale maratoneta etiope vinse la medaglia d'oro alle Olimpiadi di Roma correndo l'intero percorso a piedi scalzi e tagliando il traguardo sotto l'Arco di Costantino?",
+   "options": [
+    "Abebe Bikila",
+    "Haile Gebrselassie",
+    "Mamo Wolde",
+    "Kenenisa Bekele"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-m5dxvf",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Alle Olimpiadi di Città del Messico del 1968, quale altista statunitense vinse l'oro rivoluzionando il salto in alto con il superamento dell'asticella di schiena (stile dorsale)?",
+   "options": [
+    "Dick Fosbury",
+    "Javier Sotomayor",
+    "Valerij Brumel'",
+    "Dwight Stones"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ieabvp",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale ginnasta romena quattordicenne ottenne alle Olimpiadi di Montréal del 1976, alle parallele asimmetriche, il primo storico «10.0» perfetto della storia olimpica?",
+   "options": [
+    "Nadia Comăneci",
+    "Ol'ga Korbut",
+    "Larisa Latynina",
+    "Věra Čáslavská"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1prhoe7",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale maratoneta italiano giunse per primo nello stadio alle Olimpiadi di Londra del 1908, ma fu squalificato perché sorretto dai giudici di gara dopo essere crollato stremato?",
+   "options": [
+    "Dorando Pietri",
+    "Gelindo Bordin",
+    "Stefano Baldini",
+    "Ugo Frigerio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1np19d3",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Chi fu l'ostacolista bolognese che alle Olimpiadi di Berlino del 1936 vinse gli 80 metri ostacoli, diventando la prima donna italiana a conquistare una medaglia d'oro olimpica?",
+   "options": [
+    "Ondina Valla",
+    "Sara Simeoni",
+    "Novella Calligaris",
+    "Paola Pigni"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ytnh1c",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale schermidore italiano, specialista di spada e fioretto tra il 1936 e il 1960, è l'atleta azzurro più medagliato di tutti i tempi ai Giochi Olimpici con 13 medaglie (6 ori)?",
+   "options": [
+    "Edoardo Mangiarotti",
+    "Nedo Nadi",
+    "Giulio Gaudini",
+    "Aldo Montano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1khgxm0",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale tuffatore azzurro vinse tre medaglie d'oro olimpiche consecutive nella piattaforma da 10 metri (1968, 1972 e 1976)?",
+   "options": [
+    "Klaus Dibiasi",
+    "Giorgio Cagnotto",
+    "Greg Louganis",
+    "Tom Daley"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-17drln6",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale aristocratico e pedagogo francese promosse alla Sorbona di Parigi nel 1894 la rinascita dei Giochi Olimpici moderni e la fondazione del CIO?",
+   "options": [
+    "Pierre de Coubertin",
+    "Jules Rimet",
+    "Henri Delaunay",
+    "Avery Brundage"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-f1r399",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale schermitrice italiana del fioretto ha conquistato nove medaglie olimpiche (sei ori, un argento e due bronzi), di cui tre ori individuali consecutivi?",
+   "options": [
+    "Valentina Vezzali",
+    "Giovanna Trillini",
+    "Elisa Di Francisca",
+    "Arianna Errigo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-erncfx",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "In quale località alpina italiana si disputarono nel 1956 i VII Giochi Olimpici Invernali, i primi nella storia a essere trasmessi in diretta televisiva?",
+   "options": [
+    "Cortina d'Ampezzo",
+    "Sestriere",
+    "Courmayeur",
+    "Bormio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1c1674e",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale velocista e lunghista statunitense afroamericano trionfò alle Olimpiadi di Berlino del 1936 vincendo 4 medaglie d'oro (100 m, 200 m, 4×100 m e salto in lungo)?",
+   "options": [
+    "Jesse Owens",
+    "Carl Lewis",
+    "Bob Beamon",
+    "Tommie Smith"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tet2ph",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Alle Olimpiadi di Città del Messico del 1968, quale lunghista statunitense atterrò all'incredibile misura di 8,90 metri, un record del mondo rimasto imbattuto per 23 anni?",
+   "options": [
+    "Bob Beamon",
+    "Mike Powell",
+    "Carl Lewis",
+    "Ralph Boston"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-swu21x",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale schermidore livornese compì alle Olimpiadi di Anversa del 1920 l'impresa unica nella storia di vincere 5 medaglie d'oro su 6 gare di scherma in una sola edizione (fioretto, sciabola e spada)?",
+   "options": [
+    "Nedo Nadi",
+    "Aldo Nadi",
+    "Edoardo Mangiarotti",
+    "Oreste Puliti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-dase64",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale ginnasta azzurro, soprannominato «il Signore degli Anelli», vinse la medaglia d'oro agli anelli alle Olimpiadi di Atlanta del 1996 e il bronzo ad Atene 2004?",
+   "options": [
+    "Jury Chechi",
+    "Igor Cassina",
+    "Franco Menichelli",
+    "Alberto Braglia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-17xxaqc",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale slittinista azzurro, soprannominato «il Cannibale», è stato il primo atleta nella storia olimpica a vincere una medaglia individuale nella stessa disciplina in sei Olimpiadi consecutive (1994-2014)?",
+   "options": [
+    "Armin Zöggeler",
+    "Paul Hildgartner",
+    "Norbert Huber",
+    "Gerhard Plankensteiner"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-hf8sh",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Quale fondista cecoslovacco, soprannominato «la Locomotiva umana», compì alle Olimpiadi di Helsinki del 1952 l'impresa mai più ripetuta di vincere 5.000 m, 10.000 m e maratona nella stessa edizione?",
+   "options": [
+    "Emil Zátopek",
+    "Paavo Nurmi",
+    "Lasse Virén",
+    "Hannes Kolehmainen"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-do6o0q",
+   "categoryId": "olimpiadi",
+   "type": "multiple",
+   "text": "Alle Olimpiadi Invernali di Calgary del 1988, in quali due specialità dello sci alpino Alberto Tomba conquistò la medaglia d'oro?",
+   "options": [
+    "Slalom gigante e slalom speciale",
+    "Discesa libera e supergigante",
+    "Slalom speciale e combinata alpina",
+    "Slalom gigante e supergigante"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-bien2h",
+   "categoryId": "olimpiadi",
+   "type": "truefalse",
+   "text": "Il motto olimpico ufficiale «Citius, Altius, Fortius» («Più veloce, più in alto, più forte») fu proposto da Pierre de Coubertin su suggerimento dell'amico domenicano Henri Didon.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-ni0k8w",
+   "categoryId": "olimpiadi",
+   "type": "truefalse",
+   "text": "Dal 1912 al 1948 i Giochi Olimpici assegnarono medaglie anche in concorsi d'arte (architettura, letteratura, musica, pittura e scultura) per opere ispirate allo sport.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-9hp4iu",
+   "categoryId": "olimpiadi",
+   "type": "truefalse",
+   "text": "Fino al 1992 i Giochi Olimpici Estivi e i Giochi Olimpici Invernali si disputavano nello stesso anno solare; l'alternanza ogni due anni è iniziata con i Giochi Invernali di Lillehammer del 1994.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-uc2dp1",
+   "categoryId": "olimpiadi",
+   "type": "truefalse",
+   "text": "Durante la cerimonia di apertura dei Giochi Olimpici, la sfilata delle delegazioni nazionali è sempre aperta dal Paese ospitante e chiusa dalla Grecia.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-w8q6ka",
+   "categoryId": "olimpiadi",
+   "type": "numeric",
+   "text": "Quante medaglie d'oro conquistò il nuotatore statunitense Michael Phelps in una singola edizione alle Olimpiadi di Pechino del 2008, battendo lo storico record di 7 ori stabilito da Mark Spitz a Monaco 1972?",
+   "answer": 8,
+   "unit": "medaglie d'oro",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-gb36td",
+   "categoryId": "olimpiadi",
+   "type": "numeric",
+   "text": "Con quale tempo in secondi (al centesimo) Pietro Mennea stabilì a Città del Messico nel 1979 lo storico record del mondo dei 200 metri piani, poi seguito dall'oro olimpico a Mosca 1980?",
+   "answer": 19.72,
+   "unit": "secondi",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-g9wu3p",
+   "categoryId": "olimpiadi",
+   "type": "numeric",
+   "text": "In che anno la città di Roma ospitò i Giochi della XVII Olimpiade estiva?",
+   "answer": 1960,
+   "unit": "",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1bk9qoi",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale leggendario pilota italiano è il più titolato nella storia del Motomondiale con 15 campionati del mondo vinti, in gran parte in sella alla MV Agusta?",
+   "options": [
+    "Giacomo Agostini",
+    "Carlo Ubbiali",
+    "Max Biaggi",
+    "Loris Capirossi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-epjk96",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale tre volte campione del mondo brasiliano di Formula 1 perse tragicamente la vita il 1° maggio 1994 alla curva del Tamburello durante il GP di San Marino a Imola?",
+   "options": [
+    "Ayrton Senna",
+    "Nelson Piquet",
+    "Emerson Fittipaldi",
+    "Rubens Barrichello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1xolgmg",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Chi è stato l'unico pilota italiano a vincere il titolo mondiale piloti di Formula 1 al volante della Ferrari, impresa riuscita per due anni consecutivi nel 1952 e nel 1953?",
+   "options": [
+    "Alberto Ascari",
+    "Michele Alboreto",
+    "Lorenzo Bandini",
+    "Riccardo Patrese"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-16p0zjz",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale leggendario asso dell'automobilismo degli anni Venti e Trenta era soprannominato «il Mantovano volante»?",
+   "options": [
+    "Tazio Nuvolari",
+    "Achille Varzi",
+    "Enzo Ferrari",
+    "Piero Taruffi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1tbj0xk",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale pilota argentino, soprannominato «El Chueco», dominò la Formula 1 negli anni Cinquanta vincendo 5 titoli mondiali con quattro case diverse (Alfa Romeo, Maserati, Mercedes e Ferrari)?",
+   "options": [
+    "Juan Manuel Fangio",
+    "Carlos Reutemann",
+    "José Froilán González",
+    "Juan Pablo Montoya"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-bvbkwb",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale tre volte campione del mondo austriaco di Formula 1 sopravvisse al drammatico incidente e al rogo del Nürburgring il 1° agosto 1976, tornando in pista a Monza dopo soli 42 giorni?",
+   "options": [
+    "Niki Lauda",
+    "Jochen Rindt",
+    "Gerhard Berger",
+    "Helmut Marko"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-lpp77h",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale casa automobilistica italiana detiene il record assoluto di 10 Campionati del Mondo Rally (WRC) Costruttori vinti grazie a modelli iconici come Stratos, 037 e Delta?",
+   "options": [
+    "Lancia",
+    "Fiat",
+    "Alfa Romeo",
+    "Maserati"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-susw62",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale pilota britannico è l'unico nella storia ad aver conquistato la «Tripla Corona» del motorsport, vincendo GP di Monaco, 500 Miglia di Indianapolis e 24 Ore di Le Mans?",
+   "options": [
+    "Graham Hill",
+    "Jim Clark",
+    "Jackie Stewart",
+    "Nigel Mansell"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ltlzci",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Come si chiama la celebre e spettacolare sequenza di curve in salita e in pieno del circuito belga di Spa-Francorchamps?",
+   "options": [
+    "Eau Rouge - Raidillon",
+    "Parabolica",
+    "Cavatappi (Corkscrew)",
+    "Tamburello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1nb6tx2",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale pilota australiano regalò nel 2007 alla Ducati il suo primo storico titolo mondiale piloti nella classe MotoGP?",
+   "options": [
+    "Casey Stoner",
+    "Mick Doohan",
+    "Wayne Gardner",
+    "Jack Miller"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1o1y813",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "A quale asso dell'aviazione italiana della Prima guerra mondiale apparteneva l'emblema del «Cavallino Rampante» donato dalla madre dell'eroe a Enzo Ferrari nel 1923?",
+   "options": [
+    "Francesco Baracca",
+    "Italo Balbo",
+    "Arturo Ferrarin",
+    "Fulco Ruffo di Calabria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-z20fwz",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Prima di produrre vetture con il proprio nome, di quale casa automobilistica milanese Enzo Ferrari gestì il reparto corse con la «Scuderia Ferrari» fondata nel 1929?",
+   "options": [
+    "Alfa Romeo",
+    "Maserati",
+    "Isotta Fraschini",
+    "Lancia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-vdyh5s",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "In quale città lombarda avevano storicamente partenza e arrivo le edizioni della leggendaria corsa stradale della «Mille Miglia» (con giro di boa a Roma)?",
+   "options": [
+    "Brescia",
+    "Bergamo",
+    "Mantova",
+    "Cremona"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-c51pes",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Sulle strade montuose di quale regione italiana (nel circuito delle Madonie) si disputava dal 1906 la storica corsa automobilistica della «Targa Florio»?",
+   "options": [
+    "Sicilia",
+    "Sardegna",
+    "Abruzzo",
+    "Puglia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-gadc6j",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale quattro volte campione del mondo francese di Formula 1 era soprannominato «il Professore» per il suo stile di guida tattico e fu lo storico rivale di Ayrton Senna?",
+   "options": [
+    "Alain Prost",
+    "René Arnoux",
+    "Didier Pironi",
+    "Jacques Laffite"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1y19ml6",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "In quale specialità automobilistica il pilota francese Sébastien Loeb ha conquistato il record di 9 titoli mondiali consecutivi dal 2004 al 2012?",
+   "options": [
+    "Rally (WRC)",
+    "Formula 1",
+    "Endurance (WEC)",
+    "Formula E"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12993i6",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Quale pilota italiano, vincitore della MotoGP nel 2022 e nel 2023, ha riportato un binomio tutto italiano (pilota e moto Ducati) sul tetto della classe regina 50 anni dopo Agostini?",
+   "options": [
+    "Francesco «Pecco» Bagnaia",
+    "Marco Bezzecchi",
+    "Enea Bastianini",
+    "Franco Morbidelli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-swz4og",
+   "categoryId": "motori",
+   "type": "multiple",
+   "text": "Su quale circuito della California si trova la celebre curva in discesa a «S» cieca soprannominata «il Cavatappi» («The Corkscrew»)?",
+   "options": [
+    "Laguna Seca",
+    "Indianapolis",
+    "Daytona",
+    "Sebring"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1oq7fn9",
+   "categoryId": "motori",
+   "type": "truefalse",
+   "text": "Nelle gare di Formula 1, la «bandiera blu» sventolata dai commissari a un pilota che sta per essere doppiato gli impone di cedere strada al più presto alla vettura più veloce.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-195hqz2",
+   "categoryId": "motori",
+   "type": "truefalse",
+   "text": "Alla «500 Miglia di Indianapolis», per una tradizione iniziata nel 1936 da Louis Meyer, il vincitore festeggia sul podio bevendo una bottiglia di latte anziché lo champagne.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1xxx84d",
+   "categoryId": "motori",
+   "type": "truefalse",
+   "text": "Il celebre «Rally Parigi-Dakar» nacque dopo che il suo ideatore Thierry Sabine si era smarrito in moto nel deserto della Patagonia argentina nel 1977.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-f4dwk2",
+   "categoryId": "motori",
+   "type": "truefalse",
+   "text": "Il britannico John Surtees è l'unico pilota nella storia ad aver vinto il titolo mondiale sia nel Motomondiale (classe 500) sia in Formula 1 (nel 1964 con la Ferrari).",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1hwr3r8",
+   "categoryId": "motori",
+   "type": "numeric",
+   "text": "Quanti punti vengono assegnati al vincitore di un Gran Premio (esclusi giro veloce e Sprint) secondo il sistema di punteggio della Formula 1 in vigore dal 2010?",
+   "answer": 25,
+   "unit": "punti",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-9minlt",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Come si chiama l'iconica archeologa e avventuriera britannica protagonista della saga videoludica «Tomb Raider», nata nel 1996?",
+   "options": [
+    "Lara Croft",
+    "Jill Valentine",
+    "Samus Aran",
+    "Chloe Frazer"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1xiqudu",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel videogioco «The Last of Us» (2013) di Naughty Dog, come si chiamano il contrabbandiere e la ragazzina immune al fungo Cordyceps protagonisti del viaggio?",
+   "options": [
+    "Joel ed Ellie",
+    "Nathan e Elena",
+    "Lee e Clementine",
+    "Booker ed Elizabeth"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-13mht4a",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Come si chiama il cacciatore di mostri dai capelli bianchi («lo Strigo») protagonista della serie di videogiochi «The Witcher», tratta dai libri di Andrzej Sapkowski?",
+   "options": [
+    "Geralt di Rivia",
+    "Vesemir",
+    "Eredin",
+    "Dandelion"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-114lkbw",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nella saga sparatutto di fantascienza «Halo», con quale nome è conosciuto il supersoldato Spartan-117 in armatura verde Mjolnir?",
+   "options": [
+    "Master Chief",
+    "Commander Shepard",
+    "Marcus Fenix",
+    "Doom Slayer"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12fhaai",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nella celebre saga stealth «Metal Gear Solid» ideata da Hideo Kojima, come si chiama l'agente speciale che si infiltra nella base di Shadow Moses?",
+   "options": [
+    "Solid Snake",
+    "Sam Fisher",
+    "Agent 47",
+    "JC Denton"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ocbjcg",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel videogioco «Grand Theft Auto: San Andreas» (2004), come si chiama il protagonista che fa ritorno nel suo quartiere di Grove Street a Los Santos?",
+   "options": [
+    "Carl «CJ» Johnson",
+    "Tommy Vercetti",
+    "Niko Bellic",
+    "Trevor Philips"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1mxwrl8",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel classico gioco di ruolo giapponese «Final Fantasy VII» (1997), come si chiama il mercenario ex SOLDIER armato dell'enorme spada «Buster Sword»?",
+   "options": [
+    "Cloud Strife",
+    "Squall Leonhart",
+    "Tidus",
+    "Zack Fair"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-jj70q2",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nella serie di picchiaduro «Street Fighter» di Capcom, come si chiama il celebre colpo d'energia lanciato con i palmi delle mani da Ryu e Ken?",
+   "options": [
+    "Hadouken",
+    "Kamehameha",
+    "Fatality",
+    "Sonic Boom"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zlc9ac",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel simulatore di vita «The Sims» ideato da Will Wright, come si chiama la lingua artificiale priva di parole reali parlata dai personaggi virtuali?",
+   "options": [
+    "Simlish",
+    "Hylian",
+    "Dovahzul",
+    "Al Bhed"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-2jwn3m",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel videogioco «Portal» (2007) di Valve, come si chiama la sarcastica intelligenza artificiale che gestisce i laboratori di Aperture Science?",
+   "options": [
+    "GLaDOS",
+    "SHODAN",
+    "Cortana",
+    "HAL 9000"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-14ly8na",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel videogioco western «Red Dead Redemption 2» (2018) di Rockstar Games, come si chiama il fuorilegge protagonista membro della banda di Dutch van der Linde?",
+   "options": [
+    "Arthur Morgan",
+    "John Marston",
+    "Micah Bell",
+    "Bill Williamson"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-p3sys9",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nella saga survival horror «Resident Evil», come si chiama la multinazionale farmaceutica dal logo ottagonale bianco e rosso responsabile della diffusione del Virus T?",
+   "options": [
+    "Umbrella Corporation",
+    "Vault-Tec",
+    "Cyberdyne Systems",
+    "Weyland-Yutani"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1bdx3hg",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel celebre gioco di ruolo online «World of Warcraft» di Blizzard, come si chiama il mondo fantasy principale teatro dello scontro tra Alleanza e Orda?",
+   "options": [
+    "Azeroth",
+    "Tamriel",
+    "Sanctuary",
+    "Thedas"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-lr5qak",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Quale game director giapponese di FromSoftware ha diretto «Demon's Souls», «Dark Souls», «Bloodborne» ed «Elden Ring», dando vita al genere «soulslike»?",
+   "options": [
+    "Hidetaka Miyazaki",
+    "Shigeru Miyamoto",
+    "Shinji Mikami",
+    "Yoko Taro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1097wb2",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nel primo «BioShock» (2007), come si chiama la città distopica sottomarina costruita in stile Art Déco sul fondo dell'Atlantico dal magnate Andrew Ryan?",
+   "options": [
+    "Rapture",
+    "Columbia",
+    "Midgar",
+    "City 17"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1j7u4lq",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Nella classica avventura grafica «The Secret of Monkey Island» (1990), come si chiama il goffo giovane protagonista che sogna di diventare un temibile pirata?",
+   "options": [
+    "Guybrush Threepwood",
+    "LeChuck",
+    "Stan S. Stanman",
+    "Manny Calavera"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1rujsln",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "In «The Elder Scrolls V: Skyrim» (2011), quali sono le tre parole nella lingua dei draghi che compongono il celebre «Urlo» della Forza Inesorabile?",
+   "options": [
+    "Fus Ro Dah",
+    "Klaatu Barada Nikto",
+    "Yol Toor Shul",
+    "Od Ah Viing"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-gacrd3",
+   "categoryId": "videogiochi",
+   "type": "multiple",
+   "text": "Quale storica azienda statunitense fondata nel 1972 da Nolan Bushnell e Ted Dabney produsse il celebre cabinato arcade «Pong»?",
+   "options": [
+    "Atari",
+    "Coleco",
+    "Mattel",
+    "Commodore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-xb5gq6",
+   "categoryId": "videogiochi",
+   "type": "truefalse",
+   "text": "Nella saga «The Legend of Zelda» di Nintendo, l'eroe con la tunica verde controllato dal giocatore si chiama Link, mentre Zelda è il nome della principessa di Hyrule.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1j9drfm",
+   "categoryId": "videogiochi",
+   "type": "truefalse",
+   "text": "Il celebre «Konami Code» (Su, Su, Giù, Giù, Sinistra, Destra, Sinistra, Destra, B, A) fu creato dal programmatore Kazuhisa Hashimoto durante i test di «Gradius» per NES nel 1986.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1dls8us",
+   "categoryId": "videogiochi",
+   "type": "truefalse",
+   "text": "Per il videogioco «Elden Ring» (2022) di FromSoftware, la mitologia e il background storico del mondo dell'Interregno sono stati scritti da George R. R. Martin.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-jjwifv",
+   "categoryId": "videogiochi",
+   "type": "numeric",
+   "text": "Quanti erano in totale i Pokémon originali della «Prima Generazione» (da Bulbasaur a Mew) introdotti nei primi videogiochi «Pokémon Rosso e Blu»?",
+   "answer": 151,
+   "unit": "Pokémon",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1wtrar5",
+   "categoryId": "videogiochi",
+   "type": "numeric",
+   "text": "Quanti fantasmi colorati danno la caccia al protagonista all'interno del labirinto nel classico videogioco arcade «Pac-Man» del 1980?",
+   "answer": 4,
+   "unit": "fantasmi",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-fkz2ff",
+   "categoryId": "videogiochi",
+   "type": "numeric",
+   "text": "In che anno Sony lanciò sul mercato giapponese (il 3 dicembre) la prima storica console «PlayStation»?",
+   "answer": 1994,
+   "unit": "anno",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-120fdrf",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Quanti giocatori per squadra sono in campo contemporaneamente nella pallacanestro?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "4"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-co81so",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Quanti giocatori per squadra sono in campo contemporaneamente nella pallavolo?",
+   "options": [
+    "6",
+    "5",
+    "7",
+    "9"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-n8xjw",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Nella pallavolo, come si chiama il giocatore con la maglia di colore diverso specializzato in difesa e ricezione?",
+   "options": [
+    "Libero",
+    "Palleggiatore",
+    "Opposto",
+    "Schiacciatore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1tywq4y",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Nel tennis, come si chiama la situazione di punteggio 40 pari?",
+   "options": [
+    "Parità (deuce)",
+    "Vantaggio",
+    "Tie-break",
+    "Match point"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1xb76z0",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Quale torneo del Grande Slam di tennis si gioca sulla terra rossa?",
+   "options": [
+    "Roland Garros",
+    "Wimbledon",
+    "US Open",
+    "Australian Open"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-j9vsoc",
+   "categoryId": "altri-sport",
+   "type": "truefalse",
+   "text": "Il torneo di tennis di Wimbledon si gioca su campi in erba.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1dt4mv8",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Nei tornei maschili del Grande Slam, quanti set deve vincere un tennista per aggiudicarsi l'incontro?",
+   "options": [
+    "3",
+    "2",
+    "4",
+    "5"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1krxs4r",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Nel golf, come si chiama una buca completata con un colpo in meno del par?",
+   "options": [
+    "Birdie",
+    "Eagle",
+    "Bogey",
+    "Albatross"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1u99304",
+   "categoryId": "altri-sport",
+   "type": "truefalse",
+   "text": "Nel golf vince chi completa il percorso con il maggior numero di colpi.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1bwewp8",
+   "categoryId": "altri-sport",
+   "type": "numeric",
+   "text": "Quanti punti vale una meta nel rugby a 15?",
+   "answer": 5,
+   "unit": "punti",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1crwvp8",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Quale di queste nazionali NON partecipa al torneo di rugby Sei Nazioni?",
+   "options": [
+    "Spagna",
+    "Italia",
+    "Galles",
+    "Scozia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1h66bey",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "In quale sport si colpisce con la racchetta un volano di piume?",
+   "options": [
+    "Badminton",
+    "Squash",
+    "Tennistavolo",
+    "Padel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1i4wxq2",
+   "categoryId": "altri-sport",
+   "type": "truefalse",
+   "text": "Il padel si gioca su un campo chiuso da pareti, sulle quali la pallina può rimbalzare.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1997f8l",
+   "categoryId": "altri-sport",
+   "type": "numeric",
+   "text": "Quanti round dura al massimo un incontro di pugilato professionistico valido per un titolo mondiale?",
+   "answer": 12,
+   "unit": "round",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ql9nml",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Di che colore è la maglia del leader della classifica generale del Giro d'Italia?",
+   "options": [
+    "Rosa",
+    "Gialla",
+    "Verde",
+    "Azzurra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-16msm4q",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Di che colore è la maglia del leader della classifica generale del Tour de France?",
+   "options": [
+    "Gialla",
+    "Rosa",
+    "Rossa",
+    "Bianca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1hc638s",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Quante sono le basi in un campo da baseball, compresa la casa base?",
+   "options": [
+    "4",
+    "3",
+    "5",
+    "6"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1i97lvn",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Nella pallanuoto, quanti giocatori per squadra sono in acqua, portiere compreso?",
+   "options": [
+    "7",
+    "6",
+    "5",
+    "11"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1uptuue",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Qual è la specialità più veloce dello sci alpino?",
+   "options": [
+    "Discesa libera",
+    "Slalom speciale",
+    "Slalom gigante",
+    "Supergigante"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-17jv1m6",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "In quale sport si fanno scivolare sul ghiaccio pesanti pietre di granito, spazzando la pista davanti a esse?",
+   "options": [
+    "Curling",
+    "Hockey su ghiaccio",
+    "Bob",
+    "Biathlon"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1crmuzd",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Il biathlon unisce lo sci di fondo a quale altra disciplina?",
+   "options": [
+    "Tiro con la carabina",
+    "Salto con gli sci",
+    "Pattinaggio di velocità",
+    "Slalom"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ecekxi",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "In quale Paese è nato il judo, fondato da Jigoro Kano nel 1882?",
+   "options": [
+    "Giappone",
+    "Cina",
+    "Corea del Sud",
+    "Thailandia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-16gjlmz",
+   "categoryId": "altri-sport",
+   "type": "truefalse",
+   "text": "Il taekwondo è un'arte marziale originaria della Corea.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-der1r7",
+   "categoryId": "altri-sport",
+   "type": "numeric",
+   "text": "A quanti metri da terra si trova il bordo del canestro nella pallacanestro?",
+   "answer": 3.05,
+   "unit": "metri",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-azd75h",
+   "categoryId": "altri-sport",
+   "type": "multiple",
+   "text": "Quale di queste NON è un'arma della scherma olimpica?",
+   "options": [
+    "Daga",
+    "Fioretto",
+    "Spada",
+    "Sciabola"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
   }
  ]
 }

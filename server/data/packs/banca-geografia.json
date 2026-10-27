@@ -1,7 +1,7 @@
 {
  "id": "banca-geografia",
  "name": "📚 Geografia",
- "description": "Banca domande · 234 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 247 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -3131,6 +3131,123 @@
    ],
    "correctIndex": 0,
    "difficulty": 2
+  },
+  {
+   "id": "numeric-11kdyy6",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Belgio: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 11,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-abtgzv",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Emirati Arabi Uniti: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 10,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-174x99y",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Svezia: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 10,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1gigsxz",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Mali: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 20,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-17i681w",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Angola: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 33,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-15s119t",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Burkina Faso: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 21,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-wzc6bh",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Repubblica Ceca: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 11,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-5993kp",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Algeria: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 44,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-x4k3m4",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Singapore: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 6,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1udufnr",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Cuba: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 11,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-vohlj",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Bulgaria: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 7,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-sd07mj",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Papua Nuova Guinea: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 9,
+   "unit": "milioni",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1aix6s",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "Danimarca: circa quanti milioni di abitanti aveva nel 2020?",
+   "answer": 6,
+   "unit": "milioni",
+   "difficulty": 3
   }
  ]
 }

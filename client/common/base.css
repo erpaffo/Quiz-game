@@ -74,6 +74,8 @@ button {
 }
 .btn:hover { filter: brightness(1.07); }
 .btn:active { transform: translateY(var(--ledge)); box-shadow: 0 0 0 #a86a00; }
+/* Risposte B (arancio) e D (giallo): testo scuro, il bianco non si legge su colori così chiari. */
+.opt-1, .opt-3 { color: var(--ink-deep); text-shadow: none; }
 .btn:disabled { opacity: 0.45; pointer-events: none; }
 .btn.secondary { background: var(--card-strong); color: var(--ink); box-shadow: 0 var(--ledge) 0 rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(246, 241, 228, 0.12); }
 .btn.pink { background: var(--pink); color: var(--ink-deep); box-shadow: 0 var(--ledge) 0 #a63a30, inset 0 1px 0 rgba(255, 255, 255, 0.3); }

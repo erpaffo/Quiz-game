@@ -173,6 +173,8 @@ export interface LobbySettings {
   rounds?: Partial<Record<ShowId, number>>;
   /** Regole scelte nel sottomenù di ogni gioco: id gioco → (id regola → id scelta). Vedi optionFor in shows.ts. */
   options?: Partial<Record<ShowId, Record<string, string>>>;
+  /** Quiz: argomenti scelti (id di shared/topics.ts). Vuoto o mancante = tutti. */
+  topics?: string[];
   length: GameLength;
   /** Pacchetti esclusi (quelli nuovi sono inclusi automaticamente). */
   excluded: string[];

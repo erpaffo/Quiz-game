@@ -19,7 +19,7 @@ class Preview {
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     this.renderer.domElement.className = 'preview-canvas';
-    this.scene.add(new THREE.HemisphereLight('#ffffff', '#5a2ca0', 1.7));
+    this.scene.add(new THREE.HemisphereLight('#ffffff', '#2f6f80', 1.7));
     const sun = new THREE.DirectionalLight('#ffffff', 2.2);
     sun.position.set(3, 6, 6);
     this.scene.add(sun);

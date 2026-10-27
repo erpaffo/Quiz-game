@@ -7,7 +7,7 @@ import { CARDS } from '../../shared/cards';
 import { CONFIG } from '../../shared/config';
 import type { CardEvent, PlayerPublic, PowerType, PyramidMove } from '../../shared/types';
 import { CharacterRig, type AnimName } from '../common/characters3d';
-import { esc, PLAYER_COLORS } from '../common/net';
+import { esc, PLAYER_COLORS, playerShape } from '../common/net';
 import { addOutline, toonMat } from '../common/toon';
 
 interface Slot {
@@ -401,7 +401,7 @@ export class Stage {
       phase === 'LOBBY' ? (p.ready ? '<span class="pl-status ready">Pronto</span>' : p.characterId ? '<span class="pl-status wait">Non pronto</span>' : '<span class="pl-status wait">Sceglie…</span>') :
       p.hasActed ? '<span class="pl-status ok">✓</span>' : '';
     const html =
-      `<div class="pl-name">${p.isVip ? '👑 ' : ''}${esc(p.name)}${p.isBot ? ' 🤖' : ''}</div>` +
+      `<div class="pl-name"><span class="pl-shape" aria-hidden="true">${playerShape(PLAYER_COLORS.indexOf(slot.color))}</span>${p.isVip ? '👑 ' : ''}${esc(p.name)}${p.isBot ? ' 🤖' : ''}</div>` +
       (phase === 'LOBBY' ? '' : `<div class="pl-score">${p.score.toLocaleString('it-IT')}</div>`) +
       status +
       (p.defense || p.doubleArmed ? `<span class="pl-badges">${p.defense ? CARDS[p.defense].icon : ''}${p.doubleArmed ? '💎' : ''}</span>` : '');

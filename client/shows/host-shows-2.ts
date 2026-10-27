@@ -75,7 +75,7 @@ function renderFilaHost(
             <span class="chip hot">${esc(st.from)} ➔ ${esc(st.to)}</span>
           </div>
           <h1 class="qtext">${esc(st.title)}</h1>
-          <div class="num-Wait">
+          <div class="num-list">
             ${st.correct.map((c, i) => `<div class="num-row pop best" style="animation-delay:${i * 0.08}s"><span>${i + 1}°</span><b>${esc(c.label)}</b><span></span><em class="up">${esc(c.value)}</em></div>`).join('')}
           </div>
           <div class="tempo-players-status">
@@ -105,7 +105,7 @@ function renderGuastaHost(
     case 'favorite':
       return `
         <div class="qcard show-stage pop">
-          <div class="qhead"><span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total} · ${esc(st.roundName)}</span></div>
+          <div class="qhead"><span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total} · ${esc(st.roundName)}</span></div>
           <h1 class="qtext">Scrivete sul telefono una cosa che amate… gli altri dovranno rovinarla!</h1>
           ${renderPlayerChips(s, st.submitted, colorOf)}
         </div>`;
@@ -113,7 +113,7 @@ function renderGuastaHost(
     case 'write':
       return `
         <div class="qcard show-stage pop">
-          <div class="qhead"><span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total} · ${esc(st.roundName)}</span></div>
+          <div class="qhead"><span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total} · ${esc(st.roundName)}</span></div>
           <h1 class="qtext">Rispondete ai vostri 2 temi sul telefono!</h1>
           ${renderPlayerChips(s, st.submitted, colorOf)}
         </div>`;
@@ -122,7 +122,7 @@ function renderGuastaHost(
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Sfida ${st.index}/${st.count} · ${esc(st.roundName)}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Sfida ${st.index}/${st.count} · ${esc(st.roundName)}</span>
             <span class="chip hot">Votate sul telefono!</span>
           </div>
           <h1 class="qtext">${esc(st.prompt)}</h1>
@@ -138,7 +138,7 @@ function renderGuastaHost(
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Risultato ${st.index}/${st.count}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Risultato ${st.index}/${st.count}</span>
             ${st.sweep ? `<span class="chip hot">💥 CAPPOTTO! +${GUASTA.SWEEP_BONUS * st.round}</span>` : ''}
           </div>
           <h1 class="qtext">${esc(st.prompt)}</h1>
@@ -167,7 +167,7 @@ function renderMonsterBar(m: LeggendeMonster, stage: number, stages: number, gol
           <div class="monster-hp-track"><i style="width:${pct}%"></i></div>
         </div>
         <span class="monster-hp-val">❤️ ${m.hp}/${m.maxHp}</span>
-        <span class="chip" style="background:#ffd60a;color:#14063a">💰 ${gold} oro</span>
+        <span class="chip" style="background:#ffd60a;color:var(--ink-deep)">💰 ${gold} oro</span>
       </div>
     </div>`;
 }
@@ -204,10 +204,10 @@ function renderLeggendeHost(
       return `<div class="qcard show-stage pop">${renderMonsterBar(st.monster, st.stage, st.stages, st.gold)}<div class="phase-title">${outcomeBanner}</div>${atkBanner}<div class="opts">${st.question.options.map((o, i) => `<div class="opt ${i === st.correctIndex ? 'correct' : 'dim'}"><span class="opt-letter">${String.fromCharCode(65 + i)}</span><span class="opt-text">${esc(o)}</span><div class="voters">${st.results.filter((r) => r.optionIndex === i).map((p) => `<em>${nameOf(p.playerId)}${p.damage ? ` -${p.damage}` : ''}</em>`).join('')}</div></div>`).join('')}</div>${renderHeroesBar(st.heroes, nameOf, colorOf)}</div>`;
     }
     case 'shop':
-      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:#ffd60a;color:#14063a">🛒 Mercante · 💰 ${st.gold} oro di squadra</span></div><div class="phase-title">Acquistate oggetti o rianimate i caduti dal telefono!</div><div class="show-cards-grid">${(Object.keys(LEGGENDE.ITEMS) as (keyof typeof LEGGENDE.ITEMS)[]).map((k) => { const it = LEGGENDE.ITEMS[k]; return `<div class="show-card"><div class="match-word">${it.icon} ${esc(it.name)}</div><div class="match-pts">💰 ${it.price} oro</div><small class="muted">${esc(it.description)}</small></div>`; }).join('')}</div>${renderHeroesBar(st.heroes, nameOf, colorOf)}</div>`;
+      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:#ffd60a;color:var(--ink-deep)">🛒 Mercante · 💰 ${st.gold} oro di squadra</span></div><div class="phase-title">Acquistate oggetti o rianimate i caduti dal telefono!</div><div class="show-cards-grid">${(Object.keys(LEGGENDE.ITEMS) as (keyof typeof LEGGENDE.ITEMS)[]).map((k) => { const it = LEGGENDE.ITEMS[k]; return `<div class="show-card"><div class="match-word">${it.icon} ${esc(it.name)}</div><div class="match-pts">💰 ${it.price} oro</div><small class="muted">${esc(it.description)}</small></div>`; }).join('')}</div>${renderHeroesBar(st.heroes, nameOf, colorOf)}</div>`;
     case 'victory':
     case 'defeat':
-      return `<div class="qcard show-stage pop"><div class="mg-badge ${st.step === 'victory' ? 'gold' : 'sabotage'}">${st.step === 'victory' ? '🏆 VITTORIA EROICA!' : '💀 LA SQUADRA È CADUTA!'}</div>${renderHeroesBar(st.heroes, nameOf, colorOf)}</div>`;
+      return `<div class="qcard show-stage pop"><div class="mg-badge ${st.step === 'victory' ? 'gold' : 'sabotage'}">${st.step === 'victory' ? '🏆 Vittoria eroica!' : '💀 La squadra è caduta!'}</div>${renderHeroesBar(st.heroes, nameOf, colorOf)}</div>`;
     case 'final':
       return renderShowFinalHost(meta, st, nameOf);
   }
@@ -243,13 +243,13 @@ function renderCreativeHost(
 ): string {
   switch (st.step) {
     case 'draw':
-      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} ${esc(meta.name)}</span><span class="chip hot">🎨 Disegnate in 2 fotogrammi sul telefono!</span></div><h1 class="qtext">Ognuno ha ricevuto un titolo segreto da animare!</h1>${renderPlayerChips(s, st.submitted, colorOf)}</div>`;
+      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} ${esc(meta.name)}</span><span class="chip hot">🎨 Disegnate in 2 fotogrammi sul telefono!</span></div><h1 class="qtext">Ognuno ha ricevuto un titolo segreto da animare!</h1>${renderPlayerChips(s, st.submitted, colorOf)}</div>`;
     case 'title':
-      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Opera ${st.index}/${st.count} · Artista: ${nameOf(st.artistId)}</span><span class="chip hot">Inventate un titolo falso!</span></div>${renderAnimatedDrawingSvg(st.drawing)}${renderPlayerChips(s, st.submitted, colorOf)}</div>`;
+      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Opera ${st.index}/${st.count} · Artista: ${nameOf(st.artistId)}</span><span class="chip hot">Inventate un titolo falso!</span></div>${renderAnimatedDrawingSvg(st.drawing)}${renderPlayerChips(s, st.submitted, colorOf)}</div>`;
     case 'choose':
-      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Opera ${st.index}/${st.count} · Artista: ${nameOf(st.artistId)}</span><span class="chip hot">Qual è il TITOLO VERO?</span></div><div class="creative-split">${renderAnimatedDrawingSvg(st.drawing)}<div class="opts">${st.options.map((o, i) => `<div class="opt pop" style="animation-delay:${i * 0.05}s"><span class="opt-letter">${String.fromCharCode(65 + i)}</span><span class="opt-text">${esc(o.text)}</span></div>`).join('')}</div></div>${renderPlayerChips(s, st.chosen, colorOf)}</div>`;
+      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Opera ${st.index}/${st.count} · Artista: ${nameOf(st.artistId)}</span><span class="chip hot">Qual è il TITOLO VERO?</span></div><div class="creative-split">${renderAnimatedDrawingSvg(st.drawing)}<div class="opts">${st.options.map((o, i) => `<div class="opt pop" style="animation-delay:${i * 0.05}s"><span class="opt-letter">${String.fromCharCode(65 + i)}</span><span class="opt-text">${esc(o.text)}</span></div>`).join('')}</div></div>${renderPlayerChips(s, st.chosen, colorOf)}</div>`;
     case 'reveal':
-      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Rivelazione ${st.index}/${st.count} · Artista: ${nameOf(st.artistId)}</span></div><div class="creative-split">${renderAnimatedDrawingSvg(st.drawing)}<div class="opts">${st.options.map((o, i) => `<div class="opt ${o.isTruth ? 'correct' : o.pickedBy.length ? 'fooled' : 'dim'} pop" style="animation-delay:${i * 0.08}s"><span class="opt-letter">${o.isTruth ? '✓' : '🎭'}</span><div class="opt-body"><div class="opt-text">${esc(o.text)}</div><small class="opt-meta">${o.isTruth ? `🎨 TITOLO VERO (${nameOf(st.artistId)})` : o.authors.length ? `🎭 Falso di ${o.authors.map(nameOf).join(', ')}` : '🏠 Titolo della casa'}</small></div><div class="voters">${o.pickedBy.map((id) => `<em>${nameOf(id)}</em>`).join('')}</div></div>`).join('')}</div></div></div>`;
+      return `<div class="qcard show-stage pop"><div class="qhead"><span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Rivelazione ${st.index}/${st.count} · Artista: ${nameOf(st.artistId)}</span></div><div class="creative-split">${renderAnimatedDrawingSvg(st.drawing)}<div class="opts">${st.options.map((o, i) => `<div class="opt ${o.isTruth ? 'correct' : o.pickedBy.length ? 'fooled' : 'dim'} pop" style="animation-delay:${i * 0.08}s"><span class="opt-letter">${o.isTruth ? '✓' : '🎭'}</span><div class="opt-body"><div class="opt-text">${esc(o.text)}</div><small class="opt-meta">${o.isTruth ? `🎨 TITOLO VERO (${nameOf(st.artistId)})` : o.authors.length ? `🎭 Falso di ${o.authors.map(nameOf).join(', ')}` : '🏠 Titolo della casa'}</small></div><div class="voters">${o.pickedBy.map((id) => `<em>${nameOf(id)}</em>`).join('')}</div></div>`).join('')}</div></div></div>`;
     case 'final':
       return renderShowFinalHost(meta, st, nameOf);
   }
@@ -303,10 +303,10 @@ function renderColpevoleHost(
       const fQuestion = st.falsified !== null ? st.questions[st.falsified]?.text : null;
       return `
         <div class="qcard show-stage pop">
-          <div class="mg-badge ${st.caught ? 'gold' : 'sabotage'}">${st.caught ? '🎉 COLPEVOLE SMASCHERATO!' : '🕵️ IL COLPEVOLE L\'HA FATTA FRANCA!'}</div>
+          <div class="mg-badge ${st.caught ? 'gold' : 'sabotage'}">${st.caught ? '🎉 Colpevole smascherato!' : '🕵️ Il Colpevole l\'ha fatta franca!'}</div>
           <h1 class="qtext">Il Colpevole era ${nameOf(st.culpritId)}!</h1>
           <div class="sub">${fQuestion ? `Aveva falsificato la risposta a: «${esc(fQuestion)}»` : 'Non aveva falsificato nessuna risposta!'}</div>
-          <div class="num-Wait">
+          <div class="num-list">
             ${st.votes.map((v) => `<div class="num-row pop"><span>🗳️</span><b>${nameOf(v.playerId)}</b><span>ha accusato <b>${v.targetId ? nameOf(v.targetId) : 'nessuno'}</b></span><em class="up">+${st.points[v.playerId] ?? 0}</em></div>`).join('')}
           </div>
         </div>`;
@@ -332,7 +332,7 @@ function renderSmistatoriHost(
     case 'teams':
       return `
         <div class="qcard show-stage pop">
-          <div class="mg-badge gold">${meta.icon} SQUADRE PRONTE!</div>
+          <div class="mg-badge gold">${meta.icon} Squadre pronte!</div>
           <div class="guasta-duel">
             <div class="show-card duel-card"><div class="match-word">🟦 Squadra A</div><div>${st.teams.A.map((id) => `<span class="start-chip" style="--pc:${colorOf(id)}">${nameOf(id)}</span>`).join(' ')}</div></div>
             <div class="duel-vs">⚡ VS ⚡</div>
@@ -364,7 +364,7 @@ function renderSmistatoriHost(
     case 'result':
       return `
         <div class="qcard show-stage pop">
-          <div class="mg-badge gold">${st.winner ? `🏆 VINCE LA SQUADRA ${st.winner}!` : '🤝 PAREGGIO!'}</div>
+          <div class="mg-badge gold">${st.winner ? `🏆 Vince la Squadra ${st.winner}!` : '🤝 Pareggio!'}</div>
           <h1 class="qtext">🟦 Squadra A: ${st.teams.A.score} pti — 🟧 Squadra B: ${st.teams.B.score} pti</h1>
         </div>`;
     case 'final':

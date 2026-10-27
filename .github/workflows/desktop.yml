@@ -1,12 +1,27 @@
 name: Eseguibili (Windows, Mac, Linux)
 
-# A ogni push compila il gioco per i 3 sistemi e prova l'app impacchettata (senza finestre).
-# Con un tag di versione (es. v1.0.0) pubblica anche una Release con i file da scaricare.
+# Compila il gioco per i 3 sistemi e prova l'app impacchettata (senza finestre).
+# Parte con un tag di versione (es. v1.0.0, e allora pubblica anche la Release), quando cambia la parte desktop,
+# oppure a mano da GitHub → Actions → «Run workflow». I controlli di ogni push li fa ci.yml (più veloce).
 on:
   push:
     branches: [main, master]
     tags: ['v*']
+    paths:
+      - 'desktop/**'
+      - 'electron-builder.config.cjs'
+      - 'scripts/desktop-*.mjs'
+      - 'build/**'
+      - 'package-lock.json'
+      - '.github/workflows/desktop.yml'
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desktop-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,6 +36,7 @@ jobs:
           - os: ubuntu-latest
             name: linux
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 

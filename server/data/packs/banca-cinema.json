@@ -1,13 +1,25 @@
 {
  "id": "banca-cinema",
  "name": "📚 Cinema & TV",
- "description": "Banca domande · 47 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 95 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
   {
    "id": "film",
    "name": "Film",
+   "icon": "🎬",
+   "color": "#e63946"
+  },
+  {
+   "id": "serie",
+   "name": "Serie TV",
+   "icon": "🎬",
+   "color": "#e63946"
+  },
+  {
+   "id": "animazione",
+   "name": "Cartoni e fumetti",
    "icon": "🎬",
    "color": "#e63946"
   },
@@ -609,6 +621,605 @@
    "answer": 4,
    "unit": "Oscar",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-152zayc",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie cult «I segreti di Twin Peaks» (1990) di David Lynch e Mark Frost, sull'omicidio di quale studentessa indaga l'agente dell'FBI Dale Cooper?",
+   "options": [
+    "Laura Palmer",
+    "Audrey Horne",
+    "Donna Hayward",
+    "Shelly Johnson"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-12mj06r",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale attore italoamericano ha interpretato il boss del New Jersey Tony Soprano nella celebre serie HBO «I Soprano» («The Sopranos», 1999-2007)?",
+   "options": [
+    "James Gandolfini",
+    "Michael Imperioli",
+    "Joe Pantoliano",
+    "Chazz Palminteri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-11k3i6i",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella storica serie di fantascienza «X-Files» («The X-Files»), come si chiamano i due agenti speciali dell'FBI interpretati da David Duchovny e Gillian Anderson?",
+   "options": [
+    "Fox Mulder e Dana Scully",
+    "Dale Cooper e Diane Evans",
+    "Rust Cohle e Marty Hart",
+    "Olivia Dunham e Peter Bishop"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1mzlp55",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella sitcom «The Big Bang Theory», come si chiama il fisico teorico geniale e metodico interpretato da Jim Parsons?",
+   "options": [
+    "Sheldon Cooper",
+    "Leonard Hofstadter",
+    "Howard Wolowitz",
+    "Rajesh Koothrappali"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1lidli7",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Qual è il vero nome di battesimo e cognome dell'avvocato protagonista della serie «Better Call Saul», prima che adotti lo pseudonimo di Saul Goodman?",
+   "options": [
+    "Jimmy McGill",
+    "Mike Ehrmantraut",
+    "Howard Hamlin",
+    "Nacho Varga"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1d24pry",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "In quale città industriale inglese del primo dopoguerra sono ambientate le vicende della banda criminale guidata da Tommy Shelby in «Peaky Blinders»?",
+   "options": [
+    "Birmingham",
+    "Manchester",
+    "Liverpool",
+    "Sheffield"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1gfrrg6",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie britannica «Sherlock» prodotta dalla BBC, quale attore interpreta un moderno Sherlock Holmes affiancato dal dottor Watson di Martin Freeman?",
+   "options": [
+    "Benedict Cumberbatch",
+    "Tom Hiddleston",
+    "Matt Smith",
+    "David Tennant"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1lhqtcs",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Di quale celebre narcotrafficante colombiano e capo del Cartello di Medellín raccontano l'ascesa e la caccia le prime due stagioni della serie «Narcos»?",
+   "options": [
+    "Pablo Escobar",
+    "Joaquín «El Chapo» Guzmán",
+    "Félix Gallardo",
+    "Amado Carrillo Fuentes"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-a571bs",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Come si chiama la cittadina tedesca immaginaria vicina a una centrale nucleare in cui si intrecciano i viaggi nel tempo della serie «Dark»?",
+   "options": [
+    "Winden",
+    "Hawkins",
+    "Sunnydale",
+    "Twin Peaks"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1oql1m0",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie medical comedy «Scrubs - Medici ai primi ferri», come si chiama l'ospedale in cui lavorano John «J.D.» Dorian, Turk e il dottor Cox?",
+   "options": [
+    "Ospedale Sacro Cuore",
+    "Seattle Grace Hospital",
+    "County General Hospital",
+    "Princeton-Plainsboro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-6pa9tg",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella miniserie del 2020 «La regina degli scacchi» («The Queen's Gambit»), come si chiama la giovane orfana prodigio degli scacchi interpretata da Anya Taylor-Joy?",
+   "options": [
+    "Beth Harmon",
+    "Eleven Hopper",
+    "Maeve Wiley",
+    "Hannah Baker"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-11boo88",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie «Mercoledì» («Wednesday», 2022) diretta da Tim Burton, come si chiama il collegio per «reietti» frequentato da Mercoledì Addams?",
+   "options": [
+    "Nevermore Academy",
+    "Hogwarts",
+    "Xavier Institute",
+    "Brakebills"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-vlc8u8",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie HBO «Succession», come si chiama il conglomerato mediatico globale fondato dal patriarca Logan Roy e conteso dai suoi quattro figli?",
+   "options": [
+    "Waystar RoyCo",
+    "Massive Dynamic",
+    "E Corp",
+    "Sterling Cooper"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-aztd1r",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie dell'universo di Star Wars «The Mandalorian», qual è il vero nome del piccolo alieno della stessa specie di Yoda, ribattezzato inizialmente dai fan «Baby Yoda»?",
+   "options": [
+    "Grogu",
+    "Kuiil",
+    "Moff Gideon",
+    "Ahsoka"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zz0vu3",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "A quale storica organizzazione criminale romana degli anni Settanta e Ottanta sono ispirate le vicende del Libanese, del Freddo e del Dandi in «Romanzo criminale - La serie»?",
+   "options": [
+    "La Banda della Magliana",
+    "La Mala del Brenta",
+    "La Banda della Comasina",
+    "La Banda Cavallero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-hxeeaa",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Quale acclamata miniserie del 2019 creata da Craig Mazin ricostruisce il disastro nucleare sovietico del 1986 attraverso la figura dello scienziato Valerij Legasov?",
+   "options": [
+    "Chernobyl",
+    "The Americans",
+    "Band of Brothers",
+    "The Pacific"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-563awv",
+   "categoryId": "serie",
+   "type": "multiple",
+   "text": "Nella serie «Dexter», quale lavoro svolge di giorno per la polizia di Miami il protagonista Dexter Morgan, che di notte agisce come serial killer di criminali?",
+   "options": [
+    "Analista forense specializzato nelle tracce di sangue",
+    "Medico legale anatomopatologo",
+    "Profilatore psicologico dell'FBI",
+    "Procuratore distrettuale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-10y5il4",
+   "categoryId": "serie",
+   "type": "truefalse",
+   "text": "Nella sitcom «How I Met Your Mother» («E alla fine arriva mamma»), il protagonista Ted Mosby svolge la professione di architetto a New York.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1elk7o4",
+   "categoryId": "serie",
+   "type": "truefalse",
+   "text": "La serie distopica «Il racconto dell'ancella» («The Handmaid's Tale»), ambientata nella dittatura di Gilead, è tratta dall'omonimo romanzo della scrittrice canadese Margaret Atwood.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1980ly0",
+   "categoryId": "serie",
+   "type": "truefalse",
+   "text": "Nella serie «Il Trono di Spade» («Game of Thrones»), il motto storico della nobile casata degli Stark di Grande Inverno è «Un Lannister paga sempre i suoi debiti».",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-153uroa",
+   "categoryId": "serie",
+   "type": "truefalse",
+   "text": "La storica serie poliziesca «Il tenente Colombo», celebre per l'impermeabile stropicciato del protagonista, vedeva nel ruolo principale l'attore Peter Falk.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1ghat9x",
+   "categoryId": "serie",
+   "type": "numeric",
+   "text": "Qual è il numero del volo della compagnia «Oceanic Airlines» che precipita sull'isola misteriosa nel primo episodio della serie «Lost»?",
+   "answer": 815,
+   "unit": "volo",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-p7kbxn",
+   "categoryId": "serie",
+   "type": "numeric",
+   "text": "Quanti concorrenti indebitati partecipano all'inizio dei giochi nella prima stagione di «Squid Game»?",
+   "answer": 456,
+   "unit": "concorrenti",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-v976yt",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale grande fumettista italiano creò nel 1967 il marinaio «Corto Maltese», apparso per la prima volta in «Una ballata del mare salato»?",
+   "options": [
+    "Hugo Pratt",
+    "Guido Crepax",
+    "Milo Manara",
+    "Andrea Pazienza"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1t3iswd",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quali due sorelle milanesi idearono nel 1962 il celebre «fumetto nero» tascabile con protagonista il ladro in calzamaglia «Diabolik»?",
+   "options": [
+    "Angela e Luciana Giussani",
+    "Paola e Silvia Ziche",
+    "Anna e Elena Balbusso",
+    "Tea e Loredana Bonelli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1r5ofw4",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nel manga e anime «Lupin III» di Monkey Punch, come si chiama l'infallibile pistolero con la barba e il cappello calato sugli occhi, socio inseparabile di Lupin?",
+   "options": [
+    "Daisuke Jigen",
+    "Goemon Ishikawa",
+    "Koichi Zenigata",
+    "Fujiko Mine"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ivphrs",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale gigantesco e benevolo spirito della foresta, protagonista di un film del 1988 di Hayao Miyazaki, è diventato il simbolo stesso dello Studio Ghibli?",
+   "options": [
+    "Totoro",
+    "Ponyo",
+    "Calcifer",
+    "No-Face (Senza-Volto)"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1yai93m",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "In quale metropoli futuristica ricostruita dopo una catastrofe è ambientato il celebre manga e film d'animazione cyberpunk «Akira» (1988) di Katsuhiro Ōtomo?",
+   "options": [
+    "Neo-Tokyo",
+    "Neo-Seoul",
+    "Mega-City One",
+    "Night City"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-13hgug1",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale fumettista belga (pseudonimo di Georges Remi) creò nel 1929 il giovane reporter col ciuffo biondo «Tintin» e il suo cagnolino bianco Milù?",
+   "options": [
+    "Hergé",
+    "Peyo",
+    "Morris",
+    "Franquin"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1f66ngf",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nel fumetto francese «Astérix» di René Goscinny e Albert Uderzo, come si chiama il saggio druido del villaggio che prepara la pozione magica della forza sovrumana?",
+   "options": [
+    "Panoramix",
+    "Abraracourcix",
+    "Assurancetourix",
+    "Idéfix"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1dkqygj",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nelle strisce dei «Peanuts» create da Charles M. Schulz, come si chiama il piccolo uccellino giallo che è il migliore amico del beagle Snoopy?",
+   "options": [
+    "Woodstock",
+    "Linus",
+    "Schroeder",
+    "Franklin"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-232mz9",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale disegnatore argentino (pseudonimo di Joaquín Salvador Lavado) ha creato nel 1964 la celebre bambina a fumetti «Mafalda», nemica giurata della minestra?",
+   "options": [
+    "Quino",
+    "Mordillo",
+    "Breccia",
+    "Oesterheld"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-2j73cm",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nel manga e anime «Death Note», come si chiama lo Shinigami (dio della morte) goloso di mele che fa cadere nel mondo umano il quaderno raccolto da Light Yagami?",
+   "options": [
+    "Ryuk",
+    "Rem",
+    "L",
+    "Near"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1bfd4g8",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nell'anime «Neon Genesis Evangelion» (1995) di Hideaki Anno, come si chiama il quattordicenne chiamato dal padre Gendo a pilotare il gigantesco mecha EVA-01?",
+   "options": [
+    "Shinji Ikari",
+    "Kaworu Nagisa",
+    "Rei Ayanami",
+    "Asuka Sōryū Langley"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-e67tv1",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nel celebre manga e anime «Fullmetal Alchemist» di Hiromu Arakawa, quale cognome condividono i due fratelli alchimisti protagonisti Edward e Alphonse?",
+   "options": [
+    "Elric",
+    "Mustang",
+    "Ackerman",
+    "Zoldyck"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-13cmrg0",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Come si chiama il giovane protagonista del manga e anime «L'attacco dei giganti» («Attack on Titan») di Hajime Isayama, che giura di sterminare tutti i giganti?",
+   "options": [
+    "Eren Jaeger",
+    "Levi Ackerman",
+    "Erwin Smith",
+    "Reiner Braun"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-5hrnsm",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Nei fumetti e nelle serie animate di «Zerocalcare» (Michele Rech), quale animale antropomorfo rappresenta la coscienza dell'autore?",
+   "options": [
+    "Un armadillo",
+    "Un bradipo",
+    "Un pangolino",
+    "Un tapiro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-qx0bfd",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale celebre sceneggiatore britannico ha scritto la miniserie a fumetti «Watchmen» (1986-1987, disegnata da Dave Gibbons) e «V for Vendetta»?",
+   "options": [
+    "Alan Moore",
+    "Neil Gaiman",
+    "Grant Morrison",
+    "Frank Miller"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1474l7i",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale autrice franco-iraniana ha raccontato la propria infanzia a Teheran durante la rivoluzione islamica nel graphic novel e film d'animazione «Persepolis»?",
+   "options": [
+    "Marjane Satrapi",
+    "Azar Nafisi",
+    "Shirin Neshat",
+    "Parvana Badiyi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-10pv8kd",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Quale fumettista italiano ha creato l'eroe parodistico «Rat-Man», celebre per il grido di battaglia «Fletto i muscoli e sono nel vuoto!»?",
+   "options": [
+    "Leo Ortolani",
+    "Silver",
+    "Bonvi",
+    "Gipi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-r316u",
+   "categoryId": "animazione",
+   "type": "multiple",
+   "text": "Come si chiama il lupo azzurro creato dal disegnatore modenese Silver (Guido Silvestri), perdutamente innamorato della gallina Marta nella fattoria McKenzie?",
+   "options": [
+    "Lupo Alberto",
+    "Cattivik",
+    "Sturmtruppen",
+    "Cocco Bill"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1iw9dpc",
+   "categoryId": "animazione",
+   "type": "truefalse",
+   "text": "«Biancaneve e i sette nani» (1937), prodotto da Walt Disney, è stato il primo lungometraggio d'animazione della storia del cinema statunitense realizzato a colori e con sonoro.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-llleof",
+   "categoryId": "animazione",
+   "type": "truefalse",
+   "text": "«Toy Story - Il mondo dei giocattoli» della Pixar è stato il primo lungometraggio nella storia del cinema interamente realizzato in animazione digitale al computer (CGI).",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-19anjte",
+   "categoryId": "animazione",
+   "type": "truefalse",
+   "text": "Nel fumetto italiano «Tex Willer», creato nel 1948 da Gian Luigi Bonelli e Galep, lo storico compagno d'avventure di Tex coi capelli e il pizzetto bianchi si chiama Zagor.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-kwo6il",
+   "categoryId": "animazione",
+   "type": "truefalse",
+   "text": "«Maus» di Art Spiegelman, in cui gli ebrei sono rappresentati come topi e i nazisti come gatti, ricevette nel 1992 un Premio Pulitzer speciale (Special Citation).",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-whz0ey",
+   "categoryId": "animazione",
+   "type": "numeric",
+   "text": "Quante sono in totale le «Sfere del Drago» che nel manga e anime «Dragon Ball» di Akira Toriyama permettono, una volta riunite, di evocare il drago Shenron?",
+   "answer": 7,
+   "unit": "sfere",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-10wu3uw",
+   "categoryId": "animazione",
+   "type": "numeric",
+   "text": "Quante code possiede il demone Volpe («Kurama») sigillato fin dalla nascita dentro il protagonista nel celebre manga e anime «Naruto» di Masashi Kishimoto?",
+   "answer": 9,
+   "unit": "code",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1fa48xd",
+   "categoryId": "animazione",
+   "type": "numeric",
+   "text": "In che anno uscì nelle sale statunitensi «Toy Story - Il mondo dei giocattoli» della Pixar, primo lungometraggio interamente realizzato in CGI?",
+   "answer": 1995,
+   "unit": "anno",
+   "difficulty": 1
   }
  ]
 }

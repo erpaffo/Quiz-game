@@ -56,6 +56,8 @@
 .pk-seg button { background: transparent; padding: 0.4em 0.9em; border-radius: 8px; font-weight: 800; font-size: 0.9em; white-space: nowrap; }
 .pk-seg button.on { background: var(--gold); color: var(--ink-deep); }
 .pk-seg button:disabled:not(.on) { opacity: 0.55; cursor: default; }
+/* Argomenti del quiz: tanti bottoni, vanno a capo su tutta la larghezza del pannello. */
+.pk-topics .pk-chips { flex-basis: 100%; }
 .pk-start { display: flex; align-items: center; justify-content: space-between; gap: 1em; flex-wrap: wrap; }
 .pk-hint { font-weight: 700; font-size: 0.95em; }
 .pk-hint.good { color: var(--green); }

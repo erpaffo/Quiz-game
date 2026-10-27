@@ -34,7 +34,7 @@ export const LEGGENDE = {
   /** Il percorso: 3 mostri e il drago finale. hp = hpPerHero × eroi a inizio partita. */
   MONSTERS: [
     { id: 'goblin', name: 'Goblin Brontolone', icon: '👺', hpPerHero: 250, boss: false },
-    { id: 'troll', name: 'Troll delle Domande', icon: '🧌', hpPerHero: 350, boss: false },
+    { id: 'troll', name: 'Troll delle Domande', icon: '👹', hpPerHero: 350, boss: false },
     { id: 'strega', name: 'Strega dei Dubbi', icon: '🧙', hpPerHero: 450, boss: false },
     { id: 'drago', name: 'Drago dell’Ignoranza', icon: '🐉', hpPerHero: 650, boss: true }
   ]

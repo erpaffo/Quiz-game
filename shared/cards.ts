@@ -20,7 +20,7 @@ export const CARDS: Record<CardType, CardDef> = {
   BOMB: attack('BOMB'),
   LOCK: attack('LOCK'),
   SHIELD: { kind: 'defense', label: 'Scudo', icon: '🛡️', color: '#4cc9f0', description: 'Blocca tutti gli attacchi diretti a te in questo gioco.', weight: 9 },
-  MIRROR: { kind: 'defense', label: 'Specchio', icon: '🪞', color: '#c77dff', description: 'Rimanda gli attacchi a chi te li ha lanciati.', weight: 6 },
+  MIRROR: { kind: 'defense', label: 'Specchio', icon: '🔄', color: '#c77dff', description: 'Rimanda gli attacchi a chi te li ha lanciati.', weight: 6 },
   CLOAK: { kind: 'defense', label: 'Mantello', icon: '👻', color: '#adb5bd', description: 'Sei invisibile: gli attacchi colpiscono un altro giocatore a caso.', weight: 6 },
   ANTIDOTE: { kind: 'defense', label: 'Antidoto', icon: '🧪', color: '#7bd389', description: 'Neutralizza gli attacchi e ti dà 150 punti per ognuno.', weight: 5 },
   DOUBLE: { kind: 'bonus', label: 'Doppio', icon: '💎', color: '#ffd60a', description: 'Punti doppi alla tua prossima risposta giusta (bonus massimo +500).', weight: 8 },

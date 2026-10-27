@@ -91,7 +91,9 @@ export const CONFIG = {
     SABOTAGE: 8_000,
     SABOTAGE_RESULT: 2_800,
     MUSIC_QUESTION: 15_000,
-    PYRAMID_REVEAL: 3_800
+    PYRAMID_REVEAL: 3_800,
+    /** Podio finale del quiz, poi si torna da soli al menù come negli altri giochi. */
+    GAME_OVER: 20_000
   }
 } as const;
 

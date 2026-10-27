@@ -31,3 +31,6 @@ export const PLAYER_COLORS = [
   '#ff4d6d', '#4cc9f0', '#ffd60a', '#7bd389', '#c77dff', '#ff9f1c', '#f15bb5', '#00bbf9',
   '#b5e48c', '#e76f51', '#9b5de5', '#2ec4b6', '#fee440', '#ff006e', '#8ecae6', '#cdb4db'
 ];
+/** Forma del giocatore (stesso indice del colore): chi non distingue i colori riconosce comunque la propria. */
+export const PLAYER_SHAPES = ['●', '▲', '■', '◆', '★', '♥', '♣', '♠'];
+export const playerShape = (index: number) => PLAYER_SHAPES[Math.max(0, index) % PLAYER_SHAPES.length];

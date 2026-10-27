@@ -1,0 +1,20 @@
+# Dependabot: una volta al mese propone (con una pull request) gli aggiornamenti delle librerie
+# e delle GitHub Actions, raggruppati per non riempire la lista. La CI li controlla prima del merge.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      dipendenze:
+        patterns: ['*']
+        update-types: [minor, patch]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ['*']

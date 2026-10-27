@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import { describe, it, mock } from 'node:test';
 import { CREATIVE, drawingError, type CreativePrivate, type CreativePublic, type Drawing } from '../shared/creative';
-import { makeRoom, runToMenu, startShow, useFakeTime } from './helpers';
+import { BOT_DOODLES } from '../server/shows/creative/doodles';
+import { CREATIVE_PROMPTS } from '../server/shows/creative/CreativeShow';
+import { activeShow, makeRoom, runToMenu, startShow, useFakeTime } from './helpers';
 
 useFakeTime();
 
@@ -52,17 +54,36 @@ describe('Scarabocchi Animati', () => {
   });
 
   it('se nessuno disegna si va subito alla classifica e al menù', () => {
-    const t = makeRoom(1, 3);
+    const t = makeRoom(3);
     startShow(t, 'creative');
     const steps = runToMenu(t);
     assert.deepEqual(steps, ['draw', 'final']);
   });
 
-  it('partita con un disegno umano e bot che inventano titoli', () => {
+  it('partita con un disegno umano e bot che disegnano e inventano titoli', () => {
     const t = makeRoom(1, 3);
     startShow(t, 'creative');
     t.act(0, { type: 'draw', frames: doodle() });
-    const steps = runToMenu(t);
-    assert.deepEqual(steps, ['draw', 'title', 'choose', 'reveal', 'final']);
+    const artists = new Set<string>();
+    for (let ms = 0; ms < 60 * 60_000 && t.tv().phase !== 'LOBBY'; ms += 250) {
+      const st = t.state<CreativePublic>();
+      if (st && st.step === 'title') artists.add(st.artistId);
+      mock.timers.tick(250);
+    }
+    assert.equal(t.tv().phase, 'LOBBY');
+    assert.equal(artists.size, 4, 'un turno per il disegno umano e uno per ogni bot');
+  });
+
+  it('gli scarabocchi dei bot sono validi e legati a temi veri, diversi da quelli degli umani', () => {
+    for (const [theme, d] of Object.entries(BOT_DOODLES)) {
+      assert.ok(CREATIVE_PROMPTS.includes(theme), theme);
+      assert.equal(drawingError(d), null, theme);
+    }
+    const t = makeRoom(2, 2);
+    startShow(t, 'creative');
+    const show = activeShow<{ prompts: Map<string, string> }>(t);
+    for (const id of t.botIds()) assert.ok(BOT_DOODLES[show.prompts.get(id)!], 'il bot ha un tema con scarabocchio');
+    assert.equal(new Set(show.prompts.values()).size, 4, 'nessun tema doppio nello stesso giro');
+    t.room.destroy();
   });
 });

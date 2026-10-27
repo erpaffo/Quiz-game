@@ -11,10 +11,10 @@ useFakeTime();
 const settingsOf = (t: ReturnType<typeof makeRoom>) => (t.tv().phaseData as { settings: LobbySettings }).settings;
 
 describe('Regole del sottomenù: catalogo e validazione', () => {
-  it('ogni gioco tranne il quiz ha il Ritmo; le scelte predefinite esistono', () => {
+  it('ogni gioco tranne il quiz ha il Ritmo (il quiz ha la Difficoltà); le scelte predefinite esistono', () => {
     for (const id of SHOW_IDS) {
       const opts = SHOWS[id].options;
-      if (id === 'quiz') assert.equal(opts.length, 0);
+      if (id === 'quiz') assert.deepEqual(opts.map((o) => o.id), ['difficulty']);
       else assert.equal(opts[0].id, 'pace', id);
       for (const o of opts) assert.ok(o.choices.some((c) => c.id === o.default), `${id}/${o.id}`);
     }

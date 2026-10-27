@@ -54,9 +54,9 @@ function renderShowFinalHost(meta: ShowMeta, st: ShowFinal, nameOf: NameFn): str
   const winner = st.ranking[0];
   return `
     <div class="show-stage pop">
-      <div class="mg-badge gold">${meta.icon} ${esc(meta.name)} · CLASSIFICA FINALE</div>
+      <div class="mg-badge gold">${meta.icon} ${esc(meta.name)} · Classifica finale</div>
       ${winner ? `<div class="phase-title">🏆 Vince ${nameOf(winner.playerId)} con ${winner.points.toLocaleString('it-IT')} punti!</div>` : ''}
-      <div class="num-Wait">
+      <div class="num-list">
         ${st.ranking
           .map(
             (r, i) => `
@@ -117,7 +117,7 @@ function renderTempoHost(s: RoomSnapshot, st: TempoPublic, nameOf: NameFn, color
       return `
         <div class="qcard tempo-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:#f4a261;color:#14063a">🕰️ Macchina del Tempo</span>
+            <span class="chip" style="background:#f4a261;color:var(--ink-deep)">🕰️ Macchina del Tempo</span>
             <span class="chip">Evento ${st.number}/${st.total}</span>
             <span class="chip">Risposte: <b data-live>${st.answered}/${online.length}</b></span>
           </div>
@@ -139,7 +139,7 @@ function renderTempoHost(s: RoomSnapshot, st: TempoPublic, nameOf: NameFn, color
       return `
         <div class="qcard tempo-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:#f4a261;color:#14063a">🕰️ Evento ${st.number}/${st.total}</span>
+            <span class="chip" style="background:#f4a261;color:var(--ink-deep)">🕰️ Evento ${st.number}/${st.total}</span>
             <span class="chip hot">Anno esatto: ${st.year}</span>
           </div>
           <h1 class="qtext">${esc(st.event)}</h1>
@@ -170,7 +170,7 @@ function renderTempoHost(s: RoomSnapshot, st: TempoPublic, nameOf: NameFn, color
             </div>
           </div>
 
-          <div class="num-Wait tempo-results">
+          <div class="num-list tempo-results two-col">
             ${sorted
               .map(
                 (g, i) => `
@@ -180,7 +180,7 @@ function renderTempoHost(s: RoomSnapshot, st: TempoPublic, nameOf: NameFn, color
                   <span>${
                     g.year === null
                       ? 'nessuna risposta'
-                      : `${g.year} <small class="muted">(${g.error === 0 ? 'ANNO ESATTO!' : `scarto ${g.error} ${g.error === 1 ? 'anno' : 'anni'}`})</small>`
+                      : `${g.year} <small class="muted">(${g.error === 0 ? 'anno esatto!' : `scarto ${g.error} ${g.error === 1 ? 'anno' : 'anni'}`})</small>`
                   }</span>
                   <em class="up">${g.points > 0 ? `+${g.points}` : '0'}</em>
                 </div>`
@@ -194,9 +194,9 @@ function renderTempoHost(s: RoomSnapshot, st: TempoPublic, nameOf: NameFn, color
       const winner = st.ranking[0];
       return `
         <div class="qcard tempo-stage pop">
-          <div class="mg-badge gold">🕰️ CLASSIFICA MACCHINA DEL TEMPO</div>
+          <div class="mg-badge gold">🕰️ Classifica della Macchina del Tempo</div>
           ${winner ? `<div class="phase-title">Vince ${nameOf(winner.playerId)} con ${winner.points.toLocaleString('it-IT')} punti!</div>` : ''}
-          <div class="num-Wait tempo-results">
+          <div class="num-list tempo-results">
             ${st.ranking
               .map(
                 (r, i) => `
@@ -226,7 +226,7 @@ function renderGemelleHost(s: RoomSnapshot, meta: ShowMeta, st: GemellePublic, n
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} ${esc(meta.name)}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} ${esc(meta.name)}</span>
             <span class="chip">Round ${st.round}/${st.total}</span>
             <span class="chip">Max ${GEMELLE.MAX_WORDS} parole</span>
           </div>
@@ -240,7 +240,7 @@ function renderGemelleHost(s: RoomSnapshot, meta: ShowMeta, st: GemellePublic, n
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total}</span>
             <span class="chip hot">Parola: «${esc(st.prompt)}»</span>
           </div>
           <div class="phase-title">💞 Parole in Comune!</div>
@@ -268,7 +268,7 @@ function renderGemelleHost(s: RoomSnapshot, meta: ShowMeta, st: GemellePublic, n
     case 'soulmates': {
       return `
         <div class="qcard show-stage pop">
-          <div class="mg-badge gold">💞 LE ANIME GEMELLE DELLA SERATA</div>
+          <div class="mg-badge gold">💞 Le Anime Gemelle della serata</div>
           ${
             st.pairs.length === 0 || st.pairs[0].common === 0
               ? `<div class="phase-title">Nessuna coppia ha trovato parole in comune! 😅</div>`
@@ -302,7 +302,7 @@ function renderScalaHost(s: RoomSnapshot, meta: ShowMeta, st: ScalaPublic, nameO
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} ${esc(meta.name)}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} ${esc(meta.name)}</span>
             <span class="chip">Round ${st.round}/${st.total}</span>
             <span class="chip">${st.round === 1 ? '🎯 Numero esatto (1–10)' : '🎯 Intervallo di 3 numeri'}</span>
           </div>
@@ -314,7 +314,7 @@ function renderScalaHost(s: RoomSnapshot, meta: ShowMeta, st: ScalaPublic, nameO
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total} · ${st.index}/${st.count}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total} · ${st.index}/${st.count}</span>
             <span class="chip hot">Autore: ${nameOf(st.authorId)}</span>
           </div>
           <div class="sub">${esc(st.theme.text)} — Scala 1–10: quanto è <b>${esc(st.theme.scale)}</b>?</div>
@@ -324,11 +324,7 @@ function renderScalaHost(s: RoomSnapshot, meta: ShowMeta, st: ScalaPublic, nameO
               .map((n) => `<div class="scala-cell"><span>${n}</span></div>`)
               .join('')}
           </div>
-          ${renderPlayerChips(
-            s.players.filter((p) => p.id !== st.authorId) as unknown as RoomSnapshot['players'] extends infer T ? { players: T } & RoomSnapshot : never,
-            st.guessed,
-            colorOf
-          )}
+          ${renderPlayerChips({ ...s, players: s.players.filter((p) => p.id !== st.authorId) }, st.guessed, colorOf)}
         </div>`;
 
     case 'reveal': {
@@ -336,7 +332,7 @@ function renderScalaHost(s: RoomSnapshot, meta: ShowMeta, st: ScalaPublic, nameO
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Autore: ${nameOf(st.authorId)} (+${st.authorPoints} pti)</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Autore: ${nameOf(st.authorId)} (+${st.authorPoints} pti)</span>
             <span class="chip hot">🎯 Segreto: ${targetLabel}/10</span>
           </div>
           <div class="sub">${esc(st.theme.text)} (quanto è <b>${esc(st.theme.scale)}</b>)</div>
@@ -356,7 +352,7 @@ function renderScalaHost(s: RoomSnapshot, meta: ShowMeta, st: ScalaPublic, nameO
               })
               .join('')}
           </div>
-          <div class="num-Wait">
+          <div class="num-list">
             ${st.guesses
               .map(
                 (g, i) => `
@@ -469,7 +465,7 @@ function renderImpostorHost(s: RoomSnapshot, meta: ShowMeta, st: ImpostorPublic,
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total}</span>
             <span class="chip hot">Categoria: ${esc(st.category)}</span>
           </div>
           <h1 class="qtext">🤫 Guardate in segreto il vostro telefono!</h1>
@@ -480,7 +476,7 @@ function renderImpostorHost(s: RoomSnapshot, meta: ShowMeta, st: ImpostorPublic,
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total}</span>
             <span class="chip hot">Categoria: ${esc(st.category)}</span>
           </div>
           <h1 class="qtext">Scrivete un indizio di UNA SOLA PAROLA!</h1>
@@ -493,7 +489,7 @@ function renderImpostorHost(s: RoomSnapshot, meta: ShowMeta, st: ImpostorPublic,
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Categoria: ${esc(st.category)}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Categoria: ${esc(st.category)}</span>
             <span class="chip hot">${st.step === 'discuss' ? '🗣️ Discussione a voce!' : '🗳️ Votate il sospettato!'}</span>
           </div>
           <div class="show-cards-grid">
@@ -513,7 +509,7 @@ function renderImpostorHost(s: RoomSnapshot, meta: ShowMeta, st: ImpostorPublic,
     case 'guess':
       return `
         <div class="qcard show-stage pop">
-          <div class="mg-badge sabotage">🚨 IMPOSTORE SMASCHERATO!</div>
+          <div class="mg-badge sabotage">🚨 Impostore smascherato!</div>
           <h1 class="qtext">${nameOf(st.impostorId)} è stato scoperto!</h1>
           <div class="sub big">Ultima chance: se indovina la parola segreta della categoria <b>«${esc(st.category)}»</b>, ruba la vittoria!</div>
         </div>`;
@@ -527,11 +523,11 @@ function renderImpostorHost(s: RoomSnapshot, meta: ShowMeta, st: ImpostorPublic,
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Round ${st.round}/${st.total}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Round ${st.round}/${st.total}</span>
             <span class="chip hot">Parola segreta: «${esc(st.word)}»</span>
           </div>
           <h1 class="qtext">${outcome}</h1>
-          <div class="num-Wait">
+          <div class="num-list">
             ${st.votes
               .map(
                 (v) => `
@@ -562,7 +558,7 @@ function renderSocialHost(s: RoomSnapshot, meta: ShowMeta, st: SocialPublic, nam
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Domanda ${st.number}/${st.total}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Domanda ${st.number}/${st.total}</span>
             <span class="chip">Vota un amico sul telefono!</span>
           </div>
           <h1 class="qtext">${esc(st.question)}</h1>
@@ -579,7 +575,7 @@ function renderSocialHost(s: RoomSnapshot, meta: ShowMeta, st: SocialPublic, nam
       return `
         <div class="qcard show-stage pop">
           <div class="qhead">
-            <span class="chip" style="background:${meta.color};color:#14063a">${meta.icon} Risultato ${st.number}/${st.total}</span>
+            <span class="chip" style="background:${meta.color};color:var(--ink-deep)">${meta.icon} Risultato ${st.number}/${st.total}</span>
           </div>
           <h1 class="qtext">${esc(st.question)}</h1>
           ${
@@ -587,7 +583,7 @@ function renderSocialHost(s: RoomSnapshot, meta: ShowMeta, st: SocialPublic, nam
               ? `<div class="big-answer pop">👑 ${st.winners.map(nameOf).join(' & ')}</div>`
               : `<div class="sub big">Nessuna maggioranza assoluta: siete tutti divisi!</div>`
           }
-          <div class="num-Wait">
+          <div class="num-list">
             ${sortedTargets
               .map(
                 ([targetId, voters], i) => `
@@ -649,7 +645,7 @@ function renderSondaggiHost(s: RoomSnapshot, meta: ShowMeta, st: SondaggiPublic,
             <span class="chip" style="background:${meta.color};color:#fff">${meta.icon} Classifica del Sondaggio ${st.number}/${st.total}</span>
           </div>
           <h1 class="qtext">${esc(st.question)}</h1>
-          <div class="num-Wait">
+          <div class="num-list">
             ${st.ranking
               .slice(0, 5)
               .map((r, i) => {

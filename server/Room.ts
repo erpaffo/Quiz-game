@@ -4,7 +4,8 @@ import { CHARACTERS, getSkin, sanitizeCustom } from '../shared/characters';
 import { CONFIG, type DurationKey } from '../shared/config';
 import type { ClientToServerEvents, ServerToClientEvents } from '../shared/events';
 import { GAME_IDS, GAMES } from '../shared/games';
-import { clampRounds, getShowMeta, isMenuView, isShowId, sanitizeOptions, type MenuState, type ShowId } from '../shared/shows';
+import { clampRounds, getShowMeta, isMenuView, isShowId, optionFor, sanitizeOptions, type MenuState, type ShowId } from '../shared/shows';
+import { sanitizeTopics } from '../shared/topics';
 import type {
   CardType,
   GameAction,
@@ -351,7 +352,7 @@ export class Room {
       isLargeGroup: () => room.players.size >= CONFIG.LARGE_GROUP,
       gameOver: (podium) => {
         room.setGame(null);
-        room.setPhase({ phase: 'GAME_OVER', winnerId: podium[0], podium }, null);
+        room.setPhase({ phase: 'GAME_OVER', winnerId: podium[0], podium }, room.dur('GAME_OVER'), () => room.returnToHub());
       },
       act: (p, a) => {
         room.gameAction(p.id, a);
@@ -420,6 +421,7 @@ export class Room {
         this.settings.options = { ...this.settings.options, [id]: merged };
       }
     }
+    if (s.topics !== undefined) this.settings.topics = sanitizeTopics(s.topics);
     if (Array.isArray(s.excluded)) this.settings.excluded = s.excluded.filter((id) => typeof id === 'string').slice(0, 100);
     if (s.mode === 'wheel' || s.mode === 'sequence') this.settings.mode = s.mode;
     if (Array.isArray(s.games)) {
@@ -469,9 +471,12 @@ export class Room {
     }
 
     const packs = this.packs.all().filter((p) => !this.settings.excluded.includes(p.id));
-    const pool = new QuestionPool(packs, () => [...this.players.values()].map((p) => p.name));
+    const difficulty = Number(optionFor(this.settings, 'quiz', 'difficulty')) || undefined;
+    const topics = this.settings.topics ?? [];
+    const pool = new QuestionPool(packs, () => [...this.players.values()].map((p) => p.name), { difficulty, topics });
     if (pool.mcCount < MIN_MC_QUESTIONS) {
-      return `Domande insufficienti nei pacchetti scelti: ne servono almeno ${MIN_MC_QUESTIONS} a risposta multipla o vero/falso`;
+      const filtered = difficulty || topics.length ? ' con questa difficoltà e questi argomenti (prova «Mista» o più argomenti)' : ' nei pacchetti scelti';
+      return `Domande insufficienti${filtered}: ne servono almeno ${MIN_MC_QUESTIONS} a risposta multipla o vero/falso`;
     }
 
     const st = this.settings;

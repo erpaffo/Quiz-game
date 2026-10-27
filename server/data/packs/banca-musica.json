@@ -1,13 +1,31 @@
 {
  "id": "banca-musica",
  "name": "📚 Musica",
- "description": "Banca domande · 22 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 94 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
   {
    "id": "italiana",
    "name": "Musica italiana",
+   "icon": "🎸",
+   "color": "#ff4d6d"
+  },
+  {
+   "id": "internazionale",
+   "name": "Musica internazionale",
+   "icon": "🎸",
+   "color": "#ff4d6d"
+  },
+  {
+   "id": "classica",
+   "name": "Musica classica",
+   "icon": "🎸",
+   "color": "#ff4d6d"
+  },
+  {
+   "id": "strumenti",
+   "name": "Strumenti e teoria",
    "icon": "🎸",
    "color": "#ff4d6d"
   }
@@ -281,6 +299,912 @@
    "answer": 4,
    "unit": "vittorie",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-3ycxfw",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore ceco scrisse nel 1893 durante il suo soggiorno negli Stati Uniti la celebre Sinfonia n. 9 in mi minore, nota come «Dal Nuovo Mondo»?",
+   "options": [
+    "Antonín Dvořák",
+    "Bedřich Smetana",
+    "Leoš Janáček",
+    "Bohuslav Martinů"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-qf2tet",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale balletto di Igor Stravinskij, con coreografia di Vaclav Nižinskij, scatenò una celebre gazzarra in sala alla prima del 29 maggio 1913 al Théâtre des Champs-Élysées di Parigi?",
+   "options": [
+    "La sagra della primavera",
+    "L'uccello di fuoco",
+    "Petruška",
+    "Pulcinella"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1md03rp",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore francese del Novecento realizzò nel 1922 la più celebre orchestrazione sinfonica della suite pianistica «Quadri di un'esposizione» di Modest Musorgskij?",
+   "options": [
+    "Maurice Ravel",
+    "Claude Debussy",
+    "Erik Satie",
+    "Gabriel Fauré"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-x4s4f2",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "In quale città italiana fu rappresentata per la prima volta nel 1607 «L'Orfeo», capolavoro di Claudio Monteverdi su libretto di Alessandro Striggio?",
+   "options": [
+    "Mantova",
+    "Venezia",
+    "Firenze",
+    "Cremona"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-xmlcub",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore completò l'ultimo atto dell'opera «Turandot», rimasta incompiuta alla morte di Giacomo Puccini nel 1924?",
+   "options": [
+    "Franco Alfano",
+    "Ottorino Respighi",
+    "Pietro Mascagni",
+    "Ildebrando Pizzetti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10ab4ft",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore francese del Romanticismo scrisse nel 1830 la «Sinfonia fantastica» («Episodio della vita di un artista»), celebre per l'uso ricorrente dell'«idée fixe»?",
+   "options": [
+    "Hector Berlioz",
+    "César Franck",
+    "Camille Saint-Saëns",
+    "Georges Bizet"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1fmhm0t",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Di quale opera lirica di Vincenzo Bellini, su libretto di Felice Romani (1831), fa parte la celebre preghiera del soprano alla luna «Casta Diva»?",
+   "options": [
+    "Norma",
+    "I puritani",
+    "La sonnambula",
+    "I Capuleti e i Montecchi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-tafcci",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore austriaco, padre della dodecafonia, impiegò la tecnica vocale dello «Sprechgesang» (canto parlato) in «Pierrot lunaire» (1912)?",
+   "options": [
+    "Arnold Schönberg",
+    "Alban Berg",
+    "Anton Webern",
+    "Gustav Mahler"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ay0myd",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore francese scrisse nel 1886 la «grande fantasia zoologica» intitolata «Il carnevale degli animali», che include il celebre brano «Il cigno» per violoncello?",
+   "options": [
+    "Camille Saint-Saëns",
+    "Jules Massenet",
+    "Léo Delibes",
+    "Paul Dukas"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1bkidjj",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "A quale opera in un atto di Pietro Mascagni (1890), tratta da una novella di Giovanni Verga e manifesto del verismo musicale, appartiene un celebre «Intermezzo» sinfonico?",
+   "options": [
+    "Cavalleria rusticana",
+    "L'amico Fritz",
+    "Iris",
+    "Pagliacci"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-w1a7a7",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Nella Sinfonia n. 45 in fa diesis minore di Franz Joseph Haydn, perché l'opera è passata alla storia con il soprannome di «Sinfonia degli addii»?",
+   "options": [
+    "Nel finale i musicisti spengono la candela e lasciano il palco uno alla volta",
+    "Fu l'ultima sinfonia scritta da Haydn prima di perdere l'udito",
+    "Fu composta per il funerale dell'imperatrice Maria Teresa d'Austria",
+    "Fu eseguita per la partenza di Haydn per il suo primo viaggio a Londra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1wo310f",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore tedesco del Novecento musicò nel 1937 i canti goliardici medievali del codex di Benediktbeuern nella celebre cantata scenica «Carmina Burana» («O Fortuna»)?",
+   "options": [
+    "Carl Orff",
+    "Paul Hindemith",
+    "Kurt Weill",
+    "Richard Strauss"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-u9ur22",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore norvegese scrisse nel 1875 le musiche di scena per il dramma «Peer Gynt» di Henrik Ibsen, che includono «Il mattino» e «Nell'antro del re della montagna»?",
+   "options": [
+    "Edvard Grieg",
+    "Jean Sibelius",
+    "Carl Nielsen",
+    "Hugo Alfvén"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1l6wtfi",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Con quale soprannome è nota la Sinfonia n. 8 in si minore (D 759) di Franz Schubert, composta nel 1822 di soli due movimenti completi?",
+   "options": [
+    "Incompiuta",
+    "La Grande",
+    "Tragica",
+    "Eroica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1pgqqqb",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore statunitense unì nel 1924 jazz e tradizione sinfonica nella celebre «Rhapsody in Blue» per pianoforte e orchestra, che si apre con il glissando del clarinetto?",
+   "options": [
+    "George Gershwin",
+    "Aaron Copland",
+    "Leonard Bernstein",
+    "Samuel Barber"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-fttfv5",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Qual è il titolo del brano d'avanguardia del 1952 di John Cage in cui l'esecutore siede in silenzio senza suonare una sola nota per l'intera durata in tre movimenti?",
+   "options": [
+    "4'33\"",
+    "Music of Changes",
+    "Imaginary Landscape",
+    "Water Walk"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-7u20wn",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale ciclo di quattro drammi musicali di Richard Wagner («L'oro del Reno», «La Valchiria», «Sigfrido», «Il crepuscolo degli dei») fu eseguito per intero a Bayreuth nel 1876?",
+   "options": [
+    "L'anello del Nibelungo",
+    "Tristano e Isotta",
+    "I maestri cantori di Norimberga",
+    "Parsifal"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-4ftfwq",
+   "categoryId": "classica",
+   "type": "multiple",
+   "text": "Quale compositore italiano del Settecento, autore dello «Stabat Mater» e dell'intermezzo buffo «La serva padrona» (1733), morì a soli 26 anni a Pozzuoli?",
+   "options": [
+    "Giovanni Battista Pergolesi",
+    "Domenico Scarlatti",
+    "Baldassare Galuppi",
+    "Giovanni Paisiello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-hakjeq",
+   "categoryId": "classica",
+   "type": "truefalse",
+   "text": "La celebre Sinfonia n. 3 in mi bemolle maggiore («Eroica») di Ludwig van Beethoven fu inizialmente intitolata a Napoleone Bonaparte, ma il compositore cancellò la dedica quando Napoleone si proclamò imperatore.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-10pzde7",
+   "categoryId": "classica",
+   "type": "truefalse",
+   "text": "L'opera «Carmen» (1875) di Georges Bizet è ambientata nella città spagnola di Siviglia e fu scritta originariamente con il testo cantato in lingua spagnola.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-iyy9a7",
+   "categoryId": "classica",
+   "type": "truefalse",
+   "text": "Il coro «Va, pensiero, sull'ali dorate» fa parte del terzo atto dell'opera «Nabucco» (1842) di Giuseppe Verdi ed è intonato dagli Ebrei prigionieri a Babilonia.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1rb6dd4",
+   "categoryId": "classica",
+   "type": "truefalse",
+   "text": "Le celebri «Variazioni Goldberg» (BWV 988) di Johann Sebastian Bach furono composte originariamente per un organo monumentale a quattro tastiere e pedaliera.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1x9c1hf",
+   "categoryId": "classica",
+   "type": "numeric",
+   "text": "Quanti sono i «Concerti brandeburghesi» (BWV 1046-1051) raccolti e dedicati da Johann Sebastian Bach nel 1721 al margravio Cristiano Ludovico di Brandeburgo?",
+   "answer": 6,
+   "unit": "concerti",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-16eqb8f",
+   "categoryId": "classica",
+   "type": "numeric",
+   "text": "Di quante variazioni (precedute e seguite dall'«Aria» iniziale) si compongono le «Variazioni Goldberg» BWV 988 di Johann Sebastian Bach?",
+   "answer": 30,
+   "unit": "variazioni",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-7avuvd",
+   "categoryId": "classica",
+   "type": "numeric",
+   "text": "Quante coppie di preludio e fuga compongono ciascuno dei due libri de «Il clavicembalo ben temperato» di J.S. Bach (una per ogni tonalità maggiore e minore)?",
+   "answer": 24,
+   "unit": "preludi e fughe",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-nn15gw",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale celebre alter ego alieno e androgino dai capelli rossi lanciò David Bowie con l'omonimo concept album glam rock del 1972?",
+   "options": [
+    "Ziggy Stardust",
+    "Major Tom",
+    "Aladdin Sane",
+    "The Thin White Duke"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1rexqhj",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale album del 1959 del trombettista Miles Davis, inciso con John Coltrane e Bill Evans, è il capolavoro del «modal jazz» e il disco jazz più venduto di sempre?",
+   "options": [
+    "Kind of Blue",
+    "Bitches Brew",
+    "Birth of the Cool",
+    "Sketches of Spain"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1bthni4",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Di quale leggendaria band hard rock britannica (con Jimmy Page, John Paul Jones e John Bonham) era il cantante Robert Plant?",
+   "options": [
+    "Led Zeppelin",
+    "Deep Purple",
+    "Black Sabbath",
+    "The Who"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-q3zckj",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Chi è lo storico chitarrista e cofondatore dei Rolling Stones che forma con Mick Jagger la celebre coppia di autori soprannominata «The Glimmer Twins»?",
+   "options": [
+    "Keith Richards",
+    "Ronnie Wood",
+    "Brian Jones",
+    "Mick Taylor"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-73fl2x",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale grande cantante statunitense, interprete di «Respect» e «Think», era universalmente soprannominata la «Regina del Soul» («Queen of Soul»)?",
+   "options": [
+    "Aretha Franklin",
+    "Nina Simone",
+    "Etta James",
+    "Diana Ross"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-f8499k",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "In quale Stato degli USA (nella località rurale di Bethel) si tenne nell'agosto 1969 lo storico Festival di Woodstock?",
+   "options": [
+    "New York",
+    "California",
+    "Massachusetts",
+    "Pennsylvania"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1wwj3i4",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale carismatico cantante e poeta statunitense, soprannominato «The Lizard King» («il Re Lucertola»), fu il frontman dei Doors fino alla morte a Parigi nel 1971?",
+   "options": [
+    "Jim Morrison",
+    "Ray Manzarek",
+    "Robby Krieger",
+    "Lou Reed"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1yh4edi",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Come si chiama lo storico gruppo di musicisti che accompagna sin dagli anni Settanta il cantautore rock statunitense Bruce Springsteen («The Boss»)?",
+   "options": [
+    "E Street Band",
+    "The Heartbreakers",
+    "Crazy Horse",
+    "The Silver Bullet Band"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-iylfr",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Di quale isola caraibica era originario Bob Marley, icona mondiale della musica reggae con la sua band «The Wailers»?",
+   "options": [
+    "Giamaica",
+    "Trinidad e Tobago",
+    "Barbados",
+    "Cuba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-17szmlc",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale duo francese di musica elettronica (Thomas Bangalter e Guy-Manuel de Homem-Christo), celebre per i caschi da robot, ha inciso «Discovery» e «Random Access Memories»?",
+   "options": [
+    "Daft Punk",
+    "Justice",
+    "Air",
+    "Cassius"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-s8x4p5",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Con quale album e film omonimo del 1984 il musicista di Minneapolis Prince (con la band The Revolution) vinse anche il Premio Oscar per la miglior colonna sonora con canzoni?",
+   "options": [
+    "Purple Rain",
+    "Sign o' the Times",
+    "1999",
+    "Parade"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1gepkcr",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale celebre album del 1977 dei Fleetwood Mac, nato durante le crisi sentimentali interne alla band, contiene i classici «Dreams», «Go Your Own Way» e «The Chain»?",
+   "options": [
+    "Rumours",
+    "Tusk",
+    "Mirage",
+    "Tango in the Night"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ubvwjr",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale gruppo tedesco fondato a Düsseldorf nel 1970 da Ralf Hütter e Florian Schneider è considerato il pioniere della musica elettronica con brani come «Autobahn» e «The Model»?",
+   "options": [
+    "Kraftwerk",
+    "Tangerine Dream",
+    "Can",
+    "Neu!"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-8207y4",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale leggendario cantautore country statunitense, autore di «Ring of Fire» e «Folsom Prison Blues», era soprannominato «The Man in Black»?",
+   "options": [
+    "Johnny Cash",
+    "Willie Nelson",
+    "Hank Williams",
+    "Kris Kristofferson"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-16uxffj",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale storico doppio album del 1979 della band punk britannica The Clash mostra in copertina Paul Simonon mentre fracassa il proprio basso sul palco?",
+   "options": [
+    "London Calling",
+    "Combat Rock",
+    "Sandinista!",
+    "Give 'Em Enough Rope"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2nq4mq",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Con quale secondo e ultimo album in studio del 2006, trainato dal singolo «Rehab», la cantante britannica Amy Winehouse conquistò cinque Grammy Awards?",
+   "options": [
+    "Back to Black",
+    "Frank",
+    "Lioness: Hidden Treasures",
+    "21"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1fm97xt",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Di quale band post-punk di Manchester, autrice dell'album «Unknown Pleasures» e del brano «Love Will Tear Us Apart», era il cantante Ian Curtis?",
+   "options": [
+    "Joy Division",
+    "The Smiths",
+    "The Cure",
+    "Bauhaus"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-lopolm",
+   "categoryId": "internazionale",
+   "type": "multiple",
+   "text": "Quale cantautore statunitense, nato Robert Allen Zimmerman e autore di «Blowin' in the Wind» e «Like a Rolling Stone», ha vinto il Premio Nobel per la letteratura nel 2016?",
+   "options": [
+    "Bob Dylan",
+    "Leonard Cohen",
+    "Paul Simon",
+    "Neil Young"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-9wbttb",
+   "categoryId": "internazionale",
+   "type": "truefalse",
+   "text": "Il concerto umanitario «Live Aid» del 13 luglio 1985, ideato da Bob Geldof e Midge Ure, si tenne in contemporanea tra il Wembley Stadium di Londra e il JFK Stadium di Filadelfia.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-3amet5",
+   "categoryId": "internazionale",
+   "type": "truefalse",
+   "text": "La storica etichetta discografica «Motown Records», culla del soul di Stevie Wonder, Marvin Gaye e The Supremes, fu fondata da Berry Gordy nel 1959 a Detroit.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1kp6cxk",
+   "categoryId": "internazionale",
+   "type": "truefalse",
+   "text": "L'iconica copertina dell'album «Nevermind» (1991) dei Nirvana raffigura un prisma colpito da un raggio di luce bianca che si scompone in un arcobaleno su sfondo nero.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1ijot5p",
+   "categoryId": "internazionale",
+   "type": "truefalse",
+   "text": "L'album «Thriller» (1982) di Michael Jackson, che include «Billie Jean» e «Beat It», fu prodotto dal leggendario musicista e produttore statunitense Quincy Jones.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-15swgg5",
+   "categoryId": "internazionale",
+   "type": "numeric",
+   "text": "A quale età (in anni compiuti) scomparvero Jimi Hendrix, Janis Joplin, Jim Morrison, Kurt Cobain e Amy Winehouse, dando nome al celebre «Club dei ...»?",
+   "answer": 27,
+   "unit": "anni",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1yycl6u",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento a fiato fu inventato dal belga Adolphe Sax intorno al 1840?",
+   "options": [
+    "Sassofono",
+    "Clarinetto",
+    "Tuba",
+    "Oboe"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-186ecdj",
+   "categoryId": "strumenti",
+   "type": "truefalse",
+   "text": "Il sassofono, pur essendo di metallo, appartiene alla famiglia dei legni perché suona con un'ancia.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-11bma3r",
+   "categoryId": "strumenti",
+   "type": "numeric",
+   "text": "Quante corde ha un violino?",
+   "answer": 4,
+   "unit": "corde",
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-s5sune",
+   "categoryId": "strumenti",
+   "type": "truefalse",
+   "text": "Il violino è più grande della viola.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1i78yog",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Qual è lo strumento più grave, cioè dal suono più basso, della famiglia degli archi in orchestra?",
+   "options": [
+    "Contrabbasso",
+    "Violoncello",
+    "Viola",
+    "Violino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1stgvaf",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento ad arco si suona da seduti tenendolo tra le ginocchia, appoggiato a terra con un puntale?",
+   "options": [
+    "Violoncello",
+    "Viola",
+    "Violino",
+    "Mandolino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1hw72ty",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "In quale città lombarda lavorò il celebre liutaio Antonio Stradivari?",
+   "options": [
+    "Cremona",
+    "Brescia",
+    "Bergamo",
+    "Mantova"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-18yyn55",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento a percussione è formato da lamine di legno percosse con due bacchette?",
+   "options": [
+    "Xilofono",
+    "Glockenspiel",
+    "Triangolo",
+    "Timpano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-e6ha5y",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale cembalaro padovano, attivo a Firenze presso i Medici, inventò il pianoforte intorno al 1700?",
+   "options": [
+    "Bartolomeo Cristofori",
+    "Antonio Stradivari",
+    "Andrea Amati",
+    "Giuseppe Guarneri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-158jkb4",
+   "categoryId": "strumenti",
+   "type": "truefalse",
+   "text": "Il primo pianoforte fu chiamato dal suo inventore «gravicembalo col piano e forte».",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-tyw2ir",
+   "categoryId": "strumenti",
+   "type": "truefalse",
+   "text": "Nel clavicembalo le corde vengono pizzicate, mentre nel pianoforte vengono percosse da martelletti.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1fdimds",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento a corde pizzicate, dotato di sette pedali, ha nella versione da concerto 47 corde?",
+   "options": [
+    "Arpa",
+    "Clavicembalo",
+    "Cetra",
+    "Liuto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-kuzb60",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento a doppia ancia dà tradizionalmente il «la» per accordare l'orchestra?",
+   "options": [
+    "Oboe",
+    "Flauto traverso",
+    "Clarinetto",
+    "Tromba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12p8tdg",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "A quale famiglia di strumenti appartengono flauto, clarinetto e fagotto?",
+   "options": [
+    "Legni",
+    "Ottoni",
+    "Archi",
+    "Percussioni"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1528604",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento di ottone cambia nota facendo scorrere una lunga pompa chiamata coulisse?",
+   "options": [
+    "Trombone",
+    "Tromba",
+    "Corno",
+    "Tuba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-9rsx0q",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento di ottone ha il tubo avvolto a spirale e viene suonato tenendo una mano dentro la campana?",
+   "options": [
+    "Corno",
+    "Tuba",
+    "Trombone",
+    "Tromba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1m4d66z",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Come si chiama lo strumento a fiato con sacca e canne tipico della Scozia?",
+   "options": [
+    "Cornamusa",
+    "Ocarina",
+    "Armonica",
+    "Fisarmonica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1wln6dl",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale piccolo strumento a corde, simile a una chitarra in miniatura, è tipico delle Hawaii?",
+   "options": [
+    "Ukulele",
+    "Banjo",
+    "Mandolino",
+    "Balalaika"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-10on69t",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento a corde pizzicate è simbolo della tradizione musicale napoletana?",
+   "options": [
+    "Mandolino",
+    "Balalaika",
+    "Sitar",
+    "Banjo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-91qmxk",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento popolare russo a corde ha la cassa di forma triangolare?",
+   "options": [
+    "Balalaika",
+    "Mandolino",
+    "Liuto",
+    "Sitar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1u3ky4x",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale strumento indiano a corde fu reso celebre in Occidente da Ravi Shankar?",
+   "options": [
+    "Sitar",
+    "Tabla",
+    "Koto",
+    "Oud"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-pw3r4a",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Quale percussione orchestrale, a forma di grande caldaia, si può accordare su note precise?",
+   "options": [
+    "Timpano",
+    "Grancassa",
+    "Rullante",
+    "Piatti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-jl2hh0",
+   "categoryId": "strumenti",
+   "type": "multiple",
+   "text": "Come si chiama il grande strumento a tastiera delle chiese, che suona con canne e mantici?",
+   "options": [
+    "Organo",
+    "Clavicembalo",
+    "Celesta",
+    "Spinetta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-tho5ur",
+   "categoryId": "strumenti",
+   "type": "numeric",
+   "text": "Quante corde ha un basso elettrico standard?",
+   "answer": 4,
+   "unit": "corde",
+   "difficulty": 1
   }
  ]
 }

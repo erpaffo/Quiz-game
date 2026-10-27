@@ -1,7 +1,7 @@
 {
  "id": "banca-scienza",
  "name": "📚 Scienza",
- "description": "Banca domande · 128 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 209 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -26,6 +26,12 @@
   {
    "id": "medicina",
    "name": "Medicina",
+   "icon": "🔬",
+   "color": "#4361ee"
+  },
+  {
+   "id": "numeri",
+   "name": "Scienza in numeri",
    "icon": "🔬",
    "color": "#4361ee"
   }
@@ -1747,6 +1753,735 @@
    "text": "A quanti kelvin corrisponde, circa, la temperatura della radiazione cosmica di fondo?",
    "answer": 2.7,
    "unit": "K",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-17ro31m",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Cartesio?",
+   "answer": 1596,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1yuvang",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Thomas Edison?",
+   "answer": 1847,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-ect9d3",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Nikola Tesla?",
+   "answer": 1856,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-dntkf6",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Gottfried Wilhelm von Leibniz?",
+   "answer": 1646,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-kdr2qv",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Carl Friedrich Gauss?",
+   "answer": 1777,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-3dkhgw",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Blaise Pascal?",
+   "answer": 1623,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-w88nny",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Eulero?",
+   "answer": 1707,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-ebzyt7",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Max Planck?",
+   "answer": 1858,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-14tap03",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Dmitrij Ivanovič Mendeleev?",
+   "answer": 1834,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1grkc0",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Ernest Rutherford?",
+   "answer": 1871,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1uvf68n",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Enrico Fermi?",
+   "answer": 1901,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1j8pflc",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque David Hilbert?",
+   "answer": 1862,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1rozo85",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Erwin Schrödinger?",
+   "answer": 1887,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-15iecan",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque James Clerk Maxwell?",
+   "answer": 1831,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-lcy0l8",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque James Watt?",
+   "answer": 1736,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1ryr3la",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Wilhelm Conrad Röntgen?",
+   "answer": 1845,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-zogxxo",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Carl Sagan?",
+   "answer": 1934,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1ubsged",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque James Prescott Joule?",
+   "answer": 1818,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1m6n32o",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Guglielmo Marconi?",
+   "answer": 1874,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-dhfirs",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Antoine-Laurent de Lavoisier?",
+   "answer": 1743,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-3bud84",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Robert Oppenheimer?",
+   "answer": 1904,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1gz2umx",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Pierre Simon Laplace?",
+   "answer": 1749,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1a6plw1",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Paul Dirac?",
+   "answer": 1902,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1gz4k6k",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque John von Neumann?",
+   "answer": 1903,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-xrayp1",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Christiaan Huygens?",
+   "answer": 1629,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-mggisl",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Max Born?",
+   "answer": 1882,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1bmdufk",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Joseph John Thomson?",
+   "answer": 1856,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1gaecry",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque André-Marie Ampère?",
+   "answer": 1775,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1cce2c9",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Chandrasekhara Venkata Raman?",
+   "answer": 1888,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-193wkhd",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Hendrik Lorentz?",
+   "answer": 1853,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1o8xkra",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Alessandro Volta?",
+   "answer": 1745,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1d9lawh",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Rosalind Franklin?",
+   "answer": 1920,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1m7ft6d",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Kurt Gödel?",
+   "answer": 1906,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1p2ftpn",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Andrej Dmitrievič Sacharov?",
+   "answer": 1921,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-gr9ca9",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque William Herschel?",
+   "answer": 1738,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1mtwn2s",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Jean Baptiste Le Rond d'Alembert?",
+   "answer": 1717,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-29rb19",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque John Dalton?",
+   "answer": 1766,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1gc74gi",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Irène Joliot-Curie?",
+   "answer": 1897,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-va2kvp",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Heinrich Rudolf Hertz?",
+   "answer": 1857,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-44nnyt",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Linus Pauling?",
+   "answer": 1901,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1tblab8",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Antoine Henri Becquerel?",
+   "answer": 1852,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-cg1lvi",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Bernhard Riemann?",
+   "answer": 1826,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1far2f3",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Michail Vasil'evič Lomonosov?",
+   "answer": 1711,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-qdyk8m",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque James Dewey Watson?",
+   "answer": 1928,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-15i9py1",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Anton van Leeuwenhoek?",
+   "answer": 1632,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-k5752w",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Wernher von Braun?",
+   "answer": 1912,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-7tk0hy",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Dorothy Crowfoot Hodgkin?",
+   "answer": 1910,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-o8gapu",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Albert Abraham Michelson?",
+   "answer": 1852,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1mn4pm1",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Robert Millikan?",
+   "answer": 1868,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-6zq75t",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Konstantin Ėduardovič Ciolkovskij?",
+   "answer": 1857,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-emt6pg",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Joseph-Louis Lagrange?",
+   "answer": 1736,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1alw8xg",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Svante Arrhenius?",
+   "answer": 1859,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-12rgxg6",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Robert Hooke?",
+   "answer": 1635,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1u0ehgm",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Maria Goeppert-Mayer?",
+   "answer": 1906,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1g5o0lo",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Georg Ohm?",
+   "answer": 1789,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1iu6fvb",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Pieter Zeeman?",
+   "answer": 1865,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-13j7q0v",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Humphry Davy?",
+   "answer": 1778,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-h7ljhp",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Louis-Victor Pierre Raymond de Broglie?",
+   "answer": 1892,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-lr2n7a",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Johannes Diderik van der Waals?",
+   "answer": 1837,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1hukrwy",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque William Henry Bragg?",
+   "answer": 1862,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-13udlci",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Charles Augustin de Coulomb?",
+   "answer": 1736,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1vfpwre",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Alfred Nobel?",
+   "answer": 1833,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1wox9sh",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Robert Koch?",
+   "answer": 1843,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1tsgwgc",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Ivan Pavlov?",
+   "answer": 1849,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-j5ab6o",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Jean-Baptiste de Lamarck?",
+   "answer": 1744,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-10tvc19",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Gregor Mendel?",
+   "answer": 1822,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1g2it7f",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Ada Lovelace?",
+   "answer": 1815,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-zoes2r",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Jean Baptiste Joseph Fourier?",
+   "answer": 1768,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-o4oxpx",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Georg Cantor?",
+   "answer": 1845,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-18ktgqs",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Charles Babbage?",
+   "answer": 1791,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-j5gdo3",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Srinivasa Ramanujan?",
+   "answer": 1887,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-168rl3x",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Alfred Russel Wallace?",
+   "answer": 1823,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-13dwdrt",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque John Nash?",
+   "answer": 1928,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-fo7fdw",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Alexander von Humboldt?",
+   "answer": 1769,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1lhiwob",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Edwin Hubble?",
+   "answer": 1889,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-17clc42",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Alexander Fleming?",
+   "answer": 1881,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-18i880v",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Karl Benz?",
+   "answer": 1844,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1u7clj",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Linneo?",
+   "answer": 1707,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-lfzl4f",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Edward Jenner?",
+   "answer": 1749,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-ctdas9",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Ernst Haeckel?",
+   "answer": 1834,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-cz39cy",
+   "categoryId": "numeri",
+   "type": "numeric",
+   "text": "In che anno nacque Rita Levi-Montalcini?",
+   "answer": 1909,
+   "unit": "",
    "difficulty": 3
   }
  ]

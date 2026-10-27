@@ -398,5 +398,445 @@
    "aerei"
   ],
   "pack": "difficile"
+ },
+ {
+  "word": "Indiana Jones",
+  "taboo": [
+   "archeologo",
+   "frusta",
+   "cappello",
+   "avventura"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Homer Simpson",
+  "taboo": [
+   "giallo",
+   "ciambella",
+   "birra",
+   "Springfield"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "James Bond",
+  "taboo": [
+   "agente",
+   "segreto",
+   "007",
+   "spia"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Sherlock Holmes",
+  "taboo": [
+   "detective",
+   "lente",
+   "Watson",
+   "Londra"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Darth Vader",
+  "taboo": [
+   "nero",
+   "casco",
+   "respiro",
+   "padre"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Mary Poppins",
+  "taboo": [
+   "ombrello",
+   "tata",
+   "volare",
+   "borsa"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Zorro",
+  "taboo": [
+   "spada",
+   "maschera",
+   "cavallo",
+   "zeta"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Robin Hood",
+  "taboo": [
+   "arco",
+   "frecce",
+   "foresta",
+   "ricchi"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Tarzan",
+  "taboo": [
+   "giungla",
+   "liane",
+   "scimmie",
+   "urlo"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Peter Pan",
+  "taboo": [
+   "volare",
+   "isola",
+   "Capitan Uncino",
+   "Trilli"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Aladino",
+  "taboo": [
+   "lampada",
+   "genio",
+   "tappeto",
+   "desideri"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Frankenstein",
+  "taboo": [
+   "mostro",
+   "scienziato",
+   "elettricità",
+   "bulloni"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Paperon de' Paperoni",
+  "taboo": [
+   "ricco",
+   "monete",
+   "deposito",
+   "zio"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Gollum",
+  "taboo": [
+   "anello",
+   "tesoro",
+   "Signore",
+   "creatura"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Jack Sparrow",
+  "taboo": [
+   "pirata",
+   "nave",
+   "bussola",
+   "Caraibi"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Tostapane",
+  "taboo": [
+   "pane",
+   "fette",
+   "caldo",
+   "colazione"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Asciugacapelli",
+  "taboo": [
+   "phon",
+   "capelli",
+   "aria",
+   "bagno"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Spremiagrumi",
+  "taboo": [
+   "arancia",
+   "limone",
+   "succo",
+   "girare"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Cavatappi",
+  "taboo": [
+   "vino",
+   "bottiglia",
+   "sughero",
+   "aprire"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Scolapasta",
+  "taboo": [
+   "acqua",
+   "pasta",
+   "spaghetti",
+   "pentola"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Mattarello",
+  "taboo": [
+   "legno",
+   "stendere",
+   "impasto",
+   "pizza"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Ferro da stiro",
+  "taboo": [
+   "camicia",
+   "vapore",
+   "caldo",
+   "pieghe"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Grattugia",
+  "taboo": [
+   "formaggio",
+   "parmigiano",
+   "buchi",
+   "metallo"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Zerbino",
+  "taboo": [
+   "porta",
+   "ingresso",
+   "piedi",
+   "scarpe"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Molletta",
+  "taboo": [
+   "bucato",
+   "stendere",
+   "filo",
+   "panni"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Tortellini",
+  "taboo": [
+   "brodo",
+   "Bologna",
+   "pasta",
+   "ripieno"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Cannolo",
+  "taboo": [
+   "Sicilia",
+   "ricotta",
+   "dolce",
+   "cialda"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Mozzarella",
+  "taboo": [
+   "bianca",
+   "latte",
+   "bufala",
+   "pizza"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Focaccia",
+  "taboo": [
+   "forno",
+   "olio",
+   "Genova",
+   "sale"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Pesto",
+  "taboo": [
+   "basilico",
+   "verde",
+   "pinoli",
+   "Genova"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Pavone",
+  "taboo": [
+   "ruota",
+   "piume",
+   "coda",
+   "colori"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Istrice",
+  "taboo": [
+   "aculei",
+   "spine",
+   "pungere",
+   "animale"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Koala",
+  "taboo": [
+   "eucalipto",
+   "Australia",
+   "albero",
+   "dormire"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Pipistrello",
+  "taboo": [
+   "notte",
+   "grotta",
+   "ali",
+   "testa in giù"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Castoro",
+  "taboo": [
+   "diga",
+   "legno",
+   "denti",
+   "fiume"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Cavalluccio marino",
+  "taboo": [
+   "mare",
+   "pesce",
+   "coda",
+   "ippocampo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Struzzo",
+  "taboo": [
+   "testa",
+   "sabbia",
+   "correre",
+   "uovo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ape",
+  "taboo": [
+   "miele",
+   "alveare",
+   "fiore",
+   "pungiglione"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Lupo",
+  "taboo": [
+   "ululare",
+   "luna",
+   "branco",
+   "bosco"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Cigno",
+  "taboo": [
+   "lago",
+   "bianco",
+   "collo",
+   "elegante"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Rondine",
+  "taboo": [
+   "primavera",
+   "nido",
+   "volare",
+   "coda"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Formica",
+  "taboo": [
+   "insetto",
+   "piccola",
+   "fila",
+   "briciole"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Orso polare",
+  "taboo": [
+   "bianco",
+   "ghiaccio",
+   "Artico",
+   "freddo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Oasi",
+  "taboo": [
+   "deserto",
+   "palme",
+   "acqua",
+   "miraggio"
+  ],
+  "pack": "natura"
  }
 ]

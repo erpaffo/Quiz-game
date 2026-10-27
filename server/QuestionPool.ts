@@ -1,5 +1,6 @@
 import type { Pack } from '../shared/packs';
 import type { Category } from '../shared/types';
+import { topicOf } from '../shared/topics';
 import { pick, shuffle } from './util';
 
 /** Domanda a scelta multipla pronta per il gioco (vero/falso = 2 opzioni). */
@@ -36,6 +37,12 @@ export interface DrawOptions {
   audio?: boolean;
 }
 
+/** Filtro del quiz scelto nel menù: difficoltà fissa e/o argomenti (vuoto = tutti). */
+export interface PoolFilter {
+  difficulty?: number;
+  topics?: readonly string[];
+}
+
 interface McRaw extends McDef {
   shuffle: boolean;
 }
@@ -58,12 +65,15 @@ export class QuestionPool {
   private categories = new Map<string, Category>();
   private used = new Set<string>();
 
-  constructor(packs: Pack[], private readonly names: () => string[]) {
+  constructor(packs: Pack[], private readonly names: () => string[], filter: PoolFilter = {}) {
+    const topics = new Set(filter.topics ?? []);
     for (const pack of packs) {
       const cats = new Map(pack.categories.map((c) => [c.id, { ...c, id: `${pack.id}:${c.id}` }]));
       for (const q of pack.questions) {
         const category = cats.get(q.categoryId);
         if (!category) continue;
+        if (filter.difficulty && (q.difficulty ?? 2) !== filter.difficulty) continue;
+        if (topics.size && !topics.has(topicOf(pack.id, category.name) ?? '')) continue;
         const id = `${pack.id}:${q.id}`;
         const extras = { difficulty: q.difficulty ?? 2, ...(q.image ? { image: q.image } : {}), ...(q.audio ? { audio: q.audio } : {}) };
         let raw: McRaw | null = null;

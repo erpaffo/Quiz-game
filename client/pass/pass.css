@@ -155,7 +155,7 @@ input, textarea { -webkit-user-select: text; user-select: text; }
 .pp-fronte-word { position: absolute; left: 50%; top: 44%; transform: translate(-50%, -50%); width: 92%; padding: 18px 10px; border-radius: 20px; background: #06121a; color: #fff; text-align: center; font-size: clamp(2.2rem, 11vw, 3.6rem); font-weight: 800; line-height: 1.05; pointer-events: none; z-index: 2; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
 .pp-fronte.tabu .pp-fronte-word { top: 22%; }
 .pp-taboo { position: absolute; left: 50%; top: 36%; transform: translateX(-50%); width: 86%; display: flex; flex-direction: column; gap: 4px; pointer-events: none; z-index: 2; }
-.pp-taboo span { padding: 5px; border-radius: 10px; background: rgba(20, 6, 58, 0.85); color: #ffd2db; text-align: center; font-weight: 800; text-decoration: line-through; }
+.pp-taboo span { padding: 5px; border-radius: 10px; background: rgba(8, 20, 28, 0.85); color: #ffd2db; text-align: center; font-weight: 800; text-decoration: line-through; }
 .pp-taboo-btn { position: absolute; left: 50%; bottom: 78px; transform: translateX(-50%); z-index: 3; padding: 14px 24px; border-radius: 999px; background: #ff6b5e; color: #fff; font-weight: 800; font-size: 1.2rem; box-shadow: 0 5px 0 #a63a30; }
 .pp-review { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
 .pp-review button { width: 100%; padding: 10px 14px; border-radius: 14px; text-align: left; font-weight: 800; font-size: 1.05rem; }

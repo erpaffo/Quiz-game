@@ -237,9 +237,90 @@ export async function vette() {
     }));
 }
 
+// ------------------------------------------------------------------ W005 anni di nascita (Macchina del Tempo)
+
+/** Mestieri (Wikidata) da cui pescare le persone. Su Wikidata il mestiere è largo (Goethe è «fisico», Jefferson «inventore»): dopo la ricerca si tolgono a mano i non scienziati (NOT_SCIENTISTS). */
+const AREAS: Record<string, string> = { Q169470: 'fisica', Q593644: 'chimica', Q170790: 'matematica', Q11063: 'astronomia', Q205375: 'invenzioni', Q39631: 'medicina' };
+
+const NOT_SCIENTISTS = new Set(["Johann Wolfgang von Goethe", "Arthur C. Clarke", "Alfred North Whitehead", "Elias Canetti", "Bertrand Russell", "Thomas Hobbes", "Lewis Carroll", "Auguste Comte", "Karl Popper", "Thomas Carlyle", "Edgar de Wahl", "Thomas Robert Malthus", "Edmund Husserl", "Thomas Jefferson", "Walt Disney", "Henry Ford", "Antoine de Saint-Exupéry", "Sergej Michajlovič Ėjzenštejn", "Ludwik Lejzer Zamenhof", "Bobby Fischer", "Jacques-Yves Cousteau", "Hedy Lamarr", "Anton Pavlovič Čechov", "Che Guevara", "Friedrich Schiller", "Sun Yat-sen", "John Keats", "William James", "Salvador Allende", "Albert Schweitzer", "Michail Afanas'evič Bulgakov", "William Somerset Maugham", "Maria Montessori", "Stanisław Lem", "Georges Clemenceau"]);
+
+export async function nascite() {
+  const covered = alreadyCovered('scienza');
+  const seen = new Set<string>();
+  const out: object[] = [];
+  // una richiesta per mestiere: un'unica interrogazione su tutti i mestieri va in timeout sul servizio pubblico
+  for (const occ of Object.keys(AREAS)) {
+    const rows = await sparql(`
+      SELECT ?p ?pLabel ?links (MIN(?y) AS ?ymin) (MAX(?y) AS ?ymax) WHERE {
+        ?p wdt:P106 wd:${occ} ; wdt:P31 wd:Q5 ; wdt:P570 [] ; wikibase:sitelinks ?links .
+        FILTER(?links >= 100)
+        ?p p:P569/psv:P569 [ wikibase:timeValue ?born ; wikibase:timePrecision ?prec ] .
+        FILTER(?prec >= 9)
+        BIND(YEAR(?born) AS ?y)
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "it". }
+      } GROUP BY ?p ?pLabel ?links`);
+    for (const r of rows.sort((a, b) => Number(b.links) - Number(a.links))) {
+      // anni di nascita discordanti, nome senza etichetta italiana, persona già nel gioco, o prima del 1582 (cambio di calendario): si salta
+      if (r.ymin !== r.ymax || Number(r.ymin) < 1582 || /^Q\d+$/.test(r.pLabel) || seen.has(r.p) || NOT_SCIENTISTS.has(r.pLabel) || covered(r.pLabel)) continue;
+      seen.add(r.p);
+      out.push({
+        kind: 'numeric',
+        category: 'scienza',
+        subcategory: 'numeri',
+        difficulty: Math.max(3, byFame(Number(r.links), [250, 180, 140, 110])) as BankDifficulty,
+        text: `In che anno nacque ${r.pLabel}?`,
+        answer: Number(r.ymin),
+        unit: '',
+        verify: `Wikidata ${r.p} (P569 data di nascita, anno ${r.ymin})`,
+        source: `wikidata:${r.p}`,
+        ...META,
+        tags: ['macchina-del-tempo']
+      });
+    }
+    await new Promise((res) => setTimeout(res, 1500));
+  }
+  return out;
+}
+
+// ------------------------------------------------------------------ W006 popolazioni (Stima)
+
+/** Stati la cui popolazione dipende da cosa si conta (territori d'oltremare, Crimea, stime molto diverse): si saltano. */
+const SKIP_POPULATION = new Set(["Francia", "Ucraina", "Libano", "Regno Unito", "Cina", "Marocco", "Israele", "Siria", "Afghanistan", "Iraq"]);
+
+export async function popolazioni() {
+  const rows = await sparql(`
+    SELECT ?c ?cLabel ?links (MAX(?pop) AS ?pmax) (MIN(?pop) AS ?pmin) WHERE {
+      ?c wdt:P463 wd:Q1065 ; wdt:P31 wd:Q3624078 ; wikibase:sitelinks ?links .
+      ?c p:P1082 [ ps:P1082 ?pop ; pq:P585 ?date ] .
+      FILTER(YEAR(?date) = 2020 && ?pop >= 5000000)
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "it". }
+    } GROUP BY ?c ?cLabel ?links`);
+  const covered = alreadyCovered('geografia');
+  return rows
+    .filter((r) => !/^Q\d+$/.test(r.cLabel) && !SKIP_POPULATION.has(r.cLabel) && !covered(r.cLabel))
+    // stime del 2020 discordanti (oltre il 3%): il valore non è abbastanza stabile, si salta
+    .filter((r) => (Number(r.pmax) - Number(r.pmin)) / Number(r.pmax) < 0.03)
+    .map((r) => {
+      const label = LABEL_FIX[r.cLabel] ?? r.cLabel;
+      return {
+        kind: 'numeric',
+        category: 'geografia',
+        subcategory: 'numeri',
+        difficulty: Math.min(4, Math.max(3, byFame(Number(r.links), [999, 250, 200, 150]))) as BankDifficulty,
+        text: `${label}: circa quanti milioni di abitanti aveva nel 2020?`, // senza articolo: il genere dei nomi di Stato non si deduce
+        answer: Math.round(Number(r.pmax) / 1e6),
+        unit: 'milioni',
+        verify: `Wikidata ${r.c} (P1082 popolazione 2020 ≈ ${Math.round(Number(r.pmax) / 1e5) / 10} milioni, arrotondata)`,
+        source: `wikidata:${r.c}`,
+        ...META,
+        tags: ['stima']
+      };
+    });
+}
+
 // ------------------------------------------------------------------ riga di comando
 
-const TEMPLATES = { capitali: ['W001', capitali], elementi: ['W002', elementi], lune: ['W003', lune], vette: ['W004', vette] } as const;
+const TEMPLATES = { capitali: ['W001', capitali], elementi: ['W002', elementi], lune: ['W003', lune], vette: ['W004', vette], nascite: ['W005', nascite], popolazioni: ['W006', popolazioni] } as const;
 
 async function main() {
   const wanted = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(TEMPLATES);

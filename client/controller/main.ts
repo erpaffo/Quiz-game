@@ -9,7 +9,7 @@ import type { CardEvent, CardType, GameAction, GameId, PlayerPublic, PlayState, 
 import '../common/base.css';
 import { handlePackClick, menuView, packDetail, packGrid } from '../common/pack-menu';
 import '../common/pack.css';
-import { clock, createSocket, esc, OPTION_COLORS, OPTION_LETTERS, PLAYER_COLORS } from '../common/net';
+import { clock, createSocket, esc, OPTION_COLORS, OPTION_LETTERS, PLAYER_COLORS, playerShape } from '../common/net';
 import { addQuestionSheet } from './addQuestion';
 import './controller.css';
 import { formatNumber, numericView } from './numeric';
@@ -151,6 +151,9 @@ function colorOf(id: string) {
   const i = s?.players.findIndex((p) => p.id === id) ?? 0;
   return PLAYER_COLORS[Math.max(0, i) % PLAYER_COLORS.length];
 }
+function shapeOf(id: string) {
+  return playerShape(s?.players.findIndex((p) => p.id === id) ?? 0);
+}
 function canStart(snap: RoomSnapshot) {
   const online = snap.players.filter((p) => p.connected);
   const show = getShowMeta(activeShowId(snap));
@@ -189,7 +192,7 @@ function targetList(title: string, me: PlayerPublic, back?: string) {
     <div class="view">
       <div class="title">${title}</div>
       <div class="target-list ${others.length > 5 ? 'grid' : ''}">${others.map((o) => `
-        <button class="target-btn" data-target="${o.id}" style="--pc:${colorOf(o.id)}">
+        <button class="target-btn" data-target="${o.id}" style="--pc:${colorOf(o.id)};--ps:'${shapeOf(o.id)}'">
           <b>${esc(o.name)}</b><small>${esc(getCharacter(o.characterId)?.name ?? '')} · ${o.score.toLocaleString('it-IT')} pti · ${o.rank}°${o.defense ? ` · ${CARDS[o.defense].icon}` : ''}</small>
         </button>`).join('')}
       </div>
@@ -375,7 +378,7 @@ function render(force = false) {
 
 function renderHeader(snap: RoomSnapshot, p: PlayerPublic) {
   const badges = [p.defense ? CARDS[p.defense].icon : '', p.doubleArmed ? '💎' : '', p.bonusCard ? '🃏+1' : ''].filter(Boolean).join(' ');
-  const html = `<span class="dot" style="background:${colorOf(p.id)}"></span><b>${esc(p.name)}</b>${badges ? `<span class="badges">${badges}</span>` : ''}
+  const html = `<span class="dot" style="color:${colorOf(p.id)}" aria-hidden="true">${shapeOf(p.id)}</span><b>${esc(p.name)}</b>${badges ? `<span class="badges">${badges}</span>` : ''}
     <span class="c-score">${snap.phase === 'LOBBY' ? `Stanza ${snap.code}` : `${p.score.toLocaleString('it-IT')} pti · ${p.rank}°`}</span>`;
   if (head.innerHTML !== html) head.innerHTML = html;
 }
@@ -440,7 +443,7 @@ function describe(e: CardEvent, meId: string): string | null {
   const reflected = e.path.length > 2 && last === e.from;
   const redirected = e.path.length > 2 && !reflected;
   if (mine) {
-    if (e.result === 'hit') return reflected ? `🪞 Il tuo ${c.icon} è tornato indietro: <b>ti sei colpito da solo!</b>` : `${c.icon} Hai colpito <b>${nameOf(last)}</b>${redirected ? ' (deviato dal Mantello!)' : ''}`;
+    if (e.result === 'hit') return reflected ? `🔄 Il tuo ${c.icon} è tornato indietro: <b>ti sei colpito da solo!</b>` : `${c.icon} Hai colpito <b>${nameOf(last)}</b>${redirected ? ' (deviato dal Mantello!)' : ''}`;
     if (e.result === 'blocked') return `${c.icon} ${nameOf(last)} si è difeso con ${defense}`;
     if (e.result === 'absorbed') return `${c.icon} ${nameOf(last)} l'ha neutralizzato con ${defense}`;
     if (e.result === 'crowded') return `${c.icon} ${nameOf(last)} è già sommerso di attacchi: rimbalzato!`;
@@ -448,7 +451,7 @@ function describe(e: CardEvent, meId: string): string | null {
   }
   if (!e.path.includes(meId)) return null;
   if (e.path[1] === meId && e.result !== 'hit' && last !== meId) {
-    return reflected ? `🪞 Hai rimandato ${c.icon} a <b>${nameOf(e.from)}</b>!` : `👻 Il Mantello ha deviato ${c.icon} di ${nameOf(e.from)}`;
+    return reflected ? `🔄 Hai rimandato ${c.icon} a <b>${nameOf(e.from)}</b>!` : `👻 Il Mantello ha deviato ${c.icon} di ${nameOf(e.from)}`;
   }
   if (last !== meId) return e.path[1] === meId && redirected ? `👻 Il Mantello ha deviato ${c.icon} su ${nameOf(last)}` : null;
   if (e.result === 'hit') return `⚠️ <b>${nameOf(e.from)}</b> ti ha colpito con ${c.icon} ${c.label}!`;
@@ -542,7 +545,7 @@ function playView(game: string, st: PlayState, p: PlayerPublic) {
           <div class="result ${r?.correct ? 'good' : 'bad'} pop">${r?.correct ? '✅ Esatto!' : r?.optionIndex == null ? '⏰ Nessuna risposta' : '❌ Sbagliato'}</div>
           <div class="detail">${detail}</div>
           <div class="muted">La risposta giusta era</div>
-          <div class="reveal-answer" style="--oc:${OPTION_COLORS[st.correctIndex]}"><b>${OPTION_LETTERS[st.correctIndex]}</b>
+          <div class="reveal-answer opt-${st.correctIndex}" style="--oc:${OPTION_COLORS[st.correctIndex]}"><b>${OPTION_LETTERS[st.correctIndex]}</b>
             ${st.question.optionImages ? `<img class="reveal-img" src="${esc(st.question.optionImages[st.correctIndex])}" alt="">` : ''}${esc(st.question.options[st.correctIndex])}</div>
           ${st.question.image ? `<img class="q-image small" src="${esc(st.question.image)}" alt="">` : ''}
         </div>`;

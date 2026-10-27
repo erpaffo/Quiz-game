@@ -80,7 +80,7 @@ export function questionView(root: HTMLElement, q: QuestionPublic, effects: Inco
             ? `<img class="ans-img" src="${esc(q.optionImages[i])}" alt=""><span class="ans-text sr-only">${esc(o)}</span>`
             : `<span class="ans-text">${esc(o)}</span>`;
           return `
-          <button class="ans ${opts.answered === i ? 'chosen' : ''} ${removed ? 'removed' : ''}" data-i="${i}" style="--oc:${OPTION_COLORS[i]}" ${locked || removed ? 'disabled' : ''}>
+          <button class="ans opt-${i} ${opts.answered === i ? 'chosen' : ''} ${removed ? 'removed' : ''}" data-i="${i}" style="--oc:${OPTION_COLORS[i]}" ${locked || removed ? 'disabled' : ''}>
             <b>${removed ? '✂️' : OPTION_LETTERS[i]}</b>${content}
           </button>`;
         }).join('')}

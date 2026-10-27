@@ -2,7 +2,7 @@
 // Telefono → SHOW_ACTION { payload: CreativeAction } · TV ← show.state: CreativePublic · telefono ← me.show: CreativePrivate
 //
 // Disegno = 2 fotogrammi; ogni fotogramma è una lista di tratti. Coordinate intere 0..CANVAS su una tela quadrata.
-// La TV anima il disegno alternando i fotogrammi (≈ 2 al secondo). I bot non disegnano.
+// La TV anima il disegno alternando i fotogrammi (≈ 2 al secondo). I bot consegnano scarabocchi già pronti (server/shows/creative/doodles.ts).
 
 import type { BluffOptionPublic, BluffOptionReveal } from './bluff';
 import type { ShowFinal } from './shows';

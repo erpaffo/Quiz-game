@@ -1,7 +1,7 @@
 {
  "id": "banca-storia",
  "name": "📚 Storia",
- "description": "Banca domande · 50 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 125 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -12,8 +12,26 @@
    "color": "#b5838d"
   },
   {
+   "id": "medievale",
+   "name": "Medioevo",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  },
+  {
+   "id": "moderna",
+   "name": "Età moderna",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  },
+  {
    "id": "contemporanea",
    "name": "Novecento e oggi",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  },
+  {
+   "id": "italia",
+   "name": "Storia d'Italia",
    "icon": "🏛️",
    "color": "#b5838d"
   }
@@ -640,6 +658,939 @@
    "answer": 17,
    "unit": "Paesi",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-15i4zrw",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale maestro di palazzo del regno dei Franchi sconfisse nel 732 d.C. a Poitiers l'esercito arabo-berbero guidato da Abd al-Rahman?",
+   "options": [
+    "Carlo Martello",
+    "Pipino il Breve",
+    "Clodoveo I",
+    "Desiderio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1hmzi51",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale sovrano longobardo promulgò a Pavia nel 643 d.C. il celebre Editto che mise per iscritto in lingua latina le leggi del suo popolo?",
+   "options": [
+    "Rotari",
+    "Liutprando",
+    "Alboino",
+    "Autari"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1y4ad0x",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale re d'Inghilterra fu costretto dai baroni ribelli a concedere a Runnymede la «Magna Carta Libertatum»?",
+   "options": [
+    "Giovanni Senzaterra",
+    "Riccardo Cuor di Leone",
+    "Enrico II Plantageneto",
+    "Edoardo I"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1u1ur1v",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "In quale battaglia del 29 maggio 1176 le milizie comunali della Lega Lombarda sconfissero l'esercito imperiale di Federico I Barbarossa?",
+   "options": [
+    "Battaglia di Legnano",
+    "Battaglia di Cortenuova",
+    "Battaglia di Benevento",
+    "Battaglia di Montaperti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2fqb4o",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "In quale battaglia del 14 ottobre 1066 il duca di Normandia Guglielmo il Conquistatore sconfisse il re anglosassone Aroldo II?",
+   "options": [
+    "Battaglia di Hastings",
+    "Battaglia di Stamford Bridge",
+    "Battaglia di Bouvines",
+    "Battaglia di Azincourt"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-jibay8",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale imperatore svevo, soprannominato «Stupor Mundi», fondò nel 1224 l'Università di Napoli e promulgò nel 1231 le Costituzioni di Melfi?",
+   "options": [
+    "Federico II di Svevia",
+    "Enrico VI di Svevia",
+    "Corrado IV di Svevia",
+    "Ottone III di Sassonia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ayfesv",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "In quale anno si consumò il «Grande Scisma d'Oriente» con la reciproca scomunica tra i legati di papa Leone IX e il patriarca Michele Cerulario?",
+   "options": [
+    "1054",
+    "1095",
+    "1122",
+    "1204"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-rtme1x",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "In quale città francese ebbe sede la corte papale dal 1309 al 1377, durante il periodo passato alla storia come «cattività avignonese»?",
+   "options": [
+    "Avignone",
+    "Lione",
+    "Tolosa",
+    "Clermont"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-aqilmt",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Con quale nome è nota la rivolta scoppiata a Palermo il lunedì di Pasqua del 1282 contro il dominio angioino di Carlo I d'Angiò?",
+   "options": [
+    "Vespri siciliani",
+    "Tumulto dei Ciompi",
+    "Congiura dei Pazzi",
+    "Rivolta della Fronda"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ho7zhb",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale imperatore bizantino del VI secolo promosse la monumentale codificazione del diritto romano nota come «Corpus Iuris Civilis»?",
+   "options": [
+    "Giustiniano I",
+    "Eraclio I",
+    "Basilio II",
+    "Alessio I Comneno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-3hc3td",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale santo fondò intorno al 529 d.C. l'abbazia di Montecassino, dettando la celebre Regola monastica sintetizzata nel motto «Ora et labora»?",
+   "options": [
+    "San Benedetto da Norcia",
+    "San Francesco d'Assisi",
+    "San Colombano",
+    "San Bernardo di Chiaravalle"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zppu5b",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale crociata, bandita nel 1202 e dirottata su impulso del doge veneziano Enrico Dandolo, culminò nel 1204 con il sacco di Costantinopoli?",
+   "options": [
+    "La quarta crociata",
+    "La seconda crociata",
+    "La terza crociata",
+    "La sesta crociata"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-p7nnal",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale repubblica marinara inflisse a Pisa una disfatta navale decisiva nella battaglia della Meloria del 6 agosto 1284?",
+   "options": [
+    "Genova",
+    "Venezia",
+    "Amalfi",
+    "Ancona"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-vx6zsx",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Con quale concordato del 23 settembre 1122 tra papa Callisto II e l'imperatore Enrico V si concluse la lotta per le investiture?",
+   "options": [
+    "Concordato di Worms",
+    "Pace di Costanza",
+    "Trattato di Verdun",
+    "Dieta di Roncaglia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-16gtn4m",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "In quale città scoppiò nell'estate del 1378 il «Tumulto dei Ciompi», rivolta dei salariati dell'Arte della lana guidata da Michele di Lando?",
+   "options": [
+    "Firenze",
+    "Siena",
+    "Bologna",
+    "Milano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-3zl0z3",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale condottiero e sultano curdo, fondatore della dinastia ayyubide, riconquistò Gerusalemme ai crociati nel 1187 dopo la battaglia di Hattin?",
+   "options": [
+    "Saladino",
+    "Solimano il Magnifico",
+    "Baibars",
+    "Maometto II"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ev89e2",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Quale sovrano unificò le tribù nomadi della steppa e fu proclamato nel 1206 sovrano universale («Gengis Khan») dell'Impero mongolo?",
+   "options": [
+    "Temüjin",
+    "Kublai Khan",
+    "Tamerlano",
+    "Batu Khan"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-cr4shc",
+   "categoryId": "medievale",
+   "type": "multiple",
+   "text": "Con quale documento imperiale del 1356 Carlo IV di Lussemburgo regolò l'elezione dell'imperatore, affidandola ai Principi Elettori?",
+   "options": [
+    "Bolla d'Oro",
+    "Pravda Russa",
+    "Privilegio di Koszyce",
+    "Dictatus Papae"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-197l3z2",
+   "categoryId": "medievale",
+   "type": "truefalse",
+   "text": "Carlo Magno fu incoronato imperatore nella basilica di San Pietro a Roma da papa Leone III nella notte di Natale.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-18ig0qb",
+   "categoryId": "medievale",
+   "type": "truefalse",
+   "text": "Il trattato di Verdun dell'843 d.C. spartì l'Impero carolingio tra i tre figli superstiti di Ludovico il Pio: Lotario I, Ludovico il Germanico e Carlo il Calvo.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-nstf1v",
+   "categoryId": "medievale",
+   "type": "truefalse",
+   "text": "L'Ordine dei Cavalieri Templari fu soppresso nel 1312 su pressione del re d'Inghilterra Edoardo I, che fece giustiziare a Londra il Gran Maestro Jacques de Molay.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-pqkt73",
+   "categoryId": "medievale",
+   "type": "truefalse",
+   "text": "Il «Dictatus papae», raccolta di 27 proposizioni che affermavano la superiorità del pontefice anche sull'imperatore, fu redatto nel 1075 sotto il pontificato di Gregorio VII.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1jt5xjt",
+   "categoryId": "medievale",
+   "type": "numeric",
+   "text": "In che anno (d.C.) Carlo Magno fu incoronato imperatore a Roma da papa Leone III nella notte di Natale?",
+   "answer": 800,
+   "unit": "anno",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1474lpz",
+   "categoryId": "medievale",
+   "type": "numeric",
+   "text": "In che anno il re d'Inghilterra Giovanni Senzaterra concesse ai baroni la «Magna Carta Libertatum»?",
+   "answer": 1215,
+   "unit": "anno",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-9ble8z",
+   "categoryId": "medievale",
+   "type": "numeric",
+   "text": "Quanti erano i Principi Elettori (tre ecclesiastici e quattro laici) a cui la «Bolla d'Oro» del 1356 affidava l'elezione dell'imperatore del Sacro Romano Impero?",
+   "answer": 7,
+   "unit": "principi elettori",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-vycj7h",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Con quale trattato del 7 giugno 1494 Spagna e Portogallo si spartirono le sfere d'influenza oceaniche lungo un meridiano detto «raya»?",
+   "options": [
+    "Trattato di Tordesillas",
+    "Trattato di Utrecht",
+    "Trattato di Cateau-Cambrésis",
+    "Trattato di Rastatt"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-pgs93h",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Su quale principio si fondava la Pace di Augusta del 1555, che obbligava i sudditi del Sacro Romano Impero a seguire la confessione del proprio principe?",
+   "options": [
+    "Cuius regio, eius religio",
+    "Divide et impera",
+    "Primus inter pares",
+    "Habeas corpus"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ipdk9p",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Con quale pace, articolata nei trattati di Münster e Osnabrück, si concluse la sanguinosa Guerra dei Trent'anni in Europa?",
+   "options": [
+    "Pace di Vestfalia",
+    "Pace di Aquisgrana",
+    "Pace dei Pirenei",
+    "Pace di Nimega"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ve98sn",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale re di Spagna inviò nel 1588 contro l'Inghilterra di Elisabetta I la grande flotta passata alla storia come «Invincibile Armata»?",
+   "options": [
+    "Filippo II d'Asburgo",
+    "Carlo V d'Asburgo",
+    "Filippo IV d'Asburgo",
+    "Ferdinando il Cattolico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-26fv9z",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Con quale editto del 1598 il re di Francia Enrico IV di Borbone concesse la libertà di culto e diritti politici ai protestanti calvinisti (ugonotti)?",
+   "options": [
+    "Editto di Nantes",
+    "Editto di Saint-Germain",
+    "Editto di Worms",
+    "Editto di Grazia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-btt1ca",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale sovrano inglese della dinastia Stuart fu processato dal Parlamento e decapitato a Londra il 30 gennaio 1649 durante la rivoluzione guidata da Oliver Cromwell?",
+   "options": [
+    "Carlo I Stuart",
+    "Giacomo I Stuart",
+    "Carlo II Stuart",
+    "Giacomo II Stuart"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1l7ae8b",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale documento costituzionale del 1689, firmato da Guglielmo III d'Orange e Maria II al termine della «Gloriosa Rivoluzione», sancì la monarchia parlamentare inglese?",
+   "options": [
+    "Bill of Rights",
+    "Petition of Right",
+    "Act of Settlement",
+    "Navigation Act"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ktuxs8",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale trattato del 1559 tra Enrico II di Francia e Filippo II di Spagna chiuse le Guerre d'Italia, sancendo il predominio spagnolo sulla penisola?",
+   "options": [
+    "Pace di Cateau-Cambrésis",
+    "Pace di Lodi",
+    "Trattato di Noyon",
+    "Pace di Crépy"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-o4ffie",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale re di Polonia guidò il 12 settembre 1683 la carica decisiva della cavalleria cristiana che liberò Vienna dall'assedio dell'esercito ottomano?",
+   "options": [
+    "Giovanni III Sobieski",
+    "Sigismondo III Vasa",
+    "Stefano Báthory",
+    "Augusto II il Forte"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-he1v62",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale zar di Russia fondò nel 1703 sul delta della Neva la città di San Pietroburgo, facendone la nuova capitale imperiale e la «finestra sull'Europa»?",
+   "options": [
+    "Pietro I il Grande",
+    "Ivan IV il Terribile",
+    "Alessandro I Romanov",
+    "Nicola I Romanov"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-18ltz3k",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale illuminista milanese pubblicò nel 1764 il trattato «Dei delitti e delle pene», battendosi per l'abolizione della tortura e della pena di morte?",
+   "options": [
+    "Cesare Beccaria",
+    "Pietro Verri",
+    "Gaetano Filangieri",
+    "Antonio Genovesi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-18yi8iw",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Chi fu l'autore principale della Dichiarazione d'indipendenza degli Stati Uniti d'America, approvata a Filadelfia il 4 luglio 1776?",
+   "options": [
+    "Thomas Jefferson",
+    "Alexander Hamilton",
+    "James Madison",
+    "John Jay"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zmv92o",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "In quale battaglia navale del 21 ottobre 1805 l'ammiraglio britannico Horatio Nelson sconfisse la flotta franco-spagnola di Napoleone, perdendo la vita nello scontro?",
+   "options": [
+    "Battaglia di Trafalgar",
+    "Battaglia di Abukir",
+    "Battaglia di Jutland",
+    "Battaglia di Navarino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-142f3r0",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Come venivano chiamati i mercenari di fanteria tedeschi, in gran parte luterani, al servizio di Carlo V che furono protagonisti del Sacco di Roma del maggio 1527?",
+   "options": [
+    "Lanzichenecchi",
+    "Giannizzeri",
+    "Ussari",
+    "Moschettieri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1xj0nsu",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale cancelliere austriaco fu il grande regista diplomatico del Congresso di Vienna (1814-1815) e dell'ordine europeo della Restaurazione?",
+   "options": [
+    "Klemens von Metternich",
+    "Wenzel Anton von Kaunitz",
+    "Karl von Hardenberg",
+    "Robert Stewart Castlereagh"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-wu1btl",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale «conquistador» spagnolo guidò tra il 1519 e il 1521 la spedizione che portò alla presa di Tenochtitlán e alla caduta dell'Impero azteco di Montezuma II?",
+   "options": [
+    "Hernán Cortés",
+    "Francisco Pizarro",
+    "Vasco Núñez de Balboa",
+    "Diego de Almagro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-12accpk",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Con quale atto del 1534 il re d'Inghilterra Enrico VIII Tudor si proclamò «unico capo supremo in terra della Chiesa d'Inghilterra», sancendo lo scisma anglicano?",
+   "options": [
+    "Atto di Supremazia",
+    "Atto di Tolleranza",
+    "Atto di Uniformità",
+    "Atto di Unione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ms5lw7",
+   "categoryId": "moderna",
+   "type": "multiple",
+   "text": "Quale Stato italiano fu il primo al mondo ad abolire formalmente la pena di morte e la tortura il 30 novembre 1786 con il «Codice leopoldino»?",
+   "options": [
+    "Il Granducato di Toscana",
+    "Il Regno di Sardegna",
+    "La Repubblica di Venezia",
+    "Il Regno di Napoli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-i0midy",
+   "categoryId": "moderna",
+   "type": "truefalse",
+   "text": "Il Concilio di Trento (1545-1563), convocato da papa Paolo III, definì la risposta dottrinale e disciplinare della Chiesa cattolica alla Riforma protestante.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1fd9v7b",
+   "categoryId": "moderna",
+   "type": "truefalse",
+   "text": "La «Notte di San Bartolomeo» (23-24 agosto 1572) fu il massacro di migliaia di ugonotti a Parigi in occasione delle nozze tra Enrico di Borbone e Margherita di Valois.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-vrjovf",
+   "categoryId": "moderna",
+   "type": "truefalse",
+   "text": "La spedizione di Ferdinando Magellano (1519-1522), che compì la prima circumnavigazione del globo, fu finanziata dalla corona inglese di Enrico VIII Tudor.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-q6zjo",
+   "categoryId": "moderna",
+   "type": "truefalse",
+   "text": "Con il Trattato di Campoformio del 17 ottobre 1797, Napoleone Bonaparte cedette all'Austria il territorio della ex Repubblica di Venezia, già caduta nel maggio dello stesso anno.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1yxhryn",
+   "categoryId": "moderna",
+   "type": "numeric",
+   "text": "Quante tesi in lingua latina contro il commercio delle indulgenze rese pubbliche Martin Lutero a Wittenberg il 31 ottobre 1517?",
+   "answer": 95,
+   "unit": "tesi",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1f5a609",
+   "categoryId": "moderna",
+   "type": "numeric",
+   "text": "Quante erano le colonie britanniche del Nord America che il 4 luglio 1776 proclamarono l'indipendenza dando vita agli Stati Uniti?",
+   "answer": 13,
+   "unit": "colonie",
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1g9bknc",
+   "categoryId": "moderna",
+   "type": "numeric",
+   "text": "In che anno si concluse la Guerra dei Trent'anni con la firma della Pace di Vestfalia?",
+   "answer": 1648,
+   "unit": "anno",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-if9izz",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Chi fu il primo re d'Italia, proclamato nel 1861?",
+   "options": [
+    "Vittorio Emanuele II",
+    "Umberto I",
+    "Carlo Alberto",
+    "Vittorio Emanuele III"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ocoqql",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale città fu la prima capitale del Regno d'Italia, dal 1861 al 1865?",
+   "options": [
+    "Torino",
+    "Firenze",
+    "Milano",
+    "Napoli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ddfivw",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Da quale porta di Roma entrarono i bersaglieri il 20 settembre 1870, ponendo fine al potere temporale del papa?",
+   "options": [
+    "Porta Pia",
+    "Porta Portese",
+    "Porta Maggiore",
+    "Porta San Paolo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1k13bvg",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale patriota genovese fondò nel 1831 l'associazione politica «Giovine Italia»?",
+   "options": [
+    "Giuseppe Mazzini",
+    "Giuseppe Garibaldi",
+    "Camillo Benso di Cavour",
+    "Carlo Cattaneo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1d1i376",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale statista piemontese fu il primo Presidente del Consiglio del Regno d'Italia?",
+   "options": [
+    "Camillo Benso, conte di Cavour",
+    "Massimo d'Azeglio",
+    "Francesco Crispi",
+    "Giovanni Giolitti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-u98nhy",
+   "categoryId": "italia",
+   "type": "truefalse",
+   "text": "Camillo Benso, conte di Cavour, morì nel 1861, pochi mesi dopo la proclamazione del Regno d'Italia.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-lrhujq",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Con quale evento dell'ottobre 1922 Benito Mussolini ottenne l'incarico di formare il governo?",
+   "options": [
+    "La Marcia su Roma",
+    "La Marcia del sale",
+    "La Lunga marcia",
+    "La Marcia su Milano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1wxgh94",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "In quale data si celebra in Italia la Festa della Liberazione dal nazifascismo?",
+   "options": [
+    "25 aprile",
+    "2 giugno",
+    "1° maggio",
+    "4 novembre"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1nwr6ie",
+   "categoryId": "italia",
+   "type": "truefalse",
+   "text": "Il 2 giugno in Italia si celebra la Festa della Repubblica.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-gptm16",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Come venivano chiamati i volontari di Garibaldi per il colore della loro camicia?",
+   "options": [
+    "Camicie rosse",
+    "Camicie nere",
+    "Camicie verdi",
+    "Camicie azzurre"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1nussdp",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Su quale fiume l'esercito italiano fermò l'avanzata austro-tedesca dopo la disfatta di Caporetto del 1917?",
+   "options": [
+    "Piave",
+    "Isonzo",
+    "Tagliamento",
+    "Adige"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zwqnfm",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale presidente della Democrazia Cristiana fu rapito in via Fani dalle Brigate Rosse e poi ucciso?",
+   "options": [
+    "Aldo Moro",
+    "Alcide De Gasperi",
+    "Giulio Andreotti",
+    "Amintore Fanfani"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1r7sx0t",
+   "categoryId": "italia",
+   "type": "numeric",
+   "text": "In che anno avvennero il rapimento e l'uccisione di Aldo Moro da parte delle Brigate Rosse?",
+   "answer": 1978,
+   "unit": "anno",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1i0ok2n",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale magistrato antimafia fu ucciso nella strage di Capaci del 23 maggio 1992?",
+   "options": [
+    "Giovanni Falcone",
+    "Paolo Borsellino",
+    "Rocco Chinnici",
+    "Antonino Caponnetto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1g67hs5",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale presidente della Repubblica, ex partigiano, esultò in tribuna al Bernabéu per la vittoria dell'Italia ai Mondiali del 1982?",
+   "options": [
+    "Sandro Pertini",
+    "Giovanni Leone",
+    "Francesco Cossiga",
+    "Oscar Luigi Scalfaro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ytffyr",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale repubblica marinara aveva come simbolo il leone di San Marco?",
+   "options": [
+    "Venezia",
+    "Genova",
+    "Pisa",
+    "Amalfi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-194ywqc",
+   "categoryId": "italia",
+   "type": "numeric",
+   "text": "Quante sono, secondo la tradizione, le repubbliche marinare italiane i cui stemmi compaiono sulla bandiera della Marina Militare?",
+   "answer": 4,
+   "unit": "repubbliche",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1f94ipw",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Chi era il re d'Italia durante tutto il ventennio fascista?",
+   "options": [
+    "Vittorio Emanuele III",
+    "Umberto II",
+    "Umberto I",
+    "Vittorio Emanuele II"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1hkn42d",
+   "categoryId": "italia",
+   "type": "truefalse",
+   "text": "Le leggi razziali contro gli ebrei furono introdotte in Italia dal regime fascista nel 1938.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-1hqzdlf",
+   "categoryId": "italia",
+   "type": "truefalse",
+   "text": "Il 2 giugno 1946 le donne italiane votarono per la prima volta in una consultazione nazionale.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1vitdw4",
+   "categoryId": "italia",
+   "type": "numeric",
+   "text": "In che anno l'Italia entrò nella Seconda guerra mondiale a fianco della Germania?",
+   "answer": 1940,
+   "unit": "anno",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1xg6jt0",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale statista trentino della Democrazia Cristiana guidò otto governi consecutivi tra il 1945 e il 1953?",
+   "options": [
+    "Alcide De Gasperi",
+    "Aldo Moro",
+    "Amintore Fanfani",
+    "Luigi Einaudi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-5hfblk",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "In quale periodo si colloca il cosiddetto «boom economico» (o miracolo economico) italiano?",
+   "options": [
+    "Tra la fine degli anni Cinquanta e gli anni Sessanta",
+    "Negli anni Venti",
+    "Negli anni Trenta",
+    "Negli anni Ottanta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tvb03f",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale fiume esondò provocando la grande alluvione di Firenze del 4 novembre 1966?",
+   "options": [
+    "Arno",
+    "Tevere",
+    "Serchio",
+    "Po"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ina735",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale moneta circolava in Italia prima dell'introduzione dell'euro?",
+   "options": [
+    "La lira",
+    "Lo scudo",
+    "Il fiorino",
+    "Il marco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
   }
  ]
 }

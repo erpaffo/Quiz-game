@@ -8,7 +8,7 @@ import { describe, it } from 'node:test';
 import { BANK, build, checkFile, existingKeys, promote, readJsonl, taxonomy, useBankDir } from '../scripts/banca';
 import { validatePack } from '../shared/packs';
 import { toBank } from '../scripts/import/opentdb';
-import { mark, parseCsv, readDb, refresh } from '../scripts/banca-db';
+import { mark, parseCsv, problems, readDb, refresh } from '../scripts/banca-db';
 import { dupKey, stableId, toGameDifficulty, validateItem, type BankItem } from '../shared/question-bank';
 
 const tax = taxonomy();
@@ -158,6 +158,28 @@ describe('Database di verifica (DATABASE.csv)', () => {
     assert.equal(rows[0].risposta_giusta, 'A; "uno"', 'punto e virgola e virgolette sopravvivono al CSV');
     refresh([quiz('Domanda corretta?')], file);
     assert.equal(readDb(file)[0].verificata, 'FALSO', 'testo cambiato: da verificare di nuovo');
+  });
+
+  it('segna falso ricorda chi e quando; una nuova verifica lo sovrascrive', () => {
+    const file = join(mkdtempSync(join(tmpdir(), 'bancadb-')), 'db.csv');
+    refresh([quiz('Domanda?')], file);
+    assert.deepEqual([readDb(file)[0].verificata_da, readDb(file)[0].data_verifica], ['', ''], 'mai controllata: nessun nome');
+    mark(['multiple-t1'], false, 'gemini+web', 'doppione', file);
+    const r = readDb(file)[0];
+    assert.deepEqual([r.verificata, r.verificata_da, r.note], ['FALSO', 'gemini+web', 'doppione']);
+    assert.match(r.data_verifica, /^\d{4}-\d{2}-\d{2}$/);
+    mark(['multiple-t1'], true, 'claude', '', file);
+    assert.deepEqual([readDb(file)[0].verificata, readDb(file)[0].verificata_da], ['VERO', 'claude']);
+  });
+
+  it('verifica (CI): segnala righe non verificate, testi cambiati e righe in più', () => {
+    const file = join(mkdtempSync(join(tmpdir(), 'bancadb-')), 'db.csv');
+    refresh([quiz('Domanda?')], file);
+    assert.match(problems([quiz('Domanda?')], file).join(), /non verificata/);
+    mark(['multiple-t1'], true, 'claude', '', file);
+    assert.deepEqual(problems([quiz('Domanda?')], file), []);
+    assert.match(problems([quiz('Domanda cambiata?')], file).join(), /testo cambiato/);
+    assert.match(problems([], file).join(), /non più nella banca/);
   });
 
   it('parseCsv legge celle con virgolette e a capo', () => {

@@ -4,7 +4,7 @@ import { getShowMeta, type ShowId, type ShowMeta } from '../../shared/shows';
 import { type SmistPrivate, type SmistPublic, type SmistSide } from '../../shared/smistatori';
 import type { PlayerPublic, RoomSnapshot } from '../../shared/types';
 import { esc } from '../common/net';
-import { playerColor, playerName, renderShowFinalController, type ControllerShowContext } from './controller-shows';
+import { playerColor, playerName, playerShapeCss, renderShowFinalController, type ControllerShowContext } from './controller-shows';
 
 let draftDrawingPrompt = '';
 let draftFrames: Drawing = [[], []];
@@ -378,7 +378,7 @@ function renderColpevoleController(snap: RoomSnapshot, p: PlayerPublic, meta: Sh
             const alibi = st.alibis.find((a) => a.playerId === o.id)?.text;
             const picked = priv.myVote === o.id;
             const matches = st.suspects.includes(o.id);
-            return `<button class="target-btn ${picked ? 'on' : ''}" data-accuse="${o.id}" style="--pc:${playerColor(snap, o.id)}"><b>${picked ? '✓ ' : ''}${esc(o.name)} ${matches ? '⚠️' : ''}</b><small>«${esc(alibi ?? 'Nessun alibi')}»</small></button>`;
+            return `<button class="target-btn ${picked ? 'on' : ''}" data-accuse="${o.id}" style="--pc:${playerColor(snap, o.id)};${playerShapeCss(snap, o.id)}"><b>${picked ? '✓ ' : ''}${esc(o.name)} ${matches ? '⚠️' : ''}</b><small>«${esc(alibi ?? 'Nessun alibi')}»</small></button>`;
           }).join('')}
         </div>
       </div>`;

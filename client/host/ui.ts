@@ -301,7 +301,7 @@ export class HostUI {
       case 'PYRAMID_INTRO':
         return `
           <div class="mg-intro pop">
-            <div class="mg-badge gold">FINALE</div>
+            <div class="mg-badge gold">Finale</div>
             <div class="phase-title">La Scalata della Piramide della Conoscenza</div>
             <div class="rules">
               <div>📈 Si parte più in alto se si hanno più punti</div>
@@ -317,7 +317,7 @@ export class HostUI {
         const winner = s.players.find((p) => p.id === d.winnerId);
         return `
           <div class="gameover pop">
-            <div class="mg-badge gold">VINCITORE</div>
+            <div class="mg-badge gold">Vincitore</div>
             <div class="winner">🏆 ${esc(winner?.name ?? '')}</div>
             <div class="podium">${d.podium.slice(0, 6).map((id, i) => {
               const p = s.players.find((x) => x.id === id);
@@ -336,7 +336,7 @@ export class HostUI {
     if (e.result === 'self') return `<b>${this.name(e.from)}</b> attiva <span class="attack-icon">${c.icon}</span> ${c.label}`;
     const reflected = e.path.length > 2 && last === e.from;
     const outcome =
-      e.result === 'hit' ? (reflected ? '🪞 rimbalzato indietro!' : e.path.length > 2 ? '👻 deviato!' : 'colpito!') :
+      e.result === 'hit' ? (reflected ? '🔄 rimbalzato indietro!' : e.path.length > 2 ? '👻 deviato!' : 'colpito!') :
       e.result === 'blocked' ? `${CARDS[e.defense!].icon} bloccato!` :
       e.result === 'absorbed' ? `🧪 neutralizzato! +${CONFIG.ANTIDOTE_POINTS}` :
       e.result === 'crowded' ? '🛑 troppi attacchi, rimbalza!' :
@@ -372,7 +372,7 @@ export class HostUI {
   private options(q: QuestionPublic, reveal?: { correctIndex: number; voters: (i: number) => string }) {
     const imgs = q.optionImages;
     return `<div class="opts ${q.options.length === 2 ? 'two' : ''} ${imgs ? 'img' : ''}">${q.options.map((o, i) => `
-      <div class="opt ${reveal ? (i === reveal.correctIndex ? 'correct' : 'wrong') : ''}" style="--oc:${OPTION_COLORS[i]}">
+      <div class="opt opt-${i} ${reveal ? (i === reveal.correctIndex ? 'correct' : 'wrong') : ''}" style="--oc:${OPTION_COLORS[i]}">
         <b>${reveal && i === reveal.correctIndex ? '✓' : OPTION_LETTERS[i]}</b>
         ${imgs ? `<img class="opt-img" src="${esc(imgs[i])}" alt="">` : ''}
         <span class="${imgs && !reveal ? 'sr-only' : ''}">${esc(o)}</span>
@@ -477,7 +477,7 @@ export class HostUI {
       case 'sabotage':
         return `
           <div class="mg-intro pop">
-            <div class="mg-badge sabotage">SABOTAGGIO</div>
+            <div class="mg-badge sabotage">Sabotaggio</div>
             <div class="phase-title">Gli ultimi in classifica scelgono chi colpire!</div>
             <div class="attacks">${st.saboteurs.map((s) => `
               <div class="attack">🔻 <b>${this.name(s.playerId)}</b> · ${s.left} ${s.left === 1 ? 'attacco' : 'attacchi'}</div>`).join('')}

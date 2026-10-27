@@ -5,6 +5,7 @@ import { cleanText, payloadOf } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
 import { pick, shuffle } from '../../util';
+import { BOT_DOODLES } from './doodles';
 
 export const CREATIVE_PROMPTS: readonly string[] = [
   'Un gatto che fa yoga',
@@ -65,7 +66,19 @@ export class CreativeShow extends BaseShow<CreativePublic, CreativePrivate> {
     this.round++;
     this.prompts.clear();
     this.drawings.clear();
-    for (const p of this.ctx.players()) this.prompts.set(p.id, this.deck[this.dealt++ % this.deck.length]);
+    // I bot ricevono i temi per cui hanno uno scarabocchio pronto; gli umani gli altri (niente temi doppi nello stesso giro).
+    const botThemes = shuffle(Object.keys(BOT_DOODLES));
+    for (const b of this.ctx.players().filter((p) => p.isBot)) {
+      const theme = botThemes.pop();
+      if (theme) this.prompts.set(b.id, theme);
+    }
+    const taken = new Set(this.prompts.values());
+    for (const p of this.ctx.players().filter((x) => !x.isBot)) {
+      let theme = this.deck[this.dealt++ % this.deck.length];
+      for (let i = 0; taken.has(theme) && i < this.deck.length; i++) theme = this.deck[this.dealt++ % this.deck.length];
+      this.prompts.set(p.id, theme);
+      taken.add(theme);
+    }
     this.go('draw', CREATIVE.DRAW_MS, () => {
       this.queue = shuffle([...this.drawings.keys()].filter((id) => this.ctx.get(id)));
       this.index = 0;
@@ -145,8 +158,8 @@ export class CreativeShow extends BaseShow<CreativePublic, CreativePrivate> {
   hasActed(p: Player): boolean {
     switch (this.step) {
       case 'draw':
-        // I bot non disegnano: per loro il passo è già fatto.
-        return p.isBot || this.drawings.has(p.id);
+        // Un bot senza scarabocchio pronto (più bot che disegni) salta il passo.
+        return (p.isBot && !this.prompts.has(p.id)) || this.drawings.has(p.id);
       case 'title':
         return p.id === this.artist || this.titles.has(p.id);
       case 'choose':
@@ -157,6 +170,11 @@ export class CreativeShow extends BaseShow<CreativePublic, CreativePrivate> {
   }
 
   bot(b: Player): void {
+    if (this.step === 'draw') {
+      const doodle = BOT_DOODLES[this.prompts.get(b.id) ?? ''];
+      if (doodle) this.botAct(b, 8_000, 30_000, () => ({ type: 'draw', frames: doodle }));
+      return;
+    }
     if (b.id === this.artist) return;
     if (this.step === 'title') {
       const truth = this.prompts.get(this.artist)!;

@@ -1,0 +1,102 @@
+name: Controlli (CI)
+
+# A ogni push e pull request: controllo dei tipi, test, build e controllo della banca domande.
+# Se uno di questi passi fallisce, la modifica ha rotto qualcosa: si vede con la ❌ rossa su GitHub.
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Un nuovo push sullo stesso ramo annulla il controllo vecchio ancora in corso.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dipendenze
+        run: npm ci
+
+      - name: Controllo dei tipi
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Build (gioco + app tascabile)
+        run: npm run build
+
+      - name: Banca domande (lotti in inbox e registro di verifica)
+        run: |
+          npm run banca -- controlla
+          npm run banca-db -- verifica
+
+      - name: I pacchetti generati sono aggiornati
+        # «costruisci» rigenera i pacchetti dalla banca: se cambia qualcosa, qualcuno ha dimenticato di lanciarlo prima del commit.
+        run: |
+          npm run banca -- costruisci
+          git diff --exit-code -- server/data/packs client/pass/data/generated
+
+  # Prove «dal vivo» in un browser vero (Playwright): app tascabile (8 giochi, Chromium + WebKit, anche offline)
+  # e menù del Pack su TV + telefono. Sono più lente e a volte capricciose: non bloccano la ✅ del controllo principale,
+  # ma se falliscono lo si vede nel riepilogo e gli screenshot restano scaricabili per 7 giorni.
+  prove-browser:
+    needs: verifica
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Dipendenze
+        run: |
+          npm ci
+          pip install playwright==1.61.0
+          python -m playwright install --with-deps chromium webkit
+
+      - name: Build
+        run: npm run build
+
+      - name: App tascabile (Chromium + WebKit)
+        run: python scripts/browser-checks/pass_check.py shots/pass chromium,webkit
+
+      - name: Menù del Pack (TV + telefono)
+        run: |
+          mkdir -p shots/menu
+          PORT=3099 npx tsx server/index.ts --prod > server.log 2>&1 &
+          npx --yes wait-on@8.0.1 -t 60000 http://localhost:3099/host.html
+          python scripts/browser-checks/menu_check.py shots/menu | tee menu.log
+          grep -q 'PROBLEMI: nessuno' menu.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshot-prove-browser
+          path: |
+            shots/
+            server.log
+          retention-days: 7
+          if-no-files-found: ignore

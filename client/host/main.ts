@@ -112,7 +112,7 @@ async function loadJoinUrls(code: string) {
 
 async function drawQr() {
   const url = join.urls[join.index];
-  const qr = await QRCode.toDataURL(url, { margin: 1, width: 360, color: { dark: '#14063a', light: '#ffffff' } });
+  const qr = await QRCode.toDataURL(url, { margin: 1, width: 360, color: { dark: '#06121a', light: '#ffffff' } });
   ui.setJoin(join.urls, join.index, qr);
 }
 

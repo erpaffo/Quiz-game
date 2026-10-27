@@ -1,13 +1,25 @@
 {
  "id": "banca-lingua",
  "name": "📚 Lingua & Parole",
- "description": "Banca domande · 24 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 67 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
   {
    "id": "etimologia",
    "name": "Etimologia",
+   "icon": "📖",
+   "color": "#f77f00"
+  },
+  {
+   "id": "parole-difficili",
+   "name": "Parole difficili",
+   "icon": "📖",
+   "color": "#f77f00"
+  },
+  {
+   "id": "modi-di-dire",
+   "name": "Modi di dire e proverbi",
    "icon": "📖",
    "color": "#f77f00"
   }
@@ -309,6 +321,555 @@
    "answer": 1880,
    "unit": "anno",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-id0ukg",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "A quale sovrano medievale che nel 1077 si umiliò nella neve davanti a papa Gregorio VII risale l'espressione «andare a Canossa»?",
+   "options": [
+    "Enrico IV di Franconia",
+    "Federico I Barbarossa",
+    "Ottone I di Sassonia",
+    "Federico II di Svevia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gfdmy",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Secondo la spiegazione più accreditata, da quale consuetudine legata alle aste pubbliche deriva il modo di dire «essere al verde» (trovarsi senza denaro)?",
+   "options": [
+    "Dalla base tinta di verde delle candele usate nelle aste pubbliche",
+    "Dal panno verde dei tavoli da gioco veneziani a fine serata",
+    "Dalle borse di cuoio verde date ai debitori insolventi a Firenze",
+    "Dal colore della fodera interna delle tasche dei mercanti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1w2oxgn",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Secondo il racconto di Cicerone, quale tiranno di Siracusa fece appendere una spada a un crine di cavallo sopra il capo del cortigiano Damocle?",
+   "options": [
+    "Dionisio il Vecchio (Dionigi I)",
+    "Gerone II",
+    "Agatocle",
+    "Gelone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-pf1fj4",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "In quale battaglia del 279 a.C. il re dell'Epiro Pirro subì perdite così gravi contro i Romani da far nascere l'espressione «vittoria di Pirro»?",
+   "options": [
+    "Battaglia di Ascoli Satriano",
+    "Battaglia di Benevento",
+    "Battaglia di Eraclea",
+    "Battaglia di Canne"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-tjk33o",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "In quale opera il poeta latino Orazio coniò l'espressione «in medias res», per indicare il racconto che entra subito nel vivo dei fatti?",
+   "options": [
+    "Ars poetica (Epistola ai Pisoni)",
+    "Carmina (Odi)",
+    "Sermones (Satire)",
+    "Epodi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ptlr6r",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Quale condottiero romano pronunciò nel 49 a.C. la frase «Il dado è tratto» («Alea iacta est»), dando origine al modo di dire «passare il Rubicone»?",
+   "options": [
+    "Giulio Cesare",
+    "Gneo Pompeo Magno",
+    "Marco Antonio",
+    "Lucio Cornelio Silla"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-r156wf",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Nel teatro greco antico, a quale congegno scenico faceva riferimento la locuzione «deus ex machina» («dio dalla macchina»)?",
+   "options": [
+    "A una gru (mechané) che calava dall'alto l'attore nei panni di un dio",
+    "A un carro sotterraneo che faceva emergere gli spiriti dall'Ade",
+    "A una maschera dotata di megafono metallico per la voce dell'oracolo",
+    "A un prisma girevole dipinto su tre lati che mutava la scena"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ej92xu",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "A quale episodio biblico dell'Antico Testamento risale l'espressione «vendere per un piatto di lenticchie» (cedere qualcosa di gran valore per poco)?",
+   "options": [
+    "Esaù che cede la primogenitura al fratello gemello Giacobbe",
+    "Giuseppe venduto dai fratelli ai mercanti ismaeliti",
+    "Sansone tradito da Dalila in cambio di sicli d'argento",
+    "Salomone che mette alla prova le due madri davanti al trono"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1c6udjz",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Da quale sport deriva il modo di dire «gettare la spugna» (arrendersi, dichiararsi sconfitto)?",
+   "options": [
+    "Dal pugilato (il lancio della spugna sul ring in segno di resa)",
+    "Dalla scherma medievale (la spugna d'aceto gettata dallo scudiero)",
+    "Dalla pallacorda rinascimentale (per interrompere la battuta)",
+    "Dalle corse dei carri nel circo romano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-115c20g",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Da quale personaggio de «I promessi sposi» di Alessandro Manzoni è nato il nome comune «perpetua» per indicare la governante di un parroco?",
+   "options": [
+    "Perpetua, la domestica di don Abbondio",
+    "Agnese, la madre di Lucia Mondella",
+    "Gertrude, la monaca di Monza",
+    "Prassede, la nobildonna milanese"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1rr5m04",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Quale grande pittore greco del IV secolo a.C. rispose a un calzolaio troppo saccente «Ne sutor ultra crepidam» («Ciabattino, non andare oltre la scarpa»)?",
+   "options": [
+    "Apelle",
+    "Zeusi",
+    "Parrasio",
+    "Polignoto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-xajfot",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Che cosa significa il modo di dire «fare carte false», usato per indicare chi ricorre a ogni mezzo pur di raggiungere uno scopo?",
+   "options": [
+    "Adoperarsi in ogni modo possibile, anche con espedienti estremi",
+    "Barare sistematicamente durante una partita d'azzardo",
+    "Stampare banconote contraffatte in una zecca clandestina",
+    "Disegnare mappe geografiche errate per depistare i nemici"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-2iua0j",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Da quale tragedia di William Shakespeare deriva la frase «Essere o non essere, questo è il dilemma» («To be, or not to be»)?",
+   "options": [
+    "Amleto",
+    "Macbeth",
+    "Otello",
+    "Re Lear"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-2h2f5n",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Quale imperatore romano rispose al figlio Tito che il denaro non ha odore da qualunque tassa provenga, dando origine al detto «Pecunia non olet»?",
+   "options": [
+    "Vespasiano",
+    "Nerone",
+    "Claudio",
+    "Domiziano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2vw4t0",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Nel modo di dire «salvare capra e cavoli» (conciliare due esigenze opposte senza danno), a quale famoso enigma logico medievale si fa riferimento?",
+   "options": [
+    "Al problema del traghettatore con un lupo, una capra e un cavolo",
+    "Alla favola di Fedro sulla divisione tra il leone e la capra",
+    "All'editto rurale di Rotari sul pascolo negli orti recintati",
+    "Alla parabola evangelica del buon pastore e del seminatore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-65iqbe",
+   "categoryId": "modi-di-dire",
+   "type": "multiple",
+   "text": "Quale condottiero cartaginese si fermò a svernare in Campania dopo la battaglia di Canne (216 a.C.), facendo nascere l'espressione «gli ozi di Capua»?",
+   "options": [
+    "Annibale Barca",
+    "Amilcare Barca",
+    "Asdrubale",
+    "Magone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-prntpf",
+   "categoryId": "modi-di-dire",
+   "type": "truefalse",
+   "text": "Il modo di dire «tagliare il nodo gordiano» (risolvere in modo drastico un problema intricato) si riferisce all'impresa compiuta da Alessandro Magno a Gordio, in Frigia.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-8ispqx",
+   "categoryId": "modi-di-dire",
+   "type": "truefalse",
+   "text": "L'espressione «lacrime di coccodrillo» (finto pentimento) nasce dall'antica credenza secondo cui il coccodrillo piangerebbe dopo aver divorato la propria preda.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-pl174i",
+   "categoryId": "modi-di-dire",
+   "type": "truefalse",
+   "text": "La locuzione «canto del cigno» indica il debutto giovanile di un artista esordiente all'inizio della propria carriera.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-jpjffm",
+   "categoryId": "modi-di-dire",
+   "type": "truefalse",
+   "text": "L'espressione «fare il bastian contrario» deriva dal personaggio risorgimentale piemontese del conte Sebastiano Contrario, celebre per votare sempre contro al Parlamento Subalpino.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1y7n4w8",
+   "categoryId": "modi-di-dire",
+   "type": "numeric",
+   "text": "Nel comune modo di dire italiano che indica l'impiegare ogni propria energia per riuscire in qualcosa, quante «camicie» si dice proverbialmente di sudare?",
+   "answer": 7,
+   "unit": "camicie",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-gwxx0z",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Nel linguaggio filosofico e colto, che cosa significa l'aggettivo «apodittico» (dal greco «apodeiktikós»)?",
+   "options": [
+    "Evidente di per sé, dimostrativo e inconfutabile",
+    "Incerto, ipotetico e aperto a più interpretazioni",
+    "Nascosto, oscuro e riservato a pochi iniziati",
+    "Contraddittorio e privo di fondamento logico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ifq6i9",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Che cosa indica l'aggettivo «pleonastico» riferito a una parola o a un'espressione del discorso?",
+   "options": [
+    "Sovrabbondante, superfluo rispetto al senso già espresso",
+    "Estremamente conciso e ridotto all'essenziale",
+    "Elogiativo e pronunciato in occasione solenne",
+    "Tagliente, sarcastico e offensivo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1q12hut",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Nel linguaggio comune, che cosa indica il sostantivo «idiosincrasia» nei confronti di qualcosa o di qualcuno?",
+   "options": [
+    "Una forte avversione o insofferenza istintiva",
+    "Una profonda ammirazione e devozione incondizionata",
+    "Una somiglianza perfetta di carattere e abitudini",
+    "Una totale indifferenza emotiva"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1e9rd2m",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale figura retorica consiste nel sostituire una parola con un'altra legata da un rapporto di quantità (es. la parte per il tutto, come «le vele» per «le navi»)?",
+   "options": [
+    "Sineddoche",
+    "Litote",
+    "Iperbole",
+    "Allitterazione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1xopihv",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale figura retorica consiste nell'associare in un'unica immagine due parole appartenenti a sfere sensoriali diverse (es. «urlo nero» o «voce calda»)?",
+   "options": [
+    "Sinestesia",
+    "Ossimoro",
+    "Anastrofe",
+    "Climax"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-uct0w4",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale figura retorica dispone a incrocio («a X», secondo lo schema AB-BA) gli elementi corrispondenti di due sintagmi, come in «Le donne, i cavalier, l'arme, gli amori»?",
+   "options": [
+    "Chiasmo",
+    "Polisindeto",
+    "Enjambement",
+    "Zeugma"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-jitojt",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale figura retorica consiste nell'affermare un concetto negando il suo contrario (come nel manzoniano «Don Abbondio non era nato con un cuor di leone»)?",
+   "options": [
+    "Litote",
+    "Reticenza",
+    "Iperbato",
+    "Eufemismo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-zu7m3q",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale figura retorica consiste nel dichiarare di voler tacere o sorvolare su un argomento che in realtà si viene intanto ad enunciare («Non starò qui a ricordare che…»)?",
+   "options": [
+    "Preterizione",
+    "Apostrofe",
+    "Prosopopea",
+    "Ipallage"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xn20ch",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale figura retorica usa il nome proprio di un personaggio celebre per indicare una qualità comune (es. «essere un Mecenate» o «un Cicerone»)?",
+   "options": [
+    "Antonomasia",
+    "Perifrasi",
+    "Allegoria",
+    "Paronomasia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-oqji4k",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "In filosofia e nel lessico colto, che cosa significa «solipsismo» (dal latino «solus ipse», «solo io stesso»)?",
+   "options": [
+    "La dottrina o l'atteggiamento che ammette come unica realtà certa il proprio io",
+    "La tendenza a sacrificare il proprio bene per la comunità",
+    "Lo studio comparato delle antiche lingue indoeuropee",
+    "L'abitudine di parlare ad alta voce nel sonno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ohnb59",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Che cosa significa l'aggettivo «atavico» (dal latino «atavus»), come nell'espressione «un istinto atavico»?",
+   "options": [
+    "Ereditato da remoti antenati, radicato da generazioni",
+    "Nato improvvisamente nell'età contemporanea",
+    "Privo di qualsiasi spiegazione scientifica",
+    "Legato esclusivamente all'ambiente marino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-rwvjgb",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Che cosa significa in senso figurato un commento o uno stile «lapidario»?",
+   "options": [
+    "Estremamente conciso, incisivo e definitivo, come inciso su pietra",
+    "Lungo, tortuoso e pieno di digressioni",
+    "Incerto, timido e pieno di condizionali",
+    "Volgare e tipico del linguaggio di strada"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-abpdqa",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Da quale antico legislatore ateniese del VII secolo a.C. deriva l'aggettivo «draconiano» per indicare una legge o una punizione di severità spietata?",
+   "options": [
+    "Dracone",
+    "Solone",
+    "Clistene",
+    "Licurgo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-nsgpdy",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Come si chiama in grammatica il costrutto in cui il soggetto iniziale resta sospeso senza accordo sintattico col seguito (es. «Quelli che muoiono, bisogna pregare Iddio per loro»)?",
+   "options": [
+    "Anacoluto",
+    "Asindeto",
+    "Omoteleuto",
+    "Poliptoto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ye4eka",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "In logica e linguistica, come si chiama una proposizione vera per definizione in cui il predicato ripete inutilmente ciò che è già contenuto nel soggetto?",
+   "options": [
+    "Tautologia",
+    "Antinomia",
+    "Sillogismo",
+    "Aforisma"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-dx6xr6",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Che cosa significa nel lessico letterario italiano l'aggettivo «negletto» (dal latino «neglectus»)?",
+   "options": [
+    "Trascurato, dimenticato o tenuto in scarsa cura",
+    "Scelto con estrema raffinatezza ed eleganza",
+    "Proibito dalla censura ecclesiastica",
+    "Ripetuto più volte all'interno di una poesia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-sw9rn1",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Che cosa significa l'aggettivo «ineffabile» (dal latino «ineffabilis», da «fari», parlare), frequentissimo nel «Paradiso» di Dante?",
+   "options": [
+    "Che non si può esprimere a parole, indicibile",
+    "Che non può commettere alcun errore",
+    "Che non può essere cancellato dal tempo",
+    "Che non può essere visto dall'occhio umano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-sq77d0",
+   "categoryId": "parole-difficili",
+   "type": "multiple",
+   "text": "Quale espressione filosofica indica il fenomeno per cui le azioni umane producono conseguenze involontarie del tutto diverse dagli scopi originariamente perseguiti?",
+   "options": [
+    "Eterogenesi dei fini",
+    "Rasoio di Occam",
+    "Imperativo categorico",
+    "Tabula rasa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-vhcys0",
+   "categoryId": "parole-difficili",
+   "type": "truefalse",
+   "text": "In linguistica e filologia, un «hapax» (o «hapax legomenon») è una parola che compare attestata una sola volta all'interno di un testo, di un autore o di una lingua.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-7tt3or",
+   "categoryId": "parole-difficili",
+   "type": "truefalse",
+   "text": "Il sostantivo «acronimo» indica un vocabolo formato unendo le lettere o le sillabe iniziali di più parole (come «LASER» o «NATO»).",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-uewr5a",
+   "categoryId": "parole-difficili",
+   "type": "truefalse",
+   "text": "Nell'uso moderno della lingua italiana, l'aggettivo «famigerato» ha un significato elogiativo e indica una persona celebre per le proprie virtù e opere benefiche.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-wkhhi7",
+   "categoryId": "parole-difficili",
+   "type": "truefalse",
+   "text": "Un «pangramma» è una frase di senso compiuto che contiene almeno una volta tutte le lettere dell'alfabeto di una lingua.",
+   "answer": true,
+   "difficulty": 2
   }
  ]
 }

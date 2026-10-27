@@ -1,7 +1,7 @@
 {
  "id": "banca-cibo",
  "name": "📚 Cibo & Cucina",
- "description": "Banca domande · 50 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 73 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -14,6 +14,12 @@
   {
    "id": "mondo",
    "name": "Cucina dal mondo",
+   "icon": "🍝",
+   "color": "#ff9f1c"
+  },
+  {
+   "id": "bevande",
+   "name": "Bevande",
    "icon": "🍝",
    "color": "#ff9f1c"
   }
@@ -640,6 +646,299 @@
    "answer": 0,
    "unit": "SHU",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-152oo1j",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Con quale nobile vitigno autoctono a bacca nera del Piemonte vengono prodotti in purezza (al 100%) i pregiati vini Barolo DOCG e Barbaresco DOCG?",
+   "options": [
+    "Nebbiolo",
+    "Barbera",
+    "Dolcetto",
+    "Freisa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-7cfa62",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Con quale vitigno a bacca nera viene prodotto esclusivamente in purezza il celebre vino toscano «Brunello di Montalcino» DOCG?",
+   "options": [
+    "Sangiovese",
+    "Canaiolo",
+    "Colorino",
+    "Montepulciano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1r94h8t",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "In quale provincia del Veneto si produce l'«Amarone della Valpolicella» DOCG, ottenuto da uve Corvina, Corvinone e Rondinella fatte appassire su graticci?",
+   "options": [
+    "Verona",
+    "Treviso",
+    "Vicenza",
+    "Padova"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1y97v03",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Quale mercante inglese di Liverpool sbarcò in Sicilia nel 1773 e avviò la fortuna commerciale del vino liquoroso «Marsala», fortificandolo per il trasporto via mare?",
+   "options": [
+    "John Woodhouse",
+    "Benjamin Ingham",
+    "Joseph Whitaker",
+    "Thomas Sandeman"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1hnnvqm",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Nella produzione degli spumanti Metodo Classico e Champagne, come si chiama la rotazione graduale delle bottiglie sulle «pupitres» per far scendere i lieviti verso il collo?",
+   "options": [
+    "Remuage",
+    "Dégorgement",
+    "Perlage",
+    "Bâtonnage"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-vi13jt",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "In quale città italiana nacque intorno al 1919 il celebre cocktail «Negroni», preparato per il conte Camillo Negroni dal barman Fosco Scarselli?",
+   "options": [
+    "Firenze",
+    "Torino",
+    "Milano",
+    "Venezia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-99i3ef",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Dalla fermentazione e distillazione del cuore («piña») di quale pianta messicana si ricavano i distillati «Tequila» e «Mezcal»?",
+   "options": [
+    "Agave",
+    "Canna da zucchero",
+    "Manioca",
+    "Cactus saguaro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-wjuzfh",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Da quale materia prima vegetale (sotto forma di succo fresco «vesou» o di melassa) si ottiene per fermentazione e distillazione il «rum»?",
+   "options": [
+    "Canna da zucchero",
+    "Barbabietola da zucchero",
+    "Mais dolce",
+    "Sorgo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1p71pr1",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Dalla distillazione del sidro di quale frutto si ottiene nella regione francese della Normandia la celebre acquavite «Calvados» AOC?",
+   "options": [
+    "Mela (ed eventualmente pera)",
+    "Prugna mirabelle",
+    "Ciliegia marasca",
+    "Albicocca"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-14tu0ix",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Come si chiama il pregiato tè verde giapponese le cui foglie vengono macinate a pietra fino a ottenere una polvere finissima, usata nella cerimonia del tè?",
+   "options": [
+    "Matcha",
+    "Sencha",
+    "Oolong",
+    "Pu-erh"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-zlr7n9",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Con l'olio essenziale estratto dalla scorza di quale agrume, coltivato per eccellenza in Calabria, viene aromatizzata la classica miscela di tè nero «Earl Grey»?",
+   "options": [
+    "Bergamotto",
+    "Cedro",
+    "Chinotto",
+    "Mandarino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1tlrxc2",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Come si chiama la tradizionale cannuccia metallica dotata di filtro all'estremità inferiore con cui in Argentina e Uruguay si sorseggia l'infuso di «yerba mate»?",
+   "options": [
+    "Bombilla",
+    "Calabash",
+    "Guampa",
+    "Cuia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1x5kzmv",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Quale simbolo storico, già emblema della medievale Lega del Chianti, contraddistingue sul collo delle bottiglie il consorzio del vino «Chianti Classico» DOCG?",
+   "options": [
+    "Il Gallo Nero",
+    "Il Leone Alato",
+    "Il Cavallino Rampante",
+    "Il Giglio Rosso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-wtobee",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Dalla distillazione in alambicco di quale bevanda alcolica si ottengono i pregiati distillati francesi «Cognac» e «Armagnac»?",
+   "options": [
+    "Vino bianco",
+    "Sidro di mele",
+    "Birra di malto d'orzo",
+    "Mosto d'uva rossa non fermentato"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1jvw0jk",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Le bacche (galbuli) di quale pianta sono l'ingrediente botanico obbligatorio che conferisce il nome e il caratteristico aroma balsamico al «gin»?",
+   "options": [
+    "Ginepro",
+    "Coriandolo",
+    "Cardamomo",
+    "Angelica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-n9ldx8",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Quale imprenditore e inventore torinese brevettò nel 1884 la prima macchina a vapore per il «caffè istantaneo», considerata l'antenata della macchina per il caffè espresso?",
+   "options": [
+    "Angelo Moriondo",
+    "Alfonso Bialetti",
+    "Francesco Illy",
+    "Achille Gaggia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qjfj9t",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Con quale soprannome poetico era conosciuto nella Parigi bohémienne di fine Ottocento l'«assenzio» («absinthe»), distillato ad alta gradazione dal tipico colore smeraldo?",
+   "options": [
+    "La Fata Verde",
+    "L'Acqua d'Oro",
+    "Il Demone Bianco",
+    "L'Elisir Nero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-hdvf8l",
+   "categoryId": "bevande",
+   "type": "multiple",
+   "text": "Con quale vitigno a bacca bianca si producono i celebri vini spumanti del Veneto e del Friuli-Venezia Giulia a denominazione «Prosecco» DOC e DOCG?",
+   "options": [
+    "Glera",
+    "Garganega",
+    "Ribolla Gialla",
+    "Turbiana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-12jyocv",
+   "categoryId": "bevande",
+   "type": "truefalse",
+   "text": "In Italia e nell'Unione Europea la denominazione «Grappa» è riservata per legge esclusivamente all'acquavite ottenuta dalla distillazione diretta delle vinacce italiane.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-16egh5i",
+   "categoryId": "bevande",
+   "type": "truefalse",
+   "text": "Tra le due specie principali di caffè, i chicchi di «Coffea arabica» contengono in media circa il doppio di caffeina rispetto a quelli di «Coffea canephora» («Robusta»).",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-7msgtx",
+   "categoryId": "bevande",
+   "type": "truefalse",
+   "text": "Secondo la classificazione enologica europea degli spumanti, un vino «Extra Dry» ha un residuo zuccherino inferiore (ed è quindi più secco) rispetto a un vino «Brut».",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1nwx32u",
+   "categoryId": "bevande",
+   "type": "truefalse",
+   "text": "La celebre «caffettiera Moka» ottagonale in alluminio per uso domestico fu ideata da Alfonso Bialetti nel 1933.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-gdbuuv",
+   "categoryId": "bevande",
+   "type": "numeric",
+   "text": "Qual è la gradazione alcolica minima (in percentuale di volume, % vol) stabilita dal regolamento europeo affinché un distillato possa essere chiamato «Whisky»?",
+   "answer": 40,
+   "unit": "% vol",
+   "difficulty": 2
   }
  ]
 }

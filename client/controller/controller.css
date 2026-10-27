@@ -15,7 +15,7 @@ body.controller {
   font-size: 1.05rem;
 }
 .c-head:empty { display: none; }
-.dot { width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); }
+.dot { font-size: 1.35rem; line-height: 1; text-shadow: 0 0 2px var(--ink-deep), 0 0 6px rgba(0, 0, 0, 0.5); }
 .c-score { margin-left: auto; color: var(--gold); font-weight: 800; }
 .c-timer { height: 5px; background: rgba(255, 255, 255, 0.08); }
 #c-timer-bar { height: 100%; background: var(--cyan); transform-origin: left; transform: scaleX(0); transition: transform 0.1s linear; }
@@ -31,7 +31,7 @@ body.controller {
 .rank-big { font-size: 5rem; font-weight: 800; color: var(--gold); line-height: 1; text-shadow: 0 5px 0 #06121a; }
 .points { font-size: 2.6rem; font-weight: 800; color: var(--gold); }
 .prompt { color: var(--gold); font-weight: 800; font-size: 1.2rem; }
-.mg-badge { padding: 2px 14px; border-radius: 999px; background: var(--cyan); color: #06121a; font-weight: 800; letter-spacing: 3px; font-size: 0.9rem; }
+.mg-badge { padding: 2px 14px; border-radius: 999px; background: var(--cyan); color: var(--ink-deep); font-weight: 800; font-size: 0.9rem; }
 .mg-badge.gold { background: var(--gold); }
 .btn.big { width: 100%; padding: 16px; font-size: 1.25rem; flex-direction: column; gap: 0; }
 .btn.big small { font-size: 0.8rem; font-weight: 600; opacity: 0.8; }
@@ -78,14 +78,16 @@ body.controller {
 /* poteri */
 .power-list, .target-list { display: flex; flex-direction: column; gap: 12px; }
 .power-btn { display: flex; gap: 14px; align-items: center; padding: 14px; border-radius: 18px; background: rgba(8, 20, 28, 0.6); border: 3px solid var(--pw); text-align: left; }
-.power-btn .pi, .incoming .pi { font-size: 2.6rem; }
+.power-btn .pi { font-size: 2.6rem; }
 .power-btn b { display: block; font-size: 1.3rem; color: var(--pw); }
 .power-btn small, .target-btn small { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.2; display: block; }
-.target-btn { padding: 14px 18px; border-radius: 18px; background: var(--card); border-left: 8px solid var(--pc); text-align: left; font-size: 1.25rem; }
+.target-btn { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; padding: 14px 18px; border-radius: 18px; background: var(--card); text-align: left; font-size: 1.25rem; }
+/* colore e forma del giocatore accanto al nome (niente bordi colorati sulle schede; la forma aiuta chi non distingue i colori) */
+.target-btn::before { content: var(--ps, '●'); grid-row: span 2; color: var(--pc); font-size: 1.5rem; line-height: 1; text-shadow: 0 0 2px var(--ink-deep); }
+.target-btn.on { background: var(--card-strong); box-shadow: inset 0 0 0 3px var(--gold); }
 .alert { font-size: 1.6rem; font-weight: 800; color: var(--pink); animation: shake 0.5s infinite; }
 .incoming { display: flex; flex-direction: column; gap: 10px; width: 100%; }
-.incoming > div { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; text-align: left; padding: 10px 16px; border-radius: 16px; background: var(--card-strong); }
-.incoming .pi { grid-row: span 2; }
+.incoming > div { padding: 12px 18px; border-radius: 16px; background: var(--card-strong); font-size: 1.15rem; line-height: 1.35; text-align: left; }
 .incoming small { color: var(--ink-soft); }
 
 /* domanda */
@@ -203,7 +205,7 @@ body.controller {
 .card-list { display: flex; flex-direction: column; gap: 12px; }
 .card-btn { display: flex; gap: 14px; align-items: center; padding: 12px 14px; border-radius: 18px; background: rgba(8, 20, 28, 0.6); border: 3px solid var(--pw); text-align: left; }
 .card-btn .pi { font-size: 2.4rem; }
-.card-btn em { display: block; font-style: normal; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; color: var(--ink-soft); }
+.card-btn em { display: block; font-style: normal; font-size: 0.8rem; font-weight: 800; color: var(--ink-soft); }
 .card-btn b { display: block; font-size: 1.25rem; color: var(--pw); }
 .card-btn small { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.2; display: block; }
 .card-btn.defense { background: rgba(95, 212, 232, 0.12); }
@@ -261,7 +263,7 @@ body.controller {
 .selfie-modal { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px; background: rgba(8, 2, 24, 0.85); }
 .selfie-card { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; max-width: 360px; padding: 16px; border-radius: 20px; background: var(--card-strong); }
 .selfie-stage { position: relative; overflow: hidden; border-radius: 16px; touch-action: none;
-  background: repeating-conic-gradient(#3a2a66 0 25%, #2a1d4f 0 50%) 0 0 / 24px 24px; }
+  background: repeating-conic-gradient(#1a4a5b 0 25%, #0f2c3a 0 50%) 0 0 / 24px 24px; }
 .selfie-stage canvas { width: 100%; height: 100%; display: block; }
 .selfie-stage.manual { cursor: grab; background: #08141c; }
 .selfie-oval { position: absolute; left: 4%; right: 4%; top: 2%; bottom: 2%; border-radius: 50%; border: 3px dashed var(--gold);

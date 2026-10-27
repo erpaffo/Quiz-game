@@ -1,5 +1,7 @@
 # Quiz del Pozzo (Quiz of Well): party quiz in stile PlayLink / Buzz!
 
+[![Controlli (CI)](https://github.com/erpaffo/Quiz-game/actions/workflows/ci.yml/badge.svg)](https://github.com/erpaffo/Quiz-game/actions/workflows/ci.yml)
+
 Uno schermo principale 3D (TV o PC) e da 2 a **16** smartphone come controller. La serata è uno **show di giochi estratti da una ruota**, con carte potere per attaccare e difendersi, e si chiude con la finale della Piramide. Le domande si possono scrivere da soli nel **Laboratorio Domande**.
 
 Come funziona il gioco, architettura, scelte di progettazione e sviluppi futuri: [docs/PROGETTO.md](docs/PROGETTO.md).

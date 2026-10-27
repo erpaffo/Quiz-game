@@ -175,7 +175,7 @@ export const CHARACTERS: CharacterDef[] = [
           { id: 'slip', label: '🧾 Schedina e carte' }
         ]
       },
-      { id: 'pocket', label: 'In tasca', options: [{ id: 'none', label: 'Niente' }, { id: 'chips', label: '🪙 Fiches' }, { id: 'cards', label: '🃏 Carte' }] },
+      { id: 'pocket', label: 'In tasca', options: [{ id: 'none', label: 'Niente' }, { id: 'chips', label: '🎰 Fiches' }, { id: 'cards', label: '🃏 Carte' }] },
       { id: 'mood', label: 'Espressione', options: [{ id: 'normal', label: '😌 Rilassato' }, { id: 'happy', label: '😁 Fiducioso' }, { id: 'worried', label: '😰 Preoccupato' }] },
       recolor('pants', 'Pantaloni', ['#3d5a80', '#1d3557', '#5c677d', '#2b2b2b', '#8d6e63', '#4c7a3d'], ['Jeans', 'Blu scuro', 'Grigio', 'Nero', 'Marrone', 'Verde']),
       recolor('hair', 'Capelli', HAIR, HAIR_NAMES)

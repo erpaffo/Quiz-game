@@ -15,6 +15,7 @@ import {
   type ShowId,
   type ShowMeta
 } from '../../shared/shows';
+import { TOPICS } from '../../shared/topics';
 import type { LobbySettings, RoomSnapshot } from '../../shared/types';
 import { esc } from './net';
 
@@ -95,6 +96,19 @@ export function packGrid(s: RoomSnapshot, o: PackMenuOptions): string {
     </div>`;
 }
 
+/** Quiz: argomenti della banca domande da accendere o spegnere (nessuno acceso = tutti). */
+function topicChips(chosen: readonly string[], dis: string): string {
+  const all = chosen.length === 0;
+  return `
+    <div class="pk-row pk-opt pk-topics">
+      <div class="pk-row-label"><b>🗂️ Argomenti</b><small>${all ? 'Tutti, su tutti i pacchetti. Tocca un argomento per giocare solo quello.' : `${chosen.length} scelti · tocca per aggiungere o togliere`}</small></div>
+      <div class="pk-seg pk-chips">
+        <button class="${all ? 'on' : ''}" data-pk-topic="all" ${dis}>Tutti</button>
+        ${TOPICS.map((t) => `<button class="${chosen.includes(t.id) ? 'on' : ''}" data-pk-topic="${t.id}" ${dis}>${t.icon} ${esc(t.name)}</button>`).join('')}
+      </div>
+    </div>`;
+}
+
 /**
  * Sottomenù di un gioco: come si gioca, durata (round) e regole. `extra` = impostazioni in più
  * (la TV le usa per il quiz: modalità, giochi della ruota, pacchetti di domande).
@@ -156,6 +170,7 @@ export function packDetail(s: RoomSnapshot, o: PackMenuOptions & { extra?: strin
           <h4>⚙️ Durata e regole</h4>
           ${rounds}
           ${options}
+          ${id === 'quiz' ? topicChips(st?.topics ?? [], dis) : ''}
           ${o.extra ?? ''}
           ${o.canControl ? '' : '<p class="muted small">Le regole le sceglie il capo stanza 👑.</p>'}
         </section>
@@ -196,6 +211,12 @@ export function handlePackClick(target: HTMLElement, s: RoomSnapshot, api: PackM
   if (delta) {
     const next = clampRounds(id, roundsFor(st, id) + Number(delta));
     if (next !== null) api.set({ rounds: { ...(st.rounds ?? {}), [id]: next } });
+    return true;
+  }
+  const topic = target.closest<HTMLElement>('[data-pk-topic]')?.dataset.pkTopic;
+  if (topic) {
+    const cur = st.topics ?? [];
+    api.set({ topics: topic === 'all' ? [] : cur.includes(topic) ? cur.filter((t) => t !== topic) : [...cur, topic] });
     return true;
   }
   const opt = target.closest<HTMLElement>('[data-pk-opt]');

@@ -6,7 +6,7 @@ import { SCALA, type ScalaPrivate, type ScalaPublic } from '../../shared/scala';
 import { getShowMeta, type ShowFinal, type ShowId, type ShowMeta } from '../../shared/shows';
 import { TEMPO, type TempoPrivate, type TempoPublic } from '../../shared/tempo';
 import type { PlayerPublic, RoomSnapshot } from '../../shared/types';
-import { esc, PLAYER_COLORS } from '../common/net';
+import { esc, PLAYER_COLORS, playerShape } from '../common/net';
 import { renderControllerShowBatch2 } from './controller-shows-2';
 
 export interface ControllerShowContext {
@@ -24,6 +24,11 @@ let impostorRoleHidden = false;
 export function playerColor(snap: RoomSnapshot, id: string): string {
   const i = snap.players.findIndex((p) => p.id === id);
   return PLAYER_COLORS[Math.max(0, i) % PLAYER_COLORS.length];
+}
+
+/** Forma del giocatore da mettere accanto al colore (CSS: --ps). */
+export function playerShapeCss(snap: RoomSnapshot, id: string): string {
+  return `--ps:'${playerShape(snap.players.findIndex((p) => p.id === id))}'`;
 }
 
 export function playerName(snap: RoomSnapshot, id: string | null | undefined): string {
@@ -353,7 +358,7 @@ function renderBluffController(_snap: RoomSnapshot, p: PlayerPublic, meta: ShowM
           <input name="lie" type="text" maxlength="${BLUFF.MAX_CHARS}" autocomplete="off" placeholder="Scrivi una bugia credibile…" required />
           <button class="btn big pink" type="submit">🎭 Invia Bugia</button>
         </form>
-        ${priv.safeties.length ? `<div class="bluff-safeties"><small class="muted">🛟 Bugia Salvagente (50% punti):</small>${priv.safeties.map((s, i) => `<button type="button" class="btn secondary" data-safety="${i}">🛟 «${esc(s)}»</button>`).join('')}</div>` : ''}
+        ${priv.safeties.length ? `<div class="bluff-safeties"><small class="muted">🆘 Bugia Salvagente (50% punti):</small>${priv.safeties.map((s, i) => `<button type="button" class="btn secondary" data-safety="${i}">🆘 «${esc(s)}»</button>`).join('')}</div>` : ''}
       </div>`;
     const form = document.getElementById('bluff-form') as HTMLFormElement | null;
     form?.addEventListener('submit', async (e) => {
@@ -480,7 +485,7 @@ function renderImpostorController(snap: RoomSnapshot, p: PlayerPublic, meta: Sho
           ${suspects.map((o) => {
             const clue = st.clues.find((c) => c.playerId === o.id)?.clue;
             const picked = priv.myVote === o.id;
-            return `<button class="target-btn ${picked ? 'on' : ''}" data-suspect="${o.id}" style="--pc:${playerColor(snap, o.id)}"><b>${picked ? '✓ ' : ''}${esc(o.name)}</b><small>Indizio: «${esc(clue ?? '—')}»</small></button>`;
+            return `<button class="target-btn ${picked ? 'on' : ''}" data-suspect="${o.id}" style="--pc:${playerColor(snap, o.id)};${playerShapeCss(snap, o.id)}"><b>${picked ? '✓ ' : ''}${esc(o.name)}</b><small>Indizio: «${esc(clue ?? '—')}»</small></button>`;
           }).join('')}
         </div>
       </div>`;

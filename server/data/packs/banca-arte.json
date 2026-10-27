@@ -1,13 +1,37 @@
 {
  "id": "banca-arte",
  "name": "📚 Arte & Letteratura",
- "description": "Banca domande · 25 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 121 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
   {
+   "id": "pittura",
+   "name": "Pittura",
+   "icon": "🎨",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "architettura",
+   "name": "Scultura e architettura",
+   "icon": "🎨",
+   "color": "#9d4edd"
+  },
+  {
    "id": "libri",
    "name": "Libri e autori",
+   "icon": "🎨",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "poesia",
+   "name": "Poesia",
+   "icon": "🎨",
+   "color": "#9d4edd"
+  },
+  {
+   "id": "teatro",
+   "name": "Teatro e opera",
    "icon": "🎨",
    "color": "#9d4edd"
   }
@@ -323,6 +347,1214 @@
    "answer": 1997,
    "unit": "anno",
    "difficulty": 2
+  },
+  {
+   "id": "multiple-y45rjk",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore fiammingo firmò nel 1434 il celebre «Ritratto dei coniugi Arnolfini», in cui si autoritrasse nello specchio convesso sullo sfondo?",
+   "options": [
+    "Jan van Eyck",
+    "Rogier van der Weyden",
+    "Hans Memling",
+    "Pieter Bruegel il Vecchio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1k1xnpq",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "In quale museo italiano è custodita l'enigmatica tavola della «Flagellazione di Cristo» dipinta da Piero della Francesca?",
+   "options": [
+    "Galleria Nazionale delle Marche a Urbino",
+    "Galleria degli Uffizi a Firenze",
+    "Pinacoteca di Brera a Milano",
+    "Gallerie dell'Accademia a Venezia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1454fwp",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale maestro del Rinascimento veneto dipinse intorno al 1508 la misteriosa tela «La tempesta», conservata alle Gallerie dell'Accademia di Venezia?",
+   "options": [
+    "Giorgione",
+    "Tiziano Vecellio",
+    "Tintoretto",
+    "Paolo Veronese"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1aqwjhu",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore spagnolo del Seicento realizzò nel 1656 il capolavoro «Las Meninas» («Le damigelle d'onore»), esposto al Museo del Prado di Madrid?",
+   "options": [
+    "Diego Velázquez",
+    "Francisco de Zurbarán",
+    "Bartolomé Esteban Murillo",
+    "El Greco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-k3ntf5",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "A quale artista olandese tra Quattro e Cinquecento si deve il visionario trittico de «Il giardino delle delizie», popolato da creature fantastiche e simboliche?",
+   "options": [
+    "Hieronymus Bosch",
+    "Lucas Cranach il Vecchio",
+    "Albrecht Dürer",
+    "Matthias Grünewald"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1x8db3h",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "In quale museo viennese è conservato il celebre dipinto «Il bacio» (1907-1908), capolavoro del «periodo aureo» di Gustav Klimt?",
+   "options": [
+    "Österreichische Galerie Belvedere",
+    "Kunsthistorisches Museum",
+    "Albertina",
+    "Leopold Museum"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-o7mktb",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore veneto dipinse intorno al 1514 per le nozze di Niccolò Aurelio il capolavoro allegorico «Amor Sacro e Amor Profano», esposto alla Galleria Borghese?",
+   "options": [
+    "Tiziano Vecellio",
+    "Lorenzo Lotto",
+    "Andrea Mantegna",
+    "Giovanni Bellini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1hhi0zo",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore francese del Romanticismo dipinse tra il 1818 e il 1819 la monumentale e drammatica tela «La zattera della Medusa», conservata al Louvre?",
+   "options": [
+    "Théodore Géricault",
+    "Eugène Delacroix",
+    "Jean-Auguste-Dominique Ingres",
+    "Jacques-Louis David"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1g0g92p",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale artista francese suscitò scandalo al «Salon des Refusés» del 1863 con il dipinto «Colazione sull'erba» («Le Déjeuner sur l'herbe»)?",
+   "options": [
+    "Édouard Manet",
+    "Claude Monet",
+    "Edgar Degas",
+    "Pierre-Auguste Renoir"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1vo6jxm",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale opera del 1885, raffigurante una famiglia di contadini olandesi riunita attorno a un piatto fumante, è considerata il primo grande capolavoro di Vincent van Gogh?",
+   "options": [
+    "I mangiatori di patate",
+    "La camera di Vincent ad Arles",
+    "Il caffè di notte",
+    "Campo di grano con volo di corvi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xwaacn",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore statunitense del Novecento dipinse nel 1942 «Nighthawks» («I nottambuli»), iconica scena notturna di avventori solitari in una tavola calda?",
+   "options": [
+    "Edward Hopper",
+    "Grant Wood",
+    "Andrew Wyeth",
+    "Norman Rockwell"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-mhog03",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "In quale chiesa romana si trova la Cappella Contarelli, per la quale Caravaggio dipinse il celebre ciclo dedicato a San Matteo («Vocazione», «Martirio», «San Matteo e l'angelo»)?",
+   "options": [
+    "San Luigi dei Francesi",
+    "Santa Maria del Popolo",
+    "Sant'Agostino",
+    "Santa Maria della Vittoria"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ri0yo4",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore spagnolo dipinse «Il 3 maggio 1808» (o «Le fucilazioni alla montagna del Principe Pío») e il cupo ciclo delle «Pitture nere»?",
+   "options": [
+    "Francisco Goya",
+    "Diego Velázquez",
+    "Joaquín Sorolla",
+    "Jusepe de Ribera"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ef10wg",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale maestro del Rinascimento realizzò a Mantova, nella Camera degli Sposi di Palazzo Ducale, il celebre oculo illusionistico sul soffitto scorciato «di sotto in su»?",
+   "options": [
+    "Andrea Mantegna",
+    "Giulio Romano",
+    "Correggio",
+    "Pisanello"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-so76j2",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale artista russo, pioniere dell'astrattismo e autore del saggio «Lo spirituale nell'arte» (1911), fondò a Monaco con Franz Marc il gruppo «Der Blaue Reiter»?",
+   "options": [
+    "Vasilij Kandinskij",
+    "Kazimir Malevič",
+    "Marc Chagall",
+    "Piet Mondrian"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-rvurf4",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Con quale dipinto del 1872 di Claude Monet, raffigurante il porto di Le Havre nella foschia mattutina, nacque per scherno critico il termine «Impressionismo»?",
+   "options": [
+    "Impressione, levar del sole",
+    "Le ninfee",
+    "La cattedrale di Rouen",
+    "I papaveri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ap9pcx",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore post-impressionista francese ideò la tecnica divisionista del «puntinismo» (pointillisme) nel monumentale dipinto «Una domenica pomeriggio sull'isola della Grande-Jatte»?",
+   "options": [
+    "Georges Seurat",
+    "Paul Signac",
+    "Paul Cézanne",
+    "Henri de Toulouse-Lautrec"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-9051s8",
+   "categoryId": "pittura",
+   "type": "multiple",
+   "text": "Quale pittore italiano del Novecento è celebre per le sue «Piazze d'Italia» e per i manichini senza volto, capolavori della «Pittura metafisica»?",
+   "options": [
+    "Giorgio de Chirico",
+    "Umberto Boccioni",
+    "Carlo Carrà",
+    "Giorgio Morandi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1y7vg7e",
+   "categoryId": "pittura",
+   "type": "truefalse",
+   "text": "Il dipinto «Les Demoiselles d'Avignon» (1907) di Pablo Picasso, considerato l'atto di nascita del Cubismo, prende il nome da una via di Barcellona («Carrer d'Avinyó») e non dalla città francese di Avignone.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-hmflfv",
+   "categoryId": "pittura",
+   "type": "truefalse",
+   "text": "Nel celebre affresco della «Scuola di Atene» di Raffaello nelle Stanze Vaticane, Platone è raffigurato al centro con il dito puntato verso il cielo, mentre Aristotele tende il palmo verso la terra.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-ard7rp",
+   "categoryId": "pittura",
+   "type": "truefalse",
+   "text": "La celebre tela «La Libertà che guida il popolo» (1830) di Eugène Delacroix fu dipinta per celebrare la presa della Bastiglia durante la Rivoluzione francese del 1789.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-13mfh7e",
+   "categoryId": "pittura",
+   "type": "truefalse",
+   "text": "Il dipinto «Il quarto stato» di Giuseppe Pellizza da Volpedo, completato nel 1901, è conservato a Milano ed è stato realizzato con la tecnica divisionista.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-ujzeld",
+   "categoryId": "pittura",
+   "type": "numeric",
+   "text": "In che anno il cittadino italiano Vincenzo Peruggia trafugò «La Gioconda» di Leonardo da Vinci dal Museo del Louvre, tenendola nascosta per oltre due anni?",
+   "answer": 1911,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1vck9qv",
+   "categoryId": "pittura",
+   "type": "numeric",
+   "text": "Quante stampe contiene in totale la celebre serie xilografica «Trentasei vedute del Monte Fuji» di Hokusai, comprese le 10 aggiunte in un secondo tempo per il grande successo?",
+   "answer": 46,
+   "unit": "stampe",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-klyk4i",
+   "categoryId": "pittura",
+   "type": "numeric",
+   "text": "In che anno Pablo Picasso dipinse la monumentale tela «Guernica» per il padiglione della Repubblica spagnola all'Esposizione Internazionale di Parigi?",
+   "answer": 1937,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-v9jni8",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale architetto rinascimentale progettò e realizzò tra il 1420 e il 1436 la monumentale cupola autoportante di Santa Maria del Fiore a Firenze?",
+   "options": [
+    "Filippo Brunelleschi",
+    "Leon Battista Alberti",
+    "Michelozzo",
+    "Giuliano da Sangallo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1cwdgr8",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Sotto quale imperatore romano del II secolo d.C. fu interamente ricostruito il Pantheon di Roma nelle sue forme attuali a pianta circolare?",
+   "options": [
+    "Adriano",
+    "Augusto",
+    "Nerone",
+    "Diocleziano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-65jhxm",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale grande artista del Barocco progettò nel Seicento il grandioso colonnato ellittico a quattro file di colonne di Piazza San Pietro in Vaticano?",
+   "options": [
+    "Gian Lorenzo Bernini",
+    "Francesco Borromini",
+    "Pietro da Cortona",
+    "Carlo Maderno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1d64zbn",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale architetto ticinese del Barocco romano progettò la chiesa di San Carlo alle Quattro Fontane («San Carlino») e la cupola a spirale di Sant'Ivo alla Sapienza?",
+   "options": [
+    "Francesco Borromini",
+    "Carlo Rainaldi",
+    "Guarino Guarini",
+    "Filippo Juvarra"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-hjb0fr",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale architetto veneto del Cinquecento pubblicò «I quattro libri dell'architettura» e progettò a Vicenza la celebre Villa Almerico Capra detta «La Rotonda»?",
+   "options": [
+    "Andrea Palladio",
+    "Jacopo Sansovino",
+    "Vincenzo Scamozzi",
+    "Michele Sanmicheli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-dxz3vm",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale scultore veneto, massimo esponente del Neoclassicismo, realizzò i gruppi marmorei di «Amore e Psiche» e «Paolina Borghese come Venere vincitrice»?",
+   "options": [
+    "Antonio Canova",
+    "Bertel Thorvaldsen",
+    "Lorenzo Bartolini",
+    "Jean-Antoine Houdon"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-880hj2",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale scultore francese tra Otto e Novecento è l'autore delle celebri sculture «Il pensatore» («Le Penseur») e «Il bacio»?",
+   "options": [
+    "Auguste Rodin",
+    "Antoine Bourdelle",
+    "Aristide Maillol",
+    "Camille Claudel"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-xhtngj",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale scultore fiorentino del Quattrocento realizzò a Padova il monumento equestre in bronzo al condottiero Erasmo da Narni, detto il «Gattamelata»?",
+   "options": [
+    "Donatello",
+    "Andrea del Verrocchio",
+    "Luca della Robbia",
+    "Jacopo della Quercia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1m0701a",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale artista fiorentino scolpì le formelle in bronzo dorato della porta est del Battistero di Firenze, ribattezzata da Michelangelo «Porta del Paradiso»?",
+   "options": [
+    "Lorenzo Ghiberti",
+    "Nanni di Banco",
+    "Bernardo Rossellino",
+    "Desiderio da Settignano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-18aofa5",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale architetto catalano del Modernismo progettò a Barcellona la Sagrada Família, Casa Milà («La Pedrera») e Casa Batlló?",
+   "options": [
+    "Antoni Gaudí",
+    "Lluís Domènech i Montaner",
+    "Santiago Calatrava",
+    "Ricard Bofill"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-13v1r0b",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale architetto statunitense, pioniere dell'architettura organica, progettò la celebre «Casa sulla cascata» («Fallingwater») e il Museo Guggenheim di New York?",
+   "options": [
+    "Frank Lloyd Wright",
+    "Ludwig Mies van der Rohe",
+    "Louis Sullivan",
+    "Philip Johnson"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-d7w5zk",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Con quale pseudonimo è universalmente noto l'architetto svizzero-francese Charles-Édouard Jeanneret, autore di Villa Savoye e della cappella di Ronchamp?",
+   "options": [
+    "Le Corbusier",
+    "Alvar Aalto",
+    "Oscar Niemeyer",
+    "Adolf Loos"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1jgthxj",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "In quale città della Calabria sono esposti nel Museo Archeologico Nazionale i due celebri «Bronzi di Riace», statue greche del V secolo a.C.?",
+   "options": [
+    "Reggio Calabria",
+    "Crotone",
+    "Catanzaro",
+    "Locri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1fyd150",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale artista futurista realizzò nel 1913 la celebre scultura bronzea «Forme uniche della continuità nello spazio», effigiata sulle monete italiane da 20 centesimi?",
+   "options": [
+    "Umberto Boccioni",
+    "Giacomo Balla",
+    "Fortunato Depero",
+    "Medardo Rosso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-dy64rx",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "In quale chiesa romana si trova la Cappella Cornaro, che custodisce il gruppo scultoreo barocco dell'«Estasi di Santa Teresa d'Avila» di Gian Lorenzo Bernini?",
+   "options": [
+    "Santa Maria della Vittoria",
+    "Sant'Andrea al Quirinale",
+    "San Luigi dei Francesi",
+    "Santa Maria del Popolo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-y6adnx",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale scultore greco dell'età di Pericle diresse i lavori del Partenone e realizzò le colossali statue in oro e avorio di Atena Parthenos e di Zeus a Olimpia?",
+   "options": [
+    "Fidia",
+    "Prassitele",
+    "Mirone",
+    "Lisippo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2wlz63",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale scultore svizzero del Novecento, originario della Val Bregaglia, è celebre per le sue figure umane filiformi e scabre come «L'uomo che cammina»?",
+   "options": [
+    "Alberto Giacometti",
+    "Jean Tinguely",
+    "Constantin Brâncuși",
+    "Alexander Calder"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-10lkf5u",
+   "categoryId": "architettura",
+   "type": "multiple",
+   "text": "Quale scultore napoletano del Settecento scolpì in un unico blocco di marmo il celebre «Cristo velato» custodito nella Cappella Sansevero a Napoli?",
+   "options": [
+    "Giuseppe Sanmartino",
+    "Antonio Corradini",
+    "Francesco Queirolo",
+    "Giacomo Serpotta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-15zg2hx",
+   "categoryId": "architettura",
+   "type": "truefalse",
+   "text": "Nell'architettura greca classica, i tre ordini architettonici canonici (distinti dalla forma della colonna, del capitello e della trabeazione) sono dorico, ionico e corinzio.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-stddsj",
+   "categoryId": "architettura",
+   "type": "truefalse",
+   "text": "La «Pietà» giovanile scolpita da Michelangelo Buonarroti e custodita nella Basilica di San Pietro è l'unica opera su cui l'artista abbia mai inciso la propria firma.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1wftp7p",
+   "categoryId": "architettura",
+   "type": "truefalse",
+   "text": "La Mole Antonelliana di Torino, iniziata nel 1863 da Alessandro Antonelli, fu progettata fin dall'origine per ospitare il Museo Nazionale del Cinema.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1vs2wc2",
+   "categoryId": "architettura",
+   "type": "truefalse",
+   "text": "Il gruppo ellenistico del «Laocoonte», scoperto a Roma nel 1506 ed esposto ai Musei Vaticani, raffigura il sacerdote troiano e i suoi due figli avvinghiati da serpenti marini.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-19e39st",
+   "categoryId": "architettura",
+   "type": "numeric",
+   "text": "In che anno furono rinvenuti sui fondali marini della Calabria i due celebri «Bronzi di Riace»?",
+   "answer": 1972,
+   "unit": "anno",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-13da5t1",
+   "categoryId": "architettura",
+   "type": "numeric",
+   "text": "In che anno l'architetto tedesco Walter Gropius fondò a Weimar la celebre scuola di architettura, arte e design del «Bauhaus»?",
+   "answer": 1919,
+   "unit": "anno",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-edbzio",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale tragediografo greco del V secolo a.C. compose il ciclo tebano che comprende i capolavori «Edipo re» e «Antigone»?",
+   "options": [
+    "Sofocle",
+    "Euripide",
+    "Menandro",
+    "Tespi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ks1djz",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale tragediografo greco antico è l'autore delle tragedie «Medea», «Ippolito» e «Le Baccanti»?",
+   "options": [
+    "Euripide",
+    "Sofocle",
+    "Eschilo",
+    "Frinico"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1basnqp",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale commediografo ateniese, maestro della «Commedia Antica», scrisse «Le nuvole», «Gli uccelli», «Le rane» e «Lisistrata»?",
+   "options": [
+    "Aristofane",
+    "Plauto",
+    "Terenzio",
+    "Cratino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1a4v17j",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Come si chiama l'astuta protagonista femminile della commedia «La locandiera» (1752), capolavoro della riforma teatrale di Carlo Goldoni?",
+   "options": [
+    "Mirandolina",
+    "Colombina",
+    "Rosaura",
+    "Giacinta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-f0w40o",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "In quale teatro romano debuttò il 9 maggio 1921, tra feroci contestazioni in sala, il dramma «Sei personaggi in cerca d'autore» di Luigi Pirandello?",
+   "options": [
+    "Teatro Valle",
+    "Teatro Argentina",
+    "Teatro Eliseo",
+    "Teatro Sistina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1c83a49",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale drammaturgo irlandese scrisse in lingua francese «Aspettando Godot» («En attendant Godot»), andato in scena a Parigi nel 1953?",
+   "options": [
+    "Samuel Beckett",
+    "George Bernard Shaw",
+    "Oscar Wilde",
+    "Harold Pinter"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-5ddks3",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale drammaturgo tedesco teorizzò il «teatro epico» e l'«effetto di straniamento», scrivendo «L'opera da tre soldi» e «Madre Coraggio e i suoi figli»?",
+   "options": [
+    "Bertolt Brecht",
+    "Frank Wedekind",
+    "Georg Büchner",
+    "Friedrich Dürrenmatt"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ycvh0z",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Durante la quarta replica di quale sua celebre commedia il drammaturgo francese Molière fu colto da un malore fatale in scena il 17 febbraio 1673?",
+   "options": [
+    "Il malato immaginario",
+    "Il Tartuffo",
+    "L'avaro",
+    "Il misantropo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-8pviy",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale scrittore e drammaturgo russo compose tra fine Ottocento e inizio Novecento i drammi «Il gabbiano», «Zio Vanja», «Tre sorelle» e «Il giardino dei ciliegi»?",
+   "options": [
+    "Anton Čechov",
+    "Maksim Gor'kij",
+    "Nikolaj Gogol'",
+    "Aleksandr Ostrovskij"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1nurdde",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale drammaturgo norvegese, padre del dramma borghese moderno, scrisse nel 1879 «Casa di bambola», con protagonista Nora Helmer?",
+   "options": [
+    "Henrik Ibsen",
+    "August Strindberg",
+    "Bjørnstjerne Bjørnson",
+    "Knut Hamsun"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-69813r",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale commedia di Eduardo De Filippo del 1931 ha per protagonista Luca Cupiello, ossessionato dall'allestimento del presepe e dalla domanda «Te piace 'o presebbio?»?",
+   "options": [
+    "Natale in casa Cupiello",
+    "Napoli milionaria!",
+    "Filumena Marturano",
+    "Questi fantasmi!"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1xy57fj",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale drammaturgo di origine romena, esponente del teatro dell'assurdo, scrisse in francese le pièces «La cantatrice calva» (1950) e «Il rinoceronte»?",
+   "options": [
+    "Eugène Ionesco",
+    "Arthur Adamov",
+    "Jean Genet",
+    "Fernando Arrabal"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-2gnarx",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale drammaturgo statunitense scrisse «Morte di un commesso viaggiatore» (1949), incentrato sulla tragica figura di Willy Loman, e «Il crogiuolo»?",
+   "options": [
+    "Arthur Miller",
+    "Eugene O'Neill",
+    "Thornton Wilder",
+    "David Mamet"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-f31glx",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Chi è l'autore del dramma «Un tram che si chiama Desiderio» (1947), che vede contrapposti a New Orleans Blanche DuBois e il cognato Stanley Kowalski?",
+   "options": [
+    "Tennessee Williams",
+    "Edward Albee",
+    "Sam Shepard",
+    "Clifford Odets"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1gdyzk3",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Nella tradizione della Commedia dell'Arte, di quale città è originaria la maschera del vecchio mercante avaro e brontolone «Pantalone»?",
+   "options": [
+    "Venezia",
+    "Bergamo",
+    "Bologna",
+    "Napoli"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-6it3n2",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale regista e teorico russo fondò con Nemirovič-Dančenko il Teatro d'Arte di Mosca e ideò il celebre «metodo» basato sulla reviviscenza psicologica dell'attore?",
+   "options": [
+    "Konstantin Stanislavskij",
+    "Vsevolod Mejerchol'd",
+    "Evgenij Vachtangov",
+    "Jerzy Grotowski"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-fhafpu",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "Quale poeta e drammaturgo astigiano del Settecento è considerato il massimo autore tragico italiano per opere come «Saul» e «Mirra»?",
+   "options": [
+    "Vittorio Alfieri",
+    "Pietro Metastasio",
+    "Vincenzo Monti",
+    "Scipione Maffei"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-15a9zw8",
+   "categoryId": "teatro",
+   "type": "multiple",
+   "text": "In quale città veneta si trova il cinquecentesco «Teatro Olimpico» progettato da Andrea Palladio, il più antico teatro stabile coperto dell'età moderna?",
+   "options": [
+    "Vicenza",
+    "Verona",
+    "Padova",
+    "Treviso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1h6yfp8",
+   "categoryId": "teatro",
+   "type": "truefalse",
+   "text": "Nella «Poetica» di Aristotele, la tragedia suscita nello spettatore «pietà e terrore» conducendo alla «catarsi», ossia alla purificazione delle passioni.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1ooktrk",
+   "categoryId": "teatro",
+   "type": "truefalse",
+   "text": "Il celebre «Globe Theatre» elisabettiano di Londra, in cui recitava la compagnia di Shakespeare, era una sala interamente coperta da una cupola in muratura.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-mxcg0m",
+   "categoryId": "teatro",
+   "type": "truefalse",
+   "text": "La commedia «La Mandragola» (1518 ca.), capolavoro del teatro comico del Rinascimento italiano, fu scritta da Niccolò Machiavelli.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1mdbcs8",
+   "categoryId": "teatro",
+   "type": "truefalse",
+   "text": "L'opera «Mistero buffo» (1969), giullarata satirica recitata nella lingua teatrale inventata del «grammelot», è il capolavoro di Dario Fo.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-6mbkbz",
+   "categoryId": "teatro",
+   "type": "numeric",
+   "text": "In che anno fu inaugurato con l'«Edipo re» il Teatro Olimpico progettato da Andrea Palladio?",
+   "answer": 1585,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1n84dko",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi scrisse la poesia «L'infinito» («Sempre caro mi fu quest'ermo colle»)?",
+   "options": [
+    "Giacomo Leopardi",
+    "Ugo Foscolo",
+    "Giovanni Pascoli",
+    "Giosuè Carducci"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-185cjc5",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "In quale paese delle Marche nacque Giacomo Leopardi?",
+   "options": [
+    "Recanati",
+    "Urbino",
+    "Macerata",
+    "Loreto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-c9k4eo",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi scrisse «X Agosto», la poesia dedicata all'uccisione del padre nella notte di San Lorenzo?",
+   "options": [
+    "Giovanni Pascoli",
+    "Gabriele D'Annunzio",
+    "Giosuè Carducci",
+    "Giuseppe Ungaretti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1e16jpf",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi è l'autore della poesia «La pioggia nel pineto»?",
+   "options": [
+    "Gabriele D'Annunzio",
+    "Giovanni Pascoli",
+    "Eugenio Montale",
+    "Umberto Saba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-o448nr",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi scrisse la brevissima poesia «Mattina» («M'illumino / d'immenso»)?",
+   "options": [
+    "Giuseppe Ungaretti",
+    "Salvatore Quasimodo",
+    "Eugenio Montale",
+    "Umberto Saba"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-sppccx",
+   "categoryId": "poesia",
+   "type": "truefalse",
+   "text": "Giuseppe Ungaretti scrisse molte poesie della raccolta «Il porto sepolto» mentre combatteva in trincea durante la Prima guerra mondiale.",
+   "answer": true,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-5hw8hl",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Quale poeta ligure, autore di «Ossi di seppia», vinse il premio Nobel per la letteratura nel 1975?",
+   "options": [
+    "Eugenio Montale",
+    "Salvatore Quasimodo",
+    "Giuseppe Ungaretti",
+    "Pier Paolo Pasolini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-z5e10m",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Quale poeta siciliano, autore di «Ed è subito sera», vinse il premio Nobel per la letteratura nel 1959?",
+   "options": [
+    "Salvatore Quasimodo",
+    "Eugenio Montale",
+    "Giovanni Verga",
+    "Leonardo Sciascia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-5u75re",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi fu il primo italiano a vincere il premio Nobel per la letteratura, nel 1906?",
+   "options": [
+    "Giosuè Carducci",
+    "Giovanni Pascoli",
+    "Gabriele D'Annunzio",
+    "Grazia Deledda"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-jl0eui",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Quale poeta scrisse il «Canzoniere», dedicato in gran parte all'amata Laura?",
+   "options": [
+    "Francesco Petrarca",
+    "Dante Alighieri",
+    "Giovanni Boccaccio",
+    "Guido Cavalcanti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-7ge14n",
+   "categoryId": "poesia",
+   "type": "truefalse",
+   "text": "Il «Canzoniere» di Francesco Petrarca è scritto in latino.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-15i9b6j",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Come si chiama la donna amata da Dante e celebrata nella «Vita nova»?",
+   "options": [
+    "Beatrice",
+    "Laura",
+    "Fiammetta",
+    "Silvia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1ih6x14",
+   "categoryId": "poesia",
+   "type": "numeric",
+   "text": "Quanti canti compongono in tutto la «Divina Commedia»?",
+   "answer": 100,
+   "unit": "canti",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-4h6f16",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Quale poeta latino accompagna Dante come guida nell'Inferno e nel Purgatorio?",
+   "options": [
+    "Virgilio",
+    "Ovidio",
+    "Orazio",
+    "Lucrezio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-h1185x",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Con quale metro è scritta la «Divina Commedia»?",
+   "options": [
+    "Terzine di endecasillabi a rima incatenata",
+    "Ottave di endecasillabi",
+    "Sonetti",
+    "Distici elegiaci"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-2z5b8u",
+   "categoryId": "poesia",
+   "type": "numeric",
+   "text": "In che anno morì Dante Alighieri, in esilio a Ravenna?",
+   "answer": 1321,
+   "unit": "anno",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-mqjcoc",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi scrisse il carme «Dei Sepolcri» (1807)?",
+   "options": [
+    "Ugo Foscolo",
+    "Giuseppe Parini",
+    "Alessandro Manzoni",
+    "Vittorio Alfieri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1w41l3q",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi scrisse «Il cinque maggio», l'ode sulla morte di Napoleone?",
+   "options": [
+    "Alessandro Manzoni",
+    "Ugo Foscolo",
+    "Vincenzo Monti",
+    "Giacomo Leopardi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1uij9wc",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Come si chiama il componimento poetico formato da 14 versi, divisi in due quartine e due terzine?",
+   "options": [
+    "Sonetto",
+    "Ballata",
+    "Canzone",
+    "Ottava"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-v9ewaf",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "In quale poema di Ludovico Ariosto il paladino Orlando impazzisce per amore di Angelica?",
+   "options": [
+    "Orlando furioso",
+    "Orlando innamorato",
+    "Gerusalemme liberata",
+    "Morgante"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-7xf1uj",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Chi scrisse il poema epico «Gerusalemme liberata» (1581)?",
+   "options": [
+    "Torquato Tasso",
+    "Ludovico Ariosto",
+    "Matteo Maria Boiardo",
+    "Luigi Pulci"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1rjbplw",
+   "categoryId": "poesia",
+   "type": "multiple",
+   "text": "Quale poeta latino scrisse l'«Eneide»?",
+   "options": [
+    "Virgilio",
+    "Omero",
+    "Ovidio",
+    "Catullo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-qlfjc8",
+   "categoryId": "poesia",
+   "type": "truefalse",
+   "text": "La poetessa Alda Merini era nata a Milano.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-pqz69m",
+   "categoryId": "poesia",
+   "type": "truefalse",
+   "text": "Il poeta Trilussa scriveva in dialetto romanesco.",
+   "answer": true,
+   "difficulty": 1
   }
  ]
 }

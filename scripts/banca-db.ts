@@ -3,6 +3,7 @@
 //   npm run banca-db -- segna vero  <id…>    segna come verificate le righe indicate (con chi e quando)
 //   npm run banca-db -- segna falso <id…>    le rimette «non verificate» (con una nota facoltativa: --nota "perché")
 //   npm run banca-db -- stato                quante domande verificate / da verificare per categoria
+//   npm run banca-db -- verifica             (usato dalla CI) errore se il registro non è aggiornato o ha righe FALSO
 // Il file si apre con Excel o LibreOffice (separatore «;»). I segni di verifica sopravvivono alle rigenerazioni (chiave = id).
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
@@ -115,13 +116,30 @@ export function mark(ids: string[], value: boolean, who: string, note = '', file
   for (const r of rows) {
     if (!wanted.has(r.id)) continue;
     r.verificata = value ? 'VERO' : 'FALSO';
-    r.verificata_da = value ? who : '';
-    r.data_verifica = value ? new Date().toISOString().slice(0, 10) : '';
+    // anche per FALSO si ricorda chi ha messo in dubbio la riga e quando (le righe mai controllate li hanno vuoti)
+    r.verificata_da = who;
+    r.data_verifica = new Date().toISOString().slice(0, 10);
     if (note) r.note = note;
     n++;
   }
   writeDb(rows, file);
   return n;
+}
+
+/** Problemi del registro: righe mancanti o vecchie rispetto alla banca, e domande pubblicate ancora FALSO. */
+export function problems(items = approved(), file = DB_FILE): string[] {
+  const rows = new Map(readDb(file).map((r) => [r.id, r]));
+  const out: string[] = [];
+  for (const it of items) {
+    const want = toRow(it);
+    const r = rows.get(want.id);
+    if (!r) out.push(`${want.id}: manca nel registro (lancia npm run banca-db)`);
+    else if (r.domanda !== want.domanda || r.risposta_giusta !== want.risposta_giusta || r.altre_risposte !== want.altre_risposte) out.push(`${want.id}: testo cambiato, registro da rigenerare (npm run banca-db)`);
+    else if (r.verificata !== 'VERO') out.push(`${want.id}: non verificata${r.note ? ` (${r.note})` : ''}`);
+    rows.delete(want.id);
+  }
+  for (const id of rows.keys()) out.push(`${id}: nel registro ma non più nella banca (lancia npm run banca-db)`);
+  return out;
 }
 
 export function summary(rows = readDb()): string {
@@ -146,6 +164,13 @@ function main() {
     const ids = rest.filter((a, i) => !a.startsWith('--') && !['--nota', '--da'].includes(rest[i - 1] ?? ''));
     console.log(`✅ ${mark(ids, val === 'vero', flag('--da') ?? 'claude', flag('--nota') ?? '')} righe aggiornate`);
   } else if (cmd === 'stato') console.log(summary());
+  else if (cmd === 'verifica') {
+    const p = problems();
+    p.slice(0, 50).forEach((x) => console.log(`❌ ${x}`));
+    if (p.length > 50) console.log(`… e altri ${p.length - 50}`);
+    console.log(p.length ? `${p.length} problemi nel registro di verifica` : '✅ Registro di verifica in ordine: tutte le domande pubblicate sono verificate');
+    process.exitCode = p.length ? 1 : 0;
+  }
   else {
     const r = refresh();
     console.log(`📚 ${r.rows.length} domande in banca-domande/DATABASE.csv (nuove: ${r.added}, tolte: ${r.removed})`);
