@@ -17,12 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  verifica-ai:
-    uses: ./.github/workflows/verifica-ai.yml
-    secrets: inherit
-
   telefono:
-    needs: verifica-ai
     uses: ./.github/workflows/telefono.yml
     permissions:
       contents: read
@@ -30,7 +25,6 @@ jobs:
       id-token: write
 
   pc:
-    needs: verifica-ai
     uses: ./.github/workflows/pc.yml
     permissions:
       contents: write
