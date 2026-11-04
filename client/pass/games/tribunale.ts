@@ -2,14 +2,13 @@
 
 import { TRIBUNALE_QUESTIONS } from '../data/social';
 import { tribunaleJudges, tribunalePoints } from '../logic/tribunale';
-import { Deck } from '../rng';
 import type { PassGame, Player } from '../types';
 import { countdown, cover, esc, pointsList, screen, tag, Timers } from '../ui';
 
 export const tribunale: PassGame = (ctx) => {
   const t = new Timers();
   const judges = tribunaleJudges(ctx.players, Number(ctx.options.questions) || 10);
-  const deck = new Deck(TRIBUNALE_QUESTIONS, Math.random);
+  const deck = ctx.deck('tribunale', TRIBUNALE_QUESTIONS);
   const points: Record<string, number> = {};
   let idx = 0;
   const byId = (id: string) => ctx.players.find((p) => p.id === id)!;
@@ -108,6 +107,7 @@ export const tribunale: PassGame = (ctx) => {
     );
   };
 
+  ctx.keepAwake(true);
   ask();
   return () => t.clear();
 };

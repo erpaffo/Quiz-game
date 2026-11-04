@@ -114,6 +114,7 @@ export function createPauseMenu(o: PauseMenuOptions) {
 
   function audioPanel() {
     const st = audio.settings;
+    const voiceOn = audio.isVoiceEnabled();
     const slider = (key: 'music' | 'sfx' | 'voice', label: string) =>
       `<label class="pm-row"><span>${label} <b>${Math.round(st[key] * 100)}%</b></span><input type="range" min="0" max="1" step="0.05" value="${st[key]}" data-vol="${key}"></label>`;
     return `
@@ -121,6 +122,7 @@ export function createPauseMenu(o: PauseMenuOptions) {
       ${slider('sfx', '💥 Effetti')}
       ${slider('voice', '🎙️ Voce del presentatore')}
       <div class="pm-row-btns">
+        <button class="btn secondary" data-act="toggle-voice">🎙️ Voce: ${voiceOn ? 'sì' : 'no'}</button>
         <button class="btn secondary" data-act="mute">${st.muted ? '🔊 Riattiva l’audio' : '🔇 Muto (tasto M)'}</button>
         <button class="btn secondary" data-act="audio-reset">↺ Valori predefiniti</button>
       </div>`;
@@ -169,6 +171,9 @@ export function createPauseMenu(o: PauseMenuOptions) {
         window.close(); // funziona solo se la scheda l'ha aperta il gioco
         setTimeout(() => (location.href = './index.html'), 300);
         return;
+      case 'toggle-voice':
+        audio.toggleVoice();
+        break;
       case 'mute':
         audio.toggleMute();
         break;

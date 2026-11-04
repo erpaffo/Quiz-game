@@ -1,1 +1,324 @@
-[]
+[
+ {
+  "category": "Cibo",
+  "words": [
+   "Cozze",
+   "Vongole"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Merluzzo",
+   "Tonno"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Pandoro",
+   "Colomba"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Cioccolato fondente",
+   "Cioccolato al latte"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Caciotta",
+   "Grana Padano"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Trota",
+   "Sogliola"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Mora",
+   "Lampone"
+  ]
+ },
+ {
+  "category": "Bevande",
+  "words": [
+   "Acqua frizzante",
+   "Acqua naturale"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Criceto",
+   "Cavia"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Civetta",
+   "Barbagianni"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Gambero",
+   "Scampo"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Pettirosso",
+   "Passero"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Tacchino",
+   "Faraona"
+  ]
+ },
+ {
+  "category": "Luoghi",
+  "words": [
+   "Lavanderia",
+   "Tintoria"
+  ]
+ },
+ {
+  "category": "Luoghi",
+  "words": [
+   "Ambulatorio",
+   "Guardia medica"
+  ]
+ },
+ {
+  "category": "Mezzi di trasporto",
+  "words": [
+   "Furgone",
+   "Camion"
+  ]
+ },
+ {
+  "category": "Mezzi di trasporto",
+  "words": [
+   "Filobus",
+   "Autobus"
+  ]
+ },
+ {
+  "category": "Mezzi di trasporto",
+  "words": [
+   "Camper",
+   "Roulotte"
+  ]
+ },
+ {
+  "category": "Mezzi di trasporto",
+  "words": [
+   "Funivia",
+   "Seggiovia"
+  ]
+ },
+ {
+  "category": "Sport",
+  "words": [
+   "Ginnastica artistica",
+   "Ginnastica ritmica"
+  ]
+ },
+ {
+  "category": "Sport",
+  "words": [
+   "Baseball",
+   "Cricket"
+  ]
+ },
+ {
+  "category": "Sport",
+  "words": [
+   "Arrampicata",
+   "Alpinismo"
+  ]
+ },
+ {
+  "category": "Sport",
+  "words": [
+   "Pattinaggio su ghiaccio",
+   "Pattinaggio a rotelle"
+  ]
+ },
+ {
+  "category": "Hobby",
+  "words": [
+   "Collezionare francobolli",
+   "Collezionare cartoline"
+  ]
+ },
+ {
+  "category": "Hobby",
+  "words": [
+   "Acquerello",
+   "Pittura a olio"
+  ]
+ },
+ {
+  "category": "Strumenti",
+  "words": [
+   "Cacciavite",
+   "Chiave inglese"
+  ]
+ },
+ {
+  "category": "Strumenti",
+  "words": [
+   "Pialla",
+   "Scalpello"
+  ]
+ },
+ {
+  "category": "Strumenti",
+  "words": [
+   "Padella",
+   "Casseruola"
+  ]
+ },
+ {
+  "category": "Strumenti",
+  "words": [
+   "Metro a nastro",
+   "Livella"
+  ]
+ },
+ {
+  "category": "Oggetti di casa",
+  "words": [
+   "Mixer",
+   "Robot da cucina"
+  ]
+ },
+ {
+  "category": "Oggetti di casa",
+  "words": [
+   "Poltrona",
+   "Pouf"
+  ]
+ },
+ {
+  "category": "Oggetti di casa",
+  "words": [
+   "Persiane",
+   "Tapparelle"
+  ]
+ },
+ {
+  "category": "Tecnologia",
+  "words": [
+   "Orologio intelligente",
+   "Braccialetto"
+  ]
+ },
+ {
+  "category": "Tecnologia",
+  "words": [
+   "Caricabatterie",
+   "Power bank"
+  ]
+ },
+ {
+  "category": "Tecnologia",
+  "words": [
+   "Trackpad",
+   "Tavoletta grafica"
+  ]
+ },
+ {
+  "category": "Vestiti",
+  "words": [
+   "Giacca di jeans",
+   "Giubbotto di pelle"
+  ]
+ },
+ {
+  "category": "Vestiti",
+  "words": [
+   "Sandali",
+   "Infradito"
+  ]
+ },
+ {
+  "category": "Vestiti",
+  "words": [
+   "Basco",
+   "Bombetta"
+  ]
+ },
+ {
+  "category": "Mestieri",
+  "words": [
+   "Elettricista",
+   "Imbianchino"
+  ]
+ },
+ {
+  "category": "Mestieri",
+  "words": [
+   "Pasticcere",
+   "Gelataio"
+  ]
+ },
+ {
+  "category": "Mestieri",
+  "words": [
+   "Montatore",
+   "Sceneggiatore"
+  ]
+ },
+ {
+  "category": "Cinema e TV",
+  "words": [
+   "Serie animata",
+   "Film d'animazione"
+  ]
+ },
+ {
+  "category": "Cinema e TV",
+  "words": [
+   "Telegiornale",
+   "Talk show"
+  ]
+ },
+ {
+  "category": "Feste",
+  "words": [
+   "Confetti",
+   "Bomboniera"
+  ]
+ },
+ {
+  "category": "Feste",
+  "words": [
+   "Stelle filanti",
+   "Palloncini"
+  ]
+ },
+ {
+  "category": "Feste",
+  "words": [
+   "Cupcake",
+   "Muffin"
+  ]
+ }
+]

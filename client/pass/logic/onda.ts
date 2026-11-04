@@ -1,7 +1,6 @@
 // Regole di «Lunghezza d'Onda»: bersaglio segreto tra 0 e 100, punti in base alla distanza dall'ago.
 
-import { ONDA_SPECTRA, type Spectrum } from '../data/onda';
-import { Deck, randInt, type Rng } from '../rng';
+import { randInt, type Rng } from '../rng';
 import type { Player } from '../types';
 
 /** Bersaglio: mai attaccato ai bordi, così l'indizio ha senso. */
@@ -29,8 +28,4 @@ export function ondaPlan(players: Player[], rounds: number): Player[] {
   const out: Player[] = [];
   for (let r = 0; r < Math.max(1, rounds); r++) out.push(...players);
   return out;
-}
-
-export function ondaDeck(rng: Rng): Deck<Spectrum> {
-  return new Deck(ONDA_SPECTRA, rng);
 }

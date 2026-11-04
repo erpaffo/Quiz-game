@@ -1,5 +1,6 @@
 // Banca domande — strumenti di lavoro (vedi banca-domande/README.md).
 //   npm run banca -- controlla [file…]   controlla i lotti (di default tutti quelli in inbox/), aggiunge gli id mancanti
+//                                        e stampa gli AVVISI F2.4 (risposta svelata, banalità): non bloccano la promozione
 //   npm run banca -- promuovi <file>     sposta in approvate/ gli elementi revisionati «ok» da un ALTRO autore
 //   npm run banca -- costruisci          genera i pacchetti del gioco e i contenuti dell'app tascabile
 //   npm run banca -- stato               quante domande per categoria e difficoltà, e dove mancano
@@ -34,10 +35,10 @@ import {
 export const ROOT = resolve(import.meta.dirname, '..');
 export const BANK = resolve(ROOT, 'banca-domande');
 const DIRS = {
-  inbox: join(BANK, 'inbox'),
+  inbox: join(ROOT, 'ai-generati', 'inbox'),
   quiz: join(BANK, 'approvate', 'quiz'),
   offline: join(BANK, 'approvate', 'offline'),
-  scartate: join(BANK, 'scartate'),
+  scartate: join(ROOT, 'ai-generati', 'scartate'),
   packs: resolve(ROOT, 'server/data/packs'),
   passGen: resolve(ROOT, 'client/pass/data/generated')
 };
@@ -152,6 +153,44 @@ export interface FileReport {
   total: number;
   ok: number;
   problems: string[];
+  /** Avvisi F2.4: non bloccano la promozione, vanno solo riletti. */
+  warnings: string[];
+}
+
+/** Parole assolute che in una vero/falso rivelano la risposta (o la rendono banale). */
+const ABSOLUTE_WORDS = ['sempre', 'mai', 'unico', 'unica', 'unici', 'uniche', 'tutti', 'tutte', 'nessuno', 'nessuna'];
+
+/** Risposta in forma testuale: '' per le vero/falso (risposta sì/no, niente da cercare). */
+function answerText(q: BankQuiz): string {
+  return q.kind === 'multiple' ? (q.options[q.correct] ?? '') : q.kind === 'numeric' ? String(q.answer) : '';
+}
+
+/** La risposta compare come parola intera nel testo? (maiuscole e accenti indifferenti) */
+function containsText(text: string, answer: string): boolean {
+  const a = norm(answer);
+  return a.length >= 4 && new RegExp(`\\b${a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(norm(text));
+}
+
+function containsNumber(text: string, answer: number): boolean {
+  return text.toLowerCase().split(/[^\d.-]+/).includes(String(answer));
+}
+
+/** Avvisi F2.4 su un lotto: «risposta svelata» e «banalità». Restituisce «file:riga: …». */
+function advisories(label: string, items: { n: number; q: BankQuiz }[]): string[] {
+  const out: string[] = [];
+  for (const { n, q } of items) {
+    for (const other of items) {
+      if (other.n === n) continue;
+      const hit = other.q.kind === 'numeric' ? containsNumber(q.text, other.q.answer) : containsText(q.text, answerText(other.q));
+      if (hit) out.push(`${label}:${n}: ⚠️ risposta svelata: «${answerText(other.q)}» (risposta della riga ${other.n}) compare nel testo`);
+    }
+    if (q.kind === 'numeric' && containsNumber(q.text, q.answer)) out.push(`${label}:${n}: ⚠️ banalità: la risposta (${q.answer}) compare già nel testo della domanda`);
+    if (q.kind === 'truefalse') {
+      const abs = ABSOLUTE_WORDS.find((w) => new RegExp(`\\b${w}\\b`).test(norm(q.text)));
+      if (abs) out.push(`${label}:${n}: ⚠️ banalità: vero/falso con parola assoluta «${abs}» da rivedere`);
+    }
+  }
+  return out;
 }
 
 /** Controlla un lotto; con `fix` aggiunge gli id mancanti e riscrive il file. */
@@ -181,8 +220,10 @@ export function checkFile(file: string, tax: Taxonomy, known = existingKeys(), f
     if (errs.length) problems.push(`riga ${l.n}: ${errs.join(' · ')}`);
     else ok++;
   }
-  if (fix && changed) writeJsonl(file, lines.map((l) => l.raw));
-  return { file, total: lines.length, ok, problems };
+  // Con una riga rotta non si riscrive: la riga verrebbe salvata come «null» e il testo andrebbe perso.
+  if (fix && changed && !lines.some((l) => l.error)) writeJsonl(file, lines.map((l) => l.raw));
+  const warnings = advisories(relative(ROOT, file), lines.filter((l) => !l.error && isQuiz(l.raw as BankItem)).map((l) => ({ n: l.n, q: l.raw as BankQuiz })));
+  return { file, total: lines.length, ok, problems, warnings };
 }
 
 // ------------------------------------------------------------------ promuovi
@@ -197,6 +238,8 @@ export interface PromoteResult {
 export function promote(file: string, tax: Taxonomy): PromoteResult {
   const known = existingKeys();
   const lines = readJsonl(file);
+  const broken = lines.find((l) => l.error);
+  if (broken) throw new Error(`riga ${broken.n}: ${broken.error}. Correggila prima di promuovere, altrimenti andrebbe persa.`);
   const keep: unknown[] = [];
   const rejected: unknown[] = [];
   const byTarget = new Map<string, BankItem[]>();
@@ -339,9 +382,11 @@ function main() {
     let bad = 0;
     for (const f of files) {
       const r = checkFile(f, tax, known);
-      console.log(`${r.problems.length ? '❌' : '✅'} ${relative(ROOT, f)}: ${r.ok}/${r.total} validi`);
+      console.log(`${r.problems.length ? '❌' : '✅'} ${relative(ROOT, f)}: ${r.ok}/${r.total} validi${r.warnings.length ? ` · ${r.warnings.length} avvisi (non bloccano)` : ''}`);
       r.problems.slice(0, 40).forEach((p) => console.log(`   - ${p}`));
       if (r.problems.length > 40) console.log(`   … e altri ${r.problems.length - 40}`);
+      r.warnings.slice(0, 30).forEach((w) => console.log(`   ${w}`));
+      if (r.warnings.length > 30) console.log(`   … e altri ${r.warnings.length - 30} avvisi`);
       bad += r.problems.length;
     }
     process.exitCode = bad ? 1 : 0;

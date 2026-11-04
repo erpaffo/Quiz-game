@@ -1,7 +1,7 @@
 // Regole di «Duello al Tavolo»: affermazioni vere/false a raffica tra due sfidanti, chi vince resta campione.
 
-import { DUELLO_FACTS, STROOP_COLORS } from '../data/duello';
-import { pick, randInt, shuffle, type Rng } from '../rng';
+import { DUELLO_FACTS, STROOP_COLORS, type Fact } from '../data/duello';
+import { Deck, pick, randInt, shuffle, type Rng } from '../rng';
 import type { Player } from '../types';
 
 export type DuelPrompt =
@@ -10,7 +10,29 @@ export type DuelPrompt =
   | { kind: 'fact'; truth: boolean; question: string; text: string }
   | { kind: 'count'; truth: boolean; question: string; blue: number; red: number };
 
-export function makePrompt(rng: Rng): DuelPrompt {
+/** Mazzi dei fatti (in gioco: `ctx.deck`, con memoria tra partite). */
+export interface FactDecks {
+  veri: { draw(): Fact };
+  falsi: { draw(): Fact };
+}
+
+export const factKey = (f: Fact) => f.text;
+
+export function makeFactDecks(rng: Rng): FactDecks {
+  return {
+    veri: new Deck(DUELLO_FACTS.filter((f) => f.truth), rng, undefined, factKey),
+    falsi: new Deck(DUELLO_FACTS.filter((f) => !f.truth), rng, undefined, factKey)
+  };
+}
+
+/** Mai due volte di fila lo stesso prompt identico (stroop/math/count sono generati e possono coincidere). */
+export function makePrompt(rng: Rng, facts: FactDecks, prev?: DuelPrompt): DuelPrompt {
+  let p = build(rng, facts);
+  for (let i = 0; prev && i < 20 && JSON.stringify(p) === JSON.stringify(prev); i++) p = build(rng, facts);
+  return p;
+}
+
+function build(rng: Rng, facts: FactDecks): DuelPrompt {
   const kind = pick(rng, ['stroop', 'math', 'fact', 'count'] as const);
   const truth = rng() < 0.5;
   if (kind === 'stroop') {
@@ -34,8 +56,7 @@ export function makePrompt(rng: Rng): DuelPrompt {
     if (truth !== blue > red) [blue, red] = [red, blue];
     return { kind, truth, question: 'Più cerchi blu che quadrati rossi?', blue, red };
   }
-  const facts = DUELLO_FACTS.filter((x) => x.truth === truth);
-  const fact = pick(rng, facts);
+  const fact = (truth ? facts.veri : facts.falsi).draw();
   return { kind: 'fact', truth, question: 'Vero?', text: fact.text };
 }
 

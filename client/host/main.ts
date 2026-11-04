@@ -5,6 +5,7 @@ import { lookKey } from '../../shared/characters';
 import { CONFIG } from '../../shared/config';
 import { GAMES } from '../../shared/games';
 import type { CardEvent, PowerType, RoomSnapshot } from '../../shared/types';
+import type { VoiceSayPayload } from '../../shared/voice';
 import '../common/base.css';
 import '../common/pack.css';
 import { menuView } from '../common/pack-menu';
@@ -19,11 +20,69 @@ import { HostUI, phaseKey } from './ui';
 const SESSION_KEY = 'sep:host';
 const socket = createSocket();
 const stage = new Stage(document.getElementById('stage')!, loadVideo());
+if (import.meta.env.DEV) (window as any).stage = stage;
 const selfies = new Map<string, string>();
 let last: RoomSnapshot | null = null;
 let session: { code: string; hostKey: string } | null = null;
 let started = false;
 const join = { urls: [] as string[], index: 0 };
+const pendingTimers = new Set<ReturnType<typeof setTimeout>>();
+
+const subtitleEl = document.getElementById('subtitle') as HTMLDivElement | null;
+let subtitleTimer: ReturnType<typeof setTimeout> | null = null;
+let subtitleFadeTimer: ReturnType<typeof setTimeout> | null = null;
+
+function hideSubtitle() {
+  if (subtitleTimer) {
+    clearTimeout(subtitleTimer);
+    subtitleTimer = null;
+  }
+  if (subtitleFadeTimer) {
+    clearTimeout(subtitleFadeTimer);
+    subtitleFadeTimer = null;
+  }
+  if (subtitleEl) {
+    subtitleEl.classList.remove('fading');
+    subtitleEl.hidden = true;
+    subtitleEl.textContent = '';
+  }
+}
+
+function showSubtitle(text: string) {
+  hideSubtitle();
+  if (!subtitleEl) return;
+
+  subtitleEl.textContent = text;
+  subtitleEl.classList.remove('fading');
+  subtitleEl.hidden = false;
+
+  // Durata: max(2.5 s, caratteri / 18), poi dissolvenza
+  const durationMs = Math.max(2500, (text.length / 18) * 1000);
+  subtitleTimer = setTimeout(() => {
+    if (subtitleEl && !subtitleEl.hidden) {
+      subtitleEl.classList.add('fading');
+      subtitleFadeTimer = setTimeout(() => {
+        hideSubtitle();
+      }, 350);
+    }
+  }, durationMs);
+}
+
+function setHostTimer(fn: () => void, ms: number): ReturnType<typeof setTimeout> {
+  const id = setTimeout(() => {
+    pendingTimers.delete(id);
+    fn();
+  }, ms);
+  pendingTimers.add(id);
+  return id;
+}
+
+function clearHostTimers() {
+  for (const id of pendingTimers) clearTimeout(id);
+  pendingTimers.clear();
+  hideSubtitle();
+  audio.skipPending();
+}
 
 try {
   session = JSON.parse(sessionStorage.getItem(SESSION_KEY) ?? 'null');
@@ -40,7 +99,10 @@ const ui = new HostUI(
   {
     addBot: () => void report(socket.emitWithAck('ADD_BOT', {})),
     start: () => void report(socket.emitWithAck('START_GAME', {})),
-    restart: () => void report(socket.emitWithAck('RESTART_GAME', {})),
+    restart: () => {
+      clearHostTimers();
+      void report(socket.emitWithAck('RESTART_GAME', {}));
+    },
     setSettings: (s) => void report(socket.emitWithAck('SET_SETTINGS', s)),
     menuNav: (nav) => void report(socket.emitWithAck('MENU_NAV', nav))
   },
@@ -194,6 +256,7 @@ const pauseMenu = createPauseMenu({
     return r.ok ? null : r.error;
   },
   exitGame: async () => {
+    clearHostTimers();
     const r = await socket.emitWithAck('RESTART_GAME', {});
     return r.ok ? null : r.error;
   },
@@ -227,6 +290,10 @@ socket.on('SELFIE_UPDATE', ({ playerId, dataUrl }) => {
   if (dataUrl) selfies.set(playerId, dataUrl);
   else selfies.delete(playerId);
   stage.setSelfie(playerId, dataUrl);
+});
+
+socket.on('VOICE_SAY', (p: VoiceSayPayload) => {
+  audio.say(p.key, 1500, p.priority ?? 'normal', { text: p.text, texts: p.texts, nome: p.args?.nome, onStart: showSubtitle });
 });
 
 socket.on('ROOM_STATE', (s) => {
@@ -325,6 +392,7 @@ function musicFor(s: RoomSnapshot): string | null {
 }
 
 function onPhaseEnter(s: RoomSnapshot, prev: RoomSnapshot | null) {
+  clearHostTimers();
   const music = musicFor(s);
   // Il brano da indovinare tace la musica di sottofondo finché non si rivela la risposta.
   if (!(s.phaseData.phase === 'PLAY' && s.phaseData.state.step === 'question' && s.phaseData.state.question.audio)) audio.stopClip();
@@ -348,16 +416,13 @@ function onPhaseEnter(s: RoomSnapshot, prev: RoomSnapshot | null) {
       sfx.spin();
       if (d.gameNumber === 1 && prev?.phase === 'LOBBY') {
         ui.banner('Si comincia!');
-        audio.say('start');
-      } else audio.say('wheel');
+      }
       break;
     case 'GAME_INTRO':
       stage.setBulbs('blink');
       stage.playAll('wave');
       sfx.join();
       ui.banner(`${GAMES[d.game].icon} ${GAMES[d.game].name}`, GAMES[d.game].color);
-      audio.say(prev?.phase === 'LOBBY' ? 'start' : `game_${d.game}`);
-      if (prev?.phase === 'LOBBY') setTimeout(() => audio.say(`game_${d.game}`), 1800);
       break;
     case 'CARD_PICK':
       stage.setBulbs('calm');
@@ -388,7 +453,7 @@ function onPhaseEnter(s: RoomSnapshot, prev: RoomSnapshot | null) {
       audio.say('final');
       // Dopo il volo della camera, ognuno sale al proprio gradino di partenza (più punti = più in alto).
       const climbs = s.players.filter((p) => p.pyramidStep > 0).map((p) => ({ playerId: p.id, from: 0, to: p.pyramidStep }));
-      setTimeout(() => {
+      setHostTimer(() => {
         stage.movePyramid(climbs, (m) => stage.floatText(m.playerId, `Gradino ${m.to}`, 'good'));
         if (climbs.length) sfx.climb();
         for (const p of s.players) if (p.pyramidStep === 0) stage.floatText(p.id, 'Da terra!', 'info');
@@ -400,7 +465,6 @@ function onPhaseEnter(s: RoomSnapshot, prev: RoomSnapshot | null) {
       for (const p of s.players) stage.play(p.id, p.id === d.winnerId ? 'dance' : 'idle');
       ui.confetti();
       sfx.fanfare();
-      setTimeout(() => audio.say('winner'), 900);
       break;
   }
 }
@@ -426,7 +490,7 @@ function onStep(s: RoomSnapshot, game: string, st: Extract<RoomSnapshot['phaseDa
       if (st.question.audio) {
         const url = st.question.audio;
         // Breve pausa perché tutti leggano le opzioni, poi parte il brano.
-        setTimeout(() => {
+        setHostTimer(() => {
           if (last?.phaseData.phase === 'PLAY' && last.phaseData.state.step === 'question' && last.phaseData.state.question.audio === url) {
             void audio.clip(url).then((ok) => ok || ui.toast('🎵 Brano non disponibile'));
           }
@@ -438,7 +502,7 @@ function onStep(s: RoomSnapshot, game: string, st: Extract<RoomSnapshot['phaseDa
       break;
     case 'reveal': {
       sfx.reveal();
-      setTimeout(() => {
+      setHostTimer(() => {
         let anyCorrect = false;
         for (const r of st.results) {
           anyCorrect ||= r.correct;
@@ -448,12 +512,10 @@ function onStep(s: RoomSnapshot, game: string, st: Extract<RoomSnapshot['phaseDa
           else if (!r.correct) stage.floatText(r.playerId, r.optionIndex === null ? '⏰' : '✗', 'bad');
         }
         anyCorrect ? sfx.correct() : sfx.wrong();
-        if (!st.results.some((r) => r.optionIndex !== null)) audio.say('nobody', 8000);
-        else audio.say(anyCorrect ? 'correct' : 'wrong', 8000);
       }, 600);
       if (st.moves?.length) {
         const moves = st.moves;
-        setTimeout(() => {
+        setHostTimer(() => {
           sfx.climb();
           audio.say('climb', 12_000);
           stage.movePyramid(moves, (m) => stage.floatText(m.playerId, `▲ ${m.to - m.from}`, 'good'));
@@ -469,7 +531,7 @@ function onStep(s: RoomSnapshot, game: string, st: Extract<RoomSnapshot['phaseDa
     case 'transfers':
       if (st.transfers.length) audio.say('steal');
       st.transfers.forEach((t, i) =>
-        setTimeout(() => {
+        setHostTimer(() => {
           stage.coins(t.from, t.to);
           sfx.steal();
           stage.floatText(t.to, `+${t.amount}`, 'good');
@@ -488,7 +550,7 @@ function onStep(s: RoomSnapshot, game: string, st: Extract<RoomSnapshot['phaseDa
     case 'boom':
       stage.explodeBomb();
       sfx.boom();
-      setTimeout(() => audio.say('boom'), 700);
+      setHostTimer(() => audio.say('boom'), 700);
       ui.banner('💥 BOOM!', '#e63946');
       stage.floatText(st.holder, `-${st.penalty}`, 'bad');
       break;
@@ -499,7 +561,7 @@ function onStep(s: RoomSnapshot, game: string, st: Extract<RoomSnapshot['phaseDa
       break;
     case 'numericReveal':
       sfx.reveal();
-      setTimeout(() => {
+      setHostTimer(() => {
         for (const g of st.guesses) {
           stage.play(g.playerId, g.rank === 1 ? 'cheer' : g.points ? 'idle' : 'sad');
           if (g.points) stage.floatText(g.playerId, `+${g.points}`, 'good');

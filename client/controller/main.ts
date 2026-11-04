@@ -91,6 +91,7 @@ socket.on('connect', () => {
   else if (!joined) renderJoin();
 });
 socket.on('disconnect', () => {
+  live = false;
   if (joined) conn.hidden = false;
 });
 socket.on('ROOM_STATE', (snap) => {
@@ -99,6 +100,9 @@ socket.on('ROOM_STATE', (snap) => {
   render();
 });
 socket.on('KICKED', () => leave('Sei stato rimosso dalla stanza.'));
+
+// Gli emit fatti offline vengono svuotati da socket.io prima del re-JOIN ("Non sei in una stanza"): finché non si è rientrati li scartiamo.
+let live = false;
 
 async function join(code: string, name: string, prev?: Pick<Session, 'playerId' | 'rejoinKey'>, silent = false) {
   const r = await socket.emitWithAck('JOIN_ROOM', { code: code.toUpperCase(), name, playerId: prev?.playerId, rejoinKey: prev?.rejoinKey });
@@ -110,6 +114,7 @@ async function join(code: string, name: string, prev?: Pick<Session, 'playerId' 
     return renderJoin(silent ? '' : r.error);
   }
   joined = true;
+  live = true;
   session = { code: code.toUpperCase(), name, playerId: r.playerId, rejoinKey: r.rejoinKey };
   store(SESSION_KEY, session);
   if (!r.reconnected) {
@@ -134,6 +139,33 @@ async function requestWakeLock() {
   } catch {
     /* non supportato: pazienza */
   }
+}
+// HTTP su LAN = niente wakeLock: un video muto in loop, avviato al primo tocco, tiene lo schermo acceso.
+if (!navigator.wakeLock) {
+  document.addEventListener(
+    'pointerdown',
+    () => {
+      const v = document.createElement('video');
+      v.muted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.setAttribute('playsinline', '');
+      v.style.cssText = 'position:fixed;width:1px;height:1px;opacity:0.01;pointer-events:none';
+      // shortcut: stream da canvas invece di un file video; non verificato su tutti i browser vecchi
+      const c = document.createElement('canvas');
+      c.width = c.height = 2;
+      const g = c.getContext('2d')!;
+      let n = 0;
+      setInterval(() => {
+        g.fillStyle = n++ % 2 ? '#000' : '#010101';
+        g.fillRect(0, 0, 2, 2);
+      }, 1000);
+      v.srcObject = c.captureStream(1);
+      document.body.appendChild(v);
+      void v.play().catch(() => {});
+    },
+    { once: true }
+  );
 }
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && joined) void requestWakeLock();
@@ -169,7 +201,13 @@ async function act(p: Promise<{ ok: boolean; error?: string } | { ok: false; err
   if (!r.ok && 'error' in r) toast(r.error ?? 'Errore');
   return r.ok;
 }
-const gameAction = (a: GameAction) => act(socket.emitWithAck('GAME_ACTION', a));
+const gameAction = (a: GameAction) => {
+  if (!live) {
+    toast('Connessione persa, riprova tra un attimo');
+    return Promise.resolve(false);
+  }
+  return act(socket.emitWithAck('GAME_ACTION', a));
+};
 
 function wait(main: string, sub = '') {
   app.innerHTML = `<div class="view center"><div class="done pop">${main}</div>${sub ? `<p class="muted">${sub}</p>` : ''}</div>`;
@@ -232,7 +270,7 @@ function keyOf(snap: RoomSnapshot, p: PlayerPublic): string {
         case 'vote':
           return `${g}|vote|${m.myVote}|${local.jokerArmed}|${p.jokerLeft}`;
         case 'question':
-          return `${g}|q|${st.question.id}|${m.myAnswer}|${m.blocked}|${st.holder}`;
+          return `${g}|q|${st.question.id}|${st.question.clue ? st.question.text : ''}|${m.myAnswer}|${m.blocked}|${st.holder}`;
         case 'steal':
           return `${g}|steal|${st.question.id}|${m.choose?.done}`;
         case 'bet':
@@ -484,7 +522,7 @@ function playView(game: string, st: PlayState, p: PlayerPublic) {
   const m = s!.me!;
   const effectsFor = (qid: string) => (m.cur?.questionId === qid ? m.cur.incoming.filter((e) => p.activeEffects.includes(e.type)) : []);
   const removedFor = (qid: string) => (m.cur?.questionId === qid ? m.cur.removed : []);
-  const onCleared = (type: PowerType) => socket.emit('CLEAR_EFFECT', { type });
+  const onCleared = (type: PowerType) => (live ? socket.emit('CLEAR_EFFECT', { type }) : toast('Connessione persa, riprova tra un attimo'));
 
   switch (st.step) {
     case 'vote': {
@@ -526,7 +564,7 @@ function playView(game: string, st: PlayState, p: PlayerPublic) {
         removed: removedFor(q.id),
         blocked: m.blocked,
         banner: questionBanner(game, st, p),
-        onAnswer: (i) => void gameAction({ type: 'answer', questionId: q.id, optionIndex: i }),
+        onAnswer: (i) => gameAction({ type: 'answer', questionId: q.id, optionIndex: i }),
         onCleared
       });
       return;
@@ -614,7 +652,7 @@ function playView(game: string, st: PlayState, p: PlayerPublic) {
       cleanup = numericView(app, q, effectsFor(q.id), {
         submitted: m.myNumeric,
         hint: m.cur?.questionId === q.id ? m.cur.hint : null,
-        onSubmit: (value) => void gameAction({ type: 'numeric', questionId: q.id, value }),
+        onSubmit: (value) => gameAction({ type: 'numeric', questionId: q.id, value }),
         onCleared
       });
       return;
@@ -638,7 +676,7 @@ function playView(game: string, st: PlayState, p: PlayerPublic) {
         removed: removedFor(q.id),
         blocked: false,
         banner: `🔥 Serie <b>${b.streak}</b> · ×${b.multiplier} · <b>${b.points}</b> pti`,
-        onAnswer: (i) => void gameAction({ type: 'answer', questionId: q.id, optionIndex: i }),
+        onAnswer: (i) => gameAction({ type: 'answer', questionId: q.id, optionIndex: i }),
         onCleared
       });
       if (b.feedback) app.querySelector('.question')?.classList.add(b.feedback === 'correct' ? 'flash-good' : 'flash-bad');
@@ -889,6 +927,7 @@ function lobbyView(snap: RoomSnapshot, p: PlayerPublic) {
         await act(socket.emitWithAck('UPLOAD_SELFIE', { dataUrl: null }));
         return render(true);
       case 'ready':
+        if (!live) return toast('Connessione persa, riprova tra un attimo');
         if (!p.ready) {
           clearTimeout(selectTimer);
           const r = await select();

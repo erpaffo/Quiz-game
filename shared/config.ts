@@ -35,7 +35,6 @@ export const CONFIG = {
   CLASSIC_QUESTIONS: 4,
   FASTEST_QUESTIONS: 5,
   FASTEST_WIN: 1000,
-  FASTEST_PENALTY: 300,
   BOMB_FUSE_MIN: 35_000,
   BOMB_FUSE_MAX: 55_000,
   BOMB_PENALTY: 1000,
@@ -50,7 +49,6 @@ export const CONFIG = {
   ESTIMATE_POINTS: [1000, 600, 300],
   ESTIMATE_EXACT_BONUS: 500,
   CLUES_QUESTIONS: 4,
-  CLUES_WRONG_PENALTY: 200,
 
   PYRAMID_STEPS: 8,
   /** Gradino di partenza massimo (per chi ha il punteggio più alto). */

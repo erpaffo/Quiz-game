@@ -1,0 +1,50 @@
+name: Verifica AI delle domande (DeepSeek)
+
+# Controlla con DeepSeek V4.1 Flash (modello «deepseek-flash») che le domande approvate siano vere.
+# Gira su GitHub quando cambiano le domande approvate, a mano, o dentro la release (release.yml).
+# Richiede il segreto DEEPSEEK_API_KEY (Settings → Secrets and variables → Actions).
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'banca-domande/approvate/**'
+      - 'scripts/ai-verifica*.ts'
+      - '.github/workflows/verifica-ai.yml'
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verifica-ai-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dipendenze
+        run: npm ci
+
+      - name: Verifica AI delle domande
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-flash
+        run: npm run ai-verifica
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rapporto-verifica-ai
+          path: ai-generati/verifiche/rapporto.json
+          if-no-files-found: ignore

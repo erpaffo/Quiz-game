@@ -3,7 +3,7 @@ import { BaseShow } from '../../core/BaseShow';
 import { cleanText, isIntIn, payloadOf, tally, topKeys } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { pick, shuffle } from '../../util';
+import { pick, pickFresh, shuffle } from '../../util';
 
 export const COLPEVOLE_SURVEY: readonly ColpevoleQuestion[] = [
   { text: 'Cane o gatto?', options: ['Cane', 'Gatto'] },
@@ -51,13 +51,15 @@ export class ColpevoleShow extends BaseShow<ColpevolePublic, ColpevolePrivate> {
   private lastReveal: Extract<ColpevolePublic, { step: 'reveal' }> | null = null;
 
   start(): ActionResult {
-    this.questions = shuffle(COLPEVOLE_SURVEY).slice(0, COLPEVOLE.QUESTIONS);
+    this.questions = pickFresh(COLPEVOLE_SURVEY, COLPEVOLE.QUESTIONS, this.ctx.seen(this.id), (q) => q.text);
     this.go('survey', COLPEVOLE.SURVEY_MS, () => {
       // Chi non ha risposto riceve risposte a caso: il tabellone deve essere completo.
       for (const p of this.ctx.players()) {
         if (!this.answers.has(p.id)) this.answers.set(p.id, this.questions.map(() => (Math.random() < 0.5 ? 0 : 1)));
       }
       this.culprits = shuffle(this.ctx.players().map((p) => p.id));
+      const online = this.culprits.filter((id) => this.ctx.get(id)?.connected);
+      if (online.length) this.culprits = online;
       this.nextCase();
     });
     return null;
@@ -67,7 +69,8 @@ export class ColpevoleShow extends BaseShow<ColpevolePublic, ColpevolePrivate> {
     if (this.caseNo >= this.rounds) return this.finish();
     this.caseNo++;
     // Modulo sulla lista dei soli connessi (con più casi che giocatori il colpevole può tornare).
-    const present = this.culprits.filter((id) => this.ctx.get(id));
+    const online = this.culprits.filter((id) => this.ctx.get(id)?.connected);
+    const present = online.length ? online : this.culprits.filter((id) => this.ctx.get(id));
     this.culpritId = present[(this.caseNo - 1) % present.length];
     this.falsified = null;
     this.clues = [];

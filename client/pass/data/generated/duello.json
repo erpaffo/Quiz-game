@@ -1,1 +1,234 @@
-[]
+[
+ {
+  "text": "Lo scheletro di un adulto ha 206 ossa?",
+  "truth": true
+ },
+ {
+  "text": "Il femore è l’osso più lungo del corpo umano?",
+  "truth": true
+ },
+ {
+  "text": "I globuli rossi trasportano l’ossigeno nel sangue?",
+  "truth": true
+ },
+ {
+  "text": "Lo stomaco produce acido cloridrico per digerire?",
+  "truth": true
+ },
+ {
+  "text": "La pelle è l’organo più grande del corpo umano?",
+  "truth": true
+ },
+ {
+  "text": "Il cervello umano è composto in gran parte da acqua?",
+  "truth": true
+ },
+ {
+  "text": "I polmoni scambiano ossigeno con anidride carbonica?",
+  "truth": true
+ },
+ {
+  "text": "Il Sole è una stella?",
+  "truth": true
+ },
+ {
+  "text": "Il Sole è più grande della Terra?",
+  "truth": true
+ },
+ {
+  "text": "La Terra compie un giro intorno al Sole in circa un anno?",
+  "truth": true
+ },
+ {
+  "text": "Mercurio è il pianeta più vicino al Sole?",
+  "truth": true
+ },
+ {
+  "text": "Giove è il pianeta più grande del Sistema Solare?",
+  "truth": true
+ },
+ {
+  "text": "Saturno è circondato da anelli?",
+  "truth": true
+ },
+ {
+  "text": "Il primo uomo a camminare sulla Luna fu Neil Armstrong?",
+  "truth": true
+ },
+ {
+  "text": "Yuri Gagarin è stato il primo essere umano nello spazio?",
+  "truth": true
+ },
+ {
+  "text": "Il Nilo attraversa l’Egitto?",
+  "truth": true
+ },
+ {
+  "text": "La capitale del Canada è Ottawa?",
+  "truth": true
+ },
+ {
+  "text": "L’India ha più di un miliardo di abitanti?",
+  "truth": true
+ },
+ {
+  "text": "Il Muro di Berlino cadde nel 1989?",
+  "truth": true
+ },
+ {
+  "text": "Giulio Cesare fu ucciso nel 44 a.C.?",
+  "truth": true
+ },
+ {
+  "text": "Il Titanic affondò nel 1912?",
+  "truth": true
+ },
+ {
+  "text": "Il cavallo è un erbivoro?",
+  "truth": true
+ },
+ {
+  "text": "Il ghepardo è l’animale terrestre più veloce?",
+  "truth": true
+ },
+ {
+  "text": "Il canguro è un marsupiale?",
+  "truth": true
+ },
+ {
+  "text": "Il riso è un cereale?",
+  "truth": true
+ },
+ {
+  "text": "La patata è un tubero?",
+  "truth": true
+ },
+ {
+  "text": "Il tè è una bevanda ottenuta dalle foglie di una pianta?",
+  "truth": true
+ },
+ {
+  "text": "Il Giro d’Italia è una corsa ciclistica?",
+  "truth": true
+ },
+ {
+  "text": "Nel tennis lo zero si chiama «love»?",
+  "truth": true
+ },
+ {
+  "text": "Nel rugby la palla può essere portata in mano?",
+  "truth": true
+ },
+ {
+  "text": "Il cervello umano pesa circa 5 chili?",
+  "truth": false
+ },
+ {
+  "text": "Gli esseri umani hanno 3 occhi?",
+  "truth": false
+ },
+ {
+  "text": "A riposo il cuore batte circa 30 volte al minuto?",
+  "truth": false
+ },
+ {
+  "text": "Il fegato è l'organo che produce l'insulina?",
+  "truth": false
+ },
+ {
+  "text": "Un bambino ha 32 denti da latte?",
+  "truth": false
+ },
+ {
+  "text": "Il corpo umano ha circa 20 muscoli?",
+  "truth": false
+ },
+ {
+  "text": "Lo spazio è pieno di aria respirabile?",
+  "truth": false
+ },
+ {
+  "text": "La Luna emette luce propria?",
+  "truth": false
+ },
+ {
+  "text": "Venere è il pianeta più lontano dal Sole?",
+  "truth": false
+ },
+ {
+  "text": "Il suono viaggia più veloce della luce?",
+  "truth": false
+ },
+ {
+  "text": "L'acqua è formata da tre atomi di idrogeno e uno di ossigeno?",
+  "truth": false
+ },
+ {
+  "text": "Un anno luce è un'unità di tempo?",
+  "truth": false
+ },
+ {
+  "text": "La Francia ha come capitale Lione?",
+  "truth": false
+ },
+ {
+  "text": "Il Brasile ha come lingua ufficiale lo spagnolo?",
+  "truth": false
+ },
+ {
+  "text": "Il Tevere attraversa Firenze?",
+  "truth": false
+ },
+ {
+  "text": "Il Danubio nasce in Italia?",
+  "truth": false
+ },
+ {
+  "text": "La Seconda guerra mondiale è finita nel 1918?",
+  "truth": false
+ },
+ {
+  "text": "Cristoforo Colombo ha raggiunto l’America nel 1592?",
+  "truth": false
+ },
+ {
+  "text": "Il Colosseo è stato costruito nel Medioevo?",
+  "truth": false
+ },
+ {
+  "text": "La Rivoluzione francese è iniziata nel 1889?",
+  "truth": false
+ },
+ {
+  "text": "Il delfino è un pesce?",
+  "truth": false
+ },
+ {
+  "text": "I koala sono una specie di orso?",
+  "truth": false
+ },
+ {
+  "text": "Lo struzzo è l’uccello più piccolo del mondo?",
+  "truth": false
+ },
+ {
+  "text": "Il parmigiano si ottiene dal latte di capra?",
+  "truth": false
+ },
+ {
+  "text": "La banana cresce sotto terra?",
+  "truth": false
+ },
+ {
+  "text": "Nel basket un canestro vale 5 punti?",
+  "truth": false
+ },
+ {
+  "text": "I Mondiali di calcio si giocano ogni due anni?",
+  "truth": false
+ },
+ {
+  "text": "Il Tour de France si corre in automobile?",
+  "truth": false
+ }
+]

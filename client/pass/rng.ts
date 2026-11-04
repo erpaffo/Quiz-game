@@ -31,28 +31,65 @@ export function shuffle<T>(rng: Rng, list: readonly T[]): T[] {
   return a;
 }
 
+/** Dove il mazzo ricorda le chiavi delle carte già uscite (es. localStorage). */
+export interface SeenStore {
+  get(): string[];
+  set(keys: string[]): void;
+}
+
+/** Chiave stabile di una carta: testo minuscolo, senza accenti né punteggiatura (non dipende dalla posizione). */
+export function normKey(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+const defaultKey = (c: unknown) => normKey(typeof c === 'string' ? c : JSON.stringify(c));
+
 /**
  * Mazzo di carte: pesca senza ripetizioni finché non finisce, poi rimescola
- * (evitando che l'ultima carta uscita sia di nuovo la prima).
+ * (le ultime N carte uscite, N = min(10, 25% del mazzo), tornano solo in fondo).
+ * Con `seen` ricorda le carte uscite anche tra una partita e l'altra; chiavi non più nel mazzo sono ignorate.
  */
 export class Deck<T> {
   private pile: T[] = [];
-  private last: T | undefined;
+  private seen: string[];
 
   constructor(
     private readonly cards: readonly T[],
-    private readonly rng: Rng
+    private readonly rng: Rng,
+    private readonly store?: SeenStore,
+    private readonly keyOf: (card: T) => string = defaultKey
   ) {
     if (cards.length === 0) throw new Error('Mazzo vuoto');
+    const live = new Set(cards.map(keyOf));
+    this.seen = (store?.get() ?? []).filter((k) => live.has(k));
   }
 
   draw(): T {
-    if (this.pile.length === 0) {
-      this.pile = shuffle(this.rng, this.cards);
-      if (this.pile.length > 1 && this.pile[this.pile.length - 1] === this.last) this.pile.unshift(this.pile.pop()!);
+    if (this.pile.length === 0) this.refill();
+    const card = this.pile.pop()!;
+    this.seen.push(this.keyOf(card));
+    this.store?.set(this.seen);
+    return card;
+  }
+
+  private refill() {
+    const seen = new Set(this.seen);
+    const fresh = this.cards.filter((c) => !seen.has(this.keyOf(c)));
+    if (fresh.length > 0) {
+      this.pile = shuffle(this.rng, fresh);
+      return;
     }
-    this.last = this.pile.pop()!;
-    return this.last;
+    // ciclo finito: si ricomincia, ma le ultime uscite vanno in fondo al nuovo mazzo (la pila si pesca dalla fine)
+    const n = this.cards.length > 1 ? Math.min(10, Math.max(1, Math.floor(this.cards.length / 4))) : 0;
+    const recent = new Set(this.seen.slice(-n));
+    const isRecent = (c: T) => recent.has(this.keyOf(c));
+    this.pile = [...shuffle(this.rng, this.cards.filter(isRecent)), ...shuffle(this.rng, this.cards.filter((c) => !isRecent(c)))];
+    this.seen = [];
   }
 
   get size() {

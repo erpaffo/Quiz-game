@@ -1,12 +1,12 @@
 """Genera gli AUDIO PROVVISORI del gioco (da sostituire con i tuoi) e il pacchetto «Melodie famose».
    python scripts/build-audio.py
 Richiede: Python 3 + numpy. Facoltativi: ffmpeg (per gli mp3, altrimenti restano wav) e,
-su Windows, la voce italiana di sistema (per le battute del presentatore).
+edge-tts (pip install edge-tts, per le battute del presentatore). Opzione: --solo <prefisso> rigenera solo quelle voci.
 
 Crea:
   client/public/audio/music/*    musiche di sottofondo in loop
   client/public/audio/sfx/*      effetti sonori
-  client/public/audio/voice/*    battute del presentatore (sintesi vocale)
+  client/public/audio/voice/*    battute del presentatore (Edge-TTS; voice/.recorded.json = chiavi registrate a voce, mai rigenerate)
   client/public/audio/melodie/*  brani di pubblico dominio per «Indovina il brano»
   client/public/audio/audio.json elenco dei suoni usati dal gioco (modificabile a mano)
   server/data/packs/melodie.json pacchetto di domande con i brani
@@ -309,47 +309,57 @@ def voice_lines(brand):
     }
 
 
-def build_voices(lines):
-    """Sintesi vocale con la voce italiana di Windows (System.Speech). Restituisce {chiave: [file]}."""
-    if os.name != 'nt':
-        print('Voci: sintesi disponibile solo su Windows, salto.')
-        return {}
+VOICE = 'it-IT-DiegoNeural'  # voce neurale Edge-TTS (it-IT-IsabellaNeural, it-IT-ElsaNeural, ...)
+
+
+def split_name(text):
+    """'Ciao {nome}, vai!' -> [('pre','Ciao'), ('post',', vai!')]; senza {nome} -> [('', text)]."""
+    if '{nome}' not in text:
+        return [('', text)]
+    pre, post = text.split('{nome}', 1)
+    return [(sfx, t.strip()) for sfx, t in (('.pre', pre), ('.post', post)) if t.strip(' ,;:')]
+
+
+def build_voices(lines, solo=''):
+    """Edge-TTS + loudnorm -> mp3. Chiavi `gioco/passo` vanno in voice/gioco/. Le chiavi in voice/.recorded.json
+    (registrate dall'utente) non si rigenerano mai. Restituisce {chiave: [file]}."""
+    try:
+        import edge_tts
+    except ImportError:
+        sys.exit('Voci: manca edge-tts. Esegui: pip install edge-tts')
+    import asyncio
     voice_dir = os.path.join(OUT, 'voice')
     os.makedirs(voice_dir, exist_ok=True)
-    jobs = []
+    rec_path = os.path.join(voice_dir, '.recorded.json')
+    recorded = set(json.load(open(rec_path, encoding='utf8'))) if os.path.exists(rec_path) else set()
+    manifest, jobs = {}, []
     for key, texts in lines.items():
+        if not key.startswith(solo):
+            continue
         for i, text in enumerate(texts, 1):
-            jobs.append({'file': os.path.join(voice_dir, f'{key}-{i}.wav'), 'text': text})
-    tmp = tempfile.NamedTemporaryFile('w', suffix='.json', delete=False, encoding='utf-8')
-    json.dump(jobs, tmp, ensure_ascii=False)
-    tmp.close()
-    ps = r"""
-Add-Type -AssemblyName System.Speech
-$jobs = Get-Content -Raw -Encoding UTF8 '%s' | ConvertFrom-Json
-$s = New-Object System.Speech.Synthesis.SpeechSynthesizer
-$it = $s.GetInstalledVoices() | Where-Object { $_.VoiceInfo.Culture.Name -like 'it*' } | Select-Object -First 1
-if (-not $it) { Write-Output 'NOVOICE'; exit 0 }
-$s.SelectVoice($it.VoiceInfo.Name)
-$s.Rate = 1
-foreach ($j in $jobs) { $s.SetOutputToWaveFile($j.file); $s.Speak($j.text) }
-$s.SetOutputToNull(); $s.Dispose()
-Write-Output "OK $($it.VoiceInfo.Name)"
-""" % tmp.name.replace("'", "''")
-    res = subprocess.run(['powershell', '-NoProfile', '-Command', ps], capture_output=True, text=True)
-    os.unlink(tmp.name)
-    if 'NOVOICE' in res.stdout or res.returncode != 0:
-        print('Voci: nessuna voce italiana installata, salto.', res.stderr[:200])
-        return {}
-    print('Voci:', res.stdout.strip())
-    manifest = {}
-    for j in jobs:
-        base = j['file'][:-4]
-        if FFMPEG:
-            # leggera normalizzazione del volume, poi mp3
-            subprocess.run([FFMPEG, '-y', '-loglevel', 'error', '-i', j['file'], '-af', 'loudnorm=I=-16:TP=-1.5', '-ac', '1', '-b:a', '64k', base + '.mp3'], check=True)
-            os.remove(j['file'])
-        key = os.path.basename(base).rsplit('-', 1)[0]
-        manifest.setdefault(key, []).append('voice/' + os.path.basename(base) + EXT)
+            for sfx, t in split_name(text):
+                rel = f'{key}-{i}{sfx}.mp3'
+                manifest.setdefault(key, []).append('voice/' + rel)
+                if key not in recorded:
+                    jobs.append((os.path.join(voice_dir, *rel.split('/')), t))
+        if key in recorded:  # il manifest punta ai file veri gia' presenti
+            keep = sorted(os.path.relpath(os.path.join(dp, f), voice_dir).replace(os.sep, '/')
+                          for dp, _, fs in os.walk(os.path.join(voice_dir, *key.split('/')[:-1]))
+                          for f in fs if f.startswith(key.split('/')[-1] + '-'))
+            manifest[key] = ['voice/' + f for f in keep] or manifest[key]
+
+    async def run():
+        for path, text in jobs:
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            raw = path + '.raw.mp3'
+            await edge_tts.Communicate(text, VOICE).save(raw)
+            if FFMPEG:
+                subprocess.run([FFMPEG, '-y', '-loglevel', 'error', '-i', raw, '-af', 'loudnorm=I=-16:TP=-1.5', '-ac', '1', '-b:a', '64k', path], check=True)
+                os.remove(raw)
+            else:
+                os.replace(raw, path)
+    asyncio.run(run())
+    print(f'Voci: {len(jobs)} file con {VOICE}, {len(recorded)} chiavi registrate saltate')
     return manifest
 
 
@@ -449,8 +459,15 @@ def build_melodies():
 
 # ------------------------------------------------------------------ main
 def main():
+    solo = sys.argv[sys.argv.index('--solo') + 1] if '--solo' in sys.argv else None
     brand = json.load(open(os.path.join(ROOT, 'shared', 'brand.json'), encoding='utf8'))['name']
     os.makedirs(OUT, exist_ok=True)
+    if solo is not None:  # rigenera solo le voci con quel prefisso e le fonde in audio.json esistente
+        mp = os.path.join(OUT, 'audio.json')
+        manifest = json.load(open(mp, encoding='utf8'))
+        manifest['voice'].update(build_voices(voice_lines(brand), solo))
+        json.dump(manifest, open(mp, 'w', encoding='utf8', newline='\n'), ensure_ascii=False, indent=2)
+        return
     manifest = {
         '_istruzioni': 'Per sostituire un suono metti il tuo file (mp3, ogg o wav) in questa cartella e scrivi qui il suo nome. '
                        'Una lista con più file = il gioco ne sceglie uno a caso (utile per variare le battute). '

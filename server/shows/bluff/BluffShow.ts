@@ -30,8 +30,14 @@ export class BluffShow extends BaseShow<BluffPublic, BluffPrivate> {
 
   start(): ActionResult {
     this.facts = shuffle(BLUFF_FACTS).slice(0, this.rounds);
+    this.ctx.say?.('bluff/intro');
     this.next();
     return null;
+  }
+
+  protected finish() {
+    this.ctx.say?.('bluff/final');
+    super.finish();
   }
 
   private get fact(): BluffFact {
@@ -72,6 +78,7 @@ export class BluffShow extends BaseShow<BluffPublic, BluffPrivate> {
     );
     this.roundPoints = {};
     for (const p of this.ctx.players()) this.roundPoints[p.id] = this.ctx.addScore(p, pts.get(p.id) ?? 0);
+    this.ctx.say?.('bluff/reveal');
     this.go('reveal', BLUFF.REVEAL_MS, () => this.next());
   }
 
@@ -93,7 +100,8 @@ export class BluffShow extends BaseShow<BluffPublic, BluffPrivate> {
       }
       const text = cleanText(lie!.text, BLUFF.MAX_CHARS);
       if (!text) return 'Scrivi una bugia';
-      if (isTruth(text, this.fact.answer)) return 'Hai scritto la verità! Inventa una bugia';
+      // La verità non è una bugia: stesso rifiuto generico delle altre risposte non valide, senza confermarla.
+      if (isTruth(text, this.fact.answer)) return 'Bugia non valida';
       this.lies.set(p.id, text);
       this.safetyUsers.delete(p.id);
       return null;

@@ -1,6 +1,7 @@
 // 🕵️ L'Impostore Tascabile — giro segreto con lo Scudo, discussione a tempo, voto e ultima possibilità.
 
-import { dealImpostore, hasLastChance, impostorePoints, isCaught, outcomeOf, type ImpostoreDeal } from '../logic/impostore';
+import { CHAMELEON_PAIRS } from '../data/impostore';
+import { IMPOSTORE_WORDS, dealImpostore, hasLastChance, pairKey, wordKey, impostorePoints, isCaught, outcomeOf, type ImpostoreDeal } from '../logic/impostore';
 import type { PassGame, Player } from '../types';
 import { esc, pointsList, screen, shield, tag, Timers } from '../ui';
 
@@ -14,10 +15,14 @@ export const impostore: PassGame = (ctx) => {
   let round = 0;
   let deal: ImpostoreDeal;
   const byId = (id: string) => ctx.players.find((p) => p.id === id)!;
+  const decks = {
+    classico: ctx.deck('impostore', IMPOSTORE_WORDS, wordKey),
+    camaleonte: ctx.deck('camaleonte', CHAMELEON_PAIRS, pairKey)
+  };
 
   const startRound = () => {
     round++;
-    deal = dealImpostore(ctx.players, { mode: ctx.options.mode, impostors: Number(ctx.options.impostors) || 1 }, Math.random);
+    deal = dealImpostore(ctx.players, { mode: ctx.options.mode, impostors: Number(ctx.options.impostors) || 1 }, Math.random, decks);
     secretTurn(0);
   };
 

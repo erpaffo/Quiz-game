@@ -1,5 +1,6 @@
 // ⏱️ 5 Secondi di Panico — il vicino legge, «VIA!», tre risposte prima dello scadere.
 
+import { PANICO_PROMPTS } from '../data/panico';
 import { PanicoGame, type PanicoEvent } from '../logic/panico';
 import type { PassGame } from '../types';
 import { esc, pointsList, screen, tag, Timers } from '../ui';
@@ -7,7 +8,7 @@ import { esc, pointsList, screen, tag, Timers } from '../ui';
 export const panico: PassGame = (ctx) => {
   const t = new Timers();
   const seconds = Number(ctx.options.seconds) || 5;
-  const game = new PanicoGame(ctx.players, Number(ctx.options.turns) || 2, Math.random);
+  const game = new PanicoGame(ctx.players, Number(ctx.options.turns) || 2, ctx.deck('panico', PANICO_PROMPTS));
   const points: Record<string, number> = {};
 
   const nextTurn = () => {

@@ -1,6 +1,8 @@
 // Tipi della modalità «Passa-il-Telefono»: un solo telefono, nessun server, nessuna rete.
 // Le regole dei giochi (cartella logic/) sono pure e testabili; la grafica (games/) usa il DOM.
 
+import type { Deck, Rng } from './rng';
+
 export type PassGameId = 'fronte' | 'bomba' | 'impostore' | 'panico' | 'onda' | 'tribunale' | 'catena' | 'duello';
 
 export type PassCategory = 'azione' | 'parole' | 'ruoli' | 'intuito' | 'social' | 'disegno' | 'riflessi';
@@ -63,6 +65,8 @@ export interface GameContext {
   exit(summary?: { title: string; html?: string }): void;
   /** Tiene lo schermo acceso durante il gioco, se il telefono lo permette. */
   keepAwake(on: boolean): void;
+  /** Mazzo che ricorda le carte già uscite tra una partita e l'altra (azzerato da «Nuova serata»). */
+  deck<T>(bankId: string, cards: readonly T[], keyOf?: (card: T) => string, rng?: Rng): Deck<T>;
 }
 
 /** Un gioco: parte, disegna dentro `root` e restituisce la funzione che ferma timer e suoni. */

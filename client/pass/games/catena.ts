@@ -2,7 +2,6 @@
 
 import { CATENA_PHRASES } from '../data/social';
 import { CATENA_AWARD_POINTS, CatenaChain, type ChainStep } from '../logic/catena';
-import { Deck } from '../rng';
 import type { PassGame, Player } from '../types';
 import { cover, esc, pointsList, screen, tag, Timers } from '../ui';
 
@@ -72,7 +71,7 @@ function sketchpad(host: HTMLElement): () => string {
 export const catena: PassGame = (ctx) => {
   const t = new Timers();
   const drawSecs = Number(ctx.options.draw) || 25;
-  const phrases = new Deck(CATENA_PHRASES, Math.random);
+  const phrases = ctx.deck('catena', CATENA_PHRASES);
   const chain = new CatenaChain(ctx.players);
   const points: Record<string, number> = {};
   const byId = (id: string) => ctx.players.find((p) => p.id === id)!;

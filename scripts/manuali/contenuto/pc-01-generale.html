@@ -1,0 +1,117 @@
+<h1>Il gioco in breve</h1>
+<p><b>Quiz del Pozzo</b> è un gioco da fare tutti insieme sul divano. Lo schermo del computer (o la TV) mostra lo studio televisivo in 3D, con i personaggi di tutti. I telefoni degli amici sono i <b>controller</b>: da lì si risponde, si scommette e si lanciano le carte potere. Possono giocare da <b>2 a 16 persone</b>, anche nella stessa stanza, senza bisogno di internet.</p>
+<p>Questo manuale spiega come preparare la serata e come si gioca al <b>Quiz della serata</b>, il gioco principale. Nella schermata iniziale il <b>Party Pack</b> contiene 14 giochi in tutto: il Quiz è il primo ed è quello descritto in dettaglio nelle pagine che seguono.</p>
+
+<h1>Cosa c'è nella scatola</h1>
+<p>Come in un gioco da tavolo, prima di cominciare controlla di avere tutto.</p>
+<table>
+<tr><th>Cosa serve</th><th>Note</th></tr>
+<tr><td>Un computer (o una TV collegata al computer)</td><td>Fa da schermo principale e da «cervello» del gioco. Windows, Mac o Linux.</td></tr>
+<tr><td>Da 2 a 16 smartphone</td><td>Uno a testa. Basta il browser, non si installa nessuna app.</td></tr>
+<tr><td>Una rete Wi-Fi</td><td>Computer e telefoni devono essere collegati alla <b>stessa rete</b>.</td></tr>
+<tr><td>Internet</td><td><b>Non serve.</b> Domande, bandiere, musiche e grafica sono già dentro il gioco.</td></tr>
+<tr><td>Altoparlanti o TV con audio</td><td>Musica, effetti e voce del presentatore escono dal computer.</td></tr>
+</table>
+<div class="consiglio">Per far funzionare tutto bene tieni i telefoni carichi e usa il computer collegato alla presa: il gioco in 3D consuma parecchia batteria.</div>
+
+<h1>Installazione e avvio</h1>
+<h2>Il modo più semplice: doppio clic</h2>
+<p>Dalla pagina delle <b>Releases</b> del progetto scarica il file giusto per il tuo computer. Non serve installare altro.</p>
+<table>
+<tr><th>Sistema</th><th>Cosa fare</th></tr>
+<tr><td>Windows</td><td>Doppio clic sul file <b>.exe</b>. Se compare «Windows ha protetto il PC», premi <b>Ulteriori informazioni</b> e poi <b>Esegui comunque</b>. Quando Windows chiede il permesso del firewall, spunta anche <b>Reti pubbliche</b> e consenti: altrimenti i telefoni non riescono a collegarsi.</td></tr>
+<tr><td>Mac</td><td>Apri il file <b>.dmg</b> e trascina l'app in <b>Applicazioni</b>. La prima volta non fare doppio clic: tasto destro sull'app, poi <b>Apri</b> e ancora <b>Apri</b>. Consenti le connessioni di rete in ingresso quando richiesto.</td></tr>
+<tr><td>Linux</td><td>Rendi eseguibile il file <b>.AppImage</b> (tasto destro, Proprietà, Permessi) e fai doppio clic. Se non parte installa <b>libfuse2</b>. Il firewall deve lasciar passare la porta 3000.</td></tr>
+</table>
+<p>Gli avvisi del primo avvio sono normali: l'app è gratuita e non è firmata da Microsoft o Apple, che chiedono un abbonamento a pagamento. Una volta aperta, l'app va a schermo intero: <b>F11</b> passa da schermo intero a finestra.</p>
+
+<h2>Altri modi di avviarlo</h2>
+<ul>
+<li><b>Dal terminale (per chi ha Node.js):</b> la prima volta, con internet, scrivi <code>npm install</code> e <code>npm run build</code>. Poi, ogni volta, <code>npm start</code>: il gioco parte su <code>http://localhost:3000</code>. Lo schermo principale è la pagina <code>/host.html</code>.</li>
+<li><b>App desktop da sorgente:</b> <code>npm run desktop</code>.</li>
+<li><b>Docker:</b> il progetto include un <code>Dockerfile</code> e un <code>docker-compose.yml</code> per avviare il server in un contenitore. Lo schermo principale si apre poi dal browser del computer.</li>
+</ul>
+<div class="attenzione">Apri il gioco dei telefoni solo sui telefoni, non in altre schede dello stesso computer: rallenterebbe lo schermo principale.</div>
+
+<h1>Entrare in partita: codice stanza e QR</h1>
+<p>Sullo schermo principale premi <b>Apri una nuova stanza</b>. Compare la <b>lobby</b>, cioè la sala d'attesa, con tre cose da conoscere:</p>
+<ul>
+<li>il <b>QR code</b>: ogni amico lo inquadra con la fotocamera del telefono e il gioco si apre da solo;</li>
+<li>l'<b>indirizzo</b> scritto sotto il QR, per chi preferisce digitarlo nel browser;</li>
+<li>il <b>codice stanza</b>, di 4 lettere, che identifica la vostra stanza (compare anche in alto sullo schermo).</li>
+</ul>
+<div class="consiglio">Se il QR non funziona perché il computer è collegato a più reti, premi <b>Non funziona? Prova un altro indirizzo</b> sotto il QR: il gioco propone l'indirizzo di un'altra rete.</div>
+
+<h2>Giocare senza internet: la «modalità bosco»</h2>
+<p>Non serve un router: basta una rete Wi-Fi qualunque, anche creata da un telefono. Ci sono due modi.</p>
+<table>
+<tr><th>Metodo</th><th>Come funziona</th></tr>
+<tr><td><b>A. Hotspot creato dal computer</b> (solo Windows con scheda Wi-Fi)</td><td>Nell'app, menu <b>Gioco</b>, voce <b>Accendi l'hotspot (modalità bosco)</b>. Da terminale: <code>npm run bosco</code>. Il computer crea la rete <b>QuizDelPozzo</b> da solo. Sulla TV compaiono <b>due QR</b>: il <b>QR 1</b> collega il telefono alla rete, il <b>QR 2</b> apre il gioco. Se il telefono avvisa «rete senza internet», scegli <b>Resta connesso</b>.</td></tr>
+<tr><td><b>B. Hotspot creato da un telefono</b></td><td>Su un telefono attiva l'hotspot (vanno bene anche i dati mobili spenti; su iPhone può servire un piano dati). Collega il computer a quella rete e avvia il gioco. Nella lobby premi <b>Senza internet? Mostra il QR dell'hotspot</b>, scrivi nome e password della rete e comparirà il QR per collegare gli altri.</td></tr>
+</table>
+<div class="consiglio">Prima di partire per una gita fai una prova generale a casa, senza internet. Un computer fisso senza scheda Wi-Fi non può creare l'hotspot: serve una chiavetta Wi-Fi USB. Porta un caricabatterie o un power bank.</div>
+
+<h1>La lobby</h1>
+<h2>Il capo stanza</h2>
+<p>Il primo giocatore che entra riceve la corona <b>👑</b> e diventa il <b>capo stanza</b>. Solo lui (dal telefono) può scegliere il gioco, cambiare le impostazioni, avviare la partita, saltare le spiegazioni e tornare al menù. La corona resta a lui anche se la rete ha un piccolo singhiozzo (15 secondi di pazienza); passa a un altro solo se esce davvero dalla stanza.</p>
+<p>Anche dal computer si può controllare il menù, in particolare per provare il gioco da soli con il pulsante <b>Aggiungi bot</b>, che inserisce giocatori finti.</p>
+
+<h2>Personaggio, skin e selfie</h2>
+<p>Dal telefono ognuno sceglie il proprio personaggio con le frecce. In tutto sono <b>13 personaggi</b>, ognuno con <b>3 skin</b> (vestiti e colori diversi; Basso ne ha 2):</p>
+<p>Rocky Ciuffo, Cap. Orbita, Chef Baffo, Nonna Sprint, Quizbot 3000, Barba Libro, Sandro, Basso, Samuele, Valerio, Paffo, Pacio e J.</p>
+<ul>
+<li>Due giocatori non possono scegliere lo <b>stesso personaggio con la stessa skin</b>: la combinazione già presa non è selezionabile. Con skin diverse, invece, lo stesso personaggio può comparire due volte.</li>
+<li>Il pulsante <b>Personalizza</b> permette di cambiare colori e dettagli (occhiali, barba, accessori), diversi da personaggio a personaggio.</li>
+<li>Il <b>selfie</b>: scatta una foto del tuo viso e il telefono ritaglia da solo testa e capelli, che diventano la testa del tuo personaggio sullo schermo. Se il ritaglio automatico non riesce, si sistema a mano in un ovale. È facoltativo.</li>
+</ul>
+<p>Quando hai finito tocca <b>Sono pronto!</b>. Per cambiare idea tocca di nuovo. La partita si può avviare quando ci sono <b>almeno 2 giocatori</b> collegati e <b>tutti sono pronti</b>.</p>
+
+<h2>Scegliere il gioco e le impostazioni</h2>
+<p>Sullo schermo principale si apre la copertina del Party Pack: premi <b>Scegli un gioco</b>, tocca un gioco per leggerne le regole, poi avvialo. Per il Quiz del Pozzo le impostazioni sono:</p>
+<table>
+<tr><th>Impostazione</th><th>Cosa fa</th></tr>
+<tr><td>Durata</td><td><b>Corta</b>: 3 giochi, <b>Normale</b>: 5 giochi, <b>Lunga</b>: 7 giochi prima della finale. In alternativa si sceglie il numero di minigiochi, da 2 a 9.</td></tr>
+<tr><td>Modalità</td><td><b>Ruota casuale</b>: ogni gioco viene estratto a sorte. <b>Scaletta in ordine</b>: si decide l'ordine dei giochi (fino a 12), senza ruota.</td></tr>
+<tr><td>Giochi della ruota</td><td>Si possono togliere i giochi che non piacciono (ne deve restare almeno uno).</td></tr>
+<tr><td>Difficoltà</td><td><b>Mista</b> (predefinita), Facile, Media o Difficile: filtra le domande di tutti i pacchetti.</td></tr>
+<tr><td>Argomenti</td><td>Si può limitare il quiz ad alcuni argomenti: Geografia, Storia, Scienza, Natura &amp; Animali, Spazio, Tecnologia, Arte &amp; Letteratura, Lingua &amp; Parole, Miti &amp; Religioni, Cinema &amp; TV, Musica, Sport &amp; Giochi, Cibo &amp; Cucina, Società &amp; Curiosità.</td></tr>
+<tr><td>Pacchetti di domande</td><td>Si accendono e spengono come interruttori (vedi il capitolo sui Pack).</td></tr>
+</table>
+<p>Servono almeno 10 domande a scelta multipla (o vero/falso) nei pacchetti e nei filtri scelti: se sono troppo poche il gioco avvisa e non parte. Un gioco senza abbastanza domande adatte (per esempio la Stima senza domande numeriche) viene segnato con un avviso e non esce dalla ruota.</p>
+<p>Gli altri giochi del Party Pack hanno un'impostazione chiamata <b>Ritmo</b> (Veloce, Normale, Rilassato): rende ogni passo più corto (Veloce) o più lungo (Rilassato) rispetto al normale. Nel Quiz del Pozzo i tempi sono fissi.</p>
+
+<h1>Menu di pausa e impostazioni</h1>
+<p>Premi <b>Esc</b> sulla tastiera del computer (o il pulsante ⏸️ sullo schermo) per aprire il menu. <b>Durante una partita la mette in pausa per tutti</b>: il tempo si ferma, i telefoni aspettano e il tempo passato in pausa non conta come tempo di risposta. Nella lobby apre solo le impostazioni. Per chiudere premi di nuovo Esc.</p>
+<p>Il menu ha tre schede.</p>
+<table>
+<tr><th>Scheda</th><th>Cosa contiene</th></tr>
+<tr><td><b>Pausa</b> (nella lobby: <b>Generale</b>)</td><td><b>Riprendi la partita</b>; <b>Esci dalla partita</b> (torna al menù dei giochi: i punti di questa partita si perdono, il gioco chiede conferma); <b>Esci dall'applicazione</b> (chiede conferma).</td></tr>
+<tr><td><b>Audio</b></td><td>Tre cursori separati per <b>Musica</b>, <b>Effetti</b> e <b>Voce del presentatore</b>; interruttore della voce; <b>Muto</b>; <b>Valori predefiniti</b>.</td></tr>
+<tr><td><b>Video</b></td><td><b>Schermo</b>: schermo intero o finestra, dimensione della finestra (1280×720, 1600×900, 1920×1080) e, con più monitor, su quale mostrare il gioco. <b>Grafica</b>: qualità di luci e materiali (Automatica, Alta, Bassa), risoluzione di disegno (dal 50% al 150%), ombre, bordi smussati, limite di fotogrammi (30, 60, 120 o nessuno).</td></tr>
+</table>
+<p>Altri tasti utili: <b>M</b> attiva e disattiva il muto; <b>F11</b> alterna schermo intero e finestra nell'app desktop. Le scelte del Video restano salvate.</p>
+<div class="consiglio">Se il gioco va a scatti: qualità bassa, risoluzione al 75% e ombre disattivate. La qualità Automatica abbassa da sola la grafica se il computer non regge.</div>
+<div class="attenzione">Se cambi l'impostazione dei bordi smussati lo schermo si ricarica da solo per qualche secondo: la stanza riprende dov'era.</div>
+
+<h1>Voce del presentatore e sottotitoli</h1>
+<p>Lo schermo principale ha musica di sottofondo, effetti sonori e un presentatore che commenta la serata: dà il benvenuto, annuncia i giochi e le carte, commenta risposte giuste e sbagliate, il sabotaggio e il vincitore. Le musiche e gli effetti di serie sono sintetizzati e la voce è quella di sintesi del computer.</p>
+<ul>
+<li>Ogni battuta della voce compare anche come <b>sottotitolo</b> in basso sullo schermo, per qualche secondo (almeno 2,5 secondi, di più per le frasi lunghe), poi si dissolve. Così si segue il gioco anche con l'audio spento.</li>
+<li>Il volume di musica, effetti e voce si regola a parte dal menu Esc, scheda <b>Audio</b>; il pulsante <b>Voce</b> la spegne tenendo musica ed effetti.</li>
+<li>Per usare la <b>tua voce</b> o altre musiche, nell'app desktop apri <b>Gioco</b>, poi <b>Apri la cartella degli audio personalizzati</b>, e metti lì file con gli stessi nomi di quelli di serie: hanno la precedenza e restano anche dopo gli aggiornamenti.</li>
+</ul>
+
+<h1>Se qualcosa non va</h1>
+<table>
+<tr><th>Problema</th><th>Cosa provare</th></tr>
+<tr><td>Il telefono non riesce ad aprire il gioco</td><td>Controlla che telefono e computer siano sulla <b>stessa rete Wi-Fi</b>. Su Windows consenti il firewall anche per le <b>reti pubbliche</b>. Prova il tasto «Prova un altro indirizzo» sotto il QR.</td></tr>
+<tr><td>Il telefono dice «rete senza internet» o cambia rete da solo</td><td>Scegli <b>Resta connesso</b>. È normale con un hotspot senza internet.</td></tr>
+<tr><td>Un amico è uscito per sbaglio</td><td>Riapre il gioco dal telefono e rientra nella stessa stanza. In lobby un giocatore che sparisce viene tolto dopo circa 20 secondi.</td></tr>
+<tr><td>Il pulsante Avvia non parte</td><td>Servono almeno 2 giocatori e tutti devono aver toccato <b>Sono pronto!</b>. Il capo stanza è l'unico che può avviare.</td></tr>
+<tr><td>Un gioco è segnato con ⚠️ e non esce</td><td>Nei pacchetti scelti mancano domande adatte: riaccendi altri pacchetti o togli il filtro di difficoltà e argomenti.</td></tr>
+<tr><td>Il gioco va a scatti</td><td>Menu Esc, scheda Video: qualità bassa, risoluzione 75%, ombre off. Non aprire i telefoni in altre schede del computer.</td></tr>
+<tr><td>Non si sente nulla</td><td>Controlla il muto (tasto <b>M</b>) e i tre cursori della scheda Audio, poi il volume del computer o della TV.</td></tr>
+<tr><td>Il QR dell'hotspot non compare</td><td>Un computer senza Wi-Fi non può creare l'hotspot. Usa l'hotspot di un telefono (metodo B) o una chiavetta Wi-Fi USB.</td></tr>
+<tr><td>Voglio finire in anticipo</td><td>Esc, scheda Pausa, <b>Esci dalla partita</b>. Oppure il capo stanza torna al menù dal telefono.</td></tr>
+</table>
+<div class="attenzione">Quando la partita è in pausa i telefoni rifiutano le azioni finché lo schermo principale non riprende: niente panico, basta premere di nuovo Esc.</div>

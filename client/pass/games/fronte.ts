@@ -15,9 +15,10 @@ export const fronte: PassGame = (ctx) => {
   const mode = ctx.options.mode;
   const seconds = Number(ctx.options.time) || 60;
   const plan = frontePlan(ctx.players, Number(ctx.options.turns) || 1);
-  const deck = fronteDeck(ctx.options.pack, Math.random);
+  const deck = fronteDeck(ctx.options.pack, ctx.deck);
   const points: Record<string, number> = {};
   let idx = 0;
+  let onVis: (() => void) | null = null;
 
   const intro = () => {
     const p = plan[idx];
@@ -38,7 +39,14 @@ export const fronte: PassGame = (ctx) => {
 
   const play = () => {
     const turn = new FronteTurn(deck);
-    const endAt = performance.now() + seconds * 1000;
+    let endAt = performance.now() + seconds * 1000;
+    let hiddenAt = 0;
+    // Telefono in background/bloccato: il tempo perso non conta.
+    onVis = () => {
+      if (document.hidden) hiddenAt = performance.now();
+      else if (hiddenAt) endAt += performance.now() - hiddenAt, (hiddenAt = 0);
+    };
+    document.addEventListener('visibilitychange', onVis);
     let lock = 0;
     const draw = () => {
       const card = turn.current;
@@ -85,6 +93,7 @@ export const fronte: PassGame = (ctx) => {
       }
       if (left <= 0) {
         ctx.root.onpointerdown = null;
+        document.removeEventListener('visibilitychange', onVis!);
         ctx.sfx.boom();
         review(turn);
         return false;
@@ -126,6 +135,7 @@ export const fronte: PassGame = (ctx) => {
   intro();
   return () => {
     t.clear();
+    if (onVis) document.removeEventListener('visibilitychange', onVis);
     ctx.root.onpointerdown = null;
   };
 };

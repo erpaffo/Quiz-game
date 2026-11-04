@@ -1,7 +1,6 @@
 // Regole di «5 Secondi di Panico»: chi sbaglia passa la stessa sfida al prossimo, con risposte nuove.
 
-import { PANICO_PROMPTS } from '../data/panico';
-import { Deck, type Rng } from '../rng';
+import type { Deck } from '../rng';
 import type { Player } from '../types';
 
 export type PanicoEvent =
@@ -13,7 +12,6 @@ export type PanicoEvent =
 
 export class PanicoGame {
   private readonly queue: number[] = [];
-  private readonly deck: Deck<string>;
   /** Indice di chi è sotto esame adesso. */
   examinee = 0;
   /** Chi aveva ricevuto la sfida per primo. */
@@ -26,11 +24,10 @@ export class PanicoGame {
   constructor(
     readonly players: Player[],
     turnsEach: number,
-    rng: Rng
+    private readonly deck: Deck<string>
   ) {
     for (let t = 0; t < Math.max(1, turnsEach); t++) for (let i = 0; i < players.length; i++) this.queue.push(i);
     this.totalTurns = this.queue.length;
-    this.deck = new Deck(PANICO_PROMPTS, rng);
   }
 
   get done(): boolean {

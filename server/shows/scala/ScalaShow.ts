@@ -3,7 +3,7 @@ import { BaseShow } from '../../core/BaseShow';
 import { cleanText, isIntIn, payloadOf } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { randomBetween, shuffle } from '../../util';
+import { pickFresh, randomBetween, shuffle } from '../../util';
 import { SCALA_THEMES, type ScalaThemeDef } from './themes';
 
 interface Secret {
@@ -29,7 +29,6 @@ export class ScalaShow extends BaseShow<ScalaPublic, ScalaPrivate> {
   private index = 0;
   private guesses = new Map<string, number>();
   private lastReveal: Extract<ScalaPublic, { step: 'reveal' }> | null = null;
-  private usedThemes = new Set<string>();
 
   start(): ActionResult {
     this.nextRound();
@@ -45,9 +44,7 @@ export class ScalaShow extends BaseShow<ScalaPublic, ScalaPrivate> {
     this.answers.clear();
     this.secrets.clear();
     for (const p of this.ctx.players()) {
-      const fresh = SCALA_THEMES.filter((t) => !this.usedThemes.has(t.text));
-      const theme = shuffle(fresh.length ? fresh : SCALA_THEMES)[0];
-      this.usedThemes.add(theme.text);
+      const [theme] = pickFresh(SCALA_THEMES, 1, this.ctx.seen(this.id), (t) => t.text);
       const center = this.round === 1 ? randInt(SCALA.MIN, SCALA.MAX) : randInt(SCALA.MIN + 1, SCALA.MAX - 1);
       const target = this.round === 1 ? { lo: center, hi: center } : { lo: center - 1, hi: center + 1 };
       this.secrets.set(p.id, { theme, target });

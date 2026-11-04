@@ -3,7 +3,7 @@ import { BaseShow } from '../../core/BaseShow';
 import { isIntIn, payloadOf } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { shuffle } from '../../util';
+import { pickFresh, shuffle } from '../../util';
 
 export interface SondaggiQuestion {
   text: string;
@@ -46,7 +46,7 @@ export class SondaggiShow extends BaseShow<SondaggiPublic, SondaggiPrivate> {
   private lastReveal: Extract<SondaggiPublic, { step: 'reveal' }> | null = null;
 
   start(): ActionResult {
-    this.questions = shuffle(SONDAGGI_QUESTIONS).slice(0, this.rounds);
+    this.questions = pickFresh(SONDAGGI_QUESTIONS, this.rounds, this.ctx.seen(this.id), (q) => q.text);
     this.next();
     return null;
   }

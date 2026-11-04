@@ -18,6 +18,7 @@ build-*
 docs/
 *.md
 !/README.md
+!/CHANGELOG.md
 
 # File di configurazione, prompt e regole per AI / agenti
 .agents/
@@ -40,3 +41,8 @@ TODO*
 Thumbs.db
 .vscode/
 .idea/
+
+# File generati dall'AI (lotti da verificare, scartati, prompt, rapporti): tutto in una cartella, mai pubblicata
+ai-generati/
+# Screenshot delle prove automatiche (locali)
+shots/

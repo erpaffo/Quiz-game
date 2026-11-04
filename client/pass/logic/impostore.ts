@@ -1,7 +1,7 @@
 // Regole di «L'Impostore Tascabile»: distribuzione delle carte segrete, voto e ultima possibilità.
 
-import { CHAMELEON_PAIRS, IMPOSTORE_CATEGORIES } from '../data/impostore';
-import { pick, shuffle, type Rng } from '../rng';
+import { CHAMELEON_PAIRS, IMPOSTORE_CATEGORIES, type ChameleonPair } from '../data/impostore';
+import { Deck, pick, shuffle, type Rng } from '../rng';
 import type { Player } from '../types';
 
 export interface ImpostoreCard {
@@ -31,7 +31,28 @@ export function impostorCount(requested: number, players: number): number {
   return requested >= 2 && players >= 6 ? 2 : 1;
 }
 
-export function dealImpostore(players: Player[], opts: { mode: string; impostors: number }, rng: Rng): ImpostoreDeal {
+export interface WordCard {
+  category: string;
+  word: string;
+}
+
+/** Tutte le parole di tutte le categorie in un mazzo piatto: nessuna categoria è favorita. */
+export const IMPOSTORE_WORDS: WordCard[] = IMPOSTORE_CATEGORIES.flatMap((c) => c.words.map((word) => ({ category: c.name, word })));
+export const wordKey = (c: WordCard) => `${c.category}|${c.word}`;
+export const pairKey = (p: ChameleonPair) => [...p.words].sort().join('|');
+
+/** Mazzi da cui pescare (in gioco: `ctx.deck`, con memoria tra partite). */
+export interface ImpostoreDecks {
+  classico: { draw(): WordCard };
+  camaleonte: { draw(): ChameleonPair };
+}
+
+export function dealImpostore(
+  players: Player[],
+  opts: { mode: string; impostors: number },
+  rng: Rng,
+  decks: ImpostoreDecks = { classico: new Deck(IMPOSTORE_WORDS, rng, undefined, wordKey), camaleonte: new Deck(CHAMELEON_PAIRS, rng, undefined, pairKey) }
+): ImpostoreDeal {
   if (players.length < 3) throw new Error('Servono almeno 3 giocatori');
   const mode = opts.mode === 'camaleonte' ? 'camaleonte' : 'classico';
   const impostorIds = shuffle(rng, players.map((p) => p.id)).slice(0, impostorCount(opts.impostors, players.length));
@@ -42,16 +63,17 @@ export function dealImpostore(players: Player[], opts: { mode: string; impostors
   let twin = '';
   let guessOptions: string[] = [];
   if (mode === 'camaleonte') {
-    const pair = pick(rng, CHAMELEON_PAIRS);
+    const pair = decks.camaleonte.draw();
     const [a, b] = shuffle(rng, pair.words);
     category = pair.category;
     secret = a;
     twin = b;
   } else {
-    const cat = pick(rng, IMPOSTORE_CATEGORIES);
-    category = cat.name;
-    secret = pick(rng, cat.words);
-    guessOptions = shuffle(rng, [secret, ...shuffle(rng, cat.words.filter((w) => w !== secret)).slice(0, 7)]);
+    const card = decks.classico.draw();
+    category = card.category;
+    secret = card.word;
+    const words = IMPOSTORE_CATEGORIES.find((c) => c.name === category)!.words;
+    guessOptions = shuffle(rng, [secret, ...shuffle(rng, words.filter((w) => w !== secret)).slice(0, 7)]);
   }
 
   const cards: ImpostoreCard[] = players.map((p) => ({

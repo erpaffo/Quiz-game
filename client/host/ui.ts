@@ -191,6 +191,8 @@ export class HostUI {
     }
     if (d.phase === 'SHOW') return showRenderKey(s);
     if (d.phase === 'PLAY' && (d.state.step === 'blitz' || d.state.step === 'blitzEnd')) return `${phaseKey(s)}|${JSON.stringify(d.state.progress)}`;
+    // Indizio dopo Indizio: il testo svelato cambia, il pannello va ridisegnato (phaseKey no: resetterebbe musica/reazioni).
+    if (d.phase === 'PLAY' && d.state.step === 'question' && d.state.question.clue) return `${phaseKey(s)}|${d.state.question.text}`;
     return phaseKey(s);
   }
 

@@ -3,7 +3,7 @@ import { BaseShow } from '../../core/BaseShow';
 import { cleanText, payloadOf, wordKey } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { pick, shuffle } from '../../util';
+import { pickFresh, shuffle } from '../../util';
 import { GEMELLE_FALLBACK, GEMELLE_PROMPTS, type GemellePrompt } from './prompts';
 
 /**
@@ -41,8 +41,7 @@ export class GemelleShow extends BaseShow<GemellePublic, GemellePrivate> {
       this.prompt = { word: capitalize(this.bestShared!.word), associations: [] };
       this.bestShared = null;
     } else {
-      const fresh = GEMELLE_PROMPTS.filter((p) => !this.usedPrompts.has(wordKey(p.word)));
-      this.prompt = pick(fresh.length ? fresh : GEMELLE_PROMPTS);
+      this.prompt = pickFresh(GEMELLE_PROMPTS, 1, this.ctx.seen(this.id), (p) => wordKey(p.word))[0];
     }
     this.usedPrompts.add(wordKey(this.prompt.word));
     this.go('write', GEMELLE.WRITE_MS, () => this.score());

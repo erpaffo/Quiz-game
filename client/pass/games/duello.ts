@@ -1,6 +1,7 @@
 // ⚡ Duello al Tavolo — telefono piatto tra due sfidanti: metà in basso dritta, metà in alto capovolta.
 
-import { DUELLO_WIN_POINTS, DuelloLadder, DuelloMatch, makePrompt, promptInterval, type DuelPrompt } from '../logic/duello';
+import { DUELLO_FACTS } from '../data/duello';
+import { DUELLO_WIN_POINTS, DuelloLadder, DuelloMatch, factKey, makePrompt, promptInterval, type DuelPrompt } from '../logic/duello';
 import { seeded, shuffle } from '../rng';
 import type { PassGame } from '../types';
 import { countdown, esc, pointsList, screen, tag, Timers } from '../ui';
@@ -22,6 +23,10 @@ export const duello: PassGame = (ctx) => {
   const interval = promptInterval(ctx.options.speed);
   const ladder = new DuelloLadder(ctx.players, Math.random);
   const points: Record<string, number> = {};
+  const facts = {
+    veri: ctx.deck('duello:veri', DUELLO_FACTS.filter((f) => f.truth), factKey),
+    falsi: ctx.deck('duello:falsi', DUELLO_FACTS.filter((f) => !f.truth), factKey)
+  };
 
   const intro = () => {
     const a = ladder.champion;
@@ -63,7 +68,7 @@ export const duello: PassGame = (ctx) => {
       el.classList.add(cls);
     };
     const showPrompt = () => {
-      match.next(makePrompt(Math.random));
+      match.next(makePrompt(Math.random, facts, match.prompt));
       const html = promptHtml(match.prompt);
       ctx.root.querySelectorAll<HTMLElement>('[data-card]').forEach((c) => {
         c.innerHTML = html;

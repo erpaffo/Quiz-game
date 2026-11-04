@@ -44,6 +44,7 @@ export class TempoShowPlugin implements ShowPlugin<TempoPublic | null, TempoPriv
     this.events = shuffle(this.pool).slice(0, this.rounds);
     this.n = 0;
     this.stats.clear();
+    this.ctx.say?.('tempo/intro');
     this.question();
     return null;
   }
@@ -69,11 +70,14 @@ export class TempoShowPlugin implements ShowPlugin<TempoPublic | null, TempoPriv
       return { playerId: p.id, year: guess, error, points };
     });
     this.step = 'reveal';
+    this.ctx.say?.('tempo/reveal');
+    if (this.lastGuesses.some((g) => g.error === 0)) this.ctx.say?.('tempo/perfect');
     this.ctx.setStep(this.publicState(), this.ctx.scale(TEMPO.REVEAL_MS * this.pace), () => (this.n < this.events.length ? this.question() : this.final()));
   }
 
   private final() {
     this.step = 'final';
+    this.ctx.say?.('tempo/final');
     this.ctx.setStep(this.publicState(), this.ctx.scale(TEMPO.FINAL_MS), () => this.ctx.returnToHub());
   }
 

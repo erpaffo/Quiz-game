@@ -838,5 +838,1965 @@
    "miraggio"
   ],
   "pack": "natura"
+ },
+ {
+  "word": "Pippi Calzelunghe",
+  "taboo": [
+   "Svezia",
+   "lentiggini",
+   "bambina",
+   "trecce"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Nemo",
+  "taboo": [
+   "pesce",
+   "oceano",
+   "pinna",
+   "Dory"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Ratatouille",
+  "taboo": [
+   "topo",
+   "cucina",
+   "chef",
+   "Parigi"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Catwoman",
+  "taboo": [
+   "gatto",
+   "Gotham",
+   "felina",
+   "ladra"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Paperino",
+  "taboo": [
+   "anatra",
+   "Disney",
+   "fumetto",
+   "nipotini"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Hermione",
+  "taboo": [
+   "Ron",
+   "sapientona",
+   "libri",
+   "Grifondoro"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Gargamella",
+  "taboo": [
+   "Puffi",
+   "strega",
+   "gatto",
+   "Birba"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Madagascar",
+  "taboo": [
+   "zoo",
+   "pinguini",
+   "Alex",
+   "isola"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Jurassic Park",
+  "taboo": [
+   "dinosauri",
+   "isola",
+   "T-Rex",
+   "Spielberg"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Gli Incredibili",
+  "taboo": [
+   "supereroi",
+   "famiglia",
+   "Pixar",
+   "Elastigirl"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Doraemon",
+  "taboo": [
+   "gatto",
+   "tasca",
+   "robot",
+   "Nobita"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Stranger Things",
+  "taboo": [
+   "sottosopra",
+   "Hawkins",
+   "Eleven",
+   "Netflix"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Sitcom",
+  "taboo": [
+   "risate",
+   "episodi",
+   "pubblico",
+   "comica"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Chewbacca",
+  "taboo": [
+   "Wookiee",
+   "peloso",
+   "Solo",
+   "Falcon"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Bugs Bunny",
+  "taboo": [
+   "Looney",
+   "carota",
+   "gag",
+   "cartone"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Goldrake",
+  "taboo": [
+   "robot",
+   "Ufo",
+   "Actarus",
+   "anime"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "SpongeBob",
+  "taboo": [
+   "Squiddi",
+   "fondo",
+   "Patrick",
+   "ananas"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Digimon",
+  "taboo": [
+   "digivice",
+   "mostriciattoli",
+   "Tai",
+   "Agumon"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Jukebox",
+  "taboo": [
+   "musica",
+   "gettone",
+   "bar",
+   "canzoni"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Discoteca",
+  "taboo": [
+   "ballare",
+   "musica",
+   "luci",
+   "sabato"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Popcorn",
+  "taboo": [
+   "cinema",
+   "mais",
+   "sgranocchiare",
+   "sala"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Colonna sonora",
+  "taboo": [
+   "film",
+   "musica",
+   "scena",
+   "Morricone"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Oscar",
+  "taboo": [
+   "statuetta",
+   "Hollywood",
+   "premio",
+   "cerimonia"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Rigore",
+  "taboo": [
+   "calcio",
+   "portiere",
+   "dischetto",
+   "area"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Fuorigioco",
+  "taboo": [
+   "attaccante",
+   "difensore",
+   "arbitro",
+   "linea"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Tiebreak",
+  "taboo": [
+   "tennis",
+   "set",
+   "punti",
+   "racchetta"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Triathlon",
+  "taboo": [
+   "nuoto",
+   "ciclismo",
+   "corsa",
+   "Ironman"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Canestro",
+  "taboo": [
+   "basket",
+   "palla",
+   "tabellone",
+   "retina"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Scudetto",
+  "taboo": [
+   "campionato",
+   "tricolore",
+   "vittoria",
+   "Serie A"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Smartphone",
+  "taboo": [
+   "iPhone",
+   "app",
+   "schermo",
+   "tasca"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Cloud",
+  "taboo": [
+   "iCloud",
+   "internet",
+   "server",
+   "dati"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Captcha",
+  "taboo": [
+   "robot",
+   "immagini",
+   "verifica",
+   "lettere"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Smartwatch",
+  "taboo": [
+   "Apple",
+   "polso",
+   "passi",
+   "notifiche"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Realtà aumentata",
+  "taboo": [
+   "occhiali",
+   "virtuale",
+   "schermo",
+   "sovrapporre"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Youtuber",
+  "taboo": [
+   "video",
+   "canale",
+   "iscriversi",
+   "follower"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Hashtag",
+  "taboo": [
+   "cancelletto",
+   "Twitter",
+   "argomento",
+   "social"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Meme",
+  "taboo": [
+   "immagine",
+   "ridere",
+   "virale",
+   "battuta"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Vlog",
+  "taboo": [
+   "diario",
+   "telecamera",
+   "vita",
+   "quotidiano"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Binge watching",
+  "taboo": [
+   "maratona",
+   "serie",
+   "notte",
+   "divano"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Gamepad",
+  "taboo": [
+   "console",
+   "tasti",
+   "levette",
+   "vibrazione"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Speedrun",
+  "taboo": [
+   "record",
+   "tempo",
+   "Mario",
+   "finale"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Battle royale",
+  "taboo": [
+   "ultimo",
+   "sopravvissuto",
+   "mappa",
+   "tempesta"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Esport",
+  "taboo": [
+   "videogiochi",
+   "torneo",
+   "squadra",
+   "stadio"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Coriandoli",
+  "taboo": [
+   "carnevale",
+   "festa",
+   "carta",
+   "colorati"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Brindisi",
+  "taboo": [
+   "calice",
+   "festa",
+   "bicchiere",
+   "champagne"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Ghosting",
+  "taboo": [
+   "sparire",
+   "messaggi",
+   "chat",
+   "ignorare"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Frittata",
+  "taboo": [
+   "uova",
+   "padella",
+   "omelette",
+   "cipolla"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Lievito",
+  "taboo": [
+   "pane",
+   "impasto",
+   "torta",
+   "bustina"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Pattumiera",
+  "taboo": [
+   "rifiuti",
+   "sacchetto",
+   "coperchio",
+   "sporco"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Tovaglia",
+  "taboo": [
+   "tavola",
+   "pranzo",
+   "macchie",
+   "cena"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Bilancia",
+  "taboo": [
+   "peso",
+   "chili",
+   "misurare",
+   "cucina"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Tegame",
+  "taboo": [
+   "cottura",
+   "teglia",
+   "fondo",
+   "sugo"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Crostata",
+  "taboo": [
+   "marmellata",
+   "frolla",
+   "dolce",
+   "torta"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Frullatore",
+  "taboo": [
+   "mixer",
+   "smoothie",
+   "lame",
+   "motore"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Bollitore",
+  "taboo": [
+   "tè",
+   "acqua",
+   "fischio",
+   "caldaia"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Friggitrice",
+  "taboo": [
+   "olio",
+   "patatine",
+   "croccante",
+   "cestello"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Congelatore",
+  "taboo": [
+   "ghiaccio",
+   "surgelati",
+   "freddo",
+   "cassetto"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Condizionatore",
+  "taboo": [
+   "aria",
+   "estate",
+   "caldo",
+   "ventola"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Lenzuolo",
+  "taboo": [
+   "letto",
+   "cuscino",
+   "coperta",
+   "notte"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Materasso",
+  "taboo": [
+   "letto",
+   "molle",
+   "dormire",
+   "comodo"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Comò",
+  "taboo": [
+   "cassetti",
+   "camera",
+   "mobile",
+   "legno"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Armadio",
+  "taboo": [
+   "vestiti",
+   "anta",
+   "camicie",
+   "stanza"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Piastrella",
+  "taboo": [
+   "pavimento",
+   "muro",
+   "ceramica",
+   "mosaico"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Asciugamano",
+  "taboo": [
+   "bagno",
+   "spugna",
+   "mare",
+   "telo"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Accappatoio",
+  "taboo": [
+   "piscina",
+   "spugna",
+   "cintura",
+   "doccia"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Pettine",
+  "taboo": [
+   "capelli",
+   "denti",
+   "sistemare",
+   "spazzola"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Rubinetto",
+  "taboo": [
+   "acqua",
+   "lavandino",
+   "goccia",
+   "aprire"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Tosaerba",
+  "taboo": [
+   "erba",
+   "prato",
+   "giardino",
+   "motore"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Rastrello",
+  "taboo": [
+   "foglie",
+   "giardino",
+   "denti",
+   "manico"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Annaffiatoio",
+  "taboo": [
+   "acqua",
+   "piante",
+   "beccuccio",
+   "bidone"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Aiuola",
+  "taboo": [
+   "fiori",
+   "giardino",
+   "bordo",
+   "terra"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Gazebo",
+  "taboo": [
+   "giardino",
+   "tetto",
+   "ombra",
+   "pergola"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Cric",
+  "taboo": [
+   "macchina",
+   "ruota",
+   "sollevare",
+   "foratura"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Trapano",
+  "taboo": [
+   "buco",
+   "muro",
+   "punta",
+   "bricolage"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Graffetta",
+  "taboo": [
+   "carta",
+   "fogli",
+   "attaccare",
+   "metallo"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Fotocopiatrice",
+  "taboo": [
+   "scanner",
+   "toner",
+   "stampare",
+   "ufficio"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Lavagna",
+  "taboo": [
+   "gesso",
+   "aula",
+   "scrivere",
+   "cancellino"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Quaderno",
+  "taboo": [
+   "appunti",
+   "pagine",
+   "copertina",
+   "scrivere"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Compasso",
+  "taboo": [
+   "cerchio",
+   "geometria",
+   "matita",
+   "punta"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Righello",
+  "taboo": [
+   "linea",
+   "centimetri",
+   "dritto",
+   "misurare"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Cravatta",
+  "taboo": [
+   "collo",
+   "giacca",
+   "nodo",
+   "elegante"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Giubbotto",
+  "taboo": [
+   "zip",
+   "tasche",
+   "freddo",
+   "cappuccio"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Stivali",
+  "taboo": [
+   "gambe",
+   "gomma",
+   "piedi",
+   "fango"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Sciarpa",
+  "taboo": [
+   "collo",
+   "inverno",
+   "lana",
+   "freddo"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Parcheggio",
+  "taboo": [
+   "posto",
+   "strisce",
+   "pagare",
+   "macchina"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Retromarcia",
+  "taboo": [
+   "indietro",
+   "manovra",
+   "guidare",
+   "specchietto"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Clacson",
+  "taboo": [
+   "suonare",
+   "strada",
+   "avvertire",
+   "tromba"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Tergicristallo",
+  "taboo": [
+   "parabrezza",
+   "vetro",
+   "pioggia",
+   "spazzola"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Ventilatore",
+  "taboo": [
+   "aria",
+   "caldo",
+   "pale",
+   "estate"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Bolletta",
+  "taboo": [
+   "pagare",
+   "luce",
+   "gas",
+   "mese"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Grembiule",
+  "taboo": [
+   "cucina",
+   "sporco",
+   "vita",
+   "cuoco"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Zebra",
+  "taboo": [
+   "Strisce",
+   "Equino",
+   "Cavallo",
+   "Africa"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ippopotamo",
+  "taboo": [
+   "Fiume",
+   "Acqua",
+   "Bocca",
+   "Pesante"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Riccio",
+  "taboo": [
+   "Aculei",
+   "Palla",
+   "Ghiande",
+   "Piccolo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Gorilla",
+  "taboo": [
+   "Scimmia",
+   "Giungla",
+   "Petto",
+   "Foresta"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Talpa",
+  "taboo": [
+   "Sottoterra",
+   "Cieca",
+   "Gallerie",
+   "Scavare"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Lumaca",
+  "taboo": [
+   "Bava",
+   "Lenta",
+   "Guscio",
+   "Orto"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Balena",
+  "taboo": [
+   "Oceano",
+   "Gigante",
+   "Moby",
+   "Soffio"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Granchio",
+  "taboo": [
+   "Chele",
+   "Pinze",
+   "Sabbia",
+   "Crostacei"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Stella marina",
+  "taboo": [
+   "Braccia",
+   "Cinque",
+   "Scoglio",
+   "Fondale"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ornitorinco",
+  "taboo": [
+   "Becco",
+   "Uova",
+   "Australia",
+   "Veleno"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Aquila",
+  "taboo": [
+   "Rapace",
+   "Montagna",
+   "Artigli",
+   "Predatore"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Pappagallo",
+  "taboo": [
+   "Ripetere",
+   "Piume",
+   "Parlare",
+   "Colorato"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Gabbiano",
+  "taboo": [
+   "Spiaggia",
+   "Patatine",
+   "Urlo",
+   "Porto"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Libellula",
+  "taboo": [
+   "Stagno",
+   "Trasparenti",
+   "Elicottero",
+   "Palude"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Coccinella",
+  "taboo": [
+   "Puntini",
+   "Rossa",
+   "Fortuna",
+   "Afidi"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Cavalletta",
+  "taboo": [
+   "Saltare",
+   "Erba",
+   "Campi",
+   "Insetto"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Scarabeo",
+  "taboo": [
+   "Egitto",
+   "Stercorario",
+   "Piramidi",
+   "Faraone"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Mantide",
+  "taboo": [
+   "Verde",
+   "Zampe",
+   "Predatore",
+   "Foglia"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Tirannosauro",
+  "taboo": [
+   "Carnivoro",
+   "Preistoria",
+   "Denti",
+   "Ruggito"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Triceratopo",
+  "taboo": [
+   "Corna",
+   "Erbivoro",
+   "Collare",
+   "Scudo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Velociraptor",
+  "taboo": [
+   "Veloce",
+   "Piumato",
+   "Artigli",
+   "Jurassic"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Pterodattilo",
+  "taboo": [
+   "Rettile",
+   "Preistorico",
+   "Ali",
+   "Cielo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Brontosauro",
+  "taboo": [
+   "Collo",
+   "Lungo",
+   "Coda",
+   "Erbivoro"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Stegosauro",
+  "taboo": [
+   "Placche",
+   "Schiena",
+   "Spine",
+   "Giurassico"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Bonsai",
+  "taboo": [
+   "albero",
+   "miniatura",
+   "giapponese",
+   "vaso"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Muschio",
+  "taboo": [
+   "verde",
+   "umido",
+   "sasso",
+   "bosco"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Felce",
+  "taboo": [
+   "fronde",
+   "sottobosco",
+   "ombra",
+   "dinosauri"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Lavanda",
+  "taboo": [
+   "profumo",
+   "viola",
+   "Provenza",
+   "sapone"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ortensia",
+  "taboo": [
+   "sfera",
+   "azzurra",
+   "giardino",
+   "petali"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Tulipano",
+  "taboo": [
+   "Olanda",
+   "bulbo",
+   "primavera",
+   "coppa"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Fragola",
+  "taboo": [
+   "rossa",
+   "semini",
+   "panna",
+   "estate"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ciliegia",
+  "taboo": [
+   "nocciolo",
+   "rossa",
+   "amarena",
+   "picciolo"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Melone",
+  "taboo": [
+   "cocomero",
+   "buccia",
+   "estate",
+   "polpa"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Uragano",
+  "taboo": [
+   "vento",
+   "tempesta",
+   "occhio",
+   "Caraibi"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Grandine",
+  "taboo": [
+   "chicchi",
+   "ghiaccio",
+   "temporale",
+   "palline"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Nebbia",
+  "taboo": [
+   "Padana",
+   "nuvola",
+   "visibilità",
+   "mattina"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Rugiada",
+  "taboo": [
+   "mattina",
+   "gocce",
+   "erba",
+   "alba"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Altopiano",
+  "taboo": [
+   "pianura",
+   "Asiago",
+   "montagna",
+   "Tibet"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Crepaccio",
+  "taboo": [
+   "ghiacciaio",
+   "fessura",
+   "profondo",
+   "alpinista"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Atollo",
+  "taboo": [
+   "laguna",
+   "anello",
+   "isola",
+   "oceano"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Fiordo",
+  "taboo": [
+   "Norvegia",
+   "insenatura",
+   "vichinghi",
+   "montagne"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Corallo",
+  "taboo": [
+   "barriera",
+   "colorato",
+   "pesci",
+   "scheletro"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Tsunami",
+  "taboo": [
+   "onda",
+   "giappone",
+   "terremoto",
+   "gigante"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Nebulosa",
+  "taboo": [
+   "gas",
+   "stelle",
+   "polvere",
+   "nascita"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Meteorite",
+  "taboo": [
+   "cielo",
+   "impatto",
+   "precipitare",
+   "roccia"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Canyon",
+  "taboo": [
+   "gola",
+   "fiume",
+   "roccia",
+   "Colorado"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Equatore",
+  "taboo": [
+   "linea",
+   "caldo",
+   "Africa",
+   "latitudine"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Malinconia",
+  "taboo": [
+   "grigio",
+   "sospiro",
+   "autunno",
+   "sera"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Rancore",
+  "taboo": [
+   "offesa",
+   "perdonare",
+   "ricordare",
+   "odio"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Ipocrisia",
+  "taboo": [
+   "finto",
+   "maschera",
+   "sorriso",
+   "ambiguo"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Vanità",
+  "taboo": [
+   "specchio",
+   "bellezza",
+   "narciso",
+   "apparire"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Arroganza",
+  "taboo": [
+   "superbo",
+   "prepotente",
+   "disprezzo",
+   "boria"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Lealtà",
+  "taboo": [
+   "amico",
+   "tradire",
+   "promessa",
+   "giuramento"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Generosità",
+  "taboo": [
+   "regalare",
+   "avaro",
+   "cuore",
+   "offrire"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Frustrazione",
+  "taboo": [
+   "rabbia",
+   "ostacolo",
+   "impotenza",
+   "bloccato"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Euforia",
+  "taboo": [
+   "gioia",
+   "entusiasmo",
+   "festa",
+   "esaltazione"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Ostinazione",
+  "taboo": [
+   "testardo",
+   "cocciuto",
+   "cambiare",
+   "mulo"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Prudenza",
+  "taboo": [
+   "sicurezza",
+   "rischio",
+   "pensare",
+   "passo"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Umiltà",
+  "taboo": [
+   "modesto",
+   "vanto",
+   "orgoglio",
+   "ammettere"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Rimorso",
+  "taboo": [
+   "colpa",
+   "errore",
+   "rimpianto",
+   "coscienza"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Stizza",
+  "taboo": [
+   "irritazione",
+   "nervoso",
+   "fastidio",
+   "sbuffare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Resilienza",
+  "taboo": [
+   "resistere",
+   "crisi",
+   "rialzarsi",
+   "materiali"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Compassione",
+  "taboo": [
+   "dolore",
+   "aiutare",
+   "pena",
+   "sofferenza"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Acqua in bocca",
+  "taboo": [
+   "silenzio",
+   "tacere",
+   "segreto",
+   "zitto"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Mani bucate",
+  "taboo": [
+   "spendere",
+   "soldi",
+   "sprecare",
+   "denaro"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Battere la fiacca",
+  "taboo": [
+   "oziare",
+   "lavoro",
+   "divano",
+   "svogliato"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Buttare la spugna",
+  "taboo": [
+   "arrendersi",
+   "ring",
+   "pugile",
+   "rinunciare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Feudalesimo",
+  "taboo": [
+   "vassallo",
+   "signore",
+   "medioevo",
+   "castello"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Rivoluzione industriale",
+  "taboo": [
+   "fabbrica",
+   "vapore",
+   "macchina",
+   "operai"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Trincea",
+  "taboo": [
+   "guerra",
+   "fango",
+   "soldato",
+   "scavo"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Embargo",
+  "taboo": [
+   "commercio",
+   "sanzioni",
+   "blocco",
+   "divieto"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Entropia",
+  "taboo": [
+   "disordine",
+   "energia",
+   "termodinamica",
+   "caos"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Catalizzatore",
+  "taboo": [
+   "reazione",
+   "accelerare",
+   "marmitta",
+   "chimica"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Magnetismo",
+  "taboo": [
+   "calamita",
+   "polo",
+   "ferro",
+   "attrazione"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Cromosoma",
+  "taboo": [
+   "DNA",
+   "gene",
+   "cellula",
+   "ereditario"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Vaccino",
+  "taboo": [
+   "iniezione",
+   "immunità",
+   "virus",
+   "ago"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Anticorpo",
+  "taboo": [
+   "difesa",
+   "immunitario",
+   "proteina",
+   "antigene"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Anestesia",
+  "taboo": [
+   "dolore",
+   "sala operatoria",
+   "addormentare",
+   "chirurgo"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Pandemia",
+  "taboo": [
+   "epidemia",
+   "diffusione",
+   "mondo",
+   "contagio"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Dividendo",
+  "taboo": [
+   "azioni",
+   "utili",
+   "società",
+   "socio"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Liberismo",
+  "taboo": [
+   "mercato",
+   "Stato",
+   "concorrenza",
+   "intervento"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Prescrizione",
+  "taboo": [
+   "reato",
+   "tempo",
+   "processo",
+   "scadere"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Dialettica",
+  "taboo": [
+   "discussione",
+   "confronto",
+   "opposti",
+   "filosofia"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Nichilismo",
+  "taboo": [
+   "niente",
+   "nulla",
+   "valori",
+   "senso"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Ipotesi",
+  "taboo": [
+   "teoria",
+   "esperimento",
+   "dimostrare",
+   "ricerca"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Separazione dei poteri",
+  "taboo": [
+   "legislativo",
+   "esecutivo",
+   "giudiziario",
+   "democrazia"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Tettonica a placche",
+  "taboo": [
+   "crosta",
+   "vulcano",
+   "continenti",
+   "deriva"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Sismografo",
+  "taboo": [
+   "terremoto",
+   "onde",
+   "registrare",
+   "scossa"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Plusvalenza",
+  "taboo": [
+   "profitto",
+   "vendita",
+   "bilancio",
+   "valore"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Chiaroscuro",
+  "taboo": [
+   "contrasto",
+   "Caravaggio",
+   "pittura",
+   "oscurità"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Affresco",
+  "taboo": [
+   "intonaco",
+   "parete",
+   "Sistina",
+   "calce"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Pinacoteca",
+  "taboo": [
+   "museo",
+   "quadri",
+   "Brera",
+   "sala"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Cavalletto",
+  "taboo": [
+   "pittore",
+   "treppiede",
+   "tela",
+   "dipingere"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Sonetto",
+  "taboo": [
+   "quattordici",
+   "endecasillabi",
+   "Petrarca",
+   "rima"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Ossimoro",
+  "taboo": [
+   "antitesi",
+   "stridente",
+   "ironia",
+   "accostare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Incipit",
+  "taboo": [
+   "inizio",
+   "apertura",
+   "frase",
+   "latino"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Balaustra",
+  "taboo": [
+   "ringhiera",
+   "colonnine",
+   "balcone",
+   "scala"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Rilegatore",
+  "taboo": [
+   "volumi",
+   "copertina",
+   "colla",
+   "cucire"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Calligrafo",
+  "taboo": [
+   "alfabeto",
+   "pennino",
+   "ghirigori",
+   "scrittura"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Mantecare",
+  "taboo": [
+   "risotto",
+   "burro",
+   "cremoso",
+   "mescolare"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Bottarga",
+  "taboo": [
+   "Sardegna",
+   "salata",
+   "essiccata",
+   "pressata"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Pianissimo",
+  "taboo": [
+   "sottovoce",
+   "debole",
+   "silenzio",
+   "flebile"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Ritornello",
+  "taboo": [
+   "refrain",
+   "strofa",
+   "ripetizione",
+   "riprendere"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Glissando",
+  "taboo": [
+   "scivolare",
+   "slittare",
+   "tastiera",
+   "portamento"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Contrappunto",
+  "taboo": [
+   "voci",
+   "Bach",
+   "intrecciare",
+   "polifonia"
+  ],
+  "pack": "difficile"
  }
 ]

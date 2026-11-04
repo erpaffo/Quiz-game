@@ -28,8 +28,14 @@ export class ImpostorShow extends BaseShow<ImpostorPublic, ImpostorPrivate> {
 
   start(): ActionResult {
     this.order = shuffle(this.ctx.players().map((p) => p.id));
+    this.ctx.say?.('impostor/intro');
     this.nextRound();
     return null;
+  }
+
+  protected finish() {
+    this.ctx.say?.('impostor/final');
+    super.finish();
   }
 
   private nextRound() {
@@ -39,7 +45,10 @@ export class ImpostorShow extends BaseShow<ImpostorPublic, ImpostorPrivate> {
     this.ready.clear();
     this.votes.clear();
     this.impostorGuess = null;
-    const candidates = this.order.filter((id) => this.ctx.get(id));
+    // Solo i connessi possono essere impostore (se non c'è nessuno online, qualunque presente).
+    const present = this.order.filter((id) => this.ctx.get(id));
+    const online = present.filter((id) => this.ctx.get(id)?.connected);
+    const candidates = online.length ? online : present;
     this.impostorId = candidates[(this.round - 1) % candidates.length];
     this.category = pick(IMPOSTOR_CATEGORIES);
     const fresh = this.category.words.filter((w) => !this.usedWords.has(w.word));
@@ -59,7 +68,7 @@ export class ImpostorShow extends BaseShow<ImpostorPublic, ImpostorPrivate> {
   }
 
   private afterVote() {
-    if (this.opt('lastChance') === 'on' && this.caught && this.ctx.get(this.impostorId)) this.go('guess', IMPOSTOR.GUESS_MS, () => this.reveal());
+    if (this.opt('lastChance') === 'on' && this.caught && this.ctx.get(this.impostorId)?.connected) this.go('guess', IMPOSTOR.GUESS_MS, () => this.reveal());
     else this.reveal();
   }
 
@@ -67,9 +76,12 @@ export class ImpostorShow extends BaseShow<ImpostorPublic, ImpostorPrivate> {
     const caught = this.caught;
     const guessedRight = caught && this.impostorGuess !== null && wordKey(this.impostorGuess) === wordKey(this.word.word);
     const points: Record<string, number> = {};
+    // Impostore uscito e non smascherato: round annullato, nessuno vince né perde a tavolino.
+    const voided = !caught && !this.ctx.get(this.impostorId)?.connected;
     for (const p of this.ctx.players()) {
       let pts = 0;
-      if (p.id === this.impostorId) {
+      if (voided) pts = 0;
+      else if (p.id === this.impostorId) {
         if (!caught || guessedRight) pts += IMPOSTOR.IMPOSTOR_POINTS;
       } else {
         if (this.votes.get(p.id) === this.impostorId) pts += IMPOSTOR.CATCH_POINTS;
@@ -88,6 +100,7 @@ export class ImpostorShow extends BaseShow<ImpostorPublic, ImpostorPrivate> {
       votes: this.ctx.players().map((p) => ({ playerId: p.id, targetId: this.votes.get(p.id) ?? null })),
       points
     };
+    this.ctx.say?.('impostor/reveal');
     this.go('reveal', IMPOSTOR.REVEAL_MS, () => this.nextRound());
   }
 

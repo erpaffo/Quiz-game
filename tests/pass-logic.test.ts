@@ -4,7 +4,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { isPassGameId, PASS_GAME_IDS, PASS_GAMES, passStartProblem, sanitizePassOptions } from '../client/pass/catalog';
-import { BOMBA_CATEGORIES, BOMBA_SYLLABLES } from '../client/pass/data/bomba';
+import { BOMBA_CATEGORIES, BOMBA_CHAIN_LETTERS, BOMBA_SYLLABLES } from '../client/pass/data/bomba';
 import { DUELLO_FACTS, STROOP_COLORS } from '../client/pass/data/duello';
 import { FRONTE_CARDS } from '../client/pass/data/fronte';
 import { CHAMELEON_PAIRS, IMPOSTORE_CATEGORIES } from '../client/pass/data/impostore';
@@ -13,15 +13,15 @@ import { PANICO_PROMPTS } from '../client/pass/data/panico';
 import { CATENA_PHRASES, TRIBUNALE_QUESTIONS } from '../client/pass/data/social';
 import { BombaGame, fuseRange, makeTrigger, tickInterval } from '../client/pass/logic/bomba';
 import { CatenaChain, chainKind, type ChainStep } from '../client/pass/logic/catena';
-import { DuelloLadder, DuelloMatch, makePrompt, type DuelPrompt } from '../client/pass/logic/duello';
+import { DuelloLadder, DuelloMatch, makeFactDecks, makePrompt, type DuelPrompt } from '../client/pass/logic/duello';
 import { FronteTurn, fronteDeck, frontePlan } from '../client/pass/logic/fronte';
-import { dealImpostore, impostorCount, impostorePoints, isCaught, outcomeOf } from '../client/pass/logic/impostore';
+import { IMPOSTORE_WORDS, dealImpostore, pairKey, wordKey, impostorCount, impostorePoints, isCaught, outcomeOf } from '../client/pass/logic/impostore';
 import { betWins, ondaPlan, ondaScore, ondaTarget } from '../client/pass/logic/onda';
 import { PanicoGame } from '../client/pass/logic/panico';
 import { tribunaleJudges, tribunalePoints } from '../client/pass/logic/tribunale';
 import { Deck, seeded, shuffle } from '../client/pass/rng';
 import { MAX_PLAYERS, MemoryStore, PassStore } from '../client/pass/store';
-import type { Player } from '../client/pass/types';
+import type { GameContext, Player } from '../client/pass/types';
 
 const players = (n: number): Player[] => Array.from({ length: n }, (_, i) => ({ id: `p${i}`, name: `G${i}`, color: '#fff' }));
 const unique = <T>(list: T[]) => new Set(list).size === list.length;
@@ -153,10 +153,7 @@ describe('Casualità e mazzi', () => {
     const deck = new Deck([1, 2, 3, 4, 5], seeded(1));
     const first = Array.from({ length: 5 }, () => deck.draw());
     assert.deepEqual([...first].sort(), [1, 2, 3, 4, 5]);
-    for (let i = 0; i < 50; i++) {
-      const prev = deck.draw();
-      assert.notEqual(deck.draw(), prev === undefined ? -1 : Number.NaN); // pesca sempre qualcosa
-    }
+    for (let i = 0; i < 50; i++) assert.ok([1, 2, 3, 4, 5].includes(deck.draw())); // pesca sempre una carta del mazzo
     const d2 = new Deck(['a', 'b'], seeded(9));
     let last = d2.draw();
     for (let i = 0; i < 40; i++) {
@@ -168,9 +165,14 @@ describe('Casualità e mazzi', () => {
   });
 });
 
+const testDeck =
+  (seed: number): GameContext['deck'] =>
+  (_id, cards, keyOf) =>
+    new Deck(cards, seeded(seed), undefined, keyOf);
+
 describe('🎭 Parola in Fronte', () => {
   it('indovinate, passate, tabù, correzioni e punteggio mai negativo', () => {
-    const turn = new FronteTurn(fronteDeck('mix', seeded(1)));
+    const turn = new FronteTurn(fronteDeck('mix', testDeck(1)));
     const w1 = turn.current.word;
     turn.answer(true);
     assert.notEqual(turn.current.word, w1);
@@ -185,13 +187,19 @@ describe('🎭 Parola in Fronte', () => {
     assert.equal(turn.correct, 2);
     assert.equal(turn.results[2].taboo, true);
     assert.equal(frontePlan(players(3), 2).length, 6);
-    assert.ok(fronteDeck('difficile', seeded(2)).draw().pack === 'difficile');
+    assert.ok(fronteDeck('difficile', testDeck(2)).draw().pack === 'difficile');
   });
 });
 
 describe('💣 Bomba Verbale', () => {
+  const decks = (seed = 1) => ({
+    sillabe: new Deck(BOMBA_SYLLABLES, seeded(seed)),
+    categorie: new Deck(BOMBA_CATEGORIES, seeded(seed)),
+    lettere: new Deck(BOMBA_CHAIN_LETTERS, seeded(seed))
+  });
+
   it('passa saltando gli eliminati; BOOM toglie vite; contestazione; classifica', () => {
-    const g = new BombaGame(players(3), { lives: 1, trigger: 'mix', fuse: 'normale' }, seeded(5));
+    const g = new BombaGame(players(3), { lives: 1, trigger: 'mix', fuse: 'normale' }, seeded(5), decks());
     g.holder = 0;
     g.startRound();
     const [min, max] = fuseRange('normale');
@@ -202,6 +210,9 @@ describe('💣 Bomba Verbale', () => {
     assert.equal(g.advance(999_999), false, 'in pausa la miccia non brucia');
     g.resolveContest(false);
     assert.equal(g.holder, 0, 'parola non valida: bomba torna indietro');
+    g.pass();
+    assert.equal(g.canContest, false, 'una sola contestazione per round');
+    g.holder = 0;
     assert.equal(g.advance(g.fuse), true);
     assert.equal(g.explode().id, 'p0');
     assert.deepEqual(g.out, ['p0']);
@@ -217,7 +228,7 @@ describe('💣 Bomba Verbale', () => {
   });
 
   it('con più vite si resta in gioco; ticchettio sempre più veloce; inneschi dei 3 tipi', () => {
-    const g = new BombaGame(players(2), { lives: 3, trigger: 'sillabe', fuse: 'corta' }, seeded(2));
+    const g = new BombaGame(players(2), { lives: 3, trigger: 'sillabe', fuse: 'corta' }, seeded(2), decks());
     g.startRound();
     g.explode();
     assert.equal(g.alive.length, 2);
@@ -228,9 +239,15 @@ describe('💣 Bomba Verbale', () => {
       assert.ok(iv <= prev && iv >= 100);
       prev = iv;
     }
-    const kinds = new Set(Array.from({ length: 60 }, (_, i) => makeTrigger('mix', seeded(i)).kind));
+    const kinds = new Set(Array.from({ length: 60 }, (_, i) => makeTrigger('mix', seeded(i), decks(i)).kind));
     assert.deepEqual([...kinds].sort(), ['categoria', 'catena', 'sillaba']);
     assert.deepEqual(fuseRange('lunga'), [25_000, 60_000]);
+  });
+
+  it('mazzi: nessun innesco ripetuto in 8 round', () => {
+    const g = new BombaGame(players(2), { lives: 9, trigger: 'categorie', fuse: 'corta' }, seeded(3), decks(3));
+    const texts = Array.from({ length: 8 }, () => (g.startRound(), g.trigger.text));
+    assert.equal(new Set(texts).size, 8);
   });
 });
 
@@ -248,6 +265,22 @@ describe('🕵️ L’Impostore Tascabile', () => {
     }
     assert.equal(impostorCount(2, 6), 2);
     assert.throws(() => dealImpostore(players(2), { mode: 'classico', impostors: 1 }, seeded(1)));
+  });
+
+  it('classico: nessuna parola ripetuta nei primi 60 round', () => {
+    const rng = seeded(5);
+    const decks = { classico: new Deck(IMPOSTORE_WORDS, rng, undefined, wordKey), camaleonte: new Deck(CHAMELEON_PAIRS, rng, undefined, pairKey) };
+    // la stessa parola può stare in due categorie: la carta è (categoria, parola)
+    const cards = Array.from({ length: 60 }, () => {
+      const d = dealImpostore(players(4), { mode: 'classico', impostors: 1 }, rng, decks);
+      return `${d.category}|${d.secret}`;
+    });
+    assert.ok(unique(cards));
+    const pairs = Array.from({ length: 20 }, () => {
+      const d = dealImpostore(players(4), { mode: 'camaleonte', impostors: 1 }, rng, decks);
+      return [d.secret, d.cards.find((c) => c.role === 'impostor')!.word].sort().join('|');
+    });
+    assert.ok(unique(pairs));
   });
 
   it('camaleonte: ha la parola gemella (diversa), stessa categoria', () => {
@@ -279,7 +312,7 @@ describe('🕵️ L’Impostore Tascabile', () => {
 
 describe('⏱️ 5 Secondi di Panico', () => {
   it('turni, lettore, rimbalzo della stessa sfida e punto di consolazione', () => {
-    const g = new PanicoGame(players(3), 2, seeded(1));
+    const g = new PanicoGame(players(3), 2, new Deck(PANICO_PROMPTS, seeded(1)));
     assert.equal(g.totalTurns, 6);
     assert.ok(g.nextTurn());
     assert.equal(g.examineePlayer.id, 'p0');
@@ -362,14 +395,26 @@ describe('⚡ Duello al Tavolo', () => {
 
   it('ogni frase generata è davvero vera o falsa come dichiara (500 frasi)', () => {
     const rng = seeded(11);
+    const facts = makeFactDecks(rng);
     const kinds = new Set<string>();
+    let prev: DuelPrompt | undefined;
     for (let i = 0; i < 500; i++) {
-      const p = makePrompt(rng);
+      const p = makePrompt(rng, facts, prev);
+      if (prev) assert.notEqual(JSON.stringify(p), JSON.stringify(prev), 'mai due prompt identici di fila');
+      prev = p;
       kinds.add(p.kind);
       assert.equal(check(p), p.truth, JSON.stringify(p));
       if (p.kind === 'count') assert.notEqual(p.blue, p.red);
     }
     assert.equal(kinds.size, 4);
+  });
+
+  it('i fatti non si ripetono finché il mazzo non finisce', () => {
+    const rng = seeded(3);
+    const facts = makeFactDecks(rng);
+    const veri = DUELLO_FACTS.filter((f) => f.truth).length;
+    const seen = Array.from({ length: veri }, () => facts.veri.draw().text);
+    assert.ok(unique(seen));
   });
 
   it('punto al primo sul vero, −1 una volta sola sul falso, vittoria al bersaglio', () => {

@@ -1,0 +1,33 @@
+/* Stile "manuale da scatola di gioco da tavolo": A4, oro su carta crema, riquadri e tabelle punti. */
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+@page :first { margin: 0; }
+:root { --oro:#ffb52e; --notte:#08141c; --petrolio:#0f2c3a; --acqua:#5fd4e8; --corallo:#ff6b5e; --verde:#7ed56f; --carta:#fbf6e9; --testo:#1a2a33; }
+* { box-sizing: border-box; }
+body { font-family: "Bricolage Grotesque","Segoe UI",Arial,sans-serif; color: var(--testo); background: var(--carta); font-size: 10.5pt; line-height: 1.45; margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1 { font-size: 22pt; color: var(--notte); border-bottom: 4px solid var(--oro); padding-bottom: 3mm; margin: 0 0 5mm; break-before: page; }
+h2 { font-size: 15pt; color: var(--petrolio); margin: 7mm 0 2mm; break-after: avoid; }
+h3 { font-size: 11.5pt; color: var(--corallo); margin: 4mm 0 1mm; text-transform: uppercase; letter-spacing: .04em; break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+ul, ol { padding-left: 6mm; margin: 1mm 0 3mm; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9.5pt; break-inside: avoid; }
+th { background: var(--petrolio); color: var(--carta); text-align: left; padding: 1.5mm 2mm; }
+td { padding: 1.5mm 2mm; border-bottom: 1px solid #d9cfb4; vertical-align: top; }
+tr:nth-child(even) td { background: #f3ecd6; }
+.gioco { break-inside: avoid-page; border: 2px solid var(--petrolio); border-radius: 3mm; padding: 3mm 4mm; margin: 4mm 0; background: #fffdf5; }
+.gioco > h2 { margin-top: 0; }
+.scheda { display: flex; gap: 3mm; flex-wrap: wrap; margin: 1mm 0 2mm; }
+.scheda span { background: var(--oro); color: var(--notte); border-radius: 2mm; padding: .5mm 2.5mm; font-weight: 700; font-size: 9pt; }
+.consiglio, .attenzione { border-left: 4px solid var(--acqua); background: #e7f6fa; padding: 2mm 3mm; margin: 3mm 0; border-radius: 0 2mm 2mm 0; break-inside: avoid; }
+.attenzione { border-color: var(--corallo); background: #ffe9e6; }
+.consiglio::before { content: "Consiglio · "; font-weight: 800; color: #0b6f84; }
+.attenzione::before { content: "Attenzione · "; font-weight: 800; color: #b3392f; }
+.copertina { height: 297mm; background: var(--notte); color: var(--carta); padding: 40mm 20mm; display: flex; flex-direction: column; justify-content: center; break-after: page; }
+.copertina .marchio { font-size: 40pt; font-weight: 800; line-height: 1.05; }
+.copertina .marchio em { color: var(--oro); font-style: normal; }
+.copertina .sotto { font-size: 18pt; color: var(--acqua); margin-top: 6mm; }
+.copertina .dati { margin-top: 30mm; display: flex; gap: 6mm; }
+.copertina .dati div { border: 2px solid var(--oro); border-radius: 3mm; padding: 3mm 5mm; text-align: center; }
+.copertina .dati b { display: block; font-size: 20pt; color: var(--oro); }
+.indice { break-after: page; }
+.indice h1 { break-before: auto; }
+.indice ol { columns: 2; font-size: 11pt; }

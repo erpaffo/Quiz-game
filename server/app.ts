@@ -128,6 +128,7 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
     }
   });
   app.put('/api/packs/:id', (req, res) => {
+    if (!packs.get(req.params.id)) return res.status(404).json({ error: 'Pacchetto inesistente' });
     try {
       res.json(packs.save(req.body, req.params.id));
     } catch (err) {
@@ -289,7 +290,10 @@ export async function startServer(opts: ServerOptions): Promise<RunningServer> {
     }));
 
     socket.on('ADD_QUESTION', safe((p, ack) => {
-      if (!player()) return reply(ack, NOT_IN_ROOM);
+      const pl = player();
+      if (!pl) return reply(ack, NOT_IN_ROOM);
+      // Scrive su disco e finisce nel quiz di tutte le partite: solo davanti a tutti, nella lobby.
+      if (pl.room.phase !== 'LOBBY') return reply(ack, 'Puoi aggiungere domande solo nella lobby');
       try {
         ack({ ok: true, total: packs.addPhoneQuestion(p) });
       } catch (err) {

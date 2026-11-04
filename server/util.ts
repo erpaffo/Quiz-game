@@ -9,6 +9,19 @@ export function shuffle<T>(arr: readonly T[]): T[] {
   return a;
 }
 
+/** Pesca n elementi preferendo i non visti (set `seen`, persistente nella stanza); se i freschi non bastano azzera `seen` e completa con i già visti. */
+export function pickFresh<T>(items: readonly T[], n: number, seen: Set<string>, keyOf: (item: T) => string): T[] {
+  const fresh = shuffle(items.filter((it) => !seen.has(keyOf(it))));
+  let out = fresh.slice(0, n);
+  if (out.length < n) {
+    seen.clear();
+    const freshKeys = new Set(out.map(keyOf));
+    out = [...out, ...shuffle(items.filter((it) => !freshKeys.has(keyOf(it)))).slice(0, n - out.length)];
+  }
+  for (const it of out) seen.add(keyOf(it));
+  return out;
+}
+
 export function pick<T>(arr: readonly T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }

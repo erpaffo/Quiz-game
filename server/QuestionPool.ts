@@ -47,6 +47,8 @@ interface McRaw extends McDef {
   shuffle: boolean;
 }
 
+/** Sotto questa soglia di domande fresche la Raffica riusa anche le già uscite. */
+const MIN_BLITZ = 20;
 const PLACEHOLDER_RE = /\{giocatore\}/gi;
 
 /**
@@ -63,9 +65,9 @@ export class QuestionPool {
   private audioMc: McRaw[] = [];
   private num: NumDef[] = [];
   private categories = new Map<string, Category>();
-  private used = new Set<string>();
 
-  constructor(packs: Pack[], private readonly names: () => string[], filter: PoolFilter = {}) {
+  /** `used` può essere condiviso con la Room per ricordare le domande tra partite. */
+  constructor(packs: Pack[], private readonly names: () => string[], filter: PoolFilter = {}, private readonly used = new Set<string>()) {
     const topics = new Set(filter.topics ?? []);
     for (const pack of packs) {
       const cats = new Map(pack.categories.map((c) => [c.id, { ...c, id: `${pack.id}:${c.id}` }]));
@@ -104,8 +106,15 @@ export class QuestionPool {
   /** Categorie con almeno `min` domande a scelta multipla non ancora uscite. */
   categoriesWithMc(min: number): Category[] {
     const counts = new Map<string, number>();
-    for (const q of this.mc) if (!this.used.has(q.id)) counts.set(q.category.id, (counts.get(q.category.id) ?? 0) + 1);
-    return [...this.categories.values()].filter((c) => (counts.get(c.id) ?? 0) >= min);
+    const count = () => {
+      counts.clear();
+      for (const q of this.mc) if (!this.used.has(q.id)) counts.set(q.category.id, (counts.get(q.category.id) ?? 0) + 1);
+      return [...this.categories.values()].filter((c) => (counts.get(c.id) ?? 0) >= min);
+    };
+    const res = count();
+    if (res.length || !this.mc.length) return res;
+    for (const q of this.mc) this.used.delete(q.id); // banca esaurita: si riparte
+    return count();
   }
 
   /** Difficoltà (più vicina a quella richiesta), poi categoria a caso, poi domanda a caso. */
@@ -122,7 +131,8 @@ export class QuestionPool {
       pool = pool.filter((q) => Math.abs(q.difficulty - opts.difficulty!) === best);
     }
     if (!opts.categoryId) {
-      const cat = pick([...new Set(pool.map((q) => q.category.id))]);
+      // categoria pesata per domande rimaste: una grande non si esaurisce prima delle piccole
+      const cat = pick(pool.map((q) => q.category.id));
       pool = pool.filter((q) => q.category.id === cat);
     }
     const q = pick(pool);
@@ -144,12 +154,17 @@ export class QuestionPool {
   /** Mazzo indipendente per la Raffica: categorie alternate a caso, ognuno al proprio ritmo. */
   blitzDeck(): McDef[] {
     const groups = new Map<string, McRaw[]>();
-    for (const q of shuffle(this.mc)) groups.set(q.category.id, [...(groups.get(q.category.id) ?? []), q]);
+    // prima le domande non ancora uscite; se sono troppo poche si ripesca tra le già usate
+    const fresh = this.mc.filter((q) => !this.used.has(q.id));
+    const src = fresh.length >= MIN_BLITZ ? fresh : this.mc;
+    for (const q of shuffle(src)) groups.set(q.category.id, [...(groups.get(q.category.id) ?? []), q]);
     const deck: McDef[] = [];
     while (groups.size) {
       const cat = pick([...groups.keys()]);
       const g = groups.get(cat)!;
-      deck.push(this.prepare(g.pop()!));
+      const raw = g.pop()!;
+      // non si marca `used`: il mazzo è per-giocatore e svuoterebbe Classico/Scommessa
+      deck.push(this.prepare(raw));
       if (!g.length) groups.delete(cat);
     }
     return deck;

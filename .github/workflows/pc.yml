@@ -6,14 +6,16 @@ name: Eseguibili (Windows, Mac, Linux)
 on:
   push:
     branches: [main, master]
-    tags: ['v*']
+    tags: ['pc-v*']
     paths:
       - 'desktop/**'
       - 'electron-builder.config.cjs'
       - 'scripts/desktop-*.mjs'
       - 'build/**'
       - 'package-lock.json'
-      - '.github/workflows/desktop.yml'
+      - '.github/workflows/pc.yml'
+  # chiamato dalla release (release.yml) dopo la verifica AI
+  workflow_call:
   workflow_dispatch:
 
 permissions:
@@ -75,7 +77,7 @@ jobs:
 
   release:
     needs: build
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v') || startsWith(github.ref, 'refs/tags/pc-v')
     runs-on: ubuntu-latest
     permissions:
       contents: write

@@ -5,7 +5,9 @@ import { CONFIG, type DurationKey } from '../shared/config';
 import type { ClientToServerEvents, ServerToClientEvents } from '../shared/events';
 import { GAME_IDS, GAMES } from '../shared/games';
 import { clampRounds, getShowMeta, isMenuView, isShowId, optionFor, sanitizeOptions, type MenuState, type ShowId } from '../shared/shows';
+import { minClearMs } from '../shared/powers';
 import { sanitizeTopics } from '../shared/topics';
+import { voiceTexts, type VoiceKey, type VoicePriority, type VoiceSayPayload } from '../shared/voice';
 import type {
   CardType,
   GameAction,
@@ -45,6 +47,8 @@ const BOT_NAMES = ['Ugo', 'Lia', 'Bruno', 'Ada', 'Tito', 'Gina', 'Pino', 'Rita',
 const LOBBY_DISCONNECT_GRACE_MS = 20_000;
 /** Un capo stanza che perde la connessione tiene la corona per questo tempo (micro-cali del Wi-Fi). */
 const VIP_DISCONNECT_GRACE_MS = 15_000;
+/** Se la TV resta scollegata così a lungo la stanza viene chiusa per i telefoni. */
+const HOST_ABSENT_CLOSE_MS = 5 * 60_000;
 const MIN_MC_QUESTIONS = 10;
 const REEL_LENGTH = 16;
 const REEL_STOP = 13;
@@ -82,6 +86,13 @@ export class Room {
   private vipGraceTimer: NodeJS.Timeout | null = null;
 
   private pool: QuestionPool | null = null;
+  /** Domande già uscite tra partite e riavvii: si azzera solo quando un mazzo si esaurisce. */
+  private recentIds = new Set<string>();
+  /** Da quando ogni giocatore è offline (per la tolleranza prima di rimuoverlo all'avvio). */
+  private offlineAt = new Map<string, number>();
+  /** Pausa causata dalla TV scollegata (non da Esc): solo questa si riprende da sola. */
+  private hostPaused = false;
+  private hostAbsentTimer: NodeJS.Timeout | null = null;
   private game: GameMode | null = null;
   private gameId: GameId | 'pyramid' | null = null;
   private activeShow: ShowPlugin | null = null;
@@ -91,6 +102,8 @@ export class Room {
   private show = { total: 0, played: [] as GameId[], order: null as GameId[] | null, wheel: [] as GameId[] };
   private readonly ctx: GameContext;
   private readonly sessionCtx: RoomSessionContext;
+  /** Contenuti Pack già visti per show, per non ripetere tra partite della stessa stanza. */
+  private readonly seenContent = new Map<string, Set<string>>();
 
   constructor(
     private readonly io: IO,
@@ -189,8 +202,16 @@ export class Room {
     return null;
   }
 
+  /** Toglie chi è offline da più della tolleranza; chi ha appena perso il segnale resta. */
+  private dropLongOffline() {
+    for (const p of [...this.players.values()]) {
+      if (!p.connected && Date.now() - (this.offlineAt.get(p.id) ?? 0) >= LOBBY_DISCONNECT_GRACE_MS) this.removePlayer(p.id, false);
+    }
+  }
+
   /** Uscendo da una partita (menù o nuova partita) la pausa non ha più senso. */
   private clearPause() {
+    this.hostPaused = false;
     if (!this.paused) return;
     this.paused = false;
     this.timers.resume();
@@ -201,6 +222,7 @@ export class Room {
     this.clearTimers();
     this.setGame(null);
     if (this.vipGraceTimer) clearTimeout(this.vipGraceTimer);
+    if (this.hostAbsentTimer) clearTimeout(this.hostAbsentTimer);
     for (const t of this.lobbyRemovals.values()) clearTimeout(t);
     this.lobbyRemovals.clear();
   }
@@ -216,6 +238,29 @@ export class Room {
     if (durationMs !== null && onEnd) this.later(() => this.runStepEnd(onEnd), durationMs);
     this.broadcast();
     this.scheduleBots();
+    this.announce(data);
+  }
+
+  /** Battuta del presentatore: la TV la suona e la mostra come sottotitolo (F3.2b). */
+  private say(key: VoiceKey, priority: VoicePriority = 'normal', nome?: string) {
+    const texts = voiceTexts(key);
+    // Chiave non ancora doppiata: meglio il silenzio di un sottotitolo senza voce.
+    if (!texts.length || !this.hostSocketId) return;
+    const payload: VoiceSayPayload = { key, text: texts[0], priority };
+    if (texts.length > 1) payload.texts = texts;
+    if (nome) payload.args = { nome };
+    this.io.to(this.hostSocketId).emit('VOICE_SAY', payload);
+  }
+
+  /** Voci delle fasi del quiz: ruota, ingresso nel minigioco, rivelazione, podio. */
+  private announce(data: PhaseData | { phase: 'LOBBY' }) {
+    if (data.phase === 'WHEEL') return this.say('wheel');
+    if (data.phase === 'GAME_INTRO') return this.say(`game_${data.game}`);
+    if (data.phase === 'GAME_OVER') return this.say('winner', 'high', this.players.get(data.winnerId ?? '')?.name);
+    if (data.phase !== 'PLAY' || (data.state.step !== 'reveal' && data.state.step !== 'steal')) return;
+    const results = data.state.results;
+    if (!results.some((r) => r.optionIndex !== null)) return this.say('nobody');
+    this.say(results.some((r) => r.correct) ? 'correct' : 'wrong');
   }
 
   private runStepEnd(fn: () => void) {
@@ -328,6 +373,7 @@ export class Room {
             p.fiftyLeft--;
           }
           p.cur = { questionId: def.id, incoming: p.pendingEffects, removed, hint: null };
+          room.effectsShownAt.set(p.id, Date.now());
           p.pendingEffects = [];
         }
       },
@@ -345,6 +391,7 @@ export class Room {
             p.fiftyLeft--;
           }
           p.cur = { questionId: def.id, incoming: p.pendingEffects, removed: [], hint };
+          room.effectsShownAt.set(p.id, Date.now());
           p.pendingEffects = [];
         }
       },
@@ -388,7 +435,13 @@ export class Room {
         room.showAction(p.id, payload);
       },
       broadcast: () => room.broadcast(),
-      returnToHub: () => room.returnToHub()
+      returnToHub: () => room.returnToHub(),
+      say: (key, priority, nome) => room.say(key, priority, nome),
+      seen: (showId) => {
+        let s = room.seenContent.get(showId);
+        if (!s) room.seenContent.set(showId, (s = new Set()));
+        return s;
+      }
     };
   }
 
@@ -452,7 +505,7 @@ export class Room {
         plugin.destroy?.();
         return blocked;
       }
-      for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
+      this.dropLongOffline();
       for (const p of this.players.values()) resetForShow(p);
       // Fase SHOW prima di start(): da qui in poi niente nuovi ingressi, niente espulsioni "da lobby",
       // e checkAllActed chiude i passi in anticipo usando plugin.hasActed().
@@ -473,7 +526,7 @@ export class Room {
     const packs = this.packs.all().filter((p) => !this.settings.excluded.includes(p.id));
     const difficulty = Number(optionFor(this.settings, 'quiz', 'difficulty')) || undefined;
     const topics = this.settings.topics ?? [];
-    const pool = new QuestionPool(packs, () => [...this.players.values()].map((p) => p.name), { difficulty, topics });
+    const pool = new QuestionPool(packs, () => [...this.players.values()].map((p) => p.name), { difficulty, topics }, this.recentIds);
     if (pool.mcCount < MIN_MC_QUESTIONS) {
       const filtered = difficulty || topics.length ? ' con questa difficoltà e questi argomenti (prova «Mista» o più argomenti)' : ' nei pacchetti scelti';
       return `Domande insufficienti${filtered}: ne servono almeno ${MIN_MC_QUESTIONS} a risposta multipla o vero/falso`;
@@ -492,8 +545,9 @@ export class Room {
     }
     this.pool = pool;
 
-    for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
+    this.dropLongOffline();
     for (const p of this.players.values()) resetForShow(p);
+    this.say('start');
     this.activeShow = this.registry.create('quiz', this.sessionCtx);
     this.nextGame();
     return null;
@@ -507,7 +561,7 @@ export class Room {
     // Durante uno Show del Pack si torna alla griglia senza ripetere "Pronto".
     if (this.phase === 'SHOW') return this.returnToHub();
     if (byPlayerId && this.phase !== 'GAME_OVER') return 'Non puoi riavviare ora';
-    for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
+    this.dropLongOffline();
     for (const p of this.players.values()) {
       p.ready = p.isBot;
       resetForShow(p);
@@ -523,7 +577,7 @@ export class Room {
   /** Fine di uno Show del Pack: si torna alla griglia del menù tenendo giocatori, personaggi e "Pronto". */
   returnToHub(): ActionResult {
     this.clearPause();
-    for (const p of [...this.players.values()]) if (!p.connected) this.removePlayer(p.id, false);
+    this.dropLongOffline();
     for (const p of this.players.values()) resetForShow(p);
     this.activeShow?.destroy?.();
     this.activeShow = null;
@@ -677,6 +731,12 @@ export class Room {
 
   attachHost(socketId: string) {
     this.hostSocketId = socketId;
+    if (this.hostAbsentTimer) clearTimeout(this.hostAbsentTimer);
+    this.hostAbsentTimer = null;
+    if (this.hostPaused) {
+      this.hostPaused = false;
+      this.setPaused(false);
+    }
     this.touch();
     for (const p of this.players.values()) {
       if (p.selfie) this.io.to(socketId).emit('SELFIE_UPDATE', { playerId: p.id, dataUrl: p.selfie });
@@ -690,6 +750,7 @@ export class Room {
     if (existing && !existing.isBot && rejoinKey === existing.rejoinKey) {
       existing.socketId = socketId;
       existing.connected = true;
+      this.offlineAt.delete(existing.id);
       if (existing.id === this.vip) this.vipLostAt = null;
       const pending = this.lobbyRemovals.get(existing.id);
       if (pending) clearTimeout(pending);
@@ -714,12 +775,23 @@ export class Room {
   disconnect(socketId: string) {
     if (this.hostSocketId === socketId) {
       this.hostSocketId = null;
+      if (this.phase !== 'LOBBY') {
+        if (!this.paused) {
+          this.hostPaused = true;
+          this.setPaused(true);
+        }
+        this.hostAbsentTimer = setTimeout(() => {
+          this.hostAbsentTimer = null;
+          this.io.to(this.channel).emit('ROOM_CLOSED', { reason: 'Schermo principale scollegato' });
+        }, HOST_ABSENT_CLOSE_MS);
+      }
       return;
     }
     const p = [...this.players.values()].find((x) => x.socketId === socketId);
     if (!p) return;
     p.socketId = null;
     p.connected = false;
+    this.offlineAt.set(p.id, Date.now());
     if (this.phase === 'SHOW') this.activeShow?.onPlayerDisconnect?.(p);
     if (p.id === this.vip) {
       this.vipLostAt = Date.now();
@@ -864,9 +936,14 @@ export class Room {
     if (this.paused) return PAUSED;
     const p = this.players.get(playerId);
     if (!p || this.phase !== 'PLAY' || !this.game || !a || typeof a !== 'object') return 'Azione non valida ora';
+    const answers = a.type === 'answer' || a.type === 'numeric';
+    // i bot non sbloccano mai: il blocco vale solo per i giocatori umani
+    if (answers && !p.isBot && p.cur?.incoming.some((e) => (e.type === 'ICE' || e.type === 'LOCK') && p.activeEffects.has(e.type))) {
+      return 'Sblocca prima la risposta (ghiaccio o lucchetto)';
+    }
     const err = this.game.action(p, a);
     if (err) return err;
-    if (a.type === 'answer' || a.type === 'numeric') p.activeEffects.clear();
+    if (answers) p.activeEffects.clear();
     this.broadcast();
     this.checkAllActed();
     return null;
@@ -886,9 +963,18 @@ export class Room {
 
   clearEffect(playerId: string, type: string) {
     const p = this.players.get(playerId);
-    if (!p || !p.activeEffects.delete(type as never)) return;
+    const inc = p?.cur?.incoming.find((e) => e.type === type);
+    if (!p || !inc || !p.activeEffects.has(inc.type)) return;
+    if (Date.now() - (this.effectsShownAt.get(playerId) ?? 0) < minClearMs(inc.type, inc.stack)) {
+      this.broadcast(); // sblocco troppo rapido: il telefono ridisegna l'effetto invece di restare bloccato
+      return;
+    }
+    p.activeEffects.delete(inc.type);
     this.broadcast();
   }
+
+  /** Quando ogni giocatore ha visto la sua domanda con gli effetti (base del tempo minimo di sblocco). */
+  private effectsShownAt = new Map<string, number>();
 
   // ---------------------------------------------------------------- bot
 

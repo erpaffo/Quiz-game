@@ -1,5 +1,6 @@
 import type { DurationKey } from '../../shared/config';
 import { getShowMeta, type ShowId, type ShowMeta } from '../../shared/shows';
+import type { VoiceKey, VoicePriority } from '../../shared/voice';
 import type { Player } from '../players';
 
 /**
@@ -37,6 +38,10 @@ export interface RoomSessionContext {
   broadcast(): void;
   /** Riporta l'intera stanza al Menù Principale dell'Hub mantenendo giocatori, avatar e selfie. */
   returnToHub(): void;
+  /** Battuta del presentatore (chiave `<show>/<passo>` di VOICE_LINES); `nome` = player.name grezzo. Opzionale: i contesti di test possono ometterla. */
+  say?(key: VoiceKey, priority?: VoicePriority, nome?: string): void;
+  /** Contenuti già pescati in questa stanza per lo show `showId` (vive quanto la stanza; vedi `pickFresh`). */
+  seen(showId: string): Set<string>;
 }
 
 /**

@@ -14,6 +14,11 @@ class Preview {
   private clock = new THREE.Clock();
   private running = false;
   private lastFrame = 0;
+  private container: HTMLElement | null = null;
+
+  constructor() {
+    window.addEventListener('resize', this.resize);
+  }
 
   private init() {
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -30,16 +35,25 @@ class Preview {
   mount(container: HTMLElement) {
     if (!this.renderer) this.init();
     container.appendChild(this.renderer!.domElement);
-    const w = container.clientWidth || 240;
-    const h = container.clientHeight || 240;
-    this.renderer!.setSize(w, h);
-    this.camera.aspect = w / h;
-    this.camera.updateProjectionMatrix();
+    this.container = container;
+    this.resize();
     if (!this.running) {
       this.running = true;
       this.renderer!.setAnimationLoop((now) => this.frame(now));
     }
   }
+
+  // updateStyle=false: la dimensione CSS (100%) resta del layout, altrimenti i px inline
+  // restano vecchi dopo la rotazione e il layout oscilla ("vibrazione").
+  private resize = () => {
+    const c = this.container;
+    if (!c || !this.renderer) return;
+    const w = c.clientWidth || 240;
+    const h = c.clientHeight || 240;
+    this.renderer.setSize(w, h, false);
+    this.camera.aspect = w / h;
+    this.camera.updateProjectionMatrix();
+  };
 
   show(characterId: string, skinId: string, selfie: string | null, custom: CustomChoice = {}) {
     if (!this.rig) {

@@ -1,6 +1,7 @@
 import { CONFIG } from '../../shared/config';
 import type { GameAction } from '../../shared/types';
 import type { Player } from '../players';
+import { wrongPenalty } from '../logic/scoring';
 import { botAnswer, McRound } from './common';
 import type { GameContext, GameMode } from './types';
 
@@ -60,7 +61,7 @@ export class FastestGame implements GameMode {
       this.winners.push(p.id);
       if (this.winners.length === prizes.length) this.ctx.endStep(this.ctx.scale(700));
     } else if (!correct) {
-      r.points.set(p.id, this.ctx.addScore(p, -CONFIG.FASTEST_PENALTY));
+      r.points.set(p.id, this.ctx.addScore(p, -wrongPenalty(CONFIG.FASTEST_WIN, r.def.options.length)));
     }
     return null;
   }

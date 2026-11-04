@@ -9,6 +9,7 @@ import { playerColor, playerName, playerShapeCss, renderShowFinalController, typ
 let draftDrawingPrompt = '';
 let draftFrames: Drawing = [[], []];
 let activeFrameIdx = 0;
+let redrawCurrent: () => void = () => {}; // la delega click è registrata una sola volta: deve vedere la tela dell'ultimo render
 let activeColorIdx = 0;
 let activeWidthIdx = 1;
 let draftSurveyAnswers: (number | null)[] = [];
@@ -59,7 +60,7 @@ export function renderControllerShowBatch3(
 // 11. ✏️ SCARABOCCHI ANIMATI (Drawful Animate)
 // ---------------------------------------------------------------------------
 
-function renderCreativeController(_snap: RoomSnapshot, p: PlayerPublic, meta: ShowMeta, st: CreativePublic, priv: CreativePrivate, ctx: ControllerShowContext): void {
+function renderCreativeController(_snap: RoomSnapshot, p: PlayerPublic, meta: ShowMeta, st: CreativePublic, priv: CreativePrivate, ctx: ControllerShowContext, rerender = false): void {
   if (st.step === 'draw') {
     if (priv.drawn) {
       ctx.app.innerHTML = `<div class="view center"><div class="done pop">🎨 Animazione inviata!</div><p class="muted">«${esc(priv.prompt ?? '')}»</p></div>`;
@@ -164,40 +165,42 @@ function renderCreativeController(_snap: RoomSnapshot, p: PlayerPublic, meta: Sh
     canvas?.addEventListener('pointercancel', endStroke);
 
     redraw();
+    redrawCurrent = redraw;
 
-    ctx.onClick(async (t) => {
+    // una sola delega per vista: i re-render interni (true) non devono riregistrarla
+    if (!rerender) ctx.onClick(async (t) => {
       const fStr = t.closest<HTMLElement>('[data-frame]')?.dataset.frame;
       if (fStr !== undefined) {
         activeFrameIdx = Number(fStr);
-        renderCreativeController(_snap, p, meta, st, priv, ctx);
+        renderCreativeController(_snap, p, meta, st, priv, ctx, true);
         return;
       }
       const cStr = t.closest<HTMLElement>('[data-color]')?.dataset.color;
       if (cStr !== undefined) {
         activeColorIdx = Number(cStr);
-        renderCreativeController(_snap, p, meta, st, priv, ctx);
+        renderCreativeController(_snap, p, meta, st, priv, ctx, true);
         return;
       }
       const wStr = t.closest<HTMLElement>('[data-width]')?.dataset.width;
       if (wStr !== undefined) {
         activeWidthIdx = Number(wStr);
-        renderCreativeController(_snap, p, meta, st, priv, ctx);
+        renderCreativeController(_snap, p, meta, st, priv, ctx, true);
         return;
       }
       if (t.closest('[data-act="copy-f1"]')) {
         draftFrames[1] = draftFrames[0].map((s) => ({ c: s.c, w: s.w, p: s.p.slice() }));
         activeFrameIdx = 1;
-        renderCreativeController(_snap, p, meta, st, priv, ctx);
+        renderCreativeController(_snap, p, meta, st, priv, ctx, true);
         return;
       }
       if (t.closest('[data-act="undo"]')) {
         draftFrames[activeFrameIdx].pop();
-        redraw();
+        redrawCurrent();
         return;
       }
       if (t.closest('[data-act="clear"]')) {
         draftFrames[activeFrameIdx] = [];
-        redraw();
+        redrawCurrent();
         return;
       }
       if (t.closest('[data-act="send-drawing"]')) {

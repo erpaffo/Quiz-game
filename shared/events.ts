@@ -6,6 +6,7 @@
 
 import type { MenuView, ShowId } from './shows';
 import type { CardType, GameAction, LobbySettings, PhoneQuestion, PowerType, RoomSnapshot } from './types';
+import type { VoiceSayPayload } from './voice';
 
 export type AckResult<T extends object = object> = ({ ok: true } & T) | { ok: false; error: string };
 export type Ack<T extends object = object> = (res: AckResult<T>) => void;
@@ -43,6 +44,8 @@ export interface ClientToServerEvents {
 
 export interface ServerToClientEvents {
   ROOM_STATE: (s: RoomSnapshot) => void;
+  /** Battuta del presentatore (solo schermo principale): la TV suona `key` e mostra `text`. */
+  VOICE_SAY: (p: VoiceSayPayload) => void;
   SELFIE_UPDATE: (p: { playerId: string; dataUrl: string | null }) => void;
   ROOM_CLOSED: (p: { reason: string }) => void;
   KICKED: () => void;

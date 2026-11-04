@@ -327,15 +327,17 @@ function renderLeggendeController(snap: RoomSnapshot, p: PlayerPublic, meta: Sho
       ctx.app.innerHTML = `<div class="view center">${statusBar}<div class="big-icon">💀</div><div class="title">Sei KO!</div><p class="muted">I tuoi compagni potranno rianimarti al prossimo negozio.</p></div>`;
       return;
     }
+    const imgs = st.question.optionImages;
     ctx.app.innerHTML = `
       <div class="view">
         ${statusBar}
         <div class="title">${esc(st.question.text)}</div>
-        <div class="cat-grid">
+        ${st.question.image ? `<img class="q-image" src="${esc(st.question.image)}" alt="">` : ''}
+        <div class="cat-grid ${imgs ? 'img-opts' : ''}">
           ${st.question.options.map((o, i) => {
             const removed = priv.removed.includes(i);
             const picked = priv.myAnswer === i;
-            return `<button class="btn ${picked ? 'pink' : 'secondary'}" data-ans="${i}" ${removed || priv.myAnswer !== null ? 'disabled' : ''}>${removed ? '— eliminata —' : `${String.fromCharCode(65 + i)}. ${esc(o)}`}</button>`;
+            return `<button class="btn ${picked ? 'pink' : 'secondary'}" data-ans="${i}" ${removed || priv.myAnswer !== null ? 'disabled' : ''}>${removed ? '— eliminata —' : imgs ? `${String.fromCharCode(65 + i)}. <img class="ans-img" src="${esc(imgs[i])}" alt="${esc(o)}" aria-label="${esc(o)}">` : `${String.fromCharCode(65 + i)}. ${esc(o)}`}</button>`;
           }).join('')}
         </div>
         ${priv.items.length ? `<div class="custom-opts">${priv.items.map((it) => `<button type="button" class="btn secondary" data-use="${it}">${LEGGENDE.ITEMS[it].icon} Usa ${esc(LEGGENDE.ITEMS[it].name)}</button>`).join('')}</div>` : ''}

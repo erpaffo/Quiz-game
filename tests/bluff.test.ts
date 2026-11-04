@@ -46,7 +46,9 @@ describe("Fuffa d'Autore", () => {
     const st = t.state<BluffPublic>();
     assert.equal(st.step, 'lie');
     const fact = BLUFF_FACTS.find((f) => st.step === 'lie' && f.text === st.question)!;
-    assert.match(t.act(0, { type: 'lie', text: fact.answer.toUpperCase() }) ?? '', /verità/);
+    const refused = t.act(0, { type: 'lie', text: fact.answer.toUpperCase() }) ?? '';
+    assert.match(refused, /Bugia non valida/);
+    assert.ok(!refused.toLowerCase().includes(fact.answer.toLowerCase()), 'il rifiuto non deve rivelare la verità');
     assert.equal(t.mine<BluffPrivate>(0).safeties.length, BLUFF.SAFETY_CHOICES);
     assert.equal(t.act(0, { type: 'lie', text: 'Zzz bugia' }), null);
     assert.equal(t.act(1, { type: 'lie', text: 'Yyy bugia' }), null);

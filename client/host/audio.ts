@@ -2,6 +2,10 @@
 // /audio/audio.json (generato da scripts/build-audio.py, modificabile a mano per usare i propri file).
 // Se un file manca o non si carica, chi chiama ripiega sui suoni sintetizzati (sfx.ts).
 
+import { fillName, sanitizeName, type VoicePriority } from '../../shared/voice';
+import type { VoiceItem } from './voice-queue';
+import { defaultVoiceQueue } from './voice-queue';
+
 type Category = 'music' | 'sfx' | 'voice';
 
 interface Manifest {
@@ -16,6 +20,7 @@ export interface AudioSettings {
   sfx: number;
   voice: number;
   muted: boolean;
+  voiceEnabled?: boolean;
 }
 
 const SETTINGS_KEY = 'sep:audio';
@@ -31,11 +36,10 @@ class AudioEngine {
   private loading = new Map<string, Promise<AudioBuffer | null>>();
   private musicNow: { key: string; src: AudioBufferSourceNode; gain: GainNode } | null = null;
   private wantedMusic: string | null = null;
-  private voiceNow: AudioBufferSourceNode | null = null;
+  private voiceNow: { stop(): void } | null = null;
   private clipNow: AudioBufferSourceNode | null = null;
-  private lastSaid = new Map<string, number>();
   private defaults: Record<Category, number> = { music: 0.35, sfx: 0.8, voice: 1 };
-  settings: AudioSettings = { music: 0.35, sfx: 0.8, voice: 1, muted: false };
+  settings: AudioSettings = { music: 0.35, sfx: 0.8, voice: 1, muted: false, voiceEnabled: true };
 
   constructor() {
     try {
@@ -131,6 +135,24 @@ class AudioEngine {
     return list.length ? list[Math.floor(Math.random() * list.length)] : null;
   }
 
+  /** Varianti della battuta: n dal nome file (`-n`), pre/post se c'è {nome}, altrimenti file intero. */
+  private pickVoice(key: string) {
+    const entry = this.manifest?.voice?.[key];
+    const list = !entry ? [] : Array.isArray(entry) ? entry : [entry];
+    const byN = new Map<number, { whole?: string; pre?: string; post?: string }>();
+    list.forEach((f, i) => {
+      const m = /-(\d+)(?:\.(pre|post))?\.\w+$/.exec(f);
+      const n = m ? Number(m[1]) - 1 : i;
+      const v = byN.get(n) ?? {};
+      v[(m?.[2] as 'pre' | 'post' | undefined) ?? 'whole'] = f;
+      byN.set(n, v);
+    });
+    const all = [...byN.entries()];
+    if (!all.length) return null;
+    const [index, files] = all[Math.floor(Math.random() * all.length)];
+    return { index, ...files };
+  }
+
   private start(buf: AudioBuffer, bus: GainNode, opts: { loop?: boolean; gain?: number } = {}) {
     const src = this.ctx!.createBufferSource();
     src.buffer = buf;
@@ -152,27 +174,137 @@ class AudioEngine {
     return true;
   }
 
-  /** Battuta del presentatore. `cooldownMs` evita di ripetere la stessa battuta a raffica. */
-  say(key: string, cooldownMs = 2500) {
-    if (!this.ctx || this.settings.muted) return;
-    const now = performance.now();
-    if (now - (this.lastSaid.get(key) ?? -Infinity) < cooldownMs) return;
-    const file = this.pickFile('voice', key);
-    const buf = file ? this.loaded(file) : null;
-    if (!buf) return;
-    this.lastSaid.set(key, now);
-    this.voiceNow?.stop();
-    const { src } = this.start(buf, this.bus.voice);
-    this.voiceNow = src;
-    // La musica si abbassa mentre parla il presentatore.
+  /** Battuta del presentatore con coda e anti-doppione (F3.3). */
+  say(key: string, cooldownMs = 2500, priority: VoicePriority = 'normal', opts: Pick<VoiceItem, 'text' | 'texts' | 'nome' | 'onStart'> = {}) {
+    if (!this.ctx || !this.isVoiceEnabled()) {
+      if (opts.text) opts.onStart?.(fillName(opts.text, sanitizeName(opts.nome ?? '')));
+      return;
+    }
+    const queued = defaultVoiceQueue.push({ key, priority, ...opts }, Date.now(), cooldownMs);
+    if (!queued) return;
+    this.playNextVoice();
+  }
+
+  private playNextVoice() {
+    if (!this.ctx || !this.isVoiceEnabled()) {
+      defaultVoiceQueue.finishCurrent();
+      return;
+    }
+    if (this.voiceNow) return;
+
+    const item = defaultVoiceQueue.next();
+    if (!item) return;
+
+    const pick = this.pickVoice(item.key);
+    const nome = sanitizeName(item.nome ?? '');
+    const raw = item.texts?.[pick?.index ?? 0] ?? item.text;
+    // Senza sintesi vocale (o senza nome) si suona pre+post senza il nome in mezzo.
+    const speakable = nome && typeof speechSynthesis !== 'undefined' && speechSynthesis.getVoices().length > 0;
+    const steps: (AudioBuffer | string)[] = [];
+    for (const f of pick?.whole ? [pick.whole] : [pick?.pre, speakable ? nome : '', pick?.post]) {
+      const b = f && (f === nome ? f : this.loaded(f));
+      if (b) steps.push(b);
+    }
+    if (!steps.length) {
+      if (raw) item.onStart?.(fillName(raw, nome));
+      defaultVoiceQueue.finishCurrent();
+      this.playNextVoice();
+      return;
+    }
+
+    let cur: AudioBufferSourceNode | null = null;
+    const handle = {
+      stop: () => {
+        try {
+          cur?.stop();
+          if (cur === null) speechSynthesis.cancel();
+        } catch {
+          /* già fermato */
+        }
+      }
+    };
+    this.voiceNow = handle;
+
+    // La musica si abbassa mentre parla il presentatore (anche durante il nome).
     const t = this.ctx.currentTime;
     this.duck.gain.cancelScheduledValues(t);
     this.duck.gain.setTargetAtTime(0.35, t, 0.05);
-    src.onended = () => {
-      if (this.voiceNow !== src) return;
-      this.voiceNow = null;
-      this.duck.gain.setTargetAtTime(1, this.ctx!.currentTime, 0.3);
+
+    const run = (i: number) => {
+      if (this.voiceNow !== handle) return;
+      if (i >= steps.length) {
+        this.voiceNow = null;
+        defaultVoiceQueue.finishCurrent();
+        if (this.ctx) this.duck.gain.setTargetAtTime(1, this.ctx.currentTime, 0.3);
+        this.playNextVoice();
+        return;
+      }
+      const s = steps[i];
+      if (typeof s === 'string') {
+        cur = null;
+        const u = new SpeechSynthesisUtterance(s);
+        u.lang = 'it-IT';
+        u.voice = speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith('it')) ?? null;
+        u.volume = Math.min(1, this.settings.voice);
+        // Se la sintesi non risponde non si blocca la coda.
+        let done = false;
+        const next = () => {
+          if (done) return;
+          done = true;
+          clearTimeout(guard);
+          run(i + 1);
+        };
+        const guard = setTimeout(next, 4000);
+        u.onend = u.onerror = next;
+        speechSynthesis.speak(u);
+      } else {
+        cur = this.start(s, this.bus.voice).src;
+        cur.onended = () => run(i + 1);
+      }
     };
+    run(0);
+    if (raw) item.onStart?.(fillName(raw, nome));
+  }
+
+  /** Interrompe la voce in corso e svuota la battuta corrente dalla coda. */
+  stopVoice() {
+    if (this.voiceNow) {
+      try {
+        this.voiceNow.stop();
+      } catch {
+        /* già fermato */
+      }
+      this.voiceNow = null;
+    }
+    defaultVoiceQueue.finishCurrent();
+    if (this.ctx) {
+      const t = this.ctx.currentTime;
+      this.duck.gain.cancelScheduledValues(t);
+      this.duck.gain.setTargetAtTime(1, t, 0.1);
+    }
+  }
+
+  /** Svuota le battute in attesa nella coda senza fermare la voce in corso (eccetto 'high'). */
+  skipPending() {
+    defaultVoiceQueue.skipPending();
+  }
+
+  /** Indica se la voce del presentatore è abilitata e udibile. */
+  isVoiceEnabled(): boolean {
+    return this.settings.voiceEnabled !== false && this.settings.voice > 0 && !this.settings.muted;
+  }
+
+  /** Interruttore Voce sì/no: azzera o ripristina la voce del presentatore. */
+  toggleVoice(): boolean {
+    if (this.settings.voiceEnabled === false || this.settings.voice === 0) {
+      this.settings.voiceEnabled = true;
+      if (this.settings.voice === 0) this.settings.voice = this.defaults.voice ?? 1;
+    } else {
+      this.settings.voiceEnabled = false;
+      this.stopVoice();
+    }
+    this.save();
+    return this.isVoiceEnabled();
   }
 
   /** Musica di sottofondo in loop, con dissolvenza incrociata. null = silenzio. */
@@ -218,6 +350,9 @@ class AudioEngine {
 
   setVolume(cat: Category, v: number) {
     this.settings[cat] = Math.max(0, Math.min(1, v));
+    if (cat === 'voice' && v > 0) {
+      this.settings.voiceEnabled = true;
+    }
     this.save();
   }
 
@@ -227,7 +362,7 @@ class AudioEngine {
   }
 
   resetVolumes() {
-    this.settings = { ...this.defaults, muted: false };
+    this.settings = { ...this.defaults, muted: false, voiceEnabled: true };
     this.save();
   }
 
@@ -246,7 +381,7 @@ class AudioEngine {
     this.master.gain.value = s.muted ? 0 : 1;
     this.bus.music.gain.value = s.music;
     this.bus.sfx.gain.value = s.sfx;
-    this.bus.voice.gain.value = s.voice;
+    this.bus.voice.gain.value = s.muted || s.voiceEnabled === false ? 0 : s.voice;
     this.bus.clip.gain.value = Math.max(s.music, 0.8);
   }
 }

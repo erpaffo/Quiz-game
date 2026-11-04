@@ -1,7 +1,7 @@
 // 📡 Lunghezza d'Onda — il sensitivo vede il bersaglio, dà un indizio; il tavolo sposta l'ago.
 
-import { betWins, ondaDeck, ondaPlan, ondaScore, ondaTarget } from '../logic/onda';
-import type { Spectrum } from '../data/onda';
+import { betWins, ondaPlan, ondaScore, ondaTarget } from '../logic/onda';
+import { ONDA_SPECTRA, type Spectrum } from '../data/onda';
 import type { PassGame, Player } from '../types';
 import { esc, pointsList, screen, shield, tag, Timers } from '../ui';
 
@@ -24,7 +24,7 @@ function dial(sp: Spectrum, o: { target?: number; needle?: number; bands?: boole
 export const onda: PassGame = (ctx) => {
   const t = new Timers();
   const plan = ondaPlan(ctx.players, Number(ctx.options.rounds) || 1);
-  const deck = ondaDeck(Math.random);
+  const deck = ctx.deck('onda', ONDA_SPECTRA, (s) => s.left + '|' + s.right);
   const betOn = ctx.options.bet === 'on';
   const points: Record<string, number> = {};
   let teamScore = 0;
@@ -134,6 +134,7 @@ export const onda: PassGame = (ctx) => {
     );
   };
 
+  ctx.keepAwake(true);
   round();
   return () => t.clear();
 };

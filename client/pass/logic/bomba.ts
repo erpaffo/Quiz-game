@@ -1,7 +1,6 @@
 // Regole di «Bomba Verbale»: la bomba gira tra i giocatori vivi; la miccia ha una durata segreta.
 
-import { BOMBA_CATEGORIES, BOMBA_CHAIN_LETTERS, BOMBA_SYLLABLES } from '../data/bomba';
-import { pick, randInt, type Rng } from '../rng';
+import { pick, randInt, type Deck, type Rng } from '../rng';
 import type { Player } from '../types';
 
 export type BombaTrigger =
@@ -9,17 +8,24 @@ export type BombaTrigger =
   | { kind: 'categoria'; title: string; text: string }
   | { kind: 'catena'; title: string; text: string };
 
-export function makeTrigger(mode: string, rng: Rng): BombaTrigger {
+/** Mazzi dei contenuti (persistenti, creati da chi chiama: qui niente store). */
+export interface BombaDecks {
+  sillabe: Pick<Deck<string>, 'draw'>;
+  categorie: Pick<Deck<string>, 'draw'>;
+  lettere: Pick<Deck<string>, 'draw'>;
+}
+
+export function makeTrigger(mode: string, rng: Rng, decks: BombaDecks): BombaTrigger {
   const kind = mode === 'mix' ? pick(rng, ['sillaba', 'categoria', 'categoria', 'catena'] as const) : mode === 'sillabe' ? 'sillaba' : mode === 'catena' ? 'catena' : 'categoria';
   if (kind === 'sillaba') {
-    const s = pick(rng, BOMBA_SYLLABLES);
+    const s = decks.sillabe.draw();
     return { kind, title: '🔤 Sillaba', text: `Una parola che contiene «${s}»` };
   }
   if (kind === 'catena') {
-    const l = pick(rng, BOMBA_CHAIN_LETTERS);
+    const l = decks.lettere.draw();
     return { kind, title: '🔗 Catena', text: `Primo: una parola con la ${l}. Poi ognuno parte dall’ultima lettera della parola prima` };
   }
-  return { kind: 'categoria', title: '🗂️ Categoria', text: pick(rng, BOMBA_CATEGORIES) };
+  return { kind: 'categoria', title: '🗂️ Categoria', text: decks.categorie.draw() };
 }
 
 /** Durata segreta della miccia in millisecondi. */
@@ -46,12 +52,15 @@ export class BombaGame {
   fuse = 0;
   elapsed = 0;
   paused = false;
+  /** «Contesta!» una sola volta per round: altrimenti ferma la miccia all'infinito. */
+  contested = false;
   round = 0;
 
   constructor(
     readonly players: Player[],
     private readonly opts: { lives: number; trigger: string; fuse: string },
-    private readonly rng: Rng
+    private readonly rng: Rng,
+    private readonly decks: BombaDecks
   ) {
     for (const p of players) this.lives.set(p.id, Math.max(1, opts.lives));
     this.holder = randInt(rng, 0, players.length - 1);
@@ -84,12 +93,17 @@ export class BombaGame {
 
   startRound() {
     this.round++;
-    this.trigger = makeTrigger(this.opts.trigger, this.rng);
+    this.trigger = makeTrigger(this.opts.trigger, this.rng, this.decks);
     const [min, max] = fuseRange(this.opts.fuse);
     this.fuse = randInt(this.rng, min, max);
     this.elapsed = 0;
     this.paused = false;
+    this.contested = false;
     this.prevHolder = null;
+  }
+
+  get canContest(): boolean {
+    return this.prevHolder !== null && !this.contested;
   }
 
   /** Fa passare il tempo; restituisce true quando la bomba esplode. */
@@ -105,6 +119,7 @@ export class BombaGame {
 
   contest() {
     this.paused = true;
+    this.contested = true;
   }
 
   /** Esito della contestazione: parola valida → si continua; non valida → la bomba torna a chi l'ha passata. */

@@ -10,7 +10,7 @@ export interface Fact {
 const f = (truth: boolean, text: string): Fact => ({ text, truth });
 
 const BASE_DUELLO_FACTS: Fact[] = [
-  f(true, 'L’Australia è più grande della Luna?'),
+  f(false, 'L’Australia è più grande della Luna?'),
   f(false, 'I ragni hanno 6 zampe?'),
   f(true, 'Il cuore umano ha 4 cavità?'),
   f(false, 'Roma è la capitale della Spagna?'),
@@ -41,7 +41,7 @@ const BASE_DUELLO_FACTS: Fact[] = [
   f(true, 'Il calcio si gioca in 11 per squadra?'),
   f(false, 'Il polpo ha 10 tentacoli?'),
   f(true, 'L’oro è un metallo?'),
-  f(false, 'Una ora ha 100 minuti?'),
+  f(false, 'Un’ora ha 100 minuti?'),
   f(true, 'Il Sahara è un deserto?'),
   f(false, 'Le giraffe hanno il collo corto?'),
   f(true, 'Il leone è un felino?'),

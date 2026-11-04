@@ -1,5 +1,5 @@
 // Simula una serata completa contro un server già avviato (nessun browser: carico minimo).
-//   GAME_SPEED=10 npm run dev     (in un terminale)
+//   USER_PACKS_DIR=$TMP/sim-packs GAME_SPEED=10 npm run dev   (in un terminale; la domanda di prova non sporca user-packs/)
 //   npm run simulate              (in un altro; LENGTH=short|normal|long)
 // Un "host" crea la stanza e aggiunge 3 bot, un giocatore scriptato gioca tutte le fasi.
 

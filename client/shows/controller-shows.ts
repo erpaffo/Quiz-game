@@ -42,7 +42,8 @@ export function controllerShowKey(snap: RoomSnapshot, p: PlayerPublic): string {
   const num = typeof pub.number === 'number' ? pub.number : typeof pub.round === 'number' ? pub.round : typeof pub.stage === 'number' ? pub.stage : '';
   const idx = typeof pub.index === 'number' ? pub.index : typeof pub.question === 'object' && pub.question && 'id' in pub.question ? String((pub.question as { id: unknown }).id) : '';
   const gold = typeof pub.gold === 'number' ? pub.gold : '';
-  return `SHOW|${showId}|${step}|${num}|${idx}|${gold}|${p.isVip}|${JSON.stringify(snap.me?.show ?? null)}`;
+  const ready = Array.isArray(pub.ready) ? pub.ready.includes(p.id) : '';
+  return `SHOW|${showId}|${step}|${num}|${idx}|${gold}|${ready}|${p.isVip}|${JSON.stringify(snap.me?.show ?? null)}`;
 }
 
 export function renderControllerShow(snap: RoomSnapshot, p: PlayerPublic, ctx: ControllerShowContext): void {
@@ -416,9 +417,10 @@ function renderImpostorRoleBanner(category: string, priv: ImpostorPrivate): stri
 
 function renderImpostorController(snap: RoomSnapshot, p: PlayerPublic, meta: ShowMeta, st: ImpostorPublic, priv: ImpostorPrivate, ctx: ControllerShowContext): void {
   const bindToggle = () => {
-    if (impostorRoleHidden) impostorRoleHidden = false;
-    else impostorRoleHidden = true;
-    renderImpostorController(snap, p, meta, st, priv, ctx);
+    impostorRoleHidden = !impostorRoleHidden;
+    // Solo il banner: un re-render completo registrerebbe un altro handler di click a ogni toggle.
+    const btn = ctx.app.querySelector('.impostor-role-btn');
+    if (btn) btn.outerHTML = renderImpostorRoleBanner('category' in st ? st.category : '', priv);
   };
 
   if (st.step === 'secret') {

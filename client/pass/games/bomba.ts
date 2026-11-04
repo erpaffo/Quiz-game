@@ -1,12 +1,16 @@
 // 💣 Bomba Verbale — miccia segreta, ticchettio che accelera, «Passa la bomba!» e «Contesta!».
 
+import { BOMBA_CATEGORIES, BOMBA_CHAIN_LETTERS, BOMBA_SYLLABLES } from '../data/bomba';
 import { BOMBA_PODIUM, BombaGame, tickInterval } from '../logic/bomba';
 import type { PassGame } from '../types';
 import { esc, pointsList, screen, tag, Timers } from '../ui';
 
 export const bomba: PassGame = (ctx) => {
   const t = new Timers();
-  const game = new BombaGame(ctx.players, { lives: Number(ctx.options.lives) || 3, trigger: ctx.options.trigger, fuse: ctx.options.fuse }, Math.random);
+  const game = new BombaGame(ctx.players, { lives: Number(ctx.options.lives) || 3, trigger: ctx.options.trigger, fuse: ctx.options.fuse },
+    Math.random,
+    { sillabe: ctx.deck('bomba:sillabe', BOMBA_SYLLABLES), categorie: ctx.deck('bomba:categorie', BOMBA_CATEGORIES), lettere: ctx.deck('bomba:lettere', BOMBA_CHAIN_LETTERS) }
+  );
 
   const hearts = () =>
     `<div class="pp-lives">${ctx.players
@@ -15,6 +19,11 @@ export const bomba: PassGame = (ctx) => {
         return `<span class="${n ? '' : 'out'}">${tag(p)} ${n ? '❤️'.repeat(n) : '💀'}</span>`;
       })
       .join('')}</div>`;
+
+  // shortcut: un solo frame saltato, bastano i 100 ms di cap per il resto
+  let skipFrame = false;
+  const onVis = () => (skipFrame = true);
+  document.addEventListener('visibilitychange', onVis);
 
   const roundIntro = () => {
     game.startRound();
@@ -35,7 +44,7 @@ export const bomba: PassGame = (ctx) => {
     let tickAcc = 0;
     let passLock = 0;
     const draw = () => {
-      const canContest = game.prevHolder !== null;
+      const canContest = game.canContest;
       screen(
         ctx.root,
         `<div class="pp-bomb ${game.paused ? 'paused' : ''}">
@@ -86,6 +95,7 @@ export const bomba: PassGame = (ctx) => {
     draw();
     t.loop((dt) => {
       if (game.paused) return;
+      if (skipFrame) { skipFrame = false; return; } // dopo background/blocco schermo la miccia non avanza
       if (game.advance(dt)) {
         boom();
         return false;
@@ -124,7 +134,6 @@ export const bomba: PassGame = (ctx) => {
         ctx.addPoints(p.id, n);
       }
     });
-    ctx.sfx.fanfare();
     const winner = game.ranking()[0];
     ctx.exit({ title: `💣 ${winner.name} è sopravvissuto alla bomba!`, html: pointsList(ctx.players, points) });
   };
@@ -141,5 +150,8 @@ export const bomba: PassGame = (ctx) => {
     </div>`,
     { go: roundIntro }
   );
-  return () => t.clear();
+  return () => {
+    t.clear();
+    document.removeEventListener('visibilitychange', onVis);
+  };
 };

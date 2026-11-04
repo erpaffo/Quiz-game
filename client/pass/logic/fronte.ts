@@ -1,8 +1,8 @@
 // Regole di «Parola in Fronte»: un turno = una serie di parole pescate dal mazzo, ognuna indovinata o passata.
 
 import { FRONTE_CARDS, type FronteCard } from '../data/fronte';
-import { Deck, type Rng } from '../rng';
-import type { Player } from '../types';
+import type { Deck } from '../rng';
+import type { GameContext, Player } from '../types';
 
 export interface FronteResult {
   word: string;
@@ -11,9 +11,10 @@ export interface FronteResult {
   taboo?: boolean;
 }
 
-export function fronteDeck(pack: string, rng: Rng): Deck<FronteCard> {
+/** Un mazzo per pack (`fronte:<pack>`); `makeDeck` è `ctx.deck`, così la logica non conosce lo store. */
+export function fronteDeck(pack: string, makeDeck: GameContext['deck']): Deck<FronteCard> {
   const cards = pack === 'mix' ? FRONTE_CARDS : FRONTE_CARDS.filter((c) => c.pack === pack);
-  return new Deck(cards.length ? cards : FRONTE_CARDS, rng);
+  return cards.length ? makeDeck(`fronte:${pack}`, cards, (c) => c.word) : makeDeck('fronte:mix', FRONTE_CARDS, (c) => c.word);
 }
 
 /** Ordine dei turni: ognuno, nell'ordine del tavolo, ripetuto `turnsEach` volte. */

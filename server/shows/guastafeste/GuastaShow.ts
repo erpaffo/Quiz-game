@@ -4,7 +4,7 @@ import { cleanText, isIntIn, payloadOf } from '../../core/input';
 import { circularPairs } from '../../core/matchup';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { pick, shuffle } from '../../util';
+import { pick, pickFresh, shuffle } from '../../util';
 import { GUASTA_FAVORITE_FALLBACK, GUASTA_FIX, GUASTA_PROMPTS, GUASTA_RUIN } from './content';
 
 interface Matchup {
@@ -66,7 +66,7 @@ export class GuastaShow extends BaseShow<GuastaPublic, GuastaPrivate> {
       prompts = this.order.map((id) => this.favorites.get(id) ?? pick(GUASTA_FAVORITE_FALLBACK));
       pairs = circularPairs(this.order, 1);
     } else {
-      const pool = this.round === 1 ? shuffle(GUASTA_PROMPTS) : shuffle(this.ruined);
+      const pool = this.round === 1 ? pickFresh(GUASTA_PROMPTS, n, this.ctx.seen(this.id), (p) => p) : shuffle(this.ruined);
       prompts = Array.from({ length: n }, (_, i) => pool[i % pool.length] ?? pick(GUASTA_PROMPTS));
       pairs = circularPairs(shuffle(this.order));
     }
@@ -88,7 +88,8 @@ export class GuastaShow extends BaseShow<GuastaPublic, GuastaPrivate> {
   private result() {
     const m = this.current;
     const mult = this.round;
-    const voters = this.ctx.players().filter((p) => !m.players.includes(p.id)).length;
+    // Gli offline che non hanno votato non contano (altrimenti il cappotto è impossibile).
+    const voters = this.ctx.players().filter((p) => !m.players.includes(p.id) && (p.connected || this.votes.has(p.id))).length;
     const counts = [0, 0];
     for (const side of this.votes.values()) counts[side]++;
     const sweep = voters >= 2 && counts.some((c) => c === voters);
@@ -154,7 +155,7 @@ export class GuastaShow extends BaseShow<GuastaPublic, GuastaPrivate> {
       case 'write':
         return this.myMatchups(p.id).every((m) => m.answers.has(p.id));
       case 'vote':
-        return this.current.players.includes(p.id) || this.votes.has(p.id);
+        return this.current.players.includes(p.id) || this.votes.has(p.id) || !p.connected;
       default:
         return false;
     }

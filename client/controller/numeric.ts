@@ -6,11 +6,11 @@ import { applyEffects, hitBanner } from './question';
 interface NumericOpts {
   submitted: number | null;
   hint: [number, number] | null;
-  onSubmit(value: number): void;
+  onSubmit(value: number): void | Promise<boolean>;
   onCleared(type: PowerType): void;
 }
 
-const KEYS = ['7', '8', '9', '4', '5', '6', '1', '2', '3', ',', '0', '⌫'];
+const KEYS = ['7', '8', '9', '4', '5', '6', '1', '2', '3', ',', '0', '⌫', '−'];
 
 export function formatNumber(n: number) {
   return n.toLocaleString('it-IT', { maximumFractionDigits: 3 });
@@ -31,7 +31,7 @@ export function numericView(root: HTMLElement, q: NumericPublic, effects: Incomi
       ${done
         ? '<div class="waiting pop">Stima inviata! Guarda lo schermo 📺</div>'
         : `<div class="answers keypad">
-            ${KEYS.map((k) => `<button class="key" data-k="${k}"><span class="ans-text">${k}</span></button>`).join('')}
+            ${KEYS.map((k) => `<button class="key" data-k="${k}"${k === '−' ? ' style="grid-column:span 3"' : ''}><span class="ans-text">${k}</span></button>`).join('')}
             <button class="btn big send" data-k="ok">Invia la stima ✓</button>
           </div>`}
     </div>`;
@@ -53,12 +53,18 @@ export function numericView(root: HTMLElement, q: NumericPublic, effects: Incomi
       if (!value || !Number.isFinite(n)) return;
       sent = true;
       send.disabled = true;
-      return opts.onSubmit(n);
+      return void Promise.resolve(opts.onSubmit(n)).then((ok) => {
+        if (ok !== false) return;
+        sent = false;
+        send.disabled = false;
+      });
     }
-    if (k === '⌫') value = value.slice(0, -1);
+    if (k === '−') value = value.startsWith('-') ? value.slice(1) : '-' + value;
+    else if (k === '⌫') value = value.slice(0, -1);
     else if (k === ',') value = value.includes(',') || !value ? value : value + ',';
-    else if (value.replace(',', '').length < 10) value = value === '0' ? k : value + k;
-    display.textContent = value ? formatNumber(Number(value.replace(',', '.'))) + (value.endsWith(',') ? ',' : '') : '';
+    else if (value.replace(/[,-]/g, '').length < 10) value = value === '0' ? k : value === '-0' ? '-' + k : value + k;
+    const num = Number(value.replace(',', '.'));
+    display.textContent = !value ? '' : Number.isFinite(num) ? (value.startsWith('-0') && num === 0 ? '-' : '') + formatNumber(num) + (value.endsWith(',') ? ',' : '') : value;
   });
 
   // Bombette sul tastierino: spariscono le cifre di alcuni tasti.

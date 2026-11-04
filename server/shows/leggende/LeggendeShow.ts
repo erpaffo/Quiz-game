@@ -68,7 +68,7 @@ export class LeggendeShow extends BaseShow<LeggendePublic, LeggendePrivate> {
   }
 
   private alive(): LeggendeHero[] {
-    return [...this.heroes.values()].filter((h) => h.hearts > 0 && this.ctx.get(h.playerId));
+    return [...this.heroes.values()].filter((h) => h.hearts > 0 && this.ctx.get(h.playerId)?.connected);
   }
 
   private isAlive(playerId: string) {
@@ -77,7 +77,8 @@ export class LeggendeShow extends BaseShow<LeggendePublic, LeggendePrivate> {
 
   private nextMonster() {
     const m = this.monsters[this.stage];
-    const hp = m.hpPerHero * this.heroes.size;
+    const online = [...this.heroes.keys()].filter((id) => this.ctx.get(id)?.connected).length;
+    const hp = m.hpPerHero * (online || this.heroes.size);
     this.stage++;
     this.monster = { id: m.id, name: m.name, icon: m.icon, hp, maxHp: hp, boss: m.boss };
     this.questionsOnMonster = 0;
@@ -153,7 +154,7 @@ export class LeggendeShow extends BaseShow<LeggendePublic, LeggendePrivate> {
   }
 
   private afterResult(outcome: Result['outcome']) {
-    if (this.alive().length === 0) return this.end('defeat');
+    if (![...this.heroes.values()].some((h) => h.hearts > 0)) return this.end('defeat');
     if (outcome === 'fighting') return this.nextQuestion();
     if (this.monster.boss) return this.end(outcome === 'defeated' ? 'victory' : 'defeat');
     this.ready.clear();
@@ -253,7 +254,7 @@ export class LeggendeShow extends BaseShow<LeggendePublic, LeggendePrivate> {
   }
 
   hasActed(p: Player): boolean {
-    if (!this.isAlive(p.id)) return this.step === 'question' || this.step === 'shop';
+    if (!p.connected || !this.isAlive(p.id)) return this.step === 'question' || this.step === 'shop';
     if (this.step === 'question') return this.answers.has(p.id);
     if (this.step === 'shop') return this.ready.has(p.id);
     return false;

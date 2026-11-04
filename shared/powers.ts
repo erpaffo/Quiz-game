@@ -49,6 +49,13 @@ export interface PowerParams {
   LOCK: { lockedOptions: number; holdMs: number };
 }
 
+/** Tempo minimo (ms) dopo cui il server accetta lo sblocco: ICE ~16 tocchi/s, LOCK = tenuta richiesta (-10% di tolleranza rete). Usato dal server. */
+export function minClearMs(type: PowerType, stack: number): number {
+  if (type === 'ICE') return powerParams('ICE', stack).taps * 60;
+  if (type === 'LOCK') return powerParams('LOCK', stack).holdMs * 0.9;
+  return 0;
+}
+
 /** Parametri di difficoltà di un potere in base a quanti avversari l'hanno lanciato (stack). */
 export function powerParams<T extends PowerType>(type: T, stack: number): PowerParams[T] {
   const extra = Math.max(0, stack - 1);

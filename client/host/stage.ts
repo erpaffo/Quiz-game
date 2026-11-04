@@ -22,6 +22,38 @@ interface Slot {
   selfie: string | null;
 }
 
+/**
+ * Libera ricorsivamente geometrie e materiali di una mesh/gruppo Three.js
+ * e rimuove dal DOM eventuali elementi attaccati a CSS2DObject (es. etichette, numeri gradini).
+ */
+export function disposeDeep(obj: THREE.Object3D) {
+  const geometries = new Set<THREE.BufferGeometry>();
+  const materials = new Set<THREE.Material>();
+
+  obj.traverse((child) => {
+    // Non toccare i contorni: usano outlineMaterial (cache globale) e condividono la geometria del padre.
+    if (child.userData?.isOutline) return;
+    if (child instanceof CSS2DObject || (child as any).isCSS2DObject) {
+      (child as CSS2DObject).element?.remove();
+    }
+    const withGeom = child as { geometry?: THREE.BufferGeometry };
+    if (withGeom.geometry && !geometries.has(withGeom.geometry)) {
+      geometries.add(withGeom.geometry);
+      withGeom.geometry.dispose();
+    }
+    const withMat = child as { material?: THREE.Material | THREE.Material[] };
+    if (withMat.material) {
+      const mats = Array.isArray(withMat.material) ? withMat.material : [withMat.material];
+      for (const m of mats) {
+        if (m && !materials.has(m)) {
+          materials.add(m);
+          m.dispose();
+        }
+      }
+    }
+  });
+}
+
 const STEP_H = 0.45;
 const STEP_D = 1.1;
 const PYRAMID_ORIGIN = new THREE.Vector3(60, 0, 0);
@@ -49,7 +81,7 @@ export interface VideoSettings {
 export const DEFAULT_VIDEO: VideoSettings = { quality: 'auto', scale: 1, shadows: true, antialias: true, fps: 60 };
 
 export class Stage {
-  private renderer: THREE.WebGLRenderer;
+  readonly renderer: THREE.WebGLRenderer;
   private labels: CSS2DRenderer;
   private scene = new THREE.Scene();
   private camera = new THREE.PerspectiveCamera(38, 1, 0.1, 300);
@@ -197,7 +229,12 @@ export class Stage {
   }
 
   private buildPyramid(lanes: number, steps: number) {
-    this.pyramid?.removeFromParent();
+    if (this.pyramid) {
+      disposeDeep(this.pyramid);
+      this.pyramid.removeFromParent();
+      this.pyramid = null;
+      this.trophy = null;
+    }
     const g = new THREE.Group();
     g.position.copy(PYRAMID_ORIGIN);
     this.laneSpacing = Math.min(1.5, 13 / Math.max(lanes, 1));
@@ -354,6 +391,7 @@ export class Stage {
       if (!ids.has(id)) {
         slot.rig?.dispose();
         slot.label.element.remove();
+        disposeDeep(slot.podium);
         slot.podium.removeFromParent();
         this.slots.delete(id);
       }
@@ -633,8 +671,11 @@ export class Stage {
   /** Bomba a Orologeria: la bomba fluttua sopra chi la tiene e trema sempre di più. */
   setBomb(holderId: string | null, heat = 0) {
     if (!holderId) {
-      this.bomb?.removeFromParent();
-      this.bomb = null;
+      if (this.bomb) {
+        disposeDeep(this.bomb);
+        this.bomb.removeFromParent();
+        this.bomb = null;
+      }
       this.bombHolder = null;
       return;
     }
@@ -763,9 +804,12 @@ export class Stage {
       slot.rig.root.position.set(0, 0, 0);
       slot.rig.root.scale.setScalar(1);
     }
-    this.pyramid?.removeFromParent();
-    this.pyramid = null;
-    this.trophy = null;
+    if (this.pyramid) {
+      disposeDeep(this.pyramid);
+      this.pyramid.removeFromParent();
+      this.pyramid = null;
+      this.trophy = null;
+    }
     const cam = this.studioCam();
     this.moveCamera(cam.pos, cam.target, 1.2);
     this.sync(this.lastPlayers, { phase: 'LOBBY' });

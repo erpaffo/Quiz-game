@@ -3,7 +3,7 @@ import { BaseShow } from '../../core/BaseShow';
 import { payloadOf } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { shuffle } from '../../util';
+import { pickFresh, shuffle } from '../../util';
 import { TEMPO_EVENTS } from '../tempo/events';
 import { FILA_SETS, type FilaSet } from './sets';
 
@@ -53,8 +53,7 @@ export class FilaShow extends BaseShow<FilaPublic, FilaPrivate> {
   private lastReveal: Extract<FilaPublic, { step: 'reveal' }> | null = null;
 
   start(): ActionResult {
-    const statics = shuffle(FILA_SETS)
-      .slice(0, this.rounds - 1)
+    const statics = pickFresh(FILA_SETS, this.rounds - 1, this.ctx.seen(this.id), (s) => s.title)
       .map((s) => makeRound(s, sample(s.items, FILA.ITEMS)));
     this.series = shuffle([chronology(), ...statics]);
     this.next();

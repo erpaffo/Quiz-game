@@ -2,12 +2,16 @@
 // Se il browser non permette di salvare (navigazione privata), si usa una memoria temporanea: il gioco funziona lo stesso.
 
 import { sanitizePassOptions } from './catalog';
+import { Deck, type Rng, type SeenStore } from './rng';
 import type { PassGameId, Player } from './types';
 
 export interface KeyValue {
   getItem(key: string): string | null;
   setItem(key: string, value: string): void;
   removeItem(key: string): void;
+  /** Elenco chiavi (come localStorage): serve ad azzerare per prefisso. */
+  readonly length: number;
+  key(index: number): string | null;
 }
 
 /** Memoria di riserva quando localStorage non c'è o è bloccato. */
@@ -21,6 +25,12 @@ export class MemoryStore implements KeyValue {
   }
   removeItem(k: string) {
     this.map.delete(k);
+  }
+  get length() {
+    return this.map.size;
+  }
+  key(i: number) {
+    return [...this.map.keys()][i] ?? null;
   }
 }
 
@@ -46,6 +56,9 @@ const K = {
   scores: 'sep:pass:scores',
   options: 'sep:pass:options'
 };
+
+const SEEN_PREFIX = 'sep:pass:seen:';
+const SEEN_MAX = 1500; // memoria limitata: oltre, si dimenticano le più vecchie
 
 function read<T>(kv: KeyValue, key: string, fallback: T): T {
   try {
@@ -160,6 +173,35 @@ export class PassStore {
 
   resetScores() {
     write(this.kv, K.scores, {});
+  }
+
+  // ---------------------------------------------------------------- carte già uscite
+
+  /** Mazzo che ricorda le carte uscite (anche tra partite). `bankId` = un nome stabile per banca (es. 'fronte:pop'). */
+  deck<T>(bankId: string, cards: readonly T[], keyOf?: (card: T) => string, rng: Rng = Math.random): Deck<T> {
+    const key = SEEN_PREFIX + bankId;
+    const seen: SeenStore = {
+      get: () => {
+        const l = read<unknown>(this.kv, key, []);
+        return Array.isArray(l) ? l.filter((x): x is string => typeof x === 'string') : [];
+      },
+      set: (keys) => write(this.kv, key, keys.slice(-SEEN_MAX))
+    };
+    return new Deck(cards, rng, seen, keyOf);
+  }
+
+  /** «Nuova serata»: tutte le carte tornano disponibili. */
+  resetSeen() {
+    const keys: string[] = [];
+    try {
+      for (let i = 0; i < this.kv.length; i++) {
+        const k = this.kv.key(i);
+        if (k?.startsWith(SEEN_PREFIX)) keys.push(k);
+      }
+    } catch {
+      /* memoria bloccata */
+    }
+    keys.forEach((k) => this.kv.removeItem(k));
   }
 
   // ---------------------------------------------------------------- regole scelte

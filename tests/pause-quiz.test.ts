@@ -58,6 +58,30 @@ describe('Pausa nei giochi del quiz', () => {
   });
 });
 
+describe('Classico: un solo Joker per voto', () => {
+  it('il secondo Joker è rifiutato e non viene consumato', () => {
+    const t = makeRoom(2);
+    assert.equal(t.room.setSettings({ showId: 'quiz', mode: 'sequence', sequence: ['classic'] }, t.ids[0]), null);
+    assert.equal(t.room.start(t.ids[0]), null);
+    for (let ms = 0; ms < 5 * 60_000; ms += 100) {
+      const d = t.tv().phaseData;
+      if (d.phase === 'PLAY' && d.state.step === 'vote') break;
+      mock.timers.tick(100);
+    }
+    const s = play(t) as unknown as { categories: { id: string }[] };
+    const cat = s.categories[0].id;
+    const [a, b] = t.ids.map((id) => t.room.players.get(id)!);
+    const left = (p: typeof a) => p.jokerLeft;
+    const before = left(b);
+    assert.equal(t.room.gameAction(a.id, { type: 'vote', categoryId: cat, useJoker: true }), null);
+    assert.equal(left(a), 0);
+    assert.match(t.room.gameAction(b.id, { type: 'vote', categoryId: cat, useJoker: true }) ?? '', /Joker/);
+    assert.equal(left(b), before, 'il Joker rifiutato non va consumato');
+    assert.equal(t.room.gameAction(b.id, { type: 'vote', categoryId: cat, useJoker: false }), null, 'il voto resta valido senza Joker');
+    t.room.destroy();
+  });
+});
+
 describe('Indizio dopo Indizio', () => {
   it('i telefoni ricevono solo le parole già svelate; la domanda intera arriva alla rivelazione', () => {
     const t = quizUntilQuestion('clues');

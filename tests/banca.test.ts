@@ -143,6 +143,53 @@ describe('Banca domande: lavoro a due (lotto → revisione → approvate → gio
   });
 });
 
+describe('Banca domande: avvisi F2.4 (risposta svelata, banalità)', () => {
+  const lot = (items: Record<string, unknown>[]) => {
+    const dir = mkdtempSync(join(tmpdir(), 'banca-'));
+    useBankDir(dir);
+    mkdirSync(join(dir, 'inbox'), { recursive: true });
+    const file = join(dir, 'inbox', 'gemini-X001.jsonl');
+    writeFileSync(file, items.map((i) => JSON.stringify(i)).join('\n'));
+    return file;
+  };
+
+  it('segnala la risposta di un’altra domanda e le banalità, senza bloccare il lotto', () => {
+    const file = lot([
+      quiz({ text: 'Quale popolo inventò la scrittura cuneiforme?', options: ['Sumeri', 'Egizi', 'Celti', 'Maya'] }),
+      quiz({ text: 'Quale popolo, dopo i Sumeri, dominò Babilonia?', options: ['Amorrei', 'Ittiti', 'Assiri', 'Persiani'] }),
+      quiz({ kind: 'numeric', text: 'Quante erano le 7 meraviglie del mondo antico?', answer: 7, unit: 'meraviglie' }),
+      quiz({ kind: 'truefalse', text: 'Roma è sempre stata la capitale d’Italia.', answer: false }),
+      quiz({ text: 'Chi dipinse la volta della Cappella Sistina?', options: ['Michelangelo', 'Raffaello', 'Tiziano', 'Caravaggio'] })
+    ]);
+    const r = checkFile(file, tax, new Map(), false);
+    assert.deepEqual(r.problems, [], 'gli avvisi non sono errori: il lotto resta promuovibile');
+    const w = r.warnings.join('\n');
+    assert.match(w, /:2: ⚠️ risposta svelata: «Sumeri»/, 'la risposta della riga 1 compare nel testo della riga 2');
+    assert.match(w, /:3: ⚠️ banalità: la risposta \(7\)/);
+    assert.match(w, /:4: ⚠️ banalità: vero\/falso con parola assoluta «sempre»/);
+    assert.ok(!r.warnings.some((x) => x.includes(':5:')), 'una domanda pulita non prende avvisi');
+  });
+
+  it('ogni avviso dice file:riga e non rende il lotto non valido', () => {
+    // Lotto finto in una cartella temporanea: i lotti veri vengono promossi (cioè cancellati) e non devono servire ai test.
+    const file = lot([quiz({ kind: 'truefalse', text: 'Roma è sempre stata la capitale d’Italia.', answer: false })]);
+    const r = checkFile(file, tax, new Map(), false);
+    assert.deepEqual(r.problems, []);
+    assert.equal(r.warnings.length, 1);
+    assert.match(r.warnings[0], /gemini-X001\.jsonl:1: ⚠️ /);
+  });
+
+  it('una riga con JSON rotto non viene persa né da «controlla» né da «promuovi»', () => {
+    const file = lot([quiz({ text: 'Domanda buona?', checked_by: 'claude', check: 'ok' })]);
+    writeFileSync(file, readFileSync(file, 'utf8') + '\n{"kind": "multiple", "text": "Domanda rotta?",\n');
+    const before = readFileSync(file, 'utf8');
+    assert.ok(checkFile(file, tax, new Map(), true).problems.some((p) => /JSON non valido/.test(p)));
+    assert.equal(readFileSync(file, 'utf8'), before, 'controlla non riscrive il lotto');
+    assert.throws(() => promote(file, tax), /JSON non valido/);
+    assert.equal(readFileSync(file, 'utf8'), before, 'promuovi si ferma prima di toccare qualsiasi cosa');
+  });
+});
+
 describe('Database di verifica (DATABASE.csv)', () => {
   const quiz = (text: string, extra = {}) =>
     ({ id: 'multiple-t1', kind: 'multiple', category: 'scienza', subcategory: 'fisica', difficulty: 3, text, options: ['A; "uno"', 'B', 'C', 'D'], correct: 0, verify: 'fonte', author: 'a', source: 's', license: 'l', ...extra }) as BankItem;

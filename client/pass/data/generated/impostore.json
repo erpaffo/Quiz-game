@@ -194,5 +194,207 @@
    "Monopattino",
    "Autobus"
   ]
+ },
+ {
+  "name": "Bevande calde",
+  "words": [
+   "Espresso",
+   "Cappuccino",
+   "Cioccolata calda",
+   "Tisana",
+   "Camomilla",
+   "Latte macchiato",
+   "Matcha",
+   "Tè"
+  ]
+ },
+ {
+  "name": "Bevande analcoliche",
+  "words": [
+   "Aranciata",
+   "Chinotto",
+   "Coca-Cola",
+   "Gazzosa",
+   "Limonata",
+   "Spremuta",
+   "Succo di mela",
+   "Acqua tonica",
+   "Ginger ale"
+  ]
+ },
+ {
+  "name": "Attrezzi da cucina",
+  "words": [
+   "Schiacciapatate",
+   "Setaccio",
+   "Spatola",
+   "Sbattitore",
+   "Pelapatate",
+   "Mandolina",
+   "Imbuto",
+   "Colino",
+   "Mestolo"
+  ]
+ },
+ {
+  "name": "Arti marziali e lotta",
+  "words": [
+   "Judo",
+   "Ju-jitsu",
+   "Taekwondo",
+   "Kickboxing",
+   "Muay thai",
+   "Kendo",
+   "Aikido",
+   "Sumo"
+  ]
+ },
+ {
+  "name": "Paesaggi naturali",
+  "words": [
+   "Vulcano",
+   "Cascata",
+   "Lago",
+   "Foresta",
+   "Deserto",
+   "Ghiacciaio",
+   "Fiume",
+   "Grotta",
+   "Laguna"
+  ]
+ },
+ {
+  "name": "Monumenti",
+  "words": [
+   "Colosseo",
+   "Torre Eiffel",
+   "Partenone",
+   "Taj Mahal",
+   "Stonehenge",
+   "Big Ben",
+   "Muraglia Cinese",
+   "Statua della Libertà",
+   "Piramidi di Giza"
+  ]
+ },
+ {
+  "name": "Città italiane",
+  "words": [
+   "Roma",
+   "Milano",
+   "Torino",
+   "Firenze",
+   "Venezia",
+   "Palermo",
+   "Bologna",
+   "Genova",
+   "Bari"
+  ]
+ },
+ {
+  "name": "Periferiche del computer",
+  "words": [
+   "Mouse",
+   "Stampante",
+   "Scanner",
+   "Webcam",
+   "Altoparlante",
+   "Cuffie",
+   "Tastiera",
+   "Monitor"
+  ]
+ },
+ {
+  "name": "Cancelleria",
+  "words": [
+   "Pinzatrice",
+   "Temperamatite",
+   "Evidenziatore",
+   "Cartellina",
+   "Taccuino",
+   "Pennarello",
+   "Gomma",
+   "Righello"
+  ]
+ },
+ {
+  "name": "Capi d'abbigliamento",
+  "words": [
+   "Piumino",
+   "Cardigan",
+   "Pantaloni",
+   "Gilet",
+   "Berretto",
+   "Guanti",
+   "Maglione",
+   "Gonna",
+   "Foulard"
+  ]
+ },
+ {
+  "name": "Giochi di carte",
+  "words": [
+   "Briscola",
+   "Tressette",
+   "Burraco",
+   "Poker",
+   "Solitario",
+   "Scopone",
+   "Canasta",
+   "Ramino"
+  ]
+ },
+ {
+  "name": "Generi cinematografici",
+  "words": [
+   "Commedia",
+   "Thriller",
+   "Horror",
+   "Western",
+   "Fantascienza",
+   "Musical",
+   "Noir",
+   "Documentario",
+   "Romantico"
+  ]
+ },
+ {
+  "name": "Generi musicali",
+  "words": [
+   "Rock",
+   "Jazz",
+   "Blues",
+   "Reggae",
+   "Techno",
+   "Hip hop",
+   "Punk",
+   "Country"
+  ]
+ },
+ {
+  "name": "Mestieri artigiani",
+  "words": [
+   "Falegname",
+   "Fabbro",
+   "Sarto",
+   "Calzolaio",
+   "Orafo",
+   "Muratore",
+   "Tappezziere",
+   "Ceramista"
+  ]
+ },
+ {
+  "name": "Hobby",
+  "words": [
+   "Giardinaggio",
+   "Uncinetto",
+   "Origami",
+   "Cucito",
+   "Ricamo",
+   "Enigmistica",
+   "Collezionismo",
+   "Birdwatching"
+  ]
  }
 ]

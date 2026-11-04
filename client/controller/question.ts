@@ -16,7 +16,8 @@ export interface QuestionOpts {
   banner?: string;
   /** Testo mostrato dopo aver risposto. */
   waitText?: string;
-  onAnswer(index: number): void;
+  /** Se risolve a false (azione rifiutata) i pulsanti si sbloccano. */
+  onAnswer(index: number): void | Promise<boolean>;
   onCleared(type: PowerType): void;
 }
 
@@ -100,7 +101,12 @@ export function questionView(root: HTMLElement, q: QuestionPublic, effects: Inco
     navigator.vibrate?.(20);
     btn.classList.add('chosen');
     buttons.forEach((b) => (b.disabled = true));
-    opts.onAnswer(Number(btn.dataset.i));
+    void Promise.resolve(opts.onAnswer(Number(btn.dataset.i))).then((ok) => {
+      if (ok !== false) return;
+      sent = false;
+      btn.classList.remove('chosen');
+      buttons.forEach((b) => (b.disabled = false));
+    });
   });
 
   if (locked || effects.length === 0) return stopClue;

@@ -73,12 +73,18 @@ export class ClassicGame implements GameMode {
       if (this.votes.has(p.id)) return 'Hai già votato';
       if (!this.options.some((c) => c.id === a.categoryId)) return 'Categoria non valida';
       if (a.useJoker && p.jokerLeft <= 0) return 'Hai già usato il Joker';
+      // Un solo Joker per voto: il secondo non viene consumato e il voto va rifatto senza.
+      if (a.useJoker && this.jokerPlayed()) return 'Il Joker è già stato giocato da qualcun altro: vota senza';
       if (a.useJoker) p.jokerLeft--;
       this.votes.set(p.id, { playerId: p.id, categoryId: a.categoryId, joker: !!a.useJoker, at: Date.now() });
       return null;
     }
     if (this.step === 'question' && this.round) return this.round.answer(p, a);
     return 'Azione non valida ora';
+  }
+
+  private jokerPlayed() {
+    return [...this.votes.values()].some((v) => v.joker);
   }
 
   hasActed(p: Player) {
@@ -97,7 +103,7 @@ export class ClassicGame implements GameMode {
   bot(b: Player) {
     if (this.step === 'vote') {
       this.ctx.later(
-        () => this.ctx.act(b, { type: 'vote', categoryId: pick(this.options).id, useJoker: b.jokerLeft > 0 && Math.random() < 0.1 }),
+        () => this.ctx.act(b, { type: 'vote', categoryId: pick(this.options).id, useJoker: b.jokerLeft > 0 && !this.jokerPlayed() && Math.random() < 0.1 }),
         this.ctx.scale(randomBetween(1200, 4000))
       );
     }

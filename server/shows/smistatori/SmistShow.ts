@@ -3,7 +3,7 @@ import { BaseShow } from '../../core/BaseShow';
 import { payloadOf } from '../../core/input';
 import type { ActionResult } from '../../core/ShowPlugin';
 import type { Player } from '../../players';
-import { shuffle } from '../../util';
+import { pickFresh, shuffle } from '../../util';
 import { SMIST_PAIRS, type SmistPair } from './pairs';
 
 interface TeamRun {
@@ -15,6 +15,8 @@ interface TeamRun {
 }
 
 const TEAMS: SmistTeam[] = ['A', 'B'];
+/** Tempo massimo per smistare una parola: poi si passa alla successiva (chi è offline non blocca la squadra). */
+const WORD_MS = 15_000;
 
 /**
  * 🗂️ Smistatori: due squadre, due categorie, parole a raffica. Ogni parola arriva sul telefono di un solo
@@ -36,7 +38,7 @@ export class SmistShow extends BaseShow<SmistPublic, SmistPrivate> {
     const players = this.ctx.players();
     const ordered = [...shuffle(players.filter((p) => !p.isBot)), ...shuffle(players.filter((p) => p.isBot))];
     ordered.forEach((p, i) => this.teams[TEAMS[i % 2]].push(p.id));
-    this.pairs = shuffle(SMIST_PAIRS).slice(0, this.rounds);
+    this.pairs = pickFresh(SMIST_PAIRS, this.rounds, this.ctx.seen(this.id), (p) => `${p.left}|${p.right}`);
     this.go('teams', SMIST.TEAMS_MS, () => this.nextRound());
     return null;
   }
@@ -56,6 +58,7 @@ export class SmistShow extends BaseShow<SmistPublic, SmistPrivate> {
     this.run = { A: this.emptyRun(this.teams.A), B: this.emptyRun(this.teams.B) };
     this.feed = [];
     this.go('round', SMIST.ROUND_MS, () => this.result());
+    for (const t of TEAMS) this.armWord(t);
   }
 
   private result() {
@@ -114,8 +117,28 @@ export class SmistShow extends BaseShow<SmistPublic, SmistPrivate> {
     r.turn++;
     this.feed = [{ team, playerId: p.id, word: word.text, side, correct }, ...this.feed].slice(0, SMIST.FEED);
     if (TEAMS.every((t) => this.run[t].index >= this.words.length)) this.endEarly(800);
-    else this.scheduleBot(team);
+    else {
+      this.scheduleBot(team);
+      this.armWord(team);
+    }
     return null;
+  }
+
+  /** Timeout della parola corrente: se nessuno la smista, la salta (serie azzerata, niente penale). */
+  private armWord(team: SmistTeam) {
+    const r = this.run[team];
+    if (r.index >= this.words.length) return;
+    const idx = r.index;
+    this.ctx.later(() => {
+      if (this.step !== 'round' || r.index !== idx) return;
+      r.streak = 0;
+      r.index++;
+      r.turn++;
+      if (TEAMS.every((t) => this.run[t].index >= this.words.length)) return this.endEarly(800);
+      this.scheduleBot(team);
+      this.armWord(team);
+      this.ctx.broadcast();
+    }, this.ctx.scale(WORD_MS * this.pace));
   }
 
   /** Se ora tocca a un bot, smista dopo un po' (75% di precisione). */

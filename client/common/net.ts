@@ -10,8 +10,27 @@ export function createSocket(): GameSocket {
 /** Orologio allineato al server: i timer si basano su `endsAt` (ora del server). */
 export const clock = {
   offset: 0,
+  initialized: false,
+  divergenceCount: 0,
   sync(serverNow: number) {
-    this.offset = serverNow - Date.now();
+    const sample = serverNow - Date.now();
+    if (!this.initialized) {
+      this.offset = sample;
+      this.initialized = true;
+      this.divergenceCount = 0;
+      return;
+    }
+    const diff = Math.abs(sample - this.offset);
+    if (diff > 1500) {
+      this.divergenceCount++;
+      if (this.divergenceCount > 3) {
+        this.offset = sample;
+        this.divergenceCount = 0;
+      }
+    } else {
+      this.divergenceCount = 0;
+      this.offset = this.offset * 0.8 + sample * 0.2;
+    }
   },
   now() {
     return Date.now() + this.offset;

@@ -342,7 +342,8 @@ function startGame(id: PassGameId) {
         store.addPoints(pid, n);
       },
       exit: end,
-      keepAwake: (on) => void keepAwake(on)
+      keepAwake: (on) => void keepAwake(on),
+      deck: store.deck.bind(store)
     });
   } catch (err) {
     console.error(err);
@@ -395,6 +396,7 @@ function cup() {
     reset: async () => {
       if (await ask('Azzerare la Coppa del Tavolo per una nuova serata? I giocatori restano.', 'Azzera', 'Annulla')) {
         store.resetScores();
+        store.resetSeen();
         render();
       }
     },

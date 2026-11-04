@@ -1,13 +1,14 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, unlinkSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { CATEGORY_COLORS, newId, validatePack, type Pack, type PackQuestion } from '../shared/packs';
+import { norm } from '../shared/question-bank';
 import type { PackSummary, PhoneQuestion } from '../shared/types';
 
 // Cartelle predefinite (avvio da terminale). L'app desktop passa le proprie: nel suo bundle CommonJS
 // import.meta non esiste, quindi i valori predefiniti si calcolano solo quando servono davvero.
 const defaultBuiltinDir = () => resolve(import.meta.dirname, 'data/packs');
 /** I pacchetti creati dagli utenti: file JSON leggibili e copiabili a mano. */
-const defaultUserDir = () => resolve(import.meta.dirname, '../user-packs');
+const defaultUserDir = () => process.env.USER_PACKS_DIR ?? resolve(import.meta.dirname, '../user-packs');
 export const PHONE_PACK_ID = 'telefono';
 
 export interface PackStoreOptions {
@@ -80,7 +81,10 @@ export class PackStore {
   save(input: unknown, id?: string): Pack {
     const pack = validatePack(id ? { ...(input as object), id } : input);
     if (this.packs.get(pack.id)?.builtIn) throw new Error('Il pacchetto di serie non si può modificare: duplicalo e modifica la copia');
-    writeFileSync(resolve(this.userDir, `${pack.id}.json`), JSON.stringify(pack, null, 1), 'utf8');
+    // Scrittura atomica: se manca la corrente a metà, resta il file di prima invece di uno troncato.
+    const file = resolve(this.userDir, `${pack.id}.json`);
+    writeFileSync(`${file}.tmp`, JSON.stringify(pack, null, 1), 'utf8');
+    renameSync(`${file}.tmp`, file);
     this.packs.set(pack.id, pack);
     this.changed();
     return pack;
@@ -109,6 +113,7 @@ export class PackStore {
         questions: []
       }
     );
+    if (pack.questions.some((x) => norm(x.text) === norm(String(q?.text ?? '')))) throw new Error('Questa domanda esiste già nel pacchetto');
     const catName = String(q?.categoryName ?? '').trim() || 'Domande degli amici';
     let cat = pack.categories.find((c) => c.name.toLowerCase() === catName.toLowerCase());
     if (!cat) {

@@ -1,6 +1,7 @@
 import { CONFIG } from '../../shared/config';
 import type { GameAction } from '../../shared/types';
 import type { Player } from '../players';
+import { wrongPenalty } from '../logic/scoring';
 import { botAnswer, McRound } from './common';
 import type { GameContext, GameMode } from './types';
 
@@ -55,6 +56,10 @@ export class CluesGame implements GameMode {
     );
   }
 
+  private reward(timeMs: number) {
+    return Math.round(300 + 900 * (1 - Math.min(1, timeMs / this.revealMs)));
+  }
+
   action(p: Player, a: GameAction): string | null {
     const r = this.round;
     if (this.step !== 'question' || !r) return 'Azione non valida ora';
@@ -63,10 +68,10 @@ export class CluesGame implements GameMode {
     const correct = r.isCorrect(p);
     this.ctx.recordAnswer(p, correct);
     if (correct) {
-      const shown = Math.min(1, r.answers.get(p.id)!.timeMs / this.revealMs);
-      r.points.set(p.id, this.ctx.award(p, Math.round(300 + 900 * (1 - shown))));
+      r.points.set(p.id, this.ctx.award(p, this.reward(r.answers.get(p.id)!.timeMs)));
     } else {
-      r.points.set(p.id, this.ctx.addScore(p, -CONFIG.CLUES_WRONG_PENALTY));
+      // Penalità proporzionale al premio di quel momento: tirare a caso non conviene mai.
+      r.points.set(p.id, this.ctx.addScore(p, -wrongPenalty(this.reward(r.answers.get(p.id)!.timeMs), r.def.options.length)));
     }
     return null;
   }

@@ -8,6 +8,11 @@ export function answerPoints(correct: boolean, timeMs: number | null, durationMs
   return Math.round(CONFIG.SCORE_MIN_CORRECT + (CONFIG.SCORE_MAX_CORRECT - CONFIG.SCORE_MIN_CORRECT) * speed);
 }
 
+/** Penalità per risposta sbagliata = premio/(opzioni-1): chi tira a caso ha attesa 0 (V/F: premio intero; 4 opzioni: un terzo). */
+export function wrongPenalty(reward: number, options: number): number {
+  return Math.round(reward / Math.max(1, options - 1));
+}
+
 /** Classifica "da competizione": a pari punteggio, pari posizione (1, 2, 2, 4). */
 export function computeRanks(players: { id: string; score: number }[]): Map<string, number> {
   const sorted = players.slice().sort((a, b) => b.score - a.score);

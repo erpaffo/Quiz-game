@@ -22,7 +22,7 @@ Il menu **Gioco** ha il Laboratorio Domande, l'apertura della cartella dei pacch
 
 ### Creare gli eseguibili
 
-- **Automatico (GitHub Actions):** a ogni push il file `.github/workflows/desktop.yml` compila Windows, Mac e Linux su macchine apposite, controlla che l'app impacchettata parta (prova senza finestre) e salva i 3 file tra gli artefatti. Con un tag di versione (es. `git tag v1.0.0 && git push --tags`) crea anche la **Release** con i file da scaricare. Costa zero per i repository pubblici.
+- **Automatico (GitHub Actions):** a ogni push il file `.github/workflows/pc.yml` compila Windows, Mac e Linux su macchine apposite, controlla che l'app impacchettata parta (prova senza finestre) e salva i 3 file tra gli artefatti. Per una **release** completa: `git tag v1.0.0 && git push --tags` avvia `release.yml`, che prima verifica le domande con l'AI (DeepSeek, serve il segreto `DEEPSEEK_API_KEY`) e poi pubblica telefono e PC. Tag solo per il PC: `pc-v*`; solo per il telefono: `telefono-v*`. Costa zero per i repository pubblici.
 - **Sul tuo PC:** `npm run desktop:build` crea l'eseguibile del tuo sistema nella cartella `release/`. Mac e Linux si possono creare solo sul rispettivo sistema (o con GitHub Actions).
 - `npm run desktop` prova l'app da sorgente; `npm run desktop:smoke` controlla l'app impacchettata (pagine, pacchetti, bandiere, WebSocket, salvataggio e caricamento della finestra) senza aprirla.
 - **Cambiare il nome del gioco:** modifica solo `shared/brand.json` (titoli, logo, nome dell'app e dei file si aggiornano da soli). Il nome scelto, «Quiz del Pozzo» (in inglese «Quiz of Well»), è nostro: non usare nomi di giochi di altri.
