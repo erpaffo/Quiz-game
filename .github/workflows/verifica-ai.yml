@@ -28,18 +28,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Se domande e script sono identici a una verifica già riuscita, la cache esiste e si salta tutto.
       # La cache si salva solo se il job riesce, quindi una verifica fallita viene rifatta.
       - name: Verifica già superata per questo contenuto?
         id: gia
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .verifica-ok
           key: verifica-ai-${{ hashFiles('banca-domande/approvate/**', 'scripts/ai-verifica*.ts') }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: steps.gia.outputs.cache-hit != 'true'
         with:
           node-version: 22
@@ -60,7 +60,7 @@ jobs:
         if: steps.gia.outputs.cache-hit != 'true'
         run: echo ok > .verifica-ok
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: rapporto-verifica-ai
@@ -79,14 +79,14 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: rapporto-verifica-ai
           path: ai-generati/verifiche
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -102,7 +102,7 @@ jobs:
           npm run banca-db
           npm run banca -- costruisci
 
-      - uses: peter-evans/create-pull-request@v7
+      - uses: peter-evans/create-pull-request@v8
         with:
           branch: ai/correzioni-domande
           title: 'Correzioni domande giudicate false dalla verifica AI'
