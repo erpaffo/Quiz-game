@@ -1,7 +1,7 @@
 name: Verifica AI delle domande (DeepSeek)
 
 # Controlla con DeepSeek V4.1 Flash (modello «deepseek-flash») che le domande approvate siano vere.
-# Gira su GitHub quando cambiano le domande approvate, a mano, o dentro la release (release.yml).
+# Gira su GitHub quando cambiano le domande approvate, o a mano. Non blocca più la release.
 # Richiede il segreto DEEPSEEK_API_KEY (Settings → Secrets and variables → Actions).
 
 on:

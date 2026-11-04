@@ -16,7 +16,7 @@ on:
       - 'package-lock.json'
       - 'tests/pass-*.test.ts'
       - '.github/workflows/telefono.yml'
-  # chiamato dalla release (release.yml) dopo la verifica AI
+  # chiamato dalla release (release.yml)
   workflow_call:
   workflow_dispatch:
 

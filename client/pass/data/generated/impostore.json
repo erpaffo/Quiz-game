@@ -396,5 +396,525 @@
    "Collezionismo",
    "Birdwatching"
   ]
+ },
+ {
+  "name": "Pianeti del Sistema Solare",
+  "words": [
+   "Mercurio",
+   "Venere",
+   "Terra",
+   "Marte",
+   "Giove",
+   "Saturno",
+   "Urano",
+   "Nettuno"
+  ]
+ },
+ {
+  "name": "Attrezzi da officina",
+  "words": [
+   "Martello",
+   "Cacciavite",
+   "Pinza",
+   "Chiave inglese",
+   "Trapano",
+   "Sega",
+   "Lima",
+   "Bulino"
+  ]
+ },
+ {
+  "name": "Mestieri dell'ospedale",
+  "words": [
+   "Chirurgo",
+   "Infermiere",
+   "Anestesista",
+   "Radiologo",
+   "Cardiologo",
+   "Pediatra",
+   "Ostetrica",
+   "Fisioterapista"
+  ]
+ },
+ {
+  "name": "Sport di squadra",
+  "words": [
+   "Calcio",
+   "Basket",
+   "Pallavolo",
+   "Rugby",
+   "Hockey",
+   "Pallamano",
+   "Baseball",
+   "Pallanuoto"
+  ]
+ },
+ {
+  "name": "Elettrodomestici",
+  "words": [
+   "Frigorifero",
+   "Lavatrice",
+   "Lavastoviglie",
+   "Forno",
+   "Microonde",
+   "Asciugatrice",
+   "Frullatore",
+   "Ferro da stiro"
+  ]
+ },
+ {
+  "name": "Condimenti per la pasta",
+  "words": [
+   "Ragù",
+   "Pesto",
+   "Carbonara",
+   "Amatriciana",
+   "Puttanesca",
+   "Alla norma",
+   "Aglio e olio",
+   "Quattro formaggi"
+  ]
+ },
+ {
+  "name": "Danze",
+  "words": [
+   "Salsa",
+   "Merengue",
+   "Tango",
+   "Valzer",
+   "Mazurka",
+   "Tarantella",
+   "Polka",
+   "Flamenco"
+  ]
+ },
+ {
+  "name": "Materie scolastiche",
+  "words": [
+   "Italiano",
+   "Matematica",
+   "Storia",
+   "Geografia",
+   "Scienze",
+   "Inglese",
+   "Arte",
+   "Musica"
+  ]
+ },
+ {
+  "name": "Fenomeni atmosferici",
+  "words": [
+   "Pioggia",
+   "Neve",
+   "Grandine",
+   "Nebbia",
+   "Tuono",
+   "Fulmine",
+   "Arcobaleno",
+   "Vento"
+  ]
+ },
+ {
+  "name": "Attrezzi da palestra",
+  "words": [
+   "Manubrio",
+   "Bilanciere",
+   "Kettlebell",
+   "Cyclette",
+   "Tapis roulant",
+   "Panca",
+   "Elastici",
+   "Corda per saltare"
+  ]
+ },
+ {
+  "name": "Documenti di viaggio",
+  "words": [
+   "Passaporto",
+   "Carta d'identità",
+   "Visto",
+   "Carta d'imbarco",
+   "Patente",
+   "Tessera sanitaria",
+   "Biglietto",
+   "Permesso di soggiorno"
+  ]
+ },
+ {
+  "name": "Oggetti da spiaggia",
+  "words": [
+   "Asciugamano",
+   "Ombrellone",
+   "Crema solare",
+   "Costume",
+   "Occhiali da sole",
+   "Secchiello",
+   "Materassino",
+   "Infradito"
+  ]
+ },
+ {
+  "name": "Cose in valigia",
+  "words": [
+   "Spazzolino",
+   "Pigiama",
+   "Maglietta",
+   "Costume da bagno",
+   "Caricabatterie",
+   "Scarpe",
+   "Libro",
+   "Spazzola"
+  ]
+ },
+ {
+  "name": "Strutture ricettive",
+  "words": [
+   "Albergo",
+   "Ostello",
+   "Bed and breakfast",
+   "Campeggio",
+   "Resort",
+   "Agriturismo",
+   "Motel",
+   "Rifugio"
+  ]
+ },
+ {
+  "name": "Attività da vacanza al mare",
+  "words": [
+   "Nuotare",
+   "Prendere il sole",
+   "Fare snorkeling",
+   "Giocare a pallavolo",
+   "Costruire castelli",
+   "Passeggiare",
+   "Pescare",
+   "Fare surf"
+  ]
+ },
+ {
+  "name": "Souvenir tipici",
+  "words": [
+   "Magnete",
+   "Cartolina",
+   "Portachiavi",
+   "T-shirt",
+   "Tazza",
+   "Borsa di stoffa",
+   "Cappellino",
+   "Statuetta"
+  ]
+ },
+ {
+  "name": "Cose che si trovano in aeroporto",
+  "words": [
+   "Check-in",
+   "Gate",
+   "Duty free",
+   "Bagaglio",
+   "Pista",
+   "Torre di controllo",
+   "Nastro trasportatore",
+   "Sala d'attesa"
+  ]
+ },
+ {
+  "name": "Cibi da strada italiani",
+  "words": [
+   "Arancino",
+   "Panzerotto",
+   "Olive ascolane",
+   "Supplì",
+   "Piadina",
+   "Focaccia",
+   "Trapizzino",
+   "Mozzarella in carrozza"
+  ]
+ },
+ {
+  "name": "Città europee sul mare",
+  "words": [
+   "Barcellona",
+   "Lisbona",
+   "Nizza",
+   "Napoli",
+   "Atene",
+   "Stoccolma",
+   "Copenaghen",
+   "Marsiglia"
+  ]
+ },
+ {
+  "name": "Isole del Mediterraneo",
+  "words": [
+   "Sicilia",
+   "Sardegna",
+   "Cipro",
+   "Malta",
+   "Creta",
+   "Corsica",
+   "Maiorca",
+   "Ibiza"
+  ]
+ },
+ {
+  "name": "Personaggi di Harry Potter",
+  "words": [
+   "Harry Potter",
+   "Ron Weasley",
+   "Hermione Granger",
+   "Albus Silente",
+   "Severus Piton",
+   "Lord Voldemort",
+   "Rubeus Hagrid",
+   "Draco Malfoy"
+  ]
+ },
+ {
+  "name": "Personaggi de Il Trono di Spade",
+  "words": [
+   "Jon Snow",
+   "Daenerys Targaryen",
+   "Tyrion Lannister",
+   "Arya Stark",
+   "Cersei Lannister",
+   "Sansa Stark",
+   "Jaime Lannister",
+   "Ned Stark"
+  ]
+ },
+ {
+  "name": "Supereroi Marvel Avengers",
+  "words": [
+   "Iron Man",
+   "Capitan America",
+   "Thor",
+   "Hulk",
+   "Vedova Nera",
+   "Occhio di Falco",
+   "Spider-Man",
+   "Black Panther"
+  ]
+ },
+ {
+  "name": "Personaggi di Star Wars",
+  "words": [
+   "Luke Skywalker",
+   "Darth Vader",
+   "Principessa Leila",
+   "Han Solo",
+   "Yoda",
+   "Obi-Wan Kenobi",
+   "Chewbacca",
+   "C-3PO"
+  ]
+ },
+ {
+  "name": "Film diretti da Steven Spielberg",
+  "words": [
+   "Jurassic Park",
+   "Lo Squalo",
+   "E.T.",
+   "I predatori dell'arca perduta",
+   "Schindler's List",
+   "Salvate il soldato Ryan",
+   "Hook",
+   "Lincoln"
+  ]
+ },
+ {
+  "name": "Personaggi dei Simpson",
+  "words": [
+   "Homer Simpson",
+   "Marge Simpson",
+   "Bart Simpson",
+   "Lisa Simpson",
+   "Maggie Simpson",
+   "Ned Flanders",
+   "Montgomery Burns",
+   "Krusty il Clown"
+  ]
+ },
+ {
+  "name": "Principesse e eroine Disney",
+  "words": [
+   "Cenerentola",
+   "Biancaneve",
+   "Ariel",
+   "Belle",
+   "Jasmine",
+   "Mulan",
+   "Rapunzel",
+   "Elsa"
+  ]
+ },
+ {
+  "name": "Film d'animazione Pixar",
+  "words": [
+   "Toy Story",
+   "Monsters & Co.",
+   "Alla ricerca di Nemo",
+   "Gli Incredibili",
+   "Cars",
+   "Ratatouille",
+   "WALL-E",
+   "Up"
+  ]
+ },
+ {
+  "name": "Personaggi de Il Signore degli Anelli",
+  "words": [
+   "Frodo Baggins",
+   "Samvise Gamgee",
+   "Gandalf",
+   "Aragorn",
+   "Legolas",
+   "Gimli",
+   "Gollum",
+   "Boromir"
+  ]
+ },
+ {
+  "name": "Serie TV comedy famose",
+  "words": [
+   "Friends",
+   "The Big Bang Theory",
+   "How I Met Your Mother",
+   "Modern Family",
+   "The Office",
+   "Scrubs",
+   "Brooklyn Nine-Nine",
+   "Will & Grace"
+  ]
+ },
+ {
+  "name": "Attori vincitori di premi Oscar",
+  "words": [
+   "Leonardo DiCaprio",
+   "Tom Hanks",
+   "Robert De Niro",
+   "Al Pacino",
+   "Denzel Washington",
+   "Anthony Hopkins",
+   "Jack Nicholson",
+   "Matthew McConaughey"
+  ]
+ },
+ {
+  "name": "Film cult di fantascienza",
+  "words": [
+   "Blade Runner",
+   "Matrix",
+   "Interstellar",
+   "Alien",
+   "Terminator",
+   "Ritorno al futuro",
+   "Inception",
+   "Dune"
+  ]
+ },
+ {
+  "name": "Personaggi dei Griffin",
+  "words": [
+   "Peter Griffin",
+   "Lois Griffin",
+   "Meg Griffin",
+   "Chris Griffin",
+   "Stewie Griffin",
+   "Brian Griffin",
+   "Glenn Quagmire",
+   "Cleveland Brown"
+  ]
+ },
+ {
+  "name": "Cattivi dei cartoni Disney",
+  "words": [
+   "Scar",
+   "Jafar",
+   "Ursula",
+   "Crudelia De Mon",
+   "Malefica",
+   "Capitan Uncino",
+   "Ade",
+   "Gaston"
+  ]
+ },
+ {
+  "name": "Attrici premiate con l'Oscar",
+  "words": [
+   "Meryl Streep",
+   "Cate Blanchett",
+   "Emma Stone",
+   "Natalie Portman",
+   "Julia Roberts",
+   "Sandra Bullock",
+   "Kate Winslet",
+   "Nicole Kidman"
+  ]
+ },
+ {
+  "name": "Film della saga di James Bond",
+  "words": [
+   "Casino Royale",
+   "Skyfall",
+   "Goldfinger",
+   "No Time to Die",
+   "Spectre",
+   "GoldenEye",
+   "Dalla Russia con amore",
+   "Licenza di uccidere"
+  ]
+ },
+ {
+  "name": "Serie TV drammatiche acclamate",
+  "words": [
+   "Breaking Bad",
+   "I Soprano",
+   "The Wire",
+   "Mad Men",
+   "Better Call Saul",
+   "Succession",
+   "Chernobyl",
+   "Fargo"
+  ]
+ },
+ {
+  "name": "Registi italiani premiati all'Oscar",
+  "words": [
+   "Federico Fellini",
+   "Vittorio De Sica",
+   "Bernardo Bertolucci",
+   "Giuseppe Tornatore",
+   "Roberto Benigni",
+   "Paolo Sorrentino",
+   "Elio Petri",
+   "Gabriele Salvatores"
+  ]
+ },
+ {
+  "name": "Personaggi di Stranger Things",
+  "words": [
+   "Undici",
+   "Mike Wheeler",
+   "Dustin Henderson",
+   "Lucas Sinclair",
+   "Will Byers",
+   "Jim Hopper",
+   "Joyce Byers",
+   "Steve Harrington"
+  ]
+ },
+ {
+  "name": "Film musicali di successo",
+  "words": [
+   "Grease",
+   "La La Land",
+   "Moulin Rouge",
+   "Mamma Mia",
+   "Chicago",
+   "The Greatest Showman",
+   "West Side Story",
+   "Cabaret"
+  ]
  }
 ]

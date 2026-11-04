@@ -1,0 +1,320 @@
+{
+ "id": "banca-societa",
+ "name": "📚 Società & Curiosità",
+ "description": "Banca domande · 25 domande verificate, difficoltà da facile a esperti.",
+ "builtIn": true,
+ "updatedAt": 0,
+ "categories": [
+  {
+   "id": "economia",
+   "name": "Economia e marchi",
+   "icon": "🧭",
+   "color": "#8ecae6"
+  },
+  {
+   "id": "istituzioni",
+   "name": "Politica e istituzioni",
+   "icon": "🧭",
+   "color": "#8ecae6"
+  }
+ ],
+ "questions": [
+  {
+   "id": "numeric-lzgqlg",
+   "categoryId": "istituzioni",
+   "type": "numeric",
+   "text": "Da quanti giudici è composta la Corte costituzionale italiana?",
+   "answer": 15,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-wkbpdu",
+   "categoryId": "istituzioni",
+   "type": "numeric",
+   "text": "Quale numero di articolo della Costituzione italiana proclama che «tutti i cittadini hanno pari dignità sociale e sono eguali davanti alla legge»?",
+   "answer": 3,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-17bztia",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "Quale organo dello Stato italiano può sciogliere le Camere?",
+   "options": [
+    "Il Presidente della Repubblica",
+    "Il Presidente del Consiglio dei ministri",
+    "La Corte costituzionale",
+    "Il Consiglio superiore della magistratura"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-tlzyto",
+   "categoryId": "istituzioni",
+   "type": "numeric",
+   "text": "Qual è il numero massimo di senatori a vita nominati dal Presidente della Repubblica che possono essere in carica contemporaneamente?",
+   "answer": 5,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-a67dew",
+   "categoryId": "istituzioni",
+   "type": "numeric",
+   "text": "A quanti deputati è stata ridotta la Camera dopo la riforma costituzionale confermata dal referendum del settembre 2020?",
+   "answer": 400,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-adbqu5",
+   "categoryId": "istituzioni",
+   "type": "numeric",
+   "text": "Qual è l'età minima richiesta per essere eletti senatori della Repubblica italiana?",
+   "answer": 40,
+   "unit": "anni",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1hdjszi",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "Quale trattato del 1992 istituì l'Unione europea e fissò i criteri di convergenza per entrare nell'euro?",
+   "options": [
+    "Trattato di Maastricht",
+    "Trattato di Roma",
+    "Trattato di Nizza",
+    "Trattato di Lisbona"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-m9camj",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "In quale Paese ha sede la Corte di giustizia dell'Unione europea?",
+   "options": [
+    "Lussemburgo",
+    "Belgio",
+    "Francia",
+    "Paesi Bassi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1qqvchi",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "In quale città francese ha sede ufficiale il Parlamento europeo?",
+   "options": [
+    "Strasburgo",
+    "Lione",
+    "Parigi",
+    "Lilla"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-xyh7sx",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "Quale di questi Paesi NON è membro permanente del Consiglio di sicurezza dell'ONU?",
+   "options": [
+    "Germania",
+    "Francia",
+    "Cina",
+    "Regno Unito"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-8hpm",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "Quale organizzazione internazionale con sede a Ginevra ha il compito di regolare gli scambi commerciali tra gli Stati?",
+   "options": [
+    "Organizzazione mondiale del commercio (OMC)",
+    "Fondo monetario internazionale (FMI)",
+    "Organizzazione per la cooperazione e lo sviluppo economico (OCSE)",
+    "Banca mondiale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-l7t591",
+   "categoryId": "istituzioni",
+   "type": "multiple",
+   "text": "Quale organizzazione internazionale, con sede a Parigi, riunisce Paesi a economia avanzata per coordinare le politiche economiche e sociali?",
+   "options": [
+    "OCSE",
+    "OPEC",
+    "NATO",
+    "Interpol"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1f0qox7",
+   "categoryId": "istituzioni",
+   "type": "truefalse",
+   "text": "La Corte costituzionale italiana ha sede a Roma, nel Palazzo della Consulta.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1vdrgdh",
+   "categoryId": "istituzioni",
+   "type": "truefalse",
+   "text": "In Italia il Presidente del Consiglio dei ministri è eletto direttamente dai cittadini.",
+   "answer": false,
+   "difficulty": 1
+  },
+  {
+   "id": "truefalse-g9tj8y",
+   "categoryId": "istituzioni",
+   "type": "truefalse",
+   "text": "L'euro è la moneta ufficiale adottata dall'intera comunità degli Stati membri dell'Unione europea.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-fu2v42",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Quale economista britannico pubblicò nel 1936 la «Teoria generale dell'occupazione, dell'interesse e della moneta»?",
+   "options": [
+    "John Maynard Keynes",
+    "Adam Smith",
+    "David Ricardo",
+    "Milton Friedman"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-swqgwg",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Quale conferenza internazionale del 1944 creò il Fondo monetario internazionale e la Banca mondiale?",
+   "options": [
+    "Bretton Woods",
+    "Yalta",
+    "Maastricht",
+    "Bruxelles"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-l14wi8",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Come si chiama il tipo di mercato in cui pochi grandi venditori dominano l'offerta di un bene?",
+   "options": [
+    "Oligopolio",
+    "Monopolio",
+    "Concorrenza perfetta",
+    "Monopsonio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-r2te9k",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Che cosa indica in economia il termine «deflazione»?",
+   "options": [
+    "Una diminuzione generalizzata e prolungata dei prezzi",
+    "Un aumento generalizzato dei prezzi",
+    "Una riduzione del prodotto interno lordo",
+    "La svalutazione di una moneta rispetto alle altre"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-tkhcgk",
+   "categoryId": "economia",
+   "type": "numeric",
+   "text": "In che anno le banconote e le monete in euro entrarono fisicamente in circolazione?",
+   "answer": 2002,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-12530b1",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "In quale città ha sede la Banca centrale europea?",
+   "options": [
+    "Francoforte sul Meno",
+    "Bruxelles",
+    "Lussemburgo",
+    "Amsterdam"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "numeric-1gk3qfh",
+   "categoryId": "economia",
+   "type": "numeric",
+   "text": "A quante lire equivale un euro, secondo il tasso di conversione fissato in modo irrevocabile alla fine del 1998?",
+   "answer": 1936.27,
+   "unit": "lire",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3p3po1",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Come si chiama la situazione in cui si combinano alta inflazione, bassa crescita e disoccupazione elevata?",
+   "options": [
+    "Stagflazione",
+    "Iperinflazione",
+    "Recessione tecnica",
+    "Deflazione"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-f6k2gj",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Quale evento del 1929 diede inizio alla Grande Depressione americana?",
+   "options": [
+    "Il crollo della Borsa di Wall Street",
+    "La chiusura del canale di Panama",
+    "La svalutazione del dollaro",
+    "Il fallimento della Federal Reserve"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-bpnc82",
+   "categoryId": "economia",
+   "type": "multiple",
+   "text": "Chi fu il primo presidente della Banca centrale europea?",
+   "options": [
+    "Wim Duisenberg",
+    "Jean-Claude Trichet",
+    "Mario Draghi",
+    "Christine Lagarde"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  }
+ ]
+}

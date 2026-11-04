@@ -1,7 +1,8 @@
-name: Release (verifica AI, poi telefono e PC)
+name: Release (telefono e PC)
 
 # Si attiva con un tag di versione: git tag v0.3.0 && git push --tags
-# 1) verifica AI delle domande con DeepSeek; 2) solo se passa, pubblica l'app telefono e gli eseguibili PC.
+# Pubblica l'app telefono e gli eseguibili PC (con la Release su GitHub). La verifica AI delle domande NON fa parte della release:
+# gira per conto suo quando cambiano le domande (verifica-ai.yml).
 # Per il solo telefono o il solo PC: tag telefono-v* o pc-v*, oppure «Run workflow» sui singoli file.
 
 on:
@@ -17,12 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  verifica-ai:
-    uses: ./.github/workflows/verifica-ai.yml
-    secrets: inherit
-
   telefono:
-    needs: verifica-ai
     uses: ./.github/workflows/telefono.yml
     permissions:
       contents: read
@@ -30,7 +26,6 @@ jobs:
       id-token: write
 
   pc:
-    needs: verifica-ai
     uses: ./.github/workflows/pc.yml
     permissions:
       contents: write

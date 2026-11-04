@@ -1,7 +1,7 @@
 {
  "id": "banca-miti",
  "name": "📚 Miti & Religioni",
- "description": "Banca domande · 46 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 71 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -20,6 +20,12 @@
   {
    "id": "leggende",
    "name": "Leggende e fiabe",
+   "icon": "⚡",
+   "color": "#e9c46a"
+  },
+  {
+   "id": "religioni",
+   "name": "Religioni del mondo",
    "icon": "⚡",
    "color": "#e9c46a"
   }
@@ -662,6 +668,328 @@
    ],
    "correctIndex": 0,
    "difficulty": 3
+  },
+  {
+   "id": "multiple-nbscui",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Come si chiama il ponte arcobaleno che collega Asgard, la dimora degli dèi, a Midgard, il mondo degli uomini?",
+   "options": [
+    "Bifröst",
+    "Gjallarbrú",
+    "Ásbrú",
+    "Ginnungagap"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-4ulwyr",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Quale lupo gigante, figlio di Loki, è destinato a divorare il sovrano degli dèi durante il Ragnarök?",
+   "options": [
+    "Fenrir",
+    "Sköll",
+    "Garm",
+    "Geri"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-5le5i6",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Quale dio norreno sacrificò un occhio alla fonte di Mimir per ottenere la sapienza?",
+   "options": [
+    "Odino",
+    "Thor",
+    "Týr",
+    "Heimdallr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1n8999e",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Come si chiamano le divinità guerriere femminili che scelgono i caduti in battaglia da portare nel Valhalla?",
+   "options": [
+    "Valchirie",
+    "Norne",
+    "Disir",
+    "Fylgjur"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-exrja9",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "A quale gruppo di divinità norrene, distinto dagli Asi, appartengono Njörðr, Freyr e Freyja?",
+   "options": [
+    "Vanir",
+    "Jötnar",
+    "Álfar",
+    "Einherjar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-aotay",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Come si chiama il regno dei giganti nella mitologia norrena?",
+   "options": [
+    "Jötunheimr",
+    "Muspellheimr",
+    "Álfheimr",
+    "Vanaheimr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ieyyjn",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Quale dio norreno è il guardiano del ponte arcobaleno degli dèi e può udire perfino l'erba che cresce?",
+   "options": [
+    "Heimdallr",
+    "Týr",
+    "Baldr",
+    "Víðarr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-5eb2as",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Quale dio norreno perse una mano tra le fauci del mostruoso lupo figlio di Loki?",
+   "options": [
+    "Týr",
+    "Odino",
+    "Freyr",
+    "Njörðr"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1m4xxa6",
+   "categoryId": "nordici",
+   "type": "multiple",
+   "text": "Quale dea norrena custodiva le mele che davano agli dèi l'eterna giovinezza?",
+   "options": [
+    "Iðunn",
+    "Freyja",
+    "Frigg",
+    "Sif"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-n1i075",
+   "categoryId": "nordici",
+   "type": "truefalse",
+   "text": "Nella mitologia norrena Loki è figlio naturale del padre degli dèi di Asgard.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-qhsx69",
+   "categoryId": "nordici",
+   "type": "truefalse",
+   "text": "Il nome inglese del giovedì, «Thursday», deriva dal dio norreno Thor.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1xad3w1",
+   "categoryId": "religioni",
+   "type": "numeric",
+   "text": "Quanti sono i pilastri dell'Islam?",
+   "answer": 5,
+   "unit": "",
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1234yhz",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Come si chiama il libro sacro dei sikh, considerato guida eterna dopo i dieci guru umani?",
+   "options": [
+    "Guru Granth Sahib",
+    "Bhagavadgita",
+    "Tripitaka",
+    "Avesta"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1cnmyml",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Come si chiama la festa ebraica delle luci, che dura otto giorni?",
+   "options": [
+    "Hanukkah",
+    "Sukkot",
+    "Purim",
+    "Shavuot"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-kwgdra",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "In quale località, oggi in Nepal, la tradizione colloca la nascita di Siddhartha Gautama, il Buddha?",
+   "options": [
+    "Lumbini",
+    "Bodh Gaya",
+    "Sarnath",
+    "Kushinagar"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-iil503",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Quale testo sacro dell'induismo contiene il dialogo tra il principe Arjuna e Krishna prima della battaglia?",
+   "options": [
+    "Bhagavadgita",
+    "Rigveda",
+    "Upanishad",
+    "Ramayana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1funbby",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Quale concilio ecumenico, convocato dall'imperatore Costantino nel 325, condannò l'arianesimo?",
+   "options": [
+    "Concilio di Nicea",
+    "Concilio di Calcedonia",
+    "Concilio di Trento",
+    "Concilio di Efeso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-15x0y3a",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Chi fu il fondatore del sikhismo?",
+   "options": [
+    "Guru Nanak",
+    "Guru Gobind Singh",
+    "Kabir",
+    "Swami Vivekananda"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-grycnw",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Quale festa ebraica celebra la liberazione degli Ebrei dalla schiavitù in Egitto?",
+   "options": [
+    "Pesach (Pasqua ebraica)",
+    "Rosh haShanah",
+    "Yom Kippur",
+    "Purim"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-t2k52q",
+   "categoryId": "religioni",
+   "type": "truefalse",
+   "text": "Il Tripitaka è la raccolta dei testi canonici del buddhismo theravada.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1v9cng7",
+   "categoryId": "religioni",
+   "type": "numeric",
+   "text": "In quante sure (capitoli) è suddiviso il Corano?",
+   "answer": 114,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-9kb83",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Quali sono i tre dèi che formano la Trimurti induista?",
+   "options": [
+    "Brahma, Vishnu e Shiva",
+    "Indra, Agni e Surya",
+    "Rama, Krishna e Hanuman",
+    "Ganesh, Kali e Lakshmi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-8roh6",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "In quale libro biblico, oltre all'Esodo, sono riportati i Dieci Comandamenti?",
+   "options": [
+    "Deuteronomio",
+    "Levitico",
+    "Numeri",
+    "Genesi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-5s1z0u",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Quale festa cristiana celebra la discesa dello Spirito Santo sugli apostoli, cinquanta giorni dopo la Pasqua?",
+   "options": [
+    "Pentecoste",
+    "Ascensione",
+    "Epifania",
+    "Corpus Domini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-jx8bvp",
+   "categoryId": "religioni",
+   "type": "multiple",
+   "text": "Quale mese del calendario islamico è dedicato al digiuno diurno?",
+   "options": [
+    "Ramadan",
+    "Muharram",
+    "Rajab",
+    "Shawwal"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
   }
  ]
 }

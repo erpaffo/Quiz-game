@@ -2798,5 +2798,605 @@
    "polifonia"
   ],
   "pack": "difficile"
+ },
+ {
+  "word": "Cicala",
+  "taboo": [
+   "estate",
+   "canto",
+   "albero",
+   "rumore"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Volpe",
+  "taboo": [
+   "coda",
+   "astuta",
+   "rossa",
+   "gallina"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Castagna",
+  "taboo": [
+   "riccio",
+   "autunno",
+   "arrosto",
+   "albero"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ghianda",
+  "taboo": [
+   "quercia",
+   "scoiattolo",
+   "castagna",
+   "autunno"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Ostrica",
+  "taboo": [
+   "conchiglia",
+   "perla",
+   "mare",
+   "guscio"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Mulino a vento",
+  "taboo": [
+   "pale",
+   "grano",
+   "farina",
+   "vento"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Slittino",
+  "taboo": [
+   "neve",
+   "discesa",
+   "bambini",
+   "pista"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Semaforo",
+  "taboo": [
+   "rosso",
+   "verde",
+   "incrocio",
+   "strada"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Trampolino",
+  "taboo": [
+   "salto",
+   "piscina",
+   "elastico",
+   "tuffo"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Zucchero filato",
+  "taboo": [
+   "fiera",
+   "dolce",
+   "rosa",
+   "bastoncino"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Altalena",
+  "taboo": [
+   "parco",
+   "dondolare",
+   "corda",
+   "bambini"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Scivolo",
+  "taboo": [
+   "piscina",
+   "discesa",
+   "bambini",
+   "scala"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Trattore",
+  "taboo": [
+   "campo",
+   "contadino",
+   "aratro",
+   "ruote"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Escavatore",
+  "taboo": [
+   "cantiere",
+   "scavare",
+   "benna",
+   "ruspa"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Idrante",
+  "taboo": [
+   "fuoco",
+   "acqua",
+   "pompiere",
+   "strada"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Aquilone",
+  "taboo": [
+   "vento",
+   "filo",
+   "cielo",
+   "volare"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Limonata",
+  "taboo": [
+   "limoni",
+   "estate",
+   "succo",
+   "bibita"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Zanzariera",
+  "taboo": [
+   "finestra",
+   "zanzare",
+   "rete",
+   "estate"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Ponte levatoio",
+  "taboo": [
+   "castello",
+   "fossato",
+   "catene",
+   "difesa"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Sottopassaggio",
+  "taboo": [
+   "strada",
+   "sotto",
+   "pedoni",
+   "tunnel"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Passaporto",
+  "taboo": [
+   "frontiera",
+   "timbro",
+   "documento",
+   "aeroporto"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Trolley",
+  "taboo": [
+   "ruote",
+   "manico",
+   "valigia",
+   "aeroporto"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Binario",
+  "taboo": [
+   "treno",
+   "stazione",
+   "rotaie",
+   "partenza"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Oblò",
+  "taboo": [
+   "aereo",
+   "finestrino",
+   "rotondo",
+   "nuvole"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Crociera",
+  "taboo": [
+   "nave",
+   "mare",
+   "vacanza",
+   "porti"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Bungalow",
+  "taboo": [
+   "mare",
+   "vacanza",
+   "tetto",
+   "spiaggia"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Ostello",
+  "taboo": [
+   "letto",
+   "viaggio",
+   "zaino",
+   "economico"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Fuso orario",
+  "taboo": [
+   "ore",
+   "jet lag",
+   "mondo",
+   "meridiano"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Cartolina",
+  "taboo": [
+   "francobollo",
+   "messaggio",
+   "ricordo",
+   "spedire"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Guida turistica",
+  "taboo": [
+   "libro",
+   "museo",
+   "turisti",
+   "spiegazioni"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Zaino",
+  "taboo": [
+   "spalle",
+   "escursione",
+   "cinghie",
+   "trekking"
+  ],
+  "pack": "casa"
+ },
+ {
+  "word": "Carta d'imbarco",
+  "taboo": [
+   "aereo",
+   "gate",
+   "stampa",
+   "posto"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Baia",
+  "taboo": [
+   "mare",
+   "insenatura",
+   "navi",
+   "costa"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Funivia",
+  "taboo": [
+   "montagna",
+   "cavi",
+   "cabina",
+   "salita"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Campeggio",
+  "taboo": [
+   "tenda",
+   "sacco a pelo",
+   "natura",
+   "vacanza"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Biglietteria",
+  "taboo": [
+   "treno",
+   "coda",
+   "sportello",
+   "biglietti"
+  ],
+  "pack": "difficile"
+ },
+ {
+  "word": "Porto",
+  "taboo": [
+   "navi",
+   "molo",
+   "marinai",
+   "attracco"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Sentiero",
+  "taboo": [
+   "montagna",
+   "escursione",
+   "segnali",
+   "bosco"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Autogrill",
+  "taboo": [
+   "strada",
+   "pausa",
+   "caffè",
+   "benzina"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Rifugio",
+  "taboo": [
+   "montagna",
+   "escursionisti",
+   "letto",
+   "quota"
+  ],
+  "pack": "natura"
+ },
+ {
+  "word": "Bloopers",
+  "taboo": [
+   "errori",
+   "risate",
+   "papere",
+   "scene"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Cinepanettone",
+  "taboo": [
+   "natale",
+   "commedia",
+   "vacanze",
+   "risate"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Ciak",
+  "taboo": [
+   "regista",
+   "azione",
+   "scena",
+   "motore"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Cinepresa",
+  "taboo": [
+   "pellicola",
+   "riprese",
+   "obiettivo",
+   "camera"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Storyboard",
+  "taboo": [
+   "disegni",
+   "fumetto",
+   "inquadrature",
+   "sceneggiatura"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Spoiler",
+  "taboo": [
+   "finale",
+   "svelare",
+   "trama",
+   "rovinare"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Casting",
+  "taboo": [
+   "provino",
+   "attori",
+   "ruolo",
+   "scelta"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Cameo",
+  "taboo": [
+   "comparsa",
+   "famoso",
+   "apparizione",
+   "breve"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Trailer",
+  "taboo": [
+   "anteprima",
+   "video",
+   "prossimamente",
+   "pubblicita"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Sequel",
+  "taboo": [
+   "seguito",
+   "capitolo",
+   "secondo",
+   "saga"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Prequel",
+  "taboo": [
+   "prima",
+   "passato",
+   "origini",
+   "antecedente"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Cliffhanger",
+  "taboo": [
+   "sospeso",
+   "puntata",
+   "finale",
+   "fiato"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Cosplay",
+  "taboo": [
+   "costume",
+   "travestimento",
+   "fiera",
+   "fumetti"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Spin-off",
+  "taboo": [
+   "derivata",
+   "personaggio",
+   "serie",
+   "secondario"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Tappeto rosso",
+  "taboo": [
+   "red carpet",
+   "sfilata",
+   "fotografi",
+   "star"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Botteghino",
+  "taboo": [
+   "incassi",
+   "biglietti",
+   "box office",
+   "sala"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Sigla",
+  "taboo": [
+   "canzone",
+   "inizio",
+   "telefilm",
+   "musica"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Effetti speciali",
+  "taboo": [
+   "digitale",
+   "computer",
+   "esplosione",
+   "trucco"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Fandom",
+  "taboo": [
+   "appassionati",
+   "comunita",
+   "seguaci",
+   "gruppo"
+  ],
+  "pack": "pop"
+ },
+ {
+  "word": "Autografo",
+  "taboo": [
+   "firma",
+   "fan",
+   "dedica",
+   "celebrita"
+  ],
+  "pack": "pop"
  }
 ]

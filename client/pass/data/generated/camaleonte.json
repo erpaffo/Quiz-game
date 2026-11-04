@@ -320,5 +320,425 @@
    "Cupcake",
    "Muffin"
   ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Rana",
+   "Rospo"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Lepre",
+   "Coniglio"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Cammello",
+   "Dromedario"
+  ]
+ },
+ {
+  "category": "Animali",
+  "words": [
+   "Ghepardo",
+   "Leopardo"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Arancia",
+   "Mandarino"
+  ]
+ },
+ {
+  "category": "Cibo",
+  "words": [
+   "Burro",
+   "Margarina"
+  ]
+ },
+ {
+  "category": "Bevande",
+  "words": [
+   "Tè nero",
+   "Tè verde"
+  ]
+ },
+ {
+  "category": "Oggetti di casa",
+  "words": [
+   "Secchio",
+   "Catino"
+  ]
+ },
+ {
+  "category": "Oggetti di casa",
+  "words": [
+   "Lampada",
+   "Lampadario"
+  ]
+ },
+ {
+  "category": "Oggetti di casa",
+  "words": [
+   "Caminetto",
+   "Stufa"
+  ]
+ },
+ {
+  "category": "Tecnologia",
+  "words": [
+   "Tablet",
+   "E-reader"
+  ]
+ },
+ {
+  "category": "Tecnologia",
+  "words": [
+   "Videocamera",
+   "Webcam"
+  ]
+ },
+ {
+  "category": "Sport",
+  "words": [
+   "Corsa",
+   "Marcia"
+  ]
+ },
+ {
+  "category": "Sport",
+  "words": [
+   "Sci alpino",
+   "Snowboard"
+  ]
+ },
+ {
+  "category": "Musica",
+  "words": [
+   "Chitarra acustica",
+   "Chitarra elettrica"
+  ]
+ },
+ {
+  "category": "Musica",
+  "words": [
+   "Violino",
+   "Viola"
+  ]
+ },
+ {
+  "category": "Mestieri",
+  "words": [
+   "Dentista",
+   "Ortodonzista"
+  ]
+ },
+ {
+  "category": "Mestieri",
+  "words": [
+   "Postino",
+   "Corriere"
+  ]
+ },
+ {
+  "category": "Mezzi di trasporto",
+  "words": [
+   "Traghetto",
+   "Aliscafo"
+  ]
+ },
+ {
+  "category": "Vestiti",
+  "words": [
+   "Maglia",
+   "Felpa"
+  ]
+ },
+ {
+  "category": "Luoghi",
+  "words": [
+   "Albergo",
+   "Ostello"
+  ]
+ },
+ {
+  "category": "Documenti",
+  "words": [
+   "Passaporto",
+   "Carta d'identità"
+  ]
+ },
+ {
+  "category": "Mezzi di trasporto",
+  "words": [
+   "Treno",
+   "Tram"
+  ]
+ },
+ {
+  "category": "Viaggio",
+  "words": [
+   "Valigia",
+   "Borsone"
+  ]
+ },
+ {
+  "category": "Oggetti da vacanza",
+  "words": [
+   "Sdraio",
+   "Amaca"
+  ]
+ },
+ {
+  "category": "Oggetti da vacanza",
+  "words": [
+   "Crema solare",
+   "Doposole"
+  ]
+ },
+ {
+  "category": "Viaggio",
+  "words": [
+   "Biglietto",
+   "Abbonamento"
+  ]
+ },
+ {
+  "category": "Luoghi",
+  "words": [
+   "Bed and breakfast",
+   "Agriturismo"
+  ]
+ },
+ {
+  "category": "Luoghi",
+  "words": [
+   "Museo",
+   "Pinacoteca"
+  ]
+ },
+ {
+  "category": "Luoghi",
+  "words": [
+   "Aeroporto",
+   "Eliporto"
+  ]
+ },
+ {
+  "category": "Viaggio",
+  "words": [
+   "Mappa",
+   "Guida turistica"
+  ]
+ },
+ {
+  "category": "Natura",
+  "words": [
+   "Deserto",
+   "Savana"
+  ]
+ },
+ {
+  "category": "Geografia",
+  "words": [
+   "Isola",
+   "Penisola"
+  ]
+ },
+ {
+  "category": "Natura",
+  "words": [
+   "Lago",
+   "Laguna"
+  ]
+ },
+ {
+  "category": "Natura",
+  "words": [
+   "Fiume",
+   "Torrente"
+  ]
+ },
+ {
+  "category": "Natura",
+  "words": [
+   "Spiaggia",
+   "Scogliera"
+  ]
+ },
+ {
+  "category": "Vacanza",
+  "words": [
+   "Tenda",
+   "Bungalow"
+  ]
+ },
+ {
+  "category": "Vacanza",
+  "words": [
+   "Crociera",
+   "Gita in barca"
+  ]
+ },
+ {
+  "category": "Oggetti",
+  "words": [
+   "Cartolina",
+   "Lettera"
+  ]
+ },
+ {
+  "category": "Vacanza",
+  "words": [
+   "Campeggio",
+   "Villaggio turistico"
+  ]
+ },
+ {
+  "category": "Saghe fantasy cinematografiche",
+  "words": [
+   "Harry Potter",
+   "Il Signore degli Anelli"
+  ]
+ },
+ {
+  "category": "Universi di supereroi",
+  "words": [
+   "Marvel",
+   "DC Comics"
+  ]
+ },
+ {
+  "category": "Piattaforme di streaming video",
+  "words": [
+   "Netflix",
+   "Amazon Prime Video"
+  ]
+ },
+ {
+  "category": "Serie TV comedy con amici",
+  "words": [
+   "Friends",
+   "How I Met Your Mother"
+  ]
+ },
+ {
+  "category": "Film d'animazione con giocattoli",
+  "words": [
+   "Toy Story",
+   "Small Soldiers"
+  ]
+ },
+ {
+  "category": "Registi cult americani",
+  "words": [
+   "Quentin Tarantino",
+   "Martin Scorsese"
+  ]
+ },
+ {
+  "category": "Saghe di fantascienza spaziale",
+  "words": [
+   "Star Wars",
+   "Star Trek"
+  ]
+ },
+ {
+  "category": "Film cult di Steven Spielberg",
+  "words": [
+   "Jurassic Park",
+   "Lo Squalo"
+  ]
+ },
+ {
+  "category": "Avventurieri ed esploratori del cinema",
+  "words": [
+   "Indiana Jones",
+   "Lara Croft"
+  ]
+ },
+ {
+  "category": "Commedie animate americane per adulti",
+  "words": [
+   "I Simpson",
+   "I Griffin"
+  ]
+ },
+ {
+  "category": "Spie cinematografiche famose",
+  "words": [
+   "James Bond",
+   "Ethan Hunt"
+  ]
+ },
+ {
+  "category": "Film catastrofici con asteroidi",
+  "words": [
+   "Armageddon",
+   "Deep Impact"
+  ]
+ },
+ {
+  "category": "Studi di animazione 3D famosi",
+  "words": [
+   "Pixar",
+   "DreamWorks"
+  ]
+ },
+ {
+  "category": "Star d'azione anni '80",
+  "words": [
+   "Arnold Schwarzenegger",
+   "Sylvester Stallone"
+  ]
+ },
+ {
+  "category": "Film complessi di Christopher Nolan",
+  "words": [
+   "Inception",
+   "Tenet"
+  ]
+ },
+ {
+  "category": "Serie TV sul crimine organizzato",
+  "words": [
+   "Breaking Bad",
+   "I Soprano"
+  ]
+ },
+ {
+  "category": "Cartoni animati Disney sottomarini",
+  "words": [
+   "La Sirenetta",
+   "Alla ricerca di Nemo"
+  ]
+ },
+ {
+  "category": "Supereroi miliardari in costume",
+  "words": [
+   "Batman",
+   "Iron Man"
+  ]
+ },
+ {
+  "category": "Saghe cinematografiche con automobili",
+  "words": [
+   "Fast & Furious",
+   "Cars"
+  ]
+ },
+ {
+  "category": "Maestri Jedi di Star Wars",
+  "words": [
+   "Luke Skywalker",
+   "Obi-Wan Kenobi"
+  ]
  }
 ]

@@ -230,5 +230,245 @@
  {
   "text": "Il Tour de France si corre in automobile?",
   "truth": false
+ },
+ {
+  "text": "L'Everest si trova tra il Nepal e la Cina?",
+  "truth": true
+ },
+ {
+  "text": "La Sicilia è la più grande isola del Mar Mediterraneo?",
+  "truth": true
+ },
+ {
+  "text": "Il Po è il fiume più lungo d'Italia?",
+  "truth": true
+ },
+ {
+  "text": "Il lago di Garda è il più grande lago italiano?",
+  "truth": true
+ },
+ {
+  "text": "Genova si affaccia sul Mar Adriatico?",
+  "truth": false
+ },
+ {
+  "text": "Il deserto del Sahara si trova in Asia?",
+  "truth": false
+ },
+ {
+  "text": "La Groenlandia è la più grande isola del mondo?",
+  "truth": true
+ },
+ {
+  "text": "Il Monte Fuji si trova in Cina?",
+  "truth": false
+ },
+ {
+  "text": "L'Australia è allo stesso tempo uno Stato e un continente?",
+  "truth": true
+ },
+ {
+  "text": "Il Giappone si trova nell'emisfero australe?",
+  "truth": false
+ },
+ {
+  "text": "Il deserto del Gobi si trova in Africa?",
+  "truth": false
+ },
+ {
+  "text": "La Corsica appartiene all'Italia?",
+  "truth": false
+ },
+ {
+  "text": "Il Tamigi attraversa Parigi?",
+  "truth": false
+ },
+ {
+  "text": "Il Monte Bianco è più alto del Monte Rosa?",
+  "truth": true
+ },
+ {
+  "text": "La Sardegna è la seconda isola più grande del Mediterraneo?",
+  "truth": true
+ },
+ {
+  "text": "La maratona è lunga circa 42 chilometri?",
+  "truth": true
+ },
+ {
+  "text": "Il basket si gioca con un pallone ovale?",
+  "truth": false
+ },
+ {
+  "text": "In una partita di scacchi ogni giocatore ha 16 pezzi?",
+  "truth": true
+ },
+ {
+  "text": "La carbonara tradizionale si prepara con la panna?",
+  "truth": false
+ },
+ {
+  "text": "Il ghiaccio è più denso dell'acqua liquida?",
+  "truth": false
+ },
+ {
+  "text": "Venezia sorge su un arcipelago di isole?",
+  "truth": true
+ },
+ {
+  "text": "Il Machu Picchu si trova in Perù?",
+  "truth": true
+ },
+ {
+  "text": "Il Taj Mahal si trova in India?",
+  "truth": true
+ },
+ {
+  "text": "La Turchia si estende in parte in Europa e in parte in Asia?",
+  "truth": true
+ },
+ {
+  "text": "Il Mar Rosso separa l'Africa dalla penisola arabica?",
+  "truth": true
+ },
+ {
+  "text": "La Scozia fa parte del Regno Unito?",
+  "truth": true
+ },
+ {
+  "text": "Bruxelles è la capitale del Belgio?",
+  "truth": true
+ },
+ {
+  "text": "Il Portogallo confina con la Spagna?",
+  "truth": true
+ },
+ {
+  "text": "Il Danubio attraversa Vienna?",
+  "truth": true
+ },
+ {
+  "text": "Il Bosforo separa l'Europa dall'Asia?",
+  "truth": true
+ },
+ {
+  "text": "Barcellona è la capitale della Spagna?",
+  "truth": false
+ },
+ {
+  "text": "La Grande Muraglia si trova in Giappone?",
+  "truth": false
+ },
+ {
+  "text": "L'Irlanda del Nord fa parte della Repubblica d'Irlanda?",
+  "truth": false
+ },
+ {
+  "text": "Copenaghen è la capitale della Norvegia?",
+  "truth": false
+ },
+ {
+  "text": "Il fiume Reno attraversa Roma?",
+  "truth": false
+ },
+ {
+  "text": "Il Kilimangiaro si trova in Kenya?",
+  "truth": false
+ },
+ {
+  "text": "La Statua della Libertà si trova a Boston?",
+  "truth": false
+ },
+ {
+  "text": "Il lago di Garda si trova in Toscana?",
+  "truth": false
+ },
+ {
+  "text": "La Croazia si affaccia sul Mar Nero?",
+  "truth": false
+ },
+ {
+  "text": "Il Canale di Suez collega il Mediterraneo all'Oceano Atlantico?",
+  "truth": false
+ },
+ {
+  "text": "L'Oscar di Leonardo DiCaprio è per The Revenant?",
+  "truth": true
+ },
+ {
+  "text": "Il primo lungometraggio Disney fu Pinocchio?",
+  "truth": false
+ },
+ {
+  "text": "Steven Spielberg ha diretto il film Jurassic Park?",
+  "truth": true
+ },
+ {
+  "text": "Frodo Baggins è il cugino biologico di Harry Potter?",
+  "truth": false
+ },
+ {
+  "text": "Nel film Titanic la nave colpisce un iceberg?",
+  "truth": true
+ },
+ {
+  "text": "La prima stagione di Stranger Things uscì nel 2016?",
+  "truth": true
+ },
+ {
+  "text": "Quentin Tarantino ha diretto Pulp Fiction?",
+  "truth": true
+ },
+ {
+  "text": "Topolino indossa dei guanti di colore verde?",
+  "truth": false
+ },
+ {
+  "text": "La trilogia di Ritorno al Futuro ha tre capitoli?",
+  "truth": true
+ },
+ {
+  "text": "James Cameron ha diretto il film Avatar del 2009?",
+  "truth": true
+ },
+ {
+  "text": "Garth Brooks è il protagonista di Breaking Bad?",
+  "truth": false
+ },
+ {
+  "text": "La statuetta dell'Oscar impugna una spada?",
+  "truth": true
+ },
+ {
+  "text": "Shrek è un orco dalla pelle di colore viola?",
+  "truth": false
+ },
+ {
+  "text": "Il maestro Yoda parla spesso con frasi invertite?",
+  "truth": true
+ },
+ {
+  "text": "Jennifer Aniston recitava nella serie Friends?",
+  "truth": true
+ },
+ {
+  "text": "La spada laser di Luke Skywalker è sempre rossa?",
+  "truth": false
+ },
+ {
+  "text": "Il festival del cinema di Venezia assegna il Leone d'Oro?",
+  "truth": true
+ },
+ {
+  "text": "I Puffi sono minuscole creature dalla pelle gialla?",
+  "truth": false
+ },
+ {
+  "text": "Marlon Brando interpretò Vito Corleone ne Il Padrino?",
+  "truth": true
+ },
+ {
+  "text": "Stanley Kubrick ha diretto 2001: Odissea nello spazio?",
+  "truth": true
  }
 ]

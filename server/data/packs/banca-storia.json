@@ -1,7 +1,7 @@
 {
  "id": "banca-storia",
  "name": "📚 Storia",
- "description": "Banca domande · 125 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 150 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -32,6 +32,12 @@
   {
    "id": "italia",
    "name": "Storia d'Italia",
+   "icon": "🏛️",
+   "color": "#b5838d"
+  },
+  {
+   "id": "date",
+   "name": "Date storiche",
    "icon": "🏛️",
    "color": "#b5838d"
   }
@@ -1588,6 +1594,356 @@
     "Lo scudo",
     "Il fiorino",
     "Il marco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ltfrvk",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno è iniziata la Prima guerra mondiale?",
+   "options": [
+    "1914",
+    "1912",
+    "1918",
+    "1920"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-mt2k8t",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno è finita la Seconda guerra mondiale in Europa?",
+   "options": [
+    "1945",
+    "1943",
+    "1946",
+    "1941"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1d6w70s",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno fu firmata la Magna Carta in Inghilterra?",
+   "options": [
+    "1215",
+    "1066",
+    "1302",
+    "1415"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-zowhh0",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno gli italiani scelsero la Repubblica con il referendum istituzionale?",
+   "options": [
+    "1946",
+    "1948",
+    "1943",
+    "1950"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1n1eer4",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno cadde Costantinopoli per opera degli Ottomani?",
+   "options": [
+    "1453",
+    "1492",
+    "1389",
+    "1526"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-ox64ux",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno è iniziata la Rivoluzione francese?",
+   "options": [
+    "1789",
+    "1799",
+    "1776",
+    "1804"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-wa51xe",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno Cristoforo Colombo arrivò in America?",
+   "options": [
+    "1492",
+    "1498",
+    "1487",
+    "1503"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-vdzqio",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno fu incoronato imperatore Carlo Magno?",
+   "options": [
+    "800",
+    "814",
+    "843",
+    "962"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-13tmk0b",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno William Herschel scoprì il pianeta Urano?",
+   "options": [
+    "1781",
+    "1750",
+    "1812",
+    "1846"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-4mp6qo",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno si concluse la Prima guerra mondiale?",
+   "options": [
+    "1918",
+    "1917",
+    "1919",
+    "1920"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1qmdnxl",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno l'uomo è sbarcato sulla Luna per la prima volta?",
+   "options": [
+    "1969",
+    "1961",
+    "1972",
+    "1957"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-n4dnjz",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno è entrata in vigore la Costituzione della Repubblica Italiana?",
+   "options": [
+    "1948",
+    "1946",
+    "1947",
+    "1950"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ginedu",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno sono entrate in circolazione le monete in euro in Italia?",
+   "options": [
+    "2002",
+    "1999",
+    "2000",
+    "2004"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1hothwt",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno fu assassinato Giulio Cesare?",
+   "options": [
+    "44 a.C.",
+    "27 a.C.",
+    "79 d.C.",
+    "14 d.C."
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1hjby98",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno Alexander Fleming scoprì la penicillina?",
+   "options": [
+    "1928",
+    "1935",
+    "1919",
+    "1945"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gzs5mg",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno Alexander Graham Bell brevettò il telefono?",
+   "options": [
+    "1876",
+    "1861",
+    "1892",
+    "1901"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ic1ufn",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno i fratelli Wright realizzarono il primo volo a motore?",
+   "options": [
+    "1903",
+    "1898",
+    "1911",
+    "1920"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-telu2x",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno affondò il Titanic?",
+   "options": [
+    "1912",
+    "1905",
+    "1918",
+    "1923"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-61fyk8",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno scoppiò la Rivoluzione d'ottobre in Russia?",
+   "options": [
+    "1917",
+    "1905",
+    "1921",
+    "1914"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1163hhq",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno fu fondata la Apple?",
+   "options": [
+    "1976",
+    "1984",
+    "1970",
+    "1991"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-11qo22l",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno fu firmato il Trattato di Roma che istituì la CEE?",
+   "options": [
+    "1957",
+    "1949",
+    "1961",
+    "1973"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-6op0ya",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno l'Italia aderì alla NATO?",
+   "options": [
+    "1949",
+    "1955",
+    "1945",
+    "1961"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1t10exb",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno fu abolita la schiavitù negli Stati Uniti con il XIII emendamento?",
+   "options": [
+    "1865",
+    "1833",
+    "1877",
+    "1848"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-25rcc2",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno iniziò la Guerra dei cent'anni?",
+   "options": [
+    "1337",
+    "1415",
+    "1215",
+    "1453"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-gl4i8",
+   "categoryId": "date",
+   "type": "multiple",
+   "text": "In che anno ebbe inizio la Seconda guerra mondiale?",
+   "options": [
+    "1939",
+    "1937",
+    "1940",
+    "1941"
    ],
    "correctIndex": 0,
    "difficulty": 1

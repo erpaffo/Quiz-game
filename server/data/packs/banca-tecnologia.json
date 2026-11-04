@@ -1,7 +1,7 @@
 {
  "id": "banca-tecnologia",
  "name": "📚 Tecnologia",
- "description": "Banca domande · 33 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 58 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -357,7 +357,7 @@
    "options": [
     "Shellshock",
     "Heartbleed",
-    "Bashbug",
+    "POODLE",
     "Stagefright"
    ],
    "correctIndex": 0,
@@ -468,6 +468,314 @@
    ],
    "correctIndex": 0,
    "difficulty": 3
+  },
+  {
+   "id": "multiple-d2regi",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale inventore italiano, emigrato a New York, fu riconosciuto nel 2002 dal Congresso degli Stati Uniti come precursore dell'invenzione del telefono?",
+   "options": [
+    "Antonio Meucci",
+    "Guglielmo Marconi",
+    "Alessandro Volta",
+    "Galileo Ferraris"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1f9mjb3",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale ingegnere tedesco costruì negli anni Settanta dell'Ottocento il primo motore a quattro tempi pratico?",
+   "options": [
+    "Nikolaus Otto",
+    "Rudolf Diesel",
+    "Karl Benz",
+    "Gottlieb Daimler"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-feoryt",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale ingegnere tedesco ideò il motore a combustione interna ad accensione per compressione che porta il suo nome?",
+   "options": [
+    "Rudolf Diesel",
+    "Nikolaus Otto",
+    "Felix Wankel",
+    "Ferdinand Porsche"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-qo3m4s",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale scienziato italiano costruì nel 1800 la prima pila elettrica?",
+   "options": [
+    "Alessandro Volta",
+    "Luigi Galvani",
+    "Galileo Ferraris",
+    "Antonio Pacinotti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1kj3e02",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Chi introdusse in Europa, intorno al 1450, la stampa a caratteri mobili metallici?",
+   "options": [
+    "Johannes Gutenberg",
+    "Aldo Manuzio",
+    "William Caxton",
+    "Nicolas Jenson"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1krfh6k",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quali fratelli francesi brevettarono nel 1895 il cinématographe, il primo apparecchio per proiezioni cinematografiche?",
+   "options": [
+    "Lumière",
+    "Pathé",
+    "Wright",
+    "Montgolfier"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-dmkv4i",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale elettrodomestico fu sviluppato dall'ingegnere Percy Spencer della Raytheon a partire dalle sue ricerche sui magnetron dei radar?",
+   "options": [
+    "Forno a microonde",
+    "Frigorifero",
+    "Lavastoviglie",
+    "Tostapane"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1ke4gyi",
+   "categoryId": "invenzioni",
+   "type": "numeric",
+   "text": "In che anno fu inventato il transistor nei laboratori Bell?",
+   "answer": 1947,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1f7d41i",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale ingegnere tedesco brevettò nel 1886 la Motorwagen, considerata la prima automobile con motore a combustione interna?",
+   "options": [
+    "Karl Benz",
+    "Henry Ford",
+    "Gottlieb Daimler",
+    "Ferdinand von Zeppelin"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1cdcsna",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale azienda statunitense ha inventato i Post-it, i foglietti con adesivo riposizionabile?",
+   "options": [
+    "3M",
+    "Xerox",
+    "Kodak",
+    "IBM"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1e4il1j",
+   "categoryId": "invenzioni",
+   "type": "numeric",
+   "text": "In che anno i fratelli Wright compirono il primo volo a motore controllato con un aereo?",
+   "answer": 1903,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1bewjo6",
+   "categoryId": "invenzioni",
+   "type": "numeric",
+   "text": "In che anno Guglielmo Marconi trasmise il primo segnale radio attraverso l'Oceano Atlantico, dalla Cornovaglia a Terranova?",
+   "answer": 1901,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-8ig1wa",
+   "categoryId": "invenzioni",
+   "type": "numeric",
+   "text": "In che anno Alexander Graham Bell ottenne il brevetto del telefono?",
+   "answer": 1876,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-5u0y0k",
+   "categoryId": "invenzioni",
+   "type": "numeric",
+   "text": "In che anno la Sony mise in commercio il Walkman?",
+   "answer": 1979,
+   "unit": "",
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-uluam4",
+   "categoryId": "invenzioni",
+   "type": "numeric",
+   "text": "In che anno fu inviato il primo SMS della storia, con il testo «Merry Christmas»?",
+   "answer": 1992,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-15cuvio",
+   "categoryId": "invenzioni",
+   "type": "truefalse",
+   "text": "Fu Ray Tomlinson a scegliere il simbolo @ per separare il nome dell'utente da quello del computer negli indirizzi e-mail.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-1ecw13d",
+   "categoryId": "invenzioni",
+   "type": "truefalse",
+   "text": "Il codice QR è stato inventato in Giappone.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-wk5cpk",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale filosofo e matematico francese, autore dei «Pensieri», costruì nel 1642 una delle prime calcolatrici meccaniche?",
+   "options": [
+    "Blaise Pascal",
+    "René Descartes",
+    "Pierre de Fermat",
+    "Gottfried Wilhelm Leibniz"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1gu7hmu",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale matematico britannico ideò nel 1837 la «macchina analitica», considerata l'antenata del computer moderno?",
+   "options": [
+    "Charles Babbage",
+    "Alan Turing",
+    "John von Neumann",
+    "George Boole"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ygpw0l",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale matematico tedesco formalizzò nel 1703 il sistema numerico binario?",
+   "options": [
+    "Gottfried Wilhelm Leibniz",
+    "Blaise Pascal",
+    "Carl Friedrich Gauss",
+    "George Boole"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xvl9yo",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Chi costruì nel 1960 il primo laser funzionante, a rubino?",
+   "options": [
+    "Theodore Maiman",
+    "Charles Townes",
+    "Arthur Schawlow",
+    "Albert Einstein"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1r0u0yp",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale chimico svedese brevettò la dinamite nel 1867?",
+   "options": [
+    "Alfred Nobel",
+    "Svante Arrhenius",
+    "Anders Celsius",
+    "Jöns Jacob Berzelius"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-9hevj9",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale ingegnere svedese-americano perfezionò nel 1913 la cerniera lampo moderna?",
+   "options": [
+    "Gideon Sundback",
+    "Whitcomb Judson",
+    "Elias Howe",
+    "Levi Strauss"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-13wca7d",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale ingegnere aeronautico ideò la Vespa Piaggio, presentata nel 1946?",
+   "options": [
+    "Corradino D'Ascanio",
+    "Pier Luigi Torre",
+    "Giovanni Agusta",
+    "Ferruccio Lamborghini"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1wxa5y9",
+   "categoryId": "invenzioni",
+   "type": "multiple",
+   "text": "Quale inventore americano diede il nome al codice a punti e linee del telegrafo?",
+   "options": [
+    "Samuel Morse",
+    "Thomas Edison",
+    "Samuel Colt",
+    "Cyrus Field"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
   }
  ]
 }

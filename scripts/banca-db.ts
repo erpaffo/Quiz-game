@@ -135,7 +135,8 @@ export function problems(items = approved(), file = DB_FILE): string[] {
     const r = rows.get(want.id);
     if (!r) out.push(`${want.id}: manca nel registro (lancia npm run banca-db)`);
     else if (r.domanda !== want.domanda || r.risposta_giusta !== want.risposta_giusta || r.altre_risposte !== want.altre_risposte) out.push(`${want.id}: testo cambiato, registro da rigenerare (npm run banca-db)`);
-    else if (r.verificata !== 'VERO') out.push(`${want.id}: non verificata${r.note ? ` (${r.note})` : ''}`);
+    // I giochi creativi (Onda, Panico, Fronte…) non hanno un fatto da verificare: bastano la revisione di promozione e il «check: ok».
+    else if ((isQuiz(it) || it.kind === 'duello') && r.verificata !== 'VERO') out.push(`${want.id}: non verificata${r.note ? ` (${r.note})` : ''}`);
     rows.delete(want.id);
   }
   for (const id of rows.keys()) out.push(`${id}: nel registro ma non più nella banca (lancia npm run banca-db)`);

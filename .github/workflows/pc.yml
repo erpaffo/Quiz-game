@@ -14,7 +14,7 @@ on:
       - 'build/**'
       - 'package-lock.json'
       - '.github/workflows/pc.yml'
-  # chiamato dalla release (release.yml) dopo la verifica AI
+  # chiamato dalla release (release.yml)
   workflow_call:
   workflow_dispatch:
 

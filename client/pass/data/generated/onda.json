@@ -306,5 +306,245 @@
  {
   "left": "😳 Timido alle feste",
   "right": "Animatore della festa 🥳"
+ },
+ {
+  "left": "🎓 Studiare tutta la notte prima dell'esame",
+  "right": "Studiare un po' ogni giorno 📅"
+ },
+ {
+  "left": "📵 Telefono sempre in mano",
+  "right": "Telefono dimenticato nel cassetto 🔌"
+ },
+ {
+  "left": "🥗 Porzione da uccellino",
+  "right": "Porzione da gigante 🍝"
+ },
+ {
+  "left": "🧺 Bucato accumulato per settimane",
+  "right": "Bucato fatto ogni giorno 🧼"
+ },
+ {
+  "left": "🚿 Doccia di tre minuti",
+  "right": "Doccia di mezz'ora 🛁"
+ },
+ {
+  "left": "🎁 Regalo comprato all'ultimo minuto",
+  "right": "Regalo pensato mesi prima 🗓️"
+ },
+ {
+  "left": "🐕 Cane che dorme tutto il giorno",
+  "right": "Cane che corre senza sosta 🐾"
+ },
+ {
+  "left": "🖌️ Disegno fatto in due minuti",
+  "right": "Disegno rifinito per ore 🎨"
+ },
+ {
+  "left": "🥐 Colazione salata",
+  "right": "Colazione dolce 🍰"
+ },
+ {
+  "left": "🧩 Puzzle da cento pezzi",
+  "right": "Puzzle da cinquemila pezzi 🧩"
+ },
+ {
+  "left": "🏖️ Vacanza in un posto nuovo ogni anno",
+  "right": "Vacanza sempre nello stesso posto 🌍"
+ },
+ {
+  "left": "🎬 Film visto dieci volte",
+  "right": "Film visto una volta sola 🍿"
+ },
+ {
+  "left": "🧠 Sapere tutto di un solo argomento",
+  "right": "Sapere un po' di tutto 📚"
+ },
+ {
+  "left": "🍫 Dolce dopo ogni pasto",
+  "right": "Dolce solo al compleanno 🎂"
+ },
+ {
+  "left": "🛠️ Mobili montati seguendo le istruzioni",
+  "right": "Mobili montati a caso 🔧"
+ },
+ {
+  "left": "🌱 Pianta curata ogni giorno",
+  "right": "Pianta annaffiata una volta al mese 🪴"
+ },
+ {
+  "left": "🐟 Cena di pesce",
+  "right": "Cena di carne 🥩"
+ },
+ {
+  "left": "🧊 Bevanda senza un cubetto di ghiaccio",
+  "right": "Bevanda piena di ghiaccio 🥤"
+ },
+ {
+  "left": "📚 Libreria ordinata per colore",
+  "right": "Libreria in ordine alfabetico 🗂️"
+ },
+ {
+  "left": "⏰ Svegliarsi al primo squillo",
+  "right": "Snooze premuto cinque volte 😴"
+ },
+ {
+  "left": "🧳 Valigia fatta in cinque minuti",
+  "right": "Valigia preparata una settimana prima 📋"
+ },
+ {
+  "left": "✈️ In aeroporto quattro ore prima",
+  "right": "In aeroporto all'ultimo secondo 🏃"
+ },
+ {
+  "left": "🏖️ Vacanza al mare",
+  "right": "Vacanza in montagna 🏔️"
+ },
+ {
+  "left": "🏨 Hotel di lusso",
+  "right": "Ostello con lo zaino 🎒"
+ },
+ {
+  "left": "📸 Fotografare ogni cosa",
+  "right": "Godersi il momento senza scattare 📵"
+ },
+ {
+  "left": "🍜 Mangiare solo cibo locale",
+  "right": "Cercare i piatti di casa 🍔"
+ },
+ {
+  "left": "🚌 Tour guidato con l'ombrellino",
+  "right": "Giro per conto proprio 🧭"
+ },
+ {
+  "left": "⛰️ Salire in funivia",
+  "right": "Fare tutto a piedi 🥾"
+ },
+ {
+  "left": "🏝️ Isola deserta",
+  "right": "Metropoli affollata 🌆"
+ },
+ {
+  "left": "🎒 Zaino da trenta chili",
+  "right": "Solo bagaglio a mano 🧳"
+ },
+ {
+  "left": "🌧️ Vacanza sotto la pioggia",
+  "right": "Vacanza con il sole ☀️"
+ },
+ {
+  "left": "🏛️ Visitare tutti i musei",
+  "right": "Restare in spiaggia tutto il giorno 🏖️"
+ },
+ {
+  "left": "🚗 Viaggio on the road",
+  "right": "Viaggio in crociera 🚢"
+ },
+ {
+  "left": "🛍️ Tornare con mille souvenir",
+  "right": "Tornare con la valigia vuota 🧳"
+ },
+ {
+  "left": "📆 Itinerario con orari",
+  "right": "Nessun programma 🌴"
+ },
+ {
+  "left": "🗣️ Parlare la lingua locale",
+  "right": "Parlare solo italiano 🇮🇹"
+ },
+ {
+  "left": "🧭 Seguire il navigatore",
+  "right": "Chiedere indicazioni ai passanti 🗺️"
+ },
+ {
+  "left": "🍹 Cocktail sulla spiaggia",
+  "right": "Pranzo al sacco sul prato 🥪"
+ },
+ {
+  "left": "🐢 Traghetto lento",
+  "right": "Volo diretto in due ore ⚡"
+ },
+ {
+  "left": "🎫 Prenotare tutto online",
+  "right": "Comprare tutto sul posto 🏪"
+ },
+ {
+  "left": "🍿 Commedia leggera da divano",
+  "right": "Capolavoro d'autore impegnativo 🎭"
+ },
+ {
+  "left": "🛋️ Guardare la serie sul divano",
+  "right": "Esperienza sul maxi-schermo del cinema 🎬"
+ },
+ {
+  "left": "🙈 Odia categoricamente gli spoiler",
+  "right": "Cerca subito il finale su internet 🔍"
+ },
+ {
+  "left": "👶 Cartone animato per bambini piccoli",
+  "right": "Thriller psicologico vietato ai minori 😱"
+ },
+ {
+  "left": "🍕 Popcorn e bibita gigante",
+  "right": "Digiuno totale concentrato sul film 🤫"
+ },
+ {
+  "left": "😴 Episodio noioso e lentissimo",
+  "right": "Colpo di scena mozzafiato a raffica ⚡"
+ },
+ {
+  "left": "📺 Una puntata a settimana come una volta",
+  "right": "Maratona di tutta la serie in una notte 🌙"
+ },
+ {
+  "left": "🧙‍♂️ Fantasy con magia e draghi",
+  "right": "Fantascienza dura con robot e astronavi 🤖"
+ },
+ {
+  "left": "🎧 Doppiaggio italiano d'autore",
+  "right": "Lingua originale con sottotitoli fedeli 🗣️"
+ },
+ {
+  "left": "🗑️ Film trash orribile ma divertente",
+  "right": "Pellicola pluripremiata ai festival 🏆"
+ },
+ {
+  "left": "😭 Finale strappalacrime deprimente",
+  "right": "Lieto fine favoloso e rassicurante 🌈"
+ },
+ {
+  "left": "🦸 Supereroe infallibile e perfetto",
+  "right": "Antieroe cinico e senza scrupoli 🦹"
+ },
+ {
+  "left": "📼 Effetti pratici vecchio stile",
+  "right": "Computer grafica digitale totale 💻"
+ },
+ {
+  "left": "💔 Personaggio secondario fastidioso",
+  "right": "Idolo assoluto che ruba la scena ⭐"
+ },
+ {
+  "left": "🤫 Silenzio religioso in sala",
+  "right": "Commenti e risate rumorose tra amici 🗣️"
+ },
+ {
+  "left": "📜 Trama contorta che richiede spiegazioni",
+  "right": "Trama semplice e lineare per rilassarsi 🎯"
+ },
+ {
+  "left": "📉 Sequel deludente e forzato",
+  "right": "Sequel perfino migliore del primo capitolo 🚀"
+ },
+ {
+  "left": "⏰ Film da 80 minuti che vola via",
+  "right": "Colossal da oltre tre ore e mezza ⏳"
+ },
+ {
+  "left": "🎪 Musical cantato per due ore",
+  "right": "Film d'azione con dialoghi ridotti all'osso 💥"
+ },
+ {
+  "left": "🕯️ Horror con spaventi continui",
+  "right": "Commedia romantica leggera e zuccherosa 🧁"
  }
 ]

@@ -1,7 +1,7 @@
 {
  "id": "banca-geografia",
  "name": "📚 Geografia",
- "description": "Banca domande · 247 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 272 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -14,6 +14,12 @@
   {
    "id": "fisica",
    "name": "Fiumi, monti e mari",
+   "icon": "🌍",
+   "color": "#2a9d8f"
+  },
+  {
+   "id": "italia",
+   "name": "Geografia d'Italia",
    "icon": "🌍",
    "color": "#2a9d8f"
   },
@@ -3248,6 +3254,356 @@
    "answer": 6,
    "unit": "milioni",
    "difficulty": 3
+  },
+  {
+   "id": "multiple-1k7ites",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il fiume più lungo d'Italia dopo il Po?",
+   "options": [
+    "Adige",
+    "Tevere",
+    "Arno",
+    "Piave"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-rwyjbj",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il lago più esteso d'Italia?",
+   "options": [
+    "Lago di Garda",
+    "Lago Maggiore",
+    "Lago di Como",
+    "Lago Trasimeno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1f8yi5g",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il vulcano attivo più alto d'Italia?",
+   "options": [
+    "Etna",
+    "Vesuvio",
+    "Stromboli",
+    "Vulcano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-cuqoy6",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è la regione italiana più estesa per superficie?",
+   "options": [
+    "Sicilia",
+    "Piemonte",
+    "Sardegna",
+    "Lombardia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-54khho",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è la regione italiana più popolosa?",
+   "options": [
+    "Lombardia",
+    "Lazio",
+    "Campania",
+    "Sicilia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ni3sni",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è la montagna più alta d'Italia?",
+   "options": [
+    "Monte Bianco",
+    "Monte Rosa",
+    "Cervino",
+    "Gran Paradiso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-lgzz9v",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è l'isola più grande d'Italia?",
+   "options": [
+    "Sicilia",
+    "Sardegna",
+    "Elba",
+    "Ischia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-69asyg",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quante regioni italiane hanno uno statuto speciale?",
+   "options": [
+    "5",
+    "3",
+    "8",
+    "12"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-17s2htz",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale capoluogo di regione è attraversato dal fiume Arno?",
+   "options": [
+    "Firenze",
+    "Bologna",
+    "Pisa",
+    "Perugia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1vp6sgu",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il capoluogo della Calabria?",
+   "options": [
+    "Catanzaro",
+    "Reggio Calabria",
+    "Cosenza",
+    "Crotone"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1gegcbi",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il capoluogo delle Marche?",
+   "options": [
+    "Ancona",
+    "Pesaro",
+    "Macerata",
+    "Urbino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-pt6bv1",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il capoluogo della Basilicata?",
+   "options": [
+    "Potenza",
+    "Matera",
+    "Melfi",
+    "Policoro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-h7lfme",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è l'isola più grande dell'arcipelago toscano?",
+   "options": [
+    "Elba",
+    "Giglio",
+    "Capraia",
+    "Pianosa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-k8cyy6",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale fiume attraversa Verona?",
+   "options": [
+    "Adige",
+    "Tevere",
+    "Arno",
+    "Po"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1htbnhw",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il comune più popoloso del Nord Italia?",
+   "options": [
+    "Milano",
+    "Torino",
+    "Bologna",
+    "Venezia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ftrre",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è la pianura più estesa d'Italia?",
+   "options": [
+    "Pianura Padana",
+    "Pianura Pontina",
+    "Pianura Salentina",
+    "Val di Chiana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-7as11q",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "In quale regione si trova il Gran Sasso d'Italia?",
+   "options": [
+    "Abruzzo",
+    "Lazio",
+    "Molise",
+    "Marche"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-zgkrze",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è la regione italiana più piccola per superficie?",
+   "options": [
+    "Valle d'Aosta",
+    "Molise",
+    "Liguria",
+    "Friuli-Venezia Giulia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-i3v1e0",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il capoluogo della Puglia?",
+   "options": [
+    "Bari",
+    "Lecce",
+    "Taranto",
+    "Foggia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-n81cr3",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il capoluogo del Friuli-Venezia Giulia?",
+   "options": [
+    "Trieste",
+    "Udine",
+    "Pordenone",
+    "Gorizia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-16zwne2",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quante sono le regioni italiane?",
+   "options": [
+    "20",
+    "19",
+    "21",
+    "22"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-7awvzf",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il comune italiano con più abitanti?",
+   "options": [
+    "Roma",
+    "Milano",
+    "Napoli",
+    "Torino"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1j8kt99",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è il lago più profondo d'Italia?",
+   "options": [
+    "Lago di Como",
+    "Lago Maggiore",
+    "Lago di Garda",
+    "Lago d'Iseo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1gq6jis",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Qual è la terza isola italiana per superficie?",
+   "options": [
+    "Elba",
+    "Sant'Antioco",
+    "Pantelleria",
+    "Ischia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ce27l5",
+   "categoryId": "italia",
+   "type": "multiple",
+   "text": "Quale catena montuosa attraversa da nord a sud la penisola italiana?",
+   "options": [
+    "Appennini",
+    "Alpi",
+    "Pirenei",
+    "Carpazi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
   }
  ]
 }

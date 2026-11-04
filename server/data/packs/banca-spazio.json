@@ -1,7 +1,7 @@
 {
  "id": "banca-spazio",
  "name": "📚 Spazio",
- "description": "Banca domande · 59 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 84 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -14,6 +14,12 @@
   {
    "id": "astronomia",
    "name": "Stelle e galassie",
+   "icon": "🚀",
+   "color": "#3a0ca3"
+  },
+  {
+   "id": "esplorazione",
+   "name": "Esplorazione spaziale",
    "icon": "🚀",
    "color": "#3a0ca3"
   }
@@ -834,6 +840,317 @@
    ],
    "correctIndex": 0,
    "difficulty": 2
+  },
+  {
+   "id": "multiple-895dbh",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale sonda della NASA ha sorvolato Plutone per la prima volta, nel luglio 2015?",
+   "options": [
+    "New Horizons",
+    "Cassini",
+    "Juno",
+    "Voyager 2"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-x022wv",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale missione dell'ESA ha orbitato attorno a una cometa e vi ha fatto scendere il lander Philae?",
+   "options": [
+    "Rosetta",
+    "Giotto",
+    "Stardust",
+    "Deep Impact"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-132s0nv",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Chi fu la prima donna a volare nello spazio, nel 1963?",
+   "options": [
+    "Valentina Tereškova",
+    "Svetlana Savickaja",
+    "Sally Ride",
+    "Mae Jemison"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-me3t0z",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Chi fu il primo essere umano a uscire dalla capsula nello spazio, nel 1965?",
+   "options": [
+    "Aleksej Leonov",
+    "Jurij Gagarin",
+    "Ed White",
+    "Pavel Beljaev"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-3lmu9q",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale paese ha fatto atterrare il rover Zhurong su Marte nel 2021?",
+   "options": [
+    "Cina",
+    "India",
+    "Giappone",
+    "Emirati Arabi Uniti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-msfvm8",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale rover della NASA è atterrato su Marte nel 2021 portando con sé l'elicottero Ingenuity?",
+   "options": [
+    "Perseverance",
+    "Curiosity",
+    "Opportunity",
+    "Spirit"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pre52i",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale telescopio spaziale dell'ESA, lanciato nel 2023, studia la materia e l'energia oscura?",
+   "options": [
+    "Euclid",
+    "Gaia",
+    "Planck",
+    "Cheops"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-n5c3fn",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale missione ha riportato sulla Terra, nel 2023, i campioni dell'asteroide Bennu?",
+   "options": [
+    "OSIRIS-REx",
+    "Hayabusa2",
+    "Rosetta",
+    "Dawn"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-potc81",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale animale fu il primo essere vivente inviato in orbita, nel 1957?",
+   "options": [
+    "La cagna Laika",
+    "Lo scimpanzé Ham",
+    "Le cagne Belka e Strelka",
+    "La scimmia Albert II"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8i58kg",
+   "categoryId": "esplorazione",
+   "type": "multiple",
+   "text": "Quale astronauta italiano ha comandato la Stazione Spaziale Internazionale?",
+   "options": [
+    "Luca Parmitano",
+    "Samantha Cristoforetti",
+    "Paolo Nespoli",
+    "Roberto Vittori"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-rvthnh",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Quale gas costituisce circa il 96 per cento dell'atmosfera di Venere?",
+   "options": [
+    "Anidride carbonica",
+    "Azoto",
+    "Ossigeno",
+    "Idrogeno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1x2gxk0",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Come si chiama il vulcano più alto del Sistema solare, che si trova su Marte?",
+   "options": [
+    "Olympus Mons",
+    "Maat Mons",
+    "Pavonis Mons",
+    "Tharsis Tholus"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-a4z7z",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Qual è il corpo più grande della fascia degli asteroidi, tra le orbite di Marte e Giove?",
+   "options": [
+    "Cerere",
+    "Vesta",
+    "Pallade",
+    "Psiche"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-c0q4j2",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Come si chiama la fascia di corpi ghiacciati che si estende oltre l'orbita di Nettuno?",
+   "options": [
+    "Fascia di Kuiper",
+    "Nube di Oort",
+    "Fascia degli asteroidi",
+    "Cintura di Van Allen"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ca62v0",
+   "categoryId": "sistema-solare",
+   "type": "multiple",
+   "text": "Come si chiama la lacuna più ampia e nota negli anelli di Saturno?",
+   "options": [
+    "Divisione di Cassini",
+    "Divisione di Encke",
+    "Divisione di Keeler",
+    "Divisione di Colombo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-14f97br",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Che cosa misura un anno luce?",
+   "options": [
+    "Una distanza",
+    "Un intervallo di tempo",
+    "Una luminosità",
+    "Una velocità"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-5zsu1a",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Come si chiama la radiazione residua del Big Bang, scoperta per caso nel 1965?",
+   "options": [
+    "Radiazione cosmica di fondo",
+    "Vento solare",
+    "Raggi cosmici",
+    "Luce zodiacale"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1viou0x",
+   "categoryId": "astronomia",
+   "type": "multiple",
+   "text": "Nel diagramma di Hertzsprung-Russell, dove si trovano le stelle che fondono idrogeno nel nucleo?",
+   "options": [
+    "Sulla sequenza principale",
+    "Sulle nane bianche",
+    "Sulle giganti rosse",
+    "Sulle supergiganti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-s2b4fc",
+   "categoryId": "esplorazione",
+   "type": "truefalse",
+   "text": "La sonda Voyager 1 è stata il primo oggetto costruito dall'uomo a raggiungere lo spazio interstellare.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-aoqp1a",
+   "categoryId": "esplorazione",
+   "type": "truefalse",
+   "text": "Il lander Huygens è sceso sulla superficie di Titano nel 2005, portato dalla missione Cassini.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-10le5bl",
+   "categoryId": "sistema-solare",
+   "type": "truefalse",
+   "text": "L'atmosfera di Marte è composta per la maggior parte da ossigeno.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-c3vlih",
+   "categoryId": "sistema-solare",
+   "type": "truefalse",
+   "text": "Un anno su Mercurio dura più a lungo di un anno terrestre.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-3tq0y5",
+   "categoryId": "esplorazione",
+   "type": "numeric",
+   "text": "Quante persone hanno camminato sulla superficie della Luna?",
+   "answer": 12,
+   "unit": "persone",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1onygq6",
+   "categoryId": "sistema-solare",
+   "type": "numeric",
+   "text": "In quale anno l'Unione Astronomica Internazionale ha riclassificato Plutone come pianeta nano?",
+   "answer": 2006,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-ggm7hi",
+   "categoryId": "esplorazione",
+   "type": "numeric",
+   "text": "A quale altitudine, secondo la linea di Kármán, inizia convenzionalmente lo spazio?",
+   "answer": 100,
+   "unit": "km",
+   "difficulty": 3
   }
  ]
 }

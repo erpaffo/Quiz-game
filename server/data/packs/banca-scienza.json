@@ -1,7 +1,7 @@
 {
  "id": "banca-scienza",
  "name": "📚 Scienza",
- "description": "Banca domande · 209 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 234 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
@@ -20,6 +20,12 @@
   {
    "id": "biologia",
    "name": "Biologia e corpo umano",
+   "icon": "🔬",
+   "color": "#4361ee"
+  },
+  {
+   "id": "matematica",
+   "name": "Matematica",
    "icon": "🔬",
    "color": "#4361ee"
   },
@@ -2482,6 +2488,356 @@
    "text": "In che anno nacque Rita Levi-Montalcini?",
    "answer": 1909,
    "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1ipj1la",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto fa 7 × 8?",
+   "options": [
+    "56",
+    "54",
+    "63",
+    "48"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12m1bbi",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Qual è il valore approssimativo di π?",
+   "options": [
+    "3,14",
+    "2,72",
+    "1,41",
+    "4,14"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-w3mafc",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti lati ha un pentagono?",
+   "options": [
+    "5",
+    "4",
+    "6",
+    "8"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-i6sm7x",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti gradi misura un angolo retto?",
+   "options": [
+    "90",
+    "45",
+    "180",
+    "60"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1a8ax42",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Qual è la radice quadrata di 144?",
+   "options": [
+    "12",
+    "14",
+    "16",
+    "18"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1vqjcn8",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti grammi ci sono in un chilogrammo?",
+   "options": [
+    "1000",
+    "100",
+    "10",
+    "500"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1q8zv4i",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quale numero romano corrisponde a 50?",
+   "options": [
+    "L",
+    "C",
+    "D",
+    "X"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-16qjksv",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto fa 2 elevato alla decima potenza?",
+   "options": [
+    "1024",
+    "512",
+    "2048",
+    "100"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1yv7cww",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quale teorema lega i cateti all'ipotenusa in un triangolo rettangolo?",
+   "options": [
+    "Teorema di Pitagora",
+    "Teorema di Talete",
+    "Teorema di Euclide",
+    "Teorema di Archimede"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-a9cfq5",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti lati ha un dodecagono?",
+   "options": [
+    "12",
+    "10",
+    "20",
+    "15"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ohrolk",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti numeri primi ci sono minori di 10?",
+   "options": [
+    "4",
+    "3",
+    "5",
+    "6"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-btg6wf",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto fa il 15% di 200?",
+   "options": [
+    "30",
+    "15",
+    "25",
+    "40"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-z92lud",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti minuti ci sono in una giornata?",
+   "options": [
+    "1440",
+    "720",
+    "2400",
+    "1000"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1motpgo",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto fa 9 al quadrato?",
+   "options": [
+    "81",
+    "72",
+    "99",
+    "108"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12nm3qn",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "In un dado classico, quanto fa la somma dei punti di due facce opposte?",
+   "options": [
+    "7",
+    "6",
+    "8",
+    "5"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1qsl2xv",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Come si chiama il numero che indica quante volte una base viene moltiplicata per sé stessa?",
+   "options": [
+    "Esponente",
+    "Radicale",
+    "Fattore",
+    "Modulo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-13neh9i",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quale frazione corrisponde a 0,5?",
+   "options": [
+    "1/2",
+    "1/5",
+    "2/5",
+    "1/4"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1gwwh1s",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto misura la somma degli angoli interni di un quadrilatero?",
+   "options": [
+    "360°",
+    "180°",
+    "270°",
+    "540°"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1ei4elr",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto vale 3 fattoriale (3!)?",
+   "options": [
+    "6",
+    "3",
+    "9",
+    "12"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-a9rpm4",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanti zeri ha il numero un milione?",
+   "options": [
+    "6",
+    "5",
+    "7",
+    "9"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1up2x1r",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Qual è l'unità di misura dell'area nel Sistema Internazionale?",
+   "options": [
+    "Metro quadrato",
+    "Metro cubo",
+    "Chilogrammo",
+    "Litro"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-hyk26t",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quale matematico greco scrisse gli «Elementi»?",
+   "options": [
+    "Euclide",
+    "Pitagora",
+    "Archimede",
+    "Tolomeo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nghvkh",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto fa 1/2 + 1/4?",
+   "options": [
+    "3/4",
+    "2/6",
+    "1/6",
+    "2/4"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-118t8z2",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quale numero segue nella sequenza 2, 4, 8, 16, ...?",
+   "options": [
+    "32",
+    "24",
+    "20",
+    "64"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ps67cl",
+   "categoryId": "matematica",
+   "type": "multiple",
+   "text": "Quanto vale 0 fattoriale (0!)?",
+   "options": [
+    "1",
+    "0",
+    "Non è definito",
+    "Infinito"
+   ],
+   "correctIndex": 0,
    "difficulty": 3
   }
  ]

@@ -1,13 +1,25 @@
 {
  "id": "banca-natura",
  "name": "📚 Natura & Animali",
- "description": "Banca domande · 50 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 100 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
   {
    "id": "animali",
    "name": "Animali",
+   "icon": "🦁",
+   "color": "#43aa8b"
+  },
+  {
+   "id": "piante",
+   "name": "Piante",
+   "icon": "🦁",
+   "color": "#43aa8b"
+  },
+  {
+   "id": "ambiente",
+   "name": "Ambiente e clima",
    "icon": "🦁",
    "color": "#43aa8b"
   }
@@ -664,6 +676,638 @@
    ],
    "correctIndex": 0,
    "difficulty": 1
+  },
+  {
+   "id": "multiple-1jl4ap3",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Da quale albero tropicale si ricava il legno più leggero, molto usato nel modellismo?",
+   "options": [
+    "Balsa",
+    "Teak",
+    "Ebano",
+    "Quercia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-djfg5r",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale specie di albero detiene il record di altezza al mondo?",
+   "options": [
+    "Sequoia sempreverde",
+    "Abete di Douglas",
+    "Baobab",
+    "Cipresso calvo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-pev5mf",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Come si chiamano i minuscoli pori sulle foglie attraverso cui la pianta scambia gas con l'ambiente?",
+   "options": [
+    "Stomi",
+    "Lenticelle",
+    "Xilema",
+    "Cuticole"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-7k86oc",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale tessuto trasporta la linfa elaborata, ricca di zuccheri, dalle foglie al resto della pianta?",
+   "options": [
+    "Floema",
+    "Xilema",
+    "Cambio",
+    "Midollo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-11vyxgz",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale pianta parassita del Sud-Est asiatico produce il fiore singolo più grande del mondo, largo fino a circa un metro?",
+   "options": [
+    "Rafflesia arnoldii",
+    "Amorphophallus titanum",
+    "Victoria amazonica",
+    "Nepenthes rajah"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1c947wa",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale pianta carnivora cattura gli insetti chiudendo di scatto le sue foglie a «tagliola»?",
+   "options": [
+    "Dionea (Venere acchiappamosche)",
+    "Drosera",
+    "Sarracenia",
+    "Utricularia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-177bcpu",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Da quale albero si ricava il sughero?",
+   "options": [
+    "Quercia da sughero",
+    "Pioppo",
+    "Faggio",
+    "Castagno"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1wi6jxl",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Da quale albero tropicale si ricava il lattice con cui si produce la gomma naturale?",
+   "options": [
+    "Albero della gomma",
+    "Albero del cacao",
+    "Albero del cotone",
+    "Albero della canfora"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1i5lzhu",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale albero è simbolo del Libano e compare al centro della sua bandiera?",
+   "options": [
+    "Cedro",
+    "Ulivo",
+    "Palma da dattero",
+    "Cipresso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-xd95hz",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Da quale parte del frutto della pianta Theobroma cacao si ricava il cacao?",
+   "options": [
+    "Dai semi (fave)",
+    "Dalla buccia",
+    "Dalle foglie",
+    "Dai fiori"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1fsakcs",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Gli stimmi essiccati di quale fiore forniscono la spezia più costosa al mondo?",
+   "options": [
+    "Zafferano (Crocus sativus)",
+    "Cardamomo",
+    "Vaniglia",
+    "Curcuma"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-bt6b1t",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale coltura è la più prodotta al mondo in termini di tonnellate raccolte ogni anno?",
+   "options": [
+    "Canna da zucchero",
+    "Mais",
+    "Riso",
+    "Frumento"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-1q2qf4y",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "La fotosintesi clorofilliana avviene nei cloroplasti delle cellule vegetali.",
+   "answer": true,
+   "difficulty": 2
+  },
+  {
+   "id": "truefalse-a2sxw0",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "Le micorrize sono associazioni di simbiosi tra funghi e radici delle piante.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-q5u8qn",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "Il baobab africano è una pianta che conserva costantemente la chioma verde durante l'anno.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-abimai",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "Le conifere sono piante angiosperme.",
+   "answer": false,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1b17caw",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Da quale pianta si estrae il chinino, usato contro la malaria?",
+   "options": [
+    "China",
+    "Papavero da oppio",
+    "Pianta del caffè",
+    "Salice bianco"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-k2gp8g",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Quali composti, usati un tempo nei frigoriferi e nelle bombolette spray, danneggiano lo strato di ozono?",
+   "options": [
+    "Clorofluorocarburi (CFC)",
+    "Idrocarburi policiclici aromatici",
+    "Polveri sottili (PM10)",
+    "Metalli pesanti"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1e19djg",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Quale accordo internazionale del 1987 mise al bando le sostanze che distruggono lo strato di ozono?",
+   "options": [
+    "Protocollo di Montréal",
+    "Protocollo di Kyoto",
+    "Accordo di Parigi",
+    "Convenzione di Rio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nybdwf",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Quale accordo internazionale sul clima, adottato nel 2015, punta a contenere il riscaldamento globale ben al di sotto dei 2 °C?",
+   "options": [
+    "Accordo di Parigi",
+    "Protocollo di Kyoto",
+    "Protocollo di Montréal",
+    "Conferenza di Stoccolma"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "numeric-1xpuji0",
+   "categoryId": "ambiente",
+   "type": "numeric",
+   "text": "In che anno si tenne la prima Giornata della Terra (Earth Day)?",
+   "answer": 1970,
+   "unit": "",
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-jtfw1p",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Qual è la seconda foresta pluviale tropicale più estesa del mondo, dopo quella amazzonica?",
+   "options": [
+    "Foresta del bacino del Congo",
+    "Foresta pluviale del Borneo",
+    "Foresta di Daintree",
+    "Foresta pluviale valdiviana"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xl349i",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Quale bioma delle alte latitudini è caratterizzato da suolo perennemente ghiacciato in profondità (permafrost)?",
+   "options": [
+    "Tundra",
+    "Savana",
+    "Taiga tropicale",
+    "Steppa"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1cyzw3o",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Che cosa sono le mangrovie?",
+   "options": [
+    "Alberi e arbusti che crescono lungo coste tropicali in acque salmastre",
+    "Piante grasse dei deserti caldi",
+    "Alghe giganti degli oceani freddi",
+    "Licheni delle montagne tropicali"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1q8c3kx",
+   "categoryId": "ambiente",
+   "type": "multiple",
+   "text": "Quali gas, emessi soprattutto dalla combustione di carbone e petrolio, sono la principale causa delle piogge acide?",
+   "options": [
+    "Ossidi di zolfo e di azoto",
+    "Argon ed elio",
+    "Metano e ammoniaca",
+    "Ossigeno e vapore acqueo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1pfz4oh",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale strato ceroso riveste le foglie e limita la perdita d'acqua?",
+   "options": [
+    "Cuticola",
+    "Epidermide",
+    "Xilema",
+    "Midollo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-bsdgf4",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale ormone vegetale regola la crescita delle piante verso la luce?",
+   "options": [
+    "Auxina",
+    "Etilene",
+    "Gibberellina",
+    "Citochinina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1k0k2uy",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale pigmento rende rosse le foglie di molti alberi in autunno?",
+   "options": [
+    "Antocianine",
+    "Clorofilla",
+    "Carotenoidi",
+    "Xantofille"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1smyc1",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Come si chiamano le piante che vivono su altre piante senza sottrarre loro linfa?",
+   "options": [
+    "Epifite",
+    "Parassite",
+    "Saprofite",
+    "Rupicole"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-k48u9t",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale pianta acquatica ha foglie galleggianti così robuste da sostenere il peso di un bambino?",
+   "options": [
+    "Victoria amazonica",
+    "Ninfea bianca",
+    "Loto sacro",
+    "Lenticchia d'acqua"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1km8i68",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale albero detiene il record di longevità, con esemplari di quasi 5.000 anni?",
+   "options": [
+    "Pino setoloso",
+    "Sequoia gigante",
+    "Olivo",
+    "Baobab africano"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-h02dds",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Il frutto del pisello, che a maturità si apre in due valve, è un esempio di...",
+   "options": [
+    "Legume",
+    "Capsula",
+    "Siliqua",
+    "Achenio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8imlbl",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Che cosa si mangia, botanicamente parlando, nel carciofo?",
+   "options": [
+    "Un'infiorescenza non ancora sbocciata",
+    "Una radice ingrossata",
+    "Un frutto acerbo",
+    "Un bulbo sotterraneo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qfrr78",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale pianta velenosa fornisce i glicosidi usati in medicina per rinforzare il cuore?",
+   "options": [
+    "Digitale",
+    "Belladonna",
+    "Cicuta",
+    "Stramonio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-4godhh",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "La vaniglia si ricava dal frutto di una pianta della famiglia delle...",
+   "options": [
+    "Orchidacee",
+    "Graminacee",
+    "Zingiberacee",
+    "Mirtacee"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1xhh90h",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale famiglia botanica comprende senape, cavolo e ravanello?",
+   "options": [
+    "Brassicacee",
+    "Solanacee",
+    "Apiacee",
+    "Liliacee"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-147qom",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Da quale Paese è originaria l'Actinidia, la pianta che produce il kiwi?",
+   "options": [
+    "Cina",
+    "Nuova Zelanda",
+    "Brasile",
+    "Sudafrica"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1nai64d",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale pianta produce il seme più grande del mondo, il «cocco di mare», che pesa fino a 20 kg?",
+   "options": [
+    "La palma delle Seychelles",
+    "Il baobab africano",
+    "L'albero del pane",
+    "La palma da dattero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-vt56q5",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "A quale grande gruppo appartengono i muschi, piante prive di vasi conduttori?",
+   "options": [
+    "Briofite",
+    "Pteridofite",
+    "Gimnosperme",
+    "Angiosperme"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-588z5k",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale albero produce i pinoli commestibili più diffusi in cucina?",
+   "options": [
+    "Pino domestico",
+    "Pino silvestre",
+    "Abete bianco",
+    "Larice"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-19rj5f0",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale strato di cellule permette a un albero di crescere in spessore producendo nuovo legno?",
+   "options": [
+    "Cambio",
+    "Midollo",
+    "Corteccia",
+    "Raggio midollare"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-8ei5aq",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Quale di questi alberi è un sempreverde mediterraneo a foglie larghe e coriacee?",
+   "options": [
+    "Leccio",
+    "Faggio",
+    "Betulla",
+    "Acero campestre"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-1umw9dl",
+   "categoryId": "piante",
+   "type": "multiple",
+   "text": "Botanicamente, la parte dello zenzero che si consuma è...",
+   "options": [
+    "Un rizoma, cioè un fusto sotterraneo",
+    "Una radice a fittone",
+    "Un tubero di riserva",
+    "Un bulbo squamoso"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-7w9llp",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "Il ginkgo biloba è una specie relitto sopravvissuta dell'ordine delle Ginkgoali.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-qq3cnr",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "La patata è un fusto sotterraneo modificato, non una radice.",
+   "answer": true,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-n23ufz",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "Le piante carnivore ricavano la maggior parte dell'energia dalla digestione degli insetti.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "truefalse-12ewsjs",
+   "categoryId": "piante",
+   "type": "truefalse",
+   "text": "Le piante smettono di respirare di notte.",
+   "answer": false,
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-dfva6y",
+   "categoryId": "piante",
+   "type": "numeric",
+   "text": "In quale anno fu scoperta la Wollemia nobilis, la conifera australiana creduta estinta da milioni di anni?",
+   "answer": 1994,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-1xh1wl1",
+   "categoryId": "piante",
+   "type": "numeric",
+   "text": "In quale anno fu fondato l'Orto botanico di Padova, il più antico orto botanico universitario ancora attivo?",
+   "answer": 1545,
+   "unit": "anno",
+   "difficulty": 3
+  },
+  {
+   "id": "numeric-18nyf9r",
+   "categoryId": "piante",
+   "type": "numeric",
+   "text": "Quanti metri può raggiungere in altezza l'infiorescenza dell'Amorphophallus titanum?",
+   "answer": 3,
+   "unit": "m",
+   "difficulty": 3
   }
  ]
 }

@@ -1,10 +1,16 @@
 {
  "id": "banca-lingua",
  "name": "📚 Lingua & Parole",
- "description": "Banca domande · 67 domande verificate, difficoltà da facile a esperti.",
+ "description": "Banca domande · 92 domande verificate, difficoltà da facile a esperti.",
  "builtIn": true,
  "updatedAt": 0,
  "categories": [
+  {
+   "id": "italiano",
+   "name": "Lingua italiana",
+   "icon": "📖",
+   "color": "#f77f00"
+  },
   {
    "id": "etimologia",
    "name": "Etimologia",
@@ -870,6 +876,356 @@
    "text": "Un «pangramma» è una frase di senso compiuto che contiene almeno una volta tutte le lettere dell'alfabeto di una lingua.",
    "answer": true,
    "difficulty": 2
+  },
+  {
+   "id": "multiple-mu81oo",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «camicia»?",
+   "options": [
+    "Camicie",
+    "Camice",
+    "Camicii",
+    "Camicia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-12t80gu",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «ciliegia»?",
+   "options": [
+    "Ciliegie",
+    "Ciliege",
+    "Ciliegii",
+    "Ciliegi"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-padu0i",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «arancia»?",
+   "options": [
+    "Arance",
+    "Arancie",
+    "Aranci",
+    "Arancia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1vobm24",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «valigia»?",
+   "options": [
+    "Valigie",
+    "Valige",
+    "Valigii",
+    "Valigia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-14azs6o",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il femminile di «imperatore»?",
+   "options": [
+    "Imperatrice",
+    "Imperatora",
+    "Imperatressa",
+    "Imperatorina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tm00pq",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «braccio» quando indica una parte del corpo?",
+   "options": [
+    "Braccia",
+    "Bracci",
+    "Braccie",
+    "Braccio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-k9r7zm",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «moglie»?",
+   "options": [
+    "Mogli",
+    "Moglia",
+    "Mogliene",
+    "Moglies"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-ohmfal",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il congiuntivo presente del verbo «essere» per la prima persona singolare?",
+   "options": [
+    "Che io sia",
+    "Che io sono",
+    "Che io fossi",
+    "Che io ero"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1e3lf3e",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il participio passato del verbo «scrivere»?",
+   "options": [
+    "Scritto",
+    "Scrivuto",
+    "Scrivato",
+    "Scrivito"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1bf66qr",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il passato remoto del verbo «fare» per la terza persona singolare?",
+   "options": [
+    "Fece",
+    "Facette",
+    "Fé",
+    "Faceva"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-14vuuj1",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Quale di queste parole è un sinonimo di «effimero»?",
+   "options": [
+    "Passeggero",
+    "Duraturo",
+    "Solido",
+    "Costante"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-ts0r40",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il contrario di «prolisso»?",
+   "options": [
+    "Conciso",
+    "Verboso",
+    "Ridondante",
+    "Prolungato"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qvfeu7",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Quante consonanti ha l'alfabeto italiano?",
+   "options": [
+    "16",
+    "21",
+    "18",
+    "12"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-10541yj",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il femminile di «attore»?",
+   "options": [
+    "Attrice",
+    "Attora",
+    "Attrore",
+    "Attorina"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-68pgh1",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il superlativo assoluto irregolare di «buono»?",
+   "options": [
+    "Ottimo",
+    "Buonissimo",
+    "Migliore",
+    "Molto buono"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-op6mj6",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «ginocchio»?",
+   "options": [
+    "Ginocchia",
+    "Ginocchi",
+    "Ginocchie",
+    "Ginocchio"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-12b8tm0",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «paio»?",
+   "options": [
+    "Paia",
+    "Pai",
+    "Paie",
+    "Paii"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-qre9px",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «film»?",
+   "options": [
+    "Film",
+    "Films",
+    "Filmi",
+    "Filmografia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-14dfg33",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il plurale di «bue»?",
+   "options": [
+    "Buoi",
+    "Bui",
+    "Bue",
+    "Buie"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-tk8rb3",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "In «Il libro è sul tavolo», che tipo di parola è «sul»?",
+   "options": [
+    "Preposizione articolata",
+    "Congiunzione",
+    "Avverbio",
+    "Pronome"
+   ],
+   "correctIndex": 0,
+   "difficulty": 2
+  },
+  {
+   "id": "multiple-1knrhf3",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Quale di queste parole è un avverbio?",
+   "options": [
+    "Velocemente",
+    "Velocità",
+    "Veloce",
+    "Velocissimo"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-1ns31bf",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Qual è il contrario di «antico»?",
+   "options": [
+    "Moderno",
+    "Vecchio",
+    "Antichissimo",
+    "Remoto"
+   ],
+   "correctIndex": 0,
+   "difficulty": 1
+  },
+  {
+   "id": "multiple-lk5zd5",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Quale parola è scritta correttamente?",
+   "options": [
+    "Coscienza",
+    "Coscenza",
+    "Cosciensa",
+    "Coscenzia"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "q_4gqgcmjy",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Quale di queste parole è scritta in modo corretto?",
+   "options": [
+    "Aiuola",
+    "Aiola",
+    "Aiuolla",
+    "Aiula"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
+  },
+  {
+   "id": "multiple-7oepbg",
+   "categoryId": "italiano",
+   "type": "multiple",
+   "text": "Quale tempo verbale è «avevo mangiato»?",
+   "options": [
+    "Trapassato prossimo",
+    "Passato prossimo",
+    "Imperfetto",
+    "Futuro anteriore"
+   ],
+   "correctIndex": 0,
+   "difficulty": 3
   }
  ]
 }
