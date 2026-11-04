@@ -3,7 +3,7 @@
 // AI_MAX_FALSI (default 0), AI_MAX_INCERTI_PCT (default 10). Esce con 1 se la release va bloccata.
 // Scrive il rapporto in ai-generati/verifiche/rapporto.json (cartella ignorata da git).
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { approved } from './banca';
 import { costruisciRichiesta, daVerificare, esitoComplessivo, leggiRisposta, type Verdetto } from './ai-verifica-core';
 
@@ -62,6 +62,12 @@ async function main() {
 
   const falsi = verdetti.filter((v) => v.esito === 'falso');
   for (const f of falsi.slice(0, 50)) console.log(`❌ ${f.id}: ${f.motivo}`);
+  // Elenco delle false nel riepilogo del job su GitHub, con il testo della domanda.
+  if (falsi.length && process.env.GITHUB_STEP_SUMMARY) {
+    const per = new Map(items.map((i) => [i.id, i]));
+    const righe = falsi.map((f) => `- \`${f.id}\` — ${(per.get(f.id) as { text?: string } | undefined)?.text ?? ''}\n  - ${f.motivo}`);
+    appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## ❌ Domande false (${falsi.length})\n\n${righe.join('\n')}\n`);
+  }
   console.log(`Totale ${esito.totale} · veri ${esito.totale - esito.falsi - esito.incerti} · falsi ${esito.falsi} · incerti ${esito.incerti}`);
   if (esito.ok) console.log('✅ Verifica AI superata: la release può procedere.');
   else {

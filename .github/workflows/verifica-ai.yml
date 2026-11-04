@@ -16,10 +16,12 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write # solo per il job «correggi»
 
 concurrency:
   group: verifica-ai-${{ github.ref }}
-  cancel-in-progress: true
+  # Niente annullamenti: una verifica in corso finisce, quella in coda trova la cache e salta.
+  cancel-in-progress: false
 
 jobs:
   verifica:
@@ -28,19 +30,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Se domande e script sono identici a una verifica già riuscita, la cache esiste e si salta tutto.
+      # La cache si salva solo se il job riesce, quindi una verifica fallita viene rifatta.
+      - name: Verifica già superata per questo contenuto?
+        id: gia
+        uses: actions/cache@v4
+        with:
+          path: .verifica-ok
+          key: verifica-ai-${{ hashFiles('banca-domande/approvate/**', 'scripts/ai-verifica*.ts') }}
+
       - uses: actions/setup-node@v4
+        if: steps.gia.outputs.cache-hit != 'true'
         with:
           node-version: 22
           cache: npm
 
       - name: Dipendenze
+        if: steps.gia.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Verifica AI delle domande
+        if: steps.gia.outputs.cache-hit != 'true'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-flash
         run: npm run ai-verifica
+
+      - name: Segna la verifica come superata
+        if: steps.gia.outputs.cache-hit != 'true'
+        run: echo ok > .verifica-ok
 
       - uses: actions/upload-artifact@v4
         if: always()
@@ -48,3 +66,49 @@ jobs:
           name: rapporto-verifica-ai
           path: ai-generati/verifiche/rapporto.json
           if-no-files-found: ignore
+
+  # Se ci sono domande false: le fa correggere a DeepSeek e apre una pull request da rivedere a mano.
+  # Serve Settings → Actions → General → «Allow GitHub Actions to create and approve pull requests».
+  # Solo su branch (non sui tag della release). Le PR aperte col token di default non fanno partire la CI: chiudi e riapri la PR per lanciarla.
+  correggi:
+    needs: verifica
+    if: failure() && needs.verifica.result == 'failure' && startsWith(github.ref, 'refs/heads/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: rapporto-verifica-ai
+          path: ai-generati/verifiche
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Correzione delle domande false
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-flash
+        run: |
+          npm run ai-correggi
+          npm run banca-db
+          npm run banca -- costruisci
+
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: ai/correzioni-domande
+          title: 'Correzioni domande giudicate false dalla verifica AI'
+          commit-message: 'Correzioni domande giudicate false dalla verifica AI'
+          body-path: ai-generati/verifiche/correzioni.md
+          add-paths: |
+            banca-domande
+            server/data/packs
+            client/pass/data/generated

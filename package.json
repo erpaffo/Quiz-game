@@ -12,6 +12,7 @@
     "manuali": "python scripts/manuali/build.py pc && python scripts/manuali/build.py telefono",
     "banca-db": "tsx scripts/banca-db.ts",
     "ai-verifica": "tsx scripts/ai-verifica.ts",
+    "ai-correggi": "tsx scripts/ai-correggi.ts",
     "start": "tsx server/index.ts --prod",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
