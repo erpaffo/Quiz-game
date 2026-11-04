@@ -41,7 +41,7 @@
     "socket.io-client": "4.8.4",
     "three": "0.170.0",
     "tsx": "4.23.15",
-    "typescript": "5.6.3",
+    "typescript": "7.0.2",
     "vite": "5.4.11"
   },
   "comment": "Tutte le librerie sono 'devDependencies': il client è compilato da Vite e l'app desktop da esbuild, quindi l'eseguibile non porta con sé node_modules."
