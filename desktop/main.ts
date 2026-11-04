@@ -296,13 +296,15 @@ async function smokeTest(port: number) {
   }
   // Salvataggio di un pacchetto personale nella cartella dei dati dell'utente.
   try {
-    const res = await fetch(`http://localhost:${port}/api/packs/pk_smoke`, {
-      method: 'PUT',
+    // POST crea il pacchetto e assegna l'id (PUT su un id inesistente risponde 404).
+    const res = await fetch(`http://localhost:${port}/api/packs`, {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: 'Prova', categories: [{ id: 'c1', name: 'Prova' }], questions: [{ id: 'q1', categoryId: 'c1', type: 'truefalse', text: 'Funziona?', answer: true }] })
     });
-    const saved = existsSync(join(userDir(), 'pk_smoke.json'));
-    await fetch(`http://localhost:${port}/api/packs/pk_smoke`, { method: 'DELETE' });
+    const packId = res.ok ? ((await res.json()) as { id: string }).id : '';
+    const saved = !!packId && existsSync(join(userDir(), `${packId}.json`));
+    if (packId) await fetch(`http://localhost:${port}/api/packs/${packId}`, { method: 'DELETE' });
     result.salvataggioPacchetti = res.ok && saved ? 'ok' : `FALLITO (HTTP ${res.status}${saved ? '' : ', file non scritto'}: ${res.ok ? '' : (await res.text()).slice(0, 200)})`;
     ok &&= res.ok && saved;
   } catch (err) {
